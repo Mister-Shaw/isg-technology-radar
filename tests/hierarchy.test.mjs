@@ -35,6 +35,6 @@ for(const level of [PARENTS,CHILDREN])for(const row of panelMatrix(data,all,'att
 }
 const study=read('data/research-2026.json'),research=[...study.events,...study.leads];
 for(const id of Object.keys(PARENTS))assert.equal(new Set(research.filter(r=>matchesCategory(r,id)).map(eventKey)).size,new Set(GROUPS.find(g=>g.id===id).children.flatMap(c=>research.filter(r=>matchesCategory(r,c)).map(eventKey))).size);
-assert.equal(data.documents.filter(d=>all.document_source_ids.includes(d.source_id)&&!d.superseded).length,read('data/rolling-update.json').unique_media_news);
+assert.equal(data.documents.filter(d=>all.document_source_ids.includes(d.source_id)&&!d.superseded&&d.date>=data.window.start&&d.date<=data.window.end).length,data.latest_refresh?.unique_media_news??read('data/rolling-update.json').unique_media_news);
 assert.deepEqual(read('public/sample-sources.json').taxonomy,data.taxonomy);
 console.log('PASS: 5 parents/14 children, aliases, parent unions, latest amounts, cancellation, all-news denominators, demand unknowns and replay metadata.');

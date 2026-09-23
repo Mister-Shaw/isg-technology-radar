@@ -10,7 +10,7 @@ def get(url,path):
     if path.exists() and not REFRESH: return path.read_bytes()
     for attempt in range(3):
         try:
-            req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; PublicMarketResearch/1.0)'})
+            req=urllib.request.Request(url,headers={'User-Agent':'PublicResearch/1.0'})
             raw=urllib.request.urlopen(req,timeout=25).read()
             path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(raw);return raw
         except Exception:

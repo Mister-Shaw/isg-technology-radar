@@ -1,9 +1,18 @@
 """Fresh public archive reread. Keep the completed-week cutoff and later previews separate."""
 from pathlib import Path
-import argparse,concurrent.futures as cf,datetime as dt,html,importlib.util,json,re,urllib.parse
+import argparse,concurrent.futures as cf,datetime as dt,html,importlib.util,json,re,urllib.error,urllib.parse,urllib.request,urllib.robotparser
 BASE=Path(__file__).resolve().parent
 OUTPUT=BASE/'output'/'media-refresh'
 START=END=CUTOFF=None
+USER_AGENT='PublicResearch/1.0'
+SOURCES={
+    'doit':('doit_all','https://www.doit.com.cn/api/cms/content/list'),
+    'c114':('c114_roll_all','https://www.c114.com.cn/news/roll.asp'),
+    'zhiding':('zhiding_latest','https://www.zhiding.cn/list-35-1-1-0-0.htm'),
+    'cbinews':('cbinews_all_news','https://api.cbinews.com/api/cate_list'),
+}
+spec=importlib.util.spec_from_file_location('refresh_title_rules',BASE/'doit/collect_news.py')
+RULES=importlib.util.module_from_spec(spec);spec.loader.exec_module(RULES)
 def iso_date(value):
     try:
         day=dt.date.fromisoformat(value)
@@ -14,7 +23,7 @@ def iso_date(value):
     return value
 
 def parse_args(argv=None):
-    parser=argparse.ArgumentParser(description='Manually refresh four public news archives; inspect source completeness before use.')
+    parser=argparse.ArgumentParser(description='Refresh four public news archives without a topic prefilter; fail if a source is incomplete.')
     parser.add_argument('--start',type=iso_date,required=True)
     parser.add_argument('--end',type=iso_date,required=True)
     parser.add_argument('--cutoff',type=iso_date,required=True,help='Completed-period boundary; later documents remain previews.')
@@ -34,6 +43,51 @@ def module(name,path):
     m.START,m.END=START,END
     return m
 def save(name,d): (OUTPUT/name).write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding='utf-8')
+
+def check_robots(url):
+    parts=urllib.parse.urlsplit(url)
+    robots_url=urllib.parse.urlunsplit((parts.scheme,parts.netloc,'/robots.txt','',''))
+    try:
+        request=urllib.request.Request(robots_url,headers={'User-Agent':USER_AGENT})
+        with urllib.request.urlopen(request,timeout=20) as response:
+            content=response.read(262145)
+        if len(content)>262144:raise RuntimeError('Unexpected oversized robots response')
+        body=content.decode('utf-8-sig','replace')
+        if re.search(r'<\s*(?:html|!doctype)|captcha|aliyun_waf_',body,re.I):
+            raise RuntimeError('Robots returned HTML/access challenge; collection stopped')
+        parser=urllib.robotparser.RobotFileParser(robots_url);parser.parse(body.splitlines())
+        if not parser.can_fetch(USER_AGENT,url):raise RuntimeError('Robots disallows archive path')
+        return {'url':robots_url,'status':200,'allowed':True}
+    except urllib.error.HTTPError as error:
+        if error.code in (404,410):
+            return {'url':robots_url,'status':error.code,'allowed':True,'note':'No robots file published'}
+        raise
+
+def enrich(rows,source_id):
+    result=[]
+    for row in rows:
+        if row['source_id']!=source_id:raise ValueError('Unexpected source ID')
+        if not row.get('id') or not row.get('title','').strip():raise ValueError('Missing article ID/title')
+        day=iso_date(row['date'])
+        if not START<=day<=END:raise ValueError('Article outside requested date range')
+        parsed=urllib.parse.urlsplit(row['url'])
+        if parsed.scheme not in ('http','https') or not parsed.netloc:raise ValueError('Invalid article URL')
+        classification=RULES.classify(row['title'],'')
+        result.append({**row,**classification,'month':day[:7],
+            'market_scope':classification['scope'],'superseded':False,
+            'categories':classification['categories'] if classification['eligible'] else [],
+            'tags':[{'hygon_cpu':'hyg_cpu','hygon_dcu':'hyg_dcu','kunpeng_cpu':'kunpeng'}.get(tag,tag) for tag in classification['tags']],
+            'eligible_categories':[],'required_categories':[],'unknown_categories':[],
+            'title_context_class':classification['context_class'],'context_class':'other','application_reviewed':False,
+            'classification_note':'统一标题词表自动识别；采购/部署等标题表述尚未人工复核，不证明实际采用。所有新闻保留在分母。'})
+    return result
+
+def collect(name,fn):
+    source_id,url=SOURCES[name]
+    robots=check_robots(url)
+    rows,log=fn()
+    log['robots']=robots
+    return enrich(rows,source_id),log
 def doit():
     m=module('doit',BASE/'doit/collect_news.py');rows=[];logs=[];boundary=False
     for p in range(1,31):
@@ -70,13 +124,13 @@ def main(argv=None):
     OUTPUT.mkdir(parents=True,exist_ok=True)
     docs=[];logs=[]
     with cf.ThreadPoolExecutor(4) as pool:
-        jobs={name:pool.submit(fn) for name,fn in [('doit',doit),('c114',c114),('zhiding',zhiding),('cbinews',cbinews)]}
+        jobs={name:pool.submit(collect,name,fn) for name,fn in [('doit',doit),('c114',c114),('zhiding',zhiding),('cbinews',cbinews)]}
         for name,job in jobs.items():
             try:
                 rows,log=job.result();log.update(checked_at=dt.datetime.now(dt.timezone.utc).isoformat(),fresh_request=True,rows=len(rows));docs.extend(rows)
                 save(name+'-fresh.json',{'documents':rows,'audit':log});logs.append(log);print(name,len(rows),log['complete'],flush=True)
             except Exception as e:
-                log={'source_id':{'doit':'doit_all','c114':'c114_roll_all','zhiding':'zhiding_latest','cbinews':'cbinews_all_news'}[name],'complete':False,'fresh_request':True,'error':str(e),'checked_at':dt.datetime.now(dt.timezone.utc).isoformat()};logs.append(log);print(name,str(e),flush=True)
+                log={'source_id':SOURCES[name][0],'complete':False,'fresh_request':True,'rows':0,'error':str(e),'checked_at':dt.datetime.now(dt.timezone.utc).isoformat()};logs.append(log);save(name+'-fresh.json',{'documents':[],'audit':log});print(name,str(e),flush=True)
     save('media-refresh.json',{'checked_at':dt.datetime.now(dt.timezone.utc).isoformat(),'reread_start':START,'scanned_through':END,'cutoff':CUTOFF,'sources':logs,'documents':docs})
 
     return 0 if all(log['complete'] for log in logs) else 1

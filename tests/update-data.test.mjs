@@ -1,0 +1,54 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {MEDIA,mergeMedia,lastSunday,rereadStart,commitFiles,recoverTransaction} from '../scripts/update-data.mjs';
+import {panelCell} from '../lib/panel.js';
+
+const row=(id,title,date,categories=[])=>({id,source_id:MEDIA[0],title,date,month:date.slice(0,7),url:`https://example.org/${id}`,categories,tags:[],context_class:'other'});
+const panel={window:{start:'2026-08-01',end:'2026-09-20'},sources:[...MEDIA.map(id=>({id,kind:'news',group:'media',coverage:['2026-08','2026-09'].map(month=>({month,status:'complete'}))})),{id:'all',document_source_ids:MEDIA,coverage:[]},{id:'official',kind:'news',coverage:[{month:'2026-09',status:'complete'}]}],documents:[row('old','原有标题','2026-09-10'),row('older','上月新闻','2026-08-20')],taxonomy:{}};
+const fresh={checked_at:'2026-09-28T01:00:00Z',reread_start:'2026-09-07',scanned_through:'2026-09-28',cutoff:'2026-09-27',sources:MEDIA.map(source_id=>({source_id,complete:true,rows:source_id===MEDIA[0]?5:0})),documents:[row('plain','普通消费新闻','2026-09-24'),row('tech','数据中心液冷部署','2026-09-25',['liquid_cooling']),row('dupe','数据中心 液冷部署！','2026-09-26',['liquid_cooling']),row('preview','下周资讯','2026-09-28'),row('old','原有标题','2026-09-10')]};
+const before=JSON.stringify(panel),result=mergeMedia(panel,fresh),p=result.panel;
+assert.equal(JSON.stringify(panel),before,'Merge must not edit input before validation');
+assert.equal(result.summary.added_rows,3);assert.equal(result.preview.length,1);assert.equal(result.candidates.length,1);
+assert.equal(result.summary.unique_media_news,4,'All topics retained, normalized duplicate excluded');
+assert.equal(p.documents.find(d=>d.id==='dupe').duplicate_of,'tech');
+assert.equal(p.sources.find(s=>s.id==='official').coverage[0].status,'incomplete','A media update cannot extend official coverage');
+const source=p.sources[0],period={id:'2026-09',months:['2026-09']};
+assert.equal(panelCell(p,source,'liquid_cooling','attention',period).N,3);
+assert.equal(panelCell(p,source,'liquid_cooling','attention',period).value,1000/3);
+assert.equal(panelCell(p,source,'liquid_cooling','application',period).status,'行为复核未完成');
+assert.equal(panelCell(p,source,'liquid_cooling','application',{id:'2026-08',months:['2026-08']}).value,0,'Historical reviewed month remains available');
+const again=mergeMedia(p,fresh);assert.equal(again.summary.added_rows,0);assert.equal(again.summary.changed_rows,0);assert.deepEqual(again.panel.documents,p.documents);
+const duplicated=structuredClone(fresh);duplicated.documents.push(duplicated.documents[0]);duplicated.sources[0].rows++;
+assert.deepEqual(mergeMedia(panel,duplicated).panel.documents,p.documents,'Repeated identical archive rows remain idempotent');
+duplicated.documents[duplicated.documents.length-1]={...duplicated.documents[0],date:'2026-09-23'};assert.throws(()=>mergeMedia(panel,duplicated),/Conflicting incoming/);
+const partial=structuredClone(fresh);partial.sources[2].complete=false;assert.throws(()=>mergeMedia(panel,partial),/incomplete collection/);
+const gap={...fresh,reread_start:'2026-09-22'};assert.throws(()=>mergeMedia(panel,gap),/cover the gap/);
+const invalid=structuredClone(fresh);invalid.documents[0].date='2026-02-30';assert.throws(()=>mergeMedia(panel,invalid),/Invalid publication date/);
+const changed=structuredClone(fresh);changed.documents.at(-1).title='修订标题';assert.equal(mergeMedia(panel,changed).summary.changed_rows,1);
+const empty={...fresh,documents:[],sources:MEDIA.map(source_id=>({source_id,complete:true,rows:0}))};assert.throws(()=>mergeMedia(panel,empty),/less than half/);
+const nextMonth={...fresh,reread_start:'2026-09-01',cutoff:'2026-10-04',scanned_through:'2026-10-04'};
+assert.equal(mergeMedia(panel,nextMonth).panel.sources[0].coverage.at(-1).status,'complete');
+assert.equal(lastSunday(new Date('2026-09-20T15:59:59Z')),'2026-09-13','Sunday is not finished before Beijing midnight');
+assert.equal(lastSunday(new Date('2026-09-20T16:00:00Z')),'2026-09-20');
+assert.equal(rereadStart({start:'2026-01-01',end:'2026-09-27'},'2026-10-04'),'2026-09-01');
+assert.equal(rereadStart({start:'2026-01-01',end:'2026-12-27'},'2027-01-03'),'2026-12-01');
+
+const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'radar-update-')),rename=fs.renameSync;
+try{
+ fs.writeFileSync(path.join(tmp,'a.json'),'old a');fs.writeFileSync(path.join(tmp,'b.json'),'old b');
+ const output=path.join(tmp,'weekly-runs/test');
+ let failed=false;
+ fs.renameSync=(a,b)=>{if(!failed&&b===path.join(tmp,'b.json')){failed=true;throw Error('simulated write failure');}return rename(a,b);};
+ assert.throws(()=>commitFiles(tmp,output,{'a.json':{new:true},'b.json':{new:true}}),/simulated/);
+ assert.equal(fs.readFileSync(path.join(tmp,'a.json'),'utf8'),'old a');assert.equal(fs.readFileSync(path.join(tmp,'b.json'),'utf8'),'old b');
+ fs.renameSync=rename;
+ commitFiles(tmp,output,{'a.json':{ok:true},'weekly-runs/last-success.json':{cutoff:'2026-09-27'}});
+ assert.equal(JSON.parse(fs.readFileSync(path.join(tmp,'a.json'))).ok,true);
+ const journal=path.join(tmp,'weekly-runs/update-transaction.json');
+ fs.writeFileSync(journal,JSON.stringify({backup:path.join(output,'backup'),files:[{file:'a.json',existed:true},{file:'weekly-runs/last-success.json',existed:false}]}));
+ assert(recoverTransaction(tmp));assert.equal(fs.readFileSync(path.join(tmp,'a.json'),'utf8'),'old a');
+ assert(!fs.existsSync(path.join(tmp,'weekly-runs/last-success.json')));assert(!recoverTransaction(tmp));
+}finally{fs.renameSync=rename;fs.rmSync(tmp,{recursive:true,force:true});}
+console.log('PASS: update dates, all-news denominator, review boundaries, idempotence, coverage, failed-write rollback and crash recovery');

@@ -36,7 +36,7 @@ def fetch(url, filename, payload=None):
     if path.exists() and not REFRESH:
         return path.read_text(encoding='utf-8')
     request = urllib.request.Request(url, data=json.dumps(payload).encode() if payload else None,
-        headers={'Content-Type':'application/json', 'User-Agent':'ISGMarketResearch/1.0 public-news-audit',
+        headers={'Content-Type':'application/json', 'User-Agent':'PublicResearch/1.0',
                  'Referer':'https://www.cbinews.com/'})
     for attempt in range(3):
         try:

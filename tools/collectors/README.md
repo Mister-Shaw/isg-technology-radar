@@ -1,6 +1,6 @@
-# Manual public-source collectors
+# Public-source collectors
 
-These Python standard-library scripts preserve the manual research collectors used for the September 2026 snapshot. They are maintenance tools, not a complete unattended update pipeline. Python 3.10 or later is required. Publisher endpoints, page structures, coverage limits, and permissions can change; inspect the audit output before using a new result.
+These Python standard-library scripts preserve the research collectors used for the September 2026 snapshot. Python 3.10 or later is required. For automated media collection, merging, coverage checks, backups and monitoring, use `npm run update` from the repository root; see [WEEKLY_UPDATE.md](../../WEEKLY_UPDATE.md). Publisher endpoints, page structures, coverage limits, and permissions can change.
 
 All generated data, downloaded responses, and local caches go under the ignored `tools/collectors/output/` directory. No publisher HTML/JavaScript archives, private browser data, credentials, or hosting settings are included. Existing cached responses can contain publisher content; do not commit that output directory.
 
@@ -49,4 +49,4 @@ python tools/collectors/check_cli.py
 python -m compileall -q tools/collectors
 ```
 
-These checks validate arguments, output containment, syntax, and existing title boundaries. No live crawl was run when preparing this export, so endpoint availability and current parsing accuracy remain unverified.
+These checks validate arguments, output containment, syntax, title boundaries and failed collection handling without network access. The automated entry point was also live-tested on 2026-09-23 against all four media for September 7–20 (1,925 rows, no new rows versus the supplied snapshot); that is not a guarantee of future endpoint availability.

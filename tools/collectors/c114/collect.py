@@ -29,7 +29,7 @@ def fetch(url, filename):
         return p.read_bytes().decode('gb18030')
     for attempt in range(3):
         try:
-            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible; public archive research)'})
+            req = urllib.request.Request(url, headers={'User-Agent': 'PublicResearch/1.0'})
             with urllib.request.urlopen(req, timeout=35) as response:
                 content = response.read()
             text = content.decode('gb18030')
@@ -51,12 +51,15 @@ def daily(day):
     try:
         text = fetch(url, f'roll-{day}.html')
         matches = ROW.findall(text)
+        if text.count('<div class="new_list_c">') != len(matches):
+            raise RuntimeError('Unparsed archive rows; possible layout change')
         parsed = []
         date_matches = True
         for url, title, origin, day_text in matches:
             stamp = clean(day_text)
             expected = f'{day.month}/{day.day}'
-            date_matches &= stamp == expected or (day == dt.date.today() and bool(re.fullmatch(r'\d{1,2}:\d{2}', stamp)))
+            today=dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).date()
+            date_matches &= stamp == expected or (day == today and bool(re.fullmatch(r'\d{1,2}:\d{2}', stamp)))
             article_id = re.search(r'/a(\d+)\.html', url)
             item_id = f'c114-{article_id[1]}' if article_id else 'c114-' + hashlib.sha256(url.encode()).hexdigest()[:16]
             parsed.append({'id': item_id, 'url': url, 'title': clean(title),
