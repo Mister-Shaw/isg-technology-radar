@@ -1,0 +1,331 @@
+{
+  "as_of": "2026-09-20",
+  "since": "2026-01-01",
+  "mode": "convenience_sample_not_market_estimate",
+  "count_scope": "Observed public evidence within the date window; publication-only records do not establish when demand first arose.",
+  "cross_category_totals_additive": false,
+  "data_quality": {
+    "input_rows": 21,
+    "included_rows": 18,
+    "excluded_rows": 3,
+    "excluded_by_reason": {
+      "not_accepted_verified": 2,
+      "before_fact_window": 1
+    },
+    "excluded": [
+      {
+        "id": "ARCH-SN-05",
+        "reason": "not_accepted_verified"
+      },
+      {
+        "id": "AD-AI-003",
+        "reason": "before_fact_window"
+      },
+      {
+        "id": "QA-001",
+        "reason": "not_accepted_verified"
+      }
+    ],
+    "unique_events": 17,
+    "unique_projects": 18,
+    "missing_project_id_fallback_rows": 0,
+    "source_type_rows": {
+      "vendor": 4,
+      "gov": 3,
+      "buyer": 7,
+      "media": 3,
+      "industry": 1
+    },
+    "date_basis_rows": {
+      "publication_only_observation_not_new_demand": 10,
+      "event_date": 8
+    },
+    "coverage": null,
+    "coverage_reason": "Search convenience sample has no planned source-panel denominator."
+  },
+  "date_audit": [
+    {
+      "id": "ARCH-TF-01",
+      "event_key": "h3c-turing-token-factory-waic-2026",
+      "project_id": "h3c-turing-token-factory-waic-2026",
+      "fact_date": "2026-07-19",
+      "date_basis": "publication_only_observation_not_new_demand"
+    },
+    {
+      "id": "ARCH-TF-02",
+      "event_key": "beijing-etown-token-economy-policy-20260803",
+      "project_id": "beijing-etown-token-economy-policy-20260803",
+      "fact_date": "2026-08-03",
+      "date_basis": "event_date"
+    },
+    {
+      "id": "ARCH-TF-03",
+      "event_key": "china-mobile-token-business-pilots-2026h1",
+      "project_id": "china-mobile-token-business-pilots-2026h1",
+      "fact_date": "2026-08-14",
+      "date_basis": "publication_only_observation_not_new_demand"
+    },
+    {
+      "id": "ARCH-TF-04",
+      "event_key": "changzhou-green-token-factory-agreement-20260718",
+      "project_id": "changzhou-green-token-factory-agreement-20260718",
+      "fact_date": "2026-07-18",
+      "date_basis": "event_date"
+    },
+    {
+      "id": "ARCH-TF-05",
+      "event_key": "beijing-no1-token-factory-capacity-20260629",
+      "project_id": "beijing-no1-token-factory-capacity-20260629",
+      "fact_date": "2026-06-29",
+      "date_basis": "event_date"
+    },
+    {
+      "id": "ARCH-SN-01",
+      "event_key": "huawei-ascend960-supernode-launch-20260917",
+      "project_id": "huawei-ascend960-supernode-launch-20260917",
+      "fact_date": "2026-09-17",
+      "date_basis": "event_date"
+    },
+    {
+      "id": "ARCH-SN-02",
+      "event_key": "guotai-haitong-ai-liquid-supernode-production-20260715",
+      "project_id": "guotai-haitong-ai-liquid-supernode-production-20260715",
+      "fact_date": "2026-07-15",
+      "date_basis": "event_date"
+    },
+    {
+      "id": "ARCH-SN-03",
+      "event_key": "odcc-open-disaggregated-superpod-standard-initiation-202604",
+      "project_id": "odcc-open-disaggregated-superpod-standard-initiation-202604",
+      "fact_date": "2026-04-16",
+      "date_basis": "publication_only_observation_not_new_demand"
+    },
+    {
+      "id": "ARCH-SN-04",
+      "event_key": "wuxi-hongxin-token-factory-superpod-agreement-202605",
+      "project_id": "wuxi-hongxin-token-factory-superpod-agreement-202605",
+      "fact_date": "2026-05-19",
+      "date_basis": "publication_only_observation_not_new_demand"
+    },
+    {
+      "id": "AD-LC-001",
+      "event_key": "gz-xinyue-2608-440105-04-01-865351-energy-approval",
+      "project_id": "gz-xinyue-2608-440105-04-01-865351-energy-approval",
+      "fact_date": "2026-09-16",
+      "date_basis": "event_date"
+    },
+    {
+      "id": "AD-LC-002",
+      "event_key": "h3c-navigate-2026-0515-announcements",
+      "project_id": "h3c-s90000-launch-2026-navigate",
+      "fact_date": "2026-05-15",
+      "date_basis": "publication_only_observation_not_new_demand"
+    },
+    {
+      "id": "AD-LC-003",
+      "event_key": "huashao-data-valley-phase1-liquid-cooling-observation",
+      "project_id": "huashao-data-valley-phase1-liquid-cooling-observation",
+      "fact_date": "2026-07-20",
+      "date_basis": "publication_only_observation_not_new_demand"
+    },
+    {
+      "id": "AD-AI-001",
+      "event_key": "eximbank-TC260C013",
+      "project_id": "eximbank-TC260C013",
+      "fact_date": "2026-04-23",
+      "date_basis": "publication_only_observation_not_new_demand"
+    },
+    {
+      "id": "AD-AI-002",
+      "event_key": "nankai-NK2026H072N",
+      "project_id": "nankai-NK2026H072N",
+      "fact_date": "2026-09-11",
+      "date_basis": "publication_only_observation_not_new_demand"
+    },
+    {
+      "id": "AD-HE-001",
+      "event_key": "tower-GPDI-ZB-2026-03896",
+      "project_id": "tower-GPDI-ZB-2026-03896",
+      "fact_date": "2026-08-25",
+      "date_basis": "event_date"
+    },
+    {
+      "id": "AD-HE-002",
+      "event_key": "tower-GPDI-ZB-2026-05771",
+      "project_id": "tower-GPDI-ZB-2026-05771",
+      "fact_date": "2026-09-11",
+      "date_basis": "event_date"
+    },
+    {
+      "id": "AD-HE-003",
+      "event_key": "sh-changning-ai-innovation-platform-pilot-2026",
+      "project_id": "sh-changning-ai-innovation-platform-pilot-2026",
+      "fact_date": "2026-06-04",
+      "date_basis": "publication_only_observation_not_new_demand"
+    },
+    {
+      "id": "AD-HE-004",
+      "event_key": "h3c-navigate-2026-0515-announcements",
+      "project_id": "h3c-lingxi-solution-upgrade-2026-navigate",
+      "fact_date": "2026-05-15",
+      "date_basis": "publication_only_observation_not_new_demand"
+    }
+  ],
+  "technologies": {
+    "token_factory": {
+      "evidence_count": 7,
+      "independent_events": 7,
+      "independent_projects": 7,
+      "last90_independent_events": 5,
+      "public_demand_projects": 0,
+      "buyer_confirmed_pilot_production_repeat_projects": 1,
+      "buyer_confirmed_projects_by_stage": {
+        "pilot": 1,
+        "production": 0,
+        "repeat": 0
+      },
+      "vendor_launch_events": 2,
+      "disclosed_award_cny_by_scope": {
+        "hardware": null,
+        "mixed": null,
+        "software_service": null,
+        "unknown": null
+      },
+      "award_projects_with_amount_by_scope": {
+        "hardware": 0,
+        "mixed": 0,
+        "software_service": 0,
+        "unknown": 0
+      },
+      "award_amount_conflict_projects": [],
+      "D": null,
+      "A": null,
+      "H": null,
+      "score_reason": "Convenience evidence sample: no fixed panel, complete denominators or mature cohort; no market score/ranking."
+    },
+    "supernode": {
+      "evidence_count": 5,
+      "independent_events": 5,
+      "independent_projects": 5,
+      "last90_independent_events": 2,
+      "public_demand_projects": 1,
+      "buyer_confirmed_pilot_production_repeat_projects": 1,
+      "buyer_confirmed_projects_by_stage": {
+        "pilot": 0,
+        "production": 1,
+        "repeat": 0
+      },
+      "vendor_launch_events": 2,
+      "disclosed_award_cny_by_scope": {
+        "hardware": null,
+        "mixed": null,
+        "software_service": null,
+        "unknown": null
+      },
+      "award_projects_with_amount_by_scope": {
+        "hardware": 0,
+        "mixed": 0,
+        "software_service": 0,
+        "unknown": 0
+      },
+      "award_amount_conflict_projects": [],
+      "D": null,
+      "A": null,
+      "H": null,
+      "score_reason": "Convenience evidence sample: no fixed panel, complete denominators or mature cohort; no market score/ranking."
+    },
+    "liquid_cooling": {
+      "evidence_count": 7,
+      "independent_events": 6,
+      "independent_projects": 7,
+      "last90_independent_events": 5,
+      "public_demand_projects": 1,
+      "buyer_confirmed_pilot_production_repeat_projects": 1,
+      "buyer_confirmed_projects_by_stage": {
+        "pilot": 0,
+        "production": 1,
+        "repeat": 0
+      },
+      "vendor_launch_events": 2,
+      "disclosed_award_cny_by_scope": {
+        "hardware": null,
+        "mixed": null,
+        "software_service": null,
+        "unknown": null
+      },
+      "award_projects_with_amount_by_scope": {
+        "hardware": 0,
+        "mixed": 0,
+        "software_service": 0,
+        "unknown": 0
+      },
+      "award_amount_conflict_projects": [],
+      "D": null,
+      "A": null,
+      "H": null,
+      "score_reason": "Convenience evidence sample: no fixed panel, complete denominators or mature cohort; no market score/ranking."
+    },
+    "ai_appliance": {
+      "evidence_count": 2,
+      "independent_events": 2,
+      "independent_projects": 2,
+      "last90_independent_events": 1,
+      "public_demand_projects": 2,
+      "buyer_confirmed_pilot_production_repeat_projects": 0,
+      "buyer_confirmed_projects_by_stage": {
+        "pilot": 0,
+        "production": 0,
+        "repeat": 0
+      },
+      "vendor_launch_events": 0,
+      "disclosed_award_cny_by_scope": {
+        "hardware": null,
+        "mixed": 800000,
+        "software_service": null,
+        "unknown": 9680000
+      },
+      "award_projects_with_amount_by_scope": {
+        "hardware": 0,
+        "mixed": 1,
+        "software_service": 0,
+        "unknown": 1
+      },
+      "award_amount_conflict_projects": [],
+      "D": null,
+      "A": null,
+      "H": null,
+      "score_reason": "Convenience evidence sample: no fixed panel, complete denominators or mature cohort; no market score/ranking."
+    },
+    "heterogeneous": {
+      "evidence_count": 4,
+      "independent_events": 4,
+      "independent_projects": 4,
+      "last90_independent_events": 2,
+      "public_demand_projects": 2,
+      "buyer_confirmed_pilot_production_repeat_projects": 1,
+      "buyer_confirmed_projects_by_stage": {
+        "pilot": 1,
+        "production": 0,
+        "repeat": 0
+      },
+      "vendor_launch_events": 1,
+      "disclosed_award_cny_by_scope": {
+        "hardware": null,
+        "mixed": null,
+        "software_service": 2677560,
+        "unknown": null
+      },
+      "award_projects_with_amount_by_scope": {
+        "hardware": 0,
+        "mixed": 0,
+        "software_service": 1,
+        "unknown": 0
+      },
+      "award_amount_conflict_projects": [],
+      "D": null,
+      "A": null,
+      "H": null,
+      "score_reason": "Convenience evidence sample: no fixed panel, complete denominators or mature cohort; no market score/ranking."
+    }
+  }
+}

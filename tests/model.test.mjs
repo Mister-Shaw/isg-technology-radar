@@ -1,0 +1,37 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {summary,inWindow,validateRecord,exportCsv,safeUrl} from '../lib/model.js';
+import {extractPage,readBounded,collectPage} from '../lib/collect.js';
+const records=JSON.parse(readFileSync(new URL('../data/seed.json',import.meta.url)));
+const s=summary(records);
+assert.equal(records.length,21);assert.equal(s.docs,18);assert.equal(s.events,17);assert.equal(s.demand,5);assert.equal(s.buyers,4);
+assert.equal(s.techs.length,13);assert.equal(s.techs.find(e=>e.id==='focus').docs,0);
+const compute=s.techs.find(e=>e.id==='compute_field');assert.deepEqual([compute.docs,compute.events,compute.demand,compute.pilot,compute.production],[6,6,4,1,0]);
+assert.equal(s.rows.filter(e=>e.source_type==='buyer').length,7);
+assert.equal(s.rows.filter(e=>e.id.startsWith('AD-AI-')&&e.techs.includes('compute_field')&&e.stage==='award').length,2);
+assert.equal(s.rows.filter(e=>e.techs.includes('token_factory')&&e.source_type==='buyer'&&e.stage==='production').length,0);
+const base={...s.rows.find(e=>e.source_type==='buyer'),revision:1};
+assert.equal(inWindow({...base,review_status:'quarantine'},'2026-01-01','2026-09-20'),false);
+assert.equal(inWindow({...base,published_date:'2027-01-01'},'2026-01-01','2026-09-20'),false);
+assert.throws(()=>validateRecord({...base,verified_fulltext:false}));
+for(const t of ['ai_appliance','heterogeneous'])assert.throws(()=>validateRecord({...base,techs:[t]}));
+assert.throws(()=>validateRecord({...base,source_type:'gov',stage:'tender',customer:null}));
+assert.throws(()=>validateRecord({...base,published_date:'2026-02-30'}));
+assert.equal(summary([{...base,customer:null}]).buyers,0);
+assert.equal(safeUrl('javascript:alert(1)'),null);assert.equal(safeUrl('https://user:pass@example.com'),null);
+assert.ok(exportCsv([{...base,title:'=HYPERLINK("x")'}]).includes("'=HYPERLINK"));
+console.log('PASS: seed counts, deduplication, filters, review gate, dates, URL and CSV safeguards');
+const html='<title>研究原文</title><div>冗长菜单</div><h1>研究原文</h1><p>实际正文</p><script>secret</script><footer>页脚</footer>';
+assert.equal(extractPage(html,'fallback').excerpt.includes('冗长菜单'),false);
+assert.ok(extractPage(html,'fallback').excerpt.includes('实际正文'));
+assert.equal(extractPage(html,'fallback').excerpt.includes('secret'),false);
+await assert.rejects(()=>readBounded(new Response('12345'),4));
+await assert.rejects(()=>collectPage('https://127.0.0.1/private'));
+const originalFetch=globalThis.fetch;
+try{
+ globalThis.fetch=async()=>new Response('User-agent: *\nDisallow: /cn/');
+ await assert.rejects(()=>collectPage('https://www.h3c.com/cn/test'),/采集规则限制/);
+ globalThis.fetch=async url=>url.endsWith('/robots.txt')?new Response('',{status:404}):new Response('',{status:302,headers:{location:'https://example.net'}});
+ await assert.rejects(()=>collectPage('https://www.h3c.com/cn/test'),/跳转/);
+}finally{globalThis.fetch=originalFetch;}
+console.log('PASS: text extraction, bounded reads, allowlist, robots rules and redirect rejection');

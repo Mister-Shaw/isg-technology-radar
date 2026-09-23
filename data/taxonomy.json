@@ -1,0 +1,245 @@
+{
+  "version": "3.0",
+  "geography": "中国大陆",
+  "technologies": [
+    {
+      "id": "supernode",
+      "name": "超节点",
+      "layer": "系统与互连架构",
+      "include": [
+        "超节点",
+        "超结点",
+        "SuperPod",
+        "scale-up"
+      ],
+      "context_required": "机柜或多柜内高速互连、统一资源域及具体系统配置，不能仅因集群规模大就纳入",
+      "exclude": [
+        "普通scale-out集群",
+        "区块链超级节点"
+      ],
+      "proof_metrics": [
+        "独立采购/投产客户",
+        "有效训练/推理吞吐",
+        "互连效率",
+        "利用率",
+        "系统交付周期"
+      ]
+    },
+    {
+      "id": "liquid_cooling",
+      "name": "液冷",
+      "layer": "热管理与交付基础设施",
+      "include": [
+        "液冷",
+        "冷板",
+        "浸没式",
+        "CDU"
+      ],
+      "context_required": "服务器/机柜/智算中心，区分冷板、浸没、两相及设施侧",
+      "exclude": [
+        "消费PC水冷",
+        "空调单独采购",
+        "标题液冷但正文标的不符"
+      ],
+      "proof_metrics": [
+        "液冷采购客户",
+        "投产机柜",
+        "实测PUE/WUE及测量边界",
+        "泄漏/停机事件",
+        "改造总成本"
+      ]
+    },
+    {
+      "id": "domestic_gpu",
+      "name": "国产 GPU",
+      "layer": "芯片与加速卡",
+      "include": [
+        "国产GPU",
+        "海光DCU",
+        "GPGPU",
+        "智算加速卡"
+      ],
+      "context_required": "明确国产GPU/DCU产品与采购；CPU和NPU另设芯片标签，不自动归入GPU",
+      "exclude": [
+        "只有海光CPU",
+        "只有鲲鹏CPU",
+        "GPU品牌未明示"
+      ],
+      "proof_metrics": []
+    },
+    {
+      "id": "compute_field",
+      "name": "算力场",
+      "layer": "资源池、调度与一体机部署",
+      "include": [
+        "算力场",
+        "算力资源池",
+        "算力网",
+        "算力互联网",
+        "统一调度",
+        "异构调度",
+        "AI一体机采购",
+        "大模型一体机部署"
+      ],
+      "context_required": "算力资源池及统一调度平台，含算力互联网/算力网；按2026-09-20确认的新口径，亦纳入AI/大模型一体机采购与部署，区分一体机与资源池/调度项目。",
+      "exclude": [
+        "只有机房建设",
+        "普通单台服务器且无AI一体机或资源池/调度用途",
+        "只有一体机概念宣传，无采购或部署证据"
+      ],
+      "proof_metrics": []
+    },
+    {
+      "id": "eda",
+      "name": "EDA",
+      "layer": "应用负载与研发工具",
+      "include": [
+        "EDA",
+        "电子设计自动化",
+        "仿真服务器",
+        "PDK"
+      ],
+      "context_required": "电子设计自动化的工具、仿真及算力基础设施；许可与硬件金额分开",
+      "exclude": [
+        "移动护理EDA终端",
+        "与芯片设计无关的同名缩写"
+      ],
+      "proof_metrics": []
+    },
+    {
+      "id": "compute_rental",
+      "name": "算力租赁",
+      "layer": "服务采购",
+      "include": [
+        "算力租赁",
+        "算力服务",
+        "GPU租赁",
+        "卡时"
+      ],
+      "context_required": "租赁算力资源或卡时服务，区分服务期限、总价和单位价格",
+      "exclude": [
+        "单纯设备买断",
+        "只有未签约报价"
+      ],
+      "proof_metrics": []
+    },
+    {
+      "id": "token_factory",
+      "name": "Token 工厂",
+      "layer": "运营与商业模式",
+      "include": [
+        "词元工厂",
+        "Token工厂",
+        "AI工厂",
+        "推理工厂"
+      ],
+      "context_required": "面向持续模型推理/训练运营，披露算力设施、平台或Token服务商业化；实际付费消纳另行核验",
+      "exclude": [
+        "区块链代币",
+        "纯API价格新闻",
+        "仅模型发布"
+      ],
+      "proof_metrics": [
+        "实际付费Token量/天",
+        "满足SLA的百万Token成本",
+        "收入/可用卡时",
+        "付费客户留存"
+      ]
+    },
+    {
+      "id": "optical_switch",
+      "name": "光交换机",
+      "layer": "光互连架构",
+      "include": [
+        "光交换机",
+        "全光交换",
+        "OCS",
+        "光路交换"
+      ],
+      "context_required": "明确光路交换OCS技术或产品，厂商海外发布只表明供给进展",
+      "exclude": [
+        "普通以太网交换机",
+        "光模块单品",
+        "光纤收发器"
+      ],
+      "proof_metrics": []
+    },
+    {
+      "id": "ai_storage",
+      "name": "AI 存储",
+      "layer": "数据与存储",
+      "include": [
+        "AI存储",
+        "智算存储",
+        "高性能并行存储",
+        "Checkpoint",
+        "缓存文件存储"
+      ],
+      "context_required": "明确服务训练/推理/AI数据处理的存储采购或技术",
+      "exclude": [
+        "普通办公存储",
+        "没有AI场景的通用NAS"
+      ],
+      "proof_metrics": []
+    },
+    {
+      "id": "aidc",
+      "name": "AIDC",
+      "layer": "智算中心基础设施",
+      "include": [
+        "AIDC",
+        "智算中心",
+        "人工智能数据中心"
+      ],
+      "context_required": "AI数据中心的规划、建设与运营，分开项目总投资和IT设备额",
+      "exclude": [
+        "仅传统机房且无AI负载"
+      ],
+      "proof_metrics": []
+    },
+    {
+      "id": "modular_dc",
+      "name": "模块化数据中心",
+      "layer": "交付与建设形态",
+      "include": [
+        "模块化数据中心",
+        "微模块",
+        "预制模块",
+        "集装箱数据中心"
+      ],
+      "context_required": "模块化或预制的数据中心/机房交付",
+      "exclude": [
+        "泛称模块化的软件",
+        "单独机柜配件"
+      ],
+      "proof_metrics": []
+    },
+    {
+      "id": "xpu",
+      "name": "xPU / 异构加速",
+      "layer": "处理器与异构计算",
+      "include": [
+        "xPU",
+        "异构计算",
+        "异构算力",
+        "异构加速",
+        "NPU",
+        "DPU",
+        "FPGA",
+        "专用加速器"
+      ],
+      "context_required": "显式xPU/异构方案，或服务器、数据中心场景的其他加速器；单独CPU/GPU不自动归入；历史仅重识别已有资料，尚未专项补采。",
+      "exclude": [
+        "消费终端与车载",
+        "仅普通CPU/GPU词汇",
+        "无算力基础设施语境的FPGA/NPU/DPU"
+      ],
+      "proof_metrics": []
+    }
+  ],
+  "rules": [
+    "观察主题可重叠，禁止把跨类别金额或项目数相加为市场规模。",
+    "关键词仅发现候选；须核对原文、买方、时间、地域、阶段和金额口径。",
+    "海光CPU、海光DCU、鲲鹏CPU、昇腾NPU及未确定芯片分别标注。"
+  ]
+}

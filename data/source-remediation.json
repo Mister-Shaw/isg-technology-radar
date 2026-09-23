@@ -1,0 +1,636 @@
+{
+  "checked_at": "2026-09-23",
+  "window": {
+    "start": "2026-01-01",
+    "end": "2026-09-20"
+  },
+  "target_sources": 27,
+  "supplementary_sources": 1,
+  "record_ids": [
+    "supp-proc-24427fb8253c",
+    "supp-proc-96ee888a92ad",
+    "supp-proc-5f430bbece07",
+    "supp-proc-d2a27bb00ba5",
+    "supp-proc-d82b0932b386",
+    "supp-proc-8b0189e36f10",
+    "supp-proc-e6f03fe9e5dc",
+    "supp-proc-96a200929764",
+    "supp-proc-6a15a52af948",
+    "supp-proc-36d7bb7dd327",
+    "supp-proc-6ee8d0cb2b34",
+    "supp-proc-47b7fb73bc0f",
+    "supp-proc-f8aa6a137ea4",
+    "supp-proc-136cf38e457f",
+    "remedia-siei-20260916",
+    "remedia-kanghui-20260917",
+    "remedia-hygon-h1-20260814",
+    "remedia-cbi-mcv-20260915",
+    "remedia-idc-vnet-qingyang-20260909",
+    "remedia-cbi-kadc-20260522",
+    "remedia-cbit-hygon-20260424",
+    "rem-hygon-tianjin-data-space-20260203",
+    "rem-baai-flagos-validation-20260327",
+    "rem-mthreads-robobrain-validation-20260127",
+    "rem-mthreads-jd-cloud-20260909",
+    "rem-mthreads-infinigence-token-20260904",
+    "rem-huawei-ai-lab-20260319",
+    "rem-metax-minicpm5-adaptation-20260908",
+    "rem-mthreads-prefill-paper-20260824"
+  ],
+  "sources": [
+    {
+      "source_id": "intent",
+      "checked_at": "2026-09-23",
+      "label": "已收录索引 · 原件待补",
+      "result": "入口与详情HTTP502；官方搜索索引可读。部分本地请求遇证书域名不符。不是未发现数据。",
+      "coverage": "定向核查6—7月意向，新补3项；现存海光35万元意向重复不新增；不能声称覆盖1—9月全部意向。",
+      "public_urls": [
+        "https://cgyx.ccgp.gov.cn/cgyx/pub/projSearch"
+      ],
+      "record_ids": [
+        "supp-proc-96a200929764",
+        "supp-proc-6a15a52af948",
+        "supp-proc-36d7bb7dd327"
+      ],
+      "assistance": {
+        "priority": "P1",
+        "task": "请从中国政府采购网官方首页“政府采购意向”入口导航；确认连接正常后，以项目标题和公开日期查询3条：国产AI算力服务器2026-07-03、北京交通大学算力租赁2026-06-30、北京大学全液冷工作站2026-06-03。将详情打印为PDF或复制正文，带原URL与发布日期。无需提供账号密码。",
+        "query": "国家卫星海洋应用中心服务器采购（现存）；北京交通大学算力租赁服务；AI算力服务器采购项目；北京大学全液冷工作站",
+        "url": "https://www.ccgp.gov.cn/"
+      },
+      "api_authorized": null
+    },
+    {
+      "source_id": "ggzy",
+      "checked_at": "2026-09-23",
+      "label": "地方原件已补采",
+      "result": "国家入口可读但仅动态模板且有验证码；通过河南省公共资源原始公告与河南财政合同页面补齐同项目的预算→合同。",
+      "coverage": "获得1月19日招标、3月20日合同披露；另读2月10日中标索引，未冒充全国全量回采。",
+      "public_urls": [
+        "https://www.ggzy.gov.cn/deal/dealList.html?HEADER_DEAL_TYPE=02"
+      ],
+      "record_ids": [
+        "supp-proc-8b0189e36f10",
+        "supp-proc-e6f03fe9e5dc"
+      ],
+      "assistance": null,
+      "api_authorized": null
+    },
+    {
+      "source_id": "ceb",
+      "checked_at": "2026-09-23",
+      "label": "原平台仍受限",
+      "result": "入口HTTP405；域名定向检索无结果。通过深交所公司公告发现国产智算Token工厂候选公示，但本库已有同项目，不重增。",
+      "coverage": "未获取平台本次新增原文；公司公告能旁证既有项目。",
+      "public_urls": [
+        "https://bulletin.cebpubservice.com/"
+      ],
+      "record_ids": [],
+      "assistance": {
+        "priority": "P2",
+        "task": "打开官网在2026-01-01至2026-09-20搜索海光、鲲鹏、超节点、液冷及算力；先找杭州瀚融国产智算Token工厂（6月30日至7月3日公示）补官方原文/结果PDF，不将候选报价当成交。",
+        "query": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-07-02/8f35f207-2f36-4c4d-907b-265755cc5cdc.PDF",
+        "url": "https://bulletin.cebpubservice.com/"
+      },
+      "api_authorized": null
+    },
+    {
+      "source_id": "mobile",
+      "checked_at": "2026-09-23",
+      "label": "原平台仍受限",
+      "result": "入口只有空正文；指定域名检索未返回可读2026公告。公开转载发现浙江液冷采购线索，尚未取得官方链接，不宣称自动接通。",
+      "coverage": "线索日期3月30日、8月6日，详情待人工打开官方平台。",
+      "public_urls": [
+        "https://b2b.10086.cn/"
+      ],
+      "record_ids": [],
+      "assistance": {
+        "priority": "P2",
+        "task": "在官方采购与招标网公告查询设日期范围，分别搜索“解耦式液冷机柜”和“液冷CDU”；打开项目原文并导出公告/技术规范/中标结果，保留项目编号、标包、预算或最高限价及税口径。",
+        "query": "2026-03-30 中国移动浙江公司2026年至2027年解耦式液冷机柜采购项目；2026-08-06 浙江移动2026年至2028年液冷CDU技术规范书及评分办法征求意见",
+        "url": "https://b2b.10086.cn/"
+      },
+      "api_authorized": null
+    },
+    {
+      "source_id": "telecom",
+      "checked_at": "2026-09-23",
+      "label": "买方替代来源已补采",
+      "result": "阳光采购入口空正文，未获取历史列表；通过政府买方公告补到电信两笔算力租赁中标，另电信官网万卡集群索引可读但正文412/重定向循环。",
+      "coverage": "6月、7月中标官方正文；7月运营商项目索引。采购平台本身仍未打通。",
+      "public_urls": [
+        "https://caigou.chinatelecom.com.cn/"
+      ],
+      "record_ids": [
+        "supp-proc-136cf38e457f"
+      ],
+      "assistance": {
+        "priority": "P2",
+        "task": "在阳光采购公共公告查询日期范围，检索“2026年六期算力服务”“2026年QN算力服务”“海光”“鲲鹏”；保存公告正文与附件，优先补项目编号、阶段、金额及税口径，不登录后参与投标。",
+        "query": "中电信人工智能科技（北京）有限公司2026年六期算力服务项目（2月9日公示，公告落款2月8日）",
+        "url": "https://caigou.chinatelecom.com.cn/"
+      },
+      "api_authorized": null
+    },
+    {
+      "source_id": "unicom",
+      "checked_at": "2026-09-23",
+      "label": "原平台仍受限",
+      "result": "入口超时；定向检索未得官方2026详情。公开转载定位宁夏DC7液冷暖通项目，可供用户按编号查原文。",
+      "coverage": "检索到3月19日候选转载，未获取官方公告，不作为已核记录。",
+      "public_urls": [
+        "https://unibapi.unicom.net.cn/"
+      ],
+      "record_ids": [],
+      "assistance": {
+        "priority": "P2",
+        "task": "打开联通采购平台，查询编号08-11-04A-2026-D-F-C03768或“中卫 DC7 暖通”，日期2026-02-01至2026-05-31；下载3月19日候选、后续中标与合同摘要。另机电EPC为另一标段，勿相互替代。",
+        "query": "公开转载：第一候选不含税146712102.65元；尚需官方原文确认，候选报价非成交。",
+        "url": "https://unibapi.unicom.net.cn/"
+      },
+      "api_authorized": null
+    },
+    {
+      "source_id": "siat",
+      "checked_at": "2026-09-23",
+      "label": "已收录索引 · 原件待补",
+      "result": "官网目录与搜索索引能发现合同；部分详情超时、www及非www均未能读取，本地SSL验证失败。发现3月合同金额单位异常，已留空金额。",
+      "coverage": "现存2月合同不重增；本次新补3月31日及9月17日索引线索。",
+      "public_urls": [
+        "https://siat.cas.cn/jggl/tzgg/"
+      ],
+      "record_ids": [
+        "supp-proc-47b7fb73bc0f",
+        "supp-proc-f8aa6a137ea4"
+      ],
+      "assistance": {
+        "priority": "P1",
+        "task": "请由可信的中国科学院官网导航进入深圳先进院，寻找2026-03-31技术服务合同公示；在正常证书连接下下载“技术服务合同--单章.pdf”并导入。若你的浏览器也提示证书错误，暂不继续该页面，可交由单位网络/IT确认后再取文件。",
+        "query": "https://www.siat.cas.cn/jggl/tzgg/202603/t20260331_8179886.html；https://www.siat.cas.cn/jggl/tzgg/202609/t20260917_8284198.html",
+        "url": "https://www.cas.cn/"
+      },
+      "api_authorized": null
+    },
+    {
+      "source_id": "ecust",
+      "checked_at": "2026-09-23",
+      "label": "公开栏目可读 · 部分补齐",
+      "result": "首页及二级采购栏目可读，AI辅助设计算力6月公告正文可读；9月计算测试公告仅索引可读，本地SSL错误。可将栏目检查改公开入口但不能声称全历史自动抓取。",
+      "coverage": "本次新增6月9日、9月18日；现存7月30日高性能计算模拟不重增。",
+      "public_urls": [
+        "https://czzx.ecust.edu.cn/"
+      ],
+      "record_ids": [
+        "supp-proc-d2a27bb00ba5",
+        "supp-proc-d82b0932b386"
+      ],
+      "assistance": null,
+      "api_authorized": null
+    },
+    {
+      "source_id": "wechat",
+      "checked_at": "2026-09-23",
+      "label": "公开镜像可读",
+      "result": "根域无法读取；信通院官方号新浪镜像全文可读，原文链接读取失败。",
+      "coverage": "无法自动取得账号历史全集、阅读量或转发数据。",
+      "public_urls": [
+        "https://mp.weixin.qq.com/",
+        "https://finance.sina.com.cn/wm/2026-04-14/doc-inhuniea4165861.shtml"
+      ],
+      "record_ids": [],
+      "assistance": {
+        "priority": "P1",
+        "task": "微信内进入海光信息、鲲鹏计算、信通院相关账号，按日期检索；复制文章分享链接，或导出/粘贴带标题、日期与账号的正文。无需发送账号密码。",
+        "query": "超节点；液冷；国产GPU；算力资源池；EDA；算力租赁；Token工厂；词元工厂；光交换机；AI存储；AIDC；模块化数据中心；海光；鲲鹏",
+        "url": "https://mp.weixin.qq.com/"
+      },
+      "api_authorized": null
+    },
+    {
+      "source_id": "caict-wechat",
+      "checked_at": "2026-09-23",
+      "label": "公开镜像可读",
+      "result": "官方微信矩阵页面可读但正文只有部门/联盟标题与二维码；两篇官方账号新浪镜像已补采。",
+      "coverage": "矩阵目录证明账号入口，不等于每个账号历史已采集。",
+      "public_urls": [
+        "https://service.caict.ac.cn/wxq/",
+        "https://finance.sina.com.cn/wm/2026-07-06/doc-inifwfpy8668975.shtml",
+        "https://www.caict.ac.cn/"
+      ],
+      "record_ids": [],
+      "assistance": {
+        "priority": "P1",
+        "task": "按官方二维码识别账号主体，在微信中取得2026年相关文章分享链接；优先补原文与附件，镜像已有记录将按标题、日期归并。",
+        "query": "Token服务；词元；AISHPerf；超节点；液冷",
+        "url": "https://service.caict.ac.cn/wxq/"
+      },
+      "api_authorized": null
+    },
+    {
+      "source_id": "cbinews",
+      "checked_at": "2026-09-23",
+      "label": "公开路径已检查",
+      "result": "首页直读首次超时，搜索索引可读；具体文章 /IDC/4utv14 正文成功，/AI/cxup4 原文也读取成功。",
+      "coverage": "具体原文可公开补采，不代表动态12栏目的历史枚举完整；既有固定新闻分母不改。",
+      "public_urls": [
+        "https://www.cbinews.com/",
+        "https://www.cbinews.com/IDC/4utv14",
+        "https://www.cbinews.com/AI/cxup4"
+      ],
+      "record_ids": [
+        "remedia-cbi-mcv-20260915",
+        "remedia-cbi-kadc-20260522"
+      ],
+      "assistance": null,
+      "api_authorized": null
+    },
+    {
+      "source_id": "idcquan",
+      "checked_at": "2026-09-23",
+      "label": "公开路径已检查",
+      "result": "news子域入口不可读，cloud.idcquan.com及其yzx栏目/文章可读；已取得庆阳项目文章。",
+      "coverage": "公开栏目/原文是有效替代；月报项目总数不代替逐条证据，9月22日超节点盘点超出窗口未入库。",
+      "public_urls": [
+        "https://news.idcquan.com/",
+        "https://cloud.idcquan.com/",
+        "https://cloud.idcquan.com/yzx/"
+      ],
+      "record_ids": [
+        "remedia-idc-vnet-qingyang-20260909"
+      ],
+      "assistance": null,
+      "api_authorized": null
+    },
+    {
+      "source_id": "d1net",
+      "checked_at": "2026-09-23",
+      "label": "公开栏目部分可读",
+      "result": "首页返回脚本挑战；/datacenter/栏目成功读取，看到2026-02-25至08-28的日期和文章标题。 本站自动读取器仍未确认有效robots规则；当前公开研究读取与站内自动采集状态分别保留。",
+      "coverage": "可定向读取公开栏目但本次未核到适合新增的国内项目原件；不把海外数据中心评论充作国内采购，不构成全新闻分母。",
+      "public_urls": [
+        "https://www.d1net.com/",
+        "https://www.d1net.com/datacenter/"
+      ],
+      "record_ids": [],
+      "assistance": null,
+      "api_authorized": null
+    },
+    {
+      "source_id": "cninfo",
+      "checked_at": "2026-09-23",
+      "label": "官方PDF已补采",
+      "result": "动态查询入口可读；巨潮赛意3页PDF、海光166页PDF可直接下载并解析。康惠上交所PDF本次返回HTML，公告转载全文可读。 2026-09-23正常浏览器复核尝试因CUA无可用浏览器未能执行；不据此追加站点访问失败判定。",
+      "coverage": "公开PDF可自动处理，但查询目录未全量枚举；海光公司收入不等于DCU收入或项目采购金额。",
+      "public_urls": [
+        "https://www.cninfo.com.cn/new/commonUrl/pageOfSearch?url=disclosure/list/search",
+        "https://static.cninfo.com.cn/finalpage/2026-09-16/1225567437.PDF",
+        "https://static.cninfo.com.cn/finalpage/2026-08-14/1225472510.PDF"
+      ],
+      "record_ids": [
+        "remedia-siei-20260916",
+        "remedia-kanghui-20260917",
+        "remedia-hygon-h1-20260814"
+      ],
+      "assistance": {
+        "priority": "P1",
+        "task": "请在你本机正常浏览器打开已定位的上交所康惠2026-09-17公告，能打开则下载完整PDF上传或导入本站；若遇证书警告不要绕过，可改从巨潮查询股票代码603139、公告日期2026-09-17取得官方PDF。重点核对五年期17.20亿元预计服务合同和11.41亿元服务器采购合同；本次不需要登录或付费。",
+        "query": "603139；康惠；采购高性能算力服务器暨签署算力服务合同",
+        "url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-09-17/603139_20260917_3EV5.pdf"
+      },
+      "api_authorized": null
+    },
+    {
+      "source_id": "newrank",
+      "checked_at": "2026-09-23",
+      "label": "API未授权 · 可导入",
+      "result": "官网首页与产品介绍可读，明确有定制API服务；当前无账号服务授权或文章历史导出。",
+      "coverage": "官网可访问不等于API可用；本轮不伪造文章/阅读量，也不以排名指数替代接受度。",
+      "public_urls": [
+        "https://www.newrank.cn/"
+      ],
+      "record_ids": [],
+      "assistance": {
+        "priority": "optional",
+        "task": "现阶段无需购买；如果已有合法账号导出，可按2026-01-01至09-20提供文章清单CSV/JSON，注明账号范围、采集日期、查询词与阅读量截断规则；没有则继续公开原文路线。",
+        "query": "超节点；液冷；国产GPU；算力资源池；EDA；算力租赁；Token工厂；词元工厂；光交换机；AI存储；AIDC；模块化数据中心；海光；鲲鹏",
+        "url": "https://www.newrank.cn/"
+      },
+      "api_authorized": false
+    },
+    {
+      "source_id": "gsdata",
+      "checked_at": "2026-09-23",
+      "label": "API未授权 · 可导入",
+      "result": "官网返回必须启用JavaScript的页面，未获得查询结果或数据接口授权。",
+      "coverage": "清博未接通，不能声称抓取其公众号历史或传播量。",
+      "public_urls": [
+        "https://www.gsdata.cn/"
+      ],
+      "record_ids": [],
+      "assistance": {
+        "priority": "optional",
+        "task": "仅在你已合法持有账号和导出权限时提供CSV/JSON；无需为本次补采新购服务。导出须保留账号、原文URL、发布时间、阅读量采集时点以及10万+等截断标记。",
+        "query": "超节点；液冷；国产GPU；算力资源池；EDA；算力租赁；Token工厂；词元工厂；光交换机；AI存储；AIDC；模块化数据中心；海光；鲲鹏",
+        "url": "https://www.gsdata.cn/"
+      },
+      "api_authorized": false
+    },
+    {
+      "source_id": "qianlima",
+      "checked_at": "2026-09-23",
+      "label": "公开线索已补采 · API未授权",
+      "result": "公开首页可读；海光包2候选公告摘要可读，企业名称/正文隐藏并要求注册登录。",
+      "coverage": "只获得有限摘要，不推断隐藏中标单位或候选金额的分配方式。",
+      "public_urls": [
+        "https://www.qianlima.com/",
+        "https://bj.qianlima.com/zbcontent-610745506.html",
+        "https://bulletin.cebpubservice.com/"
+      ],
+      "record_ids": [],
+      "assistance": {
+        "priority": "P1",
+        "task": "优先在官方公共服务平台按项目号查询2026-04-24至07-03公告和候选附件；正常完成页面验证后下载PDF。不需要购买千里马会员。",
+        "query": "CBIT-CG-2026-52；21-05-04A-2026-D-F-E09291；2026年第一批海光服务器采购项目（包2）",
+        "url": "https://bulletin.cebpubservice.com/"
+      },
+      "api_authorized": false
+    },
+    {
+      "source_id": "bidcenter",
+      "checked_at": "2026-09-23",
+      "label": "公开线索已补采 · API未授权",
+      "result": "API服务介绍公开可读；海光采购公告搜索索引有OCR全文，但直接正文跳转人机验证。",
+      "coverage": "未接通商业API；索引内容可以收录线索但不能标记原文已核。",
+      "public_urls": [
+        "https://shuju.bidcenter.com.cn/zhuanti/shuju/api.shtml",
+        "https://www.bidcenter.com.cn/newscontent-416011871-1.html",
+        "https://bulletin.cebpubservice.com/"
+      ],
+      "record_ids": [
+        "remedia-cbit-hygon-20260424"
+      ],
+      "assistance": {
+        "priority": "P1",
+        "task": "如在正常浏览器可过验证码，下载公开公告PDF或复制正文；若要求会员，改到官方公共服务平台取同编号公告，无需付费。",
+        "query": "CBIT-CG-2026-52",
+        "url": "https://www.bidcenter.com.cn/newscontent-416011871-1.html"
+      },
+      "api_authorized": false
+    },
+    {
+      "source_id": "caict",
+      "checked_at": "2026-09-23",
+      "label": "公开镜像可读",
+      "result": "本次web打开官网失败；主任务线上检查返回412，不能当作零消息。官方署名新浪镜像及公开政府转载可用，微信矩阵入口可读。",
+      "coverage": "官网请求失败仍需补采，公开镜像不代表已取得官网全量新闻。相同官方文章跨渠道归并，不重复计数。",
+      "public_urls": [
+        "https://www.caict.ac.cn/",
+        "https://finance.sina.com.cn/wm/2026-04-14/doc-inhuniea4165861.shtml",
+        "https://finance.sina.com.cn/wm/2026-07-06/doc-inifwfpy8668975.shtml",
+        "https://service.caict.ac.cn/wxq/"
+      ],
+      "record_ids": [],
+      "assistance": null,
+      "api_authorized": null
+    },
+    {
+      "source_id": "metax",
+      "checked_at": "2026-09-23",
+      "label": "公开栏目可读",
+      "result": "目录与抽核正文HTTP 200，可从官方分页目录持续发现并直读正文；这是公开目录覆盖，不宣称穷尽已删除、公众号独有或隐藏资料。非目标技术的招聘、参访、党建、奖项与重复稿不计事件。",
+      "coverage": "本次可见资料 2026-01-05 至 2026-09-20；核对11页目录、109条目录项。公开目录窗口已检查，隐藏/删除/公众号独有内容不在覆盖内。",
+      "public_urls": [
+        "https://www.metax-tech.com/news.html"
+      ],
+      "record_ids": [
+        "rem-metax-minicpm5-adaptation-20260908"
+      ],
+      "assistance": null,
+      "api_authorized": null
+    },
+    {
+      "source_id": "univista",
+      "checked_at": "2026-09-23",
+      "label": "公开栏目可读",
+      "result": "目录与抽核正文HTTP 200，可从官方分页目录持续发现并直读正文；这是公开目录覆盖，不宣称穷尽已删除、公众号独有或隐藏资料。多条IDA发布会解读已属已有事件补充来源，不再重复计数。",
+      "coverage": "本次可见资料 2026-02-04 至 2026-09-15；核对3页目录、23条目录项。公开目录窗口已检查，隐藏/删除/公众号独有内容不在覆盖内。",
+      "public_urls": [
+        "https://www.univista-isg.com/site/news"
+      ],
+      "record_ids": [],
+      "assistance": null,
+      "api_authorized": null
+    },
+    {
+      "source_id": "hygon",
+      "checked_at": "2026-09-23",
+      "label": "官方替代来源已补采",
+      "result": "主站Web文本为空且本机直连关闭；光合组织官网正文及智源官方验证稿可读。Hygon CPU和DCU分开标注，不把2025年HSL发布计入2026。",
+      "coverage": "本次可见资料 2026-02-03 至 2026-03-27；定向补查，历史窗口尚不完整。",
+      "public_urls": [
+        "https://www.hygon.cn/",
+        "https://www.hieco.com.cn/casedetails?id=1638",
+        "https://hub.baai.ac.cn/view/53417",
+        "https://static.cninfo.com.cn/finalpage/2026-08-14/1225472509.PDF"
+      ],
+      "record_ids": [
+        "rem-hygon-tianjin-data-space-20260203",
+        "rem-baai-flagos-validation-20260327"
+      ],
+      "assistance": null,
+      "api_authorized": null
+    },
+    {
+      "source_id": "kunpeng",
+      "checked_at": "2026-09-23",
+      "label": "官方替代来源已补采",
+      "result": "鲲鹏新闻页HTTP 200但目录由前端动态加载；华为企业业务官方新闻正文可直接读取。选定智算实验室方案补录，鲲鹏只标CPU。",
+      "coverage": "本次可见资料 2026-03-19 至 2026-03-19；定向补查，历史窗口尚不完整。",
+      "public_urls": [
+        "https://www.hikunpeng.com/zh/activities/news",
+        "https://e.huawei.com/cn/news/2026/industries/government/intelligent-computing-lab-solution"
+      ],
+      "record_ids": [
+        "rem-huawei-ai-lab-20260319"
+      ],
+      "assistance": null,
+      "api_authorized": null
+    },
+    {
+      "source_id": "mthreads",
+      "checked_at": "2026-09-23",
+      "label": "浏览器正文已补齐",
+      "result": "目录可通过HTTP读取；新闻正文需正常浏览器加载。已在独立Edge临时标签读取345、344、338三篇可见全文，均无登录/验证码；三条已补足官方正文。正文空壳不再归为必须人工。历史分页尚非完整覆盖。",
+      "coverage": "本次可见资料 2026-01-13 至 2026-09-20；定向补查，历史窗口尚不完整。",
+      "public_urls": [
+        "https://www.mthreads.com/news",
+        "https://hub.baai.ac.cn/view/52173",
+        "https://www.doit.com.cn/computing/845368604475461.html"
+      ],
+      "record_ids": [
+        "rem-mthreads-robobrain-validation-20260127",
+        "rem-mthreads-jd-cloud-20260909",
+        "rem-mthreads-infinigence-token-20260904",
+        "rem-mthreads-prefill-paper-20260824"
+      ],
+      "assistance": null,
+      "api_authorized": null
+    },
+    {
+      "source_id": "huawei",
+      "checked_at": "2026-09-23",
+      "label": "公开栏目可读",
+      "result": "www.huawei.com及e.huawei.com的robots.txt本轮均HTTP 200有效文本；公开新闻路径可读。3月19日企业业务原文与9月19日华为集团AI DC稿HTTP 200。无须用户登录公开新闻。",
+      "coverage": "本次可见资料 2026-03-19 至 2026-09-19；定向补查，历史窗口尚不完整。",
+      "public_urls": [
+        "https://www.huawei.com/cn/news",
+        "https://e.huawei.com/cn/news/2026/industries/government/intelligent-computing-lab-solution",
+        "https://www.huawei.com/cn/news/2026/9/hc-ai-dc-innovation-summit"
+      ],
+      "record_ids": [],
+      "assistance": null,
+      "api_authorized": null
+    },
+    {
+      "source_id": "odcc",
+      "checked_at": "2026-09-23",
+      "label": "公开原文已复核",
+      "result": "首页与ODS公开新闻HTTP 200可读；robots.txt为HTTP 200成员登录HTML而非有效robots文件，不能把它当作公开新闻要求登录。该ODS记录已存在，本轮更新读取日志，不重复增项。会员资料仍按授权边界。 本站自动读取器仍未确认有效robots规则；当前公开研究读取与站内自动采集状态分别保留。",
+      "coverage": "本次可见资料 2026-04-16 至 2026-04-16；定向补查，历史窗口尚不完整。",
+      "public_urls": [
+        "https://www.odcc.org.cn/index.html",
+        "https://www.odcc.org.cn/news/p-2044613339511545857.html",
+        "https://www.odcc.org.cn/2026spring.html"
+      ],
+      "record_ids": [],
+      "assistance": null,
+      "api_authorized": null
+    },
+    {
+      "source_id": "shanghai-fin",
+      "checked_at": "2026-09-23",
+      "label": "栏目恢复可读",
+      "result": "前次读取超时，本轮站内读取器复查成功，当前页匹配1条标题；不将标题命中直接视作新技术项目。",
+      "coverage": "只检查当前公开页及定向搜索，未取得可新增的目标项目，不代表全年无需求。",
+      "public_urls": [
+        "https://jrj.sh.gov.cn/"
+      ],
+      "record_ids": [],
+      "assistance": null
+    },
+    {
+      "source_id": "ccgp",
+      "checked_at": "2026-09-23",
+      "label": "补充采购原件与线索",
+      "result": "通过政府采购网原公告补齐三笔算力服务器/租赁成交；深圳国产GPU采购只取得公开索引，保留待核。",
+      "coverage": "定向取得6月至9月四条记录，非政府采购网完整历史。",
+      "public_urls": [
+        "https://www.ccgp.gov.cn/cggg/dfgg/cjgg/202608/t20260812_27118381.htm",
+        "https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202607/t20260721_26974876.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202606/t20260615_26747480.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202609/t20260917_27345778.htm"
+      ],
+      "record_ids": [
+        "supp-proc-24427fb8253c",
+        "supp-proc-96ee888a92ad",
+        "supp-proc-5f430bbece07",
+        "supp-proc-6ee8d0cb2b34"
+      ],
+      "assistance": null
+    }
+  ],
+  "references": [
+    {
+      "id": "remedia-caict-token-20260414",
+      "published_date": "2026-04-14",
+      "event_date": null,
+      "title": "中国信通院启动Token服务能力评估并升级MaaS体系",
+      "url": "https://finance.sina.com.cn/wm/2026-04-14/doc-inhuniea4165861.shtml",
+      "publisher": "中国信通院CAICT（新浪自媒体镜像）",
+      "source_type": "industry",
+      "customer": "",
+      "project_id": "CAICT-TOKEN-EVALUATION-2026",
+      "stage": "research",
+      "categories": [],
+      "tags": [],
+      "amount_cny": null,
+      "amount_kind": "none",
+      "amount_scope": "unknown",
+      "amount_text": "未披露可归属本事件的金额",
+      "fact_summary": "官方账号镜像披露Token服务、MaaS平台与产品、管理与运营三个评估维度，2026年首轮评估启动。",
+      "limitations": "属于评估标准与生态信号，不是买方采购。文中2025年调用量及性能属于历史数据，不写成2026年实际。微信原文入口本次读取失败，镜像不证明已获得公众号历史或传播指标。",
+      "verified_fulltext": true,
+      "fulltext": true,
+      "evidence_status": "reported",
+      "review_status": "pending",
+      "amount_eligible": false,
+      "source_read_result": "新浪正文注明中国信通院CAICT并链接mp.weixin.qq.com；镜像全文可读，微信链接读取失败。",
+      "retrieved_on": "2026-09-23",
+      "month_basis": "发布日期（实际发生日未明）",
+      "geography": "中国大陆",
+      "corroborating_sources": [],
+      "source_grade": "B",
+      "tax_basis": "未说明或不适用",
+      "source_id": "caict-wechat",
+      "wechat_account": "中国信通院CAICT",
+      "lineage": "中国信通院CAICT公众号 → 新浪自媒体镜像",
+      "event_key": "CAICT-TOKEN-EVALUATION-2026|research|2026-04-14",
+      "amount_group": "CAICT-TOKEN-EVALUATION-2026|",
+      "reference_only": true,
+      "classification_review": "原文仅服务质量、性能、可观测性及MaaS运营评估；未明确Token/词元工厂工程化生产部署，作为行业参考资料，不计11类事件或常规芯片采购补充。"
+    },
+    {
+      "id": "remedia-caict-aishperf-20260629",
+      "published_date": "2026-07-06",
+      "event_date": "2026-06-29",
+      "title": "中国信通院开放日发布AISHPerf3.0及国模国芯协同测试平台",
+      "url": "https://finance.sina.com.cn/wm/2026-07-06/doc-inifwfpy8668975.shtml",
+      "publisher": "中国信通院CAICT（新浪自媒体镜像）",
+      "source_type": "industry",
+      "customer": "",
+      "project_id": "CAICT-AISHPERF-20260629",
+      "stage": "research",
+      "categories": [],
+      "tags": [],
+      "amount_cny": null,
+      "amount_kind": "none",
+      "amount_scope": "unknown",
+      "amount_text": "未披露可归属本事件的金额",
+      "fact_summary": "6月29日开放日发布AISHPerf3.0、国模国芯协同测试验证平台，并成立AISHPerf词元专项工作组，公布首批适配及词元服务测试企业。",
+      "limitations": "同场发布归并为一个事件，不按每个产品或获证企业拆条增加事件量；测试认证不是采购接受度或运行规模，媒体转载同源不能视为独立交叉验证。",
+      "verified_fulltext": true,
+      "fulltext": true,
+      "evidence_status": "reported",
+      "review_status": "pending",
+      "amount_eligible": false,
+      "source_read_result": "2026-09-23已读取所列公开正文；转载与原始发布分别标注。",
+      "retrieved_on": "2026-09-23",
+      "month_basis": "事件日期",
+      "geography": "中国大陆",
+      "corroborating_sources": [
+        {
+          "url": "https://bj.people.com.cn/n2/2026/0630/c82838-41625277.html",
+          "publisher": "人民网北京频道",
+          "read_status": "fulltext",
+          "fact_supported": "AISHPerf3.0发布及词元专项工作组成立",
+          "independent": false
+        }
+      ],
+      "source_grade": "B",
+      "tax_basis": "未说明或不适用",
+      "source_id": "caict-wechat",
+      "wechat_account": "中国信通院CAICT",
+      "lineage": "中国信通院CAICT公众号 → 新浪自媒体镜像",
+      "event_key": "CAICT-AISHPERF-20260629|research|2026-06-29",
+      "amount_group": "CAICT-AISHPERF-20260629|",
+      "reference_only": true,
+      "classification_review": "原文为基准工具、芯模适配测试平台、联合实验室和工作组；没有算力资源池统一调度或词元工厂工程部署证据，不能把整场模型测试活动归为国产GPU事件。作为行业参考资料，不计11类事件或常规芯片采购补充。"
+    }
+  ],
+  "methodology": [
+    "公开原文、正常浏览器渲染、官方替代披露与公开索引分级收录；访问失败不是零消息。",
+    "项目/标包/阶段/日期查重，转载补证不增事件；CPU、DCU、NPU分开标记。",
+    "本批为定向回补，不能形成无偏市场样本；不改变固定四媒体全部新闻分母。",
+    "按用户要求，明确金额的待核线索也进入合并披露金额图；保留原始金额性质，不将总投资、预算、合同或估算当作实际成交。"
+  ]
+}

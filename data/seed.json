@@ -1,0 +1,900 @@
+[
+  {
+    "id": "ARCH-TF-01",
+    "techs": [
+      "token_factory"
+    ],
+    "event_key": "h3c-turing-token-factory-waic-2026",
+    "title": "WAIC 2026｜新华三图灵Token工厂：让每一份算力投入都清晰可见、可控可管",
+    "url": "https://www.h3c.com/cn/d_202607/2886243_30008_0.htm",
+    "publisher": "新华三集团",
+    "published_date": "2026-07-19",
+    "event_date": null,
+    "source_type": "vendor",
+    "stage": "launch",
+    "geography": "中国大陆",
+    "customer": null,
+    "customer_segment": "unknown",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "新华三在WAIC期间发布图灵Token工厂解决方案，涵盖GPU资源调度、模型任务、Token计量和运营管理。",
+    "implication": "竞争焦点已延伸到Token成本核算与运营管理；服务器方案需要证明单位有效输出的经济性。",
+    "limitations": "厂商产品发布，未披露具名付费客户、订单、实际Token销量或经独立验证的降本结果；不属于买方采购证据。正文未明确发布活动的具体日期。",
+    "numeric_facts": [],
+    "location_detail": "中国大陆/上海",
+    "review_status": "accepted",
+    "project_id": "h3c-turing-token-factory-waic-2026",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "publication_only",
+    "competitors": [
+      {
+        "name": "新华三",
+        "role": "产品/方案发布方"
+      }
+    ]
+  },
+  {
+    "id": "ARCH-TF-02",
+    "techs": [
+      "token_factory"
+    ],
+    "event_key": "beijing-etown-token-economy-policy-20260803",
+    "title": "北京经济技术开发区关于支持词元驱动智能经济高质量发展的若干措施（试行）",
+    "url": "https://kfqgw.beijing.gov.cn/zwgkkfq/2024zcwj/202608/t20260805_4809951.html",
+    "publisher": "北京经济技术开发区管理委员会",
+    "published_date": "2026-08-05",
+    "event_date": "2026-08-03",
+    "source_type": "gov",
+    "stage": "policy",
+    "geography": "中国大陆",
+    "customer": null,
+    "customer_segment": "government",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "经开区政策将规模化词元工厂、推理效能、分发与结算纳入支持范围，提出到2030年建设4个万卡级词元工厂的目标。",
+    "implication": "可将政策支持地区列入项目发现范围，但战略判断应继续跟踪具体主体、预算、采购和投产转化。",
+    "limitations": "属于未来政策目标，不能计作已建成数量、已形成订单或实际需求；奖励上限不能与采购金额合并。",
+    "numeric_facts": [
+      {
+        "metric": "2030年万卡级词元工厂目标",
+        "value": 4,
+        "unit": "个",
+        "scope": "北京经济技术开发区，政策目标，非实际建成"
+      },
+      {
+        "metric": "2030年度电词元产出提升目标",
+        "value": 6,
+        "unit": "倍以上",
+        "scope": "相对政策所称当前基准；基准未量化，非实绩"
+      }
+    ],
+    "location_detail": "中国大陆/北京经济技术开发区",
+    "review_status": "accepted",
+    "project_id": "beijing-etown-token-economy-policy-20260803",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "day",
+    "competitors": []
+  },
+  {
+    "id": "ARCH-TF-03",
+    "techs": [
+      "token_factory"
+    ],
+    "event_key": "china-mobile-token-business-pilots-2026h1",
+    "title": "中国移动2026年半年度报告：Token经营多地试点",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-14/1225472195.PDF",
+    "publisher": "中国移动有限公司（巨潮资讯披露）",
+    "published_date": "2026-08-14",
+    "event_date": null,
+    "source_type": "buyer",
+    "stage": "pilot",
+    "geography": "中国大陆",
+    "customer": "中国移动有限公司",
+    "customer_segment": "operator",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "中国移动半年报披露，正在协同模型、算力和AIDC打造Token工厂，升级MoMA专属算力池，并已在多地试点Token产品与AI原生应用。",
+    "implication": "运营商已把Token经营纳入组织与运营计划，支持其作为服务器系统整合与推理运营方案的重点目标客户群。",
+    "limitations": "为服务器基础设施潜在买方的自述；报告未披露Token工厂专项采购额、收费使用量、试点数量或商业回报。事件覆盖2026年上半年而非8月14日新发生；报告签署日8月13日，披露文件日期8月14日。不得把该报告全部智算规模、收入或利用率归入Token工厂。",
+    "numeric_facts": [],
+    "location_detail": "中国大陆/多地，未逐一披露",
+    "review_status": "accepted",
+    "project_id": "china-mobile-token-business-pilots-2026h1",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "half_year",
+    "competitors": [],
+    "event_period_start": "2026-01-01",
+    "event_period_end": "2026-06-30"
+  },
+  {
+    "id": "ARCH-TF-04",
+    "techs": [
+      "token_factory",
+      "liquid_cooling"
+    ],
+    "event_key": "changzhou-green-token-factory-agreement-20260718",
+    "title": "首个城市级绿色词元（Token）工厂落地常州高新区",
+    "url": "https://www.cznd.gov.cn/html/cznd/2026/HFFPILLL_0720/576470.html",
+    "publisher": "常州国家高新区商务局",
+    "published_date": "2026-07-20",
+    "event_date": "2026-07-18",
+    "source_type": "gov",
+    "stage": "intent",
+    "geography": "中国大陆",
+    "customer": "常州市城市绿色词元工厂项目合作主体",
+    "customer_segment": "government",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "常州市数据局、常州高新区与国家电投综能、山铁数科、阿里云、网宿科技、深度动力等签署Token工厂项目合作，规划融合绿电、高压直流供电和液冷等技术。",
+    "implication": "Token工厂采购链可能连接地方数据部门、能源企业、云平台和运营方，应同时追踪建设方与最终运营方。",
+    "limitations": "签约阶段，非招标、验收或稳定经营；产能和利用率改善均为规划或预期，不是经过验证的当前运行结果。技术列举未证明全部已安装。",
+    "numeric_facts": [
+      {
+        "metric": "建成后预计年产能",
+        "value": 60000000000000,
+        "unit": "Token/年",
+        "scope": "常州城市绿色词元工厂，预测产能60万亿；不可当成付费销量"
+      }
+    ],
+    "location_detail": "中国大陆/江苏常州",
+    "review_status": "accepted",
+    "project_id": "changzhou-green-token-factory-agreement-20260718",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "day",
+    "competitors": []
+  },
+  {
+    "id": "ARCH-TF-05",
+    "techs": [
+      "token_factory"
+    ],
+    "event_key": "beijing-no1-token-factory-capacity-20260629",
+    "title": "北京首座词元工厂日产1.4万亿词元",
+    "url": "https://www.beijing.gov.cn/fuwu/lqfw/gggs/202606/t20260630_4738490.html",
+    "publisher": "首都之窗（转载北京日报）",
+    "published_date": "2026-06-30",
+    "event_date": "2026-06-29",
+    "source_type": "media",
+    "stage": "production",
+    "geography": "中国大陆",
+    "customer": "北京壹号词元工厂",
+    "customer_segment": "unknown",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "报道引述经开区披露，北京壹号词元工厂一期已建成，日生产能力突破1.4万亿Token，后续规划跨地区绿电协同。",
+    "implication": "国内已出现以Token输出定义能力的运行设施，可用来验证体系中的投产事件与输出指标口径。",
+    "limitations": "政府网站承载媒体报道，仍按media计；6月29日为经开区披露日期（正文为昨天），实际投产日期未给出。披露的是生产能力，未披露付费销量、客户数、单位成本、Token输入输出构成与模型组合，不能反推营收或服务器采购量。",
+    "numeric_facts": [
+      {
+        "metric": "一期日生产能力",
+        "value": 1400000000000,
+        "unit": "Token/日以上",
+        "scope": "北京壹号词元工厂，报道转述产能，非日实际付费销量"
+      }
+    ],
+    "location_detail": "中国大陆/北京亦庄",
+    "review_status": "accepted",
+    "project_id": "beijing-no1-token-factory-capacity-20260629",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "day",
+    "competitors": []
+  },
+  {
+    "id": "ARCH-SN-01",
+    "techs": [
+      "supernode",
+      "liquid_cooling"
+    ],
+    "event_key": "huawei-ascend960-supernode-launch-20260917",
+    "title": "华为发布全球首个采用NPO的超节点——昇腾960超节点",
+    "url": "https://www.huawei.com/cn/news/2026/9/hc-ascend960-supernode",
+    "publisher": "华为",
+    "published_date": "2026-09-17",
+    "event_date": "2026-09-17",
+    "source_type": "vendor",
+    "stage": "launch",
+    "geography": "中国大陆",
+    "customer": null,
+    "customer_segment": "unknown",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "华为发布昇腾960超节点，宣布采用NPO光引擎、灵衢互联和全液冷设计，通过统一内存编址扩展卡规模。",
+    "implication": "超节点竞争应记录互联协议、内存语义、功耗和交付可用性，单卡峰值性能不足以刻画差异。",
+    "limitations": "厂商发布和参数声明，未披露该型号国内客户采购、验收或稳定运行结果；最大卡数是设计能力，不能计为出货量。",
+    "numeric_facts": [
+      {
+        "metric": "宣布的最大扩展规模",
+        "value": 4096,
+        "unit": "卡",
+        "scope": "昇腾960超节点产品规格，非已交付规模"
+      }
+    ],
+    "location_detail": "中国大陆/上海",
+    "review_status": "accepted",
+    "project_id": "huawei-ascend960-supernode-launch-20260917",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "day",
+    "competitors": [
+      {
+        "name": "华为",
+        "role": "产品发布方"
+      }
+    ]
+  },
+  {
+    "id": "ARCH-SN-02",
+    "techs": [
+      "supernode",
+      "liquid_cooling"
+    ],
+    "event_key": "guotai-haitong-ai-liquid-supernode-production-20260715",
+    "title": "国泰海通携手华为落地金融行业首个AI液冷超节点",
+    "url": "https://jrj.sh.gov.cn/ZQ181/20260716/5be8a96d6546421bbab97eb6aa1b3225.html",
+    "publisher": "上海市委金融办网站（信息来源：国泰海通发布）",
+    "published_date": "2026-07-16",
+    "event_date": "2026-07-15",
+    "source_type": "buyer",
+    "stage": "production",
+    "geography": "中国大陆",
+    "customer": "国泰海通证券",
+    "customer_segment": "enterprise",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "国泰海通发布AI液冷超节点正式上线消息，采用昇腾A3与灵衢互联，在自建绿色算力专区私有化部署，支持上百张算力卡协同调度。",
+    "implication": "超节点已有大型金融机构自建落地证据，应把高端行业私有化部署作为独立场景，检验与大型CSP不同的规模、改造和可用性要求。",
+    "limitations": "买方公开声明，不等于独立验收审计；未公开合同金额、持续运行时间、实际利用率和单位Token成本。散热提升和零宕机等宣传性表述不用于量化实绩。亦涉及液冷，合并跨技术分析时按同一event_key去重。",
+    "numeric_facts": [
+      {
+        "metric": "一体化协同调度规模",
+        "value": 100,
+        "unit": "卡以上",
+        "scope": "国泰海通上线项目，正文称超百张，非准确装机数"
+      }
+    ],
+    "location_detail": "中国大陆/上海",
+    "review_status": "accepted",
+    "project_id": "guotai-haitong-ai-liquid-supernode-production-20260715",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "day",
+    "competitors": [
+      {
+        "name": "华为",
+        "role": "系统及加速器/互连生态"
+      }
+    ]
+  },
+  {
+    "id": "ARCH-SN-03",
+    "techs": [
+      "supernode"
+    ],
+    "event_key": "odcc-open-disaggregated-superpod-standard-initiation-202604",
+    "title": "开放解构超节点（ODS）技术规范｜2026ODCC服务器工作组",
+    "url": "https://www.odcc.org.cn/news/p-2044613339511545857.html",
+    "publisher": "开放数据中心委员会ODCC",
+    "published_date": "2026-04-16",
+    "event_date": null,
+    "source_type": "industry",
+    "stage": "research",
+    "geography": "中国大陆",
+    "customer": "中国移动云能力中心（牵头单位）",
+    "customer_segment": "operator",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "ODCC披露，由中国移动云能力中心牵头的开放解构超节点技术规范正式立项，重点处理接口与协议不兼容、厂商绑定以及扩展受限问题。",
+    "implication": "竞争跟踪须纳入开放互联、组件替换和扩容成本；采购接受度不能只看峰值性能和厂商演示。",
+    "limitations": "标准项目立项，不是标准正式发布、互通认证或采购承诺；正文称近日而未明确会议日期。列举厂商路线不能作为这些厂商的额外独立需求事件。",
+    "numeric_facts": [],
+    "location_detail": "中国大陆/舟山",
+    "review_status": "accepted",
+    "project_id": "odcc-open-disaggregated-superpod-standard-initiation-202604",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "publication_only",
+    "competitors": []
+  },
+  {
+    "id": "ARCH-SN-04",
+    "techs": [
+      "supernode",
+      "token_factory"
+    ],
+    "event_key": "wuxi-hongxin-token-factory-superpod-agreement-202605",
+    "title": "大规模“Token工厂”落地无锡",
+    "url": "https://www.wuxi.gov.cn/doc/2026/05/19/4777314.shtml",
+    "publisher": "无锡市人民政府网站（转载无锡日报）",
+    "published_date": "2026-05-19",
+    "event_date": null,
+    "source_type": "media",
+    "stage": "intent",
+    "geography": "中国大陆",
+    "customer": "弘信电子与无锡高新区Token工厂项目",
+    "customer_segment": "enterprise",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "报道披露弘信电子与无锡高新区签约Token工厂项目，首批计划部署4套华为昇腾384卡超节点系统。",
+    "implication": "提供具名项目与明确规划规模的超节点商机线索；下一步应查合同、交货和运营收入，验证意向向真实需求的转化。",
+    "limitations": "报道标题落地对应签约，不能升级为投产；原文首批将部署为计划。亦属于Token工厂相关事件，为避免人为增加首轮样本，仅主标supernode；跨技术汇总仍需共享event_key。",
+    "numeric_facts": [
+      {
+        "metric": "首批规划部署数量",
+        "value": 4,
+        "unit": "套",
+        "scope": "无锡Token工厂，计划部署的昇腾384超节点"
+      },
+      {
+        "metric": "单套规划卡数",
+        "value": 384,
+        "unit": "卡/套",
+        "scope": "规划产品规格，非核验交付数量"
+      }
+    ],
+    "location_detail": "中国大陆/江苏无锡",
+    "review_status": "accepted",
+    "project_id": "wuxi-hongxin-token-factory-superpod-agreement-202605",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "publication_only",
+    "competitors": [
+      {
+        "name": "华为",
+        "role": "规划设备供应生态"
+      },
+      {
+        "name": "弘信电子",
+        "role": "项目合作主体"
+      }
+    ]
+  },
+  {
+    "id": "ARCH-SN-05",
+    "techs": [
+      "supernode"
+    ],
+    "event_key": "nucc-2026-deep-compute-server-package2-202511435027",
+    "title": "2026年深度计算型服务器采购项目-包2招标公告",
+    "url": "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/0c20d688b7994015bd68a4b5184193eb.html?Type=fzjggg&noticeId=fc84c74b-707a-11f1-88d4-b4055dfb2cc6&noticeType=001011",
+    "publisher": "中国人民银行采购网（信息来源：网联清算有限公司）",
+    "published_date": "2026-06-25",
+    "event_date": "2026-06-25",
+    "source_type": "buyer",
+    "stage": "tender",
+    "geography": "中国大陆",
+    "customer": "网联清算有限公司",
+    "customer_segment": "enterprise",
+    "value_cny": 81839000,
+    "verified_fulltext": false,
+    "fact_summary": "官方采购网站搜索结果展示1套64卡超节点深度计算集群采购，包预算及最高限价均为8183.9万元含税。",
+    "implication": "这是需要优先补验的具名付费采购线索；补验原文及结果公告后再进入需求分值。",
+    "limitations": "仅取得官方页面的搜索摘要，原文全文尚未核验，暂不计入有效事件与需求统计。金额为预算上限，不是中标额、实际支付或纯服务器净价；中标、合同与验收进展仍待确认。",
+    "numeric_facts": [
+      {
+        "metric": "标包含税预算暨最高限价",
+        "value": 81839000,
+        "unit": "元",
+        "scope": "网联清算包2，待全文核验，不是实际成交"
+      },
+      {
+        "metric": "拟采购超节点集群数量",
+        "value": 1,
+        "unit": "套",
+        "scope": "官方搜索摘录，待全文核验"
+      },
+      {
+        "metric": "拟采购单套卡数",
+        "value": 64,
+        "unit": "卡",
+        "scope": "官方搜索摘录，待全文核验"
+      }
+    ],
+    "location_detail": "中国大陆",
+    "review_status": "pending",
+    "project_id": "nucc-2026-deep-compute-server-package2-202511435027",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "day",
+    "competitors": []
+  },
+  {
+    "id": "AD-LC-001",
+    "techs": [
+      "liquid_cooling"
+    ],
+    "event_key": "gz-xinyue-2608-440105-04-01-865351-energy-approval",
+    "title": "琶洲算谷芯越智算中心项目节能报告获原则同意",
+    "url": "https://fgw.gz.gov.cn/zmhd/zsk/gcjs/content/post_11006749.html",
+    "publisher": "广州市发展和改革委员会",
+    "published_date": "2026-09-16",
+    "event_date": "2026-09-16",
+    "source_type": "gov",
+    "stage": "intent",
+    "geography": "中国大陆",
+    "customer": "广州芯越晟阳科技有限公司",
+    "customer_segment": "enterprise",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "项目节能审查获原则同意，计划配置46个45kW及196个22kW液冷机柜，另配77个风冷机柜，预计2027年12月投产。",
+    "implication": "高功率机柜采用液冷、低功率机柜保留风冷，提示应按功率密度划分目标项目，优先跟踪能评之后的设备招标及建设进度。",
+    "limitations": "这是规划及能评许可，不是采购成交、验收或投产。总投资约9.8亿元覆盖整个项目，不能作为液冷设备市场金额；PUE≤1.20为审批要求而非实测。",
+    "numeric_facts": [
+      {
+        "metric": "planned_liquid_racks_45kw",
+        "value": 46,
+        "unit": "柜",
+        "scope": "本项目规划45kW液冷机柜"
+      },
+      {
+        "metric": "planned_liquid_racks_22kw",
+        "value": 196,
+        "unit": "柜",
+        "scope": "本项目规划22kW液冷机柜"
+      },
+      {
+        "metric": "planned_air_racks_8kw",
+        "value": 77,
+        "unit": "柜",
+        "scope": "本项目规划8kW风冷机柜"
+      },
+      {
+        "metric": "project_total_investment",
+        "value": 980000000,
+        "unit": "CNY",
+        "scope": "整个智算中心总投资估算，非液冷采购额"
+      }
+    ],
+    "accessed_date": "2026-09-20",
+    "location_detail": "中国大陆/广东/广州",
+    "review_status": "accepted",
+    "project_id": "gz-xinyue-2608-440105-04-01-865351-energy-approval",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "day",
+    "competitors": []
+  },
+  {
+    "id": "AD-LC-002",
+    "techs": [
+      "liquid_cooling"
+    ],
+    "event_key": "h3c-navigate-2026-0515-announcements",
+    "title": "新华三发布S90000高密全液冷整机",
+    "url": "https://wwwsg.h3c.com/cn/d_202605/2838920_30008_0.htm",
+    "publisher": "新华三集团",
+    "published_date": "2026-05-15",
+    "event_date": null,
+    "source_type": "vendor",
+    "stage": "launch",
+    "geography": "中国大陆",
+    "customer": null,
+    "customer_segment": "unknown",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "新华三发布面向通用高性能计算的S90000全液冷整机，宣称1U可部署6颗CPU，整柜最多36个节点、216颗CPU。",
+    "implication": "液冷竞争已覆盖高密度通用CPU服务器，竞争跟踪应同时监测通用计算与AI服务器产品，而非只看GPU训练集群。",
+    "limitations": "为厂商发布与规格声明，没有本稿可核验客户订单或验收数据；PUE低至1.04及密度提升不作独立实测事实。发布会具体日未在本稿明确，发布时间不能自动等同客户采用日期。",
+    "numeric_facts": [
+      {
+        "metric": "vendor_cpu_per_1u",
+        "value": 6,
+        "unit": "颗CPU",
+        "scope": "厂商披露S90000规格"
+      },
+      {
+        "metric": "vendor_max_cpu_per_rack",
+        "value": 216,
+        "unit": "颗CPU",
+        "scope": "厂商披露S90000规格"
+      }
+    ],
+    "accessed_date": "2026-09-20",
+    "location_detail": "中国大陆",
+    "review_status": "accepted",
+    "project_id": "h3c-s90000-launch-2026-navigate",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "publication_only",
+    "competitors": [
+      {
+        "name": "新华三",
+        "role": "产品/方案发布方"
+      }
+    ]
+  },
+  {
+    "id": "AD-LC-003",
+    "techs": [
+      "liquid_cooling"
+    ],
+    "event_key": "huashao-data-valley-phase1-liquid-cooling-observation",
+    "title": "韶关市政府转载报道华韶数据谷一期已投用并使用冷板液冷",
+    "url": "https://www.sg.gov.cn/xw/xwzx/bdxw/content/post_2864141.html",
+    "publisher": "韶关市人民政府门户网站（转载韶关日报）",
+    "published_date": "2026-07-20",
+    "event_date": null,
+    "source_type": "media",
+    "stage": "production",
+    "geography": "中国大陆",
+    "customer": "华韶数据谷",
+    "customer_segment": "enterprise",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "政府网站转载的现场报道表示，华韶数据谷一期已建成投用、二期建设中，并以冷板式液冷支持最高40kW单柜功率。",
+    "implication": "有已投用项目的液冷应用线索，值得后续向运营方追踪液冷机柜上架比例、负荷水平及新增扩容。",
+    "limitations": "实质来源为地方报纸现场报道，不能计作买方独立验收证据；未披露液冷柜数、成交额、实际投用日、利用率或付费负载。发布日期是存量运行观察时间，不证明180天内新增投产。",
+    "numeric_facts": [
+      {
+        "metric": "reported_max_rack_power",
+        "value": 40,
+        "unit": "kW",
+        "scope": "报道中的华韶数据谷液冷机柜最高功率，不是平均运行负载"
+      }
+    ],
+    "accessed_date": "2026-09-20",
+    "location_detail": "中国大陆/广东/韶关",
+    "review_status": "accepted",
+    "project_id": "huashao-data-valley-phase1-liquid-cooling-observation",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "existing_operation_observed",
+    "competitors": []
+  },
+  {
+    "id": "AD-AI-001",
+    "techs": [
+      "compute_field"
+    ],
+    "event_key": "eximbank-TC260C013",
+    "title": "中国进出口银行AI大模型一体机采购项目中标",
+    "url": "https://www.cntcitc.com.cn/more.html?chanId=13&chanType=3&contentId=8b9efb35c7f7476faa8d97712934d9dc",
+    "publisher": "中招国际招标有限公司（采购代理）",
+    "published_date": "2026-04-23",
+    "event_date": null,
+    "source_type": "buyer",
+    "stage": "award",
+    "geography": "中国大陆",
+    "customer": "中国进出口银行",
+    "customer_segment": "enterprise",
+    "value_cny": 9680000,
+    "verified_fulltext": true,
+    "fact_summary": "项目TC260C013正式中标公告确定讯飞智元信息科技有限公司中标，公告金额为968万元。",
+    "implication": "金融客户存在明确预算执行与竞争结果，可将集成能力、部署交付和应用适配纳入一体机竞品对照，后续跟踪验收及追加采购。",
+    "limitations": "买方授权采购代理原文，非厂商营销稿；中标不是验收或实际使用。公告未拆分硬件、软件、服务金额，也未在该结果页披露台数，不得推导单机价格或市场规模。 金额不计作已核实纯服务器硬件收入。",
+    "numeric_facts": [
+      {
+        "metric": "awarded_project_amount",
+        "value": 9680000,
+        "unit": "CNY",
+        "scope": "本项目正式中标金额，税口径及软硬件拆分未披露"
+      }
+    ],
+    "accessed_date": "2026-09-20",
+    "location_detail": "中国大陆/北京",
+    "review_status": "accepted",
+    "project_id": "eximbank-TC260C013",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "publication_only",
+    "competitors": [
+      {
+        "name": "讯飞智元信息科技有限公司",
+        "role": "中标供应商；硬件品牌未核"
+      }
+    ],
+    "classification_note": "算力场涵盖资源池、统一调度及AI一体机采购与部署；该归类不证明采用国产GPU，也不将历史项目计入2026年趋势。"
+  },
+  {
+    "id": "AD-AI-002",
+    "techs": [
+      "compute_field"
+    ],
+    "event_key": "nankai-NK2026H072N",
+    "title": "南开大学计算机学院大模型一体机采购成交",
+    "url": "https://nkzbb.nankai.edu.cn/jghw/4675.chtml",
+    "publisher": "南开大学招投标管理办公室",
+    "published_date": "2026-09-11",
+    "event_date": null,
+    "source_type": "buyer",
+    "stage": "award",
+    "geography": "中国大陆",
+    "customer": "南开大学",
+    "customer_segment": "education",
+    "value_cny": 800000,
+    "verified_fulltext": true,
+    "fact_summary": "采购1台神州鲲泰KunTai A924大模型一体机，由重庆怡讯网络技术有限公司成交，金额80万元。",
+    "implication": "高校对本地大模型设备存在已成交采购需求，竞争名单应分别记录硬件品牌与交付集成商，避免将代理商与整机品牌混为一谈。",
+    "limitations": "仅为单个高校项目，成交不代表验收或持续利用。80万元对应整机项目口径，不能与其他配置、软件服务不同的项目直接比较价格。 金额不计作已核实纯服务器硬件收入。",
+    "numeric_facts": [
+      {
+        "metric": "awarded_project_amount",
+        "value": 800000,
+        "unit": "CNY",
+        "scope": "本项目一体机成交金额"
+      },
+      {
+        "metric": "appliance_units",
+        "value": 1,
+        "unit": "台",
+        "scope": "神州鲲泰KunTai A924"
+      }
+    ],
+    "accessed_date": "2026-09-20",
+    "location_detail": "中国大陆/天津",
+    "review_status": "accepted",
+    "project_id": "nankai-NK2026H072N",
+    "amount_scope": "mixed",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "publication_only",
+    "competitors": [
+      {
+        "name": "神州鲲泰",
+        "role": "一体机品牌"
+      },
+      {
+        "name": "重庆怡讯网络技术有限公司",
+        "role": "成交供应商"
+      }
+    ],
+    "classification_note": "算力场涵盖资源池、统一调度及AI一体机采购与部署；该归类不证明采用国产GPU，也不将历史项目计入2026年趋势。"
+  },
+  {
+    "id": "AD-AI-003",
+    "techs": [
+      "compute_field"
+    ],
+    "event_key": "aier-lenovo-wanquan-deepseek-local-deployment-2025",
+    "title": "联想披露爱尔眼科万全AI一体机部署案例（历史基线）",
+    "url": "https://brand.lenovo.com.cn/brand/ppn03372.html",
+    "publisher": "联想品牌官网",
+    "published_date": "2025-06-24",
+    "event_date": null,
+    "source_type": "vendor",
+    "stage": "production",
+    "geography": "中国大陆",
+    "customer": "爱尔眼科",
+    "customer_segment": "enterprise",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "联想披露爱尔眼科通过万全AI一体机完成DeepSeek-R1本地部署并接入自研AierGPT办公助手，设备基于WA7780 G3服务器。",
+    "implication": "应把一体机的价值验证从交付延伸到业务系统接入及使用量；后续寻找爱尔买方运营数据、续购及扩容原文。",
+    "limitations": "厂商案例，不是买方独立验证。原始官网日期为2025-06-24；乐享wiki重排显示2026日期，不得计入2026新事件或近180天需求。文中性能与医疗效果未经独立验证，未纳入量化。",
+    "numeric_facts": [],
+    "accessed_date": "2026-09-20",
+    "location_detail": "中国大陆",
+    "review_status": "accepted",
+    "project_id": "aier-lenovo-wanquan-deepseek-local-deployment-2025",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "publication_only",
+    "competitors": [
+      {
+        "name": "联想",
+        "role": "历史案例发布及一体机品牌"
+      }
+    ],
+    "classification_note": "算力场涵盖资源池、统一调度及AI一体机采购与部署；该归类不证明采用国产GPU，也不将历史项目计入2026年趋势。"
+  },
+  {
+    "id": "AD-HE-001",
+    "techs": [
+      "compute_field"
+    ],
+    "event_key": "tower-GPDI-ZB-2026-03896",
+    "title": "中国铁塔异构算力跨域任务编排系统研制服务成交",
+    "url": "https://ebid.chinatowercom.cn/zgtt/gggs/003004/20260825/2f4d0bf4-417c-49b5-8b22-b4879b297699.html",
+    "publisher": "中国铁塔电子采购平台",
+    "published_date": "2026-08-25",
+    "event_date": "2026-08-25",
+    "source_type": "buyer",
+    "stage": "award",
+    "geography": "中国大陆",
+    "customer": "中国铁塔股份有限公司",
+    "customer_segment": "operator",
+    "value_cny": 2677560,
+    "verified_fulltext": true,
+    "fact_summary": "项目GPDI-ZB-2026-03896正式成交，供应商为江苏省未来网络创新研究院，含税成交价格267.756万元。",
+    "implication": "跨域异构调度已出现独立研发服务支出，竞争跟踪应纳入调度软件和研发合作方，而非仅服务器品牌。",
+    "limitations": "这是研制服务采购，不是同额服务器采购或生产环境验收；07-30候选公示与08-25结果属于同一项目，不应双计。",
+    "numeric_facts": [
+      {
+        "metric": "awarded_project_amount",
+        "value": 2677560,
+        "unit": "CNY",
+        "scope": "含税异构编排系统研制服务成交额，非服务器硬件金额"
+      }
+    ],
+    "accessed_date": "2026-09-20",
+    "location_detail": "中国大陆/北京",
+    "review_status": "accepted",
+    "project_id": "tower-GPDI-ZB-2026-03896",
+    "amount_scope": "software_service",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "day",
+    "competitors": [
+      {
+        "name": "江苏省未来网络创新研究院",
+        "role": "研制服务成交供应商"
+      }
+    ],
+    "classification_note": "算力场涵盖资源池、统一调度及AI一体机采购与部署；该归类不证明采用国产GPU，也不将历史项目计入2026年趋势。"
+  },
+  {
+    "id": "AD-HE-002",
+    "techs": [
+      "compute_field"
+    ],
+    "event_key": "tower-GPDI-ZB-2026-05771",
+    "title": "中国铁塔采购跨域异构算力协同关键算法研究服务",
+    "url": "https://ebid.chinatowercom.cn/zgtt/gggs/003001/20260911/a165aab2-f471-432e-ac12-4ba2fc7fe9f9.html",
+    "publisher": "中国铁塔电子采购平台",
+    "published_date": "2026-09-11",
+    "event_date": "2026-09-11",
+    "source_type": "buyer",
+    "stage": "tender",
+    "geography": "中国大陆",
+    "customer": "中国铁塔股份有限公司",
+    "customer_segment": "operator",
+    "value_cny": 1430000,
+    "verified_fulltext": true,
+    "fact_summary": "采购围绕不同地域、云平台及异构资源的部署、调度、伸缩、迁移和预测算法，含税最高响应限价143万元，服务期300日历日。",
+    "implication": "与已成交的编排系统项目构成同一买方连续推进的相邻需求，但需分清独立研发标的与商业规模复制。",
+    "limitations": "公告截至核验时仅证明在招需求，最高限价不是成交额；该项目与03896编号不同，可单独建事件，但不宜直接标记为成熟产品复购。",
+    "numeric_facts": [
+      {
+        "metric": "tender_ceiling",
+        "value": 1430000,
+        "unit": "CNY",
+        "scope": "含税研究服务最高响应限价"
+      },
+      {
+        "metric": "service_period",
+        "value": 300,
+        "unit": "日历日",
+        "scope": "自合同签订日起"
+      }
+    ],
+    "accessed_date": "2026-09-20",
+    "location_detail": "中国大陆/北京",
+    "review_status": "accepted",
+    "project_id": "tower-GPDI-ZB-2026-05771",
+    "amount_scope": "software_service",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "day",
+    "competitors": [],
+    "classification_note": "算力场涵盖资源池、统一调度及AI一体机采购与部署；该归类不证明采用国产GPU，也不将历史项目计入2026年趋势。"
+  },
+  {
+    "id": "AD-HE-003",
+    "techs": [
+      "compute_field"
+    ],
+    "event_key": "sh-changning-ai-innovation-platform-pilot-2026",
+    "title": "长宁区智能创新管理平台完成部署并投入试运营",
+    "url": "https://www.shcn.gov.cn/col8341/20260604/1310459.html",
+    "publisher": "上海市长宁区数据局",
+    "published_date": "2026-06-04",
+    "event_date": null,
+    "source_type": "buyer",
+    "stage": "pilot",
+    "geography": "中国大陆",
+    "customer": "上海市长宁区数据局",
+    "customer_segment": "government",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "区数据局披露平台已投入试运营，以统一异构集群跨服务器调度并动态扩缩容；累计调用超过1.8万次、约1194万词元，为9个智能应用提供支撑。",
+    "implication": "运营买方已关注统一调度及应用使用量，可据此设计接受度指标：从部署验收到活跃业务、利用率、SLA和扩容，而非只计兼容GPU型号。",
+    "limitations": "试运营不等于规模生产；未公开具体芯片组合、算力利用率、并发SLA及独立对照测试。调用与词元为累计快照，统计起止与去重口径未知，不能推导月增长或商业收入。",
+    "numeric_facts": [
+      {
+        "metric": "reported_cumulative_calls_lower_bound",
+        "value": 18000,
+        "unit": "次",
+        "scope": "截至文章发布时间累计调用超过该值，起止统计期不明"
+      },
+      {
+        "metric": "reported_cumulative_tokens_approx",
+        "value": 11940000,
+        "unit": "token",
+        "scope": "截至文章发布时间累计约值，起止统计期不明"
+      },
+      {
+        "metric": "supported_applications",
+        "value": 9,
+        "unit": "个",
+        "scope": "试运营平台支撑的智能应用"
+      }
+    ],
+    "accessed_date": "2026-09-20",
+    "location_detail": "中国大陆/上海/长宁",
+    "review_status": "accepted",
+    "project_id": "sh-changning-ai-innovation-platform-pilot-2026",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "publication_only",
+    "competitors": [],
+    "classification_note": "算力场涵盖资源池、统一调度及AI一体机采购与部署；该归类不证明采用国产GPU，也不将历史项目计入2026年趋势。"
+  },
+  {
+    "id": "AD-HE-004",
+    "techs": [
+      "compute_field",
+      "token_factory",
+      "supernode",
+      "liquid_cooling"
+    ],
+    "event_key": "h3c-navigate-2026-0515-announcements",
+    "title": "新华三升级灵犀智算方案并披露异构混合调度能力",
+    "url": "https://www.h3c.com/cn/d_202605/2838919_30008_0.htm",
+    "publisher": "新华三集团",
+    "published_date": "2026-05-15",
+    "event_date": null,
+    "source_type": "vendor",
+    "stage": "launch",
+    "geography": "中国大陆",
+    "customer": null,
+    "customer_segment": "unknown",
+    "value_cny": null,
+    "verified_fulltext": true,
+    "fact_summary": "新华三升级灵犀智算方案，披露兼容100余款GPU，并以异构混合调度、算力切分与Token计量盘活存量算力。",
+    "implication": "竞争主张从硬件性能延伸到存量兼容、调度和运营计量，建议把真实混部测试及业务负载迁移成本作为产品比较重点。",
+    "limitations": "兼容数量不等于跨芯片统一执行同一训练任务，也不证明买方生产接受度。TCO、能耗及MFU等厂商声称缺少可复核方法，不作为市场量化结果。该文亦覆盖液冷、超节点与Token议题，跨分类汇总须按event_key去重。",
+    "numeric_facts": [
+      {
+        "metric": "vendor_supported_gpu_models_lower_bound",
+        "value": 100,
+        "unit": "款",
+        "scope": "厂商披露100+主流GPU兼容数量，未经独立兼容矩阵核验"
+      }
+    ],
+    "accessed_date": "2026-09-20",
+    "location_detail": "中国大陆",
+    "review_status": "accepted",
+    "project_id": "h3c-lingxi-solution-upgrade-2026-navigate",
+    "amount_scope": "unknown",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "publication_only",
+    "competitors": [
+      {
+        "name": "新华三",
+        "role": "产品/方案发布方"
+      }
+    ],
+    "classification_note": "算力场涵盖资源池、统一调度及AI一体机采购与部署；该归类不证明采用国产GPU，也不将历史项目计入2026年趋势。"
+  },
+  {
+    "id": "QA-001",
+    "techs": [
+      "liquid_cooling"
+    ],
+    "event_key": "cesi-1396-02-26GN0393-conflict",
+    "project_id": "1396-02-26GN0393",
+    "title": "标题液冷服务器与正文内存测试设备冲突",
+    "url": "https://www.ccgp.gov.cn/cggg/zygg/jzxtpgg/202608/t20260824_27191665.htm",
+    "publisher": "中国政府采购网",
+    "published_date": "2026-08-24",
+    "event_date": "2026-08-24",
+    "source_type": "buyer",
+    "stage": "tender",
+    "geography": "中国大陆",
+    "location_detail": "北京",
+    "customer": "中国电子技术标准化研究院",
+    "customer_segment": "government",
+    "value_cny": 720000,
+    "amount_scope": "unknown",
+    "verified_fulltext": true,
+    "review_status": "quarantine",
+    "reviewed_on": "2026-09-20",
+    "date_precision": "day",
+    "competitors": [],
+    "fact_summary": "标题为新型液冷整机柜服务器，但采购表列内存颗粒测试机70万元及红外测温终端2万元。",
+    "implication": "官方页面也需正文标的校验；自动关键词归类会制造虚假液冷需求。",
+    "limitations": "待采购人更正或核验采购文件，整条隔离，不计需求、接受度、热度和成交额。",
+    "numeric_facts": []
+  }
+]

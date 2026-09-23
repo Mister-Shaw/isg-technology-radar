@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {sourcePanel} from '../data/sources.js';
+import {CHILDREN} from '../lib/hierarchy.js';
+import {researchReview,validDate,STAGES,SOURCES,TECHS} from '../lib/model.js';
+import {combinedAmountRows,eventKey} from '../lib/monthly.js';
+const read=name=>JSON.parse(fs.readFileSync(new URL('../'+name,import.meta.url)));
+const report=read('data/rolling-update.json'),study=read('data/research-2026.json'),panel=read('public/market-panel.json'),rows=[...study.events,...study.leads],batch=rows.filter(e=>report.record_ids.includes(e.id));
+assert.deepEqual(report,read('public/rolling-update.json'));
+assert.equal(batch.length,report.added_records);assert.equal(batch.filter(e=>researchReview(e)==='accepted').length,report.verified);
+assert.equal(new Set(rows.map(e=>e.id)).size,rows.length);
+assert.deepEqual(new Set(sourcePanel.map(s=>s.id)),new Set(report.sources.map(s=>s.source_id)));
+assert(report.sources.every(s=>s.checked_at&&s.result&&typeof s.coverage==='string'));
+assert(report.media.every(s=>s.completed_window_valid));assert.equal(report.unique_media_news,panel.sources.find(s=>s.id==='media_all').coverage.reduce((n,c)=>n+c.eligible,0));
+assert.equal(new Set(study.queries.filter(q=>CHILDREN[q.category]&&/^2026-0[1-9]$/.test(q.month)).map(q=>q.category+'|'+q.month)).size,126);
+for(const e of batch){assert(validDate(e.published_date)&&e.published_date<=report.cutoff,e.id);assert(STAGES[e.stage]&&SOURCES[e.source_type]&&e.categories.every(c=>TECHS[c]));assert(e.project_id!=='unknown');if(researchReview(e)!=='accepted')assert.equal(e.amount_eligible,false);}
+assert(report.preview.every(r=>(r.published_date||r.date)>report.cutoff));
+const combined=combinedAmountRows(rows),has=id=>combined.some(e=>e.id===id);
+assert(!has('roll-xpu-hetero-cluster-tender-20260330'));assert(has('roll-xpu-hetero-cluster-award-20260506'));
+assert(!has('roll-xpu-henan-npu-tender-20260107'));assert(has('focus-henan-pool'));
+assert(!has('roll-chip-ceb-candidate-20260918'),'DPU unit prices are not project totals');
+assert.equal(combined.filter(e=>e.project_id==='CGXM-IT-SJ-2026-110').reduce((n,e)=>n+Math.round(e._amount_min*100),0),15592282174,'Two distinct lots, tax-inclusive, counted once each');
+assert.equal(eventKey(rows.find(e=>e.id==='roll-xpu-huawei-mwc-20260302')),eventKey(rows.find(e=>e.id==='exp-compute-9794b62f9aac')),'Same launch family counts once in parent union');
+console.log(`PASS: ${batch.length} additions; source registry, query coverage, dates, all-news denominator, project/lot money and event unions.`);

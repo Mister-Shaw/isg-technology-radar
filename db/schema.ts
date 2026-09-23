@@ -1,0 +1,4 @@
+import { sqliteTable, text, integer, primaryKey } from 'drizzle-orm/sqlite-core';
+export const records=sqliteTable('records',{owner:text('owner').notNull(),id:text('id').notNull(),revision:integer('revision').notNull(),data:text('data').notNull(),updated:text('updated').notNull()},t=>[primaryKey({columns:[t.owner,t.id]})]);
+export const history=sqliteTable('history',{owner:text('owner').notNull(),id:text('id').notNull(),revision:integer('revision').notNull(),data:text('data').notNull(),at:text('at').notNull()},t=>[primaryKey({columns:[t.owner,t.id,t.revision]})]);
+export const captures=sqliteTable('captures',{owner:text('owner').notNull(),id:text('id').notNull(),url:text('url').notNull(),status:text('status').notNull(),data:text('data').notNull(),at:text('at').notNull()},t=>[primaryKey({columns:[t.owner,t.id]})]);
