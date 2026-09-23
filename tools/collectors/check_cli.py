@@ -73,6 +73,7 @@ def doit_page(page,fresh):
 with patch.object(refresh,'module',return_value=SimpleNamespace(get_page=doit_page,TZ=dt.timezone.utc)):
     rows,audit=refresh.doit()
 assert audit['complete'] and len(audit['page_log'])==33 and len(rows)==32
+assert len(audit['months'])==9 and all(month['complete'] for month in audit['months'])
 
 def zhiding_page(page):
     day='2025-12-31' if page==501 else '2026-01-01'
@@ -80,6 +81,22 @@ def zhiding_page(page):
 with patch.object(refresh,'module',return_value=SimpleNamespace(page=zhiding_page,SID='zhiding_latest')):
     rows,audit=refresh.zhiding()
 assert audit['complete'] and len(audit['page_log'])==501 and len(rows)==500
+assert all(month['complete'] for month in audit['months'])
+
+def partial_pages(page):
+    if page==3:raise TimeoutError('Failed during August')
+    newest,oldest=[('2026-09-23','2026-09-01'),('2026-08-31','2026-08-20')][page-1]
+    return [{'id':str(page)}],{'page':page,'first':newest,'last':oldest}
+rows,audit=refresh.read_pages(partial_pages,'id','first')
+coverage=refresh.page_months(audit,'first','last')
+assert not audit['complete'] and len(rows)==2
+assert [month['month'] for month in coverage if month['complete']]==['2026-09']
+assert all(month.get('error') for month in coverage if not month['complete'])
+# Article dates alone are not proof: missing pages or backward-moving publication
+# ordering must not certify a month from the last available article.
+for patch_page in [{'page':4},{'first':'2026-09-02'},{'last':None}]:
+    broken={**audit,'page_log':[audit['page_log'][0],{**audit['page_log'][1],**patch_page}]}
+    assert not any(month['complete'] for month in refresh.page_months(broken,'first','last'))
 
 repeat=lambda page:([{'id':'same'}],{'page':page,'first':'2026-01-01'})
 rows,audit=refresh.read_pages(repeat,'id','first')
@@ -103,4 +120,46 @@ with patch.object(refresh,'module',return_value=SimpleNamespace(daily=day_archiv
 assert not audit['complete'] and audit['days_requested']==263 and audit['days_checked']==263 and audit['days_success']==262
 assert len({log['date'] for log in audit['page_log']})==263
 assert audit['page_log'][59]['error']=='access challenge'
-print('Offline CLI, full-history pagination, coverage-failure and title-boundary checks passed; no network requests made.')
+assert [month['month'] for month in audit['months'] if not month['complete']]==['2026-03']
+
+def unexpected_day_error(day):
+    if day==dt.date(2026,3,1):raise TimeoutError('Uncaught day failure')
+    return day_archive(day)
+with patch.object(refresh,'module',return_value=SimpleNamespace(daily=unexpected_day_error,SOURCE='c114_roll_all')):
+    rows,audit=refresh.c114()
+assert audit['days_checked']==263 and [month['month'] for month in audit['months'] if not month['complete']]==['2026-03']
+
+cbi=load('cbinews_partial',BASE/'cbinews/collect.py')
+def category_fetch(url,filename,payload):
+    if payload['page']==3:raise TimeoutError('Category interrupted')
+    day='2026-09-15' if payload['page']==1 else '2026-08-20'
+    return refresh.json.dumps({'code':0,'data':{'total':3,'list':[{'id':4-payload['page'],
+        'title':'News','url':'/news.html','created_at':day+' 00:00:00'}]}})
+with patch.object(cbi,'fetch',side_effect=category_fetch),contextlib.redirect_stdout(io.StringIO()):
+    rows,category_audit=cbi.collect_category(cbi.CATS[0])
+assert len(rows)==2 and not category_audit['complete'] and 'Category interrupted' in category_audit['error']
+def categories(cat):
+    if cat[0]==2:raise TimeoutError('Another category failed before first page')
+    return rows,category_audit
+with patch.object(refresh,'module',return_value=SimpleNamespace(collect_category=categories,
+        CATS=[(1,'A','a'),(2,'B','b')],SOURCE='cbinews_all_news')):
+    retained,audit=refresh.cbinews()
+assert len(retained)==2 and len(audit['page_log'])==2 and not any(month['complete'] for month in audit['months'])
+with patch.object(refresh,'module',return_value=SimpleNamespace(collect_category=categories,
+        CATS=[(1,'A','a')],SOURCE='cbinews_all_news')):
+    retained,audit=refresh.cbinews()
+assert [month['month'] for month in audit['months'] if month['complete']]==['2026-09']
+
+# A failed source (including robots) must still write month coverage and must not
+# discard another source's successful response.
+captured={}
+def source_result(name,fn):
+    if name=='doit':raise TimeoutError('Robots unavailable')
+    return [{'id':name}],{'source_id':refresh.SOURCES[name][0],'complete':True,
+        'months':[{**month,'complete':True} for month in refresh.months()]}
+with patch.object(refresh,'collect',side_effect=source_result),patch.object(refresh,'save',side_effect=lambda name,value:captured.update({name:value})),contextlib.redirect_stdout(io.StringIO()):
+    code=refresh.main(valid+['--output','output/check-run'])
+result=captured['media-refresh.json']
+assert code==1 and len(result['documents'])==3 and len(result['sources'])==4
+assert not result['sources'][0]['months'][0]['complete'] and 'Robots unavailable' in result['sources'][0]['months'][0]['error']
+print('Offline CLI, full-history/partial-month coverage, interrupted-source retention and title-boundary checks passed; no network requests made.')

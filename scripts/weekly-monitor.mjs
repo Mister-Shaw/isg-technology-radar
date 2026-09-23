@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {TECHS,inDateWindow,researchReview,validDate} from '../lib/model.js';
 import {CHILDREN,matchesCategory,matchesChip} from '../lib/hierarchy.js';
 import {amountEligible} from '../lib/monthly.js';
+import {coverageComplete} from '../lib/panel.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,''));
 const day=(d,n)=>new Date(Date.parse(d+'T00:00:00Z')+n*86400000).toISOString().slice(0,10);
@@ -20,18 +21,18 @@ export function analyze(panel,research,previous,config,end){
  const months=new Set(weeks.flatMap(w=>[w.start.slice(0,7),w.end.slice(0,7)]));
  let complete=panel.window.start<=baseStart&&panel.window.end>=end;
  for(const id of sourceIds){
-  const source=panel.sources.find(s=>s.id===id),covered=source&&[...months].every(m=>source.coverage.some(c=>c.month===m&&c.status==='complete'));
+  const source=panel.sources.find(s=>s.id===id),covered=source&&[...months].every(m=>coverageComplete(source,m,[end,new Date(Date.UTC(Number(m.slice(0,4)),Number(m.slice(5)),0)).toISOString().slice(0,10)].sort()[0]));
   const n=current.filter(d=>d.source_id===id).length,b=base.filter(d=>d.source_id===id).length/4;
   if(!covered||!n||!b||n<b*.5){complete=false;alerts.push({id:`quality:${end}:${id}`,type:'quality',source_id:id,title:`${source?.name||id}采集覆盖或发稿量需检查`,detail:`本周${n}篇，前4周周均${b}篇；先核目录、缓存和日期覆盖。`});}
  }
  const usable=complete&&current.length>=rules.minimum_weekly_news&&base.length/4>=rules.minimum_weekly_news;
  for(const [category,label] of Object.entries(CHILDREN)){
   const matched=d=>matchesCategory(d,category,'news'),n=current.filter(matched).length,bn=base.filter(matched).length;
-  const value=current.length?1000*n/current.length:null,baseline=base.length?1000*bn/base.length:null,delta=value==null||baseline==null?null:value-baseline;
-  const direction=Math.sign(delta||0),confirming=sourceIds.filter(id=>{
+  const value=usable?1000*n/current.length:null,baseline=usable?1000*bn/base.length:null,delta=value==null||baseline==null?null:value-baseline;
+  const direction=Math.sign(delta||0),confirming=usable?sourceIds.filter(id=>{
    const c=current.filter(d=>d.source_id===id),b=base.filter(d=>d.source_id===id);
    return c.length&&b.length&&Math.sign(c.filter(matched).length/c.length-b.filter(matched).length/b.length)===direction;
-  });
+  }):[];
   const triggered=usable&&delta!==null&&Math.abs(delta)>=rules.attention_absolute_per_mille&&(baseline===0?value>0:Math.abs(delta)/baseline>=rules.attention_relative_change)&&Math.max(n,bn/4)>=rules.minimum_weekly_hits&&confirming.length>=rules.minimum_confirming_sources;
   metrics.push({category,n,N:current.length,baseline_n:bn,baseline_N:base.length,value,baseline,delta,usable,confirming_sources:confirming});
   if(triggered)alerts.push({id:`attention:${end}:${category}`,type:'attention',category,title:`${label}新闻关注度${direction>0?'上升':'下降'}`,detail:`${value.toFixed(1)}‰，前4周${baseline.toFixed(1)}‰；本周${n}/${current.length}，基线${bn}/${base.length}；不等于采用率。`,urls:current.filter(matched).slice(0,5).map(d=>d.url)});

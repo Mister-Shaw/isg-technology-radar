@@ -32,7 +32,7 @@ export default function Workspace(){
  {view==='monthly'&&<MonthlyResearch research={research} onEdit={data?editResearch:null}/>}
  {view==='collect'&&(data?<><p className="notice">本页用于补充项目线索。关键词检索和单条导入不进入市场风向的固定分母；固定样本需要完整回采、核对覆盖后更新。</p><SourceCenter data={data} refresh={refresh} inspect={record=>setModal({mode:'detail',record:data.records.find(e=>e.id===record.id)||record})} create={create}/></>:<p>正在读取来源台账…</p>)}
  {view==='method'&&<Method/>}
- <footer>项目研究窗口：{research.period_start} 至 {research.period_end}<span>媒体样本截至：{monitoring.last_completed_cutoff||monitoring.baseline_as_of||'未记录'} · {monitoring.enabled?`${monitoring.schedule_label} · 异动提示已设置`:'采集按需执行'}</span></footer></div></main>{toast&&<div className="toast" role="status"><CheckCircle2 size={18}/>{toast}</div>}
+ <footer>项目研究窗口：{research.period_start} 至 {research.period_end}<span>媒体全来源完整更新截至：{monitoring.last_completed_cutoff||'尚未完成'}{monitoring.latest_requested_cutoff&&` · 最近尝试至 ${monitoring.latest_requested_cutoff}${monitoring.latest_update_status==='partial'?'（部分更新，详见来源与采集）':''}`} · {monitoring.enabled?`${monitoring.schedule_label} · 异动提示已设置`:'采集按需执行'}</span></footer></div></main>{toast&&<div className="toast" role="status"><CheckCircle2 size={18}/>{toast}</div>}
  {modal?.mode==='research'&&<Dialog title="编辑项目与研究笔记" close={()=>setModal(null)}><ResearchEditor section={modal.section} itemKey={modal.key} record={modal.record} save={saveResearch}/></Dialog>}
  {modal?.mode==='detail'&&<Dialog title="证据详情" close={()=>setModal(null)}><Detail record={modal.record} edit={()=>editRecord(modal.record)}/></Dialog>}
  </div>;

@@ -24,7 +24,7 @@ def iso_date(value):
     return value
 
 def parse_args(argv=None):
-    parser=argparse.ArgumentParser(description='Refresh four public news archives without a topic prefilter; fail if a source is incomplete.')
+    parser=argparse.ArgumentParser(description='Refresh four public news archives without a topic prefilter; retain successful source-months when another fails.')
     parser.add_argument('--start',type=iso_date,required=True)
     parser.add_argument('--end',type=iso_date,required=True)
     parser.add_argument('--cutoff',type=iso_date,required=True,help='Completed-period boundary; later documents remain previews.')
@@ -44,6 +44,34 @@ def module(name,path):
     m.START,m.END=START,END
     return m
 def save(name,d): (OUTPUT/name).write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding='utf-8')
+
+def months():
+    day=dt.date.fromisoformat(START).replace(day=1)
+    while day.isoformat()<=END:
+        after=(day.replace(day=28)+dt.timedelta(days=4)).replace(day=1)
+        yield {'month':day.isoformat()[:7],'date_start':max(START,day.isoformat()),
+            'date_end':min(END,(after-dt.timedelta(days=1)).isoformat())}
+        day=after
+
+def page_months(audit,newest_key,oldest_key):
+    """Partial proof requires consecutive descending pages crossing a month's start."""
+    pages=[p for p in audit['page_log'] if not p.get('error')]
+    ordered=bool(pages) and not audit.get('ordering_errors') and not audit.get('id_ordering_errors')
+    previous='9999-99-99'
+    for index,page in enumerate(pages,1):
+        newest,oldest=page.get(newest_key),page.get(oldest_key)
+        if page.get('page')!=index or not newest or not oldest or newest>previous or oldest>newest:
+            ordered=False
+            break
+        previous=oldest
+    boundary=pages[-1].get(newest_key) if ordered else None
+    result=[]
+    for month in months():
+        complete=audit['complete'] or bool(boundary and boundary<month['date_start'])
+        result.append({**month,'complete':complete,
+            'evidence':'archive_start_boundary' if audit['complete'] else 'consecutive_descending_pages_crossed_month_start' if complete else 'unproven_month_boundary',
+            **({} if complete else {'error':audit.get('error','Archive did not prove complete coverage of this month')})})
+    return result
 
 def check_robots(url):
     parts=urllib.parse.urlsplit(url)
@@ -96,12 +124,13 @@ def read_pages(fetch_page,id_key,newest_key):
         try:
             if time.monotonic()-started>=ARCHIVE_TIMEOUT_SECONDS:
                 raise TimeoutError('Archive traversal time limit reached before start boundary')
-            batch,log=fetch_page(page);logs.append(log)
+            batch,log=fetch_page(page)
             if not batch:raise RuntimeError('Empty archive before verified start boundary')
             signature=tuple(sorted(str(row[id_key]) for row in batch))
             if signature in seen:raise RuntimeError('Repeated archive page before start boundary')
             seen.add(signature)
             newest=iso_date(log[newest_key])
+            logs.append(log)
             rows.extend(batch)
             # A mixed-date boundary page still contains requested articles; read the
             # next page until its newest date is older than the research start.
@@ -119,26 +148,53 @@ def doit():
     for r in raw:
         day=dt.datetime.fromtimestamp(int(r['publishDate'])/1000,m.TZ).date().isoformat()
         if START<=day<=END:rows.append({'id':'doit-'+str(r['contentId']),'title':html.unescape(r['title']).strip(),'url':'https://www.doit.com.cn'+r['link'],'date':day,'month':day[:7],'source_id':'doit_all','publisher':'DOIT','date_basis':'publisher_list_publishDate_AsiaShanghai'})
-    return rows,{'source_id':'doit_all',**audit}
+    return rows,{'source_id':'doit_all',**audit,'months':page_months(audit,'first_date','last_date')}
 def c114():
     m=module('c114',BASE/'c114/collect.py');days=[dt.date.fromisoformat(START)+dt.timedelta(days=n) for n in range((dt.date.fromisoformat(END)-dt.date.fromisoformat(START)).days+1)]
     rows=[];logs=[]
+    def daily(day):
+        try:
+            rr,log=m.daily(day)
+            if log.get('date')!=str(day):raise ValueError('Archive date differs from requested date')
+            return rr,log
+        except Exception as error:
+            return [],{'date':str(day),'complete':False,'error':f'{type(error).__name__}: {error}'}
     with cf.ThreadPoolExecutor(2) as pool:
-        for rr,log in pool.map(m.daily,days):rows.extend(r for r in rr if r['entry_kind']=='article');logs.append(log)
+        for rr,log in pool.map(daily,days):rows.extend(r for r in rr if r['entry_kind']=='article');logs.append(log)
+    coverage=[]
+    for month in months():
+        own=[log for log in logs if log['date'].startswith(month['month'])]
+        failures=[log for log in own if not log['complete']]
+        coverage.append({**month,'complete':not failures,'days_requested':len(own),
+            'days_success':len(own)-len(failures),'evidence':'requested_daily_archives',
+            **({'error':'; '.join(log['date']+': '+log.get('error','Archive validation failed') for log in failures)} if failures else {})})
     return rows,{'source_id':m.SOURCE,'complete':len(logs)==len(days) and all(l['complete'] for l in logs),
-        'days_requested':len(days),'days_checked':len(logs),'days_success':sum(l['complete'] for l in logs),'page_log':logs}
+        'days_requested':len(days),'days_checked':len(logs),'days_success':sum(l['complete'] for l in logs),'page_log':logs,'months':coverage}
 def zhiding():
     m=module('zhiding',BASE/'zhiding/collect.py')
     rows,audit=read_pages(m.page,'id','first')
-    return [r for r in rows if START<=r['date']<=END and r['entry_kind']=='news_article'],{'source_id':m.SID,**audit}
+    return [r for r in rows if START<=r['date']<=END and r['entry_kind']=='news_article'],{'source_id':m.SID,**audit,'months':page_months(audit,'first','last')}
 def cbinews():
     m=module('cbinews',BASE/'cbinews/collect.py');m.REFRESH=True;rows={};logs=[]
+    def category(cat):
+        try:return m.collect_category(cat)
+        except Exception as error:
+            return [],{'category_id':cat[0],'name':cat[1],'complete':False,'pages':[],
+                'error':f'{type(error).__name__}: {error}'}
     with cf.ThreadPoolExecutor(2) as pool:
-        for rr,log in pool.map(m.collect_category,m.CATS):
+        for rr,log in pool.map(category,m.CATS):
+            log['months']=page_months({**log,'page_log':log['pages']},'first_date','last_date')
             logs.append(log)
             for r in rr:
                 id='cbinews-'+str(r['id']);rows[id]={'id':id,'title':html.unescape(r['title']),'url':urllib.parse.urljoin('https://www.cbinews.com/',r['url']),'date':r['date'],'month':r['date'][:7],'source_id':m.SOURCE,'publisher':'电脑商情在线','date_basis':'publisher_category_list_created_at'}
-    return list(rows.values()),{'source_id':m.SOURCE,'complete':all(l['complete'] for l in logs),'page_log':logs}
+    coverage=[]
+    for index,month in enumerate(months()):
+        failed=[log for log in logs if not log['months'][index]['complete']]
+        coverage.append({**month,'complete':not failed and len(logs)==len(m.CATS),
+            'categories_requested':len(m.CATS),'categories_success':len(logs)-len(failed),
+            'evidence':'all_navigation_categories',
+            **({'error':'; '.join(str(log['category_id'])+': '+log['months'][index]['error'] for log in failed)} if failed else {})})
+    return list(rows.values()),{'source_id':m.SOURCE,'complete':all(l['complete'] for l in logs),'page_log':logs,'months':coverage}
 def main(argv=None):
     global START,END,CUTOFF,OUTPUT
     args=parse_args(argv)
@@ -152,7 +208,8 @@ def main(argv=None):
                 rows,log=job.result();log.update(checked_at=dt.datetime.now(dt.timezone.utc).isoformat(),fresh_request=True,rows=len(rows));docs.extend(rows)
                 save(name+'-fresh.json',{'documents':rows,'audit':log});logs.append(log);print(name,len(rows),log['complete'],flush=True)
             except Exception as e:
-                log={'source_id':SOURCES[name][0],'complete':False,'fresh_request':True,'rows':0,'error':str(e),'checked_at':dt.datetime.now(dt.timezone.utc).isoformat()};logs.append(log);save(name+'-fresh.json',{'documents':[],'audit':log});print(name,str(e),flush=True)
+                log={'source_id':SOURCES[name][0],'complete':False,'fresh_request':True,'rows':0,'error':str(e),'checked_at':dt.datetime.now(dt.timezone.utc).isoformat(),
+                    'months':[{**month,'complete':False,'error':str(e)} for month in months()]};logs.append(log);save(name+'-fresh.json',{'documents':[],'audit':log});print(name,str(e),flush=True)
     save('media-refresh.json',{'checked_at':dt.datetime.now(dt.timezone.utc).isoformat(),'reread_start':START,'scanned_through':END,'cutoff':CUTOFF,'sources':logs,'documents':docs})
 
     return 0 if all(log['complete'] for log in logs) else 1

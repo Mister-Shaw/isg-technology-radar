@@ -27,14 +27,20 @@ const again=mergeMedia(p,fresh);assert.equal(again.summary.added_rows,0);assert.
 const duplicated=structuredClone(fresh);duplicated.documents.push(duplicated.documents[0]);duplicated.sources[0].rows++;
 assert.deepEqual(mergeMedia(panel,duplicated).panel.documents,p.documents,'Repeated identical archive rows remain idempotent');
 duplicated.documents[duplicated.documents.length-1]={...duplicated.documents[0],date:'2026-09-23'};assert.throws(()=>mergeMedia(panel,duplicated),/Conflicting incoming/);
-const partial=structuredClone(fresh);partial.sources[2].complete=false;assert.throws(()=>mergeMedia(panel,partial),/incomplete collection/);
+const partial=structuredClone(fresh);partial.sources[2].complete=false;
+const partlyMerged=mergeMedia(panel,partial);assert.equal(partlyMerged.summary.status,'partial');assert.equal(partlyMerged.summary.deferred_months,2);
+assert(partlyMerged.panel.documents.some(d=>d.id==='tech'),'A failed source must not block other sources');
+assert.equal(partlyMerged.panel.sources.find(s=>s.id===MEDIA[2]).coverage[1].covered_through,'2026-09-20');
+assert.equal(partlyMerged.panel.sources.find(s=>s.id===MEDIA[2]).coverage[1].status,'stale');
 const gap={...fresh,reread_start:'2026-09-07'};assert.throws(()=>mergeMedia(panel,gap),/full research window/,'Reject the former 14-day input even if the database was updated recently');
 const invalid=structuredClone(fresh);invalid.documents[0].date='2026-02-30';assert.throws(()=>mergeMedia(panel,invalid),/Invalid publication date/);
 const changed=structuredClone(fresh);changed.documents.find(d=>d.id==='old').title='修订标题';assert.equal(mergeMedia(panel,changed).summary.changed_rows,1);
-const empty={...fresh,documents:[],sources:MEDIA.map(source_id=>({source_id,complete:true,rows:0}))};assert.throws(()=>mergeMedia(panel,empty),/less than half/);
+const empty={...fresh,documents:[],sources:MEDIA.map(source_id=>({source_id,complete:true,rows:0}))};
+const emptyResult=mergeMedia(panel,empty);assert.equal(emptyResult.summary.accepted_months,0);assert.equal(emptyResult.summary.added_rows,0);assert.equal(emptyResult.panel.documents.length,panel.documents.length);
 const missingMonth=structuredClone(fresh);missingMonth.documents=missingMonth.documents.filter(d=>d.month!=='2026-08');recount(missingMonth);
-assert.throws(()=>mergeMedia(panel,missingMonth),/2026-08.*less than half/,'Large other months must not conceal a missing historical month');
-assert.throws(()=>mergeMedia({...panel,documents:[]},missingMonth),/2026-08.*no records/,'A new empty installation must also reject a missing complete month');
+const missing=mergeMedia(panel,missingMonth);assert.equal(missing.summary.deferred_months,4);assert(missing.panel.documents.some(d=>d.id==='tech'));
+assert(missing.panel.sources[0].coverage.find(c=>c.month==='2026-08').reason.includes('一半'),'Large other months must not conceal a missing historical month');
+assert.equal(mergeMedia({...panel,documents:[]},missingMonth).panel.sources[0].coverage[0].status,'missing','An empty installation records an unavailable month instead of inventing zero');
 const damaged=structuredClone(panel);damaged.documents=damaged.documents.filter(d=>d.id!=='older');
 assert.equal(mergeMedia(damaged,fresh).panel.documents.filter(d=>d.id==='older').length,1,'Recover an old hole outside the former 14-day window');
 const rebuilt=mergeMedia({...panel,documents:[]},fresh);assert.equal(rebuilt.summary.unique_media_news,10,'Rebuild an empty news panel from the full batch');
@@ -47,13 +53,41 @@ assert.equal(mergeMedia(panel,nextMonth).summary.month_count,3);assert.equal(per
 assert.equal(lastSunday(new Date('2026-09-20T15:59:59Z')),'2026-09-13','Sunday is not finished before Beijing midnight');
 assert.equal(lastSunday(new Date('2026-09-20T16:00:00Z')),'2026-09-20');
 const crossYear={...structuredClone(fresh),cutoff:'2027-01-03',scanned_through:'2027-01-03'};
-assert.throws(()=>mergeMedia(panel,crossYear),/2026-10.*no records/,'Do not skip new intermediate months just because the old database lacks a baseline');
+const absentMonths=mergeMedia(panel,crossYear);assert.equal(absentMonths.summary.deferred_months,12);assert.equal(absentMonths.panel.sources[0].coverage.find(c=>c.month==='2026-10').status,'missing','New intermediate months are isolated even without a baseline');
 for(const source_id of MEDIA)for(const month of ['2026-10','2026-11','2026-12'])crossYear.documents.push({...row(source_id+month,source_id+month,month+'-01'),source_id});
 recount(crossYear);
 const crossed=mergeMedia(panel,crossYear);
 assert.equal(crossed.summary.reread_start,'2026-08-01','Keep the original research start across years');
 assert.equal(crossed.summary.month_count,6);assert.equal(crossed.panel.sources[0].coverage.length,6);
 assert.equal(periods('month',crossed.panel.window).at(-1).label,'2027-01*');
+
+// A single failed month does not block another month of the same source.
+const split=structuredClone(fresh);split.sources[0].complete=false;
+split.sources[0].months=[{month:'2026-08',complete:false,error:'August archive unavailable'},{month:'2026-09',complete:true}];
+split.documents.find(d=>d.id==='older').title='Untrusted August correction';
+split.documents.push(row('bad-aug','August new title','2026-08-25'));recount(split);
+const divided=mergeMedia(panel,split);
+assert.equal(divided.summary.deferred_months,1);assert.equal(divided.panel.documents.find(d=>d.id==='older').title,'上月新闻');
+assert(!divided.panel.documents.some(d=>d.id==='bad-aug'));assert(divided.panel.documents.some(d=>d.id==='tech'));
+assert.equal(divided.panel.sources[0].coverage[0].covered_through,'2026-08-31');
+const retry=mergeMedia(divided.panel,split);assert.equal(retry.summary.added_rows,0);assert.equal(retry.panel.sources[0].coverage[0].covered_through,'2026-08-31');
+const recoveryInput=structuredClone(split);recoveryInput.sources[0].complete=true;delete recoveryInput.sources[0].months;
+const recovered=mergeMedia(divided.panel,recoveryInput);
+assert(recovered.summary.complete);assert(recovered.panel.documents.some(d=>d.id==='bad-aug'));
+const moved=structuredClone(split);Object.assign(moved.documents.find(d=>d.id==='older'),{month:'2026-09',date:'2026-09-15'});
+const guarded=mergeMedia(panel,moved);assert.equal(guarded.panel.documents.find(d=>d.id==='older').date,'2026-08-20');assert.equal(guarded.summary.deferred_months,2,'Cross-month correction waits for both affected months');
+
+const duplicateSplit=structuredClone(fresh);
+duplicateSplit.sources[0].months=[{month:'2026-08',complete:true},{month:'2026-09',complete:false}];
+duplicateSplit.documents.push(row('early-dupe','原有标题','2026-08-15'));recount(duplicateSplit);
+const frozen=mergeMedia(panel,duplicateSplit);
+assert.deepEqual(frozen.panel.documents.find(d=>d.id==='old'),panel.documents.find(d=>d.id==='old'),'Failed-month records and duplicate flags remain unchanged');
+assert.equal(frozen.panel.sources[0].coverage[1].eligible,1,'Earlier duplicates cannot shrink a failed month denominator');
+assert.equal(frozen.panel.documents.find(d=>d.id==='early-dupe').duplicate_of,'old');
+assert.deepEqual(mergeMedia(frozen.panel,duplicateSplit).panel.documents,frozen.panel.documents);
+delete duplicateSplit.sources[0].months;
+const dedupRecovered=mergeMedia(frozen.panel,duplicateSplit);
+assert(dedupRecovered.summary.complete);assert.equal(dedupRecovered.panel.documents.find(d=>d.id==='old').duplicate_of,'early-dupe','Full recovery restores chronological deduplication');
 
 const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'radar-update-')),rename=fs.renameSync;
 try{

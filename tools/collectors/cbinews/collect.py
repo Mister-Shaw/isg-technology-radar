@@ -58,42 +58,48 @@ def collect_category(cat):
     rows, pages, earlier, errors, id_errors = [], [], [], [], []
     previous_date = '9999-99-99'
     previous_id, prior_year_pages = float('inf'), 0
-    for page in range(1, 1001):
-        payload = {'cat_id':cid, 'page':page, 'pageSize':21}
-        response = json.loads(fetch('https://api.cbinews.com/api/cate_list',
-                                   f'category-{cid}-page-{page:03}.json', payload))
-        assert response['code'] == 0, response
-        entries = response['data']['list']
-        assert isinstance(entries, list)
-        dates = [x['created_at'][:10] for x in entries]
-        for entry in entries:
-            if entry['id'] > previous_id:
-                id_errors.append(f"non-descending id: {entry['id']} after {previous_id}, page {page}")
-            previous_id = entry['id']
-        for date in dates:
-            if date > previous_date:
-                errors.append(f'non-descending date: {date} after {previous_date}, page {page}')
-            previous_date = date
-        pages.append({'page':page,'rows':len(entries),'first_date':dates[0] if dates else None,
-                      'last_date':dates[-1] if dates else None,
-                      'reported_all_history_total':response['data']['total']})
-        for item in entries:
-            date = item['created_at'][:10]
-            if START <= date <= END:
-                rows.append({**item, 'date':date, 'category_id':cid, 'category_name':name})
-            elif date < START:
-                earlier.append({k:item[k] for k in ('id','title','url','created_at')})
-        # Public list follows article ID, not strictly publication date. Two complete
-        # prior-year pages guard against small editorial date shifts at the boundary.
-        prior_year_pages = prior_year_pages + 1 if dates and max(dates) < START else 0
-        if not entries or prior_year_pages >= 2:
-            break
-    else:
-        raise RuntimeError('Page cap reached before year boundary')
+    failure = None
+    try:
+        for page in range(1, 1001):
+            payload = {'cat_id':cid, 'page':page, 'pageSize':21}
+            response = json.loads(fetch('https://api.cbinews.com/api/cate_list',
+                                       f'category-{cid}-page-{page:03}.json', payload))
+            assert response['code'] == 0, response
+            entries = response['data']['list']
+            assert isinstance(entries, list)
+            dates = [x['created_at'][:10] for x in entries]
+            for entry in entries:
+                if entry['id'] > previous_id:
+                    id_errors.append(f"non-descending id: {entry['id']} after {previous_id}, page {page}")
+                previous_id = entry['id']
+            for date in dates:
+                if date > previous_date:
+                    errors.append(f'non-descending date: {date} after {previous_date}, page {page}')
+                previous_date = date
+            for item in entries:
+                date = item['created_at'][:10]
+                if START <= date <= END:
+                    rows.append({**item, 'date':date, 'category_id':cid, 'category_name':name})
+                elif date < START:
+                    earlier.append({k:item[k] for k in ('id','title','url','created_at')})
+            pages.append({'page':page,'rows':len(entries),'first_date':max(dates) if dates else None,
+                          'last_date':min(dates) if dates else None,
+                          'reported_all_history_total':response['data']['total']})
+            # Public list follows article ID, not strictly publication date. Two complete
+            # prior-year pages guard against small editorial date shifts at the boundary.
+            prior_year_pages = prior_year_pages + 1 if dates and max(dates) < START else 0
+            if not entries or prior_year_pages >= 2:
+                break
+        else:
+            raise RuntimeError('Page cap reached before year boundary')
+    except Exception as error:
+        failure = f'{type(error).__name__}: {error}'
+        pages.append({'page':page,'complete':False,'error':failure})
     result = {'category_id':cid,'name':name,'url':'https://www.cbinews.com/'+slug,
               'pages':pages,'earlier_boundary_records':earlier,
-              'complete':bool(earlier) and not id_errors,'ordering_errors':errors,
-              'id_ordering_errors':id_errors,'complete_prior_year_pages':prior_year_pages}
+              'complete':bool(earlier) and not id_errors and failure is None,'ordering_errors':errors,
+              'id_ordering_errors':id_errors,'complete_prior_year_pages':prior_year_pages,
+              **({'error':failure} if failure else {})}
     print(f'{name}: {len(rows)} period rows; {len(pages)} pages; boundary {previous_date}', flush=True)
     return rows, result
 
