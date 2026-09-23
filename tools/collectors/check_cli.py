@@ -2,7 +2,9 @@
 import contextlib
 import importlib.util
 import io
+import datetime as dt
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import patch
 
 BASE = Path(__file__).resolve().parent
@@ -60,4 +62,45 @@ with patch.object(refresh.urllib.request,'urlopen',side_effect=TimeoutError('off
     try:refresh.collect('doit',lambda:(_ for _ in ()).throw(AssertionError('Collector must not run')))
     except TimeoutError:pass
     else:raise AssertionError('Unknown robots status accepted')
-print('Offline CLI and title-boundary checks passed; no network requests made.')
+refresh.START,refresh.END='2026-01-01','2026-09-20'
+def doit_page(page,fresh):
+    assert fresh
+    day='2025-12-31' if page==33 else '2026-01-01'
+    stamp=int(dt.datetime.fromisoformat(day).replace(tzinfo=dt.timezone.utc).timestamp()*1000)
+    # Page 32 straddles the date boundary and must not terminate the traversal.
+    return [{'contentId':page,'publishDate':stamp,'title':'News','link':f'/{page}'}],{
+        'page':page,'first_date':day,'last_date':'2025-12-31' if page==32 else day}
+with patch.object(refresh,'module',return_value=SimpleNamespace(get_page=doit_page,TZ=dt.timezone.utc)):
+    rows,audit=refresh.doit()
+assert audit['complete'] and len(audit['page_log'])==33 and len(rows)==32
+
+def zhiding_page(page):
+    day='2025-12-31' if page==501 else '2026-01-01'
+    return [{'id':str(page),'date':day,'entry_kind':'news_article'}],{'page':page,'first':day}
+with patch.object(refresh,'module',return_value=SimpleNamespace(page=zhiding_page,SID='zhiding_latest')):
+    rows,audit=refresh.zhiding()
+assert audit['complete'] and len(audit['page_log'])==501 and len(rows)==500
+
+repeat=lambda page:([{'id':'same'}],{'page':page,'first':'2026-01-01'})
+rows,audit=refresh.read_pages(repeat,'id','first')
+assert not audit['complete'] and 'Repeated' in audit['error'] and len(rows)==1
+rows,audit=refresh.read_pages(lambda page:([],{'page':page}),'id','first')
+assert not audit['complete'] and 'Empty' in audit['error']
+def broken_page(page):
+    if page==2:raise TimeoutError('network failed')
+    return repeat(page)
+rows,audit=refresh.read_pages(broken_page,'id','first')
+assert not audit['complete'] and len(rows)==1 and audit['page_log'][-1]['page']==2
+with patch.object(refresh.time,'monotonic',side_effect=[0,refresh.ARCHIVE_TIMEOUT_SECONDS+1]):
+    rows,audit=refresh.read_pages(lambda page:(_ for _ in ()).throw(AssertionError('Must stop before request')),'id','first')
+assert not audit['complete'] and 'time limit' in audit['error'] and not rows
+
+def day_archive(day):
+    failed=day==dt.date(2026,3,1)
+    return [],{'date':str(day),'complete':not failed,**({'error':'access challenge'} if failed else {'total':0})}
+with patch.object(refresh,'module',return_value=SimpleNamespace(daily=day_archive,SOURCE='c114_roll_all')):
+    rows,audit=refresh.c114()
+assert not audit['complete'] and audit['days_requested']==263 and audit['days_checked']==263 and audit['days_success']==262
+assert len({log['date'] for log in audit['page_log']})==263
+assert audit['page_log'][59]['error']=='access challenge'
+print('Offline CLI, full-history pagination, coverage-failure and title-boundary checks passed; no network requests made.')

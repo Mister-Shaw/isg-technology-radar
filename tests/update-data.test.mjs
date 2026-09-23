@@ -2,16 +2,20 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import {MEDIA,mergeMedia,lastSunday,rereadStart,commitFiles,recoverTransaction} from '../scripts/update-data.mjs';
-import {panelCell} from '../lib/panel.js';
+import {MEDIA,mergeMedia,lastSunday,commitFiles,recoverTransaction} from '../scripts/update-data.mjs';
+import {panelCell,periods} from '../lib/panel.js';
 
 const row=(id,title,date,categories=[])=>({id,source_id:MEDIA[0],title,date,month:date.slice(0,7),url:`https://example.org/${id}`,categories,tags:[],context_class:'other'});
 const panel={window:{start:'2026-08-01',end:'2026-09-20'},sources:[...MEDIA.map(id=>({id,kind:'news',group:'media',coverage:['2026-08','2026-09'].map(month=>({month,status:'complete'}))})),{id:'all',document_source_ids:MEDIA,coverage:[]},{id:'official',kind:'news',coverage:[{month:'2026-09',status:'complete'}]}],documents:[row('old','原有标题','2026-09-10'),row('older','上月新闻','2026-08-20')],taxonomy:{}};
-const fresh={checked_at:'2026-09-28T01:00:00Z',reread_start:'2026-09-07',scanned_through:'2026-09-28',cutoff:'2026-09-27',sources:MEDIA.map(source_id=>({source_id,complete:true,rows:source_id===MEDIA[0]?5:0})),documents:[row('plain','普通消费新闻','2026-09-24'),row('tech','数据中心液冷部署','2026-09-25',['liquid_cooling']),row('dupe','数据中心 液冷部署！','2026-09-26',['liquid_cooling']),row('preview','下周资讯','2026-09-28'),row('old','原有标题','2026-09-10')]};
+const fresh={checked_at:'2026-09-28T01:00:00Z',reread_start:'2026-08-01',scanned_through:'2026-09-28',cutoff:'2026-09-27',sources:MEDIA.map(source_id=>({source_id,complete:true,rows:source_id===MEDIA[0]?6:0})),documents:[row('plain','普通消费新闻','2026-09-24'),row('tech','数据中心液冷部署','2026-09-25',['liquid_cooling']),row('dupe','数据中心 液冷部署！','2026-09-26',['liquid_cooling']),row('preview','下周资讯','2026-09-28'),row('older','上月新闻','2026-08-20'),row('old','原有标题','2026-09-10')]};
+const recount=f=>{for(const s of f.sources)s.rows=f.documents.filter(d=>d.source_id===s.source_id).length;return f;};
+const otherRows=MEDIA.slice(1).flatMap(source_id=>['2026-08-20','2026-09-10'].map(date=>({...row(source_id+date,source_id+date,date),source_id})));
+panel.documents.push(...otherRows);fresh.documents.push(...otherRows);recount(fresh);
 const before=JSON.stringify(panel),result=mergeMedia(panel,fresh),p=result.panel;
 assert.equal(JSON.stringify(panel),before,'Merge must not edit input before validation');
 assert.equal(result.summary.added_rows,3);assert.equal(result.preview.length,1);assert.equal(result.candidates.length,1);
-assert.equal(result.summary.unique_media_news,4,'All topics retained, normalized duplicate excluded');
+assert.equal(result.summary.mode,'full');assert.equal(result.summary.scanned_rows,12);
+assert.equal(result.summary.unique_media_news,10,'All topics retained, normalized duplicate excluded');
 assert.equal(p.documents.find(d=>d.id==='dupe').duplicate_of,'tech');
 assert.equal(p.sources.find(s=>s.id==='official').coverage[0].status,'incomplete','A media update cannot extend official coverage');
 const source=p.sources[0],period={id:'2026-09',months:['2026-09']};
@@ -24,16 +28,32 @@ const duplicated=structuredClone(fresh);duplicated.documents.push(duplicated.doc
 assert.deepEqual(mergeMedia(panel,duplicated).panel.documents,p.documents,'Repeated identical archive rows remain idempotent');
 duplicated.documents[duplicated.documents.length-1]={...duplicated.documents[0],date:'2026-09-23'};assert.throws(()=>mergeMedia(panel,duplicated),/Conflicting incoming/);
 const partial=structuredClone(fresh);partial.sources[2].complete=false;assert.throws(()=>mergeMedia(panel,partial),/incomplete collection/);
-const gap={...fresh,reread_start:'2026-09-22'};assert.throws(()=>mergeMedia(panel,gap),/cover the gap/);
+const gap={...fresh,reread_start:'2026-09-07'};assert.throws(()=>mergeMedia(panel,gap),/full research window/,'Reject the former 14-day input even if the database was updated recently');
 const invalid=structuredClone(fresh);invalid.documents[0].date='2026-02-30';assert.throws(()=>mergeMedia(panel,invalid),/Invalid publication date/);
-const changed=structuredClone(fresh);changed.documents.at(-1).title='修订标题';assert.equal(mergeMedia(panel,changed).summary.changed_rows,1);
+const changed=structuredClone(fresh);changed.documents.find(d=>d.id==='old').title='修订标题';assert.equal(mergeMedia(panel,changed).summary.changed_rows,1);
 const empty={...fresh,documents:[],sources:MEDIA.map(source_id=>({source_id,complete:true,rows:0}))};assert.throws(()=>mergeMedia(panel,empty),/less than half/);
-const nextMonth={...fresh,reread_start:'2026-09-01',cutoff:'2026-10-04',scanned_through:'2026-10-04'};
+const missingMonth=structuredClone(fresh);missingMonth.documents=missingMonth.documents.filter(d=>d.month!=='2026-08');recount(missingMonth);
+assert.throws(()=>mergeMedia(panel,missingMonth),/2026-08.*less than half/,'Large other months must not conceal a missing historical month');
+assert.throws(()=>mergeMedia({...panel,documents:[]},missingMonth),/2026-08.*no records/,'A new empty installation must also reject a missing complete month');
+const damaged=structuredClone(panel);damaged.documents=damaged.documents.filter(d=>d.id!=='older');
+assert.equal(mergeMedia(damaged,fresh).panel.documents.filter(d=>d.id==='older').length,1,'Recover an old hole outside the former 14-day window');
+const rebuilt=mergeMedia({...panel,documents:[]},fresh);assert.equal(rebuilt.summary.unique_media_news,10,'Rebuild an empty news panel from the full batch');
+const retained=structuredClone(panel);retained.documents.push(row('removed','来源已删记录','2026-08-21'));
+const kept=mergeMedia(retained,fresh);assert(kept.panel.documents.some(d=>d.id==='removed'));assert.deepEqual(kept.summary.source_month_checks.find(c=>c.source_id===MEDIA[0]&&c.month==='2026-08').retained_not_seen_ids,['removed']);
+const nextMonth={...fresh,cutoff:'2026-10-04',scanned_through:'2026-10-04'};
 assert.equal(mergeMedia(panel,nextMonth).panel.sources[0].coverage.at(-1).status,'complete');
+const nextRound=mergeMedia(p,nextMonth);assert.equal(nextRound.panel.sources.find(s=>s.id==='official').coverage[0].covered_through,'2026-09-20','Repeated media updates cannot advance the official source cutoff');
+assert.equal(mergeMedia(panel,nextMonth).summary.month_count,3);assert.equal(periods('month',mergeMedia(panel,nextMonth).panel.window).length,3);
 assert.equal(lastSunday(new Date('2026-09-20T15:59:59Z')),'2026-09-13','Sunday is not finished before Beijing midnight');
 assert.equal(lastSunday(new Date('2026-09-20T16:00:00Z')),'2026-09-20');
-assert.equal(rereadStart({start:'2026-01-01',end:'2026-09-27'},'2026-10-04'),'2026-09-01');
-assert.equal(rereadStart({start:'2026-01-01',end:'2026-12-27'},'2027-01-03'),'2026-12-01');
+const crossYear={...structuredClone(fresh),cutoff:'2027-01-03',scanned_through:'2027-01-03'};
+assert.throws(()=>mergeMedia(panel,crossYear),/2026-10.*no records/,'Do not skip new intermediate months just because the old database lacks a baseline');
+for(const source_id of MEDIA)for(const month of ['2026-10','2026-11','2026-12'])crossYear.documents.push({...row(source_id+month,source_id+month,month+'-01'),source_id});
+recount(crossYear);
+const crossed=mergeMedia(panel,crossYear);
+assert.equal(crossed.summary.reread_start,'2026-08-01','Keep the original research start across years');
+assert.equal(crossed.summary.month_count,6);assert.equal(crossed.panel.sources[0].coverage.length,6);
+assert.equal(periods('month',crossed.panel.window).at(-1).label,'2027-01*');
 
 const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'radar-update-')),rename=fs.renameSync;
 try{
@@ -51,4 +71,4 @@ try{
  assert(recoverTransaction(tmp));assert.equal(fs.readFileSync(path.join(tmp,'a.json'),'utf8'),'old a');
  assert(!fs.existsSync(path.join(tmp,'weekly-runs/last-success.json')));assert(!recoverTransaction(tmp));
 }finally{fs.renameSync=rename;fs.rmSync(tmp,{recursive:true,force:true});}
-console.log('PASS: update dates, all-news denominator, review boundaries, idempotence, coverage, failed-write rollback and crash recovery');
+console.log('PASS: full-history scans, old-hole/empty-panel recovery, monthly coverage, all-news denominator, idempotence, failed-write rollback and crash recovery');

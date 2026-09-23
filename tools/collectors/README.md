@@ -9,14 +9,14 @@ All generated data, downloaded responses, and local caches go under the ignored 
 From the repository root:
 
 ```sh
-python tools/collectors/refresh-media.py --start 2026-09-07 --end 2026-09-23 --cutoff 2026-09-20 --output output/2026-09-23
+python tools/collectors/refresh-media.py --start 2026-01-01 --end 2026-09-20 --cutoff 2026-09-20 --output output/2026-09-23
 ```
 
 This manually requests DOIT, C114, CBINews, and Zhiding public lists again, retains all news topics, and writes per-source audits plus `media-refresh.json`. It never prefilters the news denominator by technology keywords. Dates must satisfy `start <= cutoff <= end`. The output path is relative to the collectors folder and must remain under its `output/` directory.
 
 `cutoff` records the completed-period boundary: documents after that date remain in the file as previews. Downstream analysis must separate them from completed-period figures. The script does not merge results into the app, deduplicate real-world events across publishers, verify full article bodies, or publish/deploy anything. A failed source or an unreached pagination boundary makes the command exit with status 1 after saving available results. Inspect each source's `complete` value; even a completed traversal only covers the currently accessible archive.
 
-The page limits are 30 DOIT pages, 150 Zhiding pages, and 1,000 pages per CBINews section. Large or older windows can exceed these bounds. C114 requests each calendar day in the selected range. Use a short, explicit date window and review coverage rather than assuming a successful run proves the absence of historical deletions.
+The automated updater always requests the entire research window, starting at market-panel.json window.start. DOIT and Zhiding paginate until a whole page is older than that start; repeated pages, unexpected empty pages, request failures and a 55-minute per-source deadline fail explicitly. C114 checks every calendar day. CBINews retains a 1,000-page per-section safety limit and fails if reached. Completed traversal describes the current public archive; it does not prove the absence of deleted history. A shorter diagnostic collection cannot be applied as a full update.
 
 ## Original fixed-window collectors
 
@@ -49,4 +49,4 @@ python tools/collectors/check_cli.py
 python -m compileall -q tools/collectors
 ```
 
-These checks validate arguments, output containment, syntax, title boundaries and failed collection handling without network access. The automated entry point was also live-tested on 2026-09-23 against all four media for September 7–20 (1,925 rows, no new rows versus the supplied snapshot); that is not a guarantee of future endpoint availability.
+These checks validate arguments, output containment, syntax, title boundaries and failed collection handling without network access. Full-history pagination checks also cross the former 30/150-page limits and verify mixed-date boundaries, repeated/empty pages, timeouts and incomplete day coverage. Live batch results are recorded in weekly-runs; they do not guarantee future endpoint availability.

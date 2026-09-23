@@ -1,6 +1,10 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {validateResearchEdit,researchWithEdits,researchKey} from '../lib/research-editing.js';
+for(const month of ['2026-10','2027-01'])assert.equal(validateResearchEdit('monthly_notes',month,{text:'新月份判断'},{month,text:'原判断'}).text,'新月份判断');
+assert.throws(()=>validateResearchEdit('monthly_notes','2027-13',{text:'无效月份'},{month:'2027-13'}),/月份无效/);
+assert.throws(()=>validateResearchEdit('monthly_notes','2027-01',{text:'不能更换已有判断月份'},{month:'2026-09'}),/月份无效/);
+assert.throws(()=>validateResearchEdit('monthly_notes','2027-01',{text:'不能凭空创建判断'}),/不存在/);
 import {ledgerCsv} from '../lib/monthly.js';
 const snapshot=JSON.parse(readFileSync(new URL('../data/research-2026.json',import.meta.url)));
 let count=0;

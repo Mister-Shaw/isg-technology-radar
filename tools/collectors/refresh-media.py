@@ -1,6 +1,6 @@
 """Fresh public archive reread. Keep the completed-week cutoff and later previews separate."""
 from pathlib import Path
-import argparse,concurrent.futures as cf,datetime as dt,html,importlib.util,json,re,urllib.error,urllib.parse,urllib.request,urllib.robotparser
+import argparse,concurrent.futures as cf,datetime as dt,html,importlib.util,json,re,time,urllib.error,urllib.parse,urllib.request,urllib.robotparser
 BASE=Path(__file__).resolve().parent
 OUTPUT=BASE/'output'/'media-refresh'
 START=END=CUTOFF=None
@@ -11,6 +11,7 @@ SOURCES={
     'zhiding':('zhiding_latest','https://www.zhiding.cn/list-35-1-1-0-0.htm'),
     'cbinews':('cbinews_all_news','https://api.cbinews.com/api/cate_list'),
 }
+ARCHIVE_TIMEOUT_SECONDS=55*60
 spec=importlib.util.spec_from_file_location('refresh_title_rules',BASE/'doit/collect_news.py')
 RULES=importlib.util.module_from_spec(spec);spec.loader.exec_module(RULES)
 def iso_date(value):
@@ -88,27 +89,48 @@ def collect(name,fn):
     rows,log=fn()
     log['robots']=robots
     return enrich(rows,source_id),log
+
+def read_pages(fetch_page,id_key,newest_key):
+    rows=[];logs=[];seen=set();started=time.monotonic();page=1
+    while True:
+        try:
+            if time.monotonic()-started>=ARCHIVE_TIMEOUT_SECONDS:
+                raise TimeoutError('Archive traversal time limit reached before start boundary')
+            batch,log=fetch_page(page);logs.append(log)
+            if not batch:raise RuntimeError('Empty archive before verified start boundary')
+            signature=tuple(sorted(str(row[id_key]) for row in batch))
+            if signature in seen:raise RuntimeError('Repeated archive page before start boundary')
+            seen.add(signature)
+            newest=iso_date(log[newest_key])
+            rows.extend(batch)
+            # A mixed-date boundary page still contains requested articles; read the
+            # next page until its newest date is older than the research start.
+            if newest<START:
+                return rows,{'complete':True,'boundary_reached':True,'stop_reason':'before_start','page_log':logs}
+            page+=1
+        except Exception as error:
+            message=f'{type(error).__name__}: {error}'
+            logs.append({'page':page,'complete':False,'error':message})
+            return rows,{'complete':False,'boundary_reached':False,'stop_reason':'error','error':message,'page_log':logs}
+
 def doit():
-    m=module('doit',BASE/'doit/collect_news.py');rows=[];logs=[];boundary=False
-    for p in range(1,31):
-        raw,log=m.get_page(p,True);logs.append(log)
-        for r in raw:
-            day=dt.datetime.fromtimestamp(int(r['publishDate'])/1000,m.TZ).date().isoformat()
-            if START<=day<=END:rows.append({'id':'doit-'+str(r['contentId']),'title':html.unescape(r['title']).strip(),'url':'https://www.doit.com.cn'+r['link'],'date':day,'month':day[:7],'source_id':'doit_all','publisher':'DOIT','date_basis':'publisher_list_publishDate_AsiaShanghai'})
-        if log['last_date'] and log['last_date']<START:boundary=True;break
-    return rows,{'source_id':'doit_all','complete':boundary,'page_log':logs}
+    m=module('doit',BASE/'doit/collect_news.py');rows=[]
+    raw,audit=read_pages(lambda page:m.get_page(page,True),'contentId','first_date')
+    for r in raw:
+        day=dt.datetime.fromtimestamp(int(r['publishDate'])/1000,m.TZ).date().isoformat()
+        if START<=day<=END:rows.append({'id':'doit-'+str(r['contentId']),'title':html.unescape(r['title']).strip(),'url':'https://www.doit.com.cn'+r['link'],'date':day,'month':day[:7],'source_id':'doit_all','publisher':'DOIT','date_basis':'publisher_list_publishDate_AsiaShanghai'})
+    return rows,{'source_id':'doit_all',**audit}
 def c114():
     m=module('c114',BASE/'c114/collect.py');days=[dt.date.fromisoformat(START)+dt.timedelta(days=n) for n in range((dt.date.fromisoformat(END)-dt.date.fromisoformat(START)).days+1)]
     rows=[];logs=[]
     with cf.ThreadPoolExecutor(2) as pool:
         for rr,log in pool.map(m.daily,days):rows.extend(r for r in rr if r['entry_kind']=='article');logs.append(log)
-    return rows,{'source_id':m.SOURCE,'complete':all(l['complete'] for l in logs),'page_log':logs}
+    return rows,{'source_id':m.SOURCE,'complete':len(logs)==len(days) and all(l['complete'] for l in logs),
+        'days_requested':len(days),'days_checked':len(logs),'days_success':sum(l['complete'] for l in logs),'page_log':logs}
 def zhiding():
-    m=module('zhiding',BASE/'zhiding/collect.py');rows=[];logs=[];boundary=False
-    for p in range(1,151):
-        rr,log=m.page(p);logs.append(log);rows.extend(r for r in rr if START<=r['date']<=END and r['entry_kind']=='news_article')
-        if log['first']<START:boundary=True;break
-    return rows,{'source_id':m.SID,'complete':boundary,'page_log':logs}
+    m=module('zhiding',BASE/'zhiding/collect.py')
+    rows,audit=read_pages(m.page,'id','first')
+    return [r for r in rows if START<=r['date']<=END and r['entry_kind']=='news_article'],{'source_id':m.SID,**audit}
 def cbinews():
     m=module('cbinews',BASE/'cbinews/collect.py');m.REFRESH=True;rows={};logs=[]
     with cf.ThreadPoolExecutor(2) as pool:
