@@ -12,7 +12,7 @@ import initialResearch from '@/data/research-2026.json';
 import initialMonitoring from '@/data/weekly-monitor.json';
 import ResearchEditor from './research-editor';
 import {AMOUNTS} from '@/lib/monthly';
-const NAV=[['panel','市场风向',LayoutDashboard],['monthly','月度研究',Files],['collect','来源与采集',Search],['log','日志',BookOpen]];
+const NAV=[['panel','市场风向',LayoutDashboard],['monthly','月度事件',Files],['collect','来源与采集',Search],['log','日志',BookOpen]];
 const money=e=>e.amount_range_cny?`¥${e.amount_range_cny.min.toLocaleString('zh-CN')}—${e.amount_range_cny.max.toLocaleString('zh-CN')}（预计）`:e.value_cny==null?'金额未披露':`¥${Number(e.value_cny).toLocaleString('zh-CN')}`;
 async function api(body){const r=await fetch('/api/radar',body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{cache:'no-store'});const d=await r.json();if(!r.ok)throw Error(d.error||'暂时无法连接，请稍后再试');return d;}
 function download(name,content,type){const u=URL.createObjectURL(new Blob([content],{type})),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
