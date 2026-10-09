@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
-import {chartData,tooltipPayload} from '../lib/trend-bars.js';
+import {chartData,tooltipPayload,zeroValueRows} from '../lib/trend-bars.js';
 
 const {computeBarRectangles}=createRequire(import.meta.url)('recharts/lib/cartesian/Bar.js');
 
@@ -39,4 +39,13 @@ test('amount bars retain month slots across missing values without reporting mis
    source.map(({amount,reported_amount})=>({amount,reported_amount})));
  }
  assert.deepEqual(tooltipPayload(),[]);
+});
+
+test('zero feedback distinguishes measured zero from missing and recognizes all-zero datasets',()=>{
+ const bars=[{dataKey:'value'},{dataKey:'observed_value'}];
+ const data=[{id:'zero',value:0,observed_value:null},{id:'sample-zero',value:null,observed_value:0},{id:'missing',value:null,observed_value:null},{id:'undefined'},{id:'positive',value:5,observed_value:null}];
+ assert.deepEqual(zeroValueRows(data,bars).map(row=>row.id),['zero','sample-zero']);
+ assert.equal(zeroValueRows([{value:0},{value:0}],bars).length,2);
+ assert.equal(zeroValueRows([{value:null},{value:null}],bars).length,0);
+ assert.equal(chartData(data,bars)[0]._barValues.value,0);
 });

@@ -5,9 +5,9 @@ import {summary,researchReview,exportCsv} from '../lib/model.js';
 import {inObservationPeriod,inResearchPeriod,amountRows,reportedAmountRows,monthlySeries,categoryMonthRows,monthOf} from '../lib/monthly.js';
 import {researchWithEdits} from '../lib/research-editing.js';
 const read=name=>JSON.parse(readFileSync(new URL('../data/'+name,import.meta.url)));
-const full=read('research-2026.json'),added=new Set([...(full.expansion?.record_ids||[]),...(full.source_remediation?.record_ids||[]),...(full.rolling_update?.record_ids||[])]);
+const full=read('research-2026.json'),added=new Set([...(full.expansion?.record_ids||[]),...(full.source_remediation?.record_ids||[]),...(full.rolling_update?.record_ids||[]),...(full.manual_refresh?.record_ids||[]),...(full.october_refresh?.record_ids||[]),...[...full.events,...full.leads].filter(e=>e.collection_batch==='three-boards-20261008').map(e=>e.id)]);
 // Keep the original migration regression stable as research batches grow.
-const research={...full,events:full.events.filter(e=>!added.has(e.id)),leads:full.leads.filter(e=>!added.has(e.id))},legacy=read('seed.json').map(e=>({...e,revision:1}));
+const research={...full,period_end:'2026-09-20',as_of:'2026-09-20',events:full.events.filter(e=>!added.has(e.id)),leads:full.leads.filter(e=>!added.has(e.id))},legacy=read('seed.json').map(e=>({...e,revision:1}));
 const expanded=unifyRecords(full,legacy);for(const id of added)assert.equal(expanded.records.filter(e=>e.id===id).length,1,'New research survives the shared-workspace projection');
 const unified=unifyRecords(research,legacy),s=summary(unified.records);
 assert.deepEqual(unified.sync,{total:167,included:166,included_events:152,included_projects:63,verified:127,events:113,pending:37,quarantine:2,history:1,projects:53,merged:18,supplemental:3,as_of:'2026-09-20'});

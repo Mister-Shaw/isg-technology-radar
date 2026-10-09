@@ -1,0 +1,97 @@
+/* Compact working surface. Data definitions and interactions are unchanged. */
+:root{--canvas:#f4f6fa;--line:#e2e7ef;--muted:#66758b;--ink:#1d2c42}
+body{font-size:14px;line-height:1.6}
+.sidebar{width:184px;padding:24px 12px;background:#fbfcfe}
+.brand{gap:8px;padding:0 7px}.brand-symbol{width:56px;height:56px}.brand strong{font-size:23px;letter-spacing:2px}.brand span:not(.brand-symbol){font-size:10px;letter-spacing:1px;margin-top:4px}
+.nav-caption{margin:28px 12px 10px;font-size:11px}.sidebar nav{gap:5px}.sidebar nav button{padding:10px 11px;min-height:42px;gap:9px;font-size:13px;border-radius:7px}.sidebar nav button.active{background:#eaf0fc;box-shadow:inset 2px 0 var(--blue)}
+main{margin-left:184px;width:calc(100% - 184px)}
+.content{max-width:1760px;padding:24px 26px 18px}
+.page-heading{align-items:center;gap:12px;margin-bottom:16px}.page-heading h1{font-size:25px;letter-spacing:-.5px}.page-heading .actions{gap:7px}.button{min-height:36px;padding:7px 11px;font-size:13px;border-radius:7px}
+.card{padding:17px 18px;border-radius:10px;box-shadow:0 1px 2px #1c345005}
+.market-panel,.monthly-research,.report-monitor,.research-log,.source-center{display:grid;gap:14px;min-width:0;font-size:14px}
+.market-panel .card,.report-monitor .card{padding:17px 18px}
+.section-heading{gap:10px;margin-bottom:14px;align-items:center}.section-heading h2,.market-panel h2,.report-monitor h2{font-size:16px;line-height:1.5;letter-spacing:0}
+.section-heading p,.market-panel .section-heading p,.report-monitor .section-heading p{font-size:12px;line-height:1.6;margin-top:3px}
+.keyword-board-tabs,.report-business-tabs{display:grid;gap:4px;padding:4px;border:1px solid #dfe5ee;border-radius:9px;background:#eaf0f6;margin:0}
+.keyword-board-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}.report-business-tabs{grid-template-columns:repeat(4,minmax(0,1fr))}
+.keyword-board-tabs button,.report-business-tabs button{display:flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border:1px solid transparent;border-radius:6px;background:transparent;text-align:center;box-shadow:none;gap:0}
+.keyword-board-tabs b,.report-business-tabs b{font-size:14px;line-height:1.5;align-self:auto;font-weight:550}
+.keyword-board-tabs button.selected,.report-business-tabs button.selected{background:white;border-color:#dce4f1;box-shadow:0 1px 4px #20365510;color:#3553c8}
+.source-filters,.panel-controls .source-filters,.report-monitor .source-filters{display:grid;gap:12px;align-items:end;grid-template-columns:repeat(3,minmax(0,1fr))}
+.monthly-controls .source-filters{grid-template-columns:repeat(4,minmax(0,1fr))}.monthly-controls .source-filters .wide{grid-column:span 2}
+.report-monitor .source-filters{grid-template-columns:repeat(4,minmax(0,1fr))}.source-controls .source-filters{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,2fr)}
+.source-filters label,.report-monitor .source-filters label,.monthly-research .source-filters label{min-width:0;max-width:100%;gap:5px;font-size:12px}
+.source-filters input,.source-filters select,.report-monitor .source-filters select,.monthly-research .source-filters input,.monthly-research .source-filters select,.market-panel .section-heading select,.trend-options select{min-height:38px;padding:7px 10px;font-size:13px;border-radius:6px;line-height:1.5}
+.source-filters .wide{grid-column:1 / -1}.source-controls .source-filters .wide{grid-column:auto}
+.source-actions,.panel-actions{gap:8px 14px;margin-top:12px}.panel-actions,.report-monitor .panel-actions>span{font-size:12px}.source-actions{display:flex;flex-wrap:wrap;align-items:center}
+.stats{gap:12px;margin:0}.monthly-research .stats{grid-template-columns:minmax(0,1fr) minmax(0,1.8fr) repeat(2,minmax(0,1fr))}
+.stat{padding:14px 16px}.monthly-research .stat>span{font-size:12px;color:var(--muted)}.monthly-research .stat-value{font-size:27px;line-height:1.35;letter-spacing:-.6px;margin:8px 0 5px;font-variant-numeric:tabular-nums}.monthly-research .stat:nth-child(2) .stat-value{font-size:22px;letter-spacing:-.4px}.stat-value span{display:inline-block;font-size:11px;margin-left:5px}.monthly-research .stat p{font-size:11px;line-height:1.55}
+.monthly-research .notice{padding:9px 12px;font-size:12px;border-radius:7px;line-height:1.6;background:#eef3fa}
+.trend-options{gap:10px 16px;margin:10px 0}.trend-options label{gap:5px;flex-basis:15rem}.trend-options>span{flex-basis:auto;margin-left:auto}.keyword-collapse-actions .button{min-height:34px;font-size:12px;padding:6px 10px}
+.matrix-scroll{max-height:540px;position:relative;scrollbar-width:thin;scrollbar-color:#c4cedd transparent;border:1px solid var(--line);border-radius:7px;isolation:isolate;scroll-padding-top:45px;scroll-padding-left:220px}
+.matrix-scroll:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.matrix-scroll table{margin:0}.matrix-scroll thead th{position:sticky;top:0;z-index:3;background:#f3f6fa;box-shadow:0 1px 0 var(--line)}
+.matrix-scroll th:first-child{position:sticky;left:0;z-index:2;background:#fff;box-shadow:1px 0 0 #e6ebf2}
+.matrix-scroll thead th:first-child{z-index:4;background:#f3f6fa}
+.matrix-scroll .keyword-category-row>th{background:#f0f4f9}.matrix-scroll .selected-row>th{background:#edf2fd}
+.panel-matrix{border-spacing:3px}.panel-matrix thead th,.trend-matrix thead th{height:38px;font-size:12px;padding:6px!important}.panel-matrix tbody th,.trend-matrix tbody th{padding:4px 8px!important}
+.panel-matrix td button{min-height:48px;gap:2px;padding:5px 2px;border-radius:4px}.panel-matrix strong{font-size:13px}.panel-matrix small{font-size:10px}.trend-matrix td{padding:4px 3px}.trend-matrix td button{min-height:36px;font-size:12px;padding:4px 2px}
+.panel-matrix .keyword-row-label,.trend-matrix .keyword-row-label{min-height:36px;column-gap:6px}.panel-matrix .keyword-row-label>button:last-child,.trend-matrix .keyword-row-label>button:last-child{min-height:36px;font-size:13px;line-height:1.5;padding:2px 0}
+.panel-matrix .keyword-detail-row .keyword-row-label>button,.trend-matrix .keyword-detail-row .keyword-row-label>button{font-size:12px}.panel-matrix th .keyword-collapse-toggle,.trend-matrix th .keyword-collapse-toggle{height:30px;min-height:30px;font-size:16px;border-color:#d4deec;background:#fff}
+.panel-note,.report-monitor .panel-note,.footnote,.monthly-research .footnote{font-size:12px;line-height:1.65;margin-top:10px}.footnote{padding-top:9px}.panel-reading,.report-monitor .panel-reading{font-size:14px;line-height:1.7;padding:12px 14px;margin-top:12px;background:#f0f4fa}
+.panel-sizes{gap:5px 14px;margin-top:10px;font-size:11px}.panel-scale{gap:8px}
+.trend-chart{height:270px}.report-monitor-chart{height:300px;margin-top:10px}.monthly-charts{gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.report-monitor-toolbar{gap:10px}.report-monitor-toolbar>span{font-size:12px}.report-monitor-toolbar .pills,.research-log>.pills{gap:4px;margin:0}.report-monitor-toolbar .pills button,.research-log>.pills button{font-size:13px;min-height:34px;padding:6px 11px}
+.report-monitor th,.report-monitor td{font-size:13px;padding:9px 10px;line-height:1.65}.report-monitor small{font-size:11px;line-height:1.6}.report-monitor-matrix th .text-button{font-size:13px;line-height:1.6}.report-monitor-matrix td button{min-height:30px}
+.monthly-research .monthly-readings-table th,.monthly-research .monthly-readings-table td,.source-volume-table th,.source-volume-table td{font-size:12px;padding:9px 8px;line-height:1.6}
+.keyword-guide summary,.sample-sources>summary,.log-section>summary{font-size:14px;font-weight:600;cursor:pointer}.keyword-guide table,.sample-sources>p{margin-top:12px}.keyword-guide{padding:13px 18px}.panel-record,.research-record{padding:12px 0}.panel-record summary,.research-record summary,.research-record summary b{font-size:13px;line-height:1.7}.panel-record small,.research-record summary small{font-size:11px;margin-top:3px}.record-money{font-size:14px}.record-body{font-size:13px}
+.source-layout{grid-template-columns:minmax(240px,.7fr) minmax(0,1.6fr);gap:14px;margin:0}.source-directory{max-height:640px;overflow:auto}.source-choice{padding:11px 8px}.source-choice strong{font-size:13px}.source-intro{margin:0}.collection-grid{gap:14px;margin:0}.source-center .keyword-guide{margin:0}.source-center .source-filters{margin:0}
+.log-body p,.research-log>.card>p{font-size:13px;line-height:1.75;margin:8px 0}.log-section>.log-body{margin-top:12px}.panel-method{gap:14px}.panel-method p,.panel-method li{font-size:13px;line-height:1.75}
+footer{margin-top:20px;padding-top:12px;font-size:11px;line-height:1.6}
+@media(min-width:1600px){.content{padding-inline:30px}.matrix-scroll{max-height:600px}}
+@media(max-width:1200px){.content{padding:20px}.monthly-research .stats{grid-template-columns:repeat(2,minmax(0,1fr))}.monthly-controls .source-filters,.report-monitor .source-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.monthly-controls .source-filters .wide{grid-column:1 / -1}.monthly-charts{grid-template-columns:1fr}.source-layout{grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr)}}
+@media(max-width:900px){.source-controls .source-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.source-controls .source-filters .wide{grid-column:1 / -1}.source-layout{grid-template-columns:1fr}.source-directory{max-height:320px}.collection-grid{grid-template-columns:1fr}}
+@media(max-width:700px){
+ .shell{display:block}.sidebar{position:static;width:100%;padding:12px 14px 10px;border-bottom:1px solid var(--line);border-right:0}.brand-symbol{width:44px;height:44px}.brand strong{font-size:20px}.brand span:not(.brand-symbol){font-size:10px}.sidebar nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;margin-top:10px}.sidebar nav button{flex-direction:column;justify-content:flex-start;min-height:56px;padding:7px 2px;font-size:11px;gap:4px}.sidebar nav button.active{box-shadow:inset 0 -2px var(--blue)}.sidebar nav button svg{width:16px;height:16px}.nav-caption{display:none}
+ main{margin-left:0;width:100%}.content{padding:16px 12px}.page-heading{gap:10px;margin-bottom:12px}.page-heading h1{font-size:23px}.page-heading .actions{gap:6px;flex-basis:100%;justify-content:flex-start}.button{min-height:40px}
+ .card,.market-panel .card,.report-monitor .card{padding:14px}.keyword-guide{padding:12px 14px}.market-panel,.monthly-research,.report-monitor,.research-log,.source-center{gap:12px}.section-heading{display:flex!important;gap:8px;margin-bottom:12px}
+ .keyword-board-tabs button,.report-business-tabs button{min-height:44px;padding:7px 5px}.keyword-board-tabs b,.report-business-tabs b{font-size:13px}.report-business-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .source-filters,.panel-controls .source-filters,.monthly-controls .source-filters,.report-monitor .source-filters,.source-controls .source-filters{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.source-filters label,.report-monitor .source-filters label{min-width:0}.source-filters input,.source-filters select,.report-monitor .source-filters select,.monthly-research .source-filters input,.monthly-research .source-filters select,.market-panel .section-heading select,.trend-options select{min-height:44px;font-size:14px}.market-panel .section-heading label{width:100%;margin-top:0}
+ .monthly-research .stats{gap:8px}.stat{padding:12px}.monthly-research .stat-value{font-size:24px}.monthly-research .stat:nth-child(2) .stat-value{font-size:18px;line-height:1.5}.monthly-research .stat p{font-size:11px}
+ .matrix-scroll{max-height:480px}.panel-matrix td button{min-height:48px}.trend-matrix td button{min-height:44px}.panel-matrix th .keyword-collapse-toggle,.trend-matrix th .keyword-collapse-toggle{min-height:40px;height:40px}.keyword-collapse-actions .button{min-height:40px}.trend-options label{flex:1 1 100%}.trend-options>span{margin-left:0;flex-basis:100%}
+ .trend-chart{height:260px}.report-monitor-chart{height:280px}.panel-reading,.report-monitor .panel-reading{font-size:13px}.source-directory{max-height:300px}.report-monitor-toolbar{align-items:flex-start}
+}
+@media(max-width:400px){.source-filters,.panel-controls .source-filters,.monthly-controls .source-filters,.report-monitor .source-filters,.source-controls .source-filters{grid-template-columns:1fr}.monthly-controls .source-filters .wide,.source-controls .source-filters .wide{grid-column:auto}.keyword-board-tabs b{font-size:12px}.monthly-research .stats{grid-template-columns:1fr 1fr}.monthly-research .stat:nth-child(2){grid-column:1 / -1;grid-row:2}.monthly-research .stat:nth-child(4){grid-column:1 / -1}.page-heading .button{font-size:12px;padding-inline:9px}}
+
+.monthly-research .stat-value .amount-number{display:inline-block;font:inherit;margin:0;white-space:nowrap;color:inherit;letter-spacing:inherit}
+@media(pointer:coarse){.keyword-collapse-actions .button,.panel-matrix th .keyword-collapse-toggle,.trend-matrix th .keyword-collapse-toggle,.report-monitor-matrix td button,.panel-matrix .keyword-row-label>button:last-child,.trend-matrix .keyword-row-label>button:last-child{min-height:44px}}
+.report-monitor .matrix-scroll{scroll-padding-left:260px}
+@media(max-width:700px){
+ .matrix-scroll,.report-monitor .matrix-scroll{scroll-padding-left:164px}
+ .panel-matrix th:first-child,.trend-matrix th:first-child{width:160px}
+ .report-monitor-matrix th:first-child{width:160px;min-width:160px;max-width:160px}
+}
+.source-center>.sample-sources,.source-center>.source-controls,.source-center>.queue,.source-center>.import-preview{margin:0}
+@media(max-width:700px),(pointer:coarse){
+ .report-monitor-toolbar .pills button,.research-log>.pills button,.report-monitor-matrix td button{min-height:44px}
+ .panel-matrix .keyword-row-label,.trend-matrix .keyword-row-label{grid-template-columns:44px minmax(0,1fr)}
+ .panel-matrix th .keyword-collapse-toggle,.trend-matrix th .keyword-collapse-toggle{width:44px;min-width:44px;min-height:44px;height:44px}
+}
+/* A single glass selection surface moves between segments. */
+.glass-segmented.keyword-board-tabs,.glass-segmented.report-business-tabs{position:relative;isolation:isolate;gap:4px;padding:4px;border-radius:9px;border:1px solid rgba(185,198,218,.48);background:rgba(226,233,243,.58);box-shadow:none;overflow:visible}
+.glass-segmented .segment-indicator{position:absolute;left:0;top:0;z-index:0;pointer-events:none;border-radius:6px;border:1px solid rgba(255,255,255,.48);background:linear-gradient(150deg,rgba(255,255,255,.72),rgba(255,255,255,.49));box-shadow:0 1px 2px rgba(33,55,94,.035);backdrop-filter:blur(10px) saturate(112%);-webkit-backdrop-filter:blur(10px) saturate(112%);transform-origin:center;will-change:transform}
+.glass-segmented[data-ready=true] .segment-indicator{transition:transform 300ms cubic-bezier(.2,1.16,.32,1),width 260ms cubic-bezier(.22,1,.36,1),height 260ms cubic-bezier(.22,1,.36,1),scale 170ms ease,box-shadow 170ms ease}
+.glass-segmented[data-pressing=true] .segment-indicator{scale:1.003 1.008;box-shadow:0 1px 3px rgba(33,55,94,.05)}
+.glass-segmented.keyword-board-tabs button,.glass-segmented.report-business-tabs button,.glass-segmented.keyword-board-tabs button.selected,.glass-segmented.report-business-tabs button.selected{position:relative;z-index:1;min-height:42px;border:1px solid transparent;border-radius:6px;background:transparent;box-shadow:none;color:#53627a;transition:color 180ms ease;touch-action:manipulation}
+.glass-segmented.keyword-board-tabs button.selected,.glass-segmented.report-business-tabs button.selected{color:#294fa4}
+.glass-segmented button b{font-weight:550;position:relative;line-height:1.5}
+.glass-segmented[data-ready=false] button.selected{background:rgba(255,255,255,.82)}
+.glass-segmented button:focus-visible{outline:2px solid #496ddd;outline-offset:-3px}
+@media(max-width:700px){.glass-segmented.keyword-board-tabs button,.glass-segmented.report-business-tabs button{min-height:44px}.glass-segmented.report-business-tabs{border-radius:9px}.glass-segmented.report-business-tabs .segment-indicator,.glass-segmented.report-business-tabs button{border-radius:6px}}
+@media(prefers-reduced-motion:reduce){.glass-segmented[data-ready=true] .segment-indicator,.glass-segmented button{transition:none!important}.glass-segmented[data-pressing=true] .segment-indicator{scale:1}}
+@media(prefers-reduced-transparency:reduce){.glass-segmented .segment-indicator{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media(forced-colors:active){.glass-segmented .segment-indicator{background:Canvas;border:2px solid Highlight;box-shadow:none;backdrop-filter:none}.glass-segmented button[aria-checked=true]{color:Highlight}}
+
+@keyframes zero-readout-in{from{opacity:0}to{opacity:1}}
+.chart-zero-marker,.chart-zero-value-label{animation:zero-readout-in 420ms ease-out both}
+@media(prefers-reduced-motion:reduce){.chart-zero-marker,.chart-zero-value-label{animation:none}}

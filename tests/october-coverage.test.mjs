@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {panelCell,panelCsv} from '../lib/panel.js';
+const source={id:'a',application_reviewed:false,coverage:[{month:'2026-10',status:'incomplete',application_reviewed:true,application_reviewed_topics:['aidc']}]};
+const data={window:{start:'2026-01-01',end:'2026-10-07'},sources:[source],documents:[{id:'one',source_id:'a',date:'2026-10-02',month:'2026-10',categories:['aidc'],context_class:'application'},{id:'two',source_id:'a',date:'2026-10-03',month:'2026-10',categories:[],context_class:'other'}]};
+const period={id:'2026-10',months:['2026-10'],partial:true};
+let p=panelCell(data,source,'aidc','application',period);assert.equal(p.value,null);assert.equal(p.sample_value,500);assert.equal(p.N,2);assert.equal(p.complete,false);
+source.coverage[0].status='complete';p=panelCell(data,source,'aidc','application',period);assert.equal(p.value,500);assert.equal(p.partial,true,'An unfinished calendar month is not a missing sample');
+assert.equal(panelCell(data,source,'xpu','application',period).sample_value,null,'Unreviewed topics remain gated');
+assert.equal(panelCell(data,source,'aidc','application',{id:'2026-09',months:['2026-09']}).value,null);
+const aggregate={id:'all',document_source_ids:['a'],coverage:source.coverage,application_reviewed:false};data.sources.push(aggregate);assert.equal(panelCell(data,aggregate,'aidc','application',period).value,500);
+assert(panelCsv([{name:'AIDC',points:[p]}]).includes('已采样本比例'));
+console.log('PASS: October coverage gap versus unfinished month, source/month/topic review, aggregate review and export');

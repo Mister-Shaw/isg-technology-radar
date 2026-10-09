@@ -58,3 +58,6 @@ next-env.d.ts
 *.zip
 *.tar.gz
 __pycache__/
+
+# Losslessly materialized from compressed repository snapshot
+/public/market-panel.json

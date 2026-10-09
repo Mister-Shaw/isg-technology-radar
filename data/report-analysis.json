@@ -1,0 +1,2368 @@
+{
+  "schema_version": "1.0.0",
+  "title": "研报分析",
+  "subtitle": "研报数据的趋势、对比与结构变化",
+  "as_of": "2026-10-07",
+  "scope": "中国大陆服务器与算力基础设施；全球材料仅作明确标注的技术或市场对照",
+  "snapshot_notice": "截至2026-10-07已审阅资料的分析快照；并非全市场普查或实时自动更新。",
+  "default_view": "charts",
+  "secondary_views": [
+    {
+      "id": "data",
+      "label": "数据明细"
+    },
+    {
+      "id": "conflicts",
+      "label": "口径核验"
+    },
+    {
+      "id": "sources",
+      "label": "来源索引"
+    }
+  ],
+  "summary": {
+    "headline": "技术变化的共同主线，是从单机峰值走向可交付、可运营的系统能力。",
+    "takeaways": [
+      {
+        "label": "已出现的变化",
+        "text": "推理分工、同厂异代调度与高密度整柜已有国内工程证据；CPU、缓存、网络和散热需一起设计。",
+        "insight_ids": [
+          "RA02",
+          "RA03",
+          "RA04",
+          "RA05",
+          "RA06"
+        ]
+      },
+      {
+        "label": "仍需验证",
+        "text": "更大超节点、800V供电与新两相方案要补客户交付和长期运行证据；厂商路线图不能代替市场采用。",
+        "insight_ids": [
+          "RA04",
+          "RA07"
+        ]
+      },
+      {
+        "label": "经营判断",
+        "text": "收入高增、框架签约与现场效率各证明不同环节；新增订单、验收、利润和回款要接成证据链。",
+        "insight_ids": [
+          "RA01",
+          "RA08"
+        ]
+      }
+    ]
+  },
+  "methodology": {
+    "evidence_labels": [
+      {
+        "id": "facts",
+        "label": "事实",
+        "definition": "来源实际写明的数据、案例或声明；保留报告期、地域和成熟度。"
+      },
+      {
+        "id": "inference",
+        "label": "判断",
+        "definition": "本页跨来源推论，不等同报告原话。"
+      },
+      {
+        "id": "action",
+        "label": "下一步证据",
+        "definition": "限定项目/口径的验证指标；不是已安排的监控或已执行动作。"
+      }
+    ],
+    "maturity_order": [
+      "计划/路线图",
+      "产品/样机",
+      "客户验证/案例",
+      "实际交付/运营",
+      "规模采用/持续付费"
+    ],
+    "maturity_note": "此顺序仅表达验证阶段，不保证每项技术都会晋级；统计实绩、用户调查和实验结果另行标注。",
+    "rules": [
+      "PRC市场、国内项目、中国厂商全球业务分别标注；全球数据不进入大陆份额分子。",
+      "机构统计、公司实绩、预测、产品能力和路线图不拼作同一实绩曲线。",
+      "市场收入、项目总投资、资本开支、框架上限、具体订单与回款分开；禁止相加为TAM。",
+      "台、柜、卡、逻辑互连域、MW/排及W/cm²不能互换。",
+      "同案例被报告转述不增加独立样本数；联合出版与原厂声明保留来源属性。",
+      "PDF页码为文件物理页，从1起；另列印刷页码。未取得原文全文或独立性能复核时明确限制。"
+    ],
+    "review_note": "采用已复核的关键结论与口径修正；复核范围是选定高影响主张，不代表逐页审计全部报告。",
+    "excluded": [
+      "存在算术缺陷的CPU TAM不进入量化结论。",
+      "未独立复验且缺完整条件的韶关精确吞吐值不进入标题或横向排名。",
+      "未披露完整基线的“超20倍”等性能宣称不进入跨产品指标比较。"
+    ]
+  },
+  "insights": [
+    {
+      "id": "RA01",
+      "topic": "需求与价值量",
+      "tags": [
+        "市场规模",
+        "算力投资"
+      ],
+      "headline": "销售额增长更快，新增需求要拆成数量、配置和价格",
+      "what_changed": "2026Q2中国服务器收入同比增速高于Q1；运营商总投资下降时，算力专项仍在上升。",
+      "facts": [
+        {
+          "text": "IDC披露PRC服务器收入：2026Q1为192亿美元、同比+30.9%；Q2为264亿美元、同比+43.4%。",
+          "source_refs": [
+            {
+              "source_id": "IDC115711",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "Server Regional Market Results",
+              "url": "https://www.idc.com/resource-center/press-releases/1q26-server-tracker/"
+            },
+            {
+              "source_id": "IDC120193",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "Server Regional Market Results",
+              "url": "https://www.idc.com/resource-center/press-releases/2q2026-wwserver-tracker/"
+            }
+          ],
+          "maturity": "机构统计实绩",
+          "geography": "中国（PRC）",
+          "period": "2026Q1—Q2"
+        },
+        {
+          "text": "同期全球GPU服务器收入+28.1%、出货台数−10.8%、ASP+43.6%。",
+          "source_refs": [
+            {
+              "source_id": "IDC120193",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "GPU server / pricing and volume paragraphs",
+              "url": "https://www.idc.com/resource-center/press-releases/2q2026-wwserver-tracker/"
+            }
+          ],
+          "maturity": "机构统计实绩",
+          "geography": "全球，仅作结构对照",
+          "period": "2026Q2"
+        },
+        {
+          "text": "中国电信总资本开支342→324亿元；算力网支出154亿元、同比+97%。",
+          "source_refs": [
+            {
+              "source_id": "china_telecom_2026_interim_presentation",
+              "pdf_pages": [
+                13
+              ],
+              "printed_pages": null,
+              "section": null,
+              "url": "https://www.chinatelecom-h.com/tc/ir/presentations/intpre260820.pdf#page=13"
+            }
+          ],
+          "maturity": "公司实际披露",
+          "geography": "集团口径，未拆分境内外",
+          "period": "2025H1→2026H1"
+        }
+      ],
+      "inference": "需求方向向算力倾斜，但收入增长不能直接换算成机器台数或国产芯片数量；高配产品组合与价格变化需要单列。",
+      "business_implication": "产品与销售规划同时看交付数量、每柜配置和BOM；优先核实客户算力专项、机房电力与实际订单。",
+      "evidence_maturity": {
+        "label": "市场实绩＋需求方支出",
+        "confidence": "中高：收入和capex已披露，缺PRC台数/ASP拆分"
+      },
+      "cross_report": {
+        "relationship": "方向一致，证据层级不同",
+        "conclusion": "IDC反映市场金额增长，中国电信反映投资结构转移；两者支持需求方向，但不是可相加的市场量。",
+        "source_refs": [
+          {
+            "source_id": "IDC120193",
+            "pdf_pages": [],
+            "printed_pages": null,
+            "section": "Regional results",
+            "url": "https://www.idc.com/resource-center/press-releases/2q2026-wwserver-tracker/"
+          },
+          {
+            "source_id": "china_telecom_2026_interim_presentation",
+            "pdf_pages": [
+              13
+            ],
+            "printed_pages": null,
+            "section": null,
+            "url": "https://www.chinatelecom-h.com/tc/ir/presentations/intpre260820.pdf#page=13"
+          }
+        ]
+      },
+      "limitations": [
+        "全球台数/ASP不能外推中国；ASP同时受配置变化影响。",
+        "算力网capex包含AIDC、网络与算力供给，不能全算服务器采购。"
+      ],
+      "action": [
+        {
+          "indicator": "中国市场台数、ASP与配置拆分",
+          "scope": "下一期同口径PRC服务器Tracker",
+          "next_evidence": "收入、出货、加速类型和价格同步披露",
+          "decision_trigger": "取得中国台数后，才判断量增与价增各自贡献"
+        },
+        {
+          "indicator": "算力专项到具体订单的转化",
+          "scope": "同一运营商、同一项目、同一报告期",
+          "next_evidence": "订单、交付验收和服务器设备额",
+          "decision_trigger": "设备订单与交付明确后，再计入可执行需求"
+        }
+      ],
+      "metric_group_ids": [
+        "MG01",
+        "MG02",
+        "MG03"
+      ],
+      "conflict_ids": [
+        "CF01"
+      ],
+      "source_ids": [
+        "IDC115711",
+        "IDC120193",
+        "china_telecom_2026_interim_presentation"
+      ],
+      "content_revision": 1,
+      "last_reviewed": "2026-10-07"
+    },
+    {
+      "id": "RA02",
+      "topic": "推理与Agent",
+      "tags": [
+        "Token工厂",
+        "CPU",
+        "推理SLA"
+      ],
+      "headline": "推理与Agent把竞争焦点推向端到端服务质量",
+      "what_changed": "2025年已讨论PD分离；2026年报告进一步细分推理阶段，并明确CPU承担编排、数据和状态管理。",
+      "facts": [
+        {
+          "text": "2026计算力报告讨论PD/AF分工与CPU/GPU协作；浪潮信息半年报分别介绍Agent主机与Token引擎。",
+          "source_refs": [
+            {
+              "source_id": "T-S02",
+              "pdf_pages": [
+                13
+              ],
+              "printed_pages": "11",
+              "section": null,
+              "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf#page=13"
+            },
+            {
+              "source_id": "T-S09",
+              "pdf_pages": [
+                9,
+                10
+              ],
+              "printed_pages": "9—10",
+              "section": null,
+              "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225530925.PDF#page=9"
+            }
+          ],
+          "maturity": "架构分析＋产品披露",
+          "geography": "中国研究与厂商方案",
+          "period": "2026"
+        },
+        {
+          "text": "信通院记录韶关384卡系统上线后的算子、PD、KV和通信联合优化。",
+          "source_refs": [
+            {
+              "source_id": "T-S04",
+              "pdf_pages": [
+                18
+              ],
+              "printed_pages": "13",
+              "section": null,
+              "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202511/P020251106555844142999.pdf#page=18"
+            }
+          ],
+          "maturity": "部署案例，非独立横向测试",
+          "geography": "中国大陆，广东韶关",
+          "period": "2025报告案例"
+        },
+        {
+          "text": "阿里2026年6月季资本开支676.78亿元、同比+75%；公司列出的原因包括为预期Agent采用扩充CPU、采购周期和部件涨价。",
+          "source_refs": [
+            {
+              "source_id": "ALI2026Q2",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "Capital Expenditures；文内第4页",
+              "url": "https://www.sec.gov/Archives/edgar/data/1577552/000110465926099220/tm2623667d1_ex99-1.htm"
+            }
+          ],
+          "maturity": "实际资本开支＋需求预期",
+          "geography": "公司集团口径",
+          "period": "截至2026-06-30的季度"
+        }
+      ],
+      "inference": "服务器方案需要共同优化GPU、CPU、内存和IO；CPU增量取决于Agent真实忙时，不能按固定CPU:GPU比例外推。",
+      "business_implication": "验收增加指定模型、精度、上下文和并发下的TTFT、TPOT、尾时延及每百万有效输出Token成本。",
+      "evidence_maturity": {
+        "label": "国内案例＋产品方案；增量规模待验证",
+        "confidence": "方向中高；全国采购规模未量化"
+      },
+      "cross_report": {
+        "relationship": "方向一致，证据层级不同",
+        "conclusion": "机构架构、国内案例和需求方投资共同支持系统协同；Agent收入与CPU分项采购仍未单列。",
+        "source_refs": [
+          {
+            "source_id": "T-S02",
+            "pdf_pages": [
+              13
+            ],
+            "printed_pages": "11",
+            "section": null,
+            "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf#page=13"
+          },
+          {
+            "source_id": "T-S04",
+            "pdf_pages": [
+              18
+            ],
+            "printed_pages": "13",
+            "section": null,
+            "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202511/P020251106555844142999.pdf#page=18"
+          },
+          {
+            "source_id": "ALI2026Q2",
+            "pdf_pages": [],
+            "printed_pages": null,
+            "section": "Capital Expenditures",
+            "url": "https://www.sec.gov/Archives/edgar/data/1577552/000110465926099220/tm2623667d1_ex99-1.htm"
+          }
+        ]
+      },
+      "limitations": [
+        "资本开支已发生不等于Agent付费需求已兑现；外部API等待不等于CPU持续满载。",
+        "不采用含算术缺陷的券商CPU TAM；不把旧版训推预测写成当期实绩。"
+      ],
+      "action": [
+        {
+          "indicator": "单位有效Token成本与SLA",
+          "scope": "同模型、精度、上下文长度、并发及功耗边界",
+          "next_evidence": "TTFT/TPOT、P95/P99、CPU忙时、缓存命中和付费调用",
+          "decision_trigger": "在同SLA下降本且客户持续付费，才上调商业成熟度"
+        },
+        {
+          "indicator": "Agent的CPU实际增购",
+          "scope": "国内已上线项目；GPU柜内外分别核算",
+          "next_evidence": "每任务核秒、内存占用、活跃并发与对应采购订单",
+          "decision_trigger": "工作负载与新增订单能相互对应后，才量化CPU机会"
+        }
+      ],
+      "metric_group_ids": [
+        "MG06"
+      ],
+      "conflict_ids": [
+        "CF02",
+        "CF03"
+      ],
+      "source_ids": [
+        "T-S02",
+        "T-S09",
+        "T-S04",
+        "ALI2026Q2"
+      ],
+      "content_revision": 1,
+      "last_reviewed": "2026-10-07"
+    },
+    {
+      "id": "RA03",
+      "topic": "国产异构与迁移",
+      "tags": [
+        "国产GPU",
+        "异构调度",
+        "软件生态"
+      ],
+      "headline": "国产异构先兑现为分级调度，迁移成本比入围更关键",
+      "what_changed": "同厂不同代际GPU纳入资源池，并按模型规模分派，已进入国内运营商工程实践。",
+      "facts": [
+        {
+          "text": "信通院记录山东移动304张天垓150与720张天垓100统一纳管；2026客户与中兴联署文章说明不同模型规模选用不同卡，并披露45天交付。",
+          "source_refs": [
+            {
+              "source_id": "T-S04",
+              "pdf_pages": [
+                18
+              ],
+              "printed_pages": "13",
+              "section": null,
+              "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202511/P020251106555844142999.pdf#page=18"
+            },
+            {
+              "source_id": "T-W02",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "千卡智算推理资源池与分级调度",
+              "url": "https://www.zte.com.cn/china/about/magazine/zte-technologies/2026/4/4/12.html"
+            }
+          ],
+          "maturity": "国内部署案例",
+          "geography": "中国大陆，山东",
+          "period": "2025报告；2026项目说明"
+        },
+        {
+          "text": "中兴年报披露AI Booster异构管理与模型迁移工具；2026计算力调查有45.7%受访者提到软件业务适配、40.3%提到网络升级。",
+          "source_refs": [
+            {
+              "source_id": "T-S11",
+              "pdf_pages": [
+                18
+              ],
+              "printed_pages": "17",
+              "section": null,
+              "url": "https://static.cninfo.com.cn/finalpage/2026-03-07/1225000301.PDF#page=18"
+            },
+            {
+              "source_id": "T-S02",
+              "pdf_pages": [
+                15
+              ],
+              "printed_pages": "13",
+              "section": null,
+              "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf#page=15"
+            }
+          ],
+          "maturity": "产品能力＋用户调查",
+          "geography": "中国相关项目/受访样本",
+          "period": "2025年报；2026调查"
+        }
+      ],
+      "inference": "近期机会在存量卡复用、任务调度与迁移服务；该案例没有证明不同品牌GPU可无损协作训练同一模型。",
+      "business_implication": "建立模型×芯片×框架版本×精度×SLA的支持矩阵，把迁移工时、性能保持率、故障恢复纳入投标。",
+      "evidence_maturity": {
+        "label": "同厂异代已部署；跨厂同任务待验证",
+        "confidence": "项目存在中高；全国采用率未知"
+      },
+      "cross_report": {
+        "relationship": "方向一致，证据层级不同",
+        "conclusion": "案例与产品披露都把软件调度列为关键能力；信通院和联署文章描述同一项目，不算两个独立样本。",
+        "source_refs": [
+          {
+            "source_id": "T-S04",
+            "pdf_pages": [
+              18
+            ],
+            "printed_pages": "13",
+            "section": null,
+            "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202511/P020251106555844142999.pdf#page=18"
+          },
+          {
+            "source_id": "T-W02",
+            "pdf_pages": [],
+            "printed_pages": null,
+            "section": "项目说明",
+            "url": "https://www.zte.com.cn/china/about/magazine/zte-technologies/2026/4/4/12.html"
+          },
+          {
+            "source_id": "T-S11",
+            "pdf_pages": [
+              18
+            ],
+            "printed_pages": "17",
+            "section": null,
+            "url": "https://static.cninfo.com.cn/finalpage/2026-03-07/1225000301.PDF#page=18"
+          }
+        ]
+      },
+      "limitations": [
+        "45.7%是受访挑战占比，不是失败率；样本不能代表全国装机。",
+        "千卡建设规模不等于持续利用、付费客户或租赁收入；精确分卡数仍待原始验收材料核对。"
+      ],
+      "action": [
+        {
+          "indicator": "跨代复用的真实收益",
+          "scope": "同一客户、同一模型与SLA",
+          "next_evidence": "迁移人天、性能保持率、资源利用率及客户复购",
+          "decision_trigger": "复用后成本和稳定性改善，才将适配能力视为商业优势"
+        }
+      ],
+      "metric_group_ids": [
+        "MG05"
+      ],
+      "conflict_ids": [],
+      "source_ids": [
+        "T-S04",
+        "T-W02",
+        "T-S11",
+        "T-S02"
+      ],
+      "content_revision": 1,
+      "last_reviewed": "2026-10-07"
+    },
+    {
+      "id": "RA04",
+      "topic": "超节点与互连",
+      "tags": [
+        "超节点",
+        "Scale-up",
+        "光互连"
+      ],
+      "headline": "超节点已有商用证据，规模竞争应看逻辑域与有效吞吐",
+      "what_changed": "384卡国内上线案例、1024卡实物展示与8192卡目标同时存在；不能压成一条“已规模成熟”的叙事。",
+      "facts": [
+        {
+          "text": "信通院以高带宽域定义Scale-up，再通过Scale-out扩展；韶关384卡系统已有上线案例。",
+          "source_refs": [
+            {
+              "source_id": "T-S03",
+              "pdf_pages": [
+                7
+              ],
+              "printed_pages": "1",
+              "section": null,
+              "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202603/P020260326543562359406.pdf#page=7"
+            },
+            {
+              "source_id": "T-S04",
+              "pdf_pages": [
+                18
+              ],
+              "printed_pages": "13",
+              "section": null,
+              "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202511/P020251106555844142999.pdf#page=18"
+            }
+          ],
+          "maturity": "研究框架＋国内案例",
+          "geography": "中国大陆",
+          "period": "2025—2026"
+        },
+        {
+          "text": "华为2026年7月披露384系列全球累计750+套，并展示1024卡Atlas950；8192卡满配属于此前公布的2026Q4目标。",
+          "source_refs": [
+            {
+              "source_id": "T-W05",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "1024卡真机与全球累计部署",
+              "url": "https://www.huawei.com/cn/news/2026/7/atlas-950-superpod"
+            },
+            {
+              "source_id": "T-W04",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "Atlas950配置与2026Q4目标",
+              "url": "https://www.huawei.com/cn/news/2025/9/hc-xu-keynote-speech"
+            }
+          ],
+          "maturity": "全球部署声明＋实物展示＋路线图",
+          "geography": "全球部署；中国展示",
+          "period": "2026-07；2026Q4目标"
+        },
+        {
+          "text": "AL128原厂说明区分物理装卡与当时两组64卡逻辑域；券商所述UPN512光网络架构显示另一种跨柜组织方式。",
+          "source_refs": [
+            {
+              "source_id": "T-W06",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "AL128架构与后续支持",
+              "url": "https://developer.aliyun.com/article/1686026"
+            },
+            {
+              "source_id": "T-S06",
+              "pdf_pages": [
+                11,
+                12,
+                14,
+                15,
+                16,
+                17
+              ],
+              "printed_pages": "11—17",
+              "section": null,
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202605271822909614_1.pdf#page=11"
+            }
+          ],
+          "maturity": "原厂架构说明＋二级研究",
+          "geography": "中国技术方案，未取得对应规模交付数",
+          "period": "2025—2026"
+        }
+      ],
+      "inference": "高密铜互连与光解耦可以并存；单柜密度不是唯一先进性标准，卡数扩张也不保证有效算力线性增长。",
+      "business_implication": "将Scale-up、Scale-out和存储网分项验收，重点验证扩展效率、故障域、链路可靠性与维护成本。",
+      "evidence_maturity": {
+        "label": "商用、展示与路线图并存",
+        "confidence": "已知阶段中高；大配置交付与独立性能仍缺"
+      },
+      "cross_report": {
+        "relationship": "方向一致，证据层级不同",
+        "conclusion": "信通院提供域级框架，厂商发布与券商拆解提供不同实现；对系统协同方向一致，对交付成熟度不能互相代证。",
+        "source_refs": [
+          {
+            "source_id": "T-S03",
+            "pdf_pages": [
+              7
+            ],
+            "printed_pages": "1",
+            "section": null,
+            "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202603/P020260326543562359406.pdf#page=7"
+          },
+          {
+            "source_id": "T-W05",
+            "pdf_pages": [],
+            "printed_pages": null,
+            "section": "Atlas950",
+            "url": "https://www.huawei.com/cn/news/2026/7/atlas-950-superpod"
+          },
+          {
+            "source_id": "T-S06",
+            "pdf_pages": [
+              11,
+              14,
+              15
+            ],
+            "printed_pages": null,
+            "section": null,
+            "url": "https://pdf.dfcfw.com/pdf/H3_AP202605271822909614_1.pdf#page=11"
+          }
+        ]
+      },
+      "limitations": [
+        "750+套是全球累计，不能计为大陆出货；套、柜、卡和芯片不可互换。",
+        "UPN512原白皮书全文未复核，架构依据为券商引述；截至截止日未取得8192卡满配交付证据。"
+      ],
+      "action": [
+        {
+          "indicator": "目标配置是否交付",
+          "scope": "目标配置本身；排除展机与缩配替代",
+          "next_evidence": "客户验收、实际域规模、部署地域",
+          "decision_trigger": "客户验收与稳定运行材料出现后，才从路线图升级为部署"
+        },
+        {
+          "indicator": "扩卡后的有效性能",
+          "scope": "同模型与精度；同SLA和测量窗口",
+          "next_evidence": "扩展效率、P99、故障恢复与链路维修工时",
+          "decision_trigger": "吞吐提升能覆盖网络/供电/运维增量后，才支持扩容"
+        }
+      ],
+      "metric_group_ids": [
+        "MG05"
+      ],
+      "conflict_ids": [
+        "CF04"
+      ],
+      "source_ids": [
+        "T-S03",
+        "T-S04",
+        "T-W05",
+        "T-W04",
+        "T-W06",
+        "T-S06"
+      ],
+      "content_revision": 1,
+      "last_reviewed": "2026-10-07"
+    },
+    {
+      "id": "RA05",
+      "topic": "KV与AI存储",
+      "tags": [
+        "AI存储",
+        "KV Cache",
+        "数据路径"
+      ],
+      "headline": "KV Cache让存储价值从容量转向“少让GPU等数据”",
+      "what_changed": "2026报告把跨会话缓存、迁移和隔离列为系统问题；开发方与厂商材料已出现面向KV的数据路径实现。",
+      "facts": [
+        {
+          "text": "2026计算力报告讨论分层记忆与KV生命周期；浪潮信息A9000强调GDS和KV优化。",
+          "source_refs": [
+            {
+              "source_id": "T-S02",
+              "pdf_pages": [
+                15,
+                16
+              ],
+              "printed_pages": "13—14",
+              "section": null,
+              "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf#page=15"
+            },
+            {
+              "source_id": "T-S09",
+              "pdf_pages": [
+                9,
+                10
+              ],
+              "printed_pages": "9—10",
+              "section": null,
+              "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225530925.PDF#page=9"
+            }
+          ],
+          "maturity": "技术分析＋产品披露",
+          "geography": "中国研究与厂商方案",
+          "period": "2026"
+        },
+        {
+          "text": "DeepSeek公开3FS对推理KV查询的支持，说明存储数据路径已进入生产架构讨论。",
+          "source_refs": [
+            {
+              "source_id": "T-W09",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "3FS / inference infrastructure",
+              "url": "https://github.com/deepseek-ai/open-infra-index"
+            }
+          ],
+          "maturity": "开发方架构与基准",
+          "geography": "中国研发主体，机房地域未披露",
+          "period": "2025公开资料"
+        }
+      ],
+      "inference": "长上下文与多租户推理会让命中率、带宽、隔离和恢复共同决定ROI；不能只按SSD容量估计机会。",
+      "business_implication": "组合评估内存、SSD、RDMA/GDS与软件，按命中/未命中两种工况验收吞吐和尾时延。",
+      "evidence_maturity": {
+        "label": "公开实现＋产品能力；客户ROI待验证",
+        "confidence": "方向中高；跨产品性能不可比"
+      },
+      "cross_report": {
+        "relationship": "方向一致，证据层级不同",
+        "conclusion": "机构报告、开源实现与产品材料共同指向数据路径优化；性能数字的基线、模型和部署边界仍不统一。",
+        "source_refs": [
+          {
+            "source_id": "T-S02",
+            "pdf_pages": [
+              15,
+              16
+            ],
+            "printed_pages": null,
+            "section": null,
+            "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf#page=15"
+          },
+          {
+            "source_id": "T-W09",
+            "pdf_pages": [],
+            "printed_pages": null,
+            "section": "3FS",
+            "url": "https://github.com/deepseek-ai/open-infra-index"
+          },
+          {
+            "source_id": "T-S09",
+            "pdf_pages": [
+              9,
+              10
+            ],
+            "printed_pages": null,
+            "section": null,
+            "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225530925.PDF#page=9"
+          }
+        ]
+      },
+      "limitations": [
+        "A9000“超20倍”未披露完整基线，本页不作为普遍性能或ROI指标。",
+        "CXL扩容不等于HBM带宽；GH200错误例证已排除，不能据其证明CXL落地。"
+      ],
+      "action": [
+        {
+          "indicator": "KV卸载与复用的净收益",
+          "scope": "固定模型、上下文、多租户并发、精度与故障场景",
+          "next_evidence": "命中率、GPU等待、P99、恢复耗时以及容量/网络/软件总成本",
+          "decision_trigger": "同SLA总成本下降且隔离/恢复合格，才支持增加缓存层预算"
+        }
+      ],
+      "metric_group_ids": [],
+      "conflict_ids": [
+        "CF05"
+      ],
+      "source_ids": [
+        "T-S02",
+        "T-S09",
+        "T-W09"
+      ],
+      "content_revision": 1,
+      "last_reviewed": "2026-10-07"
+    },
+    {
+      "id": "RA06",
+      "topic": "液冷与机柜系统",
+      "tags": [
+        "液冷",
+        "热管理",
+        "AIDC"
+      ],
+      "headline": "液冷的确定性增量在覆盖更多热源和整柜协同",
+      "what_changed": "需求方已披露高功率建设实绩；冷板方案从CPU/GPU扩展至更多器件，机柜与机房需要共同设计。",
+      "facts": [
+        {
+          "text": "中国电信2026H1材料披露：100kW以上机架新增功率占比超50%。分母是新增功率。",
+          "source_refs": [
+            {
+              "source_id": "china_telecom_2026_interim_presentation",
+              "pdf_pages": [
+                13
+              ],
+              "printed_pages": null,
+              "section": null,
+              "url": "https://www.chinatelecom-h.com/tc/ir/presentations/intpre260820.pdf#page=13"
+            }
+          ],
+          "maturity": "需求方运营披露",
+          "geography": "公司披露资源口径，未充分拆分境内外",
+          "period": "2026H1"
+        },
+        {
+          "text": "信通院报告支持冷板与风液混合的近期主线，并记录运营商液冷万卡集群投入运营。",
+          "source_refs": [
+            {
+              "source_id": "CAICT_2025_AI_Data_Center_Liquid_Cooling",
+              "pdf_pages": [
+                8,
+                9,
+                41
+              ],
+              "printed_pages": "3—4；36",
+              "section": null,
+              "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202508/P020250826611237647336.pdf#page=8"
+            }
+          ],
+          "maturity": "研究分析＋部署案例",
+          "geography": "中国大陆",
+          "period": "2025报告，含2024项目"
+        },
+        {
+          "text": "浪潮/英特尔参考设计12节点实验机柜实测HCR为98.2%，说明“全液冷”仍需给出测量边界。",
+          "source_refs": [
+            {
+              "source_id": "IEI_Intel_2024_Full_Liquid_Cooled_Cold_Plate_Design",
+              "pdf_pages": [
+                29
+              ],
+              "printed_pages": null,
+              "section": null,
+              "url": "https://www.ieisystem.com/global/file/2024-01-23/17060016262012c975afc8bfb91fe492018d359ef4590dbb.pdf#page=29"
+            }
+          ],
+          "maturity": "参考设计实验",
+          "geography": "12节点实验机柜",
+          "period": "2024-01"
+        }
+      ],
+      "inference": "近期机会更确定地落在热捕获覆盖、CDU/Manifold、盲插和回路控制；全国液冷渗透率不能由单家公司高功率指标推出。",
+      "business_implication": "按供回水温、环境、泵耗、维护和水质验证TCO；室内取热与室外排热一并报价与验收。",
+      "evidence_maturity": {
+        "label": "冷板与整柜已有采用；高覆盖为条件性验证",
+        "confidence": "需求方向高；全国份额与通用节能率未知"
+      },
+      "cross_report": {
+        "relationship": "方向一致，证据层级不同",
+        "conclusion": "需求方建设、行业报告和实验白皮书共同支持系统化散热；它们分别证明采用、方向和限定工况，不能互相替代。",
+        "source_refs": [
+          {
+            "source_id": "china_telecom_2026_interim_presentation",
+            "pdf_pages": [
+              13
+            ],
+            "printed_pages": null,
+            "section": null,
+            "url": "https://www.chinatelecom-h.com/tc/ir/presentations/intpre260820.pdf#page=13"
+          },
+          {
+            "source_id": "CAICT_2025_AI_Data_Center_Liquid_Cooling",
+            "pdf_pages": [
+              8,
+              9,
+              41
+            ],
+            "printed_pages": null,
+            "section": null,
+            "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202508/P020250826611237647336.pdf#page=8"
+          },
+          {
+            "source_id": "IEI_Intel_2024_Full_Liquid_Cooled_Cold_Plate_Design",
+            "pdf_pages": [
+              29
+            ],
+            "printed_pages": null,
+            "section": null,
+            "url": "https://www.ieisystem.com/global/file/2024-01-23/17060016262012c975afc8bfb91fe492018d359ef4590dbb.pdf#page=29"
+          }
+        ]
+      },
+      "limitations": [
+        "超50%不是机柜数量占比或全国液冷渗透率；98.2%是热捕获率，不是PUE。",
+        "低PUE不等于低总耗电、低WUE或高GPU利用率；液冷也不自动取消冷机。"
+      ],
+      "action": [
+        {
+          "indicator": "液冷项目的全年净收益",
+          "scope": "同地点、同IT负载与全年气候边界",
+          "next_evidence": "全年PUE/WUE、泵耗、补冷、维护停机与漏液记录",
+          "decision_trigger": "满足SLA且全生命周期成本下降后，再复用节能结论"
+        }
+      ],
+      "metric_group_ids": [],
+      "conflict_ids": [
+        "CF06"
+      ],
+      "source_ids": [
+        "china_telecom_2026_interim_presentation",
+        "CAICT_2025_AI_Data_Center_Liquid_Cooling",
+        "IEI_Intel_2024_Full_Liquid_Cooled_Cold_Plate_Design"
+      ],
+      "content_revision": 1,
+      "last_reviewed": "2026-10-07"
+    },
+    {
+      "id": "RA07",
+      "topic": "供电与前沿冷却",
+      "tags": [
+        "800VDC",
+        "48V",
+        "两相液冷"
+      ],
+      "headline": "800VDC与两相冷却进入导入期，先验证客户交付",
+      "what_changed": "48V整柜供电已产品化；更高压供电、两相冷板与行级电源需要分别判断规格、推出计划和实际部署。",
+      "facts": [
+        {
+          "text": "OCTC报告列示48Vdc铜排集中供电方案；NVIDIA于2026年8月宣布800VDC power rack计划在2026H2推出。",
+          "source_refs": [
+            {
+              "source_id": "T-S05",
+              "pdf_pages": [
+                35,
+                36
+              ],
+              "printed_pages": null,
+              "section": null,
+              "url": "https://www.octc.net/uploadfile/2025/0611/20250611112645823.pdf#page=35"
+            },
+            {
+              "source_id": "NV_800_2026",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "MGX-compatible 800VDC power rack",
+              "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+            }
+          ],
+          "maturity": "产品方案＋全球路线图",
+          "geography": "中国厂商方案；全球路线图",
+          "period": "2025报告；2026-08发布"
+        },
+        {
+          "text": "NVIDIA行级power center预计2027年提供，容量最高2MW/排；不是2MW/单柜。",
+          "source_refs": [
+            {
+              "source_id": "NV_800_2026",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "Row-level power centers",
+              "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+            }
+          ],
+          "maturity": "路线图",
+          "geography": "全球",
+          "period": "2027预期"
+        },
+        {
+          "text": "浪潮信息半年报披露两相方案热流密度能力每平方厘米250W以上（≥250W/cm²）。",
+          "source_refs": [
+            {
+              "source_id": "T-S09",
+              "pdf_pages": [
+                10
+              ],
+              "printed_pages": "10",
+              "section": null,
+              "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225530925.PDF#page=10"
+            }
+          ],
+          "maturity": "产品能力声明",
+          "geography": "厂商方案，未披露对应采用量",
+          "period": "2026H1披露"
+        }
+      ],
+      "inference": "这些方向可能扩大电源转换、母排、保护、介质与回路控制的价值，但能力上限不是采购规模，也不是所有机房都应立即改造。",
+      "business_implication": "先验证旧机房兼容、维护安全、可靠性与生命周期成本；把方案支持、客户验证和量产交付分成独立里程碑。",
+      "evidence_maturity": {
+        "label": "48V产品化；800V/新两相方案导入或路线图",
+        "confidence": "路线边界清楚；中国规模付费投运未证实"
+      },
+      "cross_report": {
+        "relationship": "方向一致，证据层级不同",
+        "conclusion": "国内整柜报告与全球路线图均重视集中供电；不同电压层级和冷却路径仍将共存，未证实全面替代。",
+        "source_refs": [
+          {
+            "source_id": "T-S05",
+            "pdf_pages": [
+              35,
+              36
+            ],
+            "printed_pages": null,
+            "section": null,
+            "url": "https://www.octc.net/uploadfile/2025/0611/20250611112645823.pdf#page=35"
+          },
+          {
+            "source_id": "NV_800_2026",
+            "pdf_pages": [],
+            "printed_pages": null,
+            "section": "Power architecture roadmap",
+            "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+          },
+          {
+            "source_id": "T-S09",
+            "pdf_pages": [
+              10
+            ],
+            "printed_pages": null,
+            "section": null,
+            "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225530925.PDF#page=10"
+          }
+        ]
+      },
+      "limitations": [
+        "2026H2计划不能写成截至10月已交付；本页无中国800V规模付费投运证据。",
+        "W/cm²、kW/柜和MW/排是不同物理量；输入电压不是芯片工作电压。"
+      ],
+      "action": [
+        {
+          "indicator": "800V与两相方案的客户验证",
+          "scope": "具体产品、具体机房、明确配置",
+          "next_evidence": "客户验收、保护测试、长期故障率、介质兼容和维护记录",
+          "decision_trigger": "从演示/规格走到客户验收后才上调成熟度；有复购再判断规模化"
+        }
+      ],
+      "metric_group_ids": [],
+      "conflict_ids": [],
+      "source_ids": [
+        "T-S05",
+        "NV_800_2026",
+        "T-S09"
+      ],
+      "content_revision": 1,
+      "last_reviewed": "2026-10-07"
+    },
+    {
+      "id": "RA08",
+      "topic": "交付与经营兑现",
+      "tags": [
+        "整柜交付",
+        "框架订单",
+        "盈利"
+      ],
+      "headline": "整柜工程创造价值，订单和利润仍须逐层兑现",
+      "what_changed": "现场工序前移工厂的案例已有证据；财报同时显示，行业高景气下不同业务的利润变化并不一致。",
+      "facts": [
+        {
+          "text": "OCTC同场景案例：传统逐台现场500人天；整柜含交换机方案48人天。",
+          "source_refs": [
+            {
+              "source_id": "T-S05",
+              "pdf_pages": [
+                44,
+                45
+              ],
+              "printed_pages": null,
+              "section": null,
+              "url": "https://www.octc.net/uploadfile/2025/0611/20250611112645823.pdf#page=44"
+            }
+          ],
+          "maturity": "工程案例",
+          "geography": "案例场景，非全行业均值",
+          "period": "2025报告"
+        },
+        {
+          "text": "2026H1浪潮服务器及部件收入+3.69%、毛利率8.73%（+4.41个百分点）；紫光ICT收入+41.30%、毛利率15.28%（−2.77个百分点）。",
+          "source_refs": [
+            {
+              "source_id": "T-S09",
+              "pdf_pages": [
+                12
+              ],
+              "printed_pages": "12",
+              "section": null,
+              "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225530925.PDF#page=12"
+            },
+            {
+              "source_id": "UNIGROUP2026H1",
+              "pdf_pages": [
+                17
+              ],
+              "printed_pages": null,
+              "section": null,
+              "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225524307.PDF#page=17"
+            }
+          ],
+          "maturity": "公司财务实绩",
+          "geography": "两家公司境内外合并业务",
+          "period": "2026H1及同口径同比"
+        },
+        {
+          "text": "神州数码与中国移动PC服务器项目已签框架；供应商上限4319台、13.414079亿元含税，公告明确以实际订单为准。",
+          "source_refs": [
+            {
+              "source_id": "DC20260703",
+              "pdf_pages": [
+                1,
+                2,
+                3
+              ],
+              "printed_pages": null,
+              "section": null,
+              "url": "https://static.cninfo.com.cn/finalpage/2026-07-03/1225406902.PDF#page=1"
+            }
+          ],
+          "maturity": "已签框架，非实际成交",
+          "geography": "具体运营商采购项目",
+          "period": "2026-07公告；2026—2027框架"
+        }
+      ],
+      "inference": "系统集成、工厂测试与运维可以形成差异化，但现场效率提升不自动转成净利润；目录、框架、订单、验收和回款各是独立证据。",
+      "business_implication": "机会评估同时查看工厂/现场总成本、验收周期、质保、预付款和现金转换；销售漏斗按交易阶段标记。",
+      "evidence_maturity": {
+        "label": "交付案例＋财报实绩；框架执行待核验",
+        "confidence": "已披露数据高；工程收益与利润因果未证实"
+      },
+      "cross_report": {
+        "relationship": "方向一致，证据层级不同",
+        "conclusion": "整柜报告支持交付效率变化，财报显示盈利分化，框架公告限定成交边界；共同要求从技术能力走到经营兑现。",
+        "source_refs": [
+          {
+            "source_id": "T-S05",
+            "pdf_pages": [
+              44,
+              45
+            ],
+            "printed_pages": null,
+            "section": null,
+            "url": "https://www.octc.net/uploadfile/2025/0611/20250611112645823.pdf#page=44"
+          },
+          {
+            "source_id": "T-S09",
+            "pdf_pages": [
+              12
+            ],
+            "printed_pages": null,
+            "section": null,
+            "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225530925.PDF#page=12"
+          },
+          {
+            "source_id": "UNIGROUP2026H1",
+            "pdf_pages": [
+              17
+            ],
+            "printed_pages": null,
+            "section": null,
+            "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225524307.PDF#page=17"
+          },
+          {
+            "source_id": "DC20260703",
+            "pdf_pages": [
+              1,
+              2,
+              3
+            ],
+            "printed_pages": null,
+            "section": null,
+            "url": "https://static.cninfo.com.cn/finalpage/2026-07-03/1225406902.PDF#page=1"
+          }
+        ]
+      },
+      "limitations": [
+        "500→48是现场人天，未包含全部工厂作业，不能称全流程成本下降90.4%。",
+        "两家公司分部边界不同，不做绝对毛利率排名；框架金额不可当收入或重复累计为多个项目。"
+      ],
+      "action": [
+        {
+          "indicator": "整柜交付是否形成可持续收益",
+          "scope": "同配置、同责任范围；工厂和现场合计",
+          "next_evidence": "验收周期、良率、返修/保修、应收与现金回款",
+          "decision_trigger": "交付改善与同口径利润/现金同步后，再判断经济收益"
+        },
+        {
+          "indicator": "框架转化为实际需求",
+          "scope": "同一项目和供应商，逐阶段去重",
+          "next_evidence": "具体订单→交付→验收→收入/回款",
+          "decision_trigger": "出现对应阶段证据才升级状态，不将框架上限计为成交"
+        }
+      ],
+      "metric_group_ids": [
+        "MG04",
+        "MG08"
+      ],
+      "conflict_ids": [
+        "CF07"
+      ],
+      "source_ids": [
+        "T-S05",
+        "T-S09",
+        "UNIGROUP2026H1",
+        "DC20260703"
+      ],
+      "content_revision": 1,
+      "last_reviewed": "2026-10-07"
+    }
+  ],
+  "metric_groups": [
+    {
+      "id": "MG01",
+      "title": "中国服务器市场收入",
+      "display": "paired_periods",
+      "geography": "中国（PRC）",
+      "population": "全部服务器市场收入",
+      "comparison_rule": "同一机构PRC地域口径；同比各自对比上年同季，不把季度变化自动归因于技术。",
+      "rows": [
+        {
+          "id": "M0001",
+          "label": "2026Q1收入",
+          "value": 19.2,
+          "unit": "十亿美元",
+          "period": "2026Q1",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "IDC115711",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "Server Regional Market Results",
+              "url": "https://www.idc.com/resource-center/press-releases/1q26-server-tracker/"
+            }
+          ],
+          "yoy_percent": 30.9,
+          "yoy_metric_id": "M0002"
+        },
+        {
+          "id": "M0003",
+          "label": "2026Q2收入",
+          "value": 26.4,
+          "unit": "十亿美元",
+          "period": "2026Q2",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "IDC120193",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "Server Regional Market Results",
+              "url": "https://www.idc.com/resource-center/press-releases/2q2026-wwserver-tracker/"
+            }
+          ],
+          "yoy_percent": 43.4,
+          "yoy_metric_id": "M0004"
+        }
+      ],
+      "takeaway": "收入增速抬升，但缺同口径PRC台数和ASP，不能量化量价贡献。"
+    },
+    {
+      "id": "MG06",
+      "topic": "推理与Agent",
+      "title": "推理工作负载占比 · 2025版预测",
+      "display": "forecast_line",
+      "geography": "中国（报告口径）",
+      "population": "中国AI服务器工作负载；原报告未说明数量、金额或计算量加权方法",
+      "comparison_rule": "只保留同一2025版报告的推理一条序列；2024为基期估计，2025–2028为当时预测，不能因年份过去自动改成实绩。 2026原图训练31%与推理70%合计101%；保留单项原值和警告，不重画100%堆叠、不归一化。 不是2026现况验证；不是服务器收入份额、设备份额、全国算力份额或GenAI IaaS收入份额。",
+      "axis": {
+        "min": 0,
+        "max": 100,
+        "unit": "%"
+      },
+      "rows": [
+        {
+          "id": "M0275",
+          "label": "2024基期估计",
+          "value": 65,
+          "unit": "%",
+          "period": "2024",
+          "value_type": "estimate",
+          "version": "2025年报告",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S01",
+              "pdf_pages": [
+                18
+              ],
+              "printed_pages": "16",
+              "section": "图8 中国人工智能服务器工作负载预测，2024–2028",
+              "url": "https://www.ieisystem.com/global/file/2025-04-28/17458090087022c975afc96440b0243701967a53683e05ea.pdf#page=18"
+            }
+          ]
+        },
+        {
+          "id": "M0277",
+          "label": "2025预测",
+          "value": 67,
+          "unit": "%",
+          "period": "2025",
+          "value_type": "forecast",
+          "version": "2025年报告",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S01",
+              "pdf_pages": [
+                18
+              ],
+              "printed_pages": "16",
+              "section": "图8 中国人工智能服务器工作负载预测，2024–2028",
+              "url": "https://www.ieisystem.com/global/file/2025-04-28/17458090087022c975afc96440b0243701967a53683e05ea.pdf#page=18"
+            }
+          ]
+        },
+        {
+          "id": "M0279",
+          "label": "2026预测",
+          "value": 70,
+          "unit": "%",
+          "period": "2026",
+          "value_type": "forecast",
+          "version": "2025年报告",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S01",
+              "pdf_pages": [
+                18
+              ],
+              "printed_pages": "16",
+              "section": "图8 中国人工智能服务器工作负载预测，2024–2028",
+              "url": "https://www.ieisystem.com/global/file/2025-04-28/17458090087022c975afc96440b0243701967a53683e05ea.pdf#page=18"
+            }
+          ]
+        },
+        {
+          "id": "M0281",
+          "label": "2027预测",
+          "value": 72,
+          "unit": "%",
+          "period": "2027",
+          "value_type": "forecast",
+          "version": "2025年报告",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S01",
+              "pdf_pages": [
+                18
+              ],
+              "printed_pages": "16",
+              "section": "图8 中国人工智能服务器工作负载预测，2024–2028",
+              "url": "https://www.ieisystem.com/global/file/2025-04-28/17458090087022c975afc96440b0243701967a53683e05ea.pdf#page=18"
+            }
+          ]
+        },
+        {
+          "id": "M0283",
+          "label": "2028预测",
+          "value": 73,
+          "unit": "%",
+          "period": "2028",
+          "value_type": "forecast",
+          "version": "2025年报告",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S01",
+              "pdf_pages": [
+                18
+              ],
+              "printed_pages": "16",
+              "section": "图8 中国人工智能服务器工作负载预测，2024–2028",
+              "url": "https://www.ieisystem.com/global/file/2025-04-28/17458090087022c975afc96440b0243701967a53683e05ea.pdf#page=18"
+            }
+          ]
+        }
+      ],
+      "takeaway": "该版报告预计推理占比从2024基期65%升至2028年73%，显示工作负载向推理倾斜的预期。",
+      "caveats": [
+        "2026原图训练31%与推理70%合计101%；保留单项原值和警告，不重画100%堆叠、不归一化。",
+        "不是2026现况验证；不是服务器收入份额、设备份额、全国算力份额或GenAI IaaS收入份额。"
+      ],
+      "insight_ids": [
+        "RA02"
+      ]
+    },
+    {
+      "id": "MG05",
+      "topic": "超节点与异构部署",
+      "title": "超节点部署挑战 · 2026调查",
+      "display": "horizontal_bars",
+      "geography": "中国企业调查样本",
+      "population": "2026报告受访企业；问题为部署AI超节点的主要挑战",
+      "comparison_rule": "同一调查问题、同一分母的8个项目；每项独立呈现，不堆叠、不合计。 报告相关章节未披露样本量、抽样框和误差范围，不能外推全国企业比例。 各选项是受访响应比例，非构成比例，不合计、不做100%堆叠；原文未披露问卷多选细节。不是采用率、迁移失败率或产品销量。",
+      "axis": {
+        "min": 0,
+        "max": 60,
+        "unit": "%"
+      },
+      "rows": [
+        {
+          "id": "TM28",
+          "label": "初始投资成本过高",
+          "value": 55.0,
+          "unit": "%",
+          "period": "2026调研",
+          "value_type": "survey",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S02",
+              "pdf_pages": [
+                15
+              ],
+              "printed_pages": "13",
+              "section": "图8 企业部署AI超节点面临的主要挑战",
+              "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf#page=15"
+            }
+          ]
+        },
+        {
+          "id": "TM29",
+          "label": "软件生态与业务适配困难",
+          "value": 45.7,
+          "unit": "%",
+          "period": "2026调研",
+          "value_type": "survey",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S02",
+              "pdf_pages": [
+                15
+              ],
+              "printed_pages": "13",
+              "section": "图8 企业部署AI超节点面临的主要挑战",
+              "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf#page=15"
+            }
+          ]
+        },
+        {
+          "id": "TM30",
+          "label": "现有网络架构需全面升级",
+          "value": 40.3,
+          "unit": "%",
+          "period": "2026调研",
+          "value_type": "survey",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S02",
+              "pdf_pages": [
+                15
+              ],
+              "printed_pages": "13",
+              "section": "图8 企业部署AI超节点面临的主要挑战",
+              "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf#page=15"
+            }
+          ]
+        },
+        {
+          "id": "SURVEY26-P15-04",
+          "label": "现有机房空间不足",
+          "value": 28.7,
+          "unit": "%",
+          "period": "2026调研",
+          "value_type": "survey",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S02",
+              "pdf_pages": [
+                15
+              ],
+              "printed_pages": "13",
+              "section": "图8 企业部署AI超节点面临的主要挑战",
+              "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf#page=15"
+            }
+          ]
+        },
+        {
+          "id": "SURVEY26-P15-05",
+          "label": "内部运维人员能力不足",
+          "value": 26.7,
+          "unit": "%",
+          "period": "2026调研",
+          "value_type": "survey",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S02",
+              "pdf_pages": [
+                15
+              ],
+              "printed_pages": "13",
+              "section": "图8 企业部署AI超节点面临的主要挑战",
+              "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf#page=15"
+            }
+          ]
+        },
+        {
+          "id": "SURVEY26-P15-06",
+          "label": "投资回报周期不清晰",
+          "value": 26.0,
+          "unit": "%",
+          "period": "2026调研",
+          "value_type": "survey",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S02",
+              "pdf_pages": [
+                15
+              ],
+              "printed_pages": "13",
+              "section": "图8 企业部署AI超节点面临的主要挑战",
+              "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf#page=15"
+            }
+          ]
+        },
+        {
+          "id": "SURVEY26-P15-07",
+          "label": "高密散热难，需液冷改造",
+          "value": 20.7,
+          "unit": "%",
+          "period": "2026调研",
+          "value_type": "survey",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S02",
+              "pdf_pages": [
+                15
+              ],
+              "printed_pages": "13",
+              "section": "图8 企业部署AI超节点面临的主要挑战",
+              "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf#page=15"
+            }
+          ]
+        },
+        {
+          "id": "SURVEY26-P15-08",
+          "label": "电力供应容量不满足",
+          "value": 18.0,
+          "unit": "%",
+          "period": "2026调研",
+          "value_type": "survey",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S02",
+              "pdf_pages": [
+                15
+              ],
+              "printed_pages": "13",
+              "section": "图8 企业部署AI超节点面临的主要挑战",
+              "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf#page=15"
+            }
+          ]
+        }
+      ],
+      "takeaway": "样本中成本55.0%、软件适配45.7%、网络升级40.3%居前，方案评估需要同时覆盖投入和迁移工程。",
+      "caveats": [
+        "报告相关章节未披露样本量、抽样框和误差范围，不能外推全国企业比例。",
+        "各选项是受访响应比例，非构成比例，不合计、不做100%堆叠；原文未披露问卷多选细节。不是采用率、迁移失败率或产品销量。"
+      ],
+      "insight_ids": [
+        "RA03",
+        "RA04"
+      ]
+    },
+    {
+      "id": "MG02",
+      "title": "全球GPU服务器量价变化",
+      "display": "diverging_bars",
+      "geography": "全球",
+      "population": "GPU加速服务器",
+      "comparison_rule": "同一季度、同一GPU服务器范围的同比；三个比率不可相加，ASP同时含配置变化。",
+      "rows": [
+        {
+          "id": "M0027",
+          "label": "收入同比",
+          "value": 28.1,
+          "unit": "%",
+          "period": "2026Q2",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "IDC120193",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "GPU server results",
+              "url": "https://www.idc.com/resource-center/press-releases/2q2026-wwserver-tracker/"
+            }
+          ]
+        },
+        {
+          "id": "M0054",
+          "label": "出货台数同比",
+          "value": -10.8,
+          "unit": "%",
+          "period": "2026Q2",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "IDC120193",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "pricing / volume paragraphs",
+              "url": "https://www.idc.com/resource-center/press-releases/2q2026-wwserver-tracker/"
+            }
+          ]
+        },
+        {
+          "id": "M0056",
+          "label": "ASP同比",
+          "value": 43.6,
+          "unit": "%",
+          "period": "2026Q2",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "IDC120193",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "pricing / volume paragraphs",
+              "url": "https://www.idc.com/resource-center/press-releases/2q2026-wwserver-tracker/"
+            }
+          ]
+        }
+      ],
+      "takeaway": "量×价关系相符；只说明全球结构，不能替代中国市场数据。",
+      "validation": "(1−10.8%)×(1+43.6%)−1=28.0912%，四舍五入为28.1%。"
+    },
+    {
+      "id": "MG03",
+      "title": "中国电信资本开支",
+      "display": "separate_series",
+      "geography": "集团口径，未拆分境内外",
+      "population": "中国电信资本开支",
+      "comparison_rule": "只在同一指标内比较；算力网是总capex子集，含AIDC、网络、算力供给，不与总额相加。",
+      "rows": [
+        {
+          "id": "DP021",
+          "label": "总资本开支",
+          "value": 342,
+          "unit": "亿元人民币",
+          "period": "2025H1",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "china_telecom_2026_interim_presentation",
+              "pdf_pages": [
+                13
+              ],
+              "printed_pages": null,
+              "section": null,
+              "url": "https://www.chinatelecom-h.com/tc/ir/presentations/intpre260820.pdf#page=13"
+            }
+          ],
+          "series": "total_capex"
+        },
+        {
+          "id": "DP016",
+          "label": "总资本开支",
+          "value": 324,
+          "unit": "亿元人民币",
+          "period": "2026H1",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "china_telecom_2026_interim_presentation",
+              "pdf_pages": [
+                13
+              ],
+              "printed_pages": null,
+              "section": null,
+              "url": "https://www.chinatelecom-h.com/tc/ir/presentations/intpre260820.pdf#page=13"
+            }
+          ],
+          "series": "total_capex"
+        },
+        {
+          "id": "DP017",
+          "label": "算力网资本开支",
+          "value": 154,
+          "unit": "亿元人民币",
+          "period": "2026H1",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "china_telecom_2026_interim_presentation",
+              "pdf_pages": [
+                13
+              ],
+              "printed_pages": null,
+              "section": null,
+              "url": "https://www.chinatelecom-h.com/tc/ir/presentations/intpre260820.pdf#page=13"
+            }
+          ],
+          "series": "computing_capex",
+          "yoy_percent": 97,
+          "yoy_metric_id": "DP018"
+        }
+      ],
+      "takeaway": "总投资下降并不能推出服务器需求下降；算力专项仍需拆出设备金额。"
+    },
+    {
+      "id": "MG04",
+      "title": "整柜交付现场工作量",
+      "display": "bars",
+      "geography": "OCTC报告中的工程案例",
+      "population": "同场景现场施工工作量",
+      "comparison_rule": "仅比较现场工时；工厂预集成工作不在边界内，不解读为全流程成本降幅。",
+      "rows": [
+        {
+          "id": "OCTC-P45-01",
+          "label": "传统逐台",
+          "value": 500,
+          "unit": "人天",
+          "period": "2025报告案例",
+          "value_type": "case",
+          "source_refs": [
+            {
+              "source_id": "T-S05",
+              "pdf_pages": [
+                45
+              ],
+              "printed_pages": null,
+              "section": null,
+              "url": "https://www.octc.net/uploadfile/2025/0611/20250611112645823.pdf#page=45"
+            }
+          ]
+        },
+        {
+          "id": "OCTC-P45-02",
+          "label": "整柜，不含交换机",
+          "value": 146,
+          "unit": "人天",
+          "period": "2025报告案例",
+          "value_type": "case",
+          "source_refs": [
+            {
+              "source_id": "T-S05",
+              "pdf_pages": [
+                45
+              ],
+              "printed_pages": null,
+              "section": null,
+              "url": "https://www.octc.net/uploadfile/2025/0611/20250611112645823.pdf#page=45"
+            }
+          ]
+        },
+        {
+          "id": "CP27",
+          "label": "整柜，含交换机",
+          "value": 48,
+          "unit": "人天",
+          "period": "2025报告案例",
+          "value_type": "case",
+          "source_refs": [
+            {
+              "source_id": "T-S05",
+              "pdf_pages": [
+                45
+              ],
+              "printed_pages": null,
+              "section": null,
+              "url": "https://www.octc.net/uploadfile/2025/0611/20250611112645823.pdf#page=45"
+            }
+          ]
+        }
+      ],
+      "takeaway": "交付工序前移可减少现场作业；总成本仍需补工厂与维护数据。"
+    },
+    {
+      "id": "MG08",
+      "topic": "经营兑现",
+      "title": "浪潮信息服务器及部件毛利率",
+      "display": "paired_period_bars",
+      "geography": "集团合并口径，未拆分境内外",
+      "population": "浪潮信息服务器及部件业务毛利率",
+      "comparison_rule": "同公司、同业务、同为上半年；2025基线由当期报告已披露毛利率和同比百分点反推。 2025H1约4.32%由两项四舍五入后的披露数反推，必须在图例或脚注中标注。 不与2025全年4.52%拼成同频连续曲线；不与他公司的经营利润率或不同分部毛利率排名。 财报分部覆盖全球业务；公司集团经营现金流仍为负，但不能归因于此单一分部。",
+      "axis": {
+        "min": 0,
+        "unit": "%"
+      },
+      "rows": [
+        {
+          "id": "DV008-2025H1-derived",
+          "label": "2025H1（约，反推）",
+          "value": 4.32,
+          "unit": "%",
+          "period": "2025H1",
+          "value_type": "derived",
+          "calculation_type": "derived_from_reported_actual",
+          "formula": "8.73 - 4.41 = 4.32",
+          "qualifier": "≈",
+          "source_refs": [
+            {
+              "source_id": "T-S09",
+              "pdf_pages": [
+                12
+              ],
+              "printed_pages": "12",
+              "section": "分产品：服务器及部件毛利率及同比增减",
+              "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225530925.PDF#page=12"
+            }
+          ]
+        },
+        {
+          "id": "DV008",
+          "label": "2026H1",
+          "value": 8.73,
+          "unit": "%",
+          "period": "2026H1",
+          "value_type": "actual",
+          "qualifier": "=",
+          "source_refs": [
+            {
+              "source_id": "T-S09",
+              "pdf_pages": [
+                12
+              ],
+              "printed_pages": "12",
+              "section": "分产品：服务器及部件毛利率及同比增减",
+              "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225530925.PDF#page=12"
+            }
+          ]
+        }
+      ],
+      "takeaway": "2026H1毛利率8.73%，同比提高4.41个百分点；这是盈利结构改善，不能据此断言某项新技术的贡献。",
+      "caveats": [
+        "2025H1约4.32%由两项四舍五入后的披露数反推，必须在图例或脚注中标注。",
+        "不与2025全年4.52%拼成同频连续曲线；不与他公司的经营利润率或不同分部毛利率排名。",
+        "财报分部覆盖全球业务；公司集团经营现金流仍为负，但不能归因于此单一分部。"
+      ],
+      "insight_ids": [
+        "RA08"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "CF01",
+      "type": "口径差异",
+      "title": "全球GPU量价变化不能解释中国全部增量",
+      "positions": [
+        "PRC Q2服务器收入同比+43.4%。",
+        "全球GPU服务器收入+28.1%、台数−10.8%、ASP+43.6%。"
+      ],
+      "assessment": "地域与产品分母不同，不能拼成中国量价分解。",
+      "handling": "只在各自可比组内展示；中国台数/ASP保留缺口。",
+      "status": "边界已明确",
+      "source_refs": [
+        {
+          "source_id": "IDC120193",
+          "pdf_pages": [],
+          "printed_pages": null,
+          "section": "Regional / GPU / pricing results",
+          "url": "https://www.idc.com/resource-center/press-releases/2q2026-wwserver-tracker/"
+        }
+      ]
+    },
+    {
+      "id": "CF02",
+      "type": "数值缺陷",
+      "title": "CPU市场模型存在内部算术不一致",
+      "positions": [
+        "国信CPU报告的AI CPU数量×ASP与所列收入不符。",
+        "综合ASP高于两项分项ASP，正文与表格总量也不一致。"
+      ],
+      "assessment": "是模型数值缺陷，不能据此采用总市场规模；不因此否定Agent带来CPU负载的方向。",
+      "handling": "相关CPU TAM全部排除出指标、估值和标题；仅保留工作负载机制。",
+      "status": "量化结论已排除",
+      "source_refs": [
+        {
+          "source_id": "T-S08",
+          "pdf_pages": [
+            15,
+            16
+          ],
+          "printed_pages": "15—16",
+          "section": null,
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202605291822987579_1.pdf#page=15"
+        }
+      ]
+    },
+    {
+      "id": "CF03",
+      "type": "图示不一致",
+      "title": "旧版训推预测展示合计101%",
+      "positions": [
+        "2025版报告图8标示2026训练31%、推理70%。",
+        "两项标签合计101%；报告未解释原因。"
+      ],
+      "assessment": "展示可能涉及舍入或编辑，不能据此断言底层数据无效，也不能擅自改成100%。",
+      "handling": "不绘制无警示100%构成图；保留2025发布版本与预测属性，不当2026实绩。",
+      "status": "限制使用",
+      "source_refs": [
+        {
+          "source_id": "T-S01",
+          "pdf_pages": [
+            18
+          ],
+          "printed_pages": "16",
+          "section": null,
+          "url": "https://www.ieisystem.com/global/file/2025-04-28/17458090087022c975afc96440b0243701967a53683e05ea.pdf#page=18"
+        }
+      ]
+    },
+    {
+      "id": "CF04",
+      "type": "成熟度与计量差异",
+      "title": "物理卡数、逻辑互连域与部署规模是三件事",
+      "positions": [
+        "AL128物理可容纳128—144颗GPU，原厂当时说明为两组64卡域。",
+        "Atlas950的1024卡展示、8192卡目标与384系列全球750+套部署各属不同阶段。"
+      ],
+      "assessment": "不是简单数字冲突，而是配置、计量单位、地域和成熟度没有对齐。",
+      "handling": "按每一配置标记部署/展示/路线图；不做混合排名或大陆市场份额。",
+      "status": "分别保留",
+      "source_refs": [
+        {
+          "source_id": "T-W06",
+          "pdf_pages": [],
+          "printed_pages": null,
+          "section": "AL128架构",
+          "url": "https://developer.aliyun.com/article/1686026"
+        },
+        {
+          "source_id": "T-S06",
+          "pdf_pages": [
+            11
+          ],
+          "printed_pages": "11",
+          "section": null,
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202605271822909614_1.pdf#page=11"
+        },
+        {
+          "source_id": "T-W05",
+          "pdf_pages": [],
+          "printed_pages": null,
+          "section": "真机与全球部署",
+          "url": "https://www.huawei.com/cn/news/2026/7/atlas-950-superpod"
+        },
+        {
+          "source_id": "T-W04",
+          "pdf_pages": [],
+          "printed_pages": null,
+          "section": "Atlas950目标",
+          "url": "https://www.huawei.com/cn/news/2025/9/hc-xu-keynote-speech"
+        }
+      ]
+    },
+    {
+      "id": "CF05",
+      "type": "技术例证错误",
+      "title": "GH200例证不能证明CXL落地",
+      "positions": [
+        "信通院节点报告将GH200写为Grace与Blackwell互连。",
+        "NVIDIA官方文档为Grace＋Hopper，经NVLink-C2C互连。"
+      ],
+      "assessment": "该硬件例证错误，且不能用来支持CXL已经落地。",
+      "handling": "排除该例；不否定内存分层与高速互连方向。",
+      "status": "例证已纠正",
+      "source_refs": [
+        {
+          "source_id": "T-S03",
+          "pdf_pages": [
+            18
+          ],
+          "printed_pages": "12",
+          "section": null,
+          "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202603/P020260326543562359406.pdf#page=18"
+        },
+        {
+          "source_id": "T-W08",
+          "pdf_pages": [],
+          "printed_pages": null,
+          "section": "Introduction / Grace Hopper",
+          "url": "https://docs.nvidia.com/dccpu/grace-perf-tuning-guide/index.html"
+        }
+      ]
+    },
+    {
+      "id": "CF06",
+      "type": "市场边界与预测假设",
+      "title": "液冷“千亿市场”背后有不同分母",
+      "positions": [
+        "信通院2024中国智算中心液冷产业估算184亿元；同报告另引中国液冷服务器整机23.7亿美元。",
+        "2026全球液冷模型：国信125.7亿美元（按柜×BOM），东吴138.2亿美元（按芯片×价值量）。"
+      ],
+      "assessment": "产业链、整机、部件与冷却系统模型边界不同；全球预测也不等于中国实绩。差异不宜简单平均。",
+      "handling": "按范围和预测版本单列；不叠加、不拼时间序列，不选一个数字代表全部液冷市场。",
+      "status": "保留分歧与边界",
+      "source_refs": [
+        {
+          "source_id": "CAICT_2025_AI_Data_Center_Liquid_Cooling",
+          "pdf_pages": [
+            11,
+            27
+          ],
+          "printed_pages": "6；22",
+          "section": null,
+          "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202508/P020250826611237647336.pdf#page=11"
+        },
+        {
+          "source_id": "B001",
+          "pdf_pages": [
+            18
+          ],
+          "printed_pages": null,
+          "section": null,
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202604141821191501_1.pdf#page=18"
+        },
+        {
+          "source_id": "B011",
+          "pdf_pages": [
+            21
+          ],
+          "printed_pages": null,
+          "section": null,
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202606261824412328_1.pdf#page=21"
+        }
+      ]
+    },
+    {
+      "id": "CF07",
+      "type": "推论与经济兑现",
+      "title": "交付效率提升不自动等于利润提升",
+      "positions": [
+        "整柜案例现场500→48人天，部分工作前移工厂。",
+        "2026H1浪潮服务器及部件毛利率上升，紫光ICT毛利率下降，业务边界也不同。"
+      ],
+      "assessment": "系统工程有价值，但收入、毛利、净利润和现金的传导需独立证明。",
+      "handling": "同公司同分部同比；不做跨厂毛利率排名，不把BOM加价率当利润率。",
+      "status": "商业因果待验证",
+      "source_refs": [
+        {
+          "source_id": "T-S05",
+          "pdf_pages": [
+            44,
+            45
+          ],
+          "printed_pages": null,
+          "section": null,
+          "url": "https://www.octc.net/uploadfile/2025/0611/20250611112645823.pdf#page=44"
+        },
+        {
+          "source_id": "T-S09",
+          "pdf_pages": [
+            12
+          ],
+          "printed_pages": null,
+          "section": null,
+          "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225530925.PDF#page=12"
+        },
+        {
+          "source_id": "UNIGROUP2026H1",
+          "pdf_pages": [
+            17
+          ],
+          "printed_pages": null,
+          "section": null,
+          "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225524307.PDF#page=17"
+        }
+      ]
+    },
+    {
+      "id": "CF08",
+      "type": "预测版本变更",
+      "title": "2029中国液冷服务器预测版本",
+      "status": "不做实绩趋势",
+      "positions": [
+        "2025年4月IDC公开摘要预测2029年162亿美元；2026官方评论改为超过200亿美元。是同目标年、不同发布版本；新值为下限且缺完整Tracker模型桥接，本轮不绘制普通并柱。"
+      ],
+      "assessment": "同目标年、不同版本；新值是下限。",
+      "handling": ">200须保留下限标记，可用箭头/开端条表示；两根柱不能被解释为2025到2026市场增长。 2026来源是官方评论，未提供完整Tracker或模型桥接，不能称两个独立模型相互验证。 该评论页面2026-03-31发布、2026-08-24更新；引用当前存档内容，不断言该数在初发时即存在。 不混入未核实为实绩的2025年33.9亿美元，也不混入CCID液冷数据中心设备市场。",
+      "source_refs": [
+        {
+          "source_id": "IDC104133",
+          "pdf_pages": [],
+          "printed_pages": null,
+          "section": "首段预测",
+          "url": "https://www.idc.com/resource-center/press-releases/idc-chinas-liquid-cooled-server-market-is-accelerating-its-expansion-and-the-head-is-gathering-momentum-to-drive-the-deepening-of-applications/"
+        },
+        {
+          "source_id": "IDC112406",
+          "pdf_pages": [],
+          "printed_pages": null,
+          "section": "趋势三：冷却与能效技术革新",
+          "url": "https://www.idc.com/resource-center/blog/%e4%bb%8e2026-gtc%e7%9c%8b%e7%ae%97%e5%8a%9b%e6%bc%94%e8%bf%9b5%e5%a4%a7%e8%b6%8b%e5%8a%bf%ef%bc%9a%e6%99%ba%e8%83%bd%e7%ae%97%e5%8a%9b%e6%9e%b6%e6%9e%84%e6%9b%b4%e5%8a%a0%e4%b8%93%e4%b8%9a%e5%8c%96/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "T-S01",
+      "report_id": "R0001",
+      "title": "2025年中国人工智能计算力发展评估报告",
+      "publisher": "IDC、浪潮信息",
+      "published_at": "2025-02",
+      "url": "https://www.ieisystem.com/global/file/2025-04-28/17458090087022c975afc96440b0243701967a53683e05ea.pdf",
+      "type": "研究报告",
+      "caveat": "IDC与浪潮联合发布；预测及用户调研不等于市场实绩"
+    },
+    {
+      "id": "T-S02",
+      "report_id": "R0006",
+      "title": "2026年中国人工智能计算力发展评估报告",
+      "publisher": "IDC、浪潮信息",
+      "published_at": "2026-09-21",
+      "url": "https://www.ieisystem.com/global/file/2026-09-21/17899574657972c975afca0b96dab32701a0c1c766c50e16.pdf",
+      "type": "研究报告",
+      "caveat": "IDC与浪潮联合发布；超节点问卷未在已读章节披露样本量或抽样框"
+    },
+    {
+      "id": "T-S03",
+      "report_id": "R0023",
+      "title": "AI计算节点发展研究报告（2026年）",
+      "publisher": "中国信息通信研究院",
+      "published_at": "2026-03",
+      "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202603/P020260326543562359406.pdf",
+      "type": "研究报告",
+      "caveat": "信通院研究框架；部分案例转述厂商，不能算独立实测"
+    },
+    {
+      "id": "T-S04",
+      "report_id": "R0030",
+      "title": "人工智能算力基础设施赋能研究报告（2025年）",
+      "publisher": "中国信息通信研究院",
+      "published_at": "2025-11",
+      "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202511/P020251106555844142999.pdf",
+      "type": "研究报告",
+      "caveat": "信通院案例汇编；韶关案例与电信原文同一证据链"
+    },
+    {
+      "id": "T-S05",
+      "report_id": "R0022",
+      "title": "整机柜服务器产业研究报告",
+      "publisher": "中国电子技术标准化研究院、OCTC及参编单位",
+      "published_at": "2025-06",
+      "url": "https://www.octc.net/uploadfile/2025/0611/20250611112645823.pdf",
+      "type": "研究报告",
+      "caveat": "行业协会/研究机构与厂商协作；规格为厂商方案，不代表实际安装量"
+    },
+    {
+      "id": "T-S06",
+      "report_id": "R0094",
+      "title": "超节点系列报告三：阿里超节点，全栈AI布局，自研AL128、UPN512补全AI基础设施",
+      "publisher": "东吴证券",
+      "published_at": "2026-05-27",
+      "url": "https://pdf.dfcfw.com/pdf/H3_AP202605271822909614_1.pdf",
+      "type": "研究报告",
+      "caveat": "东吴转述阿里官方架构和白皮书；不能重复计为独立技术验证"
+    },
+    {
+      "id": "T-S08",
+      "report_id": "R0082",
+      "title": "被低估的CPU与爆发的Agent时代：全球服务器CPU市场规模测算和趋势分析",
+      "publisher": "国信证券",
+      "published_at": "2026-05-28",
+      "url": "https://pdf.dfcfw.com/pdf/H3_AP202605291822987579_1.pdf",
+      "type": "研究报告",
+      "caveat": "国信全球预测模型；不能转换为中国CPU出货或中国服务器TAM"
+    },
+    {
+      "id": "T-S09",
+      "report_id": "R0138",
+      "title": "浪潮信息2026年半年度报告",
+      "publisher": "浪潮信息",
+      "published_at": "2026-08-29",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225530925.PDF",
+      "type": "研究报告",
+      "caveat": "企业半年报业务陈述；性能未经独立审计且未披露完整基准"
+    },
+    {
+      "id": "T-S11",
+      "report_id": "R0120",
+      "title": "中兴通讯2025年年度报告",
+      "publisher": "中兴通讯",
+      "published_at": "2026-03-07",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-03-07/1225000301.PDF",
+      "type": "研究报告",
+      "caveat": "企业年报业务陈述，不能推导单一产品销量"
+    },
+    {
+      "id": "T-W02",
+      "report_id": null,
+      "title": "山东移动携手中兴通讯打造千卡智算推理资源池",
+      "publisher": "中兴通讯、山东移动",
+      "published_at": "2026-04-20",
+      "url": "https://www.zte.com.cn/china/about/magazine/zte-technologies/2026/4/4/12.html",
+      "type": "供应商与客户联署项目文章",
+      "caveat": ""
+    },
+    {
+      "id": "T-W04",
+      "report_id": null,
+      "title": "以开创的超节点互联技术，引领AI基础设施新范式",
+      "publisher": "华为",
+      "published_at": "2025-09-18",
+      "url": "https://www.huawei.com/cn/news/2025/9/hc-xu-keynote-speech",
+      "type": "原厂发布/路线图",
+      "caveat": ""
+    },
+    {
+      "id": "T-W05",
+      "report_id": null,
+      "title": "昇腾950超节点真机亮相2026世界人工智能大会",
+      "publisher": "华为",
+      "published_at": "2026-07-17",
+      "url": "https://www.huawei.com/cn/news/2026/7/atlas-950-superpod",
+      "type": "原厂实物展示与累计部署声明",
+      "caveat": ""
+    },
+    {
+      "id": "T-W06",
+      "report_id": null,
+      "title": "详解阿里云磐久AL128超节点服务器及互连架构",
+      "publisher": "阿里云",
+      "published_at": "2025-10-23",
+      "url": "https://developer.aliyun.com/article/1686026",
+      "type": "阿里云开发者社区，注明来源阿里云公众号",
+      "caveat": ""
+    },
+    {
+      "id": "T-W08",
+      "report_id": null,
+      "title": "NVIDIA Grace Performance Tuning Guide",
+      "publisher": "NVIDIA",
+      "published_at": null,
+      "url": "https://docs.nvidia.com/dccpu/grace-perf-tuning-guide/index.html",
+      "type": "原厂技术文档",
+      "caveat": ""
+    },
+    {
+      "id": "T-W09",
+      "report_id": null,
+      "title": "DeepSeek Open Infra",
+      "publisher": "DeepSeek",
+      "published_at": "2025-02至2025-05",
+      "url": "https://github.com/deepseek-ai/open-infra-index",
+      "type": "开发方开源与生产架构说明",
+      "caveat": ""
+    },
+    {
+      "id": "CAICT_2025_AI_Data_Center_Liquid_Cooling",
+      "report_id": "R0016",
+      "title": "智算中心液冷产业全景研究报告（2025年）",
+      "publisher": "中国信息通信研究院",
+      "published_at": "2025-08",
+      "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202508/P020250826611237647336.pdf",
+      "type": "研究报告",
+      "caveat": ""
+    },
+    {
+      "id": "IEI_Intel_2024_Full_Liquid_Cooled_Cold_Plate_Design",
+      "report_id": "R0021",
+      "title": "全液冷冷板系统参考设计及验证白皮书",
+      "publisher": "浪潮信息、英特尔",
+      "published_at": "2024-01",
+      "url": "https://www.ieisystem.com/global/file/2024-01-23/17060016262012c975afc8bfb91fe492018d359ef4590dbb.pdf",
+      "type": "研究报告",
+      "caveat": ""
+    },
+    {
+      "id": "china_telecom_2026_interim_presentation",
+      "report_id": "R0123",
+      "title": "中国电信2026年中期业绩推介材料",
+      "publisher": "中国电信",
+      "published_at": "2026-08-20",
+      "url": "https://www.chinatelecom-h.com/tc/ir/presentations/intpre260820.pdf",
+      "type": "公司业绩材料",
+      "caveat": ""
+    },
+    {
+      "id": "NV_800_2026",
+      "report_id": null,
+      "title": "Why Scaling AI Compute Performance Requires a New Power Architecture",
+      "publisher": "NVIDIA",
+      "published_at": "2026-08-11",
+      "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/",
+      "type": "原厂路线图",
+      "caveat": ""
+    },
+    {
+      "id": "B001",
+      "report_id": "R0064",
+      "title": "汽车+AI前瞻系列之服务器液冷专题：服务器算力提升催化液冷需求，供应商迎来国产替代新机遇",
+      "publisher": "国信证券",
+      "published_at": "2026-04-14",
+      "url": "https://pdf.dfcfw.com/pdf/H3_AP202604141821191501_1.pdf",
+      "type": "券商研究报告",
+      "caveat": "全球预测模型；不可转换为中国市场实绩"
+    },
+    {
+      "id": "B011",
+      "report_id": "R0074",
+      "title": "液冷行业深度报告：千亿液冷市场爆发，看好增量环节国产份额提升",
+      "publisher": "东吴证券",
+      "published_at": "2026-06-26",
+      "url": "https://pdf.dfcfw.com/pdf/H3_AP202606261824412328_1.pdf",
+      "type": "券商研究报告",
+      "caveat": "全球预测模型；不可转换为中国市场实绩"
+    },
+    {
+      "id": "IDC115711",
+      "report_id": "R0054",
+      "title": "Worldwide Server Market Revenue Surpasses $122 Billion in the First Quarter of 2026, Driven by AI Infrastructure Demand, according to IDC ",
+      "publisher": "IDC",
+      "published_at": "2026-06-15",
+      "url": "https://www.idc.com/resource-center/press-releases/1q26-server-tracker/",
+      "type": "机构市场统计公开摘要",
+      "caveat": "仅公开摘要；地域、收入与台数口径分别保留"
+    },
+    {
+      "id": "IDC120193",
+      "report_id": "R0053",
+      "title": "Worldwide Server Market Revenue Hits Record $166.3 Billion in the Second Quarter of 2026 as AI Infrastructure Investment Continues to Broaden, according to IDC",
+      "publisher": "IDC",
+      "published_at": "2026-09-10",
+      "url": "https://www.idc.com/resource-center/press-releases/2q2026-wwserver-tracker/",
+      "type": "机构市场统计公开摘要",
+      "caveat": "仅公开摘要；地域、收入与台数口径分别保留"
+    },
+    {
+      "id": "ALI2026Q2",
+      "report_id": "R0151",
+      "title": "Alibaba Group June Quarter 2026 Results",
+      "publisher": "阿里巴巴",
+      "published_at": "2026-08-20",
+      "url": "https://www.sec.gov/Archives/edgar/data/1577552/000110465926099220/tm2623667d1_ex99-1.htm",
+      "type": "公司业绩公告",
+      "caveat": "季度资本开支为公司集团口径；预期Agent采用不是已实现收入"
+    },
+    {
+      "id": "UNIGROUP2026H1",
+      "report_id": "R0143",
+      "title": "紫光股份2026年半年度报告",
+      "publisher": "紫光股份",
+      "published_at": "2026-08-29",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225524307.PDF",
+      "type": "公司定期报告",
+      "caveat": "ICT分部口径，不等于纯服务器业务或大陆市场"
+    },
+    {
+      "id": "DC20260703",
+      "report_id": "R0174",
+      "title": "关于签署中国移动2026—2027年PC服务器产品集中采购项目框架协议的公告",
+      "publisher": "神州数码",
+      "published_at": "2026-07-03",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-07-03/1225406902.PDF",
+      "type": "公司框架协议公告",
+      "caveat": "采购上限；以实际订单为准"
+    },
+    {
+      "id": "IDC104133",
+      "title": "中国液冷服务器市场加速扩张，2024下半年跟踪公开摘要",
+      "publisher": "IDC",
+      "published_at": "2025-04-08",
+      "url": "https://www.idc.com/resource-center/press-releases/idc-chinas-liquid-cooled-server-market-is-accelerating-its-expansion-and-the-head-is-gathering-momentum-to-drive-the-deepening-of-applications/",
+      "type": "机构公开摘要",
+      "caveat": "机构预测；页面元数据为4月7日，正文电头为4月8日，采用正文日期。"
+    },
+    {
+      "id": "IDC112406",
+      "title": "从2026 GTC看算力演进5大趋势：智能算力架构更加专业化",
+      "publisher": "IDC",
+      "published_at": "2026-03-31",
+      "url": "https://www.idc.com/resource-center/blog/%e4%bb%8e2026-gtc%e7%9c%8b%e7%ae%97%e5%8a%9b%e6%bc%94%e8%bf%9b5%e5%a4%a7%e8%b6%8b%e5%8a%bf%ef%bc%9a%e6%99%ba%e8%83%bd%e7%ae%97%e5%8a%9b%e6%9e%b6%e6%9e%84%e6%9b%b4%e5%8a%a0%e4%b8%93%e4%b8%9a%e5%8c%96/",
+      "type": "机构官方评论",
+      "caveat": "IDC官方评论，非完整Tracker底表；页面后于2026-08-24更新，无法确认该数字是否从初发即存在。"
+    }
+  ],
+  "counts": {
+    "insights": 8,
+    "metric_groups": 7,
+    "metric_rows": 26,
+    "conflicts": 8,
+    "sources": 28
+  }
+}

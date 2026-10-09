@@ -1,3 +1,4 @@
+import {isKeywordCategory} from '@/lib/hierarchy';
 import {database,saveRecord,importRecords} from '@/lib/database';
 import {validateRecord,safeUrl,TECHS} from '@/lib/model';
 import {collectPage,allowedHosts,readBounded} from '@/lib/collect';
@@ -43,7 +44,7 @@ export async function POST(request){try{
   const record=validateRecord(payload.record);return json({record:await saveRecord(owner,record)});
  }
  if(payload.op==='import'){
-  if(!Array.isArray(payload.rows)||!payload.rows.length||payload.rows.length>50||!Object.hasOwn(TECHS,payload.tech))throw Error('400:每批导入1–50条，并选择技术。');
+  if(!Array.isArray(payload.rows)||!payload.rows.length||payload.rows.length>50||(!Object.hasOwn(TECHS,payload.tech)&&!isKeywordCategory(payload.tech)))throw Error('400:每批导入1–50条，并选择技术。');
   if(payload.source_id&&!sourcePanel.some(s=>s.id===payload.source_id))throw Error('400:来源无效。');
   let rows;try{rows=await Promise.all(payload.rows.map(r=>pendingRecord(r,payload.tech,payload.source_id,'import')));}catch(e){throw Error('400:'+e.message.replace(/^400:/,''));}
   const result=await importRecords(owner,rows,(await readRadar()).records);
@@ -54,7 +55,7 @@ export async function POST(request){try{
   const source=sourcePanel.find(s=>s.id===payload.source_id),listing=payload.op==='discover';
   if(listing&&(!source||source.mode!=='public'))throw Error('400:此来源请使用官方检索或导入入口。');
   const url=listing?source.url:safeUrl(payload.url);
-  if(!url||!Object.hasOwn(TECHS,payload.tech))throw Error('400:请填写有效HTTPS链接并选择技术。');
+  if(!url||(!Object.hasOwn(TECHS,payload.tech)&&!isKeywordCategory(payload.tech)))throw Error('400:请填写有效HTTPS链接并选择技术。');
   const keyword=String(payload.keyword||'').trim();if(listing&&(!keyword||keyword.length>200))throw Error('400:请输入1–200字的主题关键词。');
   const db=database(),at=new Date().toISOString();
   const recent=await db.prepare("SELECT count(*) AS n FROM captures WHERE owner=? AND at>? AND status!='imported'").bind(owner,new Date(Date.now()-60000).toISOString()).first();

@@ -1,5 +1,12 @@
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {existsSync,readFileSync} from 'node:fs';
+import {createRequire,registerHooks} from 'node:module';
+import {pathToFileURL} from 'node:url';
+
+// Also runnable in the staging directory before these replacements are installed.
+const manifest=new URL(existsSync(new URL('../../../site/package.json',import.meta.url))?'../../../site/package.json':'../package.json',import.meta.url),require=createRequire(manifest);
+const zodUrl=pathToFileURL(require.resolve('zod')).href;
+registerHooks({resolve(specifier,context,next){return specifier==='zod'?{url:zodUrl,shortCircuit:true}:next(specifier,context);}});
 const {dateWindow,monthsInWindow,partialMonth}=await import('../lib/model.js');
 const {inObservationPeriod,monthlySeries,categoryMonthRows,amountRows}=await import('../lib/monthly.js');
 const {periods,panelMatrix}=await import('../lib/panel.js');
@@ -22,6 +29,6 @@ const source={id:'news',kind:'news',coverage:monthsInWindow(w).map(month=>({mont
 const matrix=panelMatrix({window:w,documents:[doc,{...doc,id:'outside',date:'2026-10-12'}]},source,'attention');
 const point=matrix.find(r=>r.id==='liquid_cooling').points.at(-1);
 assert.equal(point.N,1);assert.equal(point.value,1000);assert(point.partial);
-const baseline=JSON.parse(readFileSync(new URL('../data/research-2026.json',import.meta.url),'utf8'));
+const baseline=JSON.parse(readFileSync(new URL('./data/research-2026.json',manifest),'utf8'));
 assert.deepEqual(dateWindow(baseline),{start:baseline.period_start,end:baseline.period_end});
 console.log('PASS: snapshot defaults, October rollover, cross-year quarters, leap year, date boundaries, amount scale and panel denominators.');

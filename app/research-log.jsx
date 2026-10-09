@@ -3,8 +3,12 @@ import {useEffect,useState} from 'react';
 import {safeUrl} from '@/lib/model';
 import {CLASS_LABELS} from '@/lib/hierarchy';
 import {sourcePanel} from '@/data/sources';
+import {BOARDS,rowsForBoard} from '@/lib/keyword-boards';
+import {KeywordBoardTabs,KeywordBoardGuide} from './keyword-board-controls';
+import keywordScan from '@/public/keyword-scan-20261008.json';
 import rolling from '@/data/rolling-update.json';
 import remediation from '@/data/source-remediation.json';
+import manualRefresh from '@/public/manual-refresh-20261007.json';
 
 const when=value=>value?new Date(value).toLocaleString('zh-CN'):'—';
 const sourceName=id=>sourcePanel.find(s=>s.id===id)?.name||id;
@@ -13,16 +17,20 @@ function Fold({title,children}){return <details className="card log-section"><su
 function Link({url,children}){return safeUrl(url)?<a href={safeUrl(url)} target="_blank" rel="noreferrer">{children} ↗</a>:<span>{children}</span>;}
 function download(name,value){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 
-export default function ResearchLog({data,research,monitoring,onEdit,method}){
- const [tab,setTab]=useState('updates'),[samples,setSamples]=useState(null),[sampleError,setSampleError]=useState('');
+export default function ResearchLog({data,research,monitoring,onEdit,method,initialBoard='business',onBoardChange}){
+ const [board,setBoard]=useState(initialBoard),[tab,setTab]=useState('updates'),[samples,setSamples]=useState(null),[sampleError,setSampleError]=useState('');
  useEffect(()=>{let active=true;fetch('/sample-sources.json').then(r=>{if(!r.ok)throw Error('来源覆盖日志暂时无法读取');return r.json();}).then(d=>{if(active)setSamples(d);}).catch(e=>{if(active)setSampleError(e.message);});return()=>{active=false;};},[]);
  const records=[...research.events,...research.leads],captures=data?.captures||[],queries=research.queries||[];
  const edit=(section,key,record)=><button className="text-button" disabled={!onEdit} onClick={()=>onEdit(section,key,record)}>编辑判断</button>;
  const references=ids=>(ids||[]).map(id=>records.find(r=>r.id===id)).filter(Boolean).map(r=><p key={r.id}><Link url={r.url}>{r.title}</Link></p>);
  return <div className="research-log">
+  <KeywordBoardTabs board={board} onChange={b=>{setBoard(b);onBoardChange?.(b);}}/>
   <div className="pills" role="group" aria-label="日志类型">{Object.entries({updates:'更新记录',method:'统计说明',research:'研究归档',collection:'采集记录'}).map(([id,label])=><button key={id} aria-pressed={tab===id} className={tab===id?'active':''} onClick={()=>setTab(id)}>{label}</button>)}</div>
   {tab==='updates'&&<>
-   <section className="card"><h2>最近更新</h2><p>完整更新截至 {monitoring.last_completed_cutoff||'—'} · {monitoring.schedule_label||'按需更新'}</p>{monitoring.latest_requested_cutoff&&<p>最近尝试至 {monitoring.latest_requested_cutoff} · {monitoring.latest_update_status==='partial'?'部分完成':'已完成'}</p>}<p>{monitoring.latest_status}</p>{monitoring.last_attempt_at&&<p>尝试时间：{when(monitoring.last_attempt_at)}</p>}<details><summary>更新与异动规则</summary><p>{monitoring.execution}</p><p>{monitoring.rule_summary}</p><p>监测窗口：{monitoring.latest_window?.start||rolling.monitoring.window.start} 至 {monitoring.latest_window?.end||rolling.monitoring.window.end}</p><p>每轮全量回查；通过检查的来源月份独立写入，失败月份保留原资料并标明实际截止。固定来源不因采集失败而从分母中剔除；受影响月份暂停比例比较。</p></details></section>
+   <section className="card"><h2>三个关键词看板 · 最新重扫</h2><p>{keywordScan.checked_at} · {keywordScan.checked_sources}个登记信源已检查 · 新增{keywordScan.media_added}篇固定媒体新闻、{keywordScan.research_added}条研究证据。</p><div className="table-scroll"><table><thead><tr><th>{BOARDS.find(b=>b.id===board).name}</th><th>新闻命中</th><th>研究证据命中</th></tr></thead><tbody>{rowsForBoard(board).map(c=><tr key={c.id} className={c.level==='keyword'?'keyword-detail-row':'keyword-category-row'}><th>{c.name}</th><td>{keywordScan.keyword_counts?.news?.[c.id]??keywordScan.news_counts[board].categories[c.id]??'—'}</td><td>{keywordScan.keyword_counts?.research?.[c.id]??keywordScan.research_counts[board].categories[c.id]??'—'}</td></tr>)}</tbody></table></div><p>跨类不加总；入口核查非全库扫描。</p><a href="/keyword-scan-20261008.json" download>下载重扫记录</a> · <a href="/amount-normalization-20261008.json" download>下载金额单位与币种核查</a></section>
+   <section className="card"><h2>最近更新</h2><p>完整更新截至 {monitoring.last_completed_cutoff||'—'} · {monitoring.schedule_label||'按需更新'}</p>{monitoring.latest_requested_cutoff&&<p>最近尝试至 {monitoring.latest_requested_cutoff} · {monitoring.latest_update_status==='partial'?'部分完成':'已完成'}</p>}<p>{monitoring.latest_status}</p>{monitoring.last_attempt_at&&<p>尝试时间：{when(monitoring.last_attempt_at)}</p>}<details><summary>更新与异动规则</summary><p>{monitoring.execution}</p><p>{monitoring.rule_summary}</p><p>监测窗口：{monitoring.latest_window?.start||rolling.monitoring.window.start} 至 {monitoring.latest_window?.end||rolling.monitoring.window.end}</p><p>每轮全量回查；通过检查的来源月份独立写入，失败月份保留原资料并标明实际截止。固定来源不因采集失败而从总体中剔除；受影响月份只显示已采样本参考比例，不进入完整期比较。</p></details></section>
+   {research.october_refresh&&<Fold title="十月补采与缺口修正 · 2026-10-07"><p>四个固定媒体来源十月有效日期样本{research.october_refresh.october_media_total}篇，新增入库{research.october_refresh.media_added}篇，其中此前预览{research.october_refresh.promoted_preview}篇已核对并纳入统计。观察截至10月7日采集时点，当日及自然月均未结束。</p><p>十月新增台账{research.october_refresh.added_records}条，原始公告已核{research.october_refresh.primary_verified_records}条；转载和待核线索分别标注，不能当作全市场覆盖。预算、成交、融资及延期分别处理。</p><p>覆盖不足时显示带†标记的已采样本比例；完整来源比例仍保留缺口，不以零替代。采购与部署报道按来源、月份、主题复核状态判定，不再被旧的全局标记遮挡。</p><p>至顶1条原始日期异常仍隔离；华东理工采购栏目仅限校内访问，十月分母未知；鲲鹏目录最新可见仍为6月10日，十月完整性无法确认。定时计划仍暂停。</p><a href="/october-refresh-20261007.json" download>下载十月补采与核查记录</a></Fold>}
+   <Fold title="单次滚动更新 · 2026-10-07"><p>固定媒体新增{manualRefresh.media.rows_added}条归档记录（含历史补录），项目新增{manualRefresh.added_records}条，历史核验升级{manualRefresh.promoted_ids.length}条。数据增加不等于市场需求增长。</p><p>媒体观察窗口至2026-10-04，当前周预览独立保留。至顶有1条目录与正文日期均为2026-10-00，已隔离；10月覆盖不完整，全局成功水位保留在上次日期。</p><p>研报分析新增信息、判断、可比数据及分歧核验，与新闻分母和项目金额分别保存。原定时计划由用户暂停，本次未恢复。</p><a href="/manual-refresh-20261007.json" download>下载本轮更新记录</a></Fold>
    <Fold title={`异动记录 · ${(monitoring.latest_alerts||[]).length} 条`}>{(monitoring.latest_alerts||[]).map((a,i)=><article className="gap-row" key={a.id||i}><h3>{a.title}</h3><p>{a.detail||a.reason}</p>{a.url&&<Link url={a.url}>原文</Link>}{(a.urls||[]).map(url=><p key={url}><Link url={url}>{url}</Link></p>)}</article>)}</Fold>
    <Fold title="金额图表对齐 · 2026-09-24"><p>金额柱图原来只显示所选金额类型，并拆分已核与待核，与合并金额热力表口径不同。现统一采用热力表的去重结果；原始证据、金额类型、区间与核验状态保留。</p></Fold>
    <Fold title="界面调整 · 2026-09-24"><p>月度热力表点击后保留筛选，取消自动跳转。页面长说明、复核与采集归档集中至日志；统计口径和原始数据未修改。</p></Fold>
@@ -30,9 +38,10 @@ export default function ResearchLog({data,research,monitoring,onEdit,method}){
    {research.expansion&&<Fold title={`扩样归档 · ${research.expansion.retrieved_on}`}><p>{research.expansion.summary}</p><p>{research.expansion.limitations}</p>{(research.expansion.sources||[]).map((s,i)=><p key={i}><Link url={s.url}>{s.name||s.host}</Link> · {s.records} 条 · {s.method}</p>)}</Fold>}
   </>}
   {tab==='method'&&<>
+   <KeywordBoardGuide board={board}/>
    <Fold title="市场风向与分类口径">{method}</Fold>
    <Fold title="月度事件与金额口径"><p>事件日优先，未披露时使用发布日期。待核、已核与冲突状态随记录保留；未取得资料不等于没有需求。</p><p>金额热力表、柱图与合并金额读数使用同一份去重汇总，合并预算、成交、合同、投资、报价和预估披露；同一项目或标包采用最新披露一次，同日优先合同与成交。区间保留上下限并按下限着色；单位价格、无金额、失效及冲突项不计。类别可重叠，不跨行相加。</p><p>合并金额不受“证据范围”和“明细金额口径”筛选影响；芯片、金额范围和搜索仍适用。选择分类后，柱图各月数值与对应热力表行一致；“全部分类”按项目去重汇总，不等于各行相加。柱图按区间下限绘制，提示框与读数保留完整区间。其他金额明细保留已核与待核、金额类型的区别。已核与待核列不相加；当月披露保留历史预算，当前有效额按最新修订并排除疑似跨期重复，两列不能相加。芯片筛选显示相关整包金额，不能跨路线相加；原始公告税务口径保留，未统一折算含税价。总投资可能包含土建、能源等，合同可能跨年，披露额不等于服务器销售额、实际支付或市场规模。</p><p>图表中的“—”为缺口或无可汇总金额，不能解释为零；“*”为非完整时期。样本量、颜色和标题提及不能单独证明采用率或市场增长。</p><details><summary>历史研究方法</summary>{Object.entries(research.methodology||{}).map(([key,value])=><p key={key}>{value}</p>)}</details></Fold>
-   <Fold title="采集与导入说明"><p>记录和研究判断可在台账中编辑。保存后图表与导出采用当前数据；同一记录的版本冲突会提示重新加载，已有笔记保留。</p><p>公开栏目检查只读取当前入口；定向检索和单条导入进入研究台账，不改变市场风向的固定新闻分母。公众号仅尝试读取已知文章链接，访问限制与授权状态保留。</p><p>支持 CSV、JSON、TXT、PDF。标题和 HTTPS 原文链接必填，每批最多50条；日期未知留空。金额需填写类型及单位，预计区间通过 JSON 的 amount_range_cny 导入，单位为人民币元。</p><p>相同原文、明确项目编号和标包用于识别重复；不同标包分行，不覆盖已有笔记。新记录保留待核状态。商业 API 未授权时使用公开资料或有权导出的文件，不代表全库接通。</p></Fold>
+   <Fold title="采集与导入说明"><p>公开栏目检查只读取当前入口；定向检索和单条导入进入研究台账，不改变市场风向的固定新闻分母。公众号仅尝试读取已知文章链接，访问限制与授权状态保留。</p><p>支持 CSV、JSON、TXT、PDF。标题和 HTTPS 原文链接必填，每批最多50条；日期未知留空。金额需填写类型及单位，预计区间通过 JSON 的 amount_range_cny 导入，单位为人民币元。</p><p>相同原文、明确项目编号和标包用于识别重复；不同标包分行，不覆盖已有笔记。新记录保留待核状态。商业 API 未授权时使用公开资料或有权导出的文件，不代表全库接通。</p></Fold>
    <Fold title="逐源覆盖与限制">{sampleError&&<p role="alert">{sampleError}</p>}{!samples&&!sampleError&&<p>正在读取…</p>}{(samples?.sources||[]).map(s=><details className="research-record" key={s.id}><summary>{s.name}</summary><div className="record-body"><p>{s.scope}</p><p>{s.method}</p><p>{s.limitation}</p><Link url={s.url}>来源入口</Link>{(s.coverage||[]).map(c=><p key={c.month}>{c.month} · {c.status==='complete'?'覆盖已核对':c.status==='stale'?'沿用旧资料':c.status==='missing'?'缺口':'覆盖不完整'}{c.covered_through&&` · 截至 ${c.covered_through}`} · {c.reason||c.note}</p>)}</div></details>)}{(samples?.unavailable_sources||[]).map(s=><p key={s.name}>{s.name}：{s.reason}</p>)}<a href="/sample-sources.json" download>下载来源覆盖记录</a></Fold>
   </>}
   {tab==='research'&&<>

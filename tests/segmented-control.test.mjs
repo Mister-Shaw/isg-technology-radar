@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {segmentIndex,nextSegmentIndex} from '../lib/segmented-control.js';
+const options=[{id:'one'},{id:'two'},{id:'three'}];
+assert.equal(segmentIndex(options,'two'),1);assert.equal(segmentIndex(options,'unknown'),0);
+assert.equal(nextSegmentIndex(2,'ArrowRight',3),0);assert.equal(nextSegmentIndex(0,'ArrowLeft',3),2);
+assert.equal(nextSegmentIndex(1,'Home',3),0);assert.equal(nextSegmentIndex(1,'End',3),2);
+assert.equal(nextSegmentIndex(0,'ArrowDown',4),1);assert.equal(nextSegmentIndex(3,'ArrowUp',4),2);
+assert.equal(nextSegmentIndex(0,'Enter',3),-1);assert.equal(nextSegmentIndex(0,'ArrowRight',0),-1);
+const read=p=>fs.readFileSync(new URL(p,import.meta.url),'utf8');
+assert(read('../app/keyword-board-controls.jsx').includes('<SegmentedControl'));
+assert(read('../app/report-analysis.jsx').includes('<SegmentedControl'));
+const ui=read('../app/segmented-control.jsx');assert(ui.includes('ResizeObserver'));assert(ui.includes('aria-checked'));assert(ui.includes('target.offsetTop'));
+assert(read('../app/compact.css').includes('prefers-reduced-motion:reduce'));
+console.log('PASS: keyboard selection/wrap, shared board and report controls, responsive indicator, reduced motion');

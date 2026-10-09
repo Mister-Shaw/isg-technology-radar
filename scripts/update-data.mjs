@@ -5,6 +5,7 @@ import {spawnSync} from 'node:child_process';
 import {randomUUID} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {validDate,monthsInWindow,TECHS} from '../lib/model.js';
+import {compactBoardMatches,KEYWORD_RULE_VERSION} from '../lib/keyword-boards.js';
 import {observationCategories} from '../lib/hierarchy.js';
 import {refreshTaxonomy} from './refresh-taxonomy.mjs';
 import {analyze} from './weekly-monitor.mjs';
@@ -18,6 +19,12 @@ export function lastSunday(now=new Date()){
  const today=new Date(now.getTime()+8*3600000).toISOString().slice(0,10);
  return day(today,-(new Date(today+'T00:00:00Z').getUTCDay()||7));
 }
+export function updateCutoff(existing,requested,now=new Date()){
+ const completed=lastSunday(now),end=requested||[existing,completed].sort().at(-1);
+ assert(validDate(end)&&end>=existing&&(end===existing||(new Date(end+'T00:00:00Z').getUTCDay()===0&&end<=completed)),'Use the existing snapshot cutoff or a completed Sunday at or after it');
+ return end;
+}
+export function monitorCutoff(end){return day(end,-new Date(end+'T00:00:00Z').getUTCDay());}
 export function mergeMedia(original,fresh){
  const panel=structuredClone(original),oldEnd=panel.window.end,end=fresh.cutoff,start=fresh.reread_start;
  assert(validDate(start)&&validDate(end)&&validDate(fresh.scanned_through),'Invalid collector dates');
@@ -75,6 +82,8 @@ export function mergeMedia(original,fresh){
   if(old&&['title','url','date'].every(k=>old[k]===r[k]))continue;
   const next={...old,...r,context_class:'other',application_reviewed:false,classification_basis:'title_only',eligible_categories:[],required_categories:[],unknown_categories:[]};
   next.observation_categories=observationCategories(next,'news');
+  next.board_matches=compactBoardMatches(next,'news');next.keyword_rule_version=KEYWORD_RULE_VERSION;
+  next.keyword_context_class='other';next.keyword_behavior_basis='新标题尚待采购与部署行为复核';
   if(old){changed.push({id:r.id,before:{title:old.title,date:old.date,url:old.url},after:{title:r.title,date:r.date,url:r.url}});Object.assign(old,next);}
   else{panel.documents.push(next);byId.set(r.id,next);added.push(r.id);}
  }
@@ -96,7 +105,8 @@ export function mergeMedia(original,fresh){
    const priorThrough=rows.length?(old?.covered_through||(old?.status==='complete'?[oldEnd,monthEnd(month)].sort()[0]:null)):null;
    const oldSuccess=rows.length?(old?.last_success_at||(old?.status==='complete'?(s.last_rechecked_at||original.collected_at):null)):null;
    const status=check.accepted?'complete':rows.length?'stale':'missing';
-   return {month,status,total:rows.length,eligible:rows.filter(d=>!d.superseded).length,covered_through:check.accepted?[end,monthEnd(month)].sort()[0]:priorThrough,last_success_at:check.accepted?fresh.checked_at:oldSuccess,attempted_at:fresh.checked_at,attempted_through:[end,monthEnd(month)].sort()[0],reason:check.reason,note:check.accepted?`本月全量回查通过；全部新闻为分母，当前可访问归档已遍历。`:`${check.reason}；${status==='stale'?'保留旧数据':'本月暂无可用数据'}，不参与本轮可比趋势。`};
+   const reviewStillValid=!rows.some(r=>r.application_reviewed===false);
+   return {...old,month,status,keyword_application_reviewed:reviewStillValid&&old?.keyword_application_reviewed===true,application_reviewed:reviewStillValid&&(old?.application_reviewed??s.application_reviewed??false),total:rows.length,eligible:rows.filter(d=>!d.superseded).length,covered_through:check.accepted?[end,monthEnd(month)].sort()[0]:priorThrough,last_success_at:check.accepted?fresh.checked_at:oldSuccess,attempted_at:fresh.checked_at,attempted_through:[end,monthEnd(month)].sort()[0],reason:check.reason,note:check.accepted?`本月全量回查通过；全部新闻为分母，当前可访问归档已遍历。`:`${check.reason}；${status==='stale'?'保留旧数据':'本月暂无可用数据'}，不参与本轮可比趋势。`};
   });
   s.last_rechecked_at=fresh.checked_at;s.recheck_window={start,end};
   s.limitation=`本轮全量尝试${start}至${end}；成功月份更新，失败月份保留旧资料并单独标记真实截止。全部新闻为分母；历史删除及异标题转载仍可能影响结果。`;
@@ -156,7 +166,7 @@ function main(){
   if(['--dry-run','--help'].includes(key))options[key]=true;
   else{assert(args[i+1]&&!args[i+1].startsWith('--'),`Missing value for ${key}`);options[key]=args[++i];}
  }
- if(options['--help']){console.log('npm run update -- [--dry-run] [--end YYYY-MM-DD] [--python PATH] [--input media-refresh.json] [--research current-backup.json]\nEvery run rescans all four media from public/market-panel.json window.start through the last completed Sunday (Asia/Shanghai). See WEEKLY_UPDATE.md.');return;}
+ if(options['--help']){console.log('npm run update -- [--dry-run] [--end YYYY-MM-DD] [--python PATH] [--input media-refresh.json] [--research current-backup.json]\nEvery run rescans all four media from public/market-panel.json window.start through the later of the saved snapshot cutoff and last completed Sunday (Asia/Shanghai). Weekly comparisons use a completed Sunday. See WEEKLY_UPDATE.md.');return;}
  const outputRoot=path.join(root,'weekly-runs');fs.mkdirSync(outputRoot,{recursive:true});
  const lock=path.join(outputRoot,'update.lock');
  try{fs.mkdirSync(lock);}catch(e){if(e.code==='EEXIST')throw Error('Another update may be running. If it has stopped, remove weekly-runs/update.lock and retry; recovery runs first.');throw e;}
@@ -167,8 +177,7 @@ function main(){
   const original=read(path.join(root,'public/market-panel.json')),samples=read(path.join(root,'public/sample-sources.json')),config=read(path.join(root,'data/weekly-monitor.json'));
   const researchSnapshot=read(options['--research']?path.resolve(options['--research']):path.join(root,'data/research-2026.json')),research=researchSnapshot.research||researchSnapshot;
   assert(Array.isArray(research.events)&&Array.isArray(research.leads),'Invalid research snapshot');
-  const end=options['--end']||lastSunday(),start=original.window.start;
-  assert(validDate(end)&&new Date(end+'T00:00:00Z').getUTCDay()===0&&end<=lastSunday()&&end>=original.window.end,'Use a completed Sunday at or after the current data cutoff');
+  const end=updateCutoff(original.window.end,options['--end']),start=original.window.start,weeklyEnd=monitorCutoff(end);
   let fresh;
   if(options['--input'])fresh=read(path.resolve(options['--input']));
   else{
@@ -181,8 +190,8 @@ function main(){
   assert.equal(fresh.cutoff,end,'Input cutoff differs from --end');assert.equal(fresh.reread_start,start,'Input must cover the full research window, not an incremental batch');
   const {panel,summary,candidates,preview,deferred}=mergeMedia(original,fresh);
   const statePath=path.join(outputRoot,'last-success.json');
-  const previous=fs.existsSync(statePath)?read(statePath):analyze(original,research,null,config,config.last_completed_cutoff||config.baseline_as_of||original.window.end).next_state;
-  const monitor=analyze(panel,research,previous,config,end);
+  const previous=fs.existsSync(statePath)?read(statePath):analyze(original,research,null,config,monitorCutoff(config.last_completed_cutoff||config.baseline_as_of||original.window.end)).next_state;
+  const monitor=analyze(panel,research,previous,config,weeklyEnd);
   monitor.alerts.push(...summary.source_month_checks.filter(c=>!c.accepted).map(c=>({id:`coverage:${end}:${c.source_id}:${c.month}`,type:'quality',source_id:c.source_id,month:c.month,title:`${c.source_id} ${c.month} 更新待补齐`,detail:`${c.reason}；成功月份已独立处理，该月保留旧数据且暂停可比趋势。`})));
   write(path.join(output,'report.json'),{...summary,dry_run:!!options['--dry-run'],monitor_complete:monitor.complete,applied:false});
   write(path.join(output,'monitor.json'),monitor);write(path.join(output,'research-candidates.json'),candidates);write(path.join(output,'preview-news.json'),preview);

@@ -14,7 +14,12 @@
     "test": "node --test tests/*.test.mjs",
     "update": "node scripts/update-data.mjs",
     "db:init": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 migrations apply DB --local --config wrangler.jsonc --persist-to .wrangler/state",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "prepare": "node scripts/prepare-snapshot.mjs",
+    "predev": "node scripts/prepare-snapshot.mjs",
+    "prebuild": "node scripts/prepare-snapshot.mjs",
+    "pretest": "node scripts/prepare-snapshot.mjs",
+    "preupdate": "node scripts/prepare-snapshot.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

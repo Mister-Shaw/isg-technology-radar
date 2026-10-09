@@ -1,0 +1,473 @@
+{
+  "rule_version": "three-boards-2026-10-08.v1",
+  "source": {
+    "name": "三看板关键词.xlsx",
+    "extraction": "Exact vocabulary supplied by the parent from the user-uploaded workbook; aliases are separate and not workbook values."
+  },
+  "boards": [
+    {
+      "id": "business",
+      "name": "业务方向",
+      "categories": [
+        {
+          "id": "business_heterogeneous_ai",
+          "name": "万全异构智算方案",
+          "source_name": "异构智算",
+          "keywords": [
+            "模型工厂",
+            "模型车间",
+            "词元工厂",
+            "词元车间",
+            "AI一体机",
+            "异构智算",
+            "Token工厂",
+            "Token车间",
+            "AI工厂",
+            "AI加速"
+          ]
+        },
+        {
+          "id": "business_servers",
+          "name": "服务器",
+          "source_name": "服务器",
+          "keywords": [
+            "通算",
+            "超算",
+            "超融合",
+            "天数天算",
+            "智算",
+            "超节点"
+          ]
+        },
+        {
+          "id": "business_storage",
+          "name": "存储",
+          "source_name": "存储",
+          "keywords": [
+            "传统存储",
+            "软件定义存储",
+            "AI存储",
+            "CXL",
+            "CMX",
+            "分层存储"
+          ]
+        },
+        {
+          "id": "business_network",
+          "name": "数据网络",
+          "source_name": "网络",
+          "keywords": [
+            "IP网络",
+            "IB网络",
+            "光模块"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "components",
+      "name": "核心部件",
+      "categories": [
+        {
+          "id": "components_cpu",
+          "name": "CPU芯片",
+          "source_name": "CPU芯片",
+          "keywords": [
+            "X86",
+            "ARM"
+          ]
+        },
+        {
+          "id": "components_accelerators",
+          "name": "加速芯片",
+          "source_name": "加速芯片",
+          "keywords": [
+            "GPU",
+            "TPU",
+            "LPU",
+            "RPU",
+            "ASIC"
+          ]
+        },
+        {
+          "id": "components_storage",
+          "name": "存储部件",
+          "source_name": "存储部件",
+          "keywords": [
+            "Mem",
+            "SSD",
+            "CXL"
+          ]
+        },
+        {
+          "id": "components_liquid_cooling",
+          "name": "液冷散热",
+          "source_name": "液冷散热",
+          "keywords": [
+            "冷板",
+            "CDU",
+            "液冷"
+          ]
+        },
+        {
+          "id": "components_interconnect",
+          "name": "高速互联",
+          "source_name": "高速互联",
+          "keywords": [
+            "光互联",
+            "光交换芯片",
+            "光模块",
+            "CPO",
+            "NPO",
+            "LPO"
+          ]
+        },
+        {
+          "id": "components_power_systems",
+          "name": "电源系统",
+          "source_name": "电源系统",
+          "keywords": [
+            "电源设备",
+            "储能系统"
+          ]
+        },
+        {
+          "id": "components_power_modules",
+          "name": "供电模块",
+          "source_name": "供电模块",
+          "keywords": [
+            "VRM",
+            "MLCC"
+          ]
+        },
+        {
+          "id": "components_signal",
+          "name": "信号传输",
+          "source_name": "信号传输",
+          "keywords": [
+            "PCB",
+            "Pcle Switch"
+          ]
+        },
+        {
+          "id": "components_management",
+          "name": "管理&控制",
+          "source_name": "管理&控制",
+          "keywords": [
+            "BMC",
+            "CPLD"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scenarios",
+      "name": "场景生态",
+      "categories": [
+        {
+          "id": "scenarios_compute_field",
+          "name": "算力场",
+          "source_name": "算力场",
+          "keywords": [
+            "算力场"
+          ]
+        },
+        {
+          "id": "scenarios_eda",
+          "name": "EDA",
+          "source_name": "EDA",
+          "keywords": [
+            "EDA"
+          ]
+        },
+        {
+          "id": "scenarios_compute_rental",
+          "name": "算力租赁",
+          "source_name": "算力租赁",
+          "keywords": [
+            "算力租赁"
+          ]
+        },
+        {
+          "id": "scenarios_token_factory",
+          "name": "Token工厂",
+          "source_name": "Token工厂",
+          "keywords": [
+            "Token工厂"
+          ]
+        },
+        {
+          "id": "scenarios_aidc",
+          "name": "AIDC",
+          "source_name": "AIDC",
+          "keywords": [
+            "AIDC"
+          ]
+        },
+        {
+          "id": "scenarios_modular_dc",
+          "name": "模块化数据中心",
+          "source_name": "模块化数据中心",
+          "keywords": [
+            "模块化数据中心"
+          ]
+        },
+        {
+          "id": "scenarios_pilot_field",
+          "name": "中试场",
+          "source_name": "中试场",
+          "keywords": [
+            "中试场"
+          ]
+        },
+        {
+          "id": "scenarios_turing_town",
+          "name": "图灵小镇",
+          "source_name": "图灵小镇",
+          "keywords": [
+            "图灵小镇"
+          ]
+        }
+      ]
+    }
+  ],
+  "aliases": {
+    "模型工厂": [
+      "model factory"
+    ],
+    "模型车间": [
+      "model workshop"
+    ],
+    "词元工厂": [],
+    "词元车间": [],
+    "AI一体机": [
+      "AI 一体机",
+      "AI all-in-one",
+      "AI all in one",
+      "AI appliance"
+    ],
+    "异构智算": [
+      "heterogeneous AI computing",
+      "heterogeneous intelligent computing"
+    ],
+    "Token工厂": [
+      "Token 工厂",
+      "token factory",
+      "词元工厂"
+    ],
+    "Token车间": [
+      "Token 车间",
+      "token workshop"
+    ],
+    "AI工厂": [
+      "AI 工厂",
+      "AI factory"
+    ],
+    "AI加速": [
+      "AI 加速",
+      "AI acceleration",
+      "AI accelerator",
+      "AI accelerators"
+    ],
+    "通算": [
+      "general-purpose computing",
+      "general purpose computing"
+    ],
+    "超算": [
+      "supercomputing",
+      "supercomputer",
+      "supercomputers"
+    ],
+    "超融合": [
+      "hyperconverged",
+      "hyper-converged",
+      "hyper converged"
+    ],
+    "天数天算": [],
+    "智算": [
+      "intelligent computing"
+    ],
+    "超节点": [
+      "supernode",
+      "super node"
+    ],
+    "传统存储": [
+      "traditional storage"
+    ],
+    "软件定义存储": [
+      "software-defined storage",
+      "software defined storage"
+    ],
+    "AI存储": [
+      "AI 存储",
+      "AI storage"
+    ],
+    "CXL": [],
+    "CMX": [],
+    "分层存储": [
+      "tiered storage",
+      "storage tiering"
+    ],
+    "IP网络": [
+      "IP 网络",
+      "IP network",
+      "IP networks"
+    ],
+    "IB网络": [
+      "IB 网络",
+      "IB network",
+      "IB networks",
+      "InfiniBand network",
+      "InfiniBand networks",
+      "InfiniBand 网络"
+    ],
+    "光模块": [
+      "optical module",
+      "optical modules",
+      "optical transceiver",
+      "optical transceivers"
+    ],
+    "X86": [],
+    "ARM": [],
+    "GPU": [
+      "GPUs"
+    ],
+    "TPU": [
+      "TPUs"
+    ],
+    "LPU": [
+      "LPUs"
+    ],
+    "RPU": [
+      "RPUs"
+    ],
+    "ASIC": [
+      "ASICs"
+    ],
+    "Mem": [
+      "memory",
+      "内存"
+    ],
+    "SSD": [
+      "SSDs",
+      "solid-state drive",
+      "solid state drive",
+      "固态硬盘"
+    ],
+    "冷板": [
+      "cold plate",
+      "cold plates"
+    ],
+    "CDU": [
+      "coolant distribution unit"
+    ],
+    "液冷": [
+      "liquid cooling",
+      "liquid-cooled",
+      "liquid cooled"
+    ],
+    "光互联": [
+      "optical interconnect",
+      "optical interconnects"
+    ],
+    "光交换芯片": [
+      "optical switch chip",
+      "optical switching chip"
+    ],
+    "CPO": [
+      "co-packaged optics",
+      "co packaged optics"
+    ],
+    "NPO": [
+      "near-packaged optics",
+      "near packaged optics"
+    ],
+    "LPO": [
+      "linear pluggable optics"
+    ],
+    "电源设备": [
+      "power supply equipment"
+    ],
+    "储能系统": [
+      "energy storage system",
+      "energy storage systems"
+    ],
+    "VRM": [
+      "voltage regulator module"
+    ],
+    "MLCC": [
+      "multilayer ceramic capacitor",
+      "multi-layer ceramic capacitor"
+    ],
+    "PCB": [
+      "printed circuit board"
+    ],
+    "Pcle Switch": [
+      "PCIe Switch",
+      "PCIe交换机",
+      "PCIe 交换机",
+      "PCIe交换芯片",
+      "PCIe 交换芯片"
+    ],
+    "BMC": [
+      "baseboard management controller"
+    ],
+    "CPLD": [
+      "complex programmable logic device"
+    ],
+    "算力场": [],
+    "EDA": [
+      "electronic design automation",
+      "电子设计自动化"
+    ],
+    "算力租赁": [
+      "compute rental",
+      "computing power rental",
+      "GPU rental",
+      "算力租用",
+      "GPU租赁",
+      "GPU 租赁",
+      "智算租赁"
+    ],
+    "AIDC": [
+      "AI data center",
+      "AI data centre",
+      "AI 数据中心",
+      "人工智能数据中心",
+      "智算中心",
+      "智能计算中心"
+    ],
+    "模块化数据中心": [
+      "modular data center",
+      "modular data centre"
+    ],
+    "中试场": [],
+    "图灵小镇": [
+      "Turing town"
+    ]
+  },
+  "semantics": {
+    "news_fields": [
+      "title"
+    ],
+    "research_fields": [
+      "title",
+      "fact_summary"
+    ],
+    "match_fields": [
+      "board",
+      "category",
+      "keyword",
+      "matched",
+      "field",
+      "rule_version"
+    ],
+    "cmx": "Literal only; warning CMX_needs_context; no invented expansion",
+    "scope": "Exclude explicit consumer/automotive-only titles unless permitted factual fields also explicitly identify enterprise/server/AIDC infrastructure",
+    "intentional_cross_board_overlap": [
+      "CXL",
+      "光模块",
+      "Token工厂"
+    ]
+  }
+}
