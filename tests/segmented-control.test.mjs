@@ -9,7 +9,7 @@ assert.equal(nextSegmentIndex(0,'ArrowDown',4),1);assert.equal(nextSegmentIndex(
 assert.equal(nextSegmentIndex(0,'Enter',3),-1);assert.equal(nextSegmentIndex(0,'ArrowRight',0),-1);
 const read=p=>fs.readFileSync(new URL(p,import.meta.url),'utf8');
 assert(read('../app/keyword-board-controls.jsx').includes('<SegmentedControl'));
-assert(read('../app/report-analysis.jsx').includes('<SegmentedControl'));
+assert(!read('../app/report-analysis.jsx').includes('report-business-tabs'));
 const ui=read('../app/segmented-control.jsx');assert(ui.includes('ResizeObserver'));assert(ui.includes('aria-checked'));assert(ui.includes('target.offsetTop'));
 assert(read('../app/compact.css').includes('prefers-reduced-motion:reduce'));
-console.log('PASS: keyboard selection/wrap, shared board and report controls, responsive indicator, reduced motion');
+console.log('PASS: keyboard selection/wrap, board controls and unified report overview, responsive indicator, reduced motion');
