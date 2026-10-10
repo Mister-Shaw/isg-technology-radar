@@ -1,0 +1,710 @@
+{
+  "id": "news-event-correction-20261010",
+  "baseline_version": 87,
+  "baseline_commit": "daccf2a80aaa71a490995ee7d20ef3f49a876b74",
+  "checked_on": "2026-10-10",
+  "changes": [
+    {
+      "id": "exp-gt-token-0723",
+      "before": {
+        "stage": "framework",
+        "stage_label": null,
+        "event_key": "GT（采）20260717|全项目公告（不与分包叠加）|framework|2026-07-23"
+      },
+      "after": {
+        "stage": "tender",
+        "stage_label": "正式采购",
+        "event_key": "GT（采）20260717|全项目公告（不与分包叠加）|tender|2026-07-23"
+      },
+      "reason": "原文题头“谈判采购”且公开邀请供应商参加；stage framework在站点显示“框架入围”，将采购启动错误提前为入围。原文1.3有采购人，当前customer空也使该记录不进入项目指标。原文仅token服务，不支持旧token_factory标签，现三看板未命中Token工厂是正确的。",
+      "verification_level": "original_source_reopened_2026-10-10",
+      "source_url": "https://cg.gt.cn/cgxx/002001/20260723/1d872f1e-ee6f-4775-adab-d090de1aac75.html"
+    },
+    {
+      "id": "infra-20260122-tuoli-start",
+      "before": {
+        "stage": "intent",
+        "stage_label": null,
+        "event_key": "https://www.xjtc.gov.cn/ywdt/jrtc/jjdt/content_59080|intent|2026-01-19"
+      },
+      "after": {
+        "stage": "construction",
+        "stage_label": "建设进展",
+        "event_key": "https://www.xjtc.gov.cn/ywdt/jrtc/jjdt/content_59080|construction|2026-01-19"
+      },
+      "reason": "官方正文明确已开工，intent不足以表达已发生的建设节点。",
+      "verification_level": "source_fulltext_reopened",
+      "source_url": "https://www.xjtc.gov.cn/ywdt/jrtc/jjdt/content_59080"
+    },
+    {
+      "id": "proc-3a958d570a75",
+      "before": {
+        "stage": "research",
+        "stage_label": "技术 / 研究",
+        "event_key": "TC260N07J|research|2026-08-28"
+      },
+      "after": {
+        "stage": "cancel",
+        "stage_label": "取消",
+        "event_key": "TC260N07J|cancel|2026-08-28"
+      },
+      "reason": "标题明确终止，摘要为cancelled，映射成技术/研究会漏掉项目取消阶段。",
+      "verification_level": "source_shell_only_reopened",
+      "source_url": "https://www.cntcitc.com.cn/more.html?chanType=3&chanId=14&contentId=19d74f530a4d47b789a220a3618dcc92"
+    },
+    {
+      "id": "proc-ff6fa123ac1c",
+      "before": {
+        "stage": "research",
+        "stage_label": "技术 / 研究",
+        "event_key": "SP2810260200015090|research|2026-03-12"
+      },
+      "after": {
+        "stage": "cancel",
+        "stage_label": "取消",
+        "event_key": "SP2810260200015090|cancel|2026-03-12"
+      },
+      "reason": "标题明确终止，摘要为cancelled，映射成技术/研究会漏掉项目取消阶段。",
+      "verification_level": "stored_record_semantic_review",
+      "source_url": "https://www.cntcitc.com.cn/more.html?chanType=3&chanId=14&contentId=7b25019018c040c9bae4783287349f69"
+    },
+    {
+      "id": "proc-7d5eb19f65bd",
+      "before": {
+        "stage": "research",
+        "stage_label": "技术 / 研究",
+        "event_key": "052GSH2026020|research|2026-05-11"
+      },
+      "after": {
+        "stage": "cancel",
+        "stage_label": "取消",
+        "event_key": "052GSH2026020|cancel|2026-05-11"
+      },
+      "reason": "标题明确终止，摘要为cancelled，映射成技术/研究会漏掉项目取消阶段。",
+      "verification_level": "stored_record_semantic_review",
+      "source_url": "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/e9c242e117e04d05a8f4a6485cecc268.html"
+    },
+    {
+      "id": "proc-18c3de2101c0",
+      "before": {
+        "stage": "research",
+        "stage_label": "技术 / 研究",
+        "event_key": "RH-WTGK2025098-2|research|2026-03-04"
+      },
+      "after": {
+        "stage": "cancel",
+        "stage_label": "取消",
+        "event_key": "RH-WTGK2025098-2|cancel|2026-03-04"
+      },
+      "reason": "标题明确终止，摘要为cancelled，映射成技术/研究会漏掉项目取消阶段。",
+      "verification_level": "stored_record_semantic_review",
+      "source_url": "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/2c96d1ac9caa0d83019cb63edaf0426e.html"
+    },
+    {
+      "id": "proc-206435de9f22",
+      "before": {
+        "stage": "research",
+        "stage_label": "技术 / 研究",
+        "event_key": "RH-WTGK2025098-1|research|2026-03-04"
+      },
+      "after": {
+        "stage": "cancel",
+        "stage_label": "取消",
+        "event_key": "RH-WTGK2025098-1|cancel|2026-03-04"
+      },
+      "reason": "标题明确终止，摘要为cancelled，映射成技术/研究会漏掉项目取消阶段。",
+      "verification_level": "stored_record_semantic_review",
+      "source_url": "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/2c96d1ad9caa0d72019cb63bb7d341b7.html"
+    },
+    {
+      "id": "proc-45190bb68b09",
+      "before": {
+        "stage": "research",
+        "stage_label": "技术 / 研究",
+        "event_key": "056GSH2026065|research|2026-09-11"
+      },
+      "after": {
+        "stage": "cancel",
+        "stage_label": "取消",
+        "event_key": "056GSH2026065|cancel|2026-09-11"
+      },
+      "reason": "标题明确终止，摘要为cancelled，映射成技术/研究会漏掉项目取消阶段。",
+      "verification_level": "stored_record_semantic_review",
+      "source_url": "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/945bc9c3e48d475d93416b6b992c8ffe.html"
+    },
+    {
+      "id": "proc-d862a1c5e5c0",
+      "before": {
+        "stage": "research",
+        "stage_label": "技术 / 研究",
+        "event_key": "0733-26162292/2|research|2026-06-26"
+      },
+      "after": {
+        "stage": "cancel",
+        "stage_label": "取消",
+        "event_key": "0733-26162292/2|cancel|2026-06-26"
+      },
+      "reason": "标题明确终止，摘要为cancelled，映射成技术/研究会漏掉项目取消阶段。",
+      "verification_level": "stored_record_semantic_review",
+      "source_url": "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/206bc1e88d374e7182920186a94625fb.html"
+    },
+    {
+      "id": "proc-789cc92dbdf0",
+      "before": {
+        "stage": "research",
+        "stage_label": "技术 / 研究",
+        "event_key": "0613-266021382320|research|2026-06-11"
+      },
+      "after": {
+        "stage": "cancel",
+        "stage_label": "取消",
+        "event_key": "0613-266021382320|cancel|2026-06-11"
+      },
+      "reason": "标题明确终止，摘要为cancelled，映射成技术/研究会漏掉项目取消阶段。",
+      "verification_level": "stored_record_semantic_review",
+      "source_url": "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/17b461d33dcd4beb8ad5cf87046e81f6.html"
+    },
+    {
+      "id": "proc-234187110e07",
+      "before": {
+        "stage": "research",
+        "stage_label": "技术 / 研究",
+        "event_key": "0613-266021380873|research|2026-04-02"
+      },
+      "after": {
+        "stage": "cancel",
+        "stage_label": "取消",
+        "event_key": "0613-266021380873|cancel|2026-04-02"
+      },
+      "reason": "标题明确终止，摘要为cancelled，映射成技术/研究会漏掉项目取消阶段。",
+      "verification_level": "stored_record_semantic_review",
+      "source_url": "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/1477748286834cb98481f6f7f16b37ec.html"
+    },
+    {
+      "id": "exp-gt-token-0723",
+      "before": {
+        "customer": ""
+      },
+      "after": {
+        "customer": "中国通用技术（集团）控股有限责任公司"
+      },
+      "reason": "原文题头“谈判采购”且公开邀请供应商参加；stage framework在站点显示“框架入围”，将采购启动错误提前为入围。原文1.3有采购人，当前customer空也使该记录不进入项目指标。原文仅token服务，不支持旧token_factory标签，现三看板未命中Token工厂是正确的。",
+      "verification_level": "original_source_reopened_2026-10-10",
+      "source_url": "https://cg.gt.cn/cgxx/002001/20260723/1d872f1e-ee6f-4775-adab-d090de1aac75.html"
+    },
+    {
+      "id": "rescan-840bb339b561",
+      "before": {
+        "customer": ""
+      },
+      "after": {
+        "customer": "中国电信（建设/运营主体；非据此证明采购法律主体）"
+      },
+      "reason": "原文7月9日上线11520卡30超节点，明确中国电信与华为联合打造。customer空导致当前项目指标漏计；政府页面标来源韶关日报且文末转载，来源承载方与原始发布者须分开。不要将全市已投产5集群或4万P另算本次新增。",
+      "verification_level": "original_source_reopened_2026-10-10",
+      "source_url": "https://www.sg.gov.cn/xw/tpxw/content/post_2862321.html"
+    },
+    {
+      "id": "proc-e239a88ebb59",
+      "before": {
+        "customer": ""
+      },
+      "after": {
+        "customer": "中国人民银行清算总中心"
+      },
+      "reason": "通过搜索返回的同公告官方参数URL读取正文，采购人字段明确中国人民银行清算总中心；当前buyer+tender但customer空导致未计买方采购项目。不得把后续包1变更与包2终止混成同一状态。",
+      "verification_level": "original_source_reopened_2026-10-10",
+      "source_url": "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/9fc965bf606e46c78bd07f53de10aed0.html"
+    },
+    {
+      "id": "rescan-840bb339b561",
+      "before": {
+        "lineage": null,
+        "original_publisher": null,
+        "source_host": null
+      },
+      "after": {
+        "lineage": "韶关日报原始报道 → 韶关市人民政府网站转载",
+        "original_publisher": "韶关日报",
+        "source_host": "韶关市人民政府网站"
+      },
+      "reason": "区分政府承载域名与报纸原始发布者；保留来源角色及全文核验等级。",
+      "verification_level": "original_source_reopened_2026-10-10",
+      "source_url": "https://www.sg.gov.cn/xw/tpxw/content/post_2862321.html"
+    },
+    {
+      "id": "rec-svc-20260318-univista-uda2",
+      "before": {
+        "event_key": "https://www.univista-isg.com/site/news_detail/512|launch|2026-03-18",
+        "project_id": "univista-uda2-2026"
+      },
+      "after": {
+        "event_key": "univista-uda2-launch|launch|2026-03-18",
+        "project_id": "univista-uda2-launch"
+      },
+      "reason": "完全相同原文URL，日期同为3/18，均发布UDA2.0；两个project_id/event_key不同。",
+      "verification_level": "title_summary_limitations_programmatic_screening",
+      "source_url": "https://www.univista-isg.com/site/news_detail/512"
+    },
+    {
+      "id": "vendor-rescan-h3c-29ca2abe1175",
+      "before": {
+        "event_key": "source-record:vendor-rescan-h3c-29ca2abe1175",
+        "project_id": "source-record:vendor-rescan-h3c-29ca2abe1175"
+      },
+      "after": {
+        "event_key": "audit-h3c-xiamen-case-20260916|research|2026-09-16",
+        "project_id": "audit-h3c-xiamen-case-20260916"
+      },
+      "reason": "wwwsg.h3c.com与www.h3c.com同路径2917843_30008_0.htm、9/16同案例，摘要涉及相同7地域5服务商近20种GPU。",
+      "verification_level": "title_summary_limitations_programmatic_screening",
+      "source_url": "https://wwwsg.h3c.com/cn/d_202609/2917843_30008_0.htm"
+    },
+    {
+      "id": "supp-proc-136cf38e457f",
+      "before": {
+        "event_key": "telecom-shaoguan-ascend910c-20260709|production|2026-07-10",
+        "project_id": "telecom-shaoguan-ascend910c-20260709"
+      },
+      "after": {
+        "event_key": "source-record:rescan-840bb339b561",
+        "project_id": "source-record:rescan-840bb339b561"
+      },
+      "reason": "同7/9中国电信韶关昇腾910C万卡集群上线，7/10报道；地方政府原文与电信索引是同事件不同证据。",
+      "verification_level": "title_summary_limitations_programmatic_screening",
+      "source_url": "https://www.chinatelecom.com.cn/ct/news/jtxw/167641.html"
+    },
+    {
+      "id": "exp-compute-2a917d686366",
+      "before": {
+        "event_key": "exp-compute-2a917d686366",
+        "project_id": "exp-compute-2a917d686366"
+      },
+      "after": {
+        "event_key": "rem-mthreads-prefill-paper-20260824",
+        "project_id": "rem-mthreads-prefill-paper-20260824"
+      },
+      "reason": "同8/24发布MTT S5000 Prefill-as-a-Service白皮书，DOIT报道与厂商官网应关联同发布事件。",
+      "verification_level": "title_summary_limitations_programmatic_screening",
+      "source_url": "https://www.doit.com.cn/ai/841783326576709.html"
+    },
+    {
+      "id": "exp-infra-idc-06-02",
+      "before": {
+        "related_record_ids": null,
+        "note": null
+      },
+      "after": {
+        "related_record_ids": [
+          "audit-news-20261010-ali-jinshan-intent"
+        ],
+        "note": "3月9日整体战略合作见audit-news-20261010-ali-jinshan-intent；三期节能审查与整体合作边界未证实一致，不合并项目或金额。"
+      },
+      "reason": "关联新闻与既有项目事实，保留不同阶段与范围",
+      "verification_level": "audited_news_evidence",
+      "source_url": "https://news.idcquan.com/news/207597.shtml"
+    },
+    {
+      "id": "rescan-27f9fcc9aa0b",
+      "before": {
+        "news_record_ids": null,
+        "note": null
+      },
+      "after": {
+        "news_record_ids": [
+          "doit-844263652171845"
+        ],
+        "note": "DOIT 2026-09-01报道与本条8月30日落成事件关联，新闻样本保留，不重复新建事件。"
+      },
+      "reason": "关联新闻与既有项目事实，保留不同阶段与范围",
+      "verification_level": "audited_news_evidence",
+      "source_url": "https://www.beijing.gov.cn/fuwu/lqfw/gggs/202609/t20260901_4845371.html"
+    }
+  ],
+  "unchanged_review_candidates": {
+    "background_priority": 48,
+    "production_evidence": 12,
+    "medium_confidence_event_alias": 1,
+    "missing_buyer_pending_fulltext": 1
+  },
+  "scope_note": "原有广义事件允许政策、产品发布及研究背景；未将候选批量删除。新闻文章分母及标题关键词不变。",
+  "shared_state_check": "Sites owner database read: 22 record identities, only shared-research monthly_notes:2026-01; no shared event/lead overrides at review time. No D1 writes.",
+  "added_records": [
+    "audit-news-20261010-ali-jinshan-intent",
+    "audit-news-20261010-qinghai-compute-tender",
+    "audit-news-20261010-qinghai-compute-candidate",
+    "audit-news-20261010-cm-inference-lot1-candidate",
+    "audit-news-20261010-cm-inference-lot2-candidate",
+    "audit-news-20261010-cm-component-renewal-candidate",
+    "audit-news-20261010-ct-guangdong-south-candidate",
+    "audit-news-20261010-cm-hainan-phase2-repeat",
+    "audit-news-20261010-kunlun-lot1-award",
+    "audit-news-20261010-kunlun-lot2-failure"
+  ],
+  "news_links": [
+    {
+      "news_id": "c114-1306635",
+      "news_url": "https://www.c114.com.cn/news/16/a1306635.html",
+      "finding_id": "NEWS-001",
+      "related_record_ids": [
+        "audit-news-20261010-ali-jinshan-intent"
+      ],
+      "relationship": "same_event_media_report",
+      "retain_news_record": true,
+      "note": "政府原文证明2026-03-09签署战略合作协议，加速中心建设。静态库已有exp-infra-idc-06-02“阿里飞天云智能华东算力中心（三期）项目顺利通过节能审查”（reported_update_date=2026-06-05，月报发布日期及published_date=2026-07-20，event_date为空）。二者属于同名中心不同范围/阶段，应优先关联项目并核三期与整体关系；本项缺口仅指3/9签约里程碑，不是整个项目未收录。不能根据新闻“加速投产”认定已投运。400亿元来自2021年既有项目整体投资，不能列为2026新增投资或合同额。",
+      "news_title": "总投资400亿元：阿里云基于“真武”芯片加速投产金山算力中心",
+      "record_ids": [
+        "audit-news-20261010-ali-jinshan-intent"
+      ],
+      "records": [
+        {
+          "id": "audit-news-20261010-ali-jinshan-intent",
+          "title": "金山区与阿里云签署金山算力中心战略合作协议",
+          "stage": "intent",
+          "url": "https://www.shanghai.gov.cn/nw15343/20260310/f2971ad54e3b47c6a5d6dcd400ffc00d.html?siteId=1"
+        }
+      ]
+    },
+    {
+      "news_id": "doit-809849041158213",
+      "news_url": "https://www.doit.com.cn/p/554683.html",
+      "finding_id": "NEWS-001",
+      "related_record_ids": [
+        "audit-news-20261010-ali-jinshan-intent"
+      ],
+      "relationship": "same_event_media_report",
+      "retain_news_record": true,
+      "note": "政府原文证明2026-03-09签署战略合作协议，加速中心建设。静态库已有exp-infra-idc-06-02“阿里飞天云智能华东算力中心（三期）项目顺利通过节能审查”（reported_update_date=2026-06-05，月报发布日期及published_date=2026-07-20，event_date为空）。二者属于同名中心不同范围/阶段，应优先关联项目并核三期与整体关系；本项缺口仅指3/9签约里程碑，不是整个项目未收录。不能根据新闻“加速投产”认定已投运。400亿元来自2021年既有项目整体投资，不能列为2026新增投资或合同额。",
+      "news_title": "阿里云金山算力中心加速投产，基于“真武”芯片建设超大规模算力中心",
+      "record_ids": [
+        "audit-news-20261010-ali-jinshan-intent"
+      ],
+      "records": [
+        {
+          "id": "audit-news-20261010-ali-jinshan-intent",
+          "title": "金山区与阿里云签署金山算力中心战略合作协议",
+          "stage": "intent",
+          "url": "https://www.shanghai.gov.cn/nw15343/20260310/f2971ad54e3b47c6a5d6dcd400ffc00d.html?siteId=1"
+        }
+      ]
+    },
+    {
+      "news_id": "c114-1313976",
+      "news_url": "https://www.c114.com.cn/news/119/a1313976.html",
+      "finding_id": "NEWS-002",
+      "related_record_ids": [
+        "audit-news-20261010-qinghai-compute-tender"
+      ],
+      "relationship": "same_event_media_report",
+      "retain_news_record": true,
+      "note": "7月15日招标，青海西宁，256节点、4608PFLOPS、60个月服务；17.58亿元是预算。与NEWS-003同项目不同阶段，不能算两个项目或叠加金额。",
+      "news_title": "总预算约17.58亿元 青海联通绿电智算启动4608PFLOPS算力服务招标",
+      "record_ids": [
+        "audit-news-20261010-qinghai-compute-tender"
+      ],
+      "records": [
+        {
+          "id": "audit-news-20261010-qinghai-compute-tender",
+          "title": "联通青海4608PFLOPS算力服务项目招标（媒体待核）",
+          "stage": "tender",
+          "url": "https://www.c114.com.cn/news/119/a1313976.html"
+        }
+      ]
+    },
+    {
+      "news_id": "c114-1315183",
+      "news_url": "https://www.c114.com.cn/news/119/a1315183.html",
+      "finding_id": "NEWS-003",
+      "related_record_ids": [
+        "audit-news-20261010-qinghai-compute-candidate"
+      ],
+      "relationship": "same_event_media_report",
+      "retain_news_record": true,
+      "note": "报道页日期8月4日，正文写8月3日消息、昨日公示，同时记载7月31日开评标。须核采购平台确定公示实际日期，不能机械把报道日当事件日。170501.8368万元为第一候选人不含税报价，不是成交或合同；与7月15日预算不可相加。",
+      "news_title": "联通青海绿电智算17亿元算力服务项目公示：元角图灵为第一中标候选人",
+      "record_ids": [
+        "audit-news-20261010-qinghai-compute-candidate"
+      ],
+      "records": [
+        {
+          "id": "audit-news-20261010-qinghai-compute-candidate",
+          "title": "联通青海4608PFLOPS算力服务项目候选公示（媒体待核）",
+          "stage": "candidate",
+          "url": "https://www.c114.com.cn/news/119/a1315183.html"
+        }
+      ]
+    },
+    {
+      "news_id": "c114-1303838",
+      "news_url": "https://www.c114.com.cn/news/118/a1303838.html",
+      "finding_id": "NEWS-004",
+      "related_record_ids": [
+        "audit-news-20261010-cm-inference-lot1-candidate"
+      ],
+      "relationship": "same_event_media_report",
+      "retain_news_record": true,
+      "note": "1月12日报道2025至2026年度推理设备补充采购包1候选公示（CANN生态285台），不是正式中标。整次441台含包2的156台；不应把441重复计入两个标包。文中“今年上半年/8月份”与1月发布日期冲突，是背景年份待核，不用于本次事件日期。",
+      "news_title": "中国移动AI推理服务器集采：昆仑技术等三家中标",
+      "record_ids": [
+        "audit-news-20261010-cm-inference-lot1-candidate"
+      ],
+      "records": [
+        {
+          "id": "audit-news-20261010-cm-inference-lot1-candidate",
+          "title": "中国移动441台AI推理服务器补采包1候选公示（媒体待核）",
+          "stage": "candidate",
+          "url": "https://www.c114.com.cn/news/118/a1303838.html"
+        }
+      ]
+    },
+    {
+      "news_id": "c114-1304569",
+      "news_url": "https://www.c114.com.cn/news/118/a1304569.html",
+      "finding_id": "NEWS-005",
+      "related_record_ids": [
+        "audit-news-20261010-cm-inference-lot2-candidate"
+      ],
+      "relationship": "same_event_media_report",
+      "retain_news_record": true,
+      "note": "1月27日报道同一441台补充采购包2候选公示（类CUDA生态156台）。与NEWS-004是同项目不同标包公示，不是独立项目，也不是一条重复新闻。不得把文中既往7058台/50亿元主集采加入本期补采金额。",
+      "news_title": "中国移动AI推理服务器集采：新华三、浪潮中标",
+      "record_ids": [
+        "audit-news-20261010-cm-inference-lot2-candidate"
+      ],
+      "records": [
+        {
+          "id": "audit-news-20261010-cm-inference-lot2-candidate",
+          "title": "中国移动441台AI推理服务器补采包2候选公示（媒体待核）",
+          "stage": "candidate",
+          "url": "https://www.c114.com.cn/news/118/a1304569.html"
+        }
+      ]
+    },
+    {
+      "news_id": "c114-1316625",
+      "news_url": "https://www.c114.com.cn/news/118/a1316625.html",
+      "finding_id": "NEWS-006",
+      "related_record_ids": [
+        "audit-news-20261010-cm-component-renewal-candidate"
+      ],
+      "relationship": "same_event_media_report",
+      "retain_news_record": true,
+      "note": "8月31日新闻标题称五家中标，正文为2026至2028部件焕新服务器候选公示。采购为拆卸、运输、检测、内存利旧、维保与资产管理等焕新服务，非全新服务器出货；约35亿元不能直接记为新增硬件成交。",
+      "news_title": "35亿元！中国移动部件焕新服务器集采，宝德计算机等五家中标",
+      "record_ids": [
+        "audit-news-20261010-cm-component-renewal-candidate"
+      ],
+      "records": [
+        {
+          "id": "audit-news-20261010-cm-component-renewal-candidate",
+          "title": "中国移动2026至2028年部件焕新服务器候选公示（媒体待核）",
+          "stage": "candidate",
+          "url": "https://www.c114.com.cn/news/118/a1316625.html"
+        }
+      ]
+    },
+    {
+      "news_id": "c114-1318610",
+      "news_url": "https://www.c114.com.cn/news/117/a1318610.html",
+      "finding_id": "NEWS-007",
+      "related_record_ids": [
+        "audit-news-20261010-ct-guangdong-south-candidate"
+      ],
+      "relationship": "same_event_media_report",
+      "retain_news_record": true,
+      "note": "9月29日报道广东国产化万卡智算池南方基地候选人，阿里云第一候选含税报价216247600元。标题“入围”不等于框架入围或最终成交，且不能与3月广东万卡智算池二期同主体项目混并。",
+      "news_title": "中国电信国产化万卡智算池建设集采：阿里云入围",
+      "record_ids": [
+        "audit-news-20261010-ct-guangdong-south-candidate"
+      ],
+      "records": [
+        {
+          "id": "audit-news-20261010-ct-guangdong-south-candidate",
+          "title": "中国电信广东国产化万卡智算池南方基地候选公示（媒体待核）",
+          "stage": "candidate",
+          "url": "https://www.c114.com.cn/news/117/a1318610.html"
+        }
+      ]
+    },
+    {
+      "news_id": "expanded-idcquan_expanded-4d74da238febc111",
+      "news_url": "https://cloud.idcquan.com/yzx/208258.shtml",
+      "finding_id": "NEWS-008",
+      "related_record_ids": [
+        "audit-news-20261010-cm-hainan-phase2-repeat"
+      ],
+      "relationship": "same_event_media_report",
+      "retain_news_record": true,
+      "note": "9月29日报道海南海口江东新区二期交付，正文指一期基础上的机电配套扩容。实际日期仅称近日；不要编造9月29日为验收日，也不能推定液冷、国产GPU或AIDC。",
+      "news_title": "中国移动（海南）数据中心二期项目交付使用",
+      "record_ids": [
+        "audit-news-20261010-cm-hainan-phase2-repeat"
+      ],
+      "records": [
+        {
+          "id": "audit-news-20261010-cm-hainan-phase2-repeat",
+          "title": "中国移动海南数据中心二期机电配套扩容交付（媒体待核）",
+          "stage": "repeat",
+          "url": "https://cloud.idcquan.com/yzx/208258.shtml"
+        }
+      ]
+    },
+    {
+      "news_id": "doit-853811073376325",
+      "news_url": "https://www.doit.com.cn/ai/853811073376325.html",
+      "finding_id": "NEWS-009",
+      "related_record_ids": [
+        "audit-news-20261010-kunlun-lot1-award",
+        "audit-news-20261010-kunlun-lot2-failure"
+      ],
+      "relationship": "same_project_lot_results",
+      "retain_news_record": true,
+      "note": "DOIT正文报道9月23日昆仑领奕一期包1壁仞1.74亿元中标、包2因供应商不足废标；9月28日为报道日。EET原页打开但正文不可读，仅标题。应拆分包1结果与包2失败事件，并追查9月底后续结果；两篇新闻不等于两笔订单。",
+      "news_title": "壁仞科技&算力大单 | 一纸中标公告里的国产算力真相：从能造到能交，但供给缺口比想象中大",
+      "record_ids": [
+        "audit-news-20261010-kunlun-lot1-award",
+        "audit-news-20261010-kunlun-lot2-failure"
+      ],
+      "records": [
+        {
+          "id": "audit-news-20261010-kunlun-lot1-award",
+          "title": "青海海东昆仑领奕智算中心一期包1成交（媒体待核）",
+          "stage": "award",
+          "url": "https://www.doit.com.cn/ai/853811073376325.html"
+        },
+        {
+          "id": "audit-news-20261010-kunlun-lot2-failure",
+          "title": "青海海东昆仑领奕智算中心一期包2采购失败（媒体待核）",
+          "stage": "failure",
+          "url": "https://www.doit.com.cn/ai/853811073376325.html"
+        }
+      ]
+    },
+    {
+      "news_id": "expanded-eet_china-712172927b958693",
+      "news_url": "https://www.eet-china.com/news/202609285439.html",
+      "finding_id": "NEWS-009",
+      "related_record_ids": [
+        "audit-news-20261010-kunlun-lot1-award"
+      ],
+      "relationship": "same_lot1_award_title_only",
+      "retain_news_record": true,
+      "note": "DOIT正文报道9月23日昆仑领奕一期包1壁仞1.74亿元中标、包2因供应商不足废标；9月28日为报道日。EET原页打开但正文不可读，仅标题。应拆分包1结果与包2失败事件，并追查9月底后续结果；两篇新闻不等于两笔订单。",
+      "news_title": "壁仞科技1.74亿元独家中标昆仑领奕智算中心GPU大单",
+      "record_ids": [
+        "audit-news-20261010-kunlun-lot1-award"
+      ],
+      "records": [
+        {
+          "id": "audit-news-20261010-kunlun-lot1-award",
+          "title": "青海海东昆仑领奕智算中心一期包1成交（媒体待核）",
+          "stage": "award",
+          "url": "https://www.doit.com.cn/ai/853811073376325.html"
+        }
+      ]
+    },
+    {
+      "news_id": "doit-844263652171845",
+      "news_url": "https://www.doit.com.cn/ai/844263652171845.html",
+      "finding_id": "NEWS-010",
+      "related_record_ids": [
+        "rescan-27f9fcc9aa0b"
+      ],
+      "relationship": "existing_event",
+      "retain_news_record": true,
+      "note": "自动标题相似度低，但人工检索软通华方确认已有rescan-27f9fcc9aa0b。应关联既有事件，不能作为漏项重复新增。",
+      "news_title": "算力「芯」动向 | 软通华方落子通州：首个AI算力共享智造工厂投产，京津冀算力协同进入产业链咬合阶段",
+      "record_ids": [
+        "rescan-27f9fcc9aa0b"
+      ],
+      "records": [
+        {
+          "id": "rescan-27f9fcc9aa0b",
+          "title": "北京软通华方AI算力共享智造工厂落成",
+          "stage": "production",
+          "url": "https://www.beijing.gov.cn/fuwu/lqfw/gggs/202609/t20260901_4845371.html"
+        }
+      ]
+    }
+  ],
+  "background_candidate_policy": {
+    "title_only_queue_count": 333,
+    "action": "maintain_existing_policy",
+    "reason": "标题筛选或低相似度未匹配不构成项目缺失证明；未逐条核实的候选保留现有新闻与线索政策，不因本补录新增事件或改变分母。"
+  },
+  "news_retention_decisions": [
+    {
+      "news_id": "expanded-zhidx-71ab388e13699346",
+      "news_url": "https://zhidx.com/p/570691.html",
+      "subject": "喆塔信息",
+      "action": "retain_news_without_project_event",
+      "reason": "同站同标题但IPO辅导主体不同，不去重删除，也不新增服务器项目事件。"
+    },
+    {
+      "news_id": "expanded-zhidx-0d5cddcc198a5d81",
+      "news_url": "https://zhidx.com/p/579677.html",
+      "subject": "通潮精密",
+      "action": "retain_news_without_project_event",
+      "reason": "同站同标题但IPO辅导主体不同，不去重删除，也不新增服务器项目事件。"
+    }
+  ],
+  "summary": {
+    "stage_corrections": 11,
+    "buyer_fields": 3,
+    "event_alias_groups": 4,
+    "existing_rows_changed": 19,
+    "added_primary_milestones": 1,
+    "added_reported_rows": 9,
+    "media_finding_groups": 8,
+    "linked_news_articles": 12,
+    "news_articles_removed": 0,
+    "news_denominator": 24014
+  },
+  "metrics": {
+    "before": {
+      "records": 1021,
+      "observed_records": 1019,
+      "events": 988,
+      "verified_records": 581,
+      "verified_events": 553,
+      "pending": 437,
+      "projects": 192,
+      "verified_projects": 165,
+      "verified_amounts": {
+        "budget": 261423876,
+        "award": 827947373.43,
+        "contract": 12326003328,
+        "investment": 11380000000
+      },
+      "combined_amount_count": 159,
+      "combined_amount_sum": 120413823923.73001
+    },
+    "after": {
+      "records": 1031,
+      "observed_records": 1029,
+      "events": 994,
+      "verified_records": 582,
+      "verified_events": 553,
+      "pending": 446,
+      "projects": 194,
+      "verified_projects": 168,
+      "verified_amounts": {
+        "budget": 261423876,
+        "award": 827947373.43,
+        "contract": 12326003328,
+        "investment": 11380000000
+      },
+      "combined_amount_count": 158,
+      "combined_amount_sum": 120412237403.73001
+    },
+    "scope": "2026-01-01—2026-10-10 observation window; money CNY",
+    "explanation": "4组同事件合并键；新增10条不同里程碑。3条主体补全与1组主体归并使项目192→194。已核金额不变；中天证券同项目取消节点按既有规则排除1,586,520元预估，原招标/二次招标仍保留。"
+  },
+  "verification": {
+    "regression_suite": "49 tests passed, including 7 new audit regression tests",
+    "typecheck": "tsc --noEmit --incremental false passed",
+    "legacy_checks": "check-monthly and check-source-audit pass; check-panel/check-rolling retain stale baseline fixed counts (10 vs11;47 vs57), not caused by this patch",
+    "runtime": "Official Sites owner read complete record identity pagination, no shared events/leads overrides; anonymous API 403 was not retried or bypassed; no D1 mutations.",
+    "browser": "No browser interaction test performed; build and local HTTP verification recorded separately."
+  }
+}
