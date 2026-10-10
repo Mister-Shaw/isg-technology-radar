@@ -1,3 +1,4 @@
+import {readMarket} from './market-fixture.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {sourcePanel} from '../data/sources.js';
@@ -7,9 +8,9 @@ const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
 
 // Real generated outputs: resolve the current receipt from its manifest URL,
 // never assume the most recently imported historical filename is current.
-const latest=read('data/latest-update.json'),panel=read('public/market-panel.json'),study=read('data/research-2026.json'),audit=read('public'+latest.audit_url),monitor=read('data/weekly-monitor.json');
+const latest=read('data/latest-update.json'),panel=readMarket(),study=read('data/research-2026.json'),audit=read('public'+latest.audit_url),monitor=read('data/weekly-monitor.json');
 assert.deepEqual(latest,read('public/latest-update.json'));
-assert.equal(latest.media_added,panel.latest_refresh.added_rows);
+assert.equal(latest.media_added,panel.latest_refresh.added_rows+(panel.latest_refresh.expanded_added_rows||0));
 const studyBatch=[study.latest_refresh,study.source_audit_backfill].find(row=>(row?.audit_id||row?.batch_id||row?.id)===latest.id);
 assert(studyBatch);assert.equal(latest.research_added,studyBatch.added_records);
 assert.equal(latest.research_total,study.events.length+study.leads.length);

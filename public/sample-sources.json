@@ -1235,11 +1235,11 @@
       "group": "media",
       "name": "电子工程专辑 · 服务器与数据中心",
       "url": "https://www.eet-china.com/tag/datacenter-server-processor/",
-      "scope": "新增专业栏目样本，独立于原四媒体",
+      "scope": "公开专业栏目已采新闻，纳入全部媒体来源",
       "cohort": "expanded",
       "application_reviewed": false,
       "limitation": "仅采集所列公开栏目；未按关键词预筛。同源标题去重，历史缺口见逐源审计。",
-      "latest_access_note": "扩展来源单独统计；月份样本量和覆盖范围不同，不与原四媒体合并。",
+      "latest_access_note": "已纳入全部媒体来源；可单独查看本来源，月份样本量和覆盖范围不同。",
       "coverage": [
         {
           "month": "2026-01",
@@ -1389,11 +1389,11 @@
       "group": "media",
       "name": "集邦咨询 · 产业洞察",
       "url": "https://www.trendforce.cn/presscenter/news",
-      "scope": "新增专业栏目样本，独立于原四媒体",
+      "scope": "公开专业栏目已采新闻，纳入全部媒体来源",
       "cohort": "expanded",
       "application_reviewed": false,
       "limitation": "仅采集所列公开栏目；未按关键词预筛。同源标题去重，历史缺口见逐源审计。",
-      "latest_access_note": "扩展来源单独统计；月份样本量和覆盖范围不同，不与原四媒体合并。",
+      "latest_access_note": "已纳入全部媒体来源；可单独查看本来源，月份样本量和覆盖范围不同。",
       "coverage": [
         {
           "month": "2026-01",
@@ -1543,11 +1543,11 @@
       "group": "media",
       "name": "芯东西 · 固定栏目",
       "url": "https://zhidx.com/aichip001",
-      "scope": "新增专业栏目样本，独立于原四媒体",
+      "scope": "公开专业栏目已采新闻，纳入全部媒体来源",
       "cohort": "expanded",
       "application_reviewed": false,
       "limitation": "仅采集所列公开栏目；未按关键词预筛。同源标题去重，历史缺口见逐源审计。",
-      "latest_access_note": "扩展来源单独统计；月份样本量和覆盖范围不同，不与原四媒体合并。",
+      "latest_access_note": "已纳入全部媒体来源；可单独查看本来源，月份样本量和覆盖范围不同。",
       "coverage": [
         {
           "month": "2026-01",
@@ -1697,11 +1697,11 @@
       "group": "media",
       "name": "中国IDC圈 · 云计算与设施",
       "url": "https://cloud.idcquan.com/",
-      "scope": "新增专业栏目样本，独立于原四媒体",
+      "scope": "公开专业栏目已采新闻，纳入全部媒体来源",
       "cohort": "expanded",
       "application_reviewed": false,
       "limitation": "仅采集所列公开栏目；未按关键词预筛。同源标题去重，历史缺口见逐源审计。",
-      "latest_access_note": "扩展来源单独统计；月份样本量和覆盖范围不同，不与原四媒体合并。",
+      "latest_access_note": "已纳入全部媒体来源；可单独查看本来源，月份样本量和覆盖范围不同。",
       "coverage": [
         {
           "month": "2026-01",

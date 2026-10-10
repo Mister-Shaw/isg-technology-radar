@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {MEDIA,mergeMedia} from '../scripts/update-data.mjs';
+const expanded=['eet_china','trendforce','zhidx','idcquan_expanded'];
+const ids=[...MEDIA,...expanded],month='2026-10';
+const rows=MEDIA.map((source_id,i)=>({id:String(i),source_id,title:'服务器液冷部署',date:'2026-10-01',month,url:'https://example.org/'+i,categories:['liquid_cooling'],tags:[]}));
+const source=(id,count)=>({id,kind:'news',group:'media',coverage:[{month,status:'complete',total:count,eligible:count,covered_through:'2026-10-08'}]});
+const group=id=>({id,kind:'news',group:'aggregate',document_source_ids:ids,coverage:[{month,status:'complete',total:18,eligible:18,covered_through:'2026-10-08'}]});
+const original={window:{start:'2026-10-01',end:'2026-10-08'},expansion_assets:['/market-expansion.json'],sources:[...MEDIA.map(id=>source(id,1)),...expanded.map((id,i)=>source(id,i+2)),group('media_all'),group('media_china')],documents:rows,media_summary:{method:'all_collected_media_sources',source_count:8,source_ids:ids,total_documents:18}};
+const incoming=[...rows,{...rows[0],id:'added',title:'新的GPU服务器采购',url:'https://example.org/new',date:'2026-10-02'}];
+const fresh={cutoff:'2026-10-08',scanned_through:'2026-10-08',reread_start:'2026-10-01',checked_at:'2026-10-10T08:00:00Z',sources:MEDIA.map(source_id=>({source_id,rows:incoming.filter(row=>row.source_id===source_id).length,complete:true})),documents:incoming};
+const before=structuredClone(original),updated=mergeMedia(original,fresh).panel;
+assert.deepEqual(original,before);assert.equal(updated.documents.length,5);assert.deepEqual(updated.expansion_assets,original.expansion_assets);
+for(const id of expanded)assert.deepEqual(updated.sources.find(source=>source.id===id),original.sources.find(source=>source.id===id));
+for(const id of ['media_all','media_china']){const aggregate=updated.sources.find(source=>source.id===id);assert.deepEqual(aggregate.document_source_ids,ids);assert.equal(aggregate.coverage[0].eligible,19);assert.equal(aggregate.coverage[0].total,19);assert.equal(aggregate.coverage[0].status,'complete');}
+assert.equal(updated.media_summary.total_documents,19);assert.equal(updated.media_summary.source_count,8);assert.equal(updated.media_summary.monthly[0].active_documents,19);
+const later=mergeMedia(original,{...fresh,cutoff:'2026-10-11',scanned_through:'2026-10-11'}).panel;
+for(const id of ['media_all','media_china'])assert.equal(later.sources.find(source=>source.id===id).coverage[0].status,'incomplete','Retained expanded dates must not be promoted to the later collector cutoff');
+assert.equal(later.media_summary.total_documents,19);assert.equal(later.media_summary.monthly[0].status,'incomplete');
+const missing=structuredClone(original);missing.sources.find(source=>source.id===expanded[0]).coverage=[];
+const incomplete=mergeMedia(missing,fresh).panel;assert.equal(incomplete.sources.find(source=>source.id==='media_all').coverage[0].status,'incomplete');assert.equal(incomplete.media_summary.total_documents,19,'Missing coverage metadata cannot erase known retained samples');
+console.log('PASS: four-media collector updates unified eight-media totals while preserving split assets, retained samples and true expanded cutoffs');

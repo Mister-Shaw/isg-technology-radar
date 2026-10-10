@@ -11,7 +11,7 @@ assert.equal(batch.length,report.added_records);assert.equal(batch.filter(e=>res
 assert.equal(new Set(rows.map(e=>e.id)).size,rows.length);
 assert.deepEqual(new Set(sourcePanel.map(s=>s.id)),new Set(report.sources.map(s=>s.source_id)));
 assert(report.sources.every(s=>s.checked_at&&s.result&&typeof s.coverage==='string'));
-assert(report.media.every(s=>s.completed_window_valid));assert.equal(panel.latest_refresh.unique_media_news,panel.sources.find(s=>s.id==='media_all').coverage.reduce((n,c)=>n+c.eligible,0),'Current snapshot denominator must use current refresh, not a historical batch');
+assert(report.media.every(s=>s.completed_window_valid));assert.equal(panel.media_summary.total_documents,panel.sources.find(s=>s.id==='media_all').coverage.reduce((n,c)=>n+c.eligible,0),'Current snapshot denominator must use current refresh, not a historical batch');
 assert.equal(new Set(study.queries.filter(q=>CHILDREN[q.category]&&/^2026-0[1-9]$/.test(q.month)).map(q=>q.category+'|'+q.month)).size,126);
 for(const e of batch){assert(validDate(e.published_date)&&e.published_date<=report.cutoff,e.id);assert(STAGES[e.stage]&&SOURCES[e.source_type]&&e.categories.every(c=>TECHS[c]));assert(e.project_id!=='unknown');if(researchReview(e)!=='accepted')assert.equal(e.amount_eligible,false);}
 assert(report.preview.every(r=>(r.published_date||r.date)>report.cutoff));

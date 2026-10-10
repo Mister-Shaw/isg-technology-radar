@@ -15,14 +15,13 @@ const panel={...base,documents:[...base.documents,...assets.flatMap(a=>a.documen
 const research=read('data/research-2026.json'), reports=read('data/report-monitor.json');
 const originalIds=['doit_all','c114_roll_all','zhiding_latest','cbinews_all_news'];
 const expandedIds=['eet_china','trendforce','zhidx','idcquan_expanded'];
-const original=panel.sources.find(s=>s.id==='media_all'), expanded=panel.sources.find(s=>s.id==='media_expanded');
-assert.deepEqual(original.document_source_ids,originalIds,'Original four-media denominator must remain unchanged');
-if(process.argv.includes('--require-expansion'))assert(expanded,'Expanded source cohort must be published');
-if(expanded){
- assert.deepEqual([...expanded.document_source_ids].sort(),[...expandedIds].sort(),'New media remain an independent denominator');
- assert(expanded.document_source_ids.every(id=>!originalIds.includes(id)));
- for(const id of expandedIds)assert(panel.sources.some(s=>s.id===id),'Missing expanded source definition: '+id);
-}
+const original=panel.sources.find(s=>s.id==='media_all');
+assert.equal(original.name,'全部媒体来源');
+assert(!panel.sources.some(s=>s.id==='media_expanded'),'Separate expansion aggregate is removed');
+assert.deepEqual(original.document_source_ids,[...originalIds,...expandedIds]);
+for(const id of expandedIds)assert(panel.sources.some(s=>s.id===id));
+assert.equal(panel.media_summary.total_documents,24014);
+assert.equal(original.coverage.at(-1).eligible,675);
 const months=periods('month',panel.window).map(p=>p.id);
 assert.deepEqual(months,Array.from({length:10},(_,i)=>`2026-${String(i+1).padStart(2,'0')}`));
 assert.equal(BOARDS.length,3);assert.equal(KEYWORD_BOARD_ROWS.length,73);
@@ -56,8 +55,9 @@ for(const source of panel.sources.filter(s=>s.kind==='news'&&(s.document_source_
   }
  }
 }
-// Original denominator and every original monthly value stay identical with or without expansion assets.
-for(const board of BOARDS)for(const metric of ['attention','application'])assert.deepEqual(panelMatrix(panel,original,metric,'month','all',definitionsForRows(board.id)),panelMatrix(base,original,metric,'month','all',definitionsForRows(board.id)));
+// Removing an asset must change the aggregate; individual original sources are unchanged.
+for(const board of BOARDS)for(const metric of ['attention','application'])for(const id of originalIds){const source=panel.sources.find(s=>s.id===id);assert.deepEqual(panelMatrix(panel,source,metric,'month','all',definitionsForRows(board.id)),panelMatrix(base,source,metric,'month','all',definitionsForRows(board.id)));}
+for(const c of original.coverage)assert.equal(c.eligible,panel.documents.filter(r=>original.document_source_ids.includes(r.source_id)&&!r.superseded&&r.month===c.month).length);
 // Explicit incomplete-sample and missing-month guards, including a real zero-hit sample.
 const sampled={id:'sampled',kind:'news',coverage:[{month:'2026-01',status:'incomplete',keyword_application_reviewed:true}]};
 const sample={window:{start:'2026-01-01',end:'2026-02-28'},sources:[sampled],documents:[{id:'sample',source_id:'sampled',month:'2026-01',date:'2026-01-02',title:'ordinary business news'}]};
@@ -102,4 +102,4 @@ for(const series of reports.series){
  }
  if(series.family!=='revision')for(const period of axisPeriods([series],'all'))assert.match(period,patterns[series.frequency]);
 }
-console.log(`PASS: ${newsCells} news cells and ${researchCells} research cells across 73 parent/child rows and Jan–Oct; original four-media cohort preserved; ${reports.series.length} report series/${observations} observations keep native periods and source dates (${unknownPublicationDates} explicitly unknown publication dates). Expanded cohort: ${expanded?'present':'not yet merged; rerun with --require-expansion'}.`);
+console.log(`PASS: ${newsCells} news cells and ${researchCells} research cells; all eight media combined, single-source records preserved; ${reports.series.length} report series/${observations} native-period observations.`);

@@ -1,3 +1,4 @@
+import {readMarket} from './market-fixture.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {GROUPS,PARENTS,CHILDREN,observationCategories,matchesCategory,matchesChip,hasXpu} from '../lib/hierarchy.js';
@@ -28,13 +29,13 @@ const demand={documents:[{...docs[0],eligible:true,eligible_categories:['aidc','
 const pc=panelCell(demand,procurement,'facilities','demand',p);assert.deepEqual([pc.n,pc.N,pc.u],[1,1,0]);
 assert.equal(panelCell(demand,procurement,'processors','demand',p).status,'适用分母未建立');
 const read=name=>JSON.parse(fs.readFileSync(new URL('../'+name,import.meta.url)));
-const data=read('public/market-panel.json'),all=data.sources.find(s=>s.id==='media_all');
+const data=readMarket(),all=data.sources.find(s=>s.id==='media_all');
 for(const level of [PARENTS,CHILDREN])for(const row of panelMatrix(data,all,'attention','month','all',level))for(const point of row.points){
  assert.equal(point.N,data.documents.filter(d=>all.document_source_ids.includes(d.source_id)&&d.month===point.id&&!d.superseded).length);
  assert.equal(new Set(point.ids).size,point.n);
 }
 const study=read('data/research-2026.json'),research=[...study.events,...study.leads];
 for(const id of Object.keys(PARENTS))assert.equal(new Set(research.filter(r=>matchesCategory(r,id)).map(eventKey)).size,new Set(GROUPS.find(g=>g.id===id).children.flatMap(c=>research.filter(r=>matchesCategory(r,c)).map(eventKey))).size);
-assert.equal(data.documents.filter(d=>all.document_source_ids.includes(d.source_id)&&!d.superseded).length,(data.latest_refresh?.unique_media_news??(study.october_refresh||study.manual_refresh||read('data/rolling-update.json')).unique_media_news));
+assert.equal(data.documents.filter(d=>all.document_source_ids.includes(d.source_id)&&!d.superseded).length,(data.media_summary?.total_documents??(study.october_refresh||study.manual_refresh||read('data/rolling-update.json')).unique_media_news));
 assert.deepEqual(read('public/sample-sources.json').taxonomy,data.taxonomy);
 console.log('PASS: 5 parents/14 children, aliases, parent unions, latest amounts, cancellation, all-news denominators, demand unknowns and replay metadata.');

@@ -1,8 +1,9 @@
+import {readMarket} from './market-fixture.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {presentPanelMatrix} from '../lib/panel-presentation.js';
 import {panelMatrix,panelColors,panelCsv} from '../lib/panel.js';
-const data=JSON.parse(fs.readFileSync(new URL('../public/market-panel.json',import.meta.url))),source=data.sources.find(s=>s.id==='media_all');
+const data=readMarket(),source=data.sources.find(s=>s.id==='media_all');
 const raw=panelMatrix(data,source,'attention','month','all',{aidc:'AIDC'}),snapshot=JSON.stringify(raw),shown=presentPanelMatrix(raw,'news'),oct=shown[0].points.at(-1);
 assert.equal(oct.value,1000*oct.n/oct.N);assert.equal(oct.complete,false);assert.equal(oct.partial,true);assert.equal(oct.observedPresentation,true);assert.equal(oct.status,'已采样本');
 assert.notEqual(panelColors(shown).background(oct.value),'#f1f3f6');assert.equal(panelColors(shown).max,oct.value);

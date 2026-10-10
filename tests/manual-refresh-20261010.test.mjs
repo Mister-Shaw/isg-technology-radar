@@ -1,10 +1,11 @@
+import {readMarket} from './market-fixture.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {compactBoardMatches} from '../lib/keyword-boards.js';
 import {sourcePanel} from '../data/sources.js';
 import {validateSourceAudit} from '../lib/source-audit.js';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
-const p=read('public/market-panel.json'),r=read('data/research-2026.json'),latest=read('data/latest-update.json'),a=read(`data/${latest.id}.json`);
+const p=readMarket(),r=read('data/research-2026.json'),latest=read('data/latest-update.json'),a=read(`data/${latest.id}.json`);
 const media=p.sources.find(s=>s.id==='media_all').document_source_ids;
 assert.equal(p.window.end,'2026-10-10');assert.equal(r.period_end,'2026-10-10');
 assert.equal(p.latest_refresh.batch_id,latest.id);assert.equal(r.latest_refresh.batch_id,latest.id);
@@ -12,7 +13,7 @@ assert.equal(new Set(p.documents.map(x=>x.id)).size,p.documents.length);
 assert.equal(new Set([...r.events,...r.leads].map(x=>x.id)).size,r.events.length+r.leads.length);
 const fresh=p.documents.filter(x=>x.collection_batch===p.latest_refresh.batch_id);
 for(const x of fresh){assert(media.includes(x.source_id));assert(x.date<=p.window.end);assert.equal(x.month,x.date.slice(0,7));assert.equal(x.classification_basis,'title_only');assert.deepEqual(x.board_matches,compactBoardMatches(x,'news'));}
-assert.equal(fresh.length,p.latest_refresh.added_rows);
+assert.equal(fresh.length,p.latest_refresh.added_rows+(p.latest_refresh.expanded_added_rows||0));
 assert.equal(latest.media_total,p.documents.filter(x=>media.includes(x.source_id)&&!x.superseded).length);
 assert.deepEqual(new Set(a.source_checks.map(s=>s.source_id)),new Set(sourcePanel.map(s=>s.id)));
 assert.deepEqual(validateSourceAudit(a,[...r.events,...r.leads],sourcePanel.map(s=>s.id),{requireReady:true}),[]);

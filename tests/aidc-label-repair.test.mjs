@@ -1,8 +1,9 @@
+import {readMarket} from './market-fixture.mjs';
 import fs from 'node:fs';import assert from 'node:assert/strict';
 import {classifyNewsTitle} from '../lib/news-classification.js';
 import {panelMatrix} from '../lib/panel.js';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
-const d=read('public/market-panel.json'),a=read('public/aidc-label-audit-20261008.json');
+const d=readMarket(),a=read('public/aidc-label-audit-20261008.json');
 assert.equal(a.added_label_count,24);assert.equal(new Set(a.records.map(r=>r.id)).size,24);
 assert.equal(a.verification_summary.accepted,24);
 for(const row of a.records){const r=d.documents.find(x=>x.id===row.id);assert(r&&!r.superseded);assert(r.categories.includes('aidc'));assert(classifyNewsTitle(r.title,d.news_classification_rules).categories.includes('aidc'));}

@@ -9,6 +9,7 @@ import {compactBoardMatches,KEYWORD_RULE_VERSION} from '../lib/keyword-boards.js
 import {observationCategories} from '../lib/hierarchy.js';
 import {refreshTaxonomy} from './refresh-taxonomy.mjs';
 import {analyze} from './weekly-monitor.mjs';
+import {coverageComplete} from '../lib/panel.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export const MEDIA=['doit_all','c114_roll_all','zhiding_latest','cbinews_all_news'];
@@ -111,11 +112,24 @@ export function mergeMedia(original,fresh){
   s.last_rechecked_at=fresh.checked_at;s.recheck_window={start,end};
   s.limitation=`本轮全量尝试${start}至${end}；成功月份更新，失败月份保留旧资料并单独标记真实截止。全部新闻为分母；历史删除及异标题转载仍可能影响结果。`;
  }
+ // Mixed aggregates include retained source snapshots while the collector remains four-media only.
  for(const s of panel.sources.filter(s=>s.document_source_id||s.document_source_ids)){
-  const ids=s.document_source_ids||[s.document_source_id];if(!ids.every(id=>MEDIA.includes(id)))continue;
+  const ids=s.document_source_ids||[s.document_source_id];if(!ids.some(id=>MEDIA.includes(id)))continue;
+  const mixed=ids.some(id=>!MEDIA.includes(id));
   s.coverage=months.map(month=>{
-   const covered=ids.map(id=>panel.sources.find(s=>s.id===id).coverage.find(c=>c.month===month)),complete=covered.every(c=>c.status==='complete');
-   return {month,status:complete?'complete':'incomplete',total:covered.reduce((n,c)=>n+c.total,0),eligible:covered.reduce((n,c)=>n+c.eligible,0),covered_through:covered.every(c=>c.covered_through)?covered.map(c=>c.covered_through).sort()[0]:null,attempted_through:[end,monthEnd(month)].sort()[0],note:complete?'固定来源全部新闻，本月可比较。':'固定来源中有月份未更新完整；保留四媒体口径，本月汇总比例暂停。'};
+   const through=[end,monthEnd(month)].sort()[0],members=ids.map(id=>panel.sources.find(source=>source.id===id));
+   const covered=members.map(source=>source?.coverage?.find(c=>c.month===month)),complete=members.every(source=>coverageComplete(source,month,through));
+   const prior=original.sources.find(source=>source.id===s.id)?.coverage?.find(c=>c.month===month);
+   const previousFixed=original.documents.filter(row=>MEDIA.includes(row.source_id)&&ids.includes(row.source_id)&&row.month===month&&row.date>=start&&row.date<=oldEnd);
+   const sum=key=>{
+    if(mixed&&Number.isFinite(prior?.[key])){
+     const oldFixed=key==='eligible'?previousFixed.filter(row=>!row.superseded).length:previousFixed.length;
+     const currentFixed=covered.reduce((n,c,i)=>n+(MEDIA.includes(ids[i])&&Number.isFinite(c?.[key])?c[key]:0),0);
+     return Math.max(0,prior[key]-oldFixed)+currentFixed;
+    }
+    return covered.reduce((n,c)=>n+(Number.isFinite(c?.[key])?c[key]:0),0);
+   };
+   return {month,status:complete?'complete':'incomplete',total:sum('total'),eligible:sum('eligible'),covered_through:covered.every(c=>c?.covered_through)?covered.map(c=>c.covered_through).sort()[0]:null,attempted_through:through,note:mixed?(complete?'全部媒体已采新闻合并，本月覆盖满足统计窗口。':'全部媒体已采样本合并；本次仅更新原有四媒体，其他来源沿用实际截止，缺失月份不代表零新闻，覆盖未全时暂停完整期比较。'):(complete?'固定来源全部新闻，本月可比较。':'固定来源中有月份未更新完整；保留四媒体口径，本月汇总比例暂停。')};
   });
   s.last_rechecked_at=fresh.checked_at;s.recheck_window={start,end};
  }
@@ -124,6 +138,10 @@ export function mergeMedia(original,fresh){
    if(c.month===oldEnd.slice(0,7)&&day(oldEnd,1).slice(0,7)!==c.month)continue;
    const through=c.covered_through||oldEnd;c.status='incomplete';c.covered_through=through;c.note=`本次仅更新媒体；该来源尚未补采${day(through,1)}之后的数据。`;
   }
+ }
+ if(panel.media_summary?.method==='all_collected_media_sources'){
+  const aggregate=panel.sources.find(source=>source.id==='media_all');
+  if(aggregate?.document_source_ids)panel.media_summary={...panel.media_summary,source_count:aggregate.document_source_ids.length,source_ids:[...aggregate.document_source_ids],total_documents:aggregate.coverage.reduce((n,c)=>n+(c.eligible||0),0),monthly:aggregate.coverage.map(c=>({month:c.month,active_documents:c.eligible,total_documents:c.total,status:c.status}))};
  }
  const touched=new Set([...added,...changed.map(c=>c.id)]);
  const candidates=panel.documents.filter(d=>!d.superseded&&touched.has(d.id)&&d.observation_categories.length).map(d=>({id:d.id,title:d.title,url:d.url,published_date:d.date,publisher:d.publisher,source_id:d.source_id,categories:d.observation_categories,tags:d.tags,verified_fulltext:false,review_status:'pending',amount_cny:null,note:'仅新闻标题候选；地域、项目阶段、正文和金额需核验，尚未计入月度研究事件。'}));
