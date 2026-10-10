@@ -22,6 +22,8 @@ assert.deepEqual(read('data/report-monitor.json'),read('public/report-monitor.js
 assert.equal(latest.id,a.id);assert.equal(latest.research_total,r.events.length+r.leads.length);
 const m=read('data/weekly-monitor.json');assert.equal(m.enabled,false);assert.equal(m.paused_by_user,true);assert.equal(m.last_completed_cutoff,'2026-09-20');
 const css=fs.readFileSync(new URL('../app/compact.css',import.meta.url),'utf8'),jsx=fs.readFileSync(new URL('../app/workspace.jsx',import.meta.url),'utf8');
-assert(css.includes('justify-content:space-between;align-items:center;width:138px;margin:2px 11px 22px'));
+assert(css.includes('justify-content:space-between;align-items:center;width:100%;margin:2px 0 22px'));
+assert(css.includes('width:calc(100% - 22px);max-width:138px'));
+assert(jsx.includes('alt="Lenovo"/><p className="nav-caption"'));
 assert(jsx.includes('aria-label="中国服务器市场动向监测"'));assert(!jsx.includes('className="brand-symbol"'));assert(!jsx.includes('ISG China'));
 console.log('PASS: Oct10 manual refresh counts, source receipts, projection, paused schedule and aligned header caption');
