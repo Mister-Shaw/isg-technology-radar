@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {mergeMarketAssets,loadMarketData} from '../lib/market-data.js';
+const base={documents:[{id:'a'}],expansion_assets:['/market-expansion.json']};
+assert.equal(mergeMarketAssets(base,[{documents:[{id:'b'}]}]).documents.length,2);
+assert.equal(base.documents.length,1);
+assert.throws(()=>mergeMarketAssets(base,[{documents:[{id:'a'}]}]));
+const loaded=await loadMarketData(async url=>({ok:true,json:async()=>url==='/market-panel.json'?base:{documents:[{id:'b'}]}}));assert.equal(loaded.documents.length,2);
+await assert.rejects(loadMarketData(async url=>({ok:url==='/market-panel.json',json:async()=>base})),/无法读取/);
+await assert.rejects(loadMarketData(async()=>({ok:true,json:async()=>({...base,expansion_assets:['https://example.com/x.json']})})),/地址无效/);
+console.log('PASS: expansion loader preserves original data, rejects duplicate IDs, unsafe URLs and missing assets');

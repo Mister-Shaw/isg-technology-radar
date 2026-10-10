@@ -1,10 +1,10 @@
 import fs from 'node:fs';
 import {sourcePanel} from '../data/sources.js';
-import {buildSiteInformation} from '../lib/source-information.js';
+import {buildSiteInformation,isSourceAuditFilename} from '../lib/source-information.js';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
 const write=(p,x)=>fs.writeFileSync(new URL('../'+p,import.meta.url),JSON.stringify(x,null,2)+'\n');
-const audits=fs.readdirSync(new URL('../data/',import.meta.url)).filter(name=>/^source-audit-\d{8}\.json$/.test(name)).map(name=>read('data/'+name));
-const publishedAudits=fs.readdirSync(new URL('../public/',import.meta.url)).filter(name=>/^source-audit-\d{8}\.json$/.test(name)).map(name=>read('public/'+name));
+const audits=fs.readdirSync(new URL('../data/',import.meta.url)).filter(isSourceAuditFilename).map(name=>read('data/'+name));
+const publishedAudits=fs.readdirSync(new URL('../public/',import.meta.url)).filter(isSourceAuditFilename).map(name=>read('public/'+name));
 const result=buildSiteInformation({panel:read('public/market-panel.json'),research:read('data/research-2026.json'),audits,publishedAudits,registry:sourcePanel,monitor:read('data/weekly-monitor.json')});
 write('data/latest-update.json',result.latest);
 write('public/latest-update.json',result.latest);

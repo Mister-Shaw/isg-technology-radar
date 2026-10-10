@@ -28,7 +28,10 @@ export const sourcePanel=[
  ['metax','vendors','沐曦股份 · 官方新闻','https://www.metax-tech.com/news.html','public','已核对11页2026年目录；本站可检查当前栏目。产品适配与采购分开，不计入市场风向分母。'],
  ['mthreads','vendors','摩尔线程 · 官方新闻','https://www.mthreads.com/news','manual','目录可读，动态正文通过正常浏览器补采；本批三篇原文已补齐，未遇验证时无需手动提供。'],
  ['univista','vendors','合见工软 · 官方新闻','https://www.univista-isg.com/site/news','public','已核对3页目录，本站可检查当前栏目；同次发布会归并，EDA动态补充月度研究。'],
- ['idcquan','wechat','中国IDC圈 · 建设月报与新闻','https://cloud.idcquan.com/','manual','公开月报及云计算栏目逐项目补采；不以月报项目总数代替可读取明细。',['news.idcquan.com','www.idcquan.com','cloud.idcquan.com']],
+ ['idcquan','wechat','中国IDC圈 · 建设月报与新闻','https://cloud.idcquan.com/','manual','深化数据中心、建设月报及云计算栏目，逐项目核对公开原文；不以月报项目总数代替可读取明细。仅保留必要摘要、事实与原文链接，不镜像全文；付费或受限内容需合法授权。',['news.idcquan.com','www.idcquan.com','cloud.idcquan.com','dc.idcquan.com']],
+ ['eet_china','wechat','电子工程专辑 · 数据中心与服务器','https://www.eet-china.com/','public','跟踪公开数据中心、服务器与芯片报道；同一事件去重，报道与采购证据分开。仅保留必要摘要、事实与原文链接，不镜像全文；会员或授权内容不自动读取。',['www.eet-china.com','eet-china.com']],
+ ['trendforce','wechat','TrendForce集邦咨询 · 新闻中心','https://www.trendforce.cn/presscenter/','public','跟踪公开服务器、AI芯片、存储及产业新闻；预测与已发生事实分开，付费研究及数据库需另行授权。仅保留必要摘要、事实与原文链接，不镜像全文。',['www.trendforce.cn','trendforce.cn','www.trendforce.com.tw','trendforce.com.tw']],
+ ['zhidx','wechat','智东西 · 芯东西','https://zhidx.com/','public','同一出版方的智东西与芯东西合并为一个来源；关注服务器、芯片、算力和液冷，按原始发布去重。仅保留公开必要摘要、事实与原文链接，不镜像全文；受限内容需合法授权。',['zhidx.com','www.zhidx.com']],
  ['siat','buyers','中科院深圳先进院 · 采购公示','https://siat.cas.cn/jggl/tzgg/','manual','部分原件连接异常；已补合同索引，金额单位冲突暂留空，待原合同附件确认。',['siat.cas.cn','www.siat.cas.cn','www.siat.ac.cn']],
  ['ecust','buyers','华东理工大学 · 采购信息','https://czzx.ecust.edu.cn/ejdwcggg/index.chtml','public','公开采购栏目已通过本站读取；本批6月原文、9月索引已补录，后续继续查中选结果。'],
  ['d1net','wechat','企业网 D1Net','https://www.d1net.com/datacenter/','manual','公开栏目可供研究补查，本站读取器尚未确认有效robots；未纳入市场风向固定分母。'],
@@ -47,6 +50,13 @@ export const sourcePanel=[
  ['shaoguan','projects','韶关市人民政府','https://www.sg.gov.cn/','public','算力项目建设、政策和投产。'],
  ['changning','projects','上海市长宁区','https://www.shcn.gov.cn/','public','区域项目与产业动态。'],
  ['wuxi','projects','无锡市人民政府','https://www.wuxi.gov.cn/','public','项目审批、建设、投产；规划需后续采购证据。'],
+ ['shanghai_drc','projects','上海市发展和改革委员会 · 项目审批','https://fgw.sh.gov.cn/','public','公开项目审批、节能审查及建设披露；核对项目主体、批复日期与建设阶段，投资额不等于设备采购额。仅保留必要摘要、事实与原文链接，不镜像全文。'],
+ ['gt_procurement','operators','通用技术集团 · 采购平台','https://cg.gt.cn/','public','公开采购、候选人及成交公告按阶段核对；识别委托买方和标包，不把平台或代理计为买方。仅保留必要摘要、事实与原文链接，不镜像全文；登录或验证内容转人工。'],
+ ['gds_ir','disclosures','万国数据 · 投资者关系','https://investors.gds-services.com/','public','公开业绩、公告及数据中心建设披露；区分公司规划、在建、投产和实际设备采购。仅保留必要摘要、事实与原文链接，不镜像全文。'],
+ ['hkex','disclosures','港交所披露易 · 上市公司公告','https://www.hkexnews.hk/','public','公开上市公司公告及附件；按发行人、公告日期与项目原文核对，动态查询受限时导入公开文件。仅保留必要摘要、事实与原文链接，不镜像全文。',['www.hkexnews.hk','hkexnews.hk']],
+ ['jiangsu_ggzy','procurement','江苏省公共资源交易平台','https://jsggzy.jszwfw.gov.cn/','manual','候选公开来源，自动读取尚未确认可用；动态检索、验证或访问限制时手动打开官方入口并导入合法取得的公告。仅保留必要摘要、事实与原文链接，不镜像全文。'],
+ ['zycg','procurement','中央政府采购网','https://www.zycg.gov.cn/','manual','候选公开来源，自动读取尚未确认可用；公开招标、成交及更正公告从官方入口手动核对或导入，不绕过访问验证。仅保留必要摘要、事实与原文链接，不镜像全文。',['www.zycg.gov.cn','zycg.gov.cn']],
+ ['zzcg','procurement','中共中央直属机关采购中心','https://www.zzcg.gov.cn/','manual','候选公开来源，自动读取尚未确认可用；公开采购公告从官方入口手动核对或导入，受限查询不自动登录或绕过验证。仅保留必要摘要、事实与原文链接，不镜像全文。',['www.zzcg.gov.cn','zzcg.gov.cn']],
  ['citc','procurement','中招国际招标','https://www.cntcitc.com.cn/','public','采购代理公告，识别委托买方而非把代理机构计为买方。']
 ].map(([id,category,name,url,mode,note,hosts])=>({id,category,name,url,mode,note,hosts:hosts||[new URL(url).hostname]}));
 

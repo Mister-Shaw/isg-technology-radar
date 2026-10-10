@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {sourcePanel} from '../data/sources.js';
 import {sourceCheckTime,newerCapture,latestSourceAudit,sourceAuditLabel} from '../lib/source-status.js';
-import {newestAudit,normalizeSourceAudit,currentSourceAudit,buildSiteInformation} from '../lib/source-information.js';
+import {newestAudit,normalizeSourceAudit,currentSourceAudit,buildSiteInformation,isSourceAuditFilename} from '../lib/source-information.js';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
 
 // Real generated outputs: resolve the current receipt from its manifest URL,
@@ -18,7 +18,7 @@ assert.equal(latest.media_total,active.length);assert.equal(latest.latest_month_
 assert.equal(audit.source_checks.length,sourcePanel.length);assert(audit.source_checks.every(r=>r.name&&r.url&&sourceCheckTime(r)>0));
 assert.equal(monitor.latest_requested_cutoff,(latest.requested_window||latest.window).end);assert.equal(monitor.last_attempt_at,latest.checked_at);assert.equal(monitor.enabled,false);assert.equal(monitor.paused_by_user,true);assert.equal(monitor.last_completed_cutoff,'2026-09-20');
 if(latest.schema_version>=2){
- assert.equal(latest.id,newestAudit(fs.readdirSync(new URL('../data/',import.meta.url)).filter(name=>/^source-audit-\d{8}\.json$/.test(name)).map(name=>read('data/'+name))).id);
+ assert.equal(latest.id,newestAudit(fs.readdirSync(new URL('../data/',import.meta.url)).filter(isSourceAuditFilename).map(name=>read('data/'+name))).id);
  assert.equal(latest.audit_checked_on,audit.checked_on);assert.equal(latest.source_checks.length,sourcePanel.length);
  assert.deepEqual(latest.window,panel.window);assert.equal(latest.research_window.end,study.period_end);
 }
@@ -53,6 +53,35 @@ const missingMedia=structuredClone(fixture);missingMedia.panel.latest_refresh.ba
 const missingStudy=structuredClone(fixture);delete missingStudy.research.latest_refresh;assert.throws(()=>buildSiteInformation(missingStudy),/Missing research refresh manifest/);
 const explicitZeros=structuredClone(fixture);explicitZeros.panel.source_audit.id=fresh.id;Object.assign(explicitZeros.panel.latest_refresh,{nonarticle_exclusions:0,date_corrections:0,title_corrections:0});assert.equal(buildSiteInformation(explicitZeros).latest.nonarticle_exclusions,0);
 const absentFullCoverage=structuredClone(fixture);delete absentFullCoverage.audits[0].full_coverage;assert.equal(buildSiteInformation(absentFullCoverage).latest.full_coverage,false);
+
+// A second manual run on the same calendar day is a distinct audit receipt.
+for(const name of ['source-audit-20261010.json','source-audit-20261010-1600.json','source-audit-20261010-160012.json'])assert(isSourceAuditFilename(name));
+for(const name of ['source-audit-20261010-.json','source-audit-20261010-afternoon.json','source-audit-20261010-1600.json.bak','../source-audit-20261010-1600.json'])assert(!isSourceAuditFilename(name));
+const afternoon={...structuredClone(fresh),id:'source-audit-20261010-1600',checked_at:'2026-10-10T08:00:00Z'};
+afternoon.source_checks[0].checked_at='2026-10-10T07:59:00Z';
+const repeat=structuredClone(fixture);
+repeat.audits=[old,afternoon,fresh];
+Object.assign(repeat.panel.latest_refresh,{batch_id:afternoon.id,checked_at:afternoon.checked_at});
+Object.assign(repeat.research.latest_refresh,{batch_id:afternoon.id,checked_at:afternoon.checked_at});
+const repeatBefore=structuredClone(repeat),repeatBuilt=buildSiteInformation(repeat);
+assert.deepEqual(repeat,repeatBefore,'Repeat construction preserves morning audit and all inputs');
+assert.equal(repeatBuilt.latest.id,afternoon.id);assert.equal(repeatBuilt.latest.audit_url,'/source-audit-20261010-1600.json');
+assert.equal(repeatBuilt.publicAudit.id,afternoon.id);
+assert.equal(repeatBuilt.latest.audit_history[0].id,fresh.id);
+assert.equal(repeatBuilt.latest.audit_history[0].checked_at,fresh.checked_at,'Same-day history retains its actual receipt time');
+assert.equal(repeatBuilt.latest.audit_history[0].audit_url,'/source-audit-20261010.json');
+assert.equal(repeatBuilt.latest.source_checks[0].checked_at,afternoon.source_checks[0].checked_at);
+assert.equal(repeatBuilt.latest.source_checks[1].checked_at,'2026-10-09','Unrechecked source keeps older provenance');
+for(const key of Object.keys(repeat.monitor))assert.deepEqual(repeatBuilt.monitor[key],repeat.monitor[key],'Original schedule/history field remains unchanged: '+key);
+assert.equal(currentSourceAudit(repeatBuilt.latest,normalizeSourceAudit(fresh,registry)).id,afternoon.id);
+assert.equal(newestAudit([afternoon,fresh]).id,afternoon.id);assert.equal(newestAudit([fresh,afternoon]).id,afternoon.id);
+assert.equal(newestAudit([afternoon,{...fresh,checked_at:'2026-10-10T09:00:00Z'}]).id,fresh.id,'Actual receipt time beats suffix/order');
+const wrongMorning=structuredClone(repeat);wrongMorning.panel.latest_refresh.batch_id=fresh.id;
+assert.throws(()=>buildSiteInformation(wrongMorning),/Missing media refresh manifest/);
+const untaggedMorning=structuredClone(repeat);delete untaggedMorning.panel.latest_refresh.batch_id;
+assert.throws(()=>buildSiteInformation(untaggedMorning),/Missing media refresh manifest/);
+const untaggedStudy=structuredClone(repeat);delete untaggedStudy.research.latest_refresh.batch_id;
+assert.throws(()=>buildSiteInformation(untaggedStudy),/Missing research refresh manifest/);
 
 assert(newerCapture({captured_at:'2026-10-10T01:00:00Z'},{checked_on:'2026-10-09'}));assert(!newerCapture({captured_at:'2026-10-09T01:00:00Z'},{checked_on:'2026-10-10'}));
 assert(!newerCapture({captured_at:'2026-10-10T01:00:00Z'},{checked_on:'2026-10-10'}));

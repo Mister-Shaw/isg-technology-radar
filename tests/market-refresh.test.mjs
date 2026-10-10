@@ -1,10 +1,11 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {mergeMarketAssets} from '../lib/market-data.js';
 import {panelMatrix} from '../lib/panel.js';
 import {CHILDREN} from '../lib/hierarchy.js';
 import {validDate} from '../lib/model.js';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
-const p=read('public/market-panel.json'),s=read('public/sample-sources.json');
+const base=read('public/market-panel.json'),p=mergeMarketAssets(base,(base.expansion_assets||[]).map(path=>read('public'+path))),s=read('public/sample-sources.json');
 assert.equal(new Set(p.documents.map(r=>r.id)).size,p.documents.length);
 assert(p.documents.every(r=>validDate(r.date)&&r.month===r.date.slice(0,7)&&r.date<=p.window.end));
 assert.deepEqual(s.sources,p.sources.filter(s=>['media','official'].includes(s.group)&&!s.document_source_id));

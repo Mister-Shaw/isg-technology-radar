@@ -55,7 +55,7 @@ for(const s of p.sources){
  for(const key of Object.keys(c))if(!['month','previous_snapshots'].includes(key))delete c[key];
  Object.assign(c,{total:rows.length,eligible:rows.filter(x=>!x.superseded).length,status:'incomplete',partial_current_day:true,partial_calendar_month:true});
  const receipts=(bundle.media_receipts||[]).filter(x=>sourceIds.includes(x.archive_source_id||x.source_id));
- if(receipts.length){s.last_rechecked_at=now;s.latest_access_note=receipts.map(x=>x.detail||x.status).join('；');c.checked_at=now;c.latest_refresh_window=bundle.requested_window;c.audit_recheck_complete=false;c.audit_recheck_status='bounded_recent_snapshot';c.note='本轮仅更新10月8日起重叠窗口至10月10日采集时点；历史收录保留，不表示全年或整月完整覆盖。';}
+ if(receipts.length){s.last_rechecked_at=now;s.latest_access_note=receipts.map(x=>x.detail||x.status).join('；');c.checked_at=now;c.latest_refresh_window=bundle.requested_window;c.audit_recheck_complete=false;c.audit_recheck_status='bounded_recent_snapshot';c.note=`本轮核对${bundle.requested_window?.start||end}至${end}采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。`;}
 }
 r.refresh_history??=[];if(r.latest_refresh)r.refresh_history.push(r.latest_refresh);
 r.period_end=end;r.as_of=end;r.latest_refresh={batch_id:batch,checked_at:now,added_records:researchAdded.length,added_ids:researchAdded,skipped_existing:researchSkipped.length,restored_milestones:0};

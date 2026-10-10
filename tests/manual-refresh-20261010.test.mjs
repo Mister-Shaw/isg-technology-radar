@@ -4,10 +4,10 @@ import {compactBoardMatches} from '../lib/keyword-boards.js';
 import {sourcePanel} from '../data/sources.js';
 import {validateSourceAudit} from '../lib/source-audit.js';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
-const p=read('public/market-panel.json'),r=read('data/research-2026.json'),a=read('data/source-audit-20261010.json'),latest=read('data/latest-update.json');
+const p=read('public/market-panel.json'),r=read('data/research-2026.json'),latest=read('data/latest-update.json'),a=read(`data/${latest.id}.json`);
 const media=p.sources.find(s=>s.id==='media_all').document_source_ids;
 assert.equal(p.window.end,'2026-10-10');assert.equal(r.period_end,'2026-10-10');
-assert.equal(p.latest_refresh.batch_id,'source-audit-20261010');assert.equal(r.latest_refresh.batch_id,'source-audit-20261010');
+assert.equal(p.latest_refresh.batch_id,latest.id);assert.equal(r.latest_refresh.batch_id,latest.id);
 assert.equal(new Set(p.documents.map(x=>x.id)).size,p.documents.length);
 assert.equal(new Set([...r.events,...r.leads].map(x=>x.id)).size,r.events.length+r.leads.length);
 const fresh=p.documents.filter(x=>x.collection_batch===p.latest_refresh.batch_id);
@@ -17,7 +17,7 @@ assert.equal(latest.media_total,p.documents.filter(x=>media.includes(x.source_id
 assert.deepEqual(new Set(a.source_checks.map(s=>s.source_id)),new Set(sourcePanel.map(s=>s.id)));
 assert.deepEqual(validateSourceAudit(a,[...r.events,...r.leads],sourcePanel.map(s=>s.id),{requireReady:true}),[]);
 assert.equal(a.source_checks.length,sourcePanel.length);assert.equal(a.full_coverage,false);
-assert(!JSON.stringify(read('public/source-audit-20261010.json')).includes('/workspace/'));
+assert(!JSON.stringify(read(`public/${latest.id}.json`)).includes('/workspace/'));
 assert.deepEqual(read('data/report-monitor.json'),read('public/report-monitor.json'));
 assert.equal(latest.id,a.id);assert.equal(latest.research_total,r.events.length+r.leads.length);
 const m=read('data/weekly-monitor.json');assert.equal(m.enabled,false);assert.equal(m.paused_by_user,true);assert.equal(m.last_completed_cutoff,'2026-09-20');
@@ -27,3 +27,7 @@ assert(css.includes('width:calc(100% - 22px);max-width:138px'));
 assert(jsx.includes('alt="Lenovo"/><p className="nav-caption"'));
 assert(jsx.includes('aria-label="中国服务器市场动向监测"'));assert(!jsx.includes('className="brand-symbol"'));assert(!jsx.includes('ISG China'));
 console.log('PASS: Oct10 manual refresh counts, source receipts, projection, paused schedule and aligned header caption');
+
+assert(fs.readFileSync('app/compact.css','utf8').includes('.brand.lenovo-only .lenovo-wordmark{border-radius:6px}'));
+
+assert(fs.readFileSync('app/compact.css','utf8').includes('.sidebar .brand.lenovo-only .nav-caption{width:calc(100% - 8px);margin-inline:4px}'));

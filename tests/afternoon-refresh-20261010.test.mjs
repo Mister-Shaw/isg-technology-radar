@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>JSON.parse(fs.readFileSync(p));
+const p=read('public/market-panel.json'),r=read('data/research-2026.json'),a=read('data/source-audit-20261010-1600.json'),latest=read('data/latest-update.json');
+const batch=a.id,media=p.documents.filter(x=>x.collection_batch===batch),records=[...r.events,...r.leads].filter(x=>x.collection_batch===batch);
+assert.equal(media.length,29);assert.equal(records.length,5);assert(records.every(x=>x.amount_cny===null&&x.amount_eligible===false));
+assert.equal(records.filter(x=>x.verified_fulltext).length,2);assert.equal(records.filter(x=>x.evidence_status==='lead').length,3);
+assert.equal(a.source_checks.length,47);assert.equal(new Set(a.source_checks.map(s=>s.source_id)).size,47);
+assert(p.refresh_history.some(x=>x.batch_id==='source-audit-20261010'&&x.added_rows===101));
+assert(r.refresh_history.some(x=>x.batch_id==='source-audit-20261010'&&x.added_records===18));
+assert.equal(read('data/source-audit-20261010.json').summary.new_media_records,101);
+assert.equal(latest.media_total,23122);assert.equal(latest.latest_month_total,658);if(latest.id===batch)assert.equal(latest.research_total,1005);else assert.equal(latest.research_total,r.events.length+r.leads.length);
+assert.equal(read('data/report-monitor.json').series.length,78);
+assert(latest.audit_history.some(x=>x.id==='source-audit-20261010'));
+assert(!JSON.stringify(read(`public/${batch}.json`)).includes('/workspace/'));
+console.log('PASS: afternoon batch 29 news,2 verified non-financial research,3 pending; morning provenance preserved');

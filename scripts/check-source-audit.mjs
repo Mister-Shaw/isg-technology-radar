@@ -4,6 +4,9 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { sourcePanel } from '../data/sources.js';
 import { eventDisposition, normalizeSourceReceipt, validateSourceAudit } from '../lib/source-audit.js';
+// This command validates the immutable Oct 9 cohort; later registrations have their own audits.
+const expansionIds=new Set(['eet_china','trendforce','zhidx','shanghai_drc','gt_procurement','gds_ir','hkex','jiangsu_ggzy','zycg','zzcg']);
+const historicalSourceIds=sourcePanel.filter(s=>!expansionIds.has(s.id)).map(s=>s.id);
 const auditUrl = new URL('../data/source-audit-20261009.json', import.meta.url);
 const read = async path => JSON.parse(await readFile(path, 'utf8'));
 const researchUrl = new URL('../data/research-2026.json', import.meta.url);
@@ -57,7 +60,7 @@ export async function refreshSourceAudit(bundle) {
     schema_version: 1, id: 'source-audit-20261009', checked_on: '2026-10-09', requested_window: requestedWindow,
     full_coverage: false,
     coverage_statement: '47个登记来源的逐源检查与历史完整性分别统计。入口可读、定向抽查或现有记录数量均不代表全年全量覆盖；媒体当前日仅为采集时点快照。',
-    summary: { registered_sources: sourcePanel.length, source_receipts: sourceChecks.length, sources_checked: sourceChecks.filter(r => r.checked === true).length, historically_complete_sources: sourceChecks.filter(r => r.history_complete === true).length, exclusion_candidates: dispositions.length },
+    summary: { registered_sources: historicalSourceIds.length, source_receipts: sourceChecks.length, sources_checked: sourceChecks.filter(r => r.checked === true).length, historically_complete_sources: sourceChecks.filter(r => r.history_complete === true).length, exclusion_candidates: dispositions.length },
     source_checks: sourceChecks, exclusion_dispositions: dispositions,
   };
   await writeFile(auditUrl, JSON.stringify(audit, null, 2) + '\n');
@@ -65,8 +68,8 @@ export async function refreshSourceAudit(bundle) {
 export async function checkSourceAudit() {
   const [audit, research] = await Promise.all([read(auditUrl), read(researchUrl)]);
   const records = [...research.events, ...research.leads];
-  const errors = validateSourceAudit(audit, records, sourcePanel.map(s => s.id), { candidates: research.october_refresh.excluded, requireReady: true });
-  if (sourcePanel.length !== 47) errors.push('Original registered source panel must contain 47 sources; review baseline changes explicitly.');
+  const errors = validateSourceAudit(audit, records, historicalSourceIds, { candidates: research.october_refresh.excluded, requireReady: true });
+  if (historicalSourceIds.length !== 47) errors.push('Original registered source panel must contain 47 sources; review baseline changes explicitly.');
   if (research.october_refresh.excluded.length !== 11) errors.push('Original October exclusion baseline must contain 11 candidates.');
   if (audit.requested_window?.start !== requestedWindow.start || audit.requested_window?.end !== requestedWindow.end) errors.push('Unexpected audit research window.');
   if (/\/workspace\//.test(JSON.stringify(audit))) errors.push('Public audit snapshot must not expose local working paths.');
