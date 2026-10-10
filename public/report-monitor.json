@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "as_of": "2026-10-08",
+  "as_of": "2026-10-10",
   "title": "研报市场监测",
   "groups": [
     {
@@ -257,7 +257,7 @@
         },
         {
           "period": "2025H2",
-          "value": 288.0,
+          "value": 288,
           "nature": "actual",
           "nature_source_label": "机构历史期市场统计，非人口普查",
           "publication_date": "2026-05-29",
@@ -271,13 +271,13 @@
           "id": "CN_AI_IAAS_REVENUE_H__2025H2__bridge_2026-05-29",
           "unit": "亿元人民币",
           "base_source_observation_id": "CN_AI_IAAS_REVENUE_H_NEW_VINTAGE__2025H2__2026-05-29__2",
-          "raw_value": 288.0,
+          "raw_value": 288,
           "raw_unit": "亿元人民币",
           "definition_note": "跨版本桥接：新版本回溯同一AI IaaS市场；2025H1=486.7−288.0=198.7亿元，与旧值一致，2024H2基数亦与新披露同比132.1%吻合。定义相容，无扩围信号；此为核验判断。",
-          "pre_display_value": 28800.0,
+          "pre_display_value": 28800,
           "pre_display_unit": "百万元人民币",
           "pre_display_conversion_factor": 0.01,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由百万元人民币换算为亿元人民币，乘以0.01；原值和原单位保留。"
         }
       ],
@@ -647,7 +647,7 @@
         {
           "id": "CN_SERVER_REVENUE_Q__M0001",
           "period": "2026Q1",
-          "value": 192.0,
+          "value": 192,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2026-06-15",
@@ -668,14 +668,14 @@
           "pre_display_value": 19.2,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 10.0,
+          "raw_to_display_factor": 10,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-6f203d1c3048"
         },
         {
           "id": "CN_SERVER_REVENUE_Q__M0003",
           "period": "2026Q2",
-          "value": 264.0,
+          "value": 264,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2026-09-10",
@@ -696,7 +696,7 @@
           "pre_display_value": 26.4,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 10.0,
+          "raw_to_display_factor": 10,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-eed0ea0bfd78"
         }
@@ -1097,7 +1097,7 @@
         {
           "id": "CN_ACCEL_REVENUE_H1__M0073",
           "period": "2023H1",
-          "value": 31.0,
+          "value": 31,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2023-10-09",
@@ -1118,14 +1118,14 @@
           "pre_display_value": 3.1,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-59a366ccd4ae"
         },
         {
           "id": "CN_ACCEL_REVENUE_H1__M0075",
           "period": "2024H1",
-          "value": 50.0,
+          "value": 50,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2024-09-30",
@@ -1143,17 +1143,17 @@
           "raw_unit": "亿美元",
           "scope_source_label": "加速计算服务器",
           "definition_note": "加速计算服务器是服务器市场子集；GPU/非GPU加速器收入与卡出货量份额须区分。",
-          "pre_display_value": 5.0,
+          "pre_display_value": 5,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-084d9a689668"
         },
         {
           "id": "CN_ACCEL_REVENUE_H1__M0081",
           "period": "2025H1",
-          "value": 160.0,
+          "value": 160,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2025-10-09",
@@ -1171,10 +1171,10 @@
           "raw_unit": "亿美元",
           "scope_source_label": "加速计算服务器",
           "definition_note": "加速计算服务器是服务器市场子集；GPU/非GPU加速器收入与卡出货量份额须区分。",
-          "pre_display_value": 16.0,
+          "pre_display_value": 16,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-8ee7927d81a1"
         }
@@ -1251,7 +1251,7 @@
         {
           "id": "CN_ACCEL_YOY_H1__M0074",
           "period": "2023H1",
-          "value": 54.0,
+          "value": 54,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2023-10-09",
@@ -1274,7 +1274,7 @@
         {
           "id": "CN_ACCEL_YOY_H1__M0076",
           "period": "2024H1",
-          "value": 63.0,
+          "value": 63,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2024-09-30",
@@ -1297,7 +1297,7 @@
         {
           "id": "CN_ACCEL_YOY_H1__M0082",
           "period": "2025H1",
-          "value": 100.0,
+          "value": 100,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2025-10-09",
@@ -1334,7 +1334,7 @@
           "sheet": "市场与技术数据",
           "parsed_row_index": 83,
           "metric_source_name": "加速服务器收入同比",
-          "value": 134.0,
+          "value": 134,
           "unit": "%",
           "raw_value": "134",
           "raw_unit": "%",
@@ -1387,7 +1387,7 @@
         {
           "id": "CN_GPU_ACCEL_REVENUE_H1__M0088",
           "period": "2023H1",
-          "value": 30.0,
+          "value": 30,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2023-10-09",
@@ -1405,17 +1405,17 @@
           "raw_unit": "亿美元",
           "scope_source_label": "加速计算服务器",
           "definition_note": "2023H1原稿GPU30+非GPU2=32亿美元，与总量31亿美元及92%/8%不严密勾稽，可能因取整/版本；不强制配平。",
-          "pre_display_value": 3.0,
+          "pre_display_value": 3,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-59a366ccd4ae"
         },
         {
           "id": "CN_GPU_ACCEL_REVENUE_H1__M0090",
           "period": "2024H1",
-          "value": 43.0,
+          "value": 43,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2024-09-30",
@@ -1436,7 +1436,7 @@
           "pre_display_value": 4.3,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-084d9a689668"
         }
@@ -1484,7 +1484,7 @@
         {
           "id": "CN_NONGPU_ACCEL_REVENUE_H1__M0089",
           "period": "2023H1",
-          "value": 2.0,
+          "value": 2,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2023-10-09",
@@ -1505,14 +1505,14 @@
           "pre_display_value": 0.2,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-59a366ccd4ae"
         },
         {
           "id": "CN_NONGPU_ACCEL_REVENUE_H1__M0091",
           "period": "2024H1",
-          "value": 7.0,
+          "value": 7,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2024-09-30",
@@ -1533,7 +1533,7 @@
           "pre_display_value": 0.7,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-084d9a689668"
         }
@@ -1579,7 +1579,7 @@
         {
           "id": "CN_NONGPU_ACCEL_YOY_H1__M0092",
           "period": "2023H1",
-          "value": 17.0,
+          "value": 17,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2023-10-09",
@@ -1602,7 +1602,7 @@
         {
           "id": "CN_NONGPU_ACCEL_YOY_H1__M0093",
           "period": "2024H1",
-          "value": 182.0,
+          "value": 182,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2024-09-30",
@@ -1666,7 +1666,7 @@
         {
           "id": "CN_ACCEL_CHIP_SHIPMENTS_H1__M0115",
           "period": "2023H1",
-          "value": 500000.0,
+          "value": 500000,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2023-10-09",
@@ -1689,7 +1689,7 @@
         {
           "id": "CN_ACCEL_CHIP_SHIPMENTS_H1__M0119",
           "period": "2024H1",
-          "value": 900000.0,
+          "value": 900000,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2024-09-30",
@@ -1712,7 +1712,7 @@
         {
           "id": "CN_ACCEL_CHIP_SHIPMENTS_H1__M0126",
           "period": "2025H1",
-          "value": 1900000.0,
+          "value": 1900000,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2025-10-09",
@@ -1749,7 +1749,7 @@
           "sheet": "市场与技术数据",
           "parsed_row_index": 126,
           "metric_source_name": "加速芯片出货量",
-          "value": 2700000.0,
+          "value": 2700000,
           "unit": "张",
           "raw_value": "270",
           "raw_unit": "万张",
@@ -1802,7 +1802,7 @@
         {
           "id": "CN_LOCAL_ACCEL_CHIP_SHIPMENTS_H1__M0116",
           "period": "2023H1",
-          "value": 50000.0,
+          "value": 50000,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2023-10-09",
@@ -1825,7 +1825,7 @@
         {
           "id": "CN_LOCAL_ACCEL_CHIP_SHIPMENTS_H1__M0120",
           "period": "2024H1",
-          "value": 200000.0,
+          "value": 200000,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2024-09-30",
@@ -1862,7 +1862,7 @@
           "sheet": "市场与技术数据",
           "parsed_row_index": 127,
           "metric_source_name": "本土品牌加速芯片出货量",
-          "value": 820000.0,
+          "value": 820000,
           "unit": "张",
           "raw_value": "82",
           "raw_unit": "万张",
@@ -1915,7 +1915,7 @@
         {
           "id": "CN_LOCAL_ACCEL_CHIP_SHARE_H1__M0118",
           "period": "2023H1",
-          "value": 10.0,
+          "value": 10,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2023-10-09",
@@ -1938,7 +1938,7 @@
         {
           "id": "CN_LOCAL_ACCEL_CHIP_SHARE_H1__M0122",
           "period": "2024H1",
-          "value": 20.0,
+          "value": 20,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2024-09-30",
@@ -1961,7 +1961,7 @@
         {
           "id": "CN_LOCAL_ACCEL_CHIP_SHARE_H1__M0128",
           "period": "2025H1",
-          "value": 35.0,
+          "value": 35,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2025-10-09",
@@ -2023,7 +2023,7 @@
         {
           "id": "CN_GPU_CHIP_SHARE_H1__M0117",
           "period": "2023H1",
-          "value": 90.0,
+          "value": 90,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2023-10-09",
@@ -2046,7 +2046,7 @@
         {
           "id": "CN_GPU_CHIP_SHARE_H1__M0121",
           "period": "2024H1",
-          "value": 80.0,
+          "value": 80,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2024-09-30",
@@ -2083,7 +2083,7 @@
           "sheet": "市场与技术数据",
           "parsed_row_index": 128,
           "metric_source_name": "GPU卡出货量份额",
-          "value": 70.0,
+          "value": 70,
           "unit": "%",
           "raw_value": "70",
           "raw_unit": "%",
@@ -2109,7 +2109,7 @@
           "sheet": "市场与技术数据",
           "parsed_row_index": 130,
           "metric_source_name": "非GPU卡出货量份额",
-          "value": 30.0,
+          "value": 30,
           "unit": "%",
           "raw_value": "30",
           "raw_unit": "%",
@@ -2183,7 +2183,7 @@
           "pre_display_value": 1.01,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-2bb71a7f37ac"
         },
@@ -2211,7 +2211,7 @@
           "pre_display_value": 1.55,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-70ba40cffe6c"
         },
@@ -2239,7 +2239,7 @@
           "pre_display_value": 2.37,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-01b2eda77ccf"
         }
@@ -2332,7 +2332,7 @@
         {
           "id": "CN_LIQ_SERVER_YOY_Y__M0139",
           "period": "2024",
-          "value": 67.0,
+          "value": 67,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2025-04-08",
@@ -2413,7 +2413,7 @@
           "pre_display_value": 0.66,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-a7a007d6ab86"
         },
@@ -2441,7 +2441,7 @@
           "pre_display_value": 1.26,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-d13d3f083030"
         }
@@ -2592,7 +2592,7 @@
           "pre_display_value": 0.13,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-9cb5f5e45adf"
         },
@@ -2620,7 +2620,7 @@
           "pre_display_value": 0.11,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-d0343a6fe2df"
         }
@@ -2696,7 +2696,7 @@
         {
           "id": "CN_ACCEL_FREV_2028__M0095",
           "period": "2028",
-          "value": 253.0,
+          "value": 253,
           "nature": "forecast",
           "nature_source_label": "预测（历史版本）",
           "publication_date": "2024-09-30",
@@ -2717,14 +2717,14 @@
           "pre_display_value": 25.3,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-084d9a689668"
         },
         {
           "id": "CN_ACCEL_FREV_2028__M0096",
           "period": "2028",
-          "value": 550.0,
+          "value": 550,
           "nature": "forecast",
           "nature_source_label": "预测（历史版本）",
           "publication_date": "2025-01-03",
@@ -2742,10 +2742,10 @@
           "raw_unit": "亿美元",
           "scope_source_label": "加速计算服务器",
           "definition_note": "必须同时显示预测发布时间。该系列预测曾大幅修订；不是历年实绩或稳定的同一条预测路径。",
-          "pre_display_value": 55.0,
+          "pre_display_value": 55,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-269f12dc62f1"
         }
@@ -2791,7 +2791,7 @@
         {
           "id": "CN_ACCEL_FREV_2029__M0097",
           "period": "2029",
-          "value": 1000.0,
+          "value": 1000,
           "nature": "forecast",
           "nature_source_label": "预测（历史版本）",
           "publication_date": "2025-03-31",
@@ -2809,17 +2809,17 @@
           "raw_unit": "亿美元",
           "scope_source_label": "加速计算服务器",
           "definition_note": "必须同时显示预测发布时间。该系列预测曾大幅修订；不是历年实绩或稳定的同一条预测路径。",
-          "pre_display_value": 100.0,
+          "pre_display_value": 100,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-1e57027755ba"
         },
         {
           "id": "CN_ACCEL_FREV_2029__M0098",
           "period": "2029",
-          "value": 1400.0,
+          "value": 1400,
           "nature": "forecast",
           "nature_source_label": "预测（历史版本）",
           "publication_date": "2025-10-09",
@@ -2837,10 +2837,10 @@
           "raw_unit": "亿美元",
           "scope_source_label": "加速计算服务器",
           "definition_note": "必须同时显示预测发布时间。该系列预测曾大幅修订；不是历年实绩或稳定的同一条预测路径。",
-          "pre_display_value": 140.0,
+          "pre_display_value": 140,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-8ee7927d81a1"
         }
@@ -2886,7 +2886,7 @@
         {
           "id": "CN_LIQ_FREV_2027__M0140",
           "period": "2027",
-          "value": 95.0,
+          "value": 95,
           "nature": "forecast",
           "nature_source_label": "预测（历史版本）",
           "publication_date": "2023-06-05",
@@ -2907,14 +2907,14 @@
           "pre_display_value": 9.5,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-2bb71a7f37ac"
         },
         {
           "id": "CN_LIQ_FREV_2027__M0142",
           "period": "2027",
-          "value": 89.0,
+          "value": 89,
           "nature": "forecast",
           "nature_source_label": "预测（历史版本）",
           "publication_date": "2023-10-12",
@@ -2935,7 +2935,7 @@
           "pre_display_value": 8.9,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-a7a007d6ab86"
         }
@@ -2979,7 +2979,7 @@
         {
           "id": "CN_LIQ_FREV_2028__M0144",
           "period": "2028",
-          "value": 102.0,
+          "value": 102,
           "nature": "forecast",
           "nature_source_label": "预测（历史版本）",
           "publication_date": "2024-04-17",
@@ -3000,14 +3000,14 @@
           "pre_display_value": 10.2,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-70ba40cffe6c"
         },
         {
           "id": "CN_LIQ_FREV_2028__M0146",
           "period": "2028",
-          "value": 102.0,
+          "value": 102,
           "nature": "forecast",
           "nature_source_label": "预测（历史版本）",
           "publication_date": "2024-10-15",
@@ -3028,7 +3028,7 @@
           "pre_display_value": 10.2,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-d13d3f083030"
         }
@@ -3102,7 +3102,7 @@
         {
           "id": "CN_LIQ_FREV_2029__M0148",
           "period": "2029",
-          "value": 162.0,
+          "value": 162,
           "nature": "forecast",
           "nature_source_label": "预测（历史版本）",
           "publication_date": "2025-04-08",
@@ -3123,14 +3123,14 @@
           "pre_display_value": 16.2,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-01b2eda77ccf"
         },
         {
           "id": "CN_LIQ_FREV_2029__M0310",
           "period": "2029",
-          "value": 200.0,
+          "value": 200,
           "nature": "forecast",
           "nature_source_label": "预测（官方评论引述，底表未取得）",
           "publication_date": "2026-03-31",
@@ -3148,10 +3148,10 @@
           "raw_unit": "亿美元",
           "scope_source_label": "中国液冷服务器",
           "definition_note": "IDC官网2026-03-31评论更新预测，未附完整tracker数据；不能用于证明2025实绩或与2025版无缝拼接。",
-          "pre_display_value": 20.0,
+          "pre_display_value": 20,
           "pre_display_unit": "十亿美元",
           "pre_display_conversion_factor": 10,
-          "raw_to_display_factor": 1.0,
+          "raw_to_display_factor": 1,
           "normalization_note": "展示单位由十亿美元换算为亿美元，乘以10；原值和原单位保留。",
           "source_id": "SRC-45956dcd9159"
         }
@@ -5068,7 +5068,7 @@
         {
           "id": "CN_EXT_HFA_SHARE_A__003",
           "period": "2025",
-          "value": 51.0,
+          "value": 51,
           "unit": "%",
           "nature": "actual",
           "nature_source_label": "历史机构统计",
@@ -8489,6 +8489,129 @@
       ],
       "observation_count": 2,
       "derived_count": 0
+    },
+    {
+      "parent": "solutions",
+      "group": "solutions",
+      "business_classes": [
+        "万全异构智算方案"
+      ],
+      "provider": "IDC",
+      "geography": "中国",
+      "frequency": "annual",
+      "allow_auto_delta": false,
+      "audit_status": "usable_with_caveats",
+      "monitoring_role": "single_point_reference",
+      "historical_observed_count": 1,
+      "historical_derived_count": 0,
+      "forecast_count": 0,
+      "usable_point_count": 1,
+      "observation_count": 1,
+      "estimated_historical_count": 0,
+      "derived_count": 0,
+      "continuous_history_eligible": false,
+      "non_additive": true,
+      "render_constraint": "仅一个2025历史观察点，展示单点；不得连成增长曲线，不补造其他年份或自动计算同比。",
+      "data_vintage_policy": "single_vintage_2026-10-08",
+      "denominator": null,
+      "id": "CN_AI_CLOUD_MARKET_SIZE_Y",
+      "title": "中国AI云市场年度规模（新口径）",
+      "unit": "亿元人民币",
+      "scope": "以云服务形式支撑大模型全生命周期的基础设施与平台服务，覆盖AI算力与存储、数据处理、模型开发/训推/部署运维及安全治理；完整分项和统计边界未公开。",
+      "definition": "以云服务形式支撑大模型全生命周期的基础设施与平台服务，覆盖AI算力与存储、数据处理、模型开发/训推/部署运维及安全治理；完整分项和统计边界未公开。",
+      "subtopic": "AI云服务 / 全栈基础设施",
+      "related_subtopics": [
+        "词元车间（推理）"
+      ],
+      "metric_family": "size",
+      "family": "size",
+      "metric_subtype": "market_size",
+      "comparability_note": "首次披露的AI云复合口径，与旧AI IaaS、MaaS及硬件市场口径有交叠；不能加总或拼接。只有2025一个数据点。",
+      "observations": [
+        {
+          "id": "CN_AI_CLOUD_MARKET_SIZE_Y__2025__2026-10-08",
+          "period": "2025",
+          "value": 684,
+          "unit": "亿元人民币",
+          "nature": "actual",
+          "nature_source_label": "机构历史期市场统计（官方公开摘要，非普查）",
+          "qualifier": "等于",
+          "provider": "IDC",
+          "report_title": "中国AI云市场追踪报告，2025：官方公开摘要",
+          "publication_date": "2026-10-08",
+          "vintage": "2026-10-08",
+          "source_id": "SRC-IDC-AICLOUD-20261008",
+          "source_url": "https://www.idc.com/resource-center/blog/idc%E9%A6%96%E6%AC%A1%E5%AE%9A%E4%B9%89ai%E4%BA%91%E5%B8%82%E5%9C%BA%EF%BC%8C2025%E5%B9%B4%E4%B8%AD%E5%9B%BD%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1%E8%BE%BE684%E4%BA%BF%E5%85%83/",
+          "page": "开头及“IDC洞察：2025年推理需求成为主导”段落",
+          "raw_value": 684,
+          "raw_unit": "亿元人民币",
+          "raw_to_display_factor": 1,
+          "normalization_note": "直接保留官方正文单位与值，无派生。",
+          "checked_at": "2026-10-10T05:49:00Z"
+        }
+      ]
+    },
+    {
+      "parent": "solutions",
+      "group": "solutions",
+      "business_classes": [
+        "万全异构智算方案"
+      ],
+      "provider": "IDC",
+      "geography": "中国",
+      "frequency": "annual",
+      "allow_auto_delta": false,
+      "audit_status": "usable_with_caveats",
+      "monitoring_role": "single_point_reference",
+      "historical_observed_count": 1,
+      "historical_derived_count": 0,
+      "forecast_count": 0,
+      "usable_point_count": 1,
+      "observation_count": 1,
+      "estimated_historical_count": 0,
+      "derived_count": 0,
+      "continuous_history_eligible": false,
+      "non_additive": true,
+      "render_constraint": "仅一个2025历史观察点，展示单点；不得连成增长曲线，不补造其他年份或自动计算同比。",
+      "data_vintage_policy": "single_vintage_2026-10-08",
+      "denominator": null,
+      "id": "CN_ENTERPRISE_MAAS_TOKEN_VOLUME_FY_202610",
+      "title": "中国企业级MaaS年度Token调用量（2026-10口径）",
+      "unit": "万亿Tokens",
+      "scope": "官方2026-10-08摘要所称中国企业级MaaS市场Token调用量；正文未明确公有/私有云覆盖边界，不与旧中国企业公有云MaaS默认同口径。",
+      "definition": "官方2026-10-08摘要所称中国企业级MaaS市场Token调用量；正文未明确公有/私有云覆盖边界，不与旧中国企业公有云MaaS默认同口径。",
+      "subtopic": "企业级MaaS / Token调用",
+      "related_subtopics": [
+        "词元车间（推理）"
+      ],
+      "metric_family": "size",
+      "family": "size",
+      "metric_subtype": "token_volume",
+      "comparability_note": "同为2025数据，与旧2026-05-07公开摘要1944万亿存在50万亿差异；范围或版本变化未解释。并列显示、保持冲突标签，不覆盖旧数，不计算增长线。",
+      "observations": [
+        {
+          "id": "CN_ENTERPRISE_MAAS_TOKEN_VOLUME_FY_202610__2025__2026-10-08",
+          "period": "2025",
+          "value": 1994,
+          "unit": "万亿Tokens",
+          "nature": "actual",
+          "nature_source_label": "机构历史期市场统计（官方公开摘要，非普查）",
+          "qualifier": "等于",
+          "provider": "IDC",
+          "report_title": "中国AI云市场追踪报告，2025：官方公开摘要",
+          "publication_date": "2026-10-08",
+          "vintage": "2026-10-08",
+          "source_id": "SRC-IDC-AICLOUD-20261008",
+          "source_url": "https://www.idc.com/resource-center/blog/idc%E9%A6%96%E6%AC%A1%E5%AE%9A%E4%B9%89ai%E4%BA%91%E5%B8%82%E5%9C%BA%EF%BC%8C2025%E5%B9%B4%E4%B8%AD%E5%9B%BD%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1%E8%BE%BE684%E4%BA%BF%E5%85%83/",
+          "page": "中国企业级MaaS市场Token调用量段落",
+          "raw_value": 1994,
+          "raw_unit": "万亿Tokens",
+          "raw_to_display_factor": 1,
+          "normalization_note": "直接保留官方正文单位与值，无派生。",
+          "checked_at": "2026-10-10T05:49:00Z",
+          "conflict_id": "CONFLICT_MAAS_2025_1944_VS_1994_SCOPE_VINTAGE"
+        }
+      ]
     }
   ],
   "auxiliary": [
@@ -8510,7 +8633,7 @@
         {
           "id": "CN_ACCEL_FREAL_2024__M0077",
           "period": "2024",
-          "value": 19.0,
+          "value": 19,
           "nature": "forecast",
           "nature_source_label": "预测（历史版本）",
           "publication_date": "2025-01-03",
@@ -8664,7 +8787,7 @@
         {
           "id": "CN_LIQ_UNITS_FREAL_2024__M0152",
           "period": "2024",
-          "value": 230000.0,
+          "value": 230000,
           "nature": "forecast",
           "nature_source_label": "预测（历史版本）",
           "publication_date": "2024-10-15",
@@ -8687,7 +8810,7 @@
         {
           "id": "CN_LIQ_UNITS_FREAL_2024__M0151",
           "period": "2024",
-          "value": 230000.0,
+          "value": 230000,
           "nature": "actual",
           "nature_source_label": "实绩（机构报告）",
           "publication_date": "2025-04-08",
@@ -8763,7 +8886,7 @@
         },
         {
           "period": "2025H2",
-          "value": 288.0,
+          "value": 288,
           "nature": "actual",
           "nature_source_label": "机构历史期市场统计，非人口普查",
           "publication_date": "2026-05-29",
@@ -8960,7 +9083,7 @@
         },
         {
           "period": "2024H1",
-          "value": 52.0,
+          "value": 52,
           "nature": "actual",
           "nature_source_label": "机构历史期市场统计，非人口普查",
           "publication_date": "2024-12-16",
@@ -9474,7 +9597,7 @@
         {
           "id": "CN_SDS_VENDOR_H3C_SHARE_A__001",
           "period": "2023",
-          "value": 10.0,
+          "value": 10,
           "unit": "%",
           "nature": "actual",
           "nature_source_label": "历史机构统计",
@@ -9555,7 +9678,7 @@
         {
           "id": "CN_SDS_VENDOR_XSKY_SHARE_A__001",
           "period": "2023",
-          "value": 5.0,
+          "value": 5,
           "unit": "%",
           "nature": "actual",
           "nature_source_label": "历史机构统计",
@@ -10512,6 +10635,31 @@
       "published_at": "2026-03-18",
       "type": "机构报告 / 官方公开披露（详原文）",
       "id": "SRC-c74bcd6fe1fe"
+    },
+    {
+      "id": "SRC-IDC-AICLOUD-20261008",
+      "title": "IDC首次定义AI云市场，2025年中国市场规模达684亿元",
+      "report_title": "中国AI云市场追踪报告，2025：官方公开摘要",
+      "publication_date": "2026-10-08",
+      "published_at": "2026-10-08",
+      "vintage": "2026-10-08",
+      "data_period": "2025",
+      "url": "https://www.idc.com/resource-center/blog/idc%E9%A6%96%E6%AC%A1%E5%AE%9A%E4%B9%89ai%E4%BA%91%E5%B8%82%E5%9C%BA%EF%BC%8C2025%E5%B9%B4%E4%B8%AD%E5%9B%BD%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1%E8%BE%BE684%E4%BA%BF%E5%85%83/",
+      "source_url": "https://www.idc.com/resource-center/blog/idc%E9%A6%96%E6%AC%A1%E5%AE%9A%E4%B9%89ai%E4%BA%91%E5%B8%82%E5%9C%BA%EF%BC%8C2025%E5%B9%B4%E4%B8%AD%E5%9B%BD%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1%E8%BE%BE684%E4%BA%BF%E5%85%83/",
+      "publisher": "IDC",
+      "provider": "IDC",
+      "original_provider": "IDC",
+      "type": "机构市场统计官方公开摘要",
+      "source_type": "institution_blog_summary",
+      "primary": true,
+      "full_text_reviewed": true,
+      "review_state": "verified_full_text",
+      "read_method": "官方HTML正文逐段核读",
+      "access_date": "2026-10-10",
+      "checked_at": "2026-10-10T05:49:00Z",
+      "date_note": "10月8日是官方博客发布日期；2025是数据期。检查日不改写两者。",
+      "methodology_note": "公开摘要提供市场定义；未披露抽样框、样本量、收入确认及完整去重底表；企业级MaaS是否包含私有云及其与旧公有云统计的桥接未交代。",
+      "notes": "AI云684亿元为新复合口径；不能拼接或叠加AI IaaS、MaaS旧口径。1994万亿与旧版1944万亿保留差异，不覆盖。"
     }
   ],
   "source_conflicts": [
@@ -10550,6 +10698,29 @@
       "id": "MAAS_REVENUE_SCOPE_REFINEMENT",
       "metric": "MaaS收入2024H1/2025H1",
       "description": "2025定义新增大模型应用开发平台字样；均排除单独IaaS/算力，且同名tracker给出同年同比；视为可参考同系列，精确边界扩张影响未量化。"
+    },
+    {
+      "id": "CONFLICT_MAAS_2025_1944_VS_1994_SCOPE_VINTAGE",
+      "metric": "2025中国MaaS Token调用量",
+      "period": "2025",
+      "type": "scope_or_vintage_unresolved",
+      "status": "unresolved",
+      "old_series_id": "CN_PUBLIC_MAAS_TOKEN_VOLUME_FY",
+      "new_series_id": "CN_ENTERPRISE_MAAS_TOKEN_VOLUME_FY_202610",
+      "old_source_id": "SRC-5fca5f55168a",
+      "new_source_id": "SRC-IDC-AICLOUD-20261008",
+      "old_publication_date": "2026-05-07",
+      "new_publication_date": "2026-10-08",
+      "old_value": 1944,
+      "new_value": 1994,
+      "unit": "万亿Tokens",
+      "absolute_difference": 50,
+      "old_scope": "中国企业公有云MaaS；旧摘要明确不含私有化部署",
+      "new_scope": "中国企业级MaaS；新摘要未交代公有/私有覆盖边界",
+      "selected_baseline": "旧公有云主线1944保持；新企业级口径1994单点并列。尚不能判定是修订、范围变化或文本错误。",
+      "handling": "保留两个版本及来源，不覆盖旧值、不跨口径计算同比；原有1944与图表1941的冲突也保留。",
+      "additional_wording_caveat": "新文称同比增长约16倍，倍数语义有歧义；不转换为1600%或1700%，亦不反推2024基期。",
+      "source_url": "https://www.idc.com/resource-center/blog/idc%E9%A6%96%E6%AC%A1%E5%AE%9A%E4%B9%89ai%E4%BA%91%E5%B8%82%E5%9C%BA%EF%BC%8C2025%E5%B9%B4%E4%B8%AD%E5%9B%BD%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1%E8%BE%BE684%E4%BA%BF%E5%85%83/"
     }
   ],
   "source_aliases": {
@@ -10590,5 +10761,16 @@
     "固定目标年的不同预测版本单独比较；不把目标年变换误称为上调或下调。",
     "空值表示未取得，不能填零；报告覆盖与观点不合成为景气分数。"
   ],
-  "scope_notice": "选定公开机构报告与官方摘要的数据底表，不是全市场研报普查。定时更新计划仍暂停。"
+  "scope_notice": "选定公开机构报告与官方摘要的数据底表，不是全市场研报普查。定时更新计划仍暂停。",
+  "latest_refresh": {
+    "batch_id": "source-audit-20261010",
+    "checked_at": "2026-10-10T05:50:46.795Z",
+    "added_series_ids": [
+      "CN_AI_CLOUD_MARKET_SIZE_Y",
+      "CN_ENTERPRISE_MAAS_TOKEN_VOLUME_FY_202610"
+    ],
+    "added_observations": 2,
+    "existing_values_changed": 0,
+    "scope_note": "补入10月8日IDC新AI云与企业级MaaS口径，各为2025单点；不拼接旧序列。"
+  }
 }

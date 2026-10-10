@@ -42,12 +42,15 @@ export function analyze(panel,research,previous,config,end){
  for(const e of rows){
   if(!inDateWindow(e,research.period_start,end))continue;
   const date=e.event_date||e.published_date,changed=known[e.id]!==undefined&&known[e.id]!==signature(e),fresh=known[e.id]===undefined;
-  if(!(fresh&&(between(date,eventStart,end)||between(e.published_date,eventStart,end))||changed))continue;
+  // Once a successful cutoff exists, newly discovered older evidence must pass
+  // the same alert rules. Initial imports still establish a quiet old baseline.
+  const backfill=!!previous?.cutoff&&fresh&&date<eventStart;
+  if(!(fresh&&(between(date,eventStart,end)||between(e.published_date,eventStart,end))||backfill||changed))continue;
   recent.push(e.id);
   const important=['hyg_cpu','hyg_dcu','hygon_unspecified','kunpeng','hyg_or_kunpeng'].some(t=>matchesChip(e,t))&&['tender','award','contract','production','repeat','launch'].includes(e.stage);
   const negative=['cancel','failure'].includes(e.stage)||e.status_conflict||e.evidence_status==='conflict';
   const threshold={award:rules.award_contract_cny,contract:rules.award_contract_cny,budget:rules.budget_cny,investment:rules.investment_cny}[e.amount_kind];
-  const large=threshold&&Number.isFinite(e.amount_cny)&&e.amount_cny>=threshold&&!e.amount_range_cny&&!e.cross_period_exclusion&&!['candidate','cancel','failure'].includes(e.stage);
+  const large=threshold&&Number.isFinite(e.amount_cny)&&e.amount_cny>=threshold&&!e.amount_range_cny&&!e.cross_period_exclusion&&!['candidate','cancel','failure','amendment'].includes(e.stage);
   if(important||negative||large)alerts.push({id:`event:${e.id}:${signature(e)}`,type:'event',record_id:e.id,title:e.title,url:e.url,date,stage:e.stage,amount_cny:e.amount_cny,amount_kind:e.amount_kind,verified:researchReview(e)==='accepted'&&!negative,amount_verified:amountEligible(e)&&!negative&&!e.amount_range_cny&&!e.cross_period_exclusion,reason:negative?'终止或冲突':important?'海光/鲲鹏重点路线':'大额披露',historical_revision:!between(date,start,end)});
  }
  const sent=new Set(previous?.notified_ids||[]);

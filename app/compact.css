@@ -1,9 +1,9 @@
 /* Compact working surface. Data definitions and interactions are unchanged. */
 :root{--canvas:#f4f6fa;--line:#e2e7ef;--muted:#66758b;--ink:#1d2c42}
 body{font-size:14px;line-height:1.6}
-.sidebar{width:184px;padding:24px 12px;background:#fbfcfe}
+.sidebar{width:184px;padding:44px 12px;background:#fbfcfe}
 .brand{gap:8px;padding:0 7px}.brand-symbol{width:56px;height:56px}.brand strong{font-size:23px;letter-spacing:2px}.brand span:not(.brand-symbol){font-size:10px;letter-spacing:1px;margin-top:4px}
-.nav-caption{margin:28px 12px 10px;font-size:11px}.sidebar nav{gap:5px}.sidebar nav button{padding:10px 11px;min-height:42px;gap:9px;font-size:13px;border-radius:7px}.sidebar nav button.active{background:#eaf0fc;box-shadow:inset 2px 0 var(--blue)}
+.nav-caption{margin:4px 11px 22px;font-size:11px}.sidebar nav{gap:5px}.sidebar nav button{padding:10px 11px;min-height:46px;gap:9px;font-size:15px;border-radius:7px}.sidebar nav button.active{background:#eaf0fc;box-shadow:inset 2px 0 var(--blue)}
 main{margin-left:184px;width:calc(100% - 184px)}
 .content{max-width:1760px;padding:24px 26px 18px}
 .page-heading{align-items:center;gap:12px;margin-bottom:16px}.page-heading h1{font-size:25px;letter-spacing:-.5px}.page-heading .actions{gap:7px}.button{min-height:36px;padding:7px 11px;font-size:13px;border-radius:7px}
@@ -95,3 +95,16 @@ footer{margin-top:20px;padding-top:12px;font-size:11px;line-height:1.6}
 @keyframes zero-readout-in{from{opacity:0}to{opacity:1}}
 .chart-zero-marker,.chart-zero-value-label{animation:zero-readout-in 420ms ease-out both}
 @media(prefers-reduced-motion:reduce){.chart-zero-marker,.chart-zero-value-label{animation:none}}
+
+/* Official Lenovo logo aligned with the navigation icon column. */
+.brand.lenovo-only{padding:0 11px;min-height:48px;gap:0;justify-content:flex-start}
+.brand.lenovo-only .lenovo-wordmark{display:block;width:138px;max-width:100%;height:auto;object-fit:contain}
+@media(max-width:700px){.brand.lenovo-only{padding:0 2px;min-height:40px}.brand.lenovo-only .lenovo-wordmark{width:124px}}
+
+/* Caption hugs the logo, with both outer glyph edges aligned to its width. */
+.brand.lenovo-only{min-height:0}
+.sidebar .nav-caption{display:flex;justify-content:space-between;align-items:center;width:138px;margin:2px 11px 22px;font-size:11.5px;line-height:1;letter-spacing:0}
+.sidebar .nav-caption>span{display:block;flex:0 0 auto}
+@media(max-width:700px){.sidebar .nav-caption{width:124px;margin:2px 2px 14px;font-size:10.4px}.brand.lenovo-only{min-height:0}}
+
+@media(max-width:700px){.sidebar{padding-top:24px}.sidebar nav button{font-size:12px}}

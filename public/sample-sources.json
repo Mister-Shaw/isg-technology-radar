@@ -1,1 +1,1745 @@
-{"version":"market-refresh-20261008-v1","collected_at":"2026-10-08T09:47:05.306Z","window":{"start":"2026-01-01","end":"2026-10-08"},"sources":[{"id":"doit_all","kind":"news","group":"media","application_reviewed":true,"name":"DOIT · 全站全部新闻","url":"https://www.doit.com.cn/","scope":"固定来源全部新闻为分母 · 技术条件只筛分子","limitation":"当前归档2,681篇，同源标题去重后2,650篇进入全新闻分母；不按基础设施主题或十一类技术预筛。新闻占比反映该来源的关注结构，不能直接视为买方采用率。","method":"连续采集全站公开列表28页，跨过2026年初边界；全部新闻按同一规范化标题规则去重，取首次发表。技术分类、芯片和明确国内条件只筛分子。各月统一按标题识别，未命中技术和非基础设施新闻仍留在分母。消费终端存储、未指明资源池/调度/一体机的泛异构计算不计入相应技术分子。采购与部署表述经过人工复核，未核验实际采用；历史删除、编辑策略与异标题转载仍可能影响结果。","coverage":[{"month":"2026-01","status":"complete","total":188,"eligible":184,"note":"全站全部新闻，统一标题去重；技术、地域和芯片不筛分母。","keyword_application_reviewed":true},{"month":"2026-02","status":"complete","total":111,"eligible":111,"note":"全站全部新闻，统一标题去重；技术、地域和芯片不筛分母。","keyword_application_reviewed":true},{"month":"2026-03","status":"complete","total":351,"eligible":344,"note":"全站全部新闻，统一标题去重；技术、地域和芯片不筛分母。","keyword_application_reviewed":true},{"month":"2026-04","status":"complete","total":319,"eligible":307,"note":"全站全部新闻，统一标题去重；技术、地域和芯片不筛分母。","keyword_application_reviewed":true},{"month":"2026-05","status":"complete","total":228,"eligible":226,"note":"全站全部新闻，统一标题去重；技术、地域和芯片不筛分母。","keyword_application_reviewed":true},{"month":"2026-06","status":"complete","total":369,"eligible":365,"note":"全站全部新闻，统一标题去重；技术、地域和芯片不筛分母。","keyword_application_reviewed":true},{"month":"2026-07","status":"complete","total":410,"eligible":409,"note":"全站全部新闻，统一标题去重；技术、地域和芯片不筛分母。","keyword_application_reviewed":true},{"month":"2026-08","status":"complete","total":365,"eligible":365,"note":"全站全部新闻，统一标题去重；技术、地域和芯片不筛分母。","keyword_application_reviewed":true},{"month":"2026-09","status":"complete","total":512,"eligible":510,"covered_start":"2026-09-01","covered_end":"2026-09-30","partial_calendar_month":false,"note":"DOIT全站公开全部内容列表连续7页；全部新闻为分母，同源完全相同标题按最早发表去重；9月完整覆盖。","covered_through":"2026-09-30","checked_at":"2026-10-07T10:26:35.128Z","application_reviewed":true,"keyword_application_reviewed":true},{"source_id":"doit_all","month":"2026-10","status":"complete","enumeration_complete_to_snapshot":true,"date_validation_complete":true,"covered_start":"2026-10-01","covered_through":"2026-10-08","complete_calendar_days_through":"2026-10-07","partial_current_day":true,"partial_calendar_month":true,"is_full_calendar_month":false,"coverage_basis":"published_archive_snapshot","total":30,"eligible":30,"quarantined_count":0,"source_date_counts":{"2026-10-01":6,"2026-10-02":5,"2026-10-03":2,"2026-10-04":2,"2026-10-05":1,"2026-10-06":2,"2026-10-07":4,"2026-10-08":8},"archive_urls":["https://www.doit.com.cn/api/cms/content/list?sid=809835088719941&pp=pc&lv=CurrentAndChild&cid=809835227754565&ps=100&pn=1"],"checked_at":"2026-10-08T09:27:43.358335+00:00","earlier_boundary":"2026-09-23","old_count":27,"added_count":3,"added_current_day_count":3,"added_historical_count":0,"added_ids":["doit-857338575446085","doit-857338990297157","doit-857343114219589"],"missing_existing_ids":[],"title_duplicates":[],"note":"All news in the selected public archive is retained without topic filtering; October 8 is only a current-time snapshot, not a completed day or month. Deleted/unlisted news and later backdating cannot be ruled out.","archive_pages_checked":1,"archive_items_examined":100,"new_original_date_validation_complete":true,"snapshot_started_at":"2026-10-08T09:27:37.108019+00:00","application_reviewed":true,"application_reviewed_topics":["domestic_gpu","xpu","hygon","kunpeng_route","supernode","optical_switch","ai_storage","compute_field","compute_rental","token_factory","aidc","modular_dc","liquid_cooling","eda"],"keyword_application_reviewed":true}],"application_reviewed_topics":["supernode","liquid_cooling","domestic_gpu","compute_field","eda","compute_rental","token_factory","optical_switch","ai_storage","aidc","modular_dc"],"last_rechecked_at":"2026-10-08T09:27:43.358335+00:00","recheck_window":{"start":"2026-09-07","end":"2026-09-20"},"latest_collection_cutoff":"2026-10-07","latest_access_note":"公开目录已复查至2026-10-08采集时点；新关键词统一重扫全部历史标题。"},{"id":"c114_roll_all","kind":"news","group":"media","name":"C114通信网·滚动资讯全部内容","url":"https://www.c114.com.cn/news/roll.asp","scope":"C114公开滚动资讯“查看全部”按日归档，保留所有标题，包括非11类技术、海外、消费终端和转载。并非保证整个网站所有独立栏目均被纳入。","method":"请求2026-01-01至2026-09-20全部263个日归档，不按主题预筛；核对页面日期字段、每条列表日期及每月首末条正文日期；按文章ID及规范化完全相同标题去重。 所有来源统一使用同一标题分类词表；同源规范化标题去重，跨来源报道分别计数。专题/直播入口不是新闻文章，按文档类型排除。","limitation":"当前归档6,450篇，同源标题去重后6,382篇进入全新闻分母；所有主题保留在分母。完整仅指当前可访问滚动资讯归档，不保证网站全站所有栏目或历史已删文章。 分母保留全部标题；技术提及可另作分子，不能按分子类别筛分母。","application_reviewed":false,"coverage":[{"month":"2026-01","status":"complete","total":694,"eligible":685,"note":"所选滚动资讯日归档逐日连续覆盖；不保证网站从未删文","keyword_application_reviewed":true},{"month":"2026-02","status":"complete","total":491,"eligible":488,"note":"所选滚动资讯日归档逐日连续覆盖；不保证网站从未删文","keyword_application_reviewed":true},{"month":"2026-03","status":"complete","total":895,"eligible":882,"note":"所选滚动资讯日归档逐日连续覆盖；不保证网站从未删文","keyword_application_reviewed":true},{"month":"2026-04","status":"complete","total":801,"eligible":789,"note":"所选滚动资讯日归档逐日连续覆盖；不保证网站从未删文","keyword_application_reviewed":true},{"month":"2026-05","status":"complete","total":752,"eligible":743,"note":"所选滚动资讯日归档逐日连续覆盖；不保证网站从未删文","keyword_application_reviewed":true},{"month":"2026-06","status":"complete","total":792,"eligible":786,"note":"所选滚动资讯日归档逐日连续覆盖；不保证网站从未删文","keyword_application_reviewed":true},{"month":"2026-07","status":"complete","total":817,"eligible":808,"note":"所选滚动资讯日归档逐日连续覆盖；不保证网站从未删文","keyword_application_reviewed":true},{"month":"2026-08","status":"complete","total":660,"eligible":657,"note":"所选滚动资讯日归档逐日连续覆盖；不保证网站从未删文","keyword_application_reviewed":true},{"month":"2026-09","status":"complete","total":839,"eligible":833,"covered_start":"2026-09-01","covered_end":"2026-09-30","partial_calendar_month":false,"note":"C114查看全部日归档逐日核验；全部新闻为分母，同源完全相同标题按最早发表去重；9月完整覆盖。","covered_through":"2026-09-30","checked_at":"2026-10-07T10:26:35.128Z","application_reviewed":true,"keyword_application_reviewed":true},{"source_id":"c114_roll_all","month":"2026-10","status":"complete","enumeration_complete_to_snapshot":true,"date_validation_complete":true,"covered_start":"2026-10-01","covered_through":"2026-10-08","complete_calendar_days_through":"2026-10-07","partial_current_day":true,"partial_calendar_month":true,"is_full_calendar_month":false,"coverage_basis":"published_archive_snapshot","total":35,"eligible":35,"quarantined_count":0,"source_date_counts":{"2026-10-01":9,"2026-10-02":1,"2026-10-03":0,"2026-10-04":0,"2026-10-05":0,"2026-10-06":0,"2026-10-07":1,"2026-10-08":24},"archive_urls":["https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=1","https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=2","https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=3","https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=4","https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=5","https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=6","https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=7","https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=8"],"checked_at":"2026-10-08T09:28:02.871320+00:00","earlier_boundary":"2026-09-30","old_count":31,"added_count":4,"added_current_day_count":4,"added_historical_count":0,"added_ids":["c114-1318808","c114-1318809","c114-1318812","c114-1318813"],"missing_existing_ids":[],"title_duplicates":[],"note":"All news in the selected public archive is retained without topic filtering; October 8 is only a current-time snapshot, not a completed day or month. Deleted/unlisted news and later backdating cannot be ruled out.","archive_pages_checked":9,"new_original_date_validation_complete":true,"snapshot_started_at":"2026-10-08T09:27:20.197391+00:00","application_reviewed":true,"application_reviewed_topics":["domestic_gpu","xpu","hygon","kunpeng_route","supernode","optical_switch","ai_storage","compute_field","compute_rental","token_factory","aidc","modular_dc","liquid_cooling","eda"],"keyword_application_reviewed":true}],"collected_at":"2026-09-21T07:30:32.168163+00:00","date_checks":{"sample_size":18,"matched":18},"last_rechecked_at":"2026-10-08T09:28:02.871320+00:00","recheck_window":{"start":"2026-09-07","end":"2026-09-20"},"latest_collection_cutoff":"2026-10-07","latest_access_note":"公开目录已复查至2026-10-08采集时点；新关键词统一重扫全部历史标题。"},{"id":"zhiding_latest","kind":"news","group":"media","name":"至顶科技 · 全部最新文章","url":"https://www.zhiding.cn/list-35-1-1-0-0.htm","scope":"至顶网首页最新文章完整聚合流，含科技行者关联报道；同一出版方，不计为两个独立媒体。","method":"从首页“查看更多”进入最新文章归档，逐页回溯至整页早于2026年，抓取所有主题；按URL/文章ID及规范化标题去重。 所有来源统一使用同一标题分类词表；同源规范化标题去重，跨来源报道分别计数。专题/直播入口不是新闻文章，按文档类型排除。","limitation":"当前归档9,809篇，同源标题去重后9,768篇进入全新闻分母；所有主题保留在分母。该聚合流是出版方公开最新文章范围，无法证明覆盖已删除或未进入该归档的内容。 统一按标题分类，不代表采购或实际采用；包含海外与消费内容。","application_reviewed":false,"coverage":[{"month":"2026-01","status":"complete","total":613,"eligible":611,"note":"当前公开最新文章归档连续覆盖；9月截至20日。","keyword_application_reviewed":true},{"month":"2026-02","status":"complete","total":533,"eligible":533,"note":"当前公开最新文章归档连续覆盖；9月截至20日。","keyword_application_reviewed":true},{"month":"2026-03","status":"complete","total":869,"eligible":869,"note":"当前公开最新文章归档连续覆盖；9月截至20日。","keyword_application_reviewed":true},{"month":"2026-04","status":"complete","total":682,"eligible":681,"note":"当前公开最新文章归档连续覆盖；9月截至20日。","keyword_application_reviewed":true},{"month":"2026-05","status":"complete","total":706,"eligible":706,"note":"当前公开最新文章归档连续覆盖；9月截至20日。","keyword_application_reviewed":true},{"month":"2026-06","status":"complete","total":841,"eligible":840,"note":"当前公开最新文章归档连续覆盖；9月截至20日。","keyword_application_reviewed":true},{"month":"2026-07","status":"complete","total":1687,"eligible":1686,"note":"当前公开最新文章归档连续覆盖；9月截至20日。","keyword_application_reviewed":true},{"month":"2026-08","status":"complete","total":2368,"eligible":2346,"note":"当前公开最新文章归档连续覆盖；9月截至20日。","keyword_application_reviewed":true},{"month":"2026-09","status":"complete","total":2276,"eligible":2261,"note":"本批公开固定归档连续回查；9月全月。","covered_through":"2026-09-30","checked_at":"2026-10-07T10:26:35.128Z","application_reviewed":true,"keyword_application_reviewed":true},{"source_id":"zhiding_latest","month":"2026-10","status":"incomplete","enumeration_complete_to_snapshot":true,"date_validation_complete":false,"coverage_basis":"published_archive_snapshot","covered_start":"2026-10-01","covered_through":"2026-10-08","snapshot_started_at":"2026-10-08T09:27:12.404908+00:00","checked_at":"2026-10-08T09:28:16.058890+00:00","complete_calendar_days_through":null,"partial_current_day":true,"partial_calendar_month":true,"is_full_calendar_month":false,"archive_pages_checked":12,"archive_category_count":null,"earlier_boundary":"2026-09-30","archive_urls":["https://www.zhiding.cn/list-35-1-1-0-0.htm","https://www.zhiding.cn/list-35-1-2-0-0.htm","https://www.zhiding.cn/list-35-1-3-0-0.htm","https://www.zhiding.cn/list-35-1-4-0-0.htm","https://www.zhiding.cn/list-35-1-5-0-0.htm","https://www.zhiding.cn/list-35-1-6-0-0.htm","https://www.zhiding.cn/list-35-1-7-0-0.htm","https://www.zhiding.cn/list-35-1-8-0-0.htm","https://www.zhiding.cn/list-35-1-9-0-0.htm","https://www.zhiding.cn/list-35-1-10-0-0.htm","https://www.zhiding.cn/list-35-1-11-0-0.htm","https://www.zhiding.cn/list-35-1-12-0-0.htm"],"quarantined_count":1,"missing_gaps":["zhiding-3201163: archive and original page retain impossible date 2026-10-00"],"total":208,"eligible":208,"old_count":185,"added_count":23,"added_current_day_count":23,"added_historical_count":0,"added_ids":["zhiding-3201302","zhiding-3201301","zhiding-3201295","zhiding-3201294","zhiding-3201293","zhiding-3201292","zhiding-3201290","zhiding-3201289","zhiding-3201288","zhiding-3201287","zhiding-3201286","zhiding-3201285","zhiding-3201284","zhiding-3201283","zhiding-3201282","zhiding-3201281","zhiding-3201280","zhiding-3201279","zhiding-3201278","zhiding-3201276","zhiding-3201275","zhiding-3201274","zhiding-3201273"],"missing_existing_ids":[],"title_duplicates":[],"source_date_counts":{"2026-10-01":20,"2026-10-02":9,"2026-10-03":7,"2026-10-04":0,"2026-10-05":24,"2026-10-06":21,"2026-10-07":18,"2026-10-08":109},"new_original_date_validation_complete":true,"note":"All news in the selected public archive is retained without topic filtering; October 8 is only a current-time snapshot, not a completed day or month. Deleted/unlisted news and later backdating cannot be ruled out.","application_reviewed":true,"application_reviewed_topics":["domestic_gpu","xpu","hygon","kunpeng_route","supernode","optical_switch","ai_storage","compute_field","compute_rental","token_factory","aidc","modular_dc","liquid_cooling","eda"],"keyword_application_reviewed":true}],"collected_at":"2026-09-21T15:29:16.394678+08:00","date_checks":{"sample_size":18,"matched":18},"last_rechecked_at":"2026-10-08T09:28:16.058890+00:00","recheck_window":{"start":"2026-09-07","end":"2026-09-20"},"latest_collection_cutoff":"2026-10-07","latest_access_note":"公开目录已复查至2026-10-08采集时点；新关键词统一重扫全部历史标题。"},{"id":"cbinews_all_news","kind":"news","group":"media","name":"电脑商情在线（全部12新闻栏目）","url":"https://www.cbinews.com/","scope":"官网主导航12个新闻栏目全集并集，包含所有主题；不包含活动报名、视频、白皮书资料库及未在这12栏目中公开的内容。不是首页精选。","method":"从官网公开分页接口 cate_list 按其默认21条/页、文章ID倒序连续回溯12栏目，直至每栏读取两个完整的2025年页（或栏目历史已穷尽）；不使用关键词检索、不按技术预筛。先按文章ID跨栏目合并，再对规范化完全相同标题标记 duplicate_of。 所有来源统一使用同一标题分类词表；同源规范化标题去重，跨来源报道分别计数。专题/直播入口不是新闻文章，按文档类型排除。","limitation":"当前归档2,353篇，同源标题去重后2,346篇进入全新闻分母；所有主题保留在分母。完整性指公开12栏目分页中可读的存续文章，不等同于该媒体历史上从未删除或未列出的全部文章。 来源为IT行业媒体，包含全球新闻、转述和厂商发布，不能据此直接推断国内购买接受率。","application_reviewed":false,"coverage":[{"month":"2026-01","status":"complete","total":279,"eligible":279,"note":"连续抓取全部12栏目至2025年边界","keyword_application_reviewed":true},{"month":"2026-02","status":"complete","total":199,"eligible":199,"note":"连续抓取全部12栏目至2025年边界","keyword_application_reviewed":true},{"month":"2026-03","status":"complete","total":272,"eligible":272,"note":"连续抓取全部12栏目至2025年边界","keyword_application_reviewed":true},{"month":"2026-04","status":"complete","total":257,"eligible":257,"note":"连续抓取全部12栏目至2025年边界","keyword_application_reviewed":true},{"month":"2026-05","status":"complete","total":310,"eligible":308,"note":"连续抓取全部12栏目至2025年边界","keyword_application_reviewed":true},{"month":"2026-06","status":"complete","total":299,"eligible":296,"note":"连续抓取全部12栏目至2025年边界","keyword_application_reviewed":true},{"month":"2026-07","status":"complete","total":300,"eligible":299,"note":"连续抓取全部12栏目至2025年边界","keyword_application_reviewed":true},{"month":"2026-08","status":"complete","total":236,"eligible":236,"note":"连续抓取全部12栏目至2025年边界","keyword_application_reviewed":true},{"month":"2026-09","status":"complete","total":317,"eligible":316,"note":"本批公开固定归档连续回查；9月全月。","covered_through":"2026-09-30","checked_at":"2026-10-07T10:26:35.128Z","application_reviewed":true,"keyword_application_reviewed":true},{"source_id":"cbinews_all_news","month":"2026-10","status":"complete","enumeration_complete_to_snapshot":true,"date_validation_complete":true,"coverage_basis":"published_archive_snapshot","covered_start":"2026-10-01","covered_through":"2026-10-08","snapshot_started_at":"2026-10-08T09:27:14.065669+00:00","checked_at":"2026-10-08T09:27:42.069664+00:00","complete_calendar_days_through":"2026-10-07","partial_current_day":true,"partial_calendar_month":true,"is_full_calendar_month":false,"archive_pages_checked":19,"archive_category_count":12,"earlier_boundary":"2021-01-18","archive_urls":["https://www.cbinews.com/VAR","https://www.cbinews.com/IDC","https://www.cbinews.com/Onemachine","https://www.cbinews.com/AI","https://www.cbinews.com/cloud","https://www.cbinews.com/IoT","https://www.cbinews.com/storage","https://www.cbinews.com/net","https://www.cbinews.com/software","https://www.cbinews.com/desktop","https://www.cbinews.com/channel","https://www.cbinews.com/digital"],"quarantined_count":0,"missing_gaps":[],"total":18,"eligible":18,"old_count":17,"added_count":1,"added_current_day_count":1,"added_historical_count":0,"added_ids":["cbinews-263209"],"missing_existing_ids":[],"title_duplicates":[],"source_date_counts":{"2026-10-01":0,"2026-10-02":0,"2026-10-03":0,"2026-10-04":2,"2026-10-05":0,"2026-10-06":0,"2026-10-07":0,"2026-10-08":16},"new_original_date_validation_complete":true,"note":"All news in the selected public archive is retained without topic filtering; October 8 is only a current-time snapshot, not a completed day or month. Deleted/unlisted news and later backdating cannot be ruled out.","application_reviewed":true,"application_reviewed_topics":["domestic_gpu","xpu","hygon","kunpeng_route","supernode","optical_switch","ai_storage","compute_field","compute_rental","token_factory","aidc","modular_dc","liquid_cooling","eda"],"keyword_application_reviewed":true}],"collected_at":"2026-09-21T07:28:04.600982+00:00","date_checks":null,"last_rechecked_at":"2026-10-08T09:27:42.069664+00:00","recheck_window":{"start":"2026-09-07","end":"2026-09-20"},"latest_collection_cutoff":"2026-10-07","latest_access_note":"公开目录已复查至2026-10-08采集时点；新关键词统一重扫全部历史标题。"},{"id":"kunpeng_official","kind":"news","group":"official","name":"鲲鹏社区官方新闻目录","url":"https://www.hikunpeng.com/zh/activities/news","scope":"vendor_official_news_catalogue_only","method":"Public frontend /news/data/list/zh endpoint, all domainCode values, 36 items per page; enumerate every reported page and reconcile totalCount; no keyword prefilter. 所有来源统一使用同一标题分类词表；同源规范化标题去重，跨来源报道分别计数。专题/直播入口不是新闻文章，按文档类型排除。","limitation":"新闻文章6篇，同源标题去重后6篇；所有主题保留在分母。厂商官网发声单独观察，不并入媒体合计。Only this official news directory, not all Huawei press releases, ecosystem sites or WeChat posts. Vendor voice is separate from independent media and buyer demand.","application_reviewed":false,"coverage":[{"month":"2026-01","status":"complete","total":1,"eligible":1,"note":"当前公开目录已遍历；该月未见新闻不代表厂商未发声。","keyword_application_reviewed":true},{"month":"2026-02","status":"complete","total":0,"eligible":0,"note":"当前公开目录已遍历；该月未见新闻不代表厂商未发声。","keyword_application_reviewed":true},{"month":"2026-03","status":"complete","total":0,"eligible":0,"note":"当前公开目录已遍历；该月未见新闻不代表厂商未发声。","keyword_application_reviewed":true},{"month":"2026-04","status":"complete","total":0,"eligible":0,"note":"当前公开目录已遍历；该月未见新闻不代表厂商未发声。","keyword_application_reviewed":true},{"month":"2026-05","status":"complete","total":0,"eligible":0,"note":"当前公开目录已遍历；该月未见新闻不代表厂商未发声。","keyword_application_reviewed":true},{"month":"2026-06","status":"incomplete","total":5,"eligible":5,"note":"当前目录最新发布日期停在2026-06-10，不足以确认本月持续更新完整；不得把缺更新当作市场零值。","keyword_application_reviewed":true},{"month":"2026-07","status":"incomplete","total":0,"eligible":0,"note":"当前目录最新发布日期停在2026-06-10，不足以确认本月持续更新完整；不得把缺更新当作市场零值。","keyword_application_reviewed":true},{"month":"2026-08","status":"incomplete","total":0,"eligible":0,"note":"当前目录最新发布日期停在2026-06-10，不足以确认本月持续更新完整；不得把缺更新当作市场零值。","keyword_application_reviewed":true},{"month":"2026-09","status":"incomplete","total":0,"eligible":0,"note":"当前目录最新发布日期停在2026-06-10，不足以确认本月持续更新完整；不得把缺更新当作市场零值。","keyword_application_reviewed":true},{"source_id":"kunpeng_official","month":"2026-10","status":"incomplete","total":null,"eligible":null,"observed_october_articles":0,"latest_article_date":"2026-06-10","covered_through":null,"requested_cutoff":"2026-10-08","checked_at":"2026-10-08T08:10:57.805695+00:00","partial_calendar_month":true,"partial_current_day":true,"directory_currently_updates":null,"archive_enumeration_status":"latest_page_checked_only","freshness_status":"latest_visible_date_unchanged_since_2026-06-10","archive_pages_checked":1,"archive_reported_pages":8,"archive_reported_total":275,"latest_page_items_observed":36,"api_url":"https://www.hikunpeng.com/kunpenggateway/kunpengservice/news/data/list/zh?pageNo=1&pageSize=36&lang=zh&page=5&domainCode=","note":"官方目录与前端公开全类型接口已核验：最新36条仍止于2026-06-10，未见10月条目。本次仅复查最新页，未重遍历全部8页；目录长期未更新，不能证实10月覆盖完整。10月总数与比例保持未知，不画为0，不并入四媒体合计。","keyword_application_reviewed":true}],"collected_at":"2026-09-21T15:28:52.609087+08:00","date_checks":null,"last_rechecked_at":"2026-10-08T08:10:57.805695+00:00","latest_access_note":"2026-10-08复查官方全类型公开接口最新36条，最新发布日期仍2026-06-10；未见10月条目，目录持续更新完整性未知，10月保留空缺，不计入四媒体合计。"}],"unavailable_sources":[{"name":"企业网 D1Net","reason":"历史归档访问受限，未纳入新闻分母。"},{"name":"海光官网新闻","reason":"尚未取得可枚举的完整新闻目录，未纳入分母，不能解释为零消息。"}],"taxonomy":{"version":"three-boards-2026-10-08.v1","reclassified_at":"2026-10-08","boards":[{"id":"business","name":"业务方向","categories":[{"id":"business_heterogeneous_ai","name":"万全异构智算方案","source_name":"异构智算","keywords":["模型工厂","模型车间","词元工厂","词元车间","AI一体机","异构智算","Token工厂","Token车间","AI工厂","AI加速"]},{"id":"business_servers","name":"服务器","source_name":"服务器","keywords":["通算","超算","超融合","天数天算","智算","超节点"]},{"id":"business_storage","name":"存储","source_name":"存储","keywords":["传统存储","软件定义存储","AI存储","CXL","CMX","分层存储"]},{"id":"business_network","name":"数据网络","source_name":"网络","keywords":["IP网络","IB网络","光模块"]}]},{"id":"components","name":"核心部件","categories":[{"id":"components_cpu","name":"CPU芯片","source_name":"CPU芯片","keywords":["X86","ARM"]},{"id":"components_accelerators","name":"加速芯片","source_name":"加速芯片","keywords":["GPU","TPU","LPU","RPU","ASIC"]},{"id":"components_storage","name":"存储部件","source_name":"存储部件","keywords":["Mem","SSD","CXL"]},{"id":"components_liquid_cooling","name":"液冷散热","source_name":"液冷散热","keywords":["冷板","CDU","液冷"]},{"id":"components_interconnect","name":"高速互联","source_name":"高速互联","keywords":["光互联","光交换芯片","光模块","CPO","NPO","LPO"]},{"id":"components_power_systems","name":"电源系统","source_name":"电源系统","keywords":["电源设备","储能系统"]},{"id":"components_power_modules","name":"供电模块","source_name":"供电模块","keywords":["VRM","MLCC"]},{"id":"components_signal","name":"信号传输","source_name":"信号传输","keywords":["PCB","Pcle Switch"]},{"id":"components_management","name":"管理&控制","source_name":"管理&控制","keywords":["BMC","CPLD"]}]},{"id":"scenarios","name":"场景生态","categories":[{"id":"scenarios_compute_field","name":"算力场","source_name":"算力场","keywords":["算力场"]},{"id":"scenarios_eda","name":"EDA","source_name":"EDA","keywords":["EDA"]},{"id":"scenarios_compute_rental","name":"算力租赁","source_name":"算力租赁","keywords":["算力租赁"]},{"id":"scenarios_token_factory","name":"Token工厂","source_name":"Token工厂","keywords":["Token工厂"]},{"id":"scenarios_aidc","name":"AIDC","source_name":"AIDC","keywords":["AIDC"]},{"id":"scenarios_modular_dc","name":"模块化数据中心","source_name":"模块化数据中心","keywords":["模块化数据中心"]},{"id":"scenarios_pilot_field","name":"中试场","source_name":"中试场","keywords":["中试场"]},{"id":"scenarios_turing_town","name":"图灵小镇","source_name":"图灵小镇","keywords":["图灵小镇"]}]}],"groups":[{"id":"business_heterogeneous_ai","name":"万全异构智算方案","keywords":["模型工厂","模型车间","词元工厂","词元车间","AI一体机","异构智算","Token工厂","Token车间","AI工厂","AI加速"]},{"id":"business_servers","name":"服务器","keywords":["通算","超算","超融合","天数天算","智算","超节点"]},{"id":"business_storage","name":"存储","keywords":["传统存储","软件定义存储","AI存储","CXL","CMX","分层存储"]},{"id":"business_network","name":"数据网络","keywords":["IP网络","IB网络","光模块"]}],"legacy":{"version":"three-boards-2026-10-08.v1","reclassified_at":"2026-10-07","groups":[{"id":"processors","name":"处理器与异构计算","children":["domestic_gpu","xpu","hygon","kunpeng_route"]},{"id":"systems","name":"算力系统与数据互连","children":["supernode","optical_switch","ai_storage"]},{"id":"platforms","name":"算力平台与运营","children":["compute_field","compute_rental","token_factory"]},{"id":"facilities","name":"数据中心设施与能效","children":["aidc","modular_dc","liquid_cooling"]},{"id":"design","name":"EDA工具与设计算力","children":["eda"]}],"children":{"domestic_gpu":"国产 GPU","xpu":"xPU / 异构加速","hygon":"海光〔路线〕","kunpeng_route":"鲲鹏〔路线〕","supernode":"超节点","optical_switch":"光交换机","ai_storage":"AI 存储","compute_field":"算力场","compute_rental":"算力租赁","token_factory":"Token 工厂","aidc":"AIDC","modular_dc":"模块化数据中心","liquid_cooling":"液冷","eda":"EDA"},"rules":["五个父类按业务层次聚合，十四个子项保留技术主题与重点路线。海光、鲲鹏统计路线提及，包含未确定的备选路线，不等于已采用。父类按底层记录取并集，不能把子类数值相加；跨父类仍可重叠。","xPU观察口径：显式xPU、异构计算/算力/加速，以及服务器或数据中心场景的NPU、DPU、FPGA、专用加速器；单独出现普通CPU/GPU不自动纳入。排除明确消费终端、汽车与手机场景。","固定媒体全部新闻为分母；各月份统一标题识别；历史补录与新发生事件分开。","海光或鲲鹏备选同时计入路线提及，不能理解为均已采用。父类并集去重。"],"xpu_search_status":"2026-10-07完成本批限定主题与来源的补采；执行不等于全量覆盖","application_new_topics":"海光、鲲鹏、xPU标题行为复核未完成","procurement_new_topics":"海光、鲲鹏、xPU适用分母未建立","rolling_batch":"october-repair-20261007","legacy_groups":[{"id":"processors","name":"处理器与异构计算","children":["domestic_gpu","xpu","hygon","kunpeng_route"]},{"id":"systems","name":"算力系统与数据互连","children":["supernode","optical_switch","ai_storage"]},{"id":"platforms","name":"算力平台与运营","children":["compute_field","compute_rental","token_factory"]},{"id":"facilities","name":"数据中心设施与能效","children":["aidc","modular_dc","liquid_cooling"]},{"id":"design","name":"EDA工具与设计算力","children":["eda"]}],"legacy_children":{"domestic_gpu":"国产 GPU","xpu":"xPU / 异构加速","hygon":"海光〔路线〕","kunpeng_route":"鲲鹏〔路线〕","supernode":"超节点","optical_switch":"光交换机","ai_storage":"AI 存储","compute_field":"算力场","compute_rental":"算力租赁","token_factory":"Token 工厂","aidc":"AIDC","modular_dc":"模块化数据中心","liquid_cooling":"液冷","eda":"EDA"}},"rules":["三看板分别为业务方向4类、核心部件9类、场景生态8类。","全部固定媒体新闻为共同分母；新闻仅按标题，研究按标题和事实摘要。","同一记录允许多标签，跨类和跨看板金额不相加。","原始历史技术标签与用户笔记保留，新看板按当前关键词实时投影。"]},"latest_refresh":{"batch_id":"three-boards-20261008","checked_at":"2026-10-08T09:47:05.306Z","requested_cutoff":"2026-10-08","status":"partial","added_rows":31,"added_ids":["c114-1318808","c114-1318809","c114-1318812","c114-1318813","cbinews-263209","doit-857338575446085","doit-857338990297157","doit-857343114219589","zhiding-3201273","zhiding-3201274","zhiding-3201275","zhiding-3201276","zhiding-3201278","zhiding-3201279","zhiding-3201280","zhiding-3201281","zhiding-3201282","zhiding-3201283","zhiding-3201284","zhiding-3201285","zhiding-3201286","zhiding-3201287","zhiding-3201288","zhiding-3201289","zhiding-3201290","zhiding-3201292","zhiding-3201293","zhiding-3201294","zhiding-3201295","zhiding-3201301","zhiding-3201302"],"reason":"当前日与自然月未结束。 至顶原始日期2026-10-00仍隔离。 华理1正文404且完整需求附件未取得，适用分母未知。 鲲鹏目录新鲜度不足，不将未知记为0。","quarantined_rows":[{"id":"zhiding-3201163","source_id":"zhiding_latest","date":"2026-10-00","month":"2026-10","url":"https://www.zhiding.cn/gaofei/2026/1007/3201163.shtml","title":"Airbnb联合创始人Joe Gebbia：我如何成了美国历史上第一位首席设计官，和构建America.gov的？","publisher":"至顶科技（至顶网／科技行者）","date_basis":"publisher_latest_stream","provenance":{"source_url":"https://www.zhiding.cn/list-35-1-5-0-0.htm","source_page":5,"list_date_text":"2026-10-00","verified_archive_snapshot_at":"2026-10-07T12:31:11+00:00","original_article_date_check":{"id":"zhiding-3201163","url":"https://www.zhiding.cn/gaofei/2026/1007/3201163.shtml","status":200,"response_date":"Wed, 07 Oct 2026 12:32:36 GMT","metadata":[],"visible_date_context":["\t\t\t\t\t 高飞的电子替身 2026-10-00  · 阅读约19分钟 "],"page_title":["Airbnb联合创始人Joe Gebbia：我如何成了美国历史上第一位首席设计官，和构建America.gov的？-高飞的电子替身-至顶网"],"encoding":"GBK","date_verified":false,"date_source":"visible article publication date"}},"verified_at":"2026-10-07T12:31:11+00:00","collected_at":"2026-10-07T12:31:11+00:00","is_article":true,"quarantined":true,"reason":"Original article and publisher archive both still show 2026-10-00. No authoritative correction. URL date ignored.","denominator_eligible":false,"last_rechecked_at":"2026-10-08T08:09:28.746336+00:00"}],"unique_media_news":22778},"latest_classification_review":{"id":"aidc-label-recheck-20261008","checked_at":"2026-10-08T08:34:32.738Z","added_aidc_labels":24,"denominator_changed":false},"latest_keyword_scan":{"id":"three-boards-20261008","rule_version":"three-boards-2026-10-08.v1","checked_at":"2026-10-08T09:47:05.306Z","boards":[{"id":"business","name":"业务方向","categories":4},{"id":"components","name":"核心部件","categories":9},{"id":"scenarios","name":"场景生态","categories":8}]}}
+{
+  "version": "market-refresh-20261008-v1",
+  "collected_at": "2026-10-10T05:55:32.888981+00:00",
+  "window": {
+    "start": "2026-01-01",
+    "end": "2026-10-10"
+  },
+  "sources": [
+    {
+      "id": "doit_all",
+      "kind": "news",
+      "group": "media",
+      "application_reviewed": true,
+      "name": "DOIT · 全站全部新闻",
+      "url": "https://www.doit.com.cn/",
+      "scope": "固定来源全部新闻为分母 · 技术条件只筛分子",
+      "limitation": "当前归档2,681篇，同源标题去重后2,650篇进入全新闻分母；不按基础设施主题或十一类技术预筛。新闻占比反映该来源的关注结构，不能直接视为买方采用率。",
+      "method": "连续采集全站公开列表28页，跨过2026年初边界；全部新闻按同一规范化标题规则去重，取首次发表。技术分类、芯片和明确国内条件只筛分子。各月统一按标题识别，未命中技术和非基础设施新闻仍留在分母。消费终端存储、未指明资源池/调度/一体机的泛异构计算不计入相应技术分子。采购与部署表述经过人工复核，未核验实际采用；历史删除、编辑策略与异标题转载仍可能影响结果。",
+      "coverage": [
+        {
+          "month": "2026-01",
+          "status": "complete",
+          "total": 188,
+          "eligible": 183,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-01-01",
+          "covered_through": "2026-01-31",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-02",
+          "status": "complete",
+          "total": 111,
+          "eligible": 110,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-02-01",
+          "covered_through": "2026-02-28",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-03",
+          "status": "complete",
+          "total": 351,
+          "eligible": 342,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-03-01",
+          "covered_through": "2026-03-31",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-04",
+          "status": "complete",
+          "total": 319,
+          "eligible": 303,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-04-01",
+          "covered_through": "2026-04-30",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-05",
+          "status": "complete",
+          "total": 228,
+          "eligible": 222,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-05-01",
+          "covered_through": "2026-05-31",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-06",
+          "status": "complete",
+          "total": 370,
+          "eligible": 355,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-06-01",
+          "covered_through": "2026-06-30",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-07",
+          "status": "complete",
+          "total": 411,
+          "eligible": 407,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-07-01",
+          "covered_through": "2026-07-31",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-08",
+          "status": "complete",
+          "total": 365,
+          "eligible": 364,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-08-01",
+          "covered_through": "2026-08-31",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-09",
+          "status": "complete",
+          "total": 516,
+          "eligible": 511,
+          "covered_start": "2026-09-01",
+          "covered_end": "2026-09-30",
+          "partial_calendar_month": false,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "covered_through": "2026-09-30",
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "application_reviewed": true,
+          "keyword_application_reviewed": true,
+          "partial_current_day": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-10",
+          "previous_snapshots": [
+            {
+              "source_id": "doit_all",
+              "month": "2026-10",
+              "status": "incomplete",
+              "enumeration_complete_to_snapshot": true,
+              "date_validation_complete": true,
+              "covered_start": "2026-10-01",
+              "covered_through": "2026-10-09",
+              "complete_calendar_days_through": "2026-10-07",
+              "partial_current_day": true,
+              "partial_calendar_month": true,
+              "is_full_calendar_month": false,
+              "coverage_basis": "published_archive_snapshot",
+              "total": 49,
+              "eligible": 48,
+              "quarantined_count": 0,
+              "source_date_counts": {
+                "2026-10-01": 6,
+                "2026-10-02": 5,
+                "2026-10-03": 2,
+                "2026-10-04": 2,
+                "2026-10-05": 1,
+                "2026-10-06": 2,
+                "2026-10-07": 4,
+                "2026-10-08": 8
+              },
+              "archive_urls": [
+                "https://www.doit.com.cn/api/cms/content/list?sid=809835088719941&pp=pc&lv=CurrentAndChild&cid=809835227754565&ps=100&pn=1"
+              ],
+              "checked_at": "2026-10-09T09:02:37.301Z",
+              "earlier_boundary": "2026-09-23",
+              "old_count": 27,
+              "added_count": 3,
+              "added_current_day_count": 3,
+              "added_historical_count": 0,
+              "added_ids": [
+                "doit-857338575446085",
+                "doit-857338990297157",
+                "doit-857343114219589"
+              ],
+              "missing_existing_ids": [],
+              "title_duplicates": [],
+              "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+              "archive_pages_checked": 1,
+              "archive_items_examined": 100,
+              "new_original_date_validation_complete": true,
+              "snapshot_started_at": "2026-10-08T09:27:37.108019+00:00",
+              "application_reviewed": true,
+              "application_reviewed_topics": [
+                "domestic_gpu",
+                "xpu",
+                "hygon",
+                "kunpeng_route",
+                "supernode",
+                "optical_switch",
+                "ai_storage",
+                "compute_field",
+                "compute_rental",
+                "token_factory",
+                "aidc",
+                "modular_dc",
+                "liquid_cooling",
+                "eda"
+              ],
+              "keyword_application_reviewed": true,
+              "audit_recheck_complete": true,
+              "audit_recheck_status": "verified_current_archive"
+            }
+          ],
+          "total": 54,
+          "eligible": 53,
+          "status": "incomplete",
+          "partial_current_day": true,
+          "partial_calendar_month": true,
+          "checked_at": "2026-10-10T05:55:32.888981+00:00",
+          "latest_refresh_window": {
+            "start": "2026-10-08",
+            "end": "2026-10-10"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot",
+          "note": "本轮仅更新10月8日起重叠窗口至10月10日采集时点；历史收录保留，不表示全年或整月完整覆盖。"
+        }
+      ],
+      "application_reviewed_topics": [
+        "supernode",
+        "liquid_cooling",
+        "domestic_gpu",
+        "compute_field",
+        "eda",
+        "compute_rental",
+        "token_factory",
+        "optical_switch",
+        "ai_storage",
+        "aidc",
+        "modular_dc"
+      ],
+      "last_rechecked_at": "2026-10-10T05:55:32.888981+00:00",
+      "recheck_window": {
+        "start": "2026-09-07",
+        "end": "2026-09-20"
+      },
+      "latest_collection_cutoff": "2026-10-07",
+      "latest_access_note": "已核对全站公开目录及独立AI快讯入口，新增5篇；原文日期全部核对，旧记录保留。"
+    },
+    {
+      "id": "c114_roll_all",
+      "kind": "news",
+      "group": "media",
+      "name": "C114通信网·滚动资讯全部内容",
+      "url": "https://www.c114.com.cn/news/roll.asp",
+      "scope": "C114公开滚动资讯“查看全部”按日归档，保留所有标题，包括非11类技术、海外、消费终端和转载。并非保证整个网站所有独立栏目均被纳入。",
+      "method": "请求2026-01-01至2026-09-20全部263个日归档，不按主题预筛；核对页面日期字段、每条列表日期及每月首末条正文日期；按文章ID及规范化完全相同标题去重。 所有来源统一使用同一标题分类词表；同源规范化标题去重，跨来源报道分别计数。专题/直播入口不是新闻文章，按文档类型排除。",
+      "limitation": "当前归档6,450篇，同源标题去重后6,382篇进入全新闻分母；所有主题保留在分母。完整仅指当前可访问滚动资讯归档，不保证网站全站所有栏目或历史已删文章。 分母保留全部标题；技术提及可另作分子，不能按分子类别筛分母。",
+      "application_reviewed": false,
+      "coverage": [
+        {
+          "month": "2026-01",
+          "status": "complete",
+          "total": 694,
+          "eligible": 685,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-01-01",
+          "covered_through": "2026-01-31",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-02",
+          "status": "complete",
+          "total": 491,
+          "eligible": 488,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-02-01",
+          "covered_through": "2026-02-28",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-03",
+          "status": "complete",
+          "total": 895,
+          "eligible": 882,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-03-01",
+          "covered_through": "2026-03-31",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-04",
+          "status": "complete",
+          "total": 801,
+          "eligible": 789,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-04-01",
+          "covered_through": "2026-04-30",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-05",
+          "status": "complete",
+          "total": 752,
+          "eligible": 743,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-05-01",
+          "covered_through": "2026-05-31",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-06",
+          "status": "complete",
+          "total": 792,
+          "eligible": 786,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-06-01",
+          "covered_through": "2026-06-30",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-07",
+          "status": "complete",
+          "total": 817,
+          "eligible": 808,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-07-01",
+          "covered_through": "2026-07-31",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-08",
+          "status": "complete",
+          "total": 660,
+          "eligible": 657,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-08-01",
+          "covered_through": "2026-08-31",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-09",
+          "status": "complete",
+          "total": 840,
+          "eligible": 834,
+          "covered_start": "2026-09-01",
+          "covered_end": "2026-09-30",
+          "partial_calendar_month": false,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "covered_through": "2026-09-30",
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "application_reviewed": true,
+          "keyword_application_reviewed": true,
+          "partial_current_day": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-10",
+          "previous_snapshots": [
+            {
+              "source_id": "c114_roll_all",
+              "month": "2026-10",
+              "status": "incomplete",
+              "enumeration_complete_to_snapshot": true,
+              "date_validation_complete": true,
+              "covered_start": "2026-10-01",
+              "covered_through": "2026-10-09",
+              "complete_calendar_days_through": "2026-10-07",
+              "partial_current_day": true,
+              "partial_calendar_month": true,
+              "is_full_calendar_month": false,
+              "coverage_basis": "published_archive_snapshot",
+              "total": 68,
+              "eligible": 68,
+              "quarantined_count": 0,
+              "source_date_counts": {
+                "2026-10-01": 9,
+                "2026-10-02": 1,
+                "2026-10-03": 0,
+                "2026-10-04": 0,
+                "2026-10-05": 0,
+                "2026-10-06": 0,
+                "2026-10-07": 1,
+                "2026-10-08": 24
+              },
+              "archive_urls": [
+                "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=1",
+                "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=2",
+                "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=3",
+                "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=4",
+                "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=5",
+                "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=6",
+                "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=7",
+                "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=8"
+              ],
+              "checked_at": "2026-10-09T09:02:37.301Z",
+              "earlier_boundary": "2026-09-30",
+              "old_count": 31,
+              "added_count": 4,
+              "added_current_day_count": 4,
+              "added_historical_count": 0,
+              "added_ids": [
+                "c114-1318808",
+                "c114-1318809",
+                "c114-1318812",
+                "c114-1318813"
+              ],
+              "missing_existing_ids": [],
+              "title_duplicates": [],
+              "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+              "archive_pages_checked": 9,
+              "new_original_date_validation_complete": true,
+              "snapshot_started_at": "2026-10-08T09:27:20.197391+00:00",
+              "application_reviewed": true,
+              "application_reviewed_topics": [
+                "domestic_gpu",
+                "xpu",
+                "hygon",
+                "kunpeng_route",
+                "supernode",
+                "optical_switch",
+                "ai_storage",
+                "compute_field",
+                "compute_rental",
+                "token_factory",
+                "aidc",
+                "modular_dc",
+                "liquid_cooling",
+                "eda"
+              ],
+              "keyword_application_reviewed": true,
+              "audit_recheck_complete": true,
+              "audit_recheck_status": "verified_current_archive"
+            }
+          ],
+          "total": 84,
+          "eligible": 84,
+          "status": "incomplete",
+          "partial_current_day": true,
+          "partial_calendar_month": true,
+          "checked_at": "2026-10-10T05:55:32.888981+00:00",
+          "latest_refresh_window": {
+            "start": "2026-10-08",
+            "end": "2026-10-10"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot",
+          "note": "本轮仅更新10月8日起重叠窗口至10月10日采集时点；历史收录保留，不表示全年或整月完整覆盖。"
+        }
+      ],
+      "collected_at": "2026-09-21T07:30:32.168163+00:00",
+      "date_checks": {
+        "sample_size": 18,
+        "matched": 18
+      },
+      "last_rechecked_at": "2026-10-10T05:55:32.888981+00:00",
+      "recheck_window": {
+        "start": "2026-09-07",
+        "end": "2026-09-20"
+      },
+      "latest_collection_cutoff": "2026-10-07",
+      "latest_access_note": "已核对10月8—10日滚动资讯全部新闻，新增16篇；跨日回显按原文发布日期归属。"
+    },
+    {
+      "id": "zhiding_latest",
+      "kind": "news",
+      "group": "media",
+      "name": "至顶科技 · 全部最新文章",
+      "url": "https://www.zhiding.cn/list-35-1-1-0-0.htm",
+      "scope": "至顶网首页最新文章完整聚合流，含科技行者关联报道；同一出版方，不计为两个独立媒体。",
+      "method": "从首页“查看更多”进入最新文章归档，逐页回溯至整页早于2026年，抓取所有主题；按URL/文章ID及规范化标题去重。 所有来源统一使用同一标题分类词表；同源规范化标题去重，跨来源报道分别计数。专题/直播入口不是新闻文章，按文档类型排除。",
+      "limitation": "当前归档9,809篇，同源标题去重后9,768篇进入全新闻分母；所有主题保留在分母。该聚合流是出版方公开最新文章范围，无法证明覆盖已删除或未进入该归档的内容。 统一按标题分类，不代表采购或实际采用；包含海外与消费内容。",
+      "application_reviewed": false,
+      "coverage": [
+        {
+          "month": "2026-01",
+          "status": "complete",
+          "total": 613,
+          "eligible": 611,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-01-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-02",
+          "status": "complete",
+          "total": 533,
+          "eligible": 533,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-02-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-03",
+          "status": "complete",
+          "total": 869,
+          "eligible": 869,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-03-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-04",
+          "status": "complete",
+          "total": 682,
+          "eligible": 681,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-04-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-05",
+          "status": "complete",
+          "total": 706,
+          "eligible": 706,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-05-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-06",
+          "status": "complete",
+          "total": 841,
+          "eligible": 840,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-06-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-07",
+          "status": "complete",
+          "total": 1687,
+          "eligible": 1686,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-07-01",
+          "covered_through": "2026-07-31",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-08",
+          "status": "complete",
+          "total": 2368,
+          "eligible": 2346,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-08-01",
+          "covered_through": "2026-08-31",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-09",
+          "status": "complete",
+          "total": 2276,
+          "eligible": 2261,
+          "note": "本轮当前公开归档已逐页核查；保留历史收录，排除明确非新闻入口。",
+          "covered_through": "2026-09-30",
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "application_reviewed": true,
+          "keyword_application_reviewed": true,
+          "covered_start": "2026-09-01",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": true,
+          "audit_recheck_status": "verified_current_archive"
+        },
+        {
+          "month": "2026-10",
+          "previous_snapshots": [
+            {
+              "source_id": "zhiding_latest",
+              "month": "2026-10",
+              "status": "incomplete",
+              "enumeration_complete_to_snapshot": true,
+              "date_validation_complete": false,
+              "coverage_basis": "published_archive_snapshot",
+              "covered_start": "2026-10-01",
+              "covered_through": "2026-10-08",
+              "snapshot_started_at": "2026-10-08T09:27:12.404908+00:00",
+              "checked_at": "2026-10-09T09:02:37.301Z",
+              "complete_calendar_days_through": null,
+              "partial_current_day": true,
+              "partial_calendar_month": true,
+              "is_full_calendar_month": false,
+              "archive_pages_checked": 12,
+              "archive_category_count": null,
+              "earlier_boundary": "2026-09-30",
+              "archive_urls": [
+                "https://www.zhiding.cn/list-35-1-1-0-0.htm",
+                "https://www.zhiding.cn/list-35-1-2-0-0.htm",
+                "https://www.zhiding.cn/list-35-1-3-0-0.htm",
+                "https://www.zhiding.cn/list-35-1-4-0-0.htm",
+                "https://www.zhiding.cn/list-35-1-5-0-0.htm",
+                "https://www.zhiding.cn/list-35-1-6-0-0.htm",
+                "https://www.zhiding.cn/list-35-1-7-0-0.htm",
+                "https://www.zhiding.cn/list-35-1-8-0-0.htm",
+                "https://www.zhiding.cn/list-35-1-9-0-0.htm",
+                "https://www.zhiding.cn/list-35-1-10-0-0.htm",
+                "https://www.zhiding.cn/list-35-1-11-0-0.htm",
+                "https://www.zhiding.cn/list-35-1-12-0-0.htm"
+              ],
+              "quarantined_count": 1,
+              "missing_gaps": [
+                "zhiding-3201163: archive and original page retain impossible date 2026-10-00"
+              ],
+              "total": 369,
+              "eligible": 368,
+              "old_count": 185,
+              "added_count": 23,
+              "added_current_day_count": 23,
+              "added_historical_count": 0,
+              "added_ids": [
+                "zhiding-3201302",
+                "zhiding-3201301",
+                "zhiding-3201295",
+                "zhiding-3201294",
+                "zhiding-3201293",
+                "zhiding-3201292",
+                "zhiding-3201290",
+                "zhiding-3201289",
+                "zhiding-3201288",
+                "zhiding-3201287",
+                "zhiding-3201286",
+                "zhiding-3201285",
+                "zhiding-3201284",
+                "zhiding-3201283",
+                "zhiding-3201282",
+                "zhiding-3201281",
+                "zhiding-3201280",
+                "zhiding-3201279",
+                "zhiding-3201278",
+                "zhiding-3201276",
+                "zhiding-3201275",
+                "zhiding-3201274",
+                "zhiding-3201273"
+              ],
+              "missing_existing_ids": [],
+              "title_duplicates": [],
+              "source_date_counts": {
+                "2026-10-01": 20,
+                "2026-10-02": 9,
+                "2026-10-03": 7,
+                "2026-10-04": 0,
+                "2026-10-05": 24,
+                "2026-10-06": 21,
+                "2026-10-07": 18,
+                "2026-10-08": 109
+              },
+              "new_original_date_validation_complete": true,
+              "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+              "application_reviewed": true,
+              "application_reviewed_topics": [
+                "domestic_gpu",
+                "xpu",
+                "hygon",
+                "kunpeng_route",
+                "supernode",
+                "optical_switch",
+                "ai_storage",
+                "compute_field",
+                "compute_rental",
+                "token_factory",
+                "aidc",
+                "modular_dc",
+                "liquid_cooling",
+                "eda"
+              ],
+              "keyword_application_reviewed": true,
+              "audit_recheck_complete": false,
+              "audit_recheck_status": "partial_reread_prior_records_retained"
+            }
+          ],
+          "total": 426,
+          "eligible": 425,
+          "status": "incomplete",
+          "partial_current_day": true,
+          "partial_calendar_month": true,
+          "checked_at": "2026-10-10T05:55:32.888981+00:00",
+          "latest_refresh_window": {
+            "start": "2026-10-08",
+            "end": "2026-10-10"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot",
+          "note": "本轮仅更新10月8日起重叠窗口至10月10日采集时点；历史收录保留，不表示全年或整月完整覆盖。"
+        }
+      ],
+      "collected_at": "2026-09-21T15:29:16.394678+08:00",
+      "date_checks": {
+        "sample_size": 18,
+        "matched": 18
+      },
+      "last_rechecked_at": "2026-10-10T05:55:32.888981+00:00",
+      "recheck_window": {
+        "start": "2026-09-07",
+        "end": "2026-09-20"
+      },
+      "latest_collection_cutoff": "2026-10-07",
+      "latest_access_note": "已核对至顶/科技行者最新文章流并越过重叠窗口边界，新增57篇，逐篇核对原文日期。"
+    },
+    {
+      "id": "cbinews_all_news",
+      "kind": "news",
+      "group": "media",
+      "name": "电脑商情在线（全部12新闻栏目）",
+      "url": "https://www.cbinews.com/",
+      "scope": "官网主导航12个新闻栏目全集并集，包含所有主题；不包含活动报名、视频、白皮书资料库及未在这12栏目中公开的内容。不是首页精选。",
+      "method": "从官网公开分页接口 cate_list 按其默认21条/页、文章ID倒序连续回溯12栏目，直至每栏读取两个完整的2025年页（或栏目历史已穷尽）；不使用关键词检索、不按技术预筛。先按文章ID跨栏目合并，再对规范化完全相同标题标记 duplicate_of。 所有来源统一使用同一标题分类词表；同源规范化标题去重，跨来源报道分别计数。专题/直播入口不是新闻文章，按文档类型排除。",
+      "limitation": "当前归档2,353篇，同源标题去重后2,346篇进入全新闻分母；所有主题保留在分母。完整性指公开12栏目分页中可读的存续文章，不等同于该媒体历史上从未删除或未列出的全部文章。 来源为IT行业媒体，包含全球新闻、转述和厂商发布，不能据此直接推断国内购买接受率。",
+      "application_reviewed": false,
+      "coverage": [
+        {
+          "month": "2026-01",
+          "status": "complete",
+          "total": 279,
+          "eligible": 279,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-01-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-02",
+          "status": "complete",
+          "total": 199,
+          "eligible": 199,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-02-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-03",
+          "status": "complete",
+          "total": 272,
+          "eligible": 272,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-03-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-04",
+          "status": "complete",
+          "total": 257,
+          "eligible": 257,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-04-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-05",
+          "status": "complete",
+          "total": 310,
+          "eligible": 308,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-05-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-06",
+          "status": "complete",
+          "total": 299,
+          "eligible": 296,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-06-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-07",
+          "status": "complete",
+          "total": 300,
+          "eligible": 299,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-07-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-08",
+          "status": "complete",
+          "total": 236,
+          "eligible": 236,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "keyword_application_reviewed": true,
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "covered_start": "2026-08-01",
+          "covered_through": null,
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-09",
+          "status": "complete",
+          "total": 317,
+          "eligible": 316,
+          "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+          "covered_through": "2026-09-30",
+          "checked_at": "2026-10-09T09:02:37.301Z",
+          "application_reviewed": true,
+          "keyword_application_reviewed": true,
+          "covered_start": "2026-09-01",
+          "partial_current_day": false,
+          "partial_calendar_month": false,
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "partial_reread_prior_records_retained"
+        },
+        {
+          "month": "2026-10",
+          "previous_snapshots": [
+            {
+              "source_id": "cbinews_all_news",
+              "month": "2026-10",
+              "status": "incomplete",
+              "enumeration_complete_to_snapshot": true,
+              "date_validation_complete": true,
+              "coverage_basis": "published_archive_snapshot",
+              "covered_start": "2026-10-01",
+              "covered_through": "2026-10-08",
+              "snapshot_started_at": "2026-10-08T09:27:14.065669+00:00",
+              "checked_at": "2026-10-09T09:02:37.301Z",
+              "complete_calendar_days_through": "2026-10-07",
+              "partial_current_day": true,
+              "partial_calendar_month": true,
+              "is_full_calendar_month": false,
+              "archive_pages_checked": 19,
+              "archive_category_count": 12,
+              "earlier_boundary": "2021-01-18",
+              "archive_urls": [
+                "https://www.cbinews.com/VAR",
+                "https://www.cbinews.com/IDC",
+                "https://www.cbinews.com/Onemachine",
+                "https://www.cbinews.com/AI",
+                "https://www.cbinews.com/cloud",
+                "https://www.cbinews.com/IoT",
+                "https://www.cbinews.com/storage",
+                "https://www.cbinews.com/net",
+                "https://www.cbinews.com/software",
+                "https://www.cbinews.com/desktop",
+                "https://www.cbinews.com/channel",
+                "https://www.cbinews.com/digital"
+              ],
+              "quarantined_count": 0,
+              "missing_gaps": [],
+              "total": 44,
+              "eligible": 44,
+              "old_count": 17,
+              "added_count": 1,
+              "added_current_day_count": 1,
+              "added_historical_count": 0,
+              "added_ids": [
+                "cbinews-263209"
+              ],
+              "missing_existing_ids": [],
+              "title_duplicates": [],
+              "source_date_counts": {
+                "2026-10-01": 0,
+                "2026-10-02": 0,
+                "2026-10-03": 0,
+                "2026-10-04": 2,
+                "2026-10-05": 0,
+                "2026-10-06": 0,
+                "2026-10-07": 0,
+                "2026-10-08": 16
+              },
+              "new_original_date_validation_complete": true,
+              "note": "本轮回查未覆盖完整归档；保留此前记录并补入已核有效日期新闻。",
+              "application_reviewed": true,
+              "application_reviewed_topics": [
+                "domestic_gpu",
+                "xpu",
+                "hygon",
+                "kunpeng_route",
+                "supernode",
+                "optical_switch",
+                "ai_storage",
+                "compute_field",
+                "compute_rental",
+                "token_factory",
+                "aidc",
+                "modular_dc",
+                "liquid_cooling",
+                "eda"
+              ],
+              "keyword_application_reviewed": true,
+              "audit_recheck_complete": false,
+              "audit_recheck_status": "partial_reread_prior_records_retained"
+            }
+          ],
+          "total": 67,
+          "eligible": 67,
+          "status": "incomplete",
+          "partial_current_day": true,
+          "partial_calendar_month": true,
+          "checked_at": "2026-10-10T05:55:32.888981+00:00",
+          "latest_refresh_window": {
+            "start": "2026-10-08",
+            "end": "2026-10-10"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot",
+          "note": "本轮仅更新10月8日起重叠窗口至10月10日采集时点；历史收录保留，不表示全年或整月完整覆盖。"
+        }
+      ],
+      "collected_at": "2026-09-21T07:28:04.600982+00:00",
+      "date_checks": null,
+      "last_rechecked_at": "2026-10-10T05:55:32.888981+00:00",
+      "recheck_window": {
+        "start": "2026-09-07",
+        "end": "2026-09-20"
+      },
+      "latest_collection_cutoff": "2026-10-07",
+      "latest_access_note": "已核对12个公开新闻栏目，新增23篇并核对原文日期；未按技术词预筛新闻分母。"
+    },
+    {
+      "id": "kunpeng_official",
+      "kind": "news",
+      "group": "official",
+      "name": "鲲鹏社区官方新闻目录",
+      "url": "https://www.hikunpeng.com/zh/activities/news",
+      "scope": "vendor_official_news_catalogue_only",
+      "method": "Public frontend /news/data/list/zh endpoint, all domainCode values, 36 items per page; enumerate every reported page and reconcile totalCount; no keyword prefilter. 所有来源统一使用同一标题分类词表；同源规范化标题去重，跨来源报道分别计数。专题/直播入口不是新闻文章，按文档类型排除。",
+      "limitation": "新闻文章6篇，同源标题去重后6篇；所有主题保留在分母。厂商官网发声单独观察，不并入媒体合计。Only this official news directory, not all Huawei press releases, ecosystem sites or WeChat posts. Vendor voice is separate from independent media and buyer demand.",
+      "application_reviewed": false,
+      "coverage": [
+        {
+          "month": "2026-01",
+          "status": "complete",
+          "total": 1,
+          "eligible": 1,
+          "note": "当前公开目录已遍历；该月未见新闻不代表厂商未发声。",
+          "keyword_application_reviewed": true
+        },
+        {
+          "month": "2026-02",
+          "status": "complete",
+          "total": 0,
+          "eligible": 0,
+          "note": "当前公开目录已遍历；该月未见新闻不代表厂商未发声。",
+          "keyword_application_reviewed": true
+        },
+        {
+          "month": "2026-03",
+          "status": "complete",
+          "total": 0,
+          "eligible": 0,
+          "note": "当前公开目录已遍历；该月未见新闻不代表厂商未发声。",
+          "keyword_application_reviewed": true
+        },
+        {
+          "month": "2026-04",
+          "status": "complete",
+          "total": 0,
+          "eligible": 0,
+          "note": "当前公开目录已遍历；该月未见新闻不代表厂商未发声。",
+          "keyword_application_reviewed": true
+        },
+        {
+          "month": "2026-05",
+          "status": "complete",
+          "total": 0,
+          "eligible": 0,
+          "note": "当前公开目录已遍历；该月未见新闻不代表厂商未发声。",
+          "keyword_application_reviewed": true
+        },
+        {
+          "month": "2026-06",
+          "status": "incomplete",
+          "total": 5,
+          "eligible": 5,
+          "note": "当前目录最新发布日期停在2026-06-10，不足以确认本月持续更新完整；不得把缺更新当作市场零值。",
+          "keyword_application_reviewed": true
+        },
+        {
+          "month": "2026-07",
+          "status": "incomplete",
+          "total": 0,
+          "eligible": 0,
+          "note": "当前目录最新发布日期停在2026-06-10，不足以确认本月持续更新完整；不得把缺更新当作市场零值。",
+          "keyword_application_reviewed": true
+        },
+        {
+          "month": "2026-08",
+          "status": "incomplete",
+          "total": 0,
+          "eligible": 0,
+          "note": "当前目录最新发布日期停在2026-06-10，不足以确认本月持续更新完整；不得把缺更新当作市场零值。",
+          "keyword_application_reviewed": true
+        },
+        {
+          "month": "2026-09",
+          "status": "incomplete",
+          "total": 0,
+          "eligible": 0,
+          "note": "当前目录最新发布日期停在2026-06-10，不足以确认本月持续更新完整；不得把缺更新当作市场零值。",
+          "keyword_application_reviewed": true
+        },
+        {
+          "source_id": "kunpeng_official",
+          "month": "2026-10",
+          "status": "incomplete",
+          "total": null,
+          "eligible": null,
+          "observed_october_articles": 0,
+          "latest_article_date": "2026-06-10",
+          "covered_through": null,
+          "requested_cutoff": "2026-10-08",
+          "checked_at": "2026-10-08T08:10:57.805695+00:00",
+          "partial_calendar_month": true,
+          "partial_current_day": true,
+          "directory_currently_updates": null,
+          "archive_enumeration_status": "latest_page_checked_only",
+          "freshness_status": "latest_visible_date_unchanged_since_2026-06-10",
+          "archive_pages_checked": 1,
+          "archive_reported_pages": 8,
+          "archive_reported_total": 275,
+          "latest_page_items_observed": 36,
+          "api_url": "https://www.hikunpeng.com/kunpenggateway/kunpengservice/news/data/list/zh?pageNo=1&pageSize=36&lang=zh&page=5&domainCode=",
+          "note": "官方目录与前端公开全类型接口已核验：最新36条仍止于2026-06-10，未见10月条目。本次仅复查最新页，未重遍历全部8页；目录长期未更新，不能证实10月覆盖完整。10月总数与比例保持未知，不画为0，不并入四媒体合计。",
+          "keyword_application_reviewed": true
+        }
+      ],
+      "collected_at": "2026-09-21T15:28:52.609087+08:00",
+      "date_checks": null,
+      "last_rechecked_at": "2026-10-08T08:10:57.805695+00:00",
+      "latest_access_note": "2026-10-08复查官方全类型公开接口最新36条，最新发布日期仍2026-06-10；未见10月条目，目录持续更新完整性未知，10月保留空缺，不计入四媒体合计。"
+    }
+  ],
+  "unavailable_sources": [
+    {
+      "name": "企业网 D1Net",
+      "reason": "历史归档访问受限，未纳入新闻分母。"
+    },
+    {
+      "name": "海光官网新闻",
+      "reason": "尚未取得可枚举的完整新闻目录，未纳入分母，不能解释为零消息。"
+    }
+  ],
+  "taxonomy": {
+    "version": "three-boards-2026-10-08.v1",
+    "reclassified_at": "2026-10-08",
+    "boards": [
+      {
+        "id": "business",
+        "name": "业务方向",
+        "categories": [
+          {
+            "id": "business_heterogeneous_ai",
+            "name": "万全异构智算方案",
+            "source_name": "异构智算",
+            "keywords": [
+              "模型工厂",
+              "模型车间",
+              "词元工厂",
+              "词元车间",
+              "AI一体机",
+              "异构智算",
+              "Token工厂",
+              "Token车间",
+              "AI工厂",
+              "AI加速"
+            ]
+          },
+          {
+            "id": "business_servers",
+            "name": "服务器",
+            "source_name": "服务器",
+            "keywords": [
+              "通算",
+              "超算",
+              "超融合",
+              "天数天算",
+              "智算",
+              "超节点"
+            ]
+          },
+          {
+            "id": "business_storage",
+            "name": "存储",
+            "source_name": "存储",
+            "keywords": [
+              "传统存储",
+              "软件定义存储",
+              "AI存储",
+              "CXL",
+              "CMX",
+              "分层存储"
+            ]
+          },
+          {
+            "id": "business_network",
+            "name": "数据网络",
+            "source_name": "网络",
+            "keywords": [
+              "IP网络",
+              "IB网络",
+              "光模块"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "components",
+        "name": "核心部件",
+        "categories": [
+          {
+            "id": "components_cpu",
+            "name": "CPU芯片",
+            "source_name": "CPU芯片",
+            "keywords": [
+              "X86",
+              "ARM"
+            ]
+          },
+          {
+            "id": "components_accelerators",
+            "name": "加速芯片",
+            "source_name": "加速芯片",
+            "keywords": [
+              "GPU",
+              "TPU",
+              "LPU",
+              "RPU",
+              "ASIC"
+            ]
+          },
+          {
+            "id": "components_storage",
+            "name": "存储部件",
+            "source_name": "存储部件",
+            "keywords": [
+              "Mem",
+              "SSD",
+              "CXL"
+            ]
+          },
+          {
+            "id": "components_liquid_cooling",
+            "name": "液冷散热",
+            "source_name": "液冷散热",
+            "keywords": [
+              "冷板",
+              "CDU",
+              "液冷"
+            ]
+          },
+          {
+            "id": "components_interconnect",
+            "name": "高速互联",
+            "source_name": "高速互联",
+            "keywords": [
+              "光互联",
+              "光交换芯片",
+              "光模块",
+              "CPO",
+              "NPO",
+              "LPO"
+            ]
+          },
+          {
+            "id": "components_power_systems",
+            "name": "电源系统",
+            "source_name": "电源系统",
+            "keywords": [
+              "电源设备",
+              "储能系统"
+            ]
+          },
+          {
+            "id": "components_power_modules",
+            "name": "供电模块",
+            "source_name": "供电模块",
+            "keywords": [
+              "VRM",
+              "MLCC"
+            ]
+          },
+          {
+            "id": "components_signal",
+            "name": "信号传输",
+            "source_name": "信号传输",
+            "keywords": [
+              "PCB",
+              "Pcle Switch"
+            ]
+          },
+          {
+            "id": "components_management",
+            "name": "管理&控制",
+            "source_name": "管理&控制",
+            "keywords": [
+              "BMC",
+              "CPLD"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "scenarios",
+        "name": "场景生态",
+        "categories": [
+          {
+            "id": "scenarios_compute_field",
+            "name": "算力场",
+            "source_name": "算力场",
+            "keywords": [
+              "算力场"
+            ]
+          },
+          {
+            "id": "scenarios_eda",
+            "name": "EDA",
+            "source_name": "EDA",
+            "keywords": [
+              "EDA"
+            ]
+          },
+          {
+            "id": "scenarios_compute_rental",
+            "name": "算力租赁",
+            "source_name": "算力租赁",
+            "keywords": [
+              "算力租赁"
+            ]
+          },
+          {
+            "id": "scenarios_token_factory",
+            "name": "Token工厂",
+            "source_name": "Token工厂",
+            "keywords": [
+              "Token工厂"
+            ]
+          },
+          {
+            "id": "scenarios_aidc",
+            "name": "AIDC",
+            "source_name": "AIDC",
+            "keywords": [
+              "AIDC"
+            ]
+          },
+          {
+            "id": "scenarios_modular_dc",
+            "name": "模块化数据中心",
+            "source_name": "模块化数据中心",
+            "keywords": [
+              "模块化数据中心"
+            ]
+          },
+          {
+            "id": "scenarios_pilot_field",
+            "name": "中试场",
+            "source_name": "中试场",
+            "keywords": [
+              "中试场"
+            ]
+          },
+          {
+            "id": "scenarios_turing_town",
+            "name": "图灵小镇",
+            "source_name": "图灵小镇",
+            "keywords": [
+              "图灵小镇"
+            ]
+          }
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "id": "business_heterogeneous_ai",
+        "name": "万全异构智算方案",
+        "keywords": [
+          "模型工厂",
+          "模型车间",
+          "词元工厂",
+          "词元车间",
+          "AI一体机",
+          "异构智算",
+          "Token工厂",
+          "Token车间",
+          "AI工厂",
+          "AI加速"
+        ]
+      },
+      {
+        "id": "business_servers",
+        "name": "服务器",
+        "keywords": [
+          "通算",
+          "超算",
+          "超融合",
+          "天数天算",
+          "智算",
+          "超节点"
+        ]
+      },
+      {
+        "id": "business_storage",
+        "name": "存储",
+        "keywords": [
+          "传统存储",
+          "软件定义存储",
+          "AI存储",
+          "CXL",
+          "CMX",
+          "分层存储"
+        ]
+      },
+      {
+        "id": "business_network",
+        "name": "数据网络",
+        "keywords": [
+          "IP网络",
+          "IB网络",
+          "光模块"
+        ]
+      }
+    ],
+    "legacy": {
+      "version": "three-boards-2026-10-08.v1",
+      "reclassified_at": "2026-10-07",
+      "groups": [
+        {
+          "id": "processors",
+          "name": "处理器与异构计算",
+          "children": [
+            "domestic_gpu",
+            "xpu",
+            "hygon",
+            "kunpeng_route"
+          ]
+        },
+        {
+          "id": "systems",
+          "name": "算力系统与数据互连",
+          "children": [
+            "supernode",
+            "optical_switch",
+            "ai_storage"
+          ]
+        },
+        {
+          "id": "platforms",
+          "name": "算力平台与运营",
+          "children": [
+            "compute_field",
+            "compute_rental",
+            "token_factory"
+          ]
+        },
+        {
+          "id": "facilities",
+          "name": "数据中心设施与能效",
+          "children": [
+            "aidc",
+            "modular_dc",
+            "liquid_cooling"
+          ]
+        },
+        {
+          "id": "design",
+          "name": "EDA工具与设计算力",
+          "children": [
+            "eda"
+          ]
+        }
+      ],
+      "children": {
+        "domestic_gpu": "国产 GPU",
+        "xpu": "xPU / 异构加速",
+        "hygon": "海光〔路线〕",
+        "kunpeng_route": "鲲鹏〔路线〕",
+        "supernode": "超节点",
+        "optical_switch": "光交换机",
+        "ai_storage": "AI 存储",
+        "compute_field": "算力场",
+        "compute_rental": "算力租赁",
+        "token_factory": "Token 工厂",
+        "aidc": "AIDC",
+        "modular_dc": "模块化数据中心",
+        "liquid_cooling": "液冷",
+        "eda": "EDA"
+      },
+      "rules": [
+        "五个父类按业务层次聚合，十四个子项保留技术主题与重点路线。海光、鲲鹏统计路线提及，包含未确定的备选路线，不等于已采用。父类按底层记录取并集，不能把子类数值相加；跨父类仍可重叠。",
+        "xPU观察口径：显式xPU、异构计算/算力/加速，以及服务器或数据中心场景的NPU、DPU、FPGA、专用加速器；单独出现普通CPU/GPU不自动纳入。排除明确消费终端、汽车与手机场景。",
+        "固定媒体全部新闻为分母；各月份统一标题识别；历史补录与新发生事件分开。",
+        "海光或鲲鹏备选同时计入路线提及，不能理解为均已采用。父类并集去重。"
+      ],
+      "xpu_search_status": "2026-10-07完成本批限定主题与来源的补采；执行不等于全量覆盖",
+      "application_new_topics": "海光、鲲鹏、xPU标题行为复核未完成",
+      "procurement_new_topics": "海光、鲲鹏、xPU适用分母未建立",
+      "rolling_batch": "october-repair-20261007",
+      "legacy_groups": [
+        {
+          "id": "processors",
+          "name": "处理器与异构计算",
+          "children": [
+            "domestic_gpu",
+            "xpu",
+            "hygon",
+            "kunpeng_route"
+          ]
+        },
+        {
+          "id": "systems",
+          "name": "算力系统与数据互连",
+          "children": [
+            "supernode",
+            "optical_switch",
+            "ai_storage"
+          ]
+        },
+        {
+          "id": "platforms",
+          "name": "算力平台与运营",
+          "children": [
+            "compute_field",
+            "compute_rental",
+            "token_factory"
+          ]
+        },
+        {
+          "id": "facilities",
+          "name": "数据中心设施与能效",
+          "children": [
+            "aidc",
+            "modular_dc",
+            "liquid_cooling"
+          ]
+        },
+        {
+          "id": "design",
+          "name": "EDA工具与设计算力",
+          "children": [
+            "eda"
+          ]
+        }
+      ],
+      "legacy_children": {
+        "domestic_gpu": "国产 GPU",
+        "xpu": "xPU / 异构加速",
+        "hygon": "海光〔路线〕",
+        "kunpeng_route": "鲲鹏〔路线〕",
+        "supernode": "超节点",
+        "optical_switch": "光交换机",
+        "ai_storage": "AI 存储",
+        "compute_field": "算力场",
+        "compute_rental": "算力租赁",
+        "token_factory": "Token 工厂",
+        "aidc": "AIDC",
+        "modular_dc": "模块化数据中心",
+        "liquid_cooling": "液冷",
+        "eda": "EDA"
+      }
+    },
+    "rules": [
+      "三看板分别为业务方向4类、核心部件9类、场景生态8类。",
+      "全部固定媒体新闻为共同分母；新闻仅按标题，研究按标题和事实摘要。",
+      "同一记录允许多标签，跨类和跨看板金额不相加。",
+      "原始历史技术标签与用户笔记保留，新看板按当前关键词实时投影。"
+    ]
+  },
+  "latest_refresh": {
+    "batch_id": "source-audit-20261010",
+    "checked_at": "2026-10-10T05:55:32.888981+00:00",
+    "requested_cutoff": "2026-10-10",
+    "added_rows": 101,
+    "added_ids": [
+      "c114-1318887",
+      "c114-1318888",
+      "c114-1318891",
+      "c114-1318892",
+      "c114-1318894",
+      "c114-1318896",
+      "c114-1318898",
+      "c114-1318900",
+      "c114-1318902",
+      "c114-1318904",
+      "c114-1318910",
+      "c114-1318912",
+      "c114-1318914",
+      "c114-1318915",
+      "c114-1318916",
+      "c114-1318917",
+      "cbinews-263236",
+      "cbinews-263237",
+      "cbinews-263238",
+      "cbinews-263239",
+      "cbinews-263240",
+      "cbinews-263241",
+      "cbinews-263242",
+      "cbinews-263243",
+      "cbinews-263244",
+      "cbinews-263245",
+      "cbinews-263246",
+      "cbinews-263247",
+      "cbinews-263248",
+      "cbinews-263249",
+      "cbinews-263250",
+      "cbinews-263251",
+      "cbinews-263252",
+      "cbinews-263253",
+      "cbinews-263254",
+      "cbinews-263255",
+      "cbinews-263256",
+      "cbinews-263257",
+      "cbinews-263258",
+      "doit-857706394071109",
+      "doit-857706867408965",
+      "doit-857708876791877",
+      "doit-857710220267589",
+      "doit-857941399732293",
+      "zhiding-3201487",
+      "zhiding-3201488",
+      "zhiding-3201489",
+      "zhiding-3201492",
+      "zhiding-3201493",
+      "zhiding-3201494",
+      "zhiding-3201495",
+      "zhiding-3201496",
+      "zhiding-3201497",
+      "zhiding-3201498",
+      "zhiding-3201499",
+      "zhiding-3201500",
+      "zhiding-3201501",
+      "zhiding-3201502",
+      "zhiding-3201503",
+      "zhiding-3201504",
+      "zhiding-3201505",
+      "zhiding-3201506",
+      "zhiding-3201507",
+      "zhiding-3201519",
+      "zhiding-3201520",
+      "zhiding-3201521",
+      "zhiding-3201522",
+      "zhiding-3201523",
+      "zhiding-3201524",
+      "zhiding-3201525",
+      "zhiding-3201526",
+      "zhiding-3201527",
+      "zhiding-3201528",
+      "zhiding-3201529",
+      "zhiding-3201530",
+      "zhiding-3201531",
+      "zhiding-3201532",
+      "zhiding-3201533",
+      "zhiding-3201534",
+      "zhiding-3201535",
+      "zhiding-3201536",
+      "zhiding-3201537",
+      "zhiding-3201538",
+      "zhiding-3201539",
+      "zhiding-3201540",
+      "zhiding-3201541",
+      "zhiding-3201542",
+      "zhiding-3201543",
+      "zhiding-3201544",
+      "zhiding-3201545",
+      "zhiding-3201546",
+      "zhiding-3201547",
+      "zhiding-3201548",
+      "zhiding-3201549",
+      "zhiding-3201550",
+      "zhiding-3201551",
+      "zhiding-3201552",
+      "zhiding-3201553",
+      "zhiding-3201554",
+      "zhiding-3201555",
+      "zhiding-3201556"
+    ],
+    "unique_media_news": 23093,
+    "active_added_rows": 101,
+    "skipped_existing": 0
+  },
+  "latest_classification_review": {
+    "id": "aidc-label-recheck-20261008",
+    "checked_at": "2026-10-08T08:34:32.738Z",
+    "added_aidc_labels": 24,
+    "denominator_changed": false
+  },
+  "latest_keyword_scan": {
+    "id": "three-boards-20261008",
+    "rule_version": "three-boards-2026-10-08.v1",
+    "checked_at": "2026-10-08T09:47:05.306Z",
+    "boards": [
+      {
+        "id": "business",
+        "name": "业务方向",
+        "categories": 4
+      },
+      {
+        "id": "components",
+        "name": "核心部件",
+        "categories": 9
+      },
+      {
+        "id": "scenarios",
+        "name": "场景生态",
+        "categories": 8
+      }
+    ]
+  }
+}

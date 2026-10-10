@@ -1,0 +1,1177 @@
+{
+  "schema_version": 2,
+  "id": "source-audit-20261010",
+  "checked_on": "2026-10-10",
+  "checked_at": "2026-10-10T05:55:32.888981+00:00",
+  "requested_window": {
+    "start": "2026-10-08",
+    "end": "2026-10-10"
+  },
+  "full_coverage": false,
+  "coverage_statement": "本轮按现有47个登记信源检查近期更新，四媒体按全部新闻采集；10月10日为采集时点快照。采购、厂商与项目来源按可读入口和定向原文核对，访问受限来源保留具体限制，历史数据不因本次未重现而删除。",
+  "summary": {
+    "registered_sources": 47,
+    "source_receipts": 47,
+    "sources_checked": 47,
+    "new_media_records": 101,
+    "new_research_records": 18,
+    "new_verified_records": 13,
+    "new_pending_leads": 5,
+    "existing_records_updated": 4,
+    "new_report_series": 2,
+    "historically_complete_sources": 0,
+    "exclusion_candidates": 10
+  },
+  "source_checks": [
+    {
+      "source_id": "doit",
+      "name": "DOIT · 全站新闻",
+      "url": "https://www.doit.com.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:48:57.741937+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "readable_snapshot",
+      "detail": "已核对全站公开目录及独立AI快讯入口，新增5篇；原文日期全部核对，旧记录保留。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "snapshot_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window_limits": "本次为10月8日起重叠窗口及10月10日采集时点快照，不代表全年或整个十月完整覆盖；历史旧记录保留。",
+      "partial_current_day": true,
+      "complete_calendar_days_through": "2026-10-09",
+      "evidence_urls": [
+        "https://www.doit.com.cn/api/cms/content/list?sid=809835088719941&pp=pc&lv=CurrentAndChild&cid=809835227754565&ps=100&pn=1",
+        "https://www.doit.com.cn/api/cms/content/list?sid=809835088719941&pp=pc&ps=100&pn=1",
+        "https://www.doit.com.cn/newsflash/"
+      ]
+    },
+    {
+      "source_id": "c114",
+      "name": "C114通信网 · 滚动资讯",
+      "url": "https://www.c114.com.cn/news/roll.asp",
+      "checked": true,
+      "checked_at": "2026-10-10T05:46:26.339609+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "readable_snapshot",
+      "detail": "已核对10月8—10日滚动资讯全部新闻，新增16篇；跨日回显按原文发布日期归属。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "snapshot_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window_limits": "本次为10月8日起重叠窗口及10月10日采集时点快照，不代表全年或整个十月完整覆盖；历史旧记录保留。",
+      "partial_current_day": true,
+      "complete_calendar_days_through": "2026-10-09",
+      "evidence_urls": [
+        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=8",
+        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=9",
+        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=10"
+      ]
+    },
+    {
+      "source_id": "zhiding",
+      "name": "至顶科技 · 最新文章",
+      "url": "https://www.zhiding.cn/list-35-1-1-0-0.htm",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:09.895978+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "readable_snapshot",
+      "detail": "已核对至顶/科技行者最新文章流并越过重叠窗口边界，新增57篇，逐篇核对原文日期。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "snapshot_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window_limits": "本次为10月8日起重叠窗口及10月10日采集时点快照，不代表全年或整个十月完整覆盖；历史旧记录保留。",
+      "partial_current_day": true,
+      "complete_calendar_days_through": "2026-10-09",
+      "evidence_urls": [
+        "https://www.zhiding.cn/list-35-1-1-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-2-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-3-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-4-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-5-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-6-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-7-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-8-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-9-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-10-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-11-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-12-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-13-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-14-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-15-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-16-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-17-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-18-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-19-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-20-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-21-0-0.htm"
+      ]
+    },
+    {
+      "source_id": "cbinews",
+      "name": "电脑商情在线 · 全部新闻栏目",
+      "url": "https://www.cbinews.com/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:47:56.797358+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "readable_snapshot",
+      "detail": "已核对12个公开新闻栏目，新增23篇并核对原文日期；未按技术词预筛新闻分母。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "snapshot_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window_limits": "本次为10月8日起重叠窗口及10月10日采集时点快照，不代表全年或整个十月完整覆盖；历史旧记录保留。",
+      "partial_current_day": true,
+      "complete_calendar_days_through": "2026-10-09",
+      "evidence_urls": []
+    },
+    {
+      "source_id": "ccgp",
+      "name": "中国政府采购网",
+      "url": "https://www.ccgp.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "partial_original_fulltext",
+      "detail": "入口HTTP直连403，公开网页能读取首页及川大/港中大原文。针对10月9–10日服务器、GPU、算力租赁、高性能计算定向检索；两个结果原文失败保留待核。未枚举全国公告。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://www.ccgp.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "intent",
+      "name": "政府采购意向公开",
+      "url": "https://cgyx.ccgp.gov.cn/cgyx/pub/projSearch",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "blocked_plus_targeted_search",
+      "detail": "入口502；site:cgyx.ccgp.gov.cn 日期+服务器定向检索无可核新线索。不能推断没有新意向。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://cgyx.ccgp.gov.cn/cgyx/pub/projSearch"
+      ]
+    },
+    {
+      "source_id": "ggzy",
+      "name": "全国公共资源交易平台",
+      "url": "https://www.ggzy.gov.cn/deal/dealList.html?HEADER_DEAL_TYPE=02",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "blocked_plus_targeted_search",
+      "detail": "注册全国交易入口502；定向日期+智算/数据中心检索未取得范围内新原文。未完成目录枚举。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://www.ggzy.gov.cn/deal/dealList.html?HEADER_DEAL_TYPE=02"
+      ]
+    },
+    {
+      "source_id": "ceb",
+      "name": "中国招标投标公共服务平台",
+      "url": "https://bulletin.cebpubservice.com/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "blocked_plus_targeted_search",
+      "detail": "注册入口405；日期+服务器检索无可用原文，通过中招/铁塔原发布页核实相关项目。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://bulletin.cebpubservice.com/"
+      ]
+    },
+    {
+      "source_id": "mobile",
+      "name": "中国移动采购与招标网",
+      "url": "https://b2b.10086.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "blocked_plus_targeted_search",
+      "detail": "注册入口502；站点限定10月9日服务器/算力检索未取得可核新原件。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://b2b.10086.cn/"
+      ]
+    },
+    {
+      "source_id": "telecom",
+      "name": "中国电信阳光采购网",
+      "url": "https://caigou.chinatelecom.com.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "blocked_plus_targeted_search",
+      "detail": "注册入口403；站点限定日期+算力检索未取得可核新原件。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://caigou.chinatelecom.com.cn/"
+      ]
+    },
+    {
+      "source_id": "unicom",
+      "name": "中国联通采购平台",
+      "url": "https://unibapi.unicom.net.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "blocked_plus_targeted_search",
+      "detail": "注册入口502；站点限定日期+智算/算力检索未取得可核新原件。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://unibapi.unicom.net.cn/"
+      ]
+    },
+    {
+      "source_id": "tower",
+      "name": "中国铁塔电子采购平台",
+      "url": "https://ebid.chinatowercom.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "partial_keyword_search_fulltexts",
+      "detail": "首页及官方检索界面读取成功；使用页面公开检索接口按10月8日00:00–10月10日13:50北京时间，标题关键词算力/服务器/数据中心查询，返回2/1/1条并全部核读。只完成该三词窗口，非全公告枚举。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://ebid.chinatowercom.cn/"
+      ]
+    },
+    {
+      "source_id": "pbc",
+      "name": "中国人民银行集中采购中心",
+      "url": "https://jzcg.pbc.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "dynamic_entry_plus_targeted_search",
+      "detail": "官网入口可读但公告由动态区域加载，本轮未枚举全部公告。site日期+服务器搜索无可核新结果。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://jzcg.pbc.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "nankai",
+      "name": "南开大学招投标管理办公室",
+      "url": "https://nkzbb.nankai.edu.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "partial_current_homepage",
+      "detail": "首页各类采购和结果列表可读，当前可见最新日期10月8日。所见条目未发现10月9–10日目标事件；只查首页当前可见列表。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://nkzbb.nankai.edu.cn/"
+      ]
+    },
+    {
+      "source_id": "siat",
+      "name": "中科院深圳先进院 · 采购公示",
+      "url": "https://siat.cas.cn/jggl/tzgg/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "partial_current_directory_fulltexts",
+      "detail": "当前通知目录可见10月9日条目；两条相关模块化机房/交换机全文核实为9月旧公告转载。只查当前目录及两篇详情。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://siat.cas.cn/jggl/tzgg/"
+      ]
+    },
+    {
+      "source_id": "ecust",
+      "name": "华东理工大学 · 采购信息",
+      "url": "https://czzx.ecust.edu.cn/ejdwcggg/index.chtml",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "partial_current_directory",
+      "detail": "本轮注册二级单位采购入口和结果页均HTTP200，分别首15条，共30个当前目录条目；10月9–10日无目标服务器新条目。历史483失败不覆盖/删除；不代表全站全史恢复。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://czzx.ecust.edu.cn/ejdwcggg/index.chtml"
+      ]
+    },
+    {
+      "source_id": "qianlima",
+      "name": "千里马招标网",
+      "url": "https://www.qianlima.com/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "license_limited_public_search",
+      "detail": "只读取公开首页并使用公开索引定位线索；无会员/API/登录，不解开遮挡，不宣称完整。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://www.qianlima.com/"
+      ]
+    },
+    {
+      "source_id": "bidcenter",
+      "name": "采招网数据服务",
+      "url": "https://shuju.bidcenter.com.cn/zhuanti/shuju/api.shtml",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "license_limited_public_search",
+      "detail": "注册数据服务介绍页及公开索引定向搜索，只用于发现线索；没有调用收费API，不把搜索结果计完整覆盖。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://shuju.bidcenter.com.cn/zhuanti/shuju/api.shtml"
+      ]
+    },
+    {
+      "source_id": "cninfo",
+      "name": "巨潮资讯 · 上市公司公告",
+      "url": "https://www.cninfo.com.cn/new/commonUrl/pageOfSearch?url=disclosure/list/search",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "dynamic_entry_plus_targeted_search",
+      "detail": "官方查询入口可读但未枚举动态披露列表；对10月9/10日算力/服务器公开PDF定向检索无可核窗口新公告。返回旧报告含相关日期，不作新事件。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://www.cninfo.com.cn/new/commonUrl/pageOfSearch?url=disclosure/list/search"
+      ]
+    },
+    {
+      "source_id": "guangzhou",
+      "name": "广州市发展和改革委员会",
+      "url": "https://fgw.gz.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "blocked_plus_targeted_search",
+      "detail": "官网直连403；域名限定日期+数据中心/算力搜索未获可核窗口新原件。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://fgw.gz.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "beijing-et",
+      "name": "北京经济技术开发区",
+      "url": "https://kfqgw.beijing.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "blocked_plus_targeted_search",
+      "detail": "官网直连403；域名限定日期+算力/智算搜索未获可核窗口新原件。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://kfqgw.beijing.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "beijing",
+      "name": "北京市人民政府",
+      "url": "https://www.beijing.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "partial_targeted_search",
+      "detail": "官网直连403；域名限定检索发现基础设施规划解读、昌平规划意见反馈，非明确设备采购/投产；没有据此增加采购金额。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://www.beijing.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "shanghai-fin",
+      "name": "上海市金融管理局",
+      "url": "https://jrj.sh.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "blocked_plus_targeted_search",
+      "detail": "官网直连403；域名限定日期+数据中心搜索未获可核新项目。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://jrj.sh.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "changzhou",
+      "name": "常州国家高新区",
+      "url": "https://www.cznd.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "partial_targeted_search",
+      "detail": "官网直连403，网页检索当前主页及10月9日结果可读，返回党政调研/普通建设；未获核心范围新项目。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://www.cznd.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "shaoguan",
+      "name": "韶关市人民政府",
+      "url": "https://www.sg.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "partial_targeted_search",
+      "detail": "官网直连403；政府栏目定向检索，10月9日政务云节点服务询价11.003304万元是一般政务云，不当新增AIDC/设备采购。未枚举全部栏目。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://www.sg.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "changning",
+      "name": "上海市长宁区",
+      "url": "https://www.shcn.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "partial_entry_plus_targeted_search",
+      "detail": "官网入口200仅当前门户可见内容；日期+算力定向检索未取得窗口新项目。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://www.shcn.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "wuxi",
+      "name": "无锡市人民政府",
+      "url": "https://www.wuxi.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "blocked_plus_targeted_search",
+      "detail": "官网直连403；日期+智算定向搜索未取得窗口新项目原文。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://www.wuxi.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "citc",
+      "name": "中招国际招标",
+      "url": "https://www.cntcitc.com.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:54:00.247029+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "partial_official_keyword_search_fulltexts",
+      "detail": "官网站内10月8–10日、全部栏目、算力/服务器分别检索4条（合并7条），所有命中均读取官方正文。额外读取KTⅡ旧招标/候选验证项目关系。仅两词窗口完整，不是全来源/全国完整。",
+      "requested_window": {
+        "start": "2026-10-08",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅覆盖本轮入口、定向检索与明确读取的原文；不代表全国、全年或该来源全库完整覆盖。",
+      "evidence_urls": [
+        "https://www.cntcitc.com.cn/"
+      ]
+    },
+    {
+      "source_id": "thinkforce",
+      "name": "熠知电子",
+      "url": "https://www.think-force.com/site/news",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "readable_directory",
+      "detail": "当前单页目录列5条2026新闻，最新9/10；本轮未发现10/9—10/10条目。未重读全部历史正文。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": "2026-09-10",
+      "evidence_urls": [
+        "https://www.think-force.com/site/news"
+      ]
+    },
+    {
+      "source_id": "jaguarmicro",
+      "name": "云豹智能",
+      "url": "https://www.jaguarmicro.com/news1-1.html",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "readable_directory",
+      "detail": "公司新闻单页最新7/1云豹与超聚变合作；无本轮日期条目。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": "2026-07-01",
+      "evidence_urls": [
+        "https://www.jaguarmicro.com/news1-1.html"
+      ]
+    },
+    {
+      "source_id": "huawei",
+      "name": "华为计算",
+      "url": "https://e.huawei.com/cn/products/computing",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "partial_dynamic_directory",
+      "detail": "计算产品入口与新闻卡片可读；企业新闻中心仅显示未找到新闻的动态结果壳。定向官方域搜索命中10/9储能安装视频，非本轮服务器/AIDC统计或项目。不能据空结果证明没有更新。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": null,
+      "evidence_urls": [
+        "https://e.huawei.com/cn/products/computing",
+        "https://e.huawei.com/cn/news"
+      ]
+    },
+    {
+      "source_id": "h3c",
+      "name": "新华三",
+      "url": "https://www.h3c.com/cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "readable_directory_fulltext_excluded",
+      "detail": "公司新闻首页可读，10/9工业AI文章已全文核读；系《商学院》10月刊转载和方法论，不形成新离散服务器/AIDC采购或部署事件，H1财务数不是本期新披露。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": "2026-10-09",
+      "evidence_urls": [
+        "https://www.h3c.com/cn/About_H3C/News_Media/Company_News/",
+        "https://www.h3c.com/cn/d_202610/2943442_30008_0.htm"
+      ]
+    },
+    {
+      "source_id": "ieisystem",
+      "name": "浪潮信息",
+      "url": "https://www.ieisystem.com/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "readable_directory",
+      "detail": "首页、新闻中心当前页可读，最新9/30；未见10/9—10/10新增条目。首页仍推广9/21《中国人工智能计算力发展评估报告》；没有把推广当作新发布日期。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": "2026-09-30",
+      "evidence_urls": [
+        "https://www.ieisystem.com/",
+        "https://www.ieisystem.com/about/news/"
+      ]
+    },
+    {
+      "source_id": "lenovo",
+      "name": "联想企业购 · ISG",
+      "url": "https://biz.lenovo.com.cn/isg/whitepaper.html",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "partial_dynamic_directory",
+      "detail": "白皮书地址可打开但提取内容主要为产品/导航，未获得带日期白皮书条目；品牌中心新闻页亦未提取出本轮日期条目。官方域检索命中6/25等旧新闻，无本轮可验证新增。不能称联想全站无更新。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": null,
+      "evidence_urls": [
+        "https://biz.lenovo.com.cn/isg/whitepaper.html",
+        "https://brand.lenovo.com.cn/",
+        "https://brand.lenovo.com.cn/new/brandnew.html"
+      ]
+    },
+    {
+      "source_id": "wechat",
+      "name": "微信公众号原文",
+      "url": "https://mp.weixin.qq.com/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "manual_share_link_required",
+      "detail": "公众号根入口无法通过当前读取器打开；未提供本轮分享文章链接，未进入账号历史或猜测阅读量。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": null,
+      "evidence_urls": [
+        "https://mp.weixin.qq.com/"
+      ]
+    },
+    {
+      "source_id": "caict-wechat",
+      "name": "中国信通院官方微信矩阵",
+      "url": "https://service.caict.ac.cn/wxq/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "directory_only_no_article_feed",
+      "detail": "微信墙入口可读（短页/二维码），不构成文章列表。本轮未取得独立微信原文；ODCC认证启动按ODCC来源记录，不重计微信证据链。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": null,
+      "evidence_urls": [
+        "https://service.caict.ac.cn/wxq/"
+      ]
+    },
+    {
+      "source_id": "kunpeng",
+      "name": "鲲鹏社区 · 官方新闻",
+      "url": "https://www.hikunpeng.com/zh/activities/news",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "dynamic_empty_result",
+      "detail": "新闻入口提取显示暂无数据；官方域定向检索未得到10/9—10/10可核读条目。动态空页不是无新闻结论，也不补全历史。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": null,
+      "evidence_urls": [
+        "https://www.hikunpeng.com/zh/activities/news"
+      ]
+    },
+    {
+      "source_id": "hygon",
+      "name": "海光官网",
+      "url": "https://www.hygon.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "unreadable_dynamic_shell",
+      "detail": "海光首页返回0行，光合组织首页读取失败；官方域定向检索未得到本轮可验证新增。CPU/DCU存量分类保持。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": null,
+      "evidence_urls": [
+        "https://www.hygon.cn/",
+        "https://www.hieco.com.cn/"
+      ]
+    },
+    {
+      "source_id": "metax",
+      "name": "沐曦股份 · 官方新闻",
+      "url": "https://www.metax-tech.com/news.html",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "fetch_failed",
+      "detail": "www和裸域新闻入口均内部读取错误；官方域定向检索未给出本轮有效新闻。既有历史条目不受影响，不声称本轮已重做11页。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": null,
+      "evidence_urls": [
+        "https://www.metax-tech.com/news.html",
+        "https://metax-tech.com/news.html"
+      ]
+    },
+    {
+      "source_id": "mthreads",
+      "name": "摩尔线程 · 官方新闻",
+      "url": "https://www.mthreads.com/news",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "fetch_failed",
+      "detail": "www、裸域新闻以及开发者新闻目录本轮均读取失败；定向检索未得新原文。与上轮目录可读的状态不同，本轮不可沿用上轮成功回执。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": null,
+      "evidence_urls": [
+        "https://www.mthreads.com/news",
+        "https://mthreads.com/news",
+        "https://developer.mthreads.com/news"
+      ]
+    },
+    {
+      "source_id": "univista",
+      "name": "合见工软 · 官方新闻",
+      "url": "https://www.univista-isg.com/site/news",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "readable_directory",
+      "detail": "公司新闻当前页可读，置顶9/1发布会、最新普通条目9/15；没有本轮日期条目。没有遍历历史3页。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": "2026-09-15",
+      "evidence_urls": [
+        "https://www.univista-isg.com/site/news"
+      ]
+    },
+    {
+      "source_id": "idcquan",
+      "name": "中国IDC圈 · 建设月报与新闻",
+      "url": "https://cloud.idcquan.com/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "readable_directory_candidate_body_failed",
+      "detail": "云计算当前页可读，10/9列日本数据中心及液冷评论；日本项目为境外，液冷正文208272.shtml重试仍Cache miss。未将其标题纳入事实库或市场统计。云资讯子栏目有缓存日期不一致（打开为9/18，搜索摘要为10/9），据此不宣称完整。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": "2026-10-09",
+      "evidence_urls": [
+        "https://cloud.idcquan.com/",
+        "https://cloud.idcquan.com/yzx/",
+        "https://cloud.idcquan.com/yzx/208272.shtml"
+      ]
+    },
+    {
+      "source_id": "d1net",
+      "name": "企业网 D1Net",
+      "url": "https://www.d1net.com/datacenter/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "empty_extraction",
+      "detail": "数据中心目录本轮仅返回1行无列表；首页备选也未获得可用本轮目录。保留读取限制，不沿用上次可读状态。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": null,
+      "evidence_urls": [
+        "https://www.d1net.com/datacenter/",
+        "https://www.d1net.com/"
+      ]
+    },
+    {
+      "source_id": "newrank",
+      "name": "新榜",
+      "url": "https://www.newrank.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "public_homepage_license_limited",
+      "detail": "公开首页及最新标题可读，10/9主要AI内容营销/漫剧；无服务器或AIDC新事件。没有使用会员数据/API、没有获取公众号历史或传播指标。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": "2026-10-09",
+      "evidence_urls": [
+        "https://www.newrank.cn/"
+      ]
+    },
+    {
+      "source_id": "gsdata",
+      "name": "清博智能",
+      "url": "https://www.gsdata.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "javascript_shell_license_limited",
+      "detail": "公开首页只返回需JavaScript提示；未使用付费服务、授权API或账号内容，也未估算传播量。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": null,
+      "evidence_urls": [
+        "https://www.gsdata.cn/"
+      ]
+    },
+    {
+      "source_id": "odcc",
+      "name": "开放数据中心委员会 ODCC",
+      "url": "https://www.odcc.org.cn/index.html",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "readable_directory_new_fulltext",
+      "detail": "首页及10/9高能效智算中心认证正文已核读；建议新增1条行业研究事件。正文阈值为认证条件，不构成市场数值更新；内嵌图未逐项复核，未读取会员文件。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": "2026-10-09",
+      "evidence_urls": [
+        "https://www.odcc.org.cn/index.html",
+        "https://www.odcc.org.cn/news/p-2108515101066485761.html"
+      ]
+    },
+    {
+      "source_id": "caict",
+      "name": "中国信息通信研究院",
+      "url": "https://www.caict.ac.cn/",
+      "checked": true,
+      "checked_at": "2026-10-10T05:50:00Z",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "fetch_failed_with_official_partner_signal",
+      "detail": "首页返回HTTP412，专题/白皮书目录及10月目录本轮读取失败；定向检索只得到旧报告。ODCC公开认证文单列在odcc，不称信通院报告档案已完整读取。",
+      "requested_window": {
+        "start": "2026-10-09",
+        "end": "2026-10-10"
+      },
+      "verified_window": null,
+      "verified_window_limits": "当前目录/入口及所列指定正文；只判断可读本轮快照，非历史全量",
+      "latest_observed_publication": null,
+      "evidence_urls": [
+        "https://www.caict.ac.cn/",
+        "https://www.caict.ac.cn/kxyj/qwfb/ztbg/",
+        "https://www.caict.ac.cn/kxyj/qwfb/bps/",
+        "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202610/"
+      ]
+    }
+  ],
+  "exclusion_dispositions": [
+    {
+      "title": "算力服务器（清采比选20261261号）成交结果公告",
+      "url": "https://sbgysfw.sysc.tsinghua.edu.cn/#/publish/1A11FEC432C22CB760B2DD637A783045",
+      "published_date": "2026-10-09",
+      "event_date": null,
+      "event_date_precision": "unknown",
+      "within_research_window": null,
+      "outcome": "out_of_scope",
+      "record_ids": [],
+      "reason": "标题称服务器，但原始公开设备要求及成交配置为AMD Threadripper专业工作站平台；按既有严格服务器/数据中心口径排除。成交价格winPriceOpen=false，公开15万元/24万元均为预算，不能当成交额。",
+      "scope_basis": "equipment_scope",
+      "original_reason": "标题称服务器，但原始公开设备要求及成交配置为AMD Threadripper专业工作站平台；按既有严格服务器/数据中心口径排除。成交价格winPriceOpen=false，公开15万元/24万元均为预算，不能当成交额。"
+    },
+    {
+      "title": "塔式计算服务器（清采比选20261268号）成交结果公告",
+      "url": "https://sbgysfw.sysc.tsinghua.edu.cn/#/publish/1A11EEE51E822CB760B2DD637A783778",
+      "published_date": "2026-10-09",
+      "event_date": null,
+      "event_date_precision": "unknown",
+      "within_research_window": null,
+      "outcome": "out_of_scope",
+      "record_ids": [],
+      "reason": "标题称服务器，但原始公开设备要求及成交配置为AMD Threadripper专业工作站平台；按既有严格服务器/数据中心口径排除。成交价格winPriceOpen=false，公开15万元/24万元均为预算，不能当成交额。",
+      "scope_basis": "equipment_scope",
+      "original_reason": "标题称服务器，但原始公开设备要求及成交配置为AMD Threadripper专业工作站平台；按既有严格服务器/数据中心口径排除。成交价格winPriceOpen=false，公开15万元/24万元均为预算，不能当成交额。"
+    },
+    {
+      "title": "深圳先进院模块化机房采购公告",
+      "url": "https://siat.cas.cn/jggl/tzgg/202610/t20261009_8289954.html",
+      "published_date": "2026-10-09",
+      "event_date": "2026-09-29",
+      "event_date_precision": "day",
+      "within_research_window": false,
+      "outcome": "pending_verification",
+      "record_ids": [],
+      "reason": "买方10月9日简讯引向9月原始CCGP招标，没有新结果/变更；不作为十月新采购。本轮未将9月历史公告整笔回填。",
+      "original_reason": "买方10月9日简讯引向9月原始CCGP招标，没有新结果/变更；不作为十月新采购。本轮未将9月历史公告整笔回填。"
+    },
+    {
+      "title": "深圳先进院参数网络交换机采购公告",
+      "url": "https://siat.cas.cn/jggl/tzgg/202610/t20261009_8289950.html",
+      "published_date": "2026-10-09",
+      "event_date": "2026-09-27",
+      "event_date_precision": "day",
+      "within_research_window": false,
+      "outcome": "pending_verification",
+      "record_ids": [],
+      "reason": "买方10月9日简讯引向9月原始CCGP招标，没有新结果/变更；不作为十月新采购。本轮未将9月历史公告整笔回填。",
+      "original_reason": "买方10月9日简讯引向9月原始CCGP招标，没有新结果/变更；不作为十月新采购。本轮未将9月历史公告整笔回填。"
+    },
+    {
+      "title": "铁塔能源安徽分公司宿州数据中心维修服务候选",
+      "url": "https://ebid.chinatowercom.cn/zgtt/gggs/003003/20261009/85f7b869-8a15-46d1-948a-b3dd011827b5.html",
+      "published_date": "2026-10-09",
+      "event_date": null,
+      "event_date_precision": "unknown",
+      "within_research_window": null,
+      "outcome": "out_of_scope",
+      "record_ids": [],
+      "reason": "存量数据中心机电维修，未显示新增服务器、液冷、AIDC扩容；本轮核心项目新增口径排除。第一候选不含税331400元不能算服务器成交。",
+      "scope_basis": "equipment_scope",
+      "original_reason": "存量数据中心机电维修，未显示新增服务器、液冷、AIDC扩容；本轮核心项目新增口径排除。第一候选不含税331400元不能算服务器成交。"
+    },
+    {
+      "title": "新华三：打通工业AI的“最后一公里”",
+      "url": "https://www.h3c.com/cn/d_202610/2943442_30008_0.htm",
+      "published_date": "2026-10-09",
+      "event_date": null,
+      "event_date_precision": "unknown",
+      "within_research_window": null,
+      "outcome": "out_of_scope",
+      "record_ids": [],
+      "reason": "工业ICT/OT采访及方法论，项目时间和买方匿名；没有新的离散服务器/AIDC采购部署事实。引用H1财务值属旧数，不更新研报。",
+      "scope_basis": "not_an_event",
+      "original_reason": "工业ICT/OT采访及方法论，项目时间和买方匿名；没有新的离散服务器/AIDC采购部署事实。引用H1财务值属旧数，不更新研报。"
+    },
+    {
+      "title": "液冷，其实不安全",
+      "url": "https://cloud.idcquan.com/yzx/208272.shtml",
+      "published_date": "2026-10-09",
+      "event_date": null,
+      "event_date_precision": "unknown",
+      "within_research_window": null,
+      "outcome": "pending_verification",
+      "record_ids": [],
+      "reason": "只核实目录标题和日期，正文读取失败，不据标题归纳事故或能效事实。",
+      "original_reason": "只核实目录标题和日期，正文读取失败，不据标题归纳事故或能效事实。"
+    },
+    {
+      "title": "日本AI数据中心迎双重加码",
+      "url": "https://cloud.idcquan.com/",
+      "published_date": "2026-10-09",
+      "event_date": null,
+      "event_date_precision": "unknown",
+      "within_research_window": null,
+      "outcome": "out_of_scope",
+      "record_ids": [],
+      "reason": "目录摘要指日本项目，非中国大陆需求；未核全文，不录金额或容量。",
+      "scope_basis": "geography_scope",
+      "original_reason": "目录摘要指日本项目，非中国大陆需求；未核全文，不录金额或容量。"
+    },
+    {
+      "title": "中国端侧AI产业发展与应用实践蓝皮书（2026）案例征集",
+      "url": "https://www.frostchina.com/content/insight/detail/6ac8a1f39121551301ba17ab",
+      "published_date": "2026-10-09",
+      "event_date": null,
+      "event_date_precision": "unknown",
+      "within_research_window": null,
+      "outcome": "out_of_scope",
+      "record_ids": [],
+      "reason": "征集截至10/25，预计11月发布；不能作为已发布2026市场统计。重点端侧终端，未追加服务器市场数据。",
+      "scope_basis": "not_an_event",
+      "original_reason": "征集截至10/25，预计11月发布；不能作为已发布2026市场统计。重点端侧终端，未追加服务器市场数据。"
+    },
+    {
+      "title": "中兴通讯携手Al-Salam与Mannai深化战略合作",
+      "url": "https://www.zte.com.cn/china/about/news/20261009C1.html",
+      "published_date": "2026-10-09",
+      "event_date": null,
+      "event_date_precision": "unknown",
+      "within_research_window": null,
+      "outcome": "out_of_scope",
+      "record_ids": [],
+      "reason": "伊拉克MoU合作，非中国大陆需求，亦不是可计入设备金额的订单。",
+      "scope_basis": "geography_scope",
+      "original_reason": "伊拉克MoU合作，非中国大陆需求，亦不是可计入设备金额的订单。"
+    }
+  ]
+}

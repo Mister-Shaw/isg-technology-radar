@@ -1,1 +1,243 @@
-{"version":"three-boards-2026-10-08.v1","boards":[{"id":"business","name":"业务方向","categories":[{"id":"business_heterogeneous_ai","name":"万全异构智算方案","source_name":"异构智算","keywords":["模型工厂","模型车间","词元工厂","词元车间","AI一体机","异构智算","Token工厂","Token车间","AI工厂","AI加速"]},{"id":"business_servers","name":"服务器","source_name":"服务器","keywords":["通算","超算","超融合","天数天算","智算","超节点"]},{"id":"business_storage","name":"存储","source_name":"存储","keywords":["传统存储","软件定义存储","AI存储","CXL","CMX","分层存储"]},{"id":"business_network","name":"数据网络","source_name":"网络","keywords":["IP网络","IB网络","光模块"]}]},{"id":"components","name":"核心部件","categories":[{"id":"components_cpu","name":"CPU芯片","source_name":"CPU芯片","keywords":["X86","ARM"]},{"id":"components_accelerators","name":"加速芯片","source_name":"加速芯片","keywords":["GPU","TPU","LPU","RPU","ASIC"]},{"id":"components_storage","name":"存储部件","source_name":"存储部件","keywords":["Mem","SSD","CXL"]},{"id":"components_liquid_cooling","name":"液冷散热","source_name":"液冷散热","keywords":["冷板","CDU","液冷"]},{"id":"components_interconnect","name":"高速互联","source_name":"高速互联","keywords":["光互联","光交换芯片","光模块","CPO","NPO","LPO"]},{"id":"components_power_systems","name":"电源系统","source_name":"电源系统","keywords":["电源设备","储能系统"]},{"id":"components_power_modules","name":"供电模块","source_name":"供电模块","keywords":["VRM","MLCC"]},{"id":"components_signal","name":"信号传输","source_name":"信号传输","keywords":["PCB","Pcle Switch"]},{"id":"components_management","name":"管理&控制","source_name":"管理&控制","keywords":["BMC","CPLD"]}]},{"id":"scenarios","name":"场景生态","categories":[{"id":"scenarios_compute_field","name":"算力场","source_name":"算力场","keywords":["算力场"]},{"id":"scenarios_eda","name":"EDA","source_name":"EDA","keywords":["EDA"]},{"id":"scenarios_compute_rental","name":"算力租赁","source_name":"算力租赁","keywords":["算力租赁"]},{"id":"scenarios_token_factory","name":"Token工厂","source_name":"Token工厂","keywords":["Token工厂"]},{"id":"scenarios_aidc","name":"AIDC","source_name":"AIDC","keywords":["AIDC"]},{"id":"scenarios_modular_dc","name":"模块化数据中心","source_name":"模块化数据中心","keywords":["模块化数据中心"]},{"id":"scenarios_pilot_field","name":"中试场","source_name":"中试场","keywords":["中试场"]},{"id":"scenarios_turing_town","name":"图灵小镇","source_name":"图灵小镇","keywords":["图灵小镇"]}]}],"window":{"start":"2026-01-01","end":"2026-10-08"},"news_documents":23306,"research_records":948,"method":["三看板分别为业务方向4类、核心部件9类、场景生态8类。","全部固定媒体新闻为共同分母；新闻仅按标题，研究按标题和事实摘要。","同一记录允许多标签，跨类和跨看板金额不相加。","原始历史技术标签与用户笔记保留，新看板按当前关键词实时投影。"],"audit_url":"/keyword-scan-20261008.json"}
+{
+  "version": "three-boards-2026-10-08.v1",
+  "boards": [
+    {
+      "id": "business",
+      "name": "业务方向",
+      "categories": [
+        {
+          "id": "business_heterogeneous_ai",
+          "name": "万全异构智算方案",
+          "source_name": "异构智算",
+          "keywords": [
+            "模型工厂",
+            "模型车间",
+            "词元工厂",
+            "词元车间",
+            "AI一体机",
+            "异构智算",
+            "Token工厂",
+            "Token车间",
+            "AI工厂",
+            "AI加速"
+          ]
+        },
+        {
+          "id": "business_servers",
+          "name": "服务器",
+          "source_name": "服务器",
+          "keywords": [
+            "通算",
+            "超算",
+            "超融合",
+            "天数天算",
+            "智算",
+            "超节点"
+          ]
+        },
+        {
+          "id": "business_storage",
+          "name": "存储",
+          "source_name": "存储",
+          "keywords": [
+            "传统存储",
+            "软件定义存储",
+            "AI存储",
+            "CXL",
+            "CMX",
+            "分层存储"
+          ]
+        },
+        {
+          "id": "business_network",
+          "name": "数据网络",
+          "source_name": "网络",
+          "keywords": [
+            "IP网络",
+            "IB网络",
+            "光模块"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "components",
+      "name": "核心部件",
+      "categories": [
+        {
+          "id": "components_cpu",
+          "name": "CPU芯片",
+          "source_name": "CPU芯片",
+          "keywords": [
+            "X86",
+            "ARM"
+          ]
+        },
+        {
+          "id": "components_accelerators",
+          "name": "加速芯片",
+          "source_name": "加速芯片",
+          "keywords": [
+            "GPU",
+            "TPU",
+            "LPU",
+            "RPU",
+            "ASIC"
+          ]
+        },
+        {
+          "id": "components_storage",
+          "name": "存储部件",
+          "source_name": "存储部件",
+          "keywords": [
+            "Mem",
+            "SSD",
+            "CXL"
+          ]
+        },
+        {
+          "id": "components_liquid_cooling",
+          "name": "液冷散热",
+          "source_name": "液冷散热",
+          "keywords": [
+            "冷板",
+            "CDU",
+            "液冷"
+          ]
+        },
+        {
+          "id": "components_interconnect",
+          "name": "高速互联",
+          "source_name": "高速互联",
+          "keywords": [
+            "光互联",
+            "光交换芯片",
+            "光模块",
+            "CPO",
+            "NPO",
+            "LPO"
+          ]
+        },
+        {
+          "id": "components_power_systems",
+          "name": "电源系统",
+          "source_name": "电源系统",
+          "keywords": [
+            "电源设备",
+            "储能系统"
+          ]
+        },
+        {
+          "id": "components_power_modules",
+          "name": "供电模块",
+          "source_name": "供电模块",
+          "keywords": [
+            "VRM",
+            "MLCC"
+          ]
+        },
+        {
+          "id": "components_signal",
+          "name": "信号传输",
+          "source_name": "信号传输",
+          "keywords": [
+            "PCB",
+            "Pcle Switch"
+          ]
+        },
+        {
+          "id": "components_management",
+          "name": "管理&控制",
+          "source_name": "管理&控制",
+          "keywords": [
+            "BMC",
+            "CPLD"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scenarios",
+      "name": "场景生态",
+      "categories": [
+        {
+          "id": "scenarios_compute_field",
+          "name": "算力场",
+          "source_name": "算力场",
+          "keywords": [
+            "算力场"
+          ]
+        },
+        {
+          "id": "scenarios_eda",
+          "name": "EDA",
+          "source_name": "EDA",
+          "keywords": [
+            "EDA"
+          ]
+        },
+        {
+          "id": "scenarios_compute_rental",
+          "name": "算力租赁",
+          "source_name": "算力租赁",
+          "keywords": [
+            "算力租赁"
+          ]
+        },
+        {
+          "id": "scenarios_token_factory",
+          "name": "Token工厂",
+          "source_name": "Token工厂",
+          "keywords": [
+            "Token工厂"
+          ]
+        },
+        {
+          "id": "scenarios_aidc",
+          "name": "AIDC",
+          "source_name": "AIDC",
+          "keywords": [
+            "AIDC"
+          ]
+        },
+        {
+          "id": "scenarios_modular_dc",
+          "name": "模块化数据中心",
+          "source_name": "模块化数据中心",
+          "keywords": [
+            "模块化数据中心"
+          ]
+        },
+        {
+          "id": "scenarios_pilot_field",
+          "name": "中试场",
+          "source_name": "中试场",
+          "keywords": [
+            "中试场"
+          ]
+        },
+        {
+          "id": "scenarios_turing_town",
+          "name": "图灵小镇",
+          "source_name": "图灵小镇",
+          "keywords": [
+            "图灵小镇"
+          ]
+        }
+      ]
+    }
+  ],
+  "window": {
+    "start": "2026-01-01",
+    "end": "2026-10-10"
+  },
+  "news_documents": 23653,
+  "research_records": 1000,
+  "method": [
+    "三看板分别为业务方向4类、核心部件9类、场景生态8类。",
+    "全部固定媒体新闻为共同分母；新闻仅按标题，研究按标题和事实摘要。",
+    "同一记录允许多标签，跨类和跨看板金额不相加。",
+    "原始历史技术标签与用户笔记保留，新看板按当前关键词实时投影。"
+  ],
+  "audit_url": "/source-audit-20261010.json"
+}

@@ -14,7 +14,7 @@ const rows=reportInsightRows(report),snapshot=reportAnalysisSnapshot(study,repor
 const changed=validateResearchEdit('report_insights',base.id,{...base,note:'保留人工笔记',inference:'新的共享判断',followup_on:'2026-10-14'},base);
 const merged=researchWithEdits(snapshot,[{section:'report_insights',key:base.id,revision:1,value:changed}]);assert.equal(merged.report_insights[0].note,'保留人工笔记');assert.equal(merged.report_insights[0].inference,'新的共享判断');assert.equal(merged.events.length,study.events.length);assert.deepEqual(merged.report_insights[0].source_ids,base.source_ids);
 assert.throws(()=>validateResearchEdit('report_insights',base.id,{...base,followup_on:'not-date'},base));
-assert.equal(monitor.enabled,false);assert.equal(monitor.last_completed_cutoff,'2026-09-20');assert.equal(monitor.latest_update_status,'partial');assert.equal(panel.window.end,monitor.latest_requested_cutoff);assert.equal(study.period_end,monitor.latest_requested_cutoff);
+assert.equal(monitor.enabled,false);assert.equal(monitor.last_completed_cutoff,'2026-09-20');assert.equal(monitor.latest_update_status,'partial');assert.equal(panel.window.end,study.period_end);assert(panel.window.end>=monitor.latest_requested_cutoff,'Manual audit may advance snapshot while schedule stays paused');
 assert.equal(run.media.rows_added,1406);assert.equal(run.added_records,17);assert.equal(run.promoted_ids.length,1);
 assert.equal(new Set(panel.documents.map(d=>d.id)).size,panel.documents.length);assert(!panel.documents.some(d=>d.date==='2026-10-00'));
 const z=panel.sources.find(s=>s.id==='zhiding_latest');assert.equal(z.coverage.find(c=>c.month==='2026-10').status,'incomplete');

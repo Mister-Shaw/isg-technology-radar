@@ -5,9 +5,6 @@ import "./compact.css";
 export const metadata: Metadata = {
   title: "ISG 技术情报台",
   description: "中国服务器市场新技术：证据、项目进展与竞争跟踪。",
-  other: {
-    "codex-preview": "development",
-  },
   icons: {
     icon: [{ url: "/isg-radar-blue-trail.svg", type: "image/svg+xml" }, { url: "/isg-radar-trail-icon.png", type: "image/png" }],
     shortcut: "/isg-radar-trail-icon.png",

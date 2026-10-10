@@ -1,0 +1,2237 @@
+{
+  "schema_version": 1,
+  "id": "source-audit-20261009",
+  "checked_on": "2026-10-09",
+  "requested_window": {
+    "start": "2026-01-01",
+    "end": "2026-10-09"
+  },
+  "full_coverage": false,
+  "coverage_statement": "47个登记来源的逐源检查与历史完整性分别统计。入口可读、定向抽查或现有记录数量均不代表全年全量覆盖；媒体当前日仅为采集时点快照。",
+  "summary": {
+    "registered_sources": 47,
+    "source_receipts": 47,
+    "sources_checked": 47,
+    "historically_complete_sources": 2,
+    "exclusion_candidates": 11
+  },
+  "source_checks": [
+    {
+      "source_id": "thinkforce",
+      "name": "熠知电子",
+      "category": "vendors",
+      "url": "https://www.think-force.com/site/news",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "readable_directory",
+      "latest_observed_publication": "2026-09-10",
+      "detail": "目录列出5条2026文章，从1/21至9/10；已逐篇核查之前未录的4/13增资与5/25来访。5/25包含历史累计海外交付，不是新签订单。",
+      "query": "open 新闻目录、news_con/87、news_con/99",
+      "actually_verified_window": "2026-01-21—2026-09-10：当前完整单页2026目录；不等于所有外部报道",
+      "full_requested_history_verified": false,
+      "local_research_records": 3,
+      "local_research_window": [
+        "2026-01-21",
+        "2026-09-10"
+      ],
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "2026-01-21—2026-09-10：当前完整单页2026目录；不等于所有外部报道"
+    },
+    {
+      "source_id": "jaguarmicro",
+      "name": "云豹智能",
+      "category": "vendors",
+      "url": "https://www.jaguarmicro.com/news1-1.html",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "readable_directory",
+      "latest_observed_publication": "2026-07-01",
+      "detail": "公司新闻目录仅1条2026新闻；原文n97可读，表述“近日”战略合作，未披露实际签署日。既有事件若填7/1为签署日应降为披露日。",
+      "query": "site:jaguarmicro.com 2026 云豹智能；open news1-1.html、n97.html",
+      "actually_verified_window": "当前公司新闻单页，1条2026；其他媒体报道栏目未全遍历",
+      "full_requested_history_verified": false,
+      "local_research_records": 1,
+      "local_research_window": [
+        "2026-07-01",
+        "2026-07-01"
+      ],
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "当前公司新闻单页，1条2026；其他媒体报道栏目未全遍历"
+    },
+    {
+      "source_id": "huawei",
+      "name": "华为计算",
+      "category": "vendors",
+      "url": "https://e.huawei.com/cn/products/computing",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "readable_entry_and_sample",
+      "latest_observed_publication": "2026-09-17",
+      "detail": "计算入口可读；9/17昇腾960/鲲鹏原始发布已存在研究库，不再增加重复事件。",
+      "query": "site:huawei.com 2026 9月 超节点",
+      "actually_verified_window": "当前产品入口和指定9月原文抽查；全年新闻归档未穷尽",
+      "full_requested_history_verified": false,
+      "local_research_records": 6,
+      "local_research_window": [
+        "2026-03-02",
+        "2026-09-19"
+      ],
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "当前产品入口和指定9月原文抽查；全年新闻归档未穷尽"
+    },
+    {
+      "source_id": "h3c",
+      "name": "新华三",
+      "category": "vendors",
+      "url": "https://www.h3c.com/cn/",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "readable_entry_and_sample",
+      "latest_observed_publication": "2026-09-24",
+      "detail": "官网可读，补9/23云栖论坛及9/16厦门平台案例；两次具体正文实读。",
+      "query": "site:h3c.com 2026 9月 图灵 Token；open d_202609/2917843、2929938",
+      "actually_verified_window": "当前入口+7月、9月定向检索；并非1—10月逐页全量",
+      "full_requested_history_verified": false,
+      "local_research_records": 5,
+      "local_research_window": [
+        "2026-05-15",
+        "2026-09-20"
+      ],
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "当前入口+7月、9月定向检索；并非1—10月逐页全量"
+    },
+    {
+      "source_id": "ieisystem",
+      "name": "浪潮信息",
+      "category": "vendors",
+      "url": "https://www.ieisystem.com/",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "entry_timeout_article_readable",
+      "latest_observed_publication": "2026-09-28",
+      "detail": "首页超时但搜索和独立新闻正文可读。核定AICC发布9/21；9/22、9/23与9/28三文归一发布。补7/7SD200性能更新。",
+      "query": "2026 SD200 Ultra domains ieisystem.com；2026 9月 AICC SD200 Ultra 21",
+      "actually_verified_window": "7/7及9/21—9/28目标新闻实读；全年目录未穷尽",
+      "full_requested_history_verified": false,
+      "local_research_records": 1,
+      "local_research_window": [
+        "2026-09-15",
+        "2026-09-15"
+      ],
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "7/7及9/21—9/28目标新闻实读；全年目录未穷尽"
+    },
+    {
+      "source_id": "lenovo",
+      "name": "联想企业购 · ISG",
+      "category": "vendors",
+      "url": "https://biz.lenovo.com.cn/isg/whitepaper.html",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "entry_timeout_article_readable",
+      "latest_observed_publication": "2026-08-20",
+      "detail": "白皮书入口失败，品牌官网和企业案例可检索；1/4华泰保险案例正文可读；6/24MWC品牌文仅搜索正文，未作全文候选。",
+      "query": "2026 联想 万全 domains brand.lenovo.com.cn,biz.lenovo.com.cn；2026 9月 词元车间 万全",
+      "actually_verified_window": "1/4案例正文；3—8月搜索命中，并非完整历史目录",
+      "full_requested_history_verified": false,
+      "local_research_records": 0,
+      "local_research_window": null,
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "1/4案例正文；3—8月搜索命中，并非完整历史目录"
+    },
+    {
+      "source_id": "wechat",
+      "name": "微信公众号原文",
+      "category": "wechat",
+      "url": "https://mp.weixin.qq.com/",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "manual_article_link_required",
+      "latest_observed_publication": null,
+      "detail": "mp.weixin.qq.com根入口不能用于历史归档检索。未给定文章分享链接；未读取账号历史或阅读量。",
+      "query": "open https://mp.weixin.qq.com/",
+      "actually_verified_window": "不适用：根入口不是文章库；不能据此判0新闻",
+      "full_requested_history_verified": false,
+      "local_research_records": 0,
+      "local_research_window": null,
+      "local_market_records": 2,
+      "local_market_window": [
+        "2026-06-10",
+        "2026-06-10"
+      ],
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "不适用：根入口不是文章库；不能据此判0新闻"
+    },
+    {
+      "source_id": "caict-wechat",
+      "name": "中国信通院官方微信矩阵",
+      "category": "wechat",
+      "url": "https://service.caict.ac.cn/wxq/",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "identity_entry_only",
+      "latest_observed_publication": null,
+      "detail": "官方微信矩阵可读，但仅院属部门/联盟二维码入口，无文章日期列表。可用于主体核实，不能当全年已采。",
+      "query": "open https://service.caict.ac.cn/wxq/",
+      "actually_verified_window": "不适用：账号主体入口而非历史全文",
+      "full_requested_history_verified": false,
+      "local_research_records": 0,
+      "local_research_window": null,
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "不适用：账号主体入口而非历史全文"
+    },
+    {
+      "source_id": "kunpeng",
+      "name": "鲲鹏社区 · 官方新闻",
+      "category": "vendors",
+      "url": "https://www.hikunpeng.com/zh/activities/news",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "readable_shell_missing_dates",
+      "latest_observed_publication": null,
+      "detail": "新闻入口可读但抽取无2026日期；既有市场面板有6条1/5—6/10目录，6月后缺口仍存在，不能声称补齐。",
+      "query": "site:hikunpeng.com 2026 9 超节点；open 官方新闻入口",
+      "actually_verified_window": "本轮仅入口；本地旧档2026-01-05—2026-06-10不等于本轮复核",
+      "full_requested_history_verified": false,
+      "local_research_records": 0,
+      "local_research_window": null,
+      "local_market_records": 4,
+      "local_market_window": [
+        "2026-01-05",
+        "2026-06-10"
+      ],
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "本轮仅入口；本地旧档2026-01-05—2026-06-10不等于本轮复核"
+    },
+    {
+      "source_id": "hygon",
+      "name": "海光官网",
+      "category": "vendors",
+      "url": "https://www.hygon.cn/",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "dynamic_shell_and_alternate_timeout",
+      "latest_observed_publication": null,
+      "detail": "主站空壳，/news仅站脚；光合组织首页超时，搜索未得到可靠的新原文。仍需官方公告或可读合作方补证，CPU与DCU分离。",
+      "query": "site:hygon.cn 2026 9月 海光；site:hieco.com.cn 2026；open hygon.cn、hieco.com.cn",
+      "actually_verified_window": "无新的全年目录可核验；本地光合1—3月旧档不代表全覆盖",
+      "full_requested_history_verified": false,
+      "local_research_records": 8,
+      "local_research_window": [
+        "2026-01-24",
+        "2026-03-27"
+      ],
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "无新的全年目录可核验；本地光合1—3月旧档不代表全覆盖"
+    },
+    {
+      "source_id": "metax",
+      "name": "沐曦股份 · 官方新闻",
+      "category": "vendors",
+      "url": "https://www.metax-tech.com/news.html",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "directory_timeout",
+      "latest_observed_publication": "2026-09-20",
+      "detail": "www与裸域新闻目录均超时；站内域名搜索主要命中用户论坛，不把用户故障帖当厂商新闻。既有77条官方新闻保留，11页历史声明本轮无法独立重做。",
+      "query": "site:metax-tech.com/news 2026 9；2026 新闻 domains metax-tech.com；open news.html",
+      "actually_verified_window": "本轮未取得目录；本地1/13—9/20记录仅为历史存量",
+      "full_requested_history_verified": false,
+      "local_research_records": 77,
+      "local_research_window": [
+        "2026-01-13",
+        "2026-09-20"
+      ],
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "本轮未取得目录；本地1/13—9/20记录仅为历史存量"
+    },
+    {
+      "source_id": "mthreads",
+      "name": "摩尔线程 · 官方新闻",
+      "category": "vendors",
+      "url": "https://www.mthreads.com/news",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "directory_readable_body_dynamic",
+      "latest_observed_publication": "2026-09-24",
+      "detail": "裸域主新闻目录可读，开发者目录列出1/9—9/24的55条2026条目；正文351、350、344只给标题日期，动态正文未取全，不能标全文。",
+      "query": "site:mthreads.com 2026 9月 10月；open mthreads.com/news、developer.mthreads.com/news；news/351、350、348、344、310",
+      "actually_verified_window": "主站首屏8/27—9/24（另5/18置顶）；开发者单页1/9—9/24，未验证每篇正文",
+      "full_requested_history_verified": false,
+      "local_research_records": 3,
+      "local_research_window": [
+        "2026-08-24",
+        "2026-09-09"
+      ],
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "主站首屏8/27—9/24（另5/18置顶）；开发者单页1/9—9/24，未验证每篇正文"
+    },
+    {
+      "source_id": "univista",
+      "name": "合见工软 · 官方新闻",
+      "category": "vendors",
+      "url": "https://www.univista-isg.com/site/news",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "historical_directory_pages_verified",
+      "latest_observed_publication": "2026-09-15",
+      "detail": "本轮读取第1—3页，2026条目23条（另重复置顶）；第3页已跨2025。补8/19东方算芯UCIe。9/10GOAT正文实际9/1发布，与已录IDAS事件合并，不能再记9/10独立发布。",
+      "query": "open /site/news、?Node_page=2、?Node_page=3、news_detail/550、576",
+      "actually_verified_window": "目录第1—3页：2026-02-04—2026-09-15；仅抽样正文实读",
+      "full_requested_history_verified": false,
+      "local_research_records": 10,
+      "local_research_window": [
+        "2026-02-06",
+        "2026-09-15"
+      ],
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "目录第1—3页：2026-02-04—2026-09-15；仅抽样正文实读"
+    },
+    {
+      "source_id": "idcquan",
+      "name": "中国IDC圈 · 建设月报与新闻",
+      "category": "wechat",
+      "url": "https://cloud.idcquan.com/",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "directory_readable_selected_body_failed",
+      "latest_observed_publication": "2026-10-09",
+      "detail": "云栏目可读至10/9，含9/29—10/9目录。点击算电协同、100+Token工厂、海南二期三篇失败，未增加全文事件。月报项目总数不当项目明细。",
+      "query": "open cloud.idcquan.com；click 当前算电协同、Token工厂、海南二期链接",
+      "actually_verified_window": "本轮当前目录9/29—10/9；1—9月月报未穷尽",
+      "full_requested_history_verified": false,
+      "local_research_records": 0,
+      "local_research_window": null,
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "本轮当前目录9/29—10/9；1—9月月报未穷尽"
+    },
+    {
+      "source_id": "d1net",
+      "name": "企业网 D1Net",
+      "category": "wechat",
+      "url": "https://www.d1net.com/datacenter/",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "directory_readable",
+      "latest_observed_publication": "2026-09-23",
+      "detail": "数据中心栏目可读，当前列表跨2025/12—2026/9。多篇海外评论与厂商营销；不把评论指标作为采购或新增容量。站点读取器robots能力未核定。",
+      "query": "open https://www.d1net.com/datacenter/",
+      "actually_verified_window": "当前列表2026-02-25—2026-09-23；未遍历加载更多",
+      "full_requested_history_verified": false,
+      "local_research_records": 0,
+      "local_research_window": null,
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "当前列表2026-02-25—2026-09-23；未遍历加载更多"
+    },
+    {
+      "source_id": "newrank",
+      "name": "新榜",
+      "category": "wechat",
+      "url": "https://www.newrank.cn/",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "license_not_enabled",
+      "latest_observed_publication": null,
+      "detail": "首页读取失败；面板原有license模式，无已授权API。未登录、开通、抓取阅读量或私人账号数据。",
+      "query": "open https://www.newrank.cn/；license mode核对",
+      "actually_verified_window": "不适用：需合法授权或用户合法导出；非零新闻",
+      "full_requested_history_verified": false,
+      "local_research_records": 0,
+      "local_research_window": null,
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": true,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "不适用：需合法授权或用户合法导出；非零新闻"
+    },
+    {
+      "source_id": "gsdata",
+      "name": "清博智能",
+      "category": "wechat",
+      "url": "https://www.gsdata.cn/",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "license_not_enabled",
+      "latest_observed_publication": null,
+      "detail": "首页返回空文本；面板license模式，无已授权API。没有估算精确阅读量。",
+      "query": "open https://www.gsdata.cn/；license mode核对",
+      "actually_verified_window": "不适用：需合法授权或合法导出；非零新闻",
+      "full_requested_history_verified": false,
+      "local_research_records": 0,
+      "local_research_window": null,
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": true,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "不适用：需合法授权或合法导出；非零新闻"
+    },
+    {
+      "source_id": "odcc",
+      "name": "开放数据中心委员会 ODCC",
+      "category": "industry",
+      "url": "https://www.odcc.org.cn/index.html",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "readable_directory_and_articles",
+      "latest_observed_publication": "2026-09-30",
+      "detail": "首页及4篇9月报告正文可读。重点识别9/30回顾实际9/2、9/29实际9/4、9/21开幕报道实际9/2。会员规范不越权下载。",
+      "query": "open odcc.org.cn/index.html；click 44、45、49、48",
+      "actually_verified_window": "当前首页9/21—9/30+指定4篇；全年工作组目录未穷尽",
+      "full_requested_history_verified": false,
+      "local_research_records": 2,
+      "local_research_window": [
+        "2026-04-03",
+        "2026-04-16"
+      ],
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "当前首页9/21—9/30+指定4篇；全年工作组目录未穷尽"
+    },
+    {
+      "source_id": "caict",
+      "name": "中国信息通信研究院",
+      "category": "industry",
+      "url": "https://www.caict.ac.cn/",
+      "checked": true,
+      "checked_on": "2026-10-09",
+      "requested_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "status": "entry_blocked_search_pdf_partial",
+      "latest_observed_publication": null,
+      "detail": "首页失败，报告目录HTTP412；4月智能算力报告可被搜索索引，但PDF直接打开超时。期刊算电论文可搜索，不能称9月产业目录全量已采。",
+      "query": "site:caict.ac.cn 2026 9月 算力；2026 智能算力 domains caict.ac.cn；open /kxyj/qwfb/ztbg/及报告PDF",
+      "actually_verified_window": "本轮无完整归档；4月报告及7月期刊检索线索",
+      "full_requested_history_verified": false,
+      "local_research_records": 0,
+      "local_research_window": null,
+      "local_market_records": 0,
+      "local_market_window": null,
+      "fixed_media_denominator": false,
+      "license_required": false,
+      "checked_at": "2026-10-09",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "本轮无完整归档；4月报告及7月期刊检索线索"
+    },
+    {
+      "source_id": "ccgp",
+      "category": "procurement",
+      "name": "中国政府采购网",
+      "entry_url": "https://www.ccgp.gov.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "readable_entry_detail_mixed",
+      "result": "首页可读；南医GPU正式公告正文可读，北大指定详情403但官方搜索索引有正文。",
+      "queries": [
+        "site.ccgp.gov.cn 2026 \"10月\" \"服务器\" \"中标\"",
+        "\"SZDL2026001640\"",
+        "南方医科大学深圳医院 深圳市检验大数据产业链共享 2026 GPU 招标"
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 23,
+      "local_month_counts": {
+        "2026-04": 1,
+        "2026-05": 3,
+        "2026-06": 3,
+        "2026-07": 4,
+        "2026-08": 4,
+        "2026-09": 4,
+        "2026-03": 2,
+        "2026-01": 2
+      },
+      "months_without_local_rows": [
+        "2026-02",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "readable_entry_detail_mixed",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "intent",
+      "category": "procurement",
+      "name": "政府采购意向公开",
+      "entry_url": "https://cgyx.ccgp.gov.cn/cgyx/pub/projSearch",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "fetch_failed_502",
+      "result": "登记入口502；公开意向明细仍可被搜索索引读出。未进入验证码或提交查询表。",
+      "queries": [
+        "site.cgyx.ccgp.gov.cn 2026 9月 服务器 GPU"
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 0,
+      "local_month_counts": {},
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "fetch_failed_502",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "ggzy",
+      "category": "procurement",
+      "name": "全国公共资源交易平台",
+      "entry_url": "https://www.ggzy.gov.cn/deal/dealList.html?HEADER_DEAL_TYPE=02",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "dynamic_shell_captcha",
+      "result": "目录仅模板变量，含验证码输入，未得到查询结果；没有绕过验证码。",
+      "queries": [
+        "site.ggzy.gov.cn 2026 9月 智算 服务器"
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 2,
+      "local_month_counts": {
+        "2026-01": 1,
+        "2026-03": 1
+      },
+      "months_without_local_rows": [
+        "2026-02",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "dynamic_shell_captcha",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "ceb",
+      "category": "procurement",
+      "name": "中国招标投标公共服务平台",
+      "entry_url": "https://bulletin.cebpubservice.com/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "fetch_failed_405",
+      "result": "登记公共公告入口405；公开搜索有其他原始发布平台，未绕过。",
+      "queries": [
+        "site.bulletin.cebpubservice.com 2026 9月 算力 服务器"
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 0,
+      "local_month_counts": {},
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "fetch_failed_405",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "mobile",
+      "category": "operators",
+      "name": "中国移动采购与招标网",
+      "entry_url": "https://b2b.10086.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "dynamic_empty",
+      "result": "登记入口返回0行文本；定向公开搜索未取得本期原始详情，不能据此判无公告。",
+      "queries": [
+        "site.b2b.10086.cn 2026 \"9月\" \"算力\"",
+        "site.b2b.10086.cn \"2026\" \"服务器\" \"09\""
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 0,
+      "local_month_counts": {},
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "dynamic_empty",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "telecom",
+      "category": "operators",
+      "name": "中国电信阳光采购网",
+      "entry_url": "https://caigou.chinatelecom.com.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "dynamic_empty",
+      "result": "阳光采购入口0行文本；补查集团官网公开新闻，未获取受登录保护的采购文件。",
+      "queries": [
+        "site.caigou.chinatelecom.com.cn \"2026\" \"智算\""
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 0,
+      "local_month_counts": {},
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "dynamic_empty",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "unicom",
+      "category": "operators",
+      "name": "中国联通采购平台",
+      "entry_url": "https://unibapi.unicom.net.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "fetch_timeout",
+      "result": "登记入口超时；定向公开搜索未取得本期原始详情。",
+      "queries": [
+        "site.unibapi.unicom.net.cn \"2026\" \"服务器\""
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 0,
+      "local_month_counts": {},
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "fetch_timeout",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "tower",
+      "category": "operators",
+      "name": "中国铁塔电子采购平台",
+      "entry_url": "https://ebid.chinatowercom.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "readable_entry_and_detail",
+      "result": "首页到10月9日可读；已读取9月3份相关公告，其中福建失败公告缺录。",
+      "queries": [
+        "site.ebid.chinatowercom.cn \"2026\" \"算力\" \"9月\""
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 11,
+      "local_month_counts": {
+        "2026-08": 4,
+        "2026-09": 3,
+        "2026-07": 3,
+        "2026-04": 1
+      },
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-05",
+        "2026-06",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "readable_entry_and_detail",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "pbc",
+      "category": "buyers",
+      "name": "中国人民银行集中采购中心",
+      "entry_url": "https://jzcg.pbc.gov.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "readable_details_dynamic_list",
+      "result": "首页为动态公告空壳；官方目录搜索索引列到9月30日。8月11日招标和8月31日更正正文可读；9月候选仅官方目录核到标题日期。",
+      "queries": [
+        "site.jzcg.pbc.gov.cn \"成方\" \"2026\" \"09-30\"",
+        "site.jzcg.pbc.gov.cn \"银联\" \"2026\" \"09-29\""
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 45,
+      "local_month_counts": {
+        "2026-08": 7,
+        "2026-05": 9,
+        "2026-01": 1,
+        "2026-04": 3,
+        "2026-09": 7,
+        "2026-03": 6,
+        "2026-02": 3,
+        "2026-07": 3,
+        "2026-06": 6
+      },
+      "months_without_local_rows": [
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "readable_details_dynamic_list",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "nankai",
+      "category": "buyers",
+      "name": "南开大学招投标管理办公室",
+      "entry_url": "https://nkzbb.nankai.edu.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "readable_entry_and_detail",
+      "result": "首页到10月8日可读；9月大模型一体机和GPU租赁失败已在本地。补查5月UPS意向。",
+      "queries": [
+        "site.nkzbb.nankai.edu.cn \"2026\" \"服务器\""
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 4,
+      "local_month_counts": {
+        "2026-09": 2,
+        "2026-01": 2
+      },
+      "months_without_local_rows": [
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "readable_entry_and_detail",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "siat",
+      "category": "buyers",
+      "name": "中科院深圳先进院 · 采购公示",
+      "entry_url": "https://siat.cas.cn/jggl/tzgg/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "readable_entry",
+      "result": "通知栏目可读；检得2025年12月26日招标、2026年1月开标的跨年事件，不将开标时间当公告日期；合同附件覆盖仍未闭合。",
+      "queries": [
+        "site.siat.cas.cn 2026 服务器 采购"
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 2,
+      "local_month_counts": {
+        "2026-02": 1,
+        "2026-04": 1
+      },
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-03",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "readable_entry",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "ecust",
+      "category": "buyers",
+      "name": "华东理工大学 · 采购信息",
+      "entry_url": "https://czzx.ecust.edu.cn/ejdwcggg/index.chtml",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "entry_failed_detail_readable",
+      "result": "指定二级栏目本次读取失败；根首页、5月文科算力服务器原文和9月高性能服务器公告可读。",
+      "queries": [
+        "site.czzx.ecust.edu.cn \"2026\" \"服务器\"",
+        "site.czzx.ecust.edu.cn \"文科算力服务器\" \"结果\""
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 7,
+      "local_month_counts": {
+        "2026-07": 2,
+        "2026-06": 2,
+        "2026-05": 2,
+        "2026-09": 1
+      },
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-08",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "entry_failed_detail_readable",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "qianlima",
+      "category": "commercial",
+      "name": "千里马招标网",
+      "entry_url": "https://www.qianlima.com/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "license_not_connected_fetch_timeout",
+      "result": "首页超时；公开搜索索引仅用线索。未购买会员、未登录、未调用授权API。",
+      "queries": [
+        "\"成方金融科技有限公司/成方金融信息技术服务有限公司2026年服务器采购项目中标候选人公示\""
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 0,
+      "local_month_counts": {},
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "license_not_connected_fetch_timeout",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "bidcenter",
+      "category": "commercial",
+      "name": "采招网数据服务",
+      "entry_url": "https://shuju.bidcenter.com.cn/zhuanti/shuju/api.shtml",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "license_not_connected_marketing_readable",
+      "result": "API介绍页可读，清楚要求申请开通API；未有授权接入、未提交申请。",
+      "queries": [],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 0,
+      "local_month_counts": {},
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "license_not_connected_marketing_readable",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "cninfo",
+      "category": "disclosures",
+      "name": "巨潮资讯 · 上市公司公告",
+      "entry_url": "https://www.cninfo.com.cn/new/commonUrl/pageOfSearch?url=disclosure/list/search",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "dynamic_shell_public_pdf_possible",
+      "result": "公告检索页仅模板变量；检得7月14日莲花问询回复PDF线索，未逐表重做合同口径；9月公告原件缺口保留。",
+      "queries": [
+        "site.cninfo.com.cn \"莲花\" \"2026\" \"9月\" \"算力服务合同\"",
+        "site.static.cninfo.com.cn/finalpage/2026-09 \"莲花控股\" \"算力服务合同\""
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 17,
+      "local_month_counts": {
+        "2026-01": 4,
+        "2026-05": 1,
+        "2026-06": 2,
+        "2026-07": 3,
+        "2026-08": 6,
+        "2026-09": 1
+      },
+      "months_without_local_rows": [
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "dynamic_shell_public_pdf_possible",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "guangzhou",
+      "category": "projects",
+      "name": "广州市发展和改革委员会",
+      "entry_url": "https://fgw.gz.gov.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "readable_entry",
+      "result": "首页到10月8日可读；9月数据中心/节能定向搜索仅检到培训和通用目录，未据此证明项目为空。",
+      "queries": [
+        "site.fgw.gz.gov.cn 2026 \"9月\" \"数据中心\"",
+        "site.fgw.gz.gov.cn 2026 数据中心 节能 9月"
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 2,
+      "local_month_counts": {
+        "2026-09": 2
+      },
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "readable_entry",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "beijing-et",
+      "category": "projects",
+      "name": "北京经济技术开发区",
+      "entry_url": "https://kfqgw.beijing.gov.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "readable_entry_and_search",
+      "result": "首页可读；检得9月量电融合中心揭牌、8月算力券通知，未把政策/揭牌作为设备订单。",
+      "queries": [
+        "site.kfqgw.beijing.gov.cn 2026 \"9月\" \"算力\""
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 4,
+      "local_month_counts": {
+        "2026-08": 2,
+        "2026-09": 1,
+        "2026-06": 1
+      },
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-07",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "readable_entry_and_search",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "beijing",
+      "category": "projects",
+      "name": "北京市人民政府",
+      "entry_url": "https://www.beijing.gov.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "readable_entry_and_search",
+      "result": "首页可读；定向检得9月21日节点试运行与政策报道，需区分官方转载来源。",
+      "queries": [
+        "site.kfqgw.beijing.gov.cn 2026 \"9月\" \"算力\"（检索返回北京市政府相关稿）"
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 3,
+      "local_month_counts": {
+        "2026-06": 1,
+        "2026-09": 1,
+        "2026-08": 1
+      },
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-07",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "readable_entry_and_search",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "shanghai-fin",
+      "category": "projects",
+      "name": "上海市金融管理局",
+      "entry_url": "https://jrj.sh.gov.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "readable_entry_and_detail",
+      "result": "首页到10月9日可读；10月8日词元贷报道为1000万元授信，不是算力采购。",
+      "queries": [],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 2,
+      "local_month_counts": {
+        "2026-07": 2
+      },
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "readable_entry_and_detail",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "changzhou",
+      "category": "projects",
+      "name": "常州国家高新区",
+      "entry_url": "https://www.cznd.gov.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "fetch_error_search_inconclusive",
+      "result": "登记入口本次内部读取错误；公开域名定向检索无有效项目结果，覆盖未闭合。",
+      "queries": [
+        "site.cznd.gov.cn 2026 智算 数据中心 9月",
+        "site.cznd.gov.cn 算力 2026"
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 2,
+      "local_month_counts": {
+        "2026-07": 2
+      },
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "fetch_error_search_inconclusive",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "shaoguan",
+      "category": "projects",
+      "name": "韶关市人民政府",
+      "entry_url": "https://www.sg.gov.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "entry_error_detail_readable",
+      "result": "首页本次错误，但9月21开工、23日平台上线、30日批复等具体官方正文均可读。",
+      "queries": [
+        "site.sg.gov.cn 2026 \"9月\" \"数据中心\""
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 4,
+      "local_month_counts": {
+        "2026-07": 2,
+        "2026-10": 1,
+        "2026-09": 1
+      },
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-08"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "entry_error_detail_readable",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "changning",
+      "category": "projects",
+      "name": "上海市长宁区",
+      "entry_url": "https://www.shcn.gov.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "readable_entry_search_no_new_project",
+      "result": "首页可读，定向搜索得到政策/大赛通知，未得到本期具体新增采购；不能称无活动。",
+      "queries": [
+        "site.shcn.gov.cn \"2026\" \"9月\" \"算力\"",
+        "site.shcn.gov.cn 算力 2026"
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 1,
+      "local_month_counts": {
+        "2026-06": 1
+      },
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "readable_entry_search_no_new_project",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "wuxi",
+      "category": "projects",
+      "name": "无锡市人民政府",
+      "entry_url": "https://www.wuxi.gov.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "readable_entry_and_search",
+      "result": "首页可读；检得年度工作重点、5月智算存量披露，尚非逐条项目目录全量枚举。",
+      "queries": [
+        "site.wuxi.gov.cn \"2026\" \"9月\" \"智算\"",
+        "site.wuxi.gov.cn 数据中心 2026"
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 3,
+      "local_month_counts": {
+        "2026-05": 1,
+        "2026-06": 1,
+        "2026-08": 1
+      },
+      "months_without_local_rows": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-07",
+        "2026-09",
+        "2026-10"
+      ],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "readable_entry_and_search",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "citc",
+      "category": "procurement",
+      "name": "中招国际招标",
+      "entry_url": "https://www.cntcitc.com.cn/",
+      "checked_at": "2026-10-09T08:45:00Z",
+      "method": "web.open registered URL + bounded public web search; no login / CAPTCHA bypass",
+      "access_status": "readable_entry_and_detail",
+      "result": "首页可读；1月7日中信证券大模型CANN候选原文可读，代理机构不可当买方。",
+      "queries": [
+        "site.cntcitc.com.cn 2026 服务器 9月",
+        "site.cntcitc.com.cn \"2026\" \"算力\""
+      ],
+      "historical_window": "2026-01-01/2026-10-09",
+      "coverage_status": "bounded_audit_not_exhaustive",
+      "local_event_count": 146,
+      "local_month_counts": {
+        "2026-03": 23,
+        "2026-06": 20,
+        "2026-07": 12,
+        "2026-08": 25,
+        "2026-04": 14,
+        "2026-09": 39,
+        "2026-05": 7,
+        "2026-02": 3,
+        "2026-10": 1,
+        "2026-01": 2
+      },
+      "months_without_local_rows": [],
+      "coverage_limit": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial.",
+      "checked_at_precision": "timestamp",
+      "checked": true,
+      "status": "readable_entry_and_detail",
+      "history_complete": false,
+      "verified_window": null,
+      "verified_window_limits": "Local row count is not source completeness; Jan–Oct full directory enumeration was not performed. Current-day cutoff partial."
+    },
+    {
+      "source_id": "doit",
+      "checked_at": "2026-10-09T08:46:13.314923+00:00",
+      "checked_on": "2026-10-09",
+      "audit_ready": true,
+      "status": "complete_to_snapshot",
+      "history_complete": true,
+      "enumeration_complete": true,
+      "date_validation_complete": true,
+      "date_validation_basis": "publisher_list_dates; original articles additionally checked only where recorded",
+      "verified_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-08"
+      },
+      "snapshot_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "partial_current_day": true,
+      "complete_calendar_days_through": "2026-10-08",
+      "verified_months": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "months": [
+        {
+          "month": "2026-01",
+          "date_start": "2026-01-01",
+          "date_end": "2026-01-31",
+          "complete": true,
+          "evidence": "archive_start_boundary"
+        },
+        {
+          "month": "2026-02",
+          "date_start": "2026-02-01",
+          "date_end": "2026-02-28",
+          "complete": true,
+          "evidence": "archive_start_boundary"
+        },
+        {
+          "month": "2026-03",
+          "date_start": "2026-03-01",
+          "date_end": "2026-03-31",
+          "complete": true,
+          "evidence": "archive_start_boundary"
+        },
+        {
+          "month": "2026-04",
+          "date_start": "2026-04-01",
+          "date_end": "2026-04-30",
+          "complete": true,
+          "evidence": "archive_start_boundary"
+        },
+        {
+          "month": "2026-05",
+          "date_start": "2026-05-01",
+          "date_end": "2026-05-31",
+          "complete": true,
+          "evidence": "archive_start_boundary"
+        },
+        {
+          "month": "2026-06",
+          "date_start": "2026-06-01",
+          "date_end": "2026-06-30",
+          "complete": true,
+          "evidence": "archive_start_boundary"
+        },
+        {
+          "month": "2026-07",
+          "date_start": "2026-07-01",
+          "date_end": "2026-07-31",
+          "complete": true,
+          "evidence": "archive_start_boundary"
+        },
+        {
+          "month": "2026-08",
+          "date_start": "2026-08-01",
+          "date_end": "2026-08-31",
+          "complete": true,
+          "evidence": "archive_start_boundary"
+        },
+        {
+          "month": "2026-09",
+          "date_start": "2026-09-01",
+          "date_end": "2026-09-30",
+          "complete": true,
+          "evidence": "archive_start_boundary"
+        },
+        {
+          "month": "2026-10",
+          "date_start": "2026-10-01",
+          "date_end": "2026-10-09",
+          "complete": true,
+          "evidence": "archive_start_boundary"
+        }
+      ],
+      "fresh_records": 2909,
+      "fresh_article_records": 2877,
+      "new_records": 26,
+      "new_article_records": 25,
+      "new_historical_article_records": 17,
+      "unseen_existing_records": 0,
+      "evidence_urls": [
+        "https://www.doit.com.cn/api/cms/content/list?sid=809835088719941&pp=pc&ps=100&pn=1"
+      ],
+      "limitations": [
+        "Full coverage refers only to the currently accessible named public archive, not deleted or unlisted articles.",
+        "October 9 is a partial-current-day snapshot; completed calendar days end October 8."
+      ],
+      "verified_window_limits": "Full coverage refers only to the currently accessible named public archive, not deleted or unlisted articles. October 9 is a partial-current-day snapshot; completed calendar days end October 8.",
+      "days_checked": null,
+      "days_success": null,
+      "archive_source_id": "doit_all",
+      "checked_at_precision": "timestamp",
+      "checked": true
+    },
+    {
+      "source_id": "c114",
+      "checked_at": "2026-10-09T08:57:12.304530+00:00",
+      "checked_on": "2026-10-09",
+      "audit_ready": true,
+      "status": "complete_to_snapshot",
+      "history_complete": true,
+      "enumeration_complete": true,
+      "date_validation_complete": true,
+      "date_validation_basis": "publisher_list_dates; original articles additionally checked only where recorded",
+      "verified_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-08"
+      },
+      "snapshot_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "partial_current_day": true,
+      "complete_calendar_days_through": "2026-10-08",
+      "verified_months": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "months": [
+        {
+          "month": "2026-01",
+          "date_start": "2026-01-01",
+          "date_end": "2026-01-31",
+          "complete": true,
+          "days_requested": 31,
+          "days_success": 31,
+          "evidence": "requested_daily_archives"
+        },
+        {
+          "month": "2026-02",
+          "date_start": "2026-02-01",
+          "date_end": "2026-02-28",
+          "complete": true,
+          "days_requested": 28,
+          "days_success": 28,
+          "evidence": "requested_daily_archives"
+        },
+        {
+          "month": "2026-03",
+          "date_start": "2026-03-01",
+          "date_end": "2026-03-31",
+          "complete": true,
+          "days_requested": 31,
+          "days_success": 31,
+          "evidence": "requested_daily_archives"
+        },
+        {
+          "month": "2026-04",
+          "date_start": "2026-04-01",
+          "date_end": "2026-04-30",
+          "complete": true,
+          "days_requested": 30,
+          "days_success": 30,
+          "evidence": "requested_daily_archives"
+        },
+        {
+          "month": "2026-05",
+          "date_start": "2026-05-01",
+          "date_end": "2026-05-31",
+          "complete": true,
+          "days_requested": 31,
+          "days_success": 31,
+          "evidence": "requested_daily_archives"
+        },
+        {
+          "month": "2026-06",
+          "date_start": "2026-06-01",
+          "date_end": "2026-06-30",
+          "complete": true,
+          "days_requested": 30,
+          "days_success": 30,
+          "evidence": "requested_daily_archives"
+        },
+        {
+          "month": "2026-07",
+          "date_start": "2026-07-01",
+          "date_end": "2026-07-31",
+          "complete": true,
+          "days_requested": 31,
+          "days_success": 31,
+          "evidence": "requested_daily_archives"
+        },
+        {
+          "month": "2026-08",
+          "date_start": "2026-08-01",
+          "date_end": "2026-08-31",
+          "complete": true,
+          "days_requested": 31,
+          "days_success": 31,
+          "evidence": "requested_daily_archives"
+        },
+        {
+          "month": "2026-09",
+          "date_start": "2026-09-01",
+          "date_end": "2026-09-30",
+          "complete": true,
+          "days_requested": 30,
+          "days_success": 30,
+          "evidence": "requested_daily_archives"
+        },
+        {
+          "month": "2026-10",
+          "date_start": "2026-10-01",
+          "date_end": "2026-10-09",
+          "complete": true,
+          "days_requested": 9,
+          "days_success": 9,
+          "evidence": "requested_daily_archives"
+        }
+      ],
+      "fresh_records": 6810,
+      "fresh_article_records": 6810,
+      "new_records": 34,
+      "new_article_records": 34,
+      "new_historical_article_records": 13,
+      "unseen_existing_records": 0,
+      "evidence_urls": [
+        "https://www.c114.com.cn/news/roll.asp?y=2026&m=1&d=1",
+        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=8",
+        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=9"
+      ],
+      "limitations": [
+        "Full coverage refers only to the currently accessible named public archive, not deleted or unlisted articles.",
+        "October 9 is a partial-current-day snapshot; completed calendar days end October 8."
+      ],
+      "verified_window_limits": "Full coverage refers only to the currently accessible named public archive, not deleted or unlisted articles. October 9 is a partial-current-day snapshot; completed calendar days end October 8.",
+      "days_checked": 282,
+      "days_success": 282,
+      "archive_source_id": "c114_roll_all",
+      "checked_at_precision": "timestamp",
+      "checked": true
+    },
+    {
+      "source_id": "zhiding",
+      "checked_at": "2026-10-09T08:56:39.985134+00:00",
+      "checked_on": "2026-10-09",
+      "audit_ready": true,
+      "status": "checked_partial",
+      "history_complete": false,
+      "enumeration_complete": false,
+      "date_validation_complete": false,
+      "date_validation_basis": "publisher_list_dates; original articles additionally checked only where recorded",
+      "verified_window": {
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "snapshot_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "partial_current_day": true,
+      "complete_calendar_days_through": null,
+      "verified_months": [
+        "2026-07",
+        "2026-08",
+        "2026-09"
+      ],
+      "months": [
+        {
+          "month": "2026-01",
+          "date_start": "2026-01-01",
+          "date_end": "2026-01-31",
+          "complete": false,
+          "enumeration_complete": false,
+          "date_validation_complete": true,
+          "evidence": "month_start_not_reached_before_execution_interruption",
+          "invalid_date_records": [],
+          "empty_archive_gaps": [],
+          "error": "Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-02",
+          "date_start": "2026-02-01",
+          "date_end": "2026-02-28",
+          "complete": false,
+          "enumeration_complete": false,
+          "date_validation_complete": true,
+          "evidence": "month_start_not_reached_before_execution_interruption",
+          "invalid_date_records": [],
+          "empty_archive_gaps": [],
+          "error": "Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-03",
+          "date_start": "2026-03-01",
+          "date_end": "2026-03-31",
+          "complete": false,
+          "enumeration_complete": false,
+          "date_validation_complete": true,
+          "evidence": "month_start_not_reached_before_execution_interruption",
+          "invalid_date_records": [],
+          "empty_archive_gaps": [],
+          "error": "Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-04",
+          "date_start": "2026-04-01",
+          "date_end": "2026-04-30",
+          "complete": false,
+          "enumeration_complete": false,
+          "date_validation_complete": true,
+          "evidence": "month_start_not_reached_before_execution_interruption",
+          "invalid_date_records": [],
+          "empty_archive_gaps": [],
+          "error": "Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-05",
+          "date_start": "2026-05-01",
+          "date_end": "2026-05-31",
+          "complete": false,
+          "enumeration_complete": false,
+          "date_validation_complete": true,
+          "evidence": "month_start_not_reached_before_execution_interruption",
+          "invalid_date_records": [],
+          "empty_archive_gaps": [],
+          "error": "Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-06",
+          "date_start": "2026-06-01",
+          "date_end": "2026-06-30",
+          "complete": false,
+          "enumeration_complete": false,
+          "date_validation_complete": true,
+          "evidence": "month_start_not_reached_before_execution_interruption",
+          "invalid_date_records": [],
+          "empty_archive_gaps": [],
+          "error": "Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-07",
+          "date_start": "2026-07-01",
+          "date_end": "2026-07-31",
+          "complete": true,
+          "enumeration_complete": true,
+          "date_validation_complete": true,
+          "evidence": "fresh_consecutive_pages_crossed_month_start",
+          "invalid_date_records": [],
+          "empty_archive_gaps": []
+        },
+        {
+          "month": "2026-08",
+          "date_start": "2026-08-01",
+          "date_end": "2026-08-31",
+          "complete": true,
+          "enumeration_complete": true,
+          "date_validation_complete": true,
+          "evidence": "fresh_consecutive_pages_crossed_month_start",
+          "invalid_date_records": [],
+          "empty_archive_gaps": []
+        },
+        {
+          "month": "2026-09",
+          "date_start": "2026-09-01",
+          "date_end": "2026-09-30",
+          "complete": true,
+          "enumeration_complete": true,
+          "date_validation_complete": true,
+          "evidence": "fresh_consecutive_pages_crossed_month_start",
+          "invalid_date_records": [],
+          "empty_archive_gaps": []
+        },
+        {
+          "month": "2026-10",
+          "date_start": "2026-10-01",
+          "date_end": "2026-10-09",
+          "complete": false,
+          "enumeration_complete": true,
+          "date_validation_complete": false,
+          "evidence": "fresh_consecutive_pages_crossed_month_start",
+          "invalid_date_records": [
+            "zhiding-3201163"
+          ],
+          "empty_archive_gaps": [],
+          "error": "Invalid publisher date"
+        }
+      ],
+      "fresh_records": 7344,
+      "fresh_article_records": 7344,
+      "new_records": 161,
+      "new_article_records": 161,
+      "new_historical_article_records": 27,
+      "unseen_existing_records": 3600,
+      "evidence_urls": [
+        "https://www.zhiding.cn/list-35-1-1-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-159-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-368-0-0.htm"
+      ],
+      "limitations": [
+        "Full coverage refers only to the currently accessible named public archive, not deleted or unlisted articles.",
+        "October 9 is a partial-current-day snapshot; completed calendar days end October 8.",
+        "Enumeration stopped at page 368, June 8, after execution approval review was cancelled; January through June not re-proven.",
+        "October contains quarantined impossible publisher date 2026-10-00; do not infer October completeness.",
+        "Transient empty page 159 recovered normally; no remaining gap attributed to page 159."
+      ],
+      "verified_window_limits": "Full coverage refers only to the currently accessible named public archive, not deleted or unlisted articles. October 9 is a partial-current-day snapshot; completed calendar days end October 8. Enumeration stopped at page 368, June 8, after execution approval review was cancelled; January through June not re-proven. October contains quarantined impossible publisher date 2026-10-00; do not infer October completeness. Transient empty page 159 recovered normally; no remaining gap attributed to page 159.",
+      "days_checked": null,
+      "days_success": null,
+      "archive_source_id": "zhiding_latest",
+      "checked_at_precision": "timestamp",
+      "checked": true
+    },
+    {
+      "source_id": "cbinews",
+      "checked_at": "2026-10-09T08:55:19.985638+00:00",
+      "checked_on": "2026-10-09",
+      "audit_ready": true,
+      "status": "checked_partial",
+      "history_complete": false,
+      "enumeration_complete": false,
+      "date_validation_complete": true,
+      "date_validation_basis": "publisher_list_dates; original articles additionally checked only where recorded",
+      "verified_window": null,
+      "snapshot_window": {
+        "start": "2026-01-01",
+        "end": "2026-10-09"
+      },
+      "partial_current_day": true,
+      "complete_calendar_days_through": null,
+      "verified_months": [],
+      "months": [
+        {
+          "month": "2026-01",
+          "date_start": "2026-01-01",
+          "date_end": "2026-01-31",
+          "complete": false,
+          "categories_requested": 12,
+          "categories_success": 11,
+          "evidence": "all_navigation_categories",
+          "error": "50: RuntimeError: Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-02",
+          "date_start": "2026-02-01",
+          "date_end": "2026-02-28",
+          "complete": false,
+          "categories_requested": 12,
+          "categories_success": 11,
+          "evidence": "all_navigation_categories",
+          "error": "50: RuntimeError: Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-03",
+          "date_start": "2026-03-01",
+          "date_end": "2026-03-31",
+          "complete": false,
+          "categories_requested": 12,
+          "categories_success": 11,
+          "evidence": "all_navigation_categories",
+          "error": "50: RuntimeError: Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-04",
+          "date_start": "2026-04-01",
+          "date_end": "2026-04-30",
+          "complete": false,
+          "categories_requested": 12,
+          "categories_success": 11,
+          "evidence": "all_navigation_categories",
+          "error": "50: RuntimeError: Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-05",
+          "date_start": "2026-05-01",
+          "date_end": "2026-05-31",
+          "complete": false,
+          "categories_requested": 12,
+          "categories_success": 11,
+          "evidence": "all_navigation_categories",
+          "error": "50: RuntimeError: Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-06",
+          "date_start": "2026-06-01",
+          "date_end": "2026-06-30",
+          "complete": false,
+          "categories_requested": 12,
+          "categories_success": 11,
+          "evidence": "all_navigation_categories",
+          "error": "50: RuntimeError: Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-07",
+          "date_start": "2026-07-01",
+          "date_end": "2026-07-31",
+          "complete": false,
+          "categories_requested": 12,
+          "categories_success": 11,
+          "evidence": "all_navigation_categories",
+          "error": "50: RuntimeError: Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-08",
+          "date_start": "2026-08-01",
+          "date_end": "2026-08-31",
+          "complete": false,
+          "categories_requested": 12,
+          "categories_success": 11,
+          "evidence": "all_navigation_categories",
+          "error": "50: RuntimeError: Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-09",
+          "date_start": "2026-09-01",
+          "date_end": "2026-09-30",
+          "complete": false,
+          "categories_requested": 12,
+          "categories_success": 11,
+          "evidence": "all_navigation_categories",
+          "error": "50: RuntimeError: Execution interrupted: automatic approval review was cancelled; no further network request made"
+        },
+        {
+          "month": "2026-10",
+          "date_start": "2026-10-01",
+          "date_end": "2026-10-09",
+          "complete": false,
+          "categories_requested": 12,
+          "categories_success": 11,
+          "evidence": "all_navigation_categories",
+          "error": "50: RuntimeError: Execution interrupted: automatic approval review was cancelled; no further network request made"
+        }
+      ],
+      "fresh_records": 2390,
+      "fresh_article_records": 2390,
+      "new_records": 26,
+      "new_article_records": 26,
+      "new_historical_article_records": 20,
+      "unseen_existing_records": 123,
+      "evidence_urls": [
+        "https://api.cbinews.com/api/cate_list",
+        "https://www.cbinews.com/desktop"
+      ],
+      "limitations": [
+        "Full coverage refers only to the currently accessible named public archive, not deleted or unlisted articles.",
+        "October 9 is a partial-current-day snapshot; completed calendar days end October 8.",
+        "Eleven navigation sections reached pre-2026 boundary; desktop stopped at page 78, January 22.",
+        "Desktop page 6 has non-descending publication dates (September 16 to 22), so partial-month proof cannot assume strict descending date order; no month promoted to complete.",
+        "Execution approval review was cancelled; no denied endpoint was retried or bypassed."
+      ],
+      "verified_window_limits": "Full coverage refers only to the currently accessible named public archive, not deleted or unlisted articles. October 9 is a partial-current-day snapshot; completed calendar days end October 8. Eleven navigation sections reached pre-2026 boundary; desktop stopped at page 78, January 22. Desktop page 6 has non-descending publication dates (September 16 to 22), so partial-month proof cannot assume strict descending date order; no month promoted to complete. Execution approval review was cancelled; no denied endpoint was retried or bypassed.",
+      "days_checked": null,
+      "days_success": null,
+      "archive_source_id": "cbinews_all_news",
+      "checked_at_precision": "timestamp",
+      "checked": true
+    }
+  ],
+  "exclusion_dispositions": [
+    {
+      "title": "服务器、交换机、WAF等专用设备中标",
+      "url": "https://m.yfbzb.com/winbid/detail/20261003_636167633.html",
+      "published_date": "2026-10-03",
+      "event_date": "2026-09-20",
+      "event_date_precision": "day",
+      "within_research_window": true,
+      "outcome": "pending_verification",
+      "record_ids": [],
+      "reason": "转载项目号和原文标识被遮挡，金额文本存在缺位；保留9月候选等待原始结果，不推算金额。",
+      "original_reason": "转载收录日是10月3日，公告正文落款9月20日，不计十月新增。",
+      "event_date_basis": "original_candidate_date_not_independent_verification"
+    },
+    {
+      "title": "北京大学深圳研究生院算力租赁招标",
+      "url": "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202610/t20261001_27437043.htm",
+      "published_date": "2026-10-01",
+      "event_date": "2026-09-30",
+      "event_date_precision": "day",
+      "within_research_window": true,
+      "outcome": "backfilled",
+      "record_ids": [
+        "audit-project-pku-rental"
+      ],
+      "reason": "10月1日官方发布日期可核；9月30日仅待核地方首发线索，event_date留空，不认定十月新发生采购。",
+      "original_reason": "中央政府采购网10月1日转载、获取文件自9月30日；地方公告线索首发9月30日。不得当十月新招标。项目SZDL2026001640，330万元预算。",
+      "event_date_basis": "original_candidate_date_not_independent_verification",
+      "date_correction": "10月1日官方发布日期可核；9月30日仅待核地方首发线索，event_date留空，不认定十月新发生采购。",
+      "pending_original_date_verification": true
+    },
+    {
+      "title": "南方医科大学深圳医院GPU服务器采购",
+      "url": "https://bbda.com/wordlist/1004149_0.html",
+      "published_date": "2026-10-01",
+      "event_date": "2026-09-30",
+      "event_date_precision": "day",
+      "within_research_window": true,
+      "outcome": "backfilled",
+      "record_ids": [
+        "audit-project-smuszh-gpu"
+      ],
+      "reason": "10月1日官方发布日期可核；9月30日仅待核地方首发线索，event_date留空，不认定十月新发生采购。",
+      "original_reason": "项目SZCG2026001229地方首发线索为9月30日16:48:05，10月1日为转载。300万元预算不搬入十月。",
+      "event_date_basis": "original_candidate_date_not_independent_verification",
+      "date_correction": "10月1日官方发布日期可核；9月30日仅待核地方首发线索，event_date留空，不认定十月新发生采购。",
+      "pending_original_date_verification": true
+    },
+    {
+      "title": "青浦云湖昇腾950液冷超节点落户",
+      "url": "https://www.shanghai.gov.cn/nw4411/20261001/bebfc6af5c4046f78b84b42e618cccc0.html",
+      "published_date": "2026-10-01",
+      "event_date": "2026-09-29",
+      "event_date_precision": "day",
+      "within_research_window": true,
+      "outcome": "backfilled",
+      "record_ids": [
+        "audit-project-qingpu-950"
+      ],
+      "reason": "已回填全年研究台账；记录自身保留证据等级与事件日期不确定性，不按十月窗口删除。",
+      "original_reason": "上海政府全文第一段明确9月29日发生，10月1日报道不改归属。",
+      "event_date_basis": "original_candidate_date_not_independent_verification"
+    },
+    {
+      "title": "中国移动新一代人工智能超节点集采技术解析",
+      "url": "https://hwcomputing.csdn.net/6ac30ac005257b085714bf76.html",
+      "published_date": "2026-10-05",
+      "event_date": "2026-09",
+      "event_date_precision": "unresolved",
+      "within_research_window": null,
+      "outcome": "pending_verification",
+      "record_ids": [],
+      "reason": "现有页面为技术解读且仅称9月底；需要采购原公告、项目编号和确切节点，不能将报道日视为招标日。",
+      "original_reason": "作者称9月底招标；10月5日是技术解读，非新采购节点。",
+      "event_date_basis": "original_candidate_date_not_independent_verification"
+    },
+    {
+      "title": "浙能数科海光服务器候选",
+      "url": "https://www.qianlima.com/gjxx/82984_30_4",
+      "published_date": "2026-09-30",
+      "event_date": "2026-09-30",
+      "event_date_precision": "day",
+      "within_research_window": true,
+      "outcome": "pending_verification",
+      "record_ids": [],
+      "reason": "目前为商业关键词汇总页，尚未关联买方或代理机构候选原文；9月30日与公示期分别保留待核。",
+      "original_reason": "10月1日至8日是公示期间，不是公告日期。",
+      "event_date_basis": "original_candidate_date_not_independent_verification"
+    },
+    {
+      "title": "中国移动武清云智算园A2数据中心招标计划",
+      "url": "https://ggzyfw.beijing.gov.cn/xtggtjzbjh/20260903/5697031.html",
+      "published_date": "2026-09-03",
+      "event_date": "2026-09-03",
+      "event_date_precision": "day",
+      "within_research_window": true,
+      "outcome": "backfilled",
+      "record_ids": [
+        "audit-project-wuqing-a2"
+      ],
+      "reason": "已回填全年研究台账；记录自身保留证据等级与事件日期不确定性，不按十月窗口删除。",
+      "original_reason": "10月4日是计划招标文件日期，实际10月新招标未核。",
+      "event_date_basis": "original_candidate_date_not_independent_verification"
+    },
+    {
+      "title": "浪潮201070791液冷二次侧管路",
+      "url": "https://www.bid360.com.cn/zbgs/U-vzBpouv.html",
+      "published_date": "2026-10-06",
+      "event_date": null,
+      "event_date_precision": "unknown",
+      "within_research_window": null,
+      "outcome": "pending_verification",
+      "record_ids": [],
+      "reason": "转载买方为泰国实体，但供货地点及大陆关联未取得原件确认；保留范围待核，不仅凭公司名排除。",
+      "original_reason": "9月采购转载识别买方为Inspur(Thailand)Co.,Ltd；大陆需求范围不明、原结果主体金额遮挡，未作为中国大陆项目纳入。",
+      "event_date_basis": "original_candidate_date_not_independent_verification"
+    },
+    {
+      "title": "江苏银行国产虚拟化服务器采购",
+      "url": "https://chinazbcgou.com.cn/index/index/article/id/10666474",
+      "published_date": "2026-10-07",
+      "event_date": "2026-09-10",
+      "event_date_precision": "day",
+      "within_research_window": true,
+      "outcome": "pending_verification",
+      "record_ids": [],
+      "reason": "原发布日期线索为9月10日，需核采购原始正文及项目编号，区分页面更新时间与采购发生时间。",
+      "original_reason": "10月7日为更新时间，页面明确原发布日期9月10日。",
+      "event_date_basis": "original_candidate_date_not_independent_verification"
+    },
+    {
+      "title": "美的、海悟新加坡DCWA方案展示",
+      "url": "https://www.haiwu.com/news/dynamic/2155.html",
+      "published_date": "2026-10-01",
+      "event_date": "2026-09-29/2026-09-30",
+      "event_date_precision": "unresolved",
+      "within_research_window": null,
+      "outcome": "pending_verification",
+      "record_ids": [],
+      "reason": "新加坡展示不属于大陆采购，但可能属于中国厂商技术供给；保留供给栏目适配与展会日期核验队列。",
+      "original_reason": "海外展示与产品供给信号，不是中国大陆十月采购、投产项目。",
+      "event_date_basis": "original_candidate_date_not_independent_verification"
+    },
+    {
+      "title": "清华高性能计算服务器清采比选20261319号",
+      "url": "https://sbgysfw.sysc.tsinghua.edu.cn/#/publish/1A0F9F70F1222CB77370171EE44F6986",
+      "published_date": "2026-10-02",
+      "event_date": "2026-10-02",
+      "event_date_precision": "day",
+      "within_research_window": true,
+      "outcome": "out_of_scope",
+      "record_ids": [],
+      "reason": "原始设备清单明确为两台Dell Precision塔式工作站，排除于严格服务器和数据中心设备研究范围。",
+      "scope_basis": "equipment_scope",
+      "original_reason": "原文已取回，设备明确为2台Dell Precision T7820/T7920塔式工作站，预算17.2万元；虽标题叫服务器，本轮严格服务器/数据中心范围不纳入。",
+      "event_date_basis": "original_candidate_date_not_independent_verification"
+    }
+  ]
+}
