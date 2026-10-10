@@ -1,7 +1,7 @@
 import {readMarket} from './market-fixture.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {presentPanelMatrix} from '../lib/panel-presentation.js';
+import {presentPanelMatrix,panelSampleLabel} from '../lib/panel-presentation.js';
 import {panelMatrix,panelColors,panelCsv} from '../lib/panel.js';
 const data=readMarket(),source=data.sources.find(s=>s.id==='media_all');
 const raw=panelMatrix(data,source,'attention','month','all',{aidc:'AIDC'}),snapshot=JSON.stringify(raw),shown=presentPanelMatrix(raw,'news'),oct=shown[0].points.at(-1);
@@ -14,3 +14,7 @@ const absent=[{points:[{N:0,value:null,sample_value:null,status:'覆盖不完整
 const unreviewed=[{points:[{N:20,value:null,sample_value:null,status:'行为复核未完成'}]}];assert.equal(presentPanelMatrix(unreviewed,'news')[0].points[0].value,null);
 const zero=[{points:[{N:20,value:null,sample_value:0,sample_upper:0,sample_unknown:0,complete:false}]}];assert.equal(presentPanelMatrix(zero,'news')[0].points[0].value,0);
 console.log('PASS: observed news normal colors, zero versus missing, raw quality/export preserved, procurement unchanged');
+
+assert.equal(panelSampleLabel({n:0,N:0}),"暂无样本");
+assert.equal(panelSampleLabel({n:0,N:12}),"0/12");
+assert.equal(panelSampleLabel({n:2,N:12}),"2/12");

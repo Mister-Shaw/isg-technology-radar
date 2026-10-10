@@ -34,12 +34,12 @@
       "url": "https://www.zhiding.cn/gaofei/2026/1007/3201163.shtml"
     }
   ],
-  "latest_status": "10月10日手动审计：检查73个信源，新增1255篇媒体新闻、104条研究记录；10月709篇。部分历史归档仍未查全。定时计划保持暂停。",
+  "latest_status": "10月11日手动审计：检查1个信源，新增4篇媒体新闻、0条研究记录；10月709篇。部分历史归档仍未查全。定时计划保持暂停。",
   "paused_by_user": true,
   "pause_confirmed_at": "2026-10-07T10:08:55Z",
   "latest_requested_cutoff": "2026-10-10",
   "latest_update_status": "partial",
-  "last_attempt_at": "2026-10-10T15:14:14Z",
+  "last_attempt_at": "2026-10-10T17:13:24Z",
   "latest_window": {
     "start": "2026-10-01",
     "end": "2026-10-07",

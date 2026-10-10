@@ -1,6 +1,6 @@
 'use client';
 import {useState,useEffect,useRef,memo} from 'react';
-import {LayoutDashboard,Files,Search,BookOpen,Plus,ArrowUpRight,Download,ShieldCheck,ChevronRight,X,RefreshCw,CheckCircle2} from 'lucide-react';
+import {LayoutDashboard,Files,Search,BookOpen,ScrollText,Plus,ArrowUpRight,Download,ShieldCheck,ChevronRight,X,RefreshCw,CheckCircle2} from 'lucide-react';
 import {TECHS,STAGES,SOURCES,REVIEWS,SCOPES,safeUrl} from '@/lib/model';
 import TaxonomyGuide from './taxonomy-guide';
 import taxonomy from '@/data/taxonomy.json';
@@ -16,7 +16,7 @@ import {BOARDS,classifyBoards} from '@/lib/keyword-boards';
 import {KEYWORD_LABELS} from './keyword-board-controls';
 import {AMOUNTS} from '@/lib/monthly';
 const CachedMarketPanel=memo(MarketPanel);
-const NAV=[['panel','市场风向',LayoutDashboard],['monthly','月度事件',Files],['reports','研报分析',BookOpen],['collect','来源与采集',Search],['log','日志',BookOpen]];
+const NAV=[['panel','市场风向',LayoutDashboard],['monthly','月度事件',Files],['reports','研报分析',BookOpen],['collect','来源与采集',Search],['log','日志',ScrollText]];
 const money=e=>e.amount_range_cny?`${(e.amount_range_cny.min/1e4).toLocaleString('zh-CN')}—${(e.amount_range_cny.max/1e4).toLocaleString('zh-CN')} 万元人民币（预计）`:e.value_cny==null?'金额未披露':`${(Number(e.value_cny)/1e4).toLocaleString('zh-CN')} 万元人民币`;
 async function api(body){const r=await fetch('/api/radar',body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{cache:'no-store'});const d=await r.json();if(!r.ok)throw Error(d.error||'暂时无法连接，请稍后再试');return d;}
 function download(name,content,type){const u=URL.createObjectURL(new Blob([content],{type})),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}

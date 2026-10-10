@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "id": "source-audit-20261010-2256",
-  "checked_at": "2026-10-10T15:14:14Z",
-  "audit_checked_at": "2026-10-10T15:14:14Z",
-  "audit_checked_on": "2026-10-10",
+  "id": "source-audit-20261011-0100",
+  "checked_at": "2026-10-10T17:13:24Z",
+  "audit_checked_at": "2026-10-10T17:13:24Z",
+  "audit_checked_on": "2026-10-11",
   "window": {
     "start": "2026-01-01",
     "end": "2026-10-10"
@@ -16,23 +16,23 @@
     "start": "2026-01-01",
     "end": "2026-10-10"
   },
-  "media_added": 1255,
+  "media_added": 4,
   "media_source_count": 15,
-  "media_total": 25268,
+  "media_total": 25272,
   "latest_month": "2026-10",
   "latest_month_total": 709,
-  "research_added": 104,
+  "research_added": 0,
   "research_total": 1135,
   "restored_milestones": 0,
   "nonarticle_exclusions": 0,
   "date_corrections": 0,
   "title_corrections": 0,
   "registered_sources": 130,
-  "sources_rechecked_this_batch": 73,
+  "sources_rechecked_this_batch": 1,
   "sources_checked": 130,
   "full_coverage": false,
-  "coverage_statement": "第二轮来源直接并入原目录及原统计：130个登记来源；媒体仅纳入有明确栏目边界的全部已采文章，采购、建设、厂商及标准证据归研究台账。逐月未查全处保留缺失，来源调查记录数不等于独立来源数。",
-  "audit_url": "/source-audit-20261010-2256.json",
+  "coverage_statement": "三月补回4篇原文日期已核新闻；沿用cloud.idcquan.com与dc.idcquan.com栏目范围，不按技术关键词筛选。已核验4篇2026年3月原文，均位于dc.idcquan.com；尚未核验到cloud.idcquan.com三月原文。桌面分类归档漏列已证实存在的三月稿件，移动列表加载更多返回空，站内搜索以相关度排序且无日期筛选。已完成关键词2026的全部17页结果及8组广义搜索各前30页，共240页；这仍是有边界的发现与核验，不能宣称全月全量。 完整性未证实，仅为已采样本。",
+  "audit_url": "/source-audit-20261011-0100.json",
   "source_checks": [
     {
       "source_id": "thinkforce",
@@ -650,13 +650,19 @@
       "name": "中国IDC圈 · 建设月报与新闻",
       "url": "https://cloud.idcquan.com/",
       "checked": true,
-      "checked_at": "2026-10-10T08:42:27.007Z",
+      "checked_at": "2026-10-10T17:13:24Z",
       "checked_at_precision": "timestamp",
       "history_complete": false,
       "status": "readable_historical_sample",
-      "detail": "cloud目录第8页跨至2025，dc目录第1页跨至2025；cloud在8月到4月再到2025有显著间断，历史完整性未核实；无记录月份不作零新闻。",
+      "detail": "三月补回4篇原文日期已核新闻；沿用cloud.idcquan.com与dc.idcquan.com栏目范围，不按技术关键词筛选。已核验4篇2026年3月原文，均位于dc.idcquan.com；尚未核验到cloud.idcquan.com三月原文。桌面分类归档漏列已证实存在的三月稿件，移动列表加载更多返回空，站内搜索以相关度排序且无日期筛选。已完成关键词2026的全部17页结果及8组广义搜索各前30页，共240页；这仍是有边界的发现与核验，不能宣称全月全量。 完整性未证实，仅为已采样本。",
       "verified_window": null,
-      "verified_window_limits": "仅限已读取公开栏目和逐页日期样本；未证实全站完整历史。"
+      "verified_window_limits": "2026年3月公开cloud/dc栏目已采样本，非全月全量",
+      "evidence_urls": [
+        "https://dc.idcquan.com/ups/206481.shtml",
+        "https://dc.idcquan.com/jhcc/206537.shtml",
+        "https://dc.idcquan.com/ups/206555.shtml",
+        "https://dc.idcquan.com/jfjs/206631.shtml"
+      ]
     },
     {
       "source_id": "eet_china",
@@ -2687,6 +2693,12 @@
     }
   ],
   "audit_history": [
+    {
+      "id": "source-audit-20261010-2256",
+      "checked_on": "2026-10-10",
+      "checked_at": "2026-10-10T15:14:14Z",
+      "audit_url": "/source-audit-20261010-2256.json"
+    },
     {
       "id": "source-audit-20261010-1630",
       "checked_on": "2026-10-10",

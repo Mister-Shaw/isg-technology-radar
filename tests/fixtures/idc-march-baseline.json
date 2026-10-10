@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "baseline_site_commit": "2ce8902a26639509ad23012de850fd2b0bf2a434",
+  "canonicalization": "SHA-256 of JSON with recursively sorted object keys; array order retained",
+  "media_summary": {
+    "source_count": 15,
+    "total_documents": 25268
+  },
+  "expansion_assets": [
+    "/market-expansion.json",
+    "/market-expansion-2.json"
+  ],
+  "documents": {
+    "count": 25829,
+    "sha256": "f0d7bc67950c7876a90c69654fa79f9ed65274c9e134ed0b58a285470792d19f"
+  },
+  "research_fields": {
+    "analysis_update": "0e09fa69e5bc825bc5ff36ad9e140eb4e6c5db9d3469b20e404f79de564847cb",
+    "as_of": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54",
+    "audit": "80c39ae24b7ea91ae5d26997e4a231675d434ce3685a6c552d02fabed86b1be1",
+    "benchmarks": "58dedc06173ed087e87bd2a3aa6a917fb5a89dafa1fc1722bec555ede92aec48",
+    "category_notes": "2af056d3f3f1644c009f0b7274106098747a586370e6a8c0c4c3690df57a8fca",
+    "crosschecks": "511fec9e931c484de3ea9f19213208f660bcf9fe0f2e3a6e39cb2044ba3b9731",
+    "events": "ba529be9da120b52ec12a1df125ab6bb7333bea4da1cc373b96b62c534d8065b",
+    "expansion": "e6d6a359d8a94e334627574cf9958d339199922ddcd661a969cf75074e7b36dd",
+    "gaps": "715fa68936118175825e99191595dc723c9a7fd5fd8a4c6d154492e1fd5c3834",
+    "geography": "026bb8647068daff7d648329bf66f1d1abfacdcbffb7152c24e5a062954d182b",
+    "inclusion_policy": "a81455d846864d3b032c2b9a465cd2f275aaa50276899aa6462db923ce225320",
+    "insights": "2a5bb7d9bfc4a69b78984620455670bd139eaa5b9a94ad27a20f81b1e67b74b3",
+    "keyword_rescan": "67e3dc547791dbeb54f65eaf5d2e9b9a16792c50d33ecc1eaf9b3976829c4291",
+    "leads": "62a0741182bf2427ac5891a6327d0670ad501bc120c4cc246ca57b9303d004e0",
+    "manual_refresh": "4ad17c18ed0481f4cb7c25e82a5069d77793cc185a1d4b2c2ab0f2bd1b333d78",
+    "methodology": "c26c23cfc84a2b283429beeaba358f938672f1cb9be3356e8f574911ba66920e",
+    "monthly_notes": "ed78aad72f8853c7825f4da9210419ce12024c375a28562c5587301c937ccb0f",
+    "news_event_correction": "2a804e1d29c6b5a4d02e83dba62292e23b474c83b33d73d59f68c8516646e288",
+    "october_refresh": "325c315b70f939c16419aa4c959f506dd63e070d5d2b5e055175108da76cd82b",
+    "period_end": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54",
+    "period_start": "1c3409bffafb43e9e7176902b1e53dc4fb7264918709a0fd1b900372a20e2e28",
+    "previous_analysis": "3fa93d01a23415dbbdb2676cc1f7b926498f91839d83ba9a065eaf244685e8c5",
+    "queries": "f48b56507bfe989df3571b68dccb045afe4f541b32b2ada6715bfdb2c28c939d",
+    "recheck": "657ebc96f91ac47ac8ac8b27ef464b19e0a646c5eef29c0086f777d9fd44544c",
+    "rolling_update": "4f17284dd6e95a2c95419fcf0dad123252fd21ebe6429f78d5b37aacda702890",
+    "source_audit_backfill": "596612a3c67c9f5121abd7d5b3add05f108d0703c72f39083d7a865e7187ecfe",
+    "source_remediation": "dfbe1bb6ccf49b3f2343e49cf30bb584948429239ae45de6fb1d9f62a222a7d7",
+    "version": "09a4f317b28e077e2ce5467e26fd4afea280c6a5f55951b69018a5408bc6da48"
+  },
+  "unaffected_sources": {
+    "doit_all": "414eba840413002ef8eede6424705ab28f40028021e8f211b1a361e3b082adc1",
+    "c114_roll_all": "c45b1e03dc1b7c7d647ec0d634a27856f551c107c3f9096a2b4fcc9b6f24d2b7",
+    "zhiding_latest": "34615501d2856eb76aa4e6739eb389e3eee7227869992fc567985b01ebb89fe3",
+    "cbinews_all_news": "5f21f73e82b33ea9f14e2988a91d661df0928f57b31d5bf3a7fbddc6d3ff3d57",
+    "doit_china": "eba44fd494ec622f9361e608549632a240649972d8e55a092d2aae5d0a3693d4",
+    "kunpeng_official": "12cdfb1963d5eebc09aa6e5de75d64f09758fb2dafbfbda76baf325d3d15fbd7",
+    "ecust-secondary-unit-procurement": "fba37bf22b9d63f0f6a676bef5a108e9b4ceacb7e974c4eb10ac55ee834f539e",
+    "eet_china": "0f6f3090ba6ef3301cfcc94a9d5315127869c95083e326ca90fe8e4af90238de",
+    "trendforce": "922ed83150cddcfdb4c7ec956fc2570d1894945a03b188706c9e80ef9631ec6f",
+    "zhidx": "5ade33598faed7329263ba93d7277cc382cc0e5e899d5f9c4149cdf4ce1dbb1c",
+    "chinabyte": "dbcb6d60d8eb1917bdbd63983f5c12e72a8ded4e3ed544c2940cd918ca7b4e1f",
+    "dcd": "b63dab8ede8ea898839846354475c8a349fe7b05a8821761ce4a3907ae8e5d11",
+    "leiphone": "9639481ab8b33e660d27be0573d555f6ec196b32ab2e5eda856bfc5b50b08592",
+    "ithome": "0d648b7232e5b96a28e010ac8649b6cb57434e173d163eceaf1406f0f2e6090b",
+    "it168": "c8b0f501650d0ae9de08f0ba7b161157117330da26b838dbc35f233c829344cf",
+    "cena": "99ec97c420629109142c1dc29bc9a2349db6d245ed2fe59eeb44f382d7f749c6",
+    "cctime": "0bb05d4928502f3e487f9c639cd6b0e7f12a0b5d4ae3f35f39873d494409eed2"
+  },
+  "idc_non_march_coverage": {
+    "2026-01": "f75134907ad27ddf9465a71e79a38dc2ec165d5d0f7529e5d5f7b9df9ac8606d",
+    "2026-02": "e10961eec3ac33a24b3af1b32fd26b859a230c2bb94635d0bdd9d53f5dc38073",
+    "2026-04": "97e753c25d4e181bca0d8656df1256ae1ed603409e489769531a8568c40e5fea",
+    "2026-05": "0ecbe9ea671995f20cafe8d9dc71a148c0d64a1d62dc61f6ef0c80fd06a615a8",
+    "2026-06": "913f64e9fd346c742610fcbacf3e03122fdefc8ecf5ea1cafd5b4d08ee027755",
+    "2026-07": "9b8fa2f43486766e89587d365e4354e746fad6f5036564a0006aee1b94c4a940",
+    "2026-08": "9794a061410254426927f730a8671d2f7204e751d280bdf1d3f11b8e936aca7e",
+    "2026-09": "a90544e19170b2dfa245837776b14e8e1ed14068e5742aded91c8d61fc6e3356",
+    "2026-10": "13e8f4e0a0d128b573ab12c5eadf85d35c380047b2ed769194f5cdb3baf3da13"
+  }
+}
