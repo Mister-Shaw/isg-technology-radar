@@ -16,6 +16,14 @@ export const MEDIA=['doit_all','c114_roll_all','zhiding_latest','cbinews_all_new
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,''));
 const write=(p,v)=>{fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n');};
 const day=(d,n)=>new Date(Date.parse(d+'T00:00:00Z')+n*86400000).toISOString().slice(0,10);
+// An explicit unknown cutoff is evidence, not permission to infer a newer one.
+const retainedThrough=(coverage,fallback=null)=>{
+ if(!coverage||coverage.status==='missing')return null;
+ if(Object.hasOwn(coverage,'covered_through'))return coverage.covered_through??null;
+ if(Object.hasOwn(coverage,'window_end'))return coverage.window_end??null;
+ return fallback;
+};
+const excludedNews=row=>row.is_article===false||row.exclusion_reason==='publisher_non_news_entry';
 export function lastSunday(now=new Date()){
  const today=new Date(now.getTime()+8*3600000).toISOString().slice(0,10);
  return day(today,-(new Date(today+'T00:00:00Z').getUTCDay()||7));
@@ -82,6 +90,12 @@ export function mergeMedia(original,fresh){
   const old=byId.get(r.id);
   if(old&&['title','url','date'].every(k=>old[k]===r[k]))continue;
   const next={...old,...r,context_class:'other',application_reviewed:false,classification_basis:'title_only',eligible_categories:[],required_categories:[],unknown_categories:[]};
+  if(old&&excludedNews(old)){
+   // Collector metadata cannot overturn an explicit publisher audit or its provenance.
+   for(const field of ['is_article','exclusion_reason','source_audit','original_url']){
+    if(Object.hasOwn(old,field))next[field]=old[field];else delete next[field];
+   }
+  }
   next.observation_categories=observationCategories(next,'news');
   next.board_matches=compactBoardMatches(next,'news');next.keyword_rule_version=KEYWORD_RULE_VERSION;
   next.keyword_context_class='other';next.keyword_behavior_basis='新标题尚待采购与部署行为复核';
@@ -91,9 +105,11 @@ export function mergeMedia(original,fresh){
  const seen=new Map(),titleKey=r=>key(r.source_id,r.title.replace(/[^\p{L}\p{N}_]/gu,'').toLowerCase());
  const mediaRows=panel.documents.filter(d=>MEDIA.includes(d.source_id)).sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id));
  // Failed months retain their original denominator; use their canonical title until recovery.
- for(const r of mediaRows)if(checks.get(key(r.source_id,r.month))?.accepted===false&&!r.superseded&&!seen.has(titleKey(r)))seen.set(titleKey(r),r.id);
+ for(const r of mediaRows)if(checks.get(key(r.source_id,r.month))?.accepted===false&&!r.superseded&&!excludedNews(r)&&!seen.has(titleKey(r)))seen.set(titleKey(r),r.id);
  for(const r of mediaRows){
   if(checks.get(key(r.source_id,r.month))?.accepted===false)continue;
+  // A publisher audit may exclude navigation, events or images independently of duplicates.
+  if(excludedNews(r)){r.superseded=true;continue;}
   const k=titleKey(r);
   r.duplicate_of=seen.get(k)||null;r.superseded=!!r.duplicate_of;if(!seen.has(k))seen.set(k,r.id);
  }
@@ -103,8 +119,8 @@ export function mergeMedia(original,fresh){
   s.coverage=months.map(month=>{
    const check=checks.get(key(s.id,month)),old=s.coverage.find(c=>c.month===month);
    const rows=panel.documents.filter(d=>d.source_id===s.id&&d.month===month&&d.date>=start&&d.date<=end);
-   const priorThrough=rows.length?(old?.covered_through||(old?.status==='complete'?[oldEnd,monthEnd(month)].sort()[0]:null)):null;
-   const oldSuccess=rows.length?(old?.last_success_at||(old?.status==='complete'?(s.last_rechecked_at||original.collected_at):null)):null;
+   const priorThrough=rows.length?retainedThrough(old,old?.status==='complete'?[oldEnd,monthEnd(month)].sort()[0]:null):null;
+   const oldSuccess=rows.length?(old?.last_success_at||(priorThrough&&old?.status==='complete'?(s.last_rechecked_at||old.checked_at||original.collected_at):null)):null;
    const status=check.accepted?'complete':rows.length?'stale':'missing';
    const reviewStillValid=!rows.some(r=>r.application_reviewed===false);
    return {...old,month,status,keyword_application_reviewed:reviewStillValid&&old?.keyword_application_reviewed===true,application_reviewed:reviewStillValid&&(old?.application_reviewed??s.application_reviewed??false),total:rows.length,eligible:rows.filter(d=>!d.superseded).length,covered_through:check.accepted?[end,monthEnd(month)].sort()[0]:priorThrough,last_success_at:check.accepted?fresh.checked_at:oldSuccess,attempted_at:fresh.checked_at,attempted_through:[end,monthEnd(month)].sort()[0],reason:check.reason,note:check.accepted?`本月全量回查通过；全部新闻为分母，当前可访问归档已遍历。`:`${check.reason}；${status==='stale'?'保留旧数据':'本月暂无可用数据'}，不参与本轮可比趋势。`};
@@ -112,13 +128,24 @@ export function mergeMedia(original,fresh){
   s.last_rechecked_at=fresh.checked_at;s.recheck_window={start,end};
   s.limitation=`本轮全量尝试${start}至${end}；成功月份更新，失败月份保留旧资料并单独标记真实截止。全部新闻为分母；历史删除及异标题转载仍可能影响结果。`;
  }
+ // Mark retained snapshots before aggregating, without inventing coverage for missing months.
+ if(end>oldEnd)for(const s of panel.sources.filter(s=>!MEDIA.includes(s.id)&&!s.document_source_id&&!s.document_source_ids)){
+  for(const c of s.coverage||[])if(c.month>=oldEnd.slice(0,7)&&c.month<=end.slice(0,7)){
+   if(c.month===oldEnd.slice(0,7)&&day(oldEnd,1).slice(0,7)!==c.month)continue;
+   const through=retainedThrough(c,c.status==='complete'?[oldEnd,monthEnd(c.month)].sort()[0]:null);
+   if(c.status!=='missing')c.status='incomplete';
+   c.covered_through=through;c.note=through?`本次仅更新媒体；该来源尚未补采${day(through,1)}之后的数据。`:'本次仅更新媒体；该来源本月成功覆盖截止尚未确认，保留原有缺失或不完整状态。';
+  }
+ }
  // Mixed aggregates include retained source snapshots while the collector remains four-media only.
  for(const s of panel.sources.filter(s=>s.document_source_id||s.document_source_ids)){
   const ids=s.document_source_ids||[s.document_source_id];if(!ids.some(id=>MEDIA.includes(id)))continue;
   const mixed=ids.some(id=>!MEDIA.includes(id));
   s.coverage=months.map(month=>{
    const through=[end,monthEnd(month)].sort()[0],members=ids.map(id=>panel.sources.find(source=>source.id===id));
-   const covered=members.map(source=>source?.coverage?.find(c=>c.month===month)),complete=members.every(source=>coverageComplete(source,month,through));
+   const covered=members.map(source=>source?.coverage?.find(c=>c.month===month));
+   const cutoffs=covered.map(c=>retainedThrough(c,c?.status==='complete'?[oldEnd,monthEnd(month)].sort()[0]:null));
+   const complete=members.every(source=>coverageComplete(source,month,through))&&cutoffs.every(cutoff=>cutoff>=through);
    const prior=original.sources.find(source=>source.id===s.id)?.coverage?.find(c=>c.month===month);
    const previousFixed=original.documents.filter(row=>MEDIA.includes(row.source_id)&&ids.includes(row.source_id)&&row.month===month&&row.date>=start&&row.date<=oldEnd);
    const sum=key=>{
@@ -129,15 +156,9 @@ export function mergeMedia(original,fresh){
     }
     return covered.reduce((n,c)=>n+(Number.isFinite(c?.[key])?c[key]:0),0);
    };
-   return {month,status:complete?'complete':'incomplete',total:sum('total'),eligible:sum('eligible'),covered_through:covered.every(c=>c?.covered_through)?covered.map(c=>c.covered_through).sort()[0]:null,attempted_through:through,note:mixed?(complete?'全部媒体已采新闻合并，本月覆盖满足统计窗口。':'全部媒体已采样本合并；本次仅更新原有四媒体，其他来源沿用实际截止，缺失月份不代表零新闻，覆盖未全时暂停完整期比较。'):(complete?'固定来源全部新闻，本月可比较。':'固定来源中有月份未更新完整；保留四媒体口径，本月汇总比例暂停。')};
+   return {month,status:complete?'complete':'incomplete',total:sum('total'),eligible:sum('eligible'),covered_through:cutoffs.every(Boolean)?[...cutoffs].sort()[0]:null,attempted_through:through,note:mixed?(complete?'全部媒体已采新闻合并，本月覆盖满足统计窗口。':'全部媒体已采样本合并；本次仅更新原有四媒体，其他来源沿用实际截止，缺失月份不代表零新闻，覆盖未全时暂停完整期比较。'):(complete?'固定来源全部新闻，本月可比较。':'固定来源中有月份未更新完整；保留四媒体口径，本月汇总比例暂停。')};
   });
   s.last_rechecked_at=fresh.checked_at;s.recheck_window={start,end};
- }
- if(end>oldEnd)for(const s of panel.sources.filter(s=>!MEDIA.includes(s.id)&&!s.document_source_id&&!s.document_source_ids)){
-  for(const c of s.coverage||[])if(c.month>=oldEnd.slice(0,7)&&c.month<=end.slice(0,7)){
-   if(c.month===oldEnd.slice(0,7)&&day(oldEnd,1).slice(0,7)!==c.month)continue;
-   const through=c.covered_through||oldEnd;c.status='incomplete';c.covered_through=through;c.note=`本次仅更新媒体；该来源尚未补采${day(through,1)}之后的数据。`;
-  }
  }
  if(panel.media_summary?.method==='all_collected_media_sources'){
   const aggregate=panel.sources.find(source=>source.id==='media_all');

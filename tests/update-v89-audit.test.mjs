@@ -1,0 +1,48 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {MEDIA,mergeMedia} from '../scripts/update-data.mjs';
+
+const read=name=>JSON.parse(fs.readFileSync(new URL('../'+name,import.meta.url)));
+const original=read('public/market-panel.json');
+const before=structuredClone(original);
+assert.equal(original.media_summary.source_count,15);
+assert.equal(original.media_summary.total_documents,25268);
+assert.deepEqual(original.expansion_assets,['/market-expansion.json','/market-expansion-2.json']);
+// Replaying known public articles is an offline compatibility check, not a claim of a new scan.
+const documents=original.documents.filter(row=>MEDIA.includes(row.source_id)&&row.url&&row.title&&Array.isArray(row.categories)&&Array.isArray(row.tags));
+const fresh={cutoff:original.window.end,scanned_through:original.window.end,reread_start:original.window.start,checked_at:'2026-10-10T16:00:00Z',documents,sources:MEDIA.map(source_id=>({source_id,rows:documents.filter(row=>row.source_id===source_id).length,complete:true}))};
+const updated=mergeMedia(original,fresh).panel;
+assert.deepEqual(original,before,'The real snapshot remains untouched');
+assert.deepEqual(updated.expansion_assets,original.expansion_assets);
+assert.deepEqual(updated.media_summary.source_ids,original.media_summary.source_ids);
+assert.equal(updated.media_summary.total_documents,25268,'A no-new-news replay cannot resurrect audited non-news entries');
+assert.deepEqual(updated.media_summary.monthly.map(c=>[c.month,c.total_documents,c.active_documents]),original.media_summary.monthly.map(c=>[c.month,c.total_documents,c.active_documents]));
+const excluded=original.documents.filter(row=>MEDIA.includes(row.source_id)&&(row.is_article===false||row.exclusion_reason==='publisher_non_news_entry'));
+assert.equal(excluded.length,31,'The v89 baseline includes 31 explicitly excluded publisher entries');
+const updatedById=new Map(updated.documents.map(row=>[row.id,row]));
+for(const row of excluded){
+ const retained=updatedById.get(row.id);
+ assert.equal(retained.superseded,true,row.id);
+ assert.equal(retained.is_article,false,row.id);
+ assert.equal(retained.exclusion_reason,row.exclusion_reason,row.id);
+ assert.deepEqual(retained.source_audit,row.source_audit,row.id);
+}
+for(const id of original.media_summary.source_ids.filter(id=>!MEDIA.includes(id)))assert.deepEqual(updated.sources.find(source=>source.id===id),original.sources.find(source=>source.id===id),'Retained source audit metadata is unchanged');
+const parts=original.expansion_assets.map(asset=>read('public'+asset));
+const combined=[...updated.documents,...parts.flatMap(part=>part.documents)];
+assert.equal(combined.filter(row=>updated.media_summary.source_ids.includes(row.source_id)&&!row.superseded).length,25268,'Both expansion assets still contribute to the fifteen-source denominator');
+const repeated=mergeMedia(updated,fresh).panel;
+assert.deepEqual(repeated.documents,updated.documents,'A second replay is idempotent');
+assert.equal(repeated.media_summary.total_documents,25268);
+
+// The collector must not override a previously audited exclusion when metadata changes.
+const auditOnly={window:{start:'2026-10-01',end:'2026-10-10'},documents:[{id:'excluded',source_id:MEDIA[0],title:'Publisher event',date:'2026-10-02',month:'2026-10',categories:[],tags:[],is_article:false,exclusion_reason:'publisher_non_news_entry',superseded:true,source_audit:{batch:'verified-publisher-audit',reason:'Non-news event'},original_url:'https://example.org/original-event'}],sources:MEDIA.map(id=>({id,coverage:[{month:'2026-10',status:'complete',covered_through:'2026-10-10'}]}))};
+const returned={...auditOnly.documents[0],title:'Updated publisher event',url:'https://example.org/event',superseded:false};
+delete returned.is_article;delete returned.exclusion_reason;
+const auditFresh={cutoff:'2026-10-10',scanned_through:'2026-10-10',reread_start:'2026-10-01',checked_at:fresh.checked_at,documents:[returned],sources:MEDIA.map(source_id=>({source_id,rows:source_id===MEDIA[0]?1:0,complete:true}))};
+assert.equal(mergeMedia(auditOnly,auditFresh).panel.documents[0].superseded,true,'Metadata refresh does not undo explicit publisher-audit exclusions');
+const conflicted={...returned,is_article:true,exclusion_reason:null,source_audit:{batch:'unreviewed-collector'},original_url:'https://example.org/replacement'};
+const guarded=mergeMedia(auditOnly,{...auditFresh,documents:[conflicted]}).panel.documents[0];
+assert.equal(guarded.superseded,true,'Conflicting incoming flags cannot reactivate an audited exclusion');
+for(const field of ['is_article','exclusion_reason','source_audit','original_url'])assert.deepEqual(guarded[field],auditOnly.documents[0][field],`Preserve prior audit ${field}`);
+console.log('PASS: v89 no-new-news replay retains 25,268 active stories, 15 sources, both assets and all 31 audited exclusions');

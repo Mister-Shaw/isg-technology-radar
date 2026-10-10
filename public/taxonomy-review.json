@@ -231,13 +231,14 @@
     "start": "2026-01-01",
     "end": "2026-10-10"
   },
-  "news_documents": 24574,
-  "research_records": 1021,
+  "news_documents": 25829,
+  "research_records": 1135,
   "method": [
     "三看板分别为业务方向4类、核心部件9类、场景生态8类。",
     "全部固定媒体新闻为共同分母；新闻仅按标题，研究按标题和事实摘要。",
     "同一记录允许多标签，跨类和跨看板金额不相加。",
     "原始历史技术标签与用户笔记保留，新看板按当前关键词实时投影。"
   ],
-  "audit_url": "/source-audit-20261010-1630.json"
+  "audit_url": "/source-audit-20261010-1630.json",
+  "latest_source_audit_url": "/source-audit-20261010-2256.json"
 }

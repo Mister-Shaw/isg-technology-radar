@@ -5,8 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { sourcePanel } from '../data/sources.js';
 import { eventDisposition, normalizeSourceReceipt, validateSourceAudit } from '../lib/source-audit.js';
 // This command validates the immutable Oct 9 cohort; later registrations have their own audits.
-const expansionIds=new Set(['eet_china','trendforce','zhidx','shanghai_drc','gt_procurement','gds_ir','hkex','jiangsu_ggzy','zycg','zzcg']);
-const historicalSourceIds=sourcePanel.filter(s=>!expansionIds.has(s.id)).map(s=>s.id);
+const historicalSourceIds=["thinkforce","jaguarmicro","ccgp","intent","ggzy","ceb","mobile","telecom","unicom","tower","pbc","nankai","huawei","h3c","ieisystem","lenovo","wechat","caict-wechat","c114","doit","zhiding","cbinews","kunpeng","hygon","metax","mthreads","univista","idcquan","siat","ecust","d1net","newrank","gsdata","qianlima","bidcenter","cninfo","odcc","caict","guangzhou","beijing-et","beijing","shanghai-fin","changzhou","shaoguan","changning","wuxi","citc"];
 const auditUrl = new URL('../data/source-audit-20261009.json', import.meta.url);
 const read = async path => JSON.parse(await readFile(path, 'utf8'));
 const researchUrl = new URL('../data/research-2026.json', import.meta.url);

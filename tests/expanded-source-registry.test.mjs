@@ -13,8 +13,8 @@ const added={
  zycg:['procurement','manual',['www.zycg.gov.cn','zycg.gov.cn']],
  zzcg:['procurement','manual',['www.zzcg.gov.cn','zzcg.gov.cn']],
 };
-assert.equal(sourcePanel.length,57);
-assert.equal(new Set(sourcePanel.map(s=>s.id)).size,57);
+assert.equal(sourcePanel.length,130);
+assert.equal(new Set(sourcePanel.map(s=>s.id)).size,130);
 assert.equal(Object.keys(added).length,10);
 for(const [id,[category,mode,hosts]] of Object.entries(added)){
  const source=sourcePanel.find(s=>s.id===id);
@@ -32,4 +32,4 @@ for(const host of ['news.idcquan.com','www.idcquan.com','cloud.idcquan.com','dc.
 assert.equal(sourceForUrl('https://www.eet-china.com.evil.example/'),null);
 assert.equal(sourceForUrl('https://evil.example/?source=https://www.hkexnews.hk/'),null);
 assert.equal(sourceForUrl('not a URL'),null);
-console.log('PASS: 57 distinct sources, ten scoped additions, exact host attribution, conservative manual modes, and one expanded IDC publisher');
+console.log('PASS: 130 distinct sources, ten scoped additions, exact host attribution, conservative manual modes, and one expanded IDC publisher');

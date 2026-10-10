@@ -1,0 +1,116 @@
+{
+  "c114-1306635": [
+    {
+      "id": "audit-news-20261010-ali-jinshan-intent",
+      "title": "金山区与阿里云签署金山算力中心战略合作协议",
+      "stage": "intent",
+      "url": "https://www.shanghai.gov.cn/nw15343/20260310/f2971ad54e3b47c6a5d6dcd400ffc00d.html?siteId=1"
+    }
+  ],
+  "doit-809849041158213": [
+    {
+      "id": "audit-news-20261010-ali-jinshan-intent",
+      "title": "金山区与阿里云签署金山算力中心战略合作协议",
+      "stage": "intent",
+      "url": "https://www.shanghai.gov.cn/nw15343/20260310/f2971ad54e3b47c6a5d6dcd400ffc00d.html?siteId=1"
+    }
+  ],
+  "c114-1313976": [
+    {
+      "id": "audit-news-20261010-qinghai-compute-tender",
+      "title": "联通青海4608PFLOPS算力服务项目招标（媒体待核）",
+      "stage": "tender",
+      "url": "https://www.c114.com.cn/news/119/a1313976.html"
+    }
+  ],
+  "c114-1315183": [
+    {
+      "id": "audit-news-20261010-qinghai-compute-candidate",
+      "title": "联通青海4608PFLOPS算力服务项目候选公示（媒体待核）",
+      "stage": "candidate",
+      "url": "https://www.c114.com.cn/news/119/a1315183.html"
+    }
+  ],
+  "c114-1303838": [
+    {
+      "id": "audit-news-20261010-cm-inference-lot1-candidate",
+      "title": "中国移动441台AI推理服务器补采包1候选公示（媒体待核）",
+      "stage": "candidate",
+      "url": "https://www.c114.com.cn/news/118/a1303838.html"
+    }
+  ],
+  "c114-1304569": [
+    {
+      "id": "audit-news-20261010-cm-inference-lot2-candidate",
+      "title": "中国移动441台AI推理服务器补采包2候选公示（媒体待核）",
+      "stage": "candidate",
+      "url": "https://www.c114.com.cn/news/118/a1304569.html"
+    }
+  ],
+  "c114-1316625": [
+    {
+      "id": "audit-news-20261010-cm-component-renewal-candidate",
+      "title": "中国移动2026至2028年部件焕新服务器候选公示（媒体待核）",
+      "stage": "candidate",
+      "url": "https://www.c114.com.cn/news/118/a1316625.html"
+    }
+  ],
+  "c114-1318610": [
+    {
+      "id": "audit-news-20261010-ct-guangdong-south-candidate",
+      "title": "中国电信广东国产化万卡智算池南方基地候选公示（媒体待核）",
+      "stage": "candidate",
+      "url": "https://www.c114.com.cn/news/117/a1318610.html"
+    }
+  ],
+  "expanded-idcquan_expanded-4d74da238febc111": [
+    {
+      "id": "audit-news-20261010-cm-hainan-phase2-repeat",
+      "title": "中国移动海南数据中心二期机电配套扩容交付（媒体待核）",
+      "stage": "repeat",
+      "url": "https://cloud.idcquan.com/yzx/208258.shtml"
+    }
+  ],
+  "doit-853811073376325": [
+    {
+      "id": "audit-news-20261010-kunlun-lot1-award",
+      "title": "青海海东昆仑领奕智算中心一期包1成交（媒体待核）",
+      "stage": "award",
+      "url": "https://www.doit.com.cn/ai/853811073376325.html"
+    },
+    {
+      "id": "audit-news-20261010-kunlun-lot2-failure",
+      "title": "青海海东昆仑领奕智算中心一期包2采购失败（媒体待核）",
+      "stage": "failure",
+      "url": "https://www.doit.com.cn/ai/853811073376325.html"
+    }
+  ],
+  "expanded-eet_china-712172927b958693": [
+    {
+      "id": "audit-news-20261010-kunlun-lot1-award",
+      "title": "青海海东昆仑领奕智算中心一期包1成交（媒体待核）",
+      "stage": "award",
+      "url": "https://www.doit.com.cn/ai/853811073376325.html"
+    }
+  ],
+  "doit-844263652171845": [
+    {
+      "id": "rescan-27f9fcc9aa0b",
+      "title": "北京软通华方AI算力共享智造工厂落成",
+      "stage": "production",
+      "url": "https://www.beijing.gov.cn/fuwu/lqfw/gggs/202609/t20260901_4845371.html"
+    }
+  ],
+  "leiphone-9429ef2713597d9f": [
+    {
+      "id": "compute-020",
+      "title": "曙光8000十万卡科学智能系统部署并接入超算互联网",
+      "url": "https://www.sugon.com/cut?id=2927&nav_id=48",
+      "stage": "production",
+      "event_date": "2026-07-10",
+      "published_date": "2026-07-10",
+      "relationship": "later_coverage",
+      "link_basis": "已于2026-10-10逐一读取媒体与厂商公开原文，按明确系统身份及时间叙述关联：雷峰网2026-07-21报道（https://m.leiphone.com/category/chips/iWlm9n5NckNHsVW5.html）开头将曙光8000（登峰）的光合大会落成与一周后的WAIC展示区分，另报上线首周负载；中科曙光2026-07-10原文（https://www.sugon.com/cut?id=2927&nav_id=48）明确该系统于7月10日落成并接入国家超算互联网。系统名称、十万卡规模、光合大会及超算互联网接入事实一致，支持将本篇关联为compute-020的后续展示及运行报道，而非独立新增部署；媒体记录继续按7月21日计入新闻分母，原部署事件仍为7月10日。两篇亦另提与北京科学智能研究院合作的第二套系统，仅涉及研制建设，不把第二套系统等同本已部署系统，也不据此新增7月21日投产事件。"
+    }
+  ]
+}

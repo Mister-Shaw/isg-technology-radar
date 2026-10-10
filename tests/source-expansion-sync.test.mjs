@@ -14,14 +14,13 @@ const assets=(base.expansion_assets||[]).map(path=>{
 const panel={...base,documents:[...base.documents,...assets.flatMap(a=>a.documents||[])]};
 const research=read('data/research-2026.json'), reports=read('data/report-monitor.json');
 const originalIds=['doit_all','c114_roll_all','zhiding_latest','cbinews_all_news'];
-const expandedIds=['eet_china','trendforce','zhidx','idcquan_expanded'];
+const priorExpandedIds=['eet_china','trendforce','zhidx','idcquan_expanded'];const expandedIds=panel.sources.filter(s=>s.kind==='news'&&s.group==='media'&&!s.document_source_id&&!originalIds.includes(s.id)).map(s=>s.id);
 const original=panel.sources.find(s=>s.id==='media_all');
 assert.equal(original.name,'全部媒体来源');
 assert(!panel.sources.some(s=>s.id==='media_expanded'),'Separate expansion aggregate is removed');
 assert.deepEqual(original.document_source_ids,[...originalIds,...expandedIds]);
 for(const id of expandedIds)assert(panel.sources.some(s=>s.id===id));
-assert.equal(panel.media_summary.total_documents,24014);
-assert.equal(original.coverage.at(-1).eligible,675);
+const priorMedia=panel.documents.filter(r=>[...originalIds,...priorExpandedIds].includes(r.source_id)&&!r.superseded);assert.equal(priorMedia.length,24014);assert.equal(priorMedia.filter(r=>r.month==='2026-10').length,675);assert.equal(panel.media_summary.total_documents,panel.documents.filter(r=>original.document_source_ids.includes(r.source_id)&&!r.superseded).length);
 const months=periods('month',panel.window).map(p=>p.id);
 assert.deepEqual(months,Array.from({length:10},(_,i)=>`2026-${String(i+1).padStart(2,'0')}`));
 assert.equal(BOARDS.length,3);assert.equal(KEYWORD_BOARD_ROWS.length,73);
@@ -102,4 +101,4 @@ for(const series of reports.series){
  }
  if(series.family!=='revision')for(const period of axisPeriods([series],'all'))assert.match(period,patterns[series.frequency]);
 }
-console.log(`PASS: ${newsCells} news cells and ${researchCells} research cells; all eight media combined, single-source records preserved; ${reports.series.length} report series/${observations} native-period observations.`);
+console.log(`PASS: ${newsCells} news cells and ${researchCells} research cells; all ${original.document_source_ids.length} media combined, single-source records preserved; ${reports.series.length} report series/${observations} native-period observations.`);
