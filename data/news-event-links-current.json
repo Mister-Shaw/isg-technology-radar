@@ -112,5 +112,30 @@
       "relationship": "later_coverage",
       "link_basis": "已于2026-10-10逐一读取媒体与厂商公开原文，按明确系统身份及时间叙述关联：雷峰网2026-07-21报道（https://m.leiphone.com/category/chips/iWlm9n5NckNHsVW5.html）开头将曙光8000（登峰）的光合大会落成与一周后的WAIC展示区分，另报上线首周负载；中科曙光2026-07-10原文（https://www.sugon.com/cut?id=2927&nav_id=48）明确该系统于7月10日落成并接入国家超算互联网。系统名称、十万卡规模、光合大会及超算互联网接入事实一致，支持将本篇关联为compute-020的后续展示及运行报道，而非独立新增部署；媒体记录继续按7月21日计入新闻分母，原部署事件仍为7月10日。两篇亦另提与北京科学智能研究院合作的第二套系统，仅涉及研制建设，不把第二套系统等同本已部署系统，也不据此新增7月21日投产事件。"
     }
+  ],
+  "doit-858062044311621": [
+    {
+      "id": "refresh-20261011-tansun-rtx-pro5500-plan",
+      "title": "天阳科技拟采购2万张RTX PRO 5500显卡（协议报道待核）",
+      "stage": "intent",
+      "url": "https://www.doit.com.cn/newsflash/858062044311621.html",
+      "relationship": "same_source_url"
+    }
+  ],
+  "expanded-zhidx-d758423c059c1f3f": [
+    {
+      "id": "refresh-20261011-kunlun-rebid-lot1",
+      "title": "昆仑领奕一期原包2拆分重招包1成交线索",
+      "stage": "award",
+      "url": "https://zhidx.com/p/598496.html",
+      "relationship": "same_source_url"
+    },
+    {
+      "id": "refresh-20261011-kunlun-rebid-lot2",
+      "title": "昆仑领奕一期原包2拆分重招包2成交线索",
+      "stage": "award",
+      "url": "https://zhidx.com/p/598496.html",
+      "relationship": "same_source_url"
+    }
   ]
 }

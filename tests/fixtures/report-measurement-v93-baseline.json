@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "baseline_site_commit": "af997aaac17f3d91a20d036ecca699cc991c5ada",
+  "canonicalization": "JSON with recursively sorted object keys; array order retained",
+  "preserved_fields": {
+    "series": "c68d32450f1c97fad800013fbe99cd61c1dc4ae771b89346ecd4192bedfea2ee",
+    "auxiliary": "a1041017e6dcee4e946c0783aff78930fd6877627934ad9765669e4664ab9a88",
+    "source_catalog": "0cd7ff1a56f4ab79b05f57c652417bdebbd28101e4079b60f193d326045144b2",
+    "source_aliases": "db9b4486ddab6ff64dcf98787dcb088bbd728e31be7c7c1a1138521c6bd792ed"
+  },
+  "preserved_conflicts": {
+    "CONFLICT_MAAS_2025_1944_VS_1941": "934a333a6514c96ed169537f4addc540e1442c782866fe4243c8d2de0a8929dd",
+    "RESTATEMENT_GENAI_2023H2": "8a7b5a447e82f4e89b6d99b7a080b8dd5e031e3e2a19e6f63b91072c84624a0e",
+    "RESTATEMENT_GENAI_2024H1": "e86a354cd2e7d4da4dd657ffd38f805e27cc92860f156db02c3dc2136f9e4714",
+    "MAAS_REVENUE_SCOPE_REFINEMENT": "afff1402b944df557fdd4c46d230b758be8b35685cf9ae9cee51fc92609dff96",
+    "CONFLICT_MAAS_2025_1944_VS_1994_SCOPE_VINTAGE": "fbdb2a2bec6462bb2218a539fb85705050d1e75c794780db48bea2b8da67805d"
+  }
+}

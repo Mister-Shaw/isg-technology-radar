@@ -1,3 +1,4 @@
+import {readHistoricalMarket} from './historical-fixture.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {BOARDS, KEYWORD_BOARD_ROWS, definitionsForRows, classifyBoards} from '../lib/keyword-boards.js';
@@ -20,7 +21,7 @@ assert.equal(original.name,'全部媒体来源');
 assert(!panel.sources.some(s=>s.id==='media_expanded'),'Separate expansion aggregate is removed');
 assert.deepEqual(original.document_source_ids,[...originalIds,...expandedIds]);
 for(const id of expandedIds)assert(panel.sources.some(s=>s.id===id));
-const priorMedia=panel.documents.filter(r=>[...originalIds,...priorExpandedIds].includes(r.source_id)&&!r.superseded);assert.equal(priorMedia.filter(r=>r.collection_batch!=='source-audit-20261011-0100').length,24014);assert.equal(priorMedia.filter(r=>r.month==='2026-10').length,675);assert.equal(panel.media_summary.total_documents,panel.documents.filter(r=>original.document_source_ids.includes(r.source_id)&&!r.superseded).length);
+const priorMedia=readHistoricalMarket().documents.filter(r=>[...originalIds,...priorExpandedIds].includes(r.source_id)&&!r.superseded);assert.equal(priorMedia.filter(r=>r.collection_batch!=='source-audit-20261011-0100').length,24014);assert.equal(priorMedia.filter(r=>r.month==='2026-10').length,675);assert.equal(panel.media_summary.total_documents,panel.documents.filter(r=>original.document_source_ids.includes(r.source_id)&&!r.superseded).length);
 const months=periods('month',panel.window).map(p=>p.id);
 assert.deepEqual(months,Array.from({length:10},(_,i)=>`2026-${String(i+1).padStart(2,'0')}`));
 assert.equal(BOARDS.length,3);assert.equal(KEYWORD_BOARD_ROWS.length,73);

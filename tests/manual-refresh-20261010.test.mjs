@@ -7,7 +7,7 @@ import {validateSourceAudit} from '../lib/source-audit.js';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
 const p=readMarket(),r=read('data/research-2026.json'),latest=read('data/latest-update.json'),a=read(`data/${latest.id}.json`);
 const media=p.sources.find(s=>s.id==='media_all').document_source_ids;
-assert.equal(p.window.end,'2026-10-10');assert.equal(r.period_end,'2026-10-10');
+assert(p.window.end>='2026-10-10');assert.equal(p.window.end,latest.window.end);assert.equal(r.period_end,latest.research_window.end);
 assert.equal(p.latest_refresh.batch_id,latest.id);assert.equal(r.latest_refresh.batch_id,latest.id);
 assert.equal(new Set(p.documents.map(x=>x.id)).size,p.documents.length);
 assert.equal(new Set([...r.events,...r.leads].map(x=>x.id)).size,r.events.length+r.leads.length);

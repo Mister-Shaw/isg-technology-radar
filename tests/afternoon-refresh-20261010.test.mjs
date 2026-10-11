@@ -1,6 +1,7 @@
+import {readHistorical} from './historical-fixture.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-const read=p=>JSON.parse(fs.readFileSync(p));
+const read=p=>readHistorical(p);
 const p=read('public/market-panel.json'),r=read('data/research-2026.json'),a=read('data/source-audit-20261010-1600.json'),latest=read('data/latest-update.json');
 const batch=a.id,media=p.documents.filter(x=>x.collection_batch===batch),records=[...r.events,...r.leads].filter(x=>x.collection_batch===batch);
 assert.equal(media.length,29);assert.equal(records.length,5);assert(records.every(x=>x.amount_cny===null&&x.amount_eligible===false));

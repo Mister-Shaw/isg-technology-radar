@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "as_of": "2026-10-10",
+  "as_of": "2026-10-11",
   "title": "研报市场监测",
   "groups": [
     {
@@ -10763,14 +10763,116 @@
   ],
   "scope_notice": "选定公开机构报告与官方摘要的数据底表，不是全市场研报普查。定时更新计划仍暂停。",
   "latest_refresh": {
-    "batch_id": "source-audit-20261010",
-    "checked_at": "2026-10-10T05:50:46.795Z",
-    "added_series_ids": [
-      "CN_AI_CLOUD_MARKET_SIZE_Y",
-      "CN_ENTERPRISE_MAAS_TOKEN_VOLUME_FY_202610"
-    ],
-    "added_observations": 2,
+    "batch_id": "source-audit-20261011-1423",
+    "checked_at": "2026-10-11T06:23:07.484708+00:00",
+    "added_series_ids": [],
+    "added_observations": 0,
     "existing_values_changed": 0,
-    "scope_note": "补入10月8日IDC新AI云与企业级MaaS口径，各为2025单点；不拼接旧序列。"
-  }
+    "scope_note": "as_of仅表示本轮核查日。全球服务器正文vendor revenue与表格Value分别记录；全球存储按正文spending、新闻稿vendor revenue与图表Value的原标签保留，未核实可比性前不合并比较。全球资料不用于新增中国观察点；所有既有publication_date、vintage与period保持。",
+    "source_checks": [
+      {
+        "source_id": "SRC-IDC-AICLOUD-20261008",
+        "checked_at": "2026-10-11T06:23:07.484708+00:00",
+        "status": "fulltext_rechecked_unchanged",
+        "detail": "10月8日中国AI云684亿元与企业级MaaS 1994万亿Token正文重读无变更；不覆盖旧口径，不增加重复观察。",
+        "evidence_urls": [
+          "https://www.idc.com/resource-center/blog/idc%E9%A6%96%E6%AC%A1%E5%AE%9A%E4%B9%89ai%E4%BA%91%E5%B8%82%E5%9C%BA%EF%BC%8C2025%E5%B9%B4%E4%B8%AD%E5%9B%BD%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1%E8%BE%BE684%E4%BA%BF%E5%85%83/"
+        ],
+        "checked_at_basis": "review_synthesis_timestamp"
+      },
+      {
+        "source_id": "IDC_SERVER_INSIGHTS_20261009",
+        "checked_at": "2026-10-11T06:23:07.484708+00:00",
+        "status": "distinct_measurement_fields",
+        "detail": "10月9日页面正文使用vendor revenue（685.1十亿美元），表格使用Value (US$M)（701592百万美元）。官方指南将两者分别列示，不直接判定同口径冲突；Value完整定义尚未核实。",
+        "evidence_urls": [
+          "https://www.idc.com/promo/servers/",
+          "https://www.idc.com/wp-content/uploads/2026/01/IDC-Tracker-Citation-Guidelines-2025-UPDATE.pdf"
+        ],
+        "checked_at_basis": "review_synthesis_timestamp"
+      },
+      {
+        "source_id": "IDC_ESS_INSIGHTS_20261009",
+        "checked_at": "2026-10-11T06:23:07.484708+00:00",
+        "status": "measurement_comparability_unverified",
+        "detail": "官方嵌图纵轴为Value (US$M)，2025增长率4.3%；页面正文spending语境为3.9%，另一期官方新闻稿在vendor revenue语境引用3.9%。按原标签保留，完整指标定义未核实，不认定同口径冲突。",
+        "evidence_urls": [
+          "https://www.idc.com/promo/enterprise-storage-systems/",
+          "https://www.idc.com/wp-content/uploads/2025/01/IDC-Promo-Charts_ESS-1-1.png",
+          "https://www.idc.com/resource-center/press-releases/2q2026-ess-tracker/"
+        ],
+        "checked_at_basis": "review_synthesis_timestamp"
+      },
+      {
+        "source_id": "TREND_FORCE_PRESSCENTER",
+        "checked_at": "2026-10-11T06:23:07.484708+00:00",
+        "status": "readable_directory",
+        "detail": "首屏最新可见10月8日，未见10月10—11日发布；NPO数量/全球内存价格不是中国设备市场收入，不填充中国序列。",
+        "evidence_urls": [
+          "https://www.trendforce.com/presscenter"
+        ],
+        "checked_at_basis": "review_synthesis_timestamp"
+      }
+    ],
+    "checked_at_basis": "review_synthesis_timestamp",
+    "checked_at_note": "此时间为研究复核汇总完成时间，并非各原文请求的精确时间。",
+    "measurement_reviewed_at": "2026-10-11T06:36:26.763Z"
+  },
+  "refresh_history": [
+    {
+      "batch_id": "source-audit-20261010",
+      "checked_at": "2026-10-10T05:50:46.795Z",
+      "added_series_ids": [
+        "CN_AI_CLOUD_MARKET_SIZE_Y",
+        "CN_ENTERPRISE_MAAS_TOKEN_VOLUME_FY_202610"
+      ],
+      "added_observations": 2,
+      "existing_values_changed": 0,
+      "scope_note": "补入10月8日IDC新AI云与企业级MaaS口径，各为2025单点；不拼接旧序列。"
+    }
+  ],
+  "source_measurement_notes": [
+    {
+      "id": "MEASUREMENT_IDC_GLOBAL_SERVER_20261009",
+      "metric": "全球服务器2026年度指标：保留原文不同字段",
+      "source_url": "https://www.idc.com/promo/servers/",
+      "publication_date": "2026-10-09",
+      "checked_at": "2026-10-11T06:35:04.221Z",
+      "body_measurement": "vendor revenue",
+      "body_value": 685.1,
+      "body_unit": "十亿美元",
+      "table_measurement": "Value (US$M)",
+      "table_value": 701592,
+      "table_unit": "百万美元",
+      "status": "distinct_source_fields",
+      "scope": "全球；中国主线之外",
+      "definition_source_url": "https://www.idc.com/wp-content/uploads/2026/01/IDC-Tracker-Citation-Guidelines-2025-UPDATE.pdf",
+      "definition_source_page": 2,
+      "interpretation": "IDC官方引用指南明确区分vendor revenue与value；正文与表格采用不同字段，不能直接认定同口径数据冲突。",
+      "definition_limit": "尚未核得当前Server Tracker中Value的完整定义，不推断其等于最终用户支出、包含哪些渠道费用，或差额的具体成因。",
+      "handling": "按原字段分别保留，不据此计算同口径差额；不作为中国市场序列更新。"
+    },
+    {
+      "id": "MEASUREMENT_IDC_GLOBAL_ESS_2025_20261009",
+      "metric": "全球外部OEM企业存储2025年度增长率：按原字段保留",
+      "source_url": "https://www.idc.com/promo/enterprise-storage-systems/",
+      "publication_date": "2026-10-09",
+      "checked_at": "2026-10-11T06:36:26.763Z",
+      "body_measurement": "spending（页面正文原词）",
+      "body_value": 3.9,
+      "table_measurement": "Value (US$M)（官方嵌图纵轴）",
+      "table_value": 4.3,
+      "unit": "%",
+      "table_amount": 35313,
+      "table_amount_unit": "US$M",
+      "chart_url": "https://www.idc.com/wp-content/uploads/2025/01/IDC-Promo-Charts_ESS-1-1.png",
+      "corroborating_release_url": "https://www.idc.com/resource-center/press-releases/2q2026-ess-tracker/",
+      "corroborating_release_measurement": "vendor revenue语境下引用2025全年3.9%",
+      "status": "comparison_basis_unverified",
+      "scope": "全球；中国主线之外",
+      "interpretation": "官方图表明确标Value (US$M)，2025增长率为4.3%；页面正文使用spending并写3.9%，另一期官方新闻稿在vendor revenue语境引用3.9%。按各来源原标签分别记录，不能直接认定同口径冲突。",
+      "definition_limit": "未核得当前ESS Tracker的完整指标定义，尚不能确认正文spending与图表Value是否可直接等同，也不推断差异的成因。",
+      "handling": "不合并比较这两个增长率，不据此改写中国存储历史序列。"
+    }
+  ]
 }

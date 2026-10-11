@@ -1,9 +1,9 @@
 {
   "version": "market-refresh-20261008-v1",
-  "collected_at": "2026-10-10T17:13:24Z",
+  "collected_at": "2026-10-11T06:24:19.580Z",
   "window": {
     "start": "2026-01-01",
-    "end": "2026-10-10"
+    "end": "2026-10-11"
   },
   "sources": [
     {
@@ -240,21 +240,39 @@
               "audit_recheck_complete": false,
               "audit_recheck_status": "bounded_recent_snapshot",
               "note": "本轮仅更新10月8日起重叠窗口至10月10日采集时点；历史收录保留，不表示全年或整月完整覆盖。"
+            },
+            {
+              "month": "2026-10",
+              "total": 56,
+              "eligible": 55,
+              "status": "incomplete",
+              "partial_current_day": true,
+              "partial_calendar_month": true,
+              "checked_at": "2026-10-10T08:09:38.155833+00:00",
+              "latest_refresh_window": {
+                "start": "2026-10-08",
+                "end": "2026-10-10"
+              },
+              "audit_recheck_complete": false,
+              "audit_recheck_status": "bounded_recent_snapshot",
+              "note": "本轮核对2026-10-08至2026-10-10采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。"
             }
           ],
-          "total": 56,
-          "eligible": 55,
+          "total": 61,
+          "eligible": 60,
           "status": "incomplete",
           "partial_current_day": true,
           "partial_calendar_month": true,
-          "checked_at": "2026-10-10T08:09:38.155833+00:00",
+          "checked_at": "2026-10-11T05:57:13.296173+00:00",
           "latest_refresh_window": {
-            "start": "2026-10-08",
-            "end": "2026-10-10"
+            "start": "2026-10-10",
+            "end": "2026-10-11"
           },
           "audit_recheck_complete": false,
           "audit_recheck_status": "bounded_recent_snapshot",
-          "note": "本轮核对2026-10-08至2026-10-10采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。"
+          "note": "本轮核对2026-10-08至2026-10-10采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。 本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。",
+          "observed_count": 61,
+          "history_complete": false
         }
       ],
       "application_reviewed_topics": [
@@ -270,13 +288,13 @@
         "aidc",
         "modular_dc"
       ],
-      "last_rechecked_at": "2026-10-10T08:09:38.155833+00:00",
+      "last_rechecked_at": "2026-10-11T05:57:13.296173+00:00",
       "recheck_window": {
         "start": "2026-09-07",
         "end": "2026-09-20"
       },
       "latest_collection_cutoff": "2026-10-07",
-      "latest_access_note": "已复查全新闻目录，新增2篇，新增原文发布日期均核对；既有记录保留。"
+      "latest_access_note": "全站100条公开API与新闻100条API均跨过10月10日边界；另核AI快讯公开列表。目标窗取得8篇10月10日新闻，无10月11日条目；未来10月13日活动入口未当新闻发布日期。当前日未结束，快照非历史全量。"
     },
     {
       "id": "c114_roll_all",
@@ -519,6 +537,22 @@
               "audit_recheck_complete": false,
               "audit_recheck_status": "bounded_recent_snapshot",
               "note": "本轮仅更新10月8日起重叠窗口至10月10日采集时点；历史收录保留，不表示全年或整月完整覆盖。"
+            },
+            {
+              "month": "2026-10",
+              "total": 91,
+              "eligible": 91,
+              "status": "incomplete",
+              "partial_current_day": true,
+              "partial_calendar_month": true,
+              "checked_at": "2026-10-10T08:09:38.155833+00:00",
+              "latest_refresh_window": {
+                "start": "2026-10-08",
+                "end": "2026-10-10"
+              },
+              "audit_recheck_complete": false,
+              "audit_recheck_status": "bounded_recent_snapshot",
+              "note": "本轮核对2026-10-08至2026-10-10采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。"
             }
           ],
           "total": 91,
@@ -526,14 +560,16 @@
           "status": "incomplete",
           "partial_current_day": true,
           "partial_calendar_month": true,
-          "checked_at": "2026-10-10T08:09:38.155833+00:00",
+          "checked_at": "2026-10-11T05:57:17.517571+00:00",
           "latest_refresh_window": {
-            "start": "2026-10-08",
-            "end": "2026-10-10"
+            "start": "2026-10-10",
+            "end": "2026-10-11"
           },
           "audit_recheck_complete": false,
           "audit_recheck_status": "bounded_recent_snapshot",
-          "note": "本轮核对2026-10-08至2026-10-10采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。"
+          "note": "本轮核对2026-10-08至2026-10-10采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。 本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。",
+          "observed_count": 91,
+          "history_complete": false
         }
       ],
       "collected_at": "2026-09-21T07:30:32.168163+00:00",
@@ -541,13 +577,13 @@
         "sample_size": 18,
         "matched": 18
       },
-      "last_rechecked_at": "2026-10-10T08:09:38.155833+00:00",
+      "last_rechecked_at": "2026-10-11T05:57:17.517571+00:00",
       "recheck_window": {
         "start": "2026-09-07",
         "end": "2026-09-20"
       },
       "latest_collection_cutoff": "2026-10-07",
-      "latest_access_note": "已复查全新闻目录，新增7篇，新增原文发布日期均核对；既有记录保留。"
+      "latest_access_note": "10月10日和11日“查看全部”按日目录均返回HTTP 403，停止该路径；本轮未取得可枚举新条目，不能据此判定零新闻。"
     },
     {
       "id": "zhiding_latest",
@@ -816,21 +852,39 @@
               "audit_recheck_complete": false,
               "audit_recheck_status": "bounded_recent_snapshot",
               "note": "本轮仅更新10月8日起重叠窗口至10月10日采集时点；历史收录保留，不表示全年或整月完整覆盖。"
+            },
+            {
+              "month": "2026-10",
+              "total": 446,
+              "eligible": 445,
+              "status": "incomplete",
+              "partial_current_day": true,
+              "partial_calendar_month": true,
+              "checked_at": "2026-10-10T08:09:38.155833+00:00",
+              "latest_refresh_window": {
+                "start": "2026-10-08",
+                "end": "2026-10-10"
+              },
+              "audit_recheck_complete": false,
+              "audit_recheck_status": "bounded_recent_snapshot",
+              "note": "本轮核对2026-10-08至2026-10-10采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。"
             }
           ],
-          "total": 446,
-          "eligible": 445,
+          "total": 498,
+          "eligible": 497,
           "status": "incomplete",
           "partial_current_day": true,
           "partial_calendar_month": true,
-          "checked_at": "2026-10-10T08:09:38.155833+00:00",
+          "checked_at": "2026-10-11T06:16:32.140646+00:00",
           "latest_refresh_window": {
-            "start": "2026-10-08",
-            "end": "2026-10-10"
+            "start": "2026-10-10",
+            "end": "2026-10-11"
           },
           "audit_recheck_complete": false,
           "audit_recheck_status": "bounded_recent_snapshot",
-          "note": "本轮核对2026-10-08至2026-10-10采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。"
+          "note": "本轮核对2026-10-08至2026-10-10采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。 本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。",
+          "observed_count": 498,
+          "history_complete": false
         }
       ],
       "collected_at": "2026-09-21T15:29:16.394678+08:00",
@@ -838,13 +892,13 @@
         "sample_size": 18,
         "matched": 18
       },
-      "last_rechecked_at": "2026-10-10T08:09:38.155833+00:00",
+      "last_rechecked_at": "2026-10-11T06:16:32.140646+00:00",
       "recheck_window": {
         "start": "2026-09-07",
         "end": "2026-09-20"
       },
       "latest_collection_cutoff": "2026-10-07",
-      "latest_access_note": "已复查全新闻目录，新增20篇，新增原文发布日期均核对；既有记录保留。"
+      "latest_access_note": "固定最新文章归档连续复用第1—5页并补读第6—10页；第6页跨入10月9日，第7—10页均为10月9日。取得110篇10月10日全部主题标题，未见10月11日。日期为归档列表明确日期，未声称逐篇全文重读。"
     },
     {
       "id": "cbinews_all_news",
@@ -1089,32 +1143,50 @@
               "audit_recheck_complete": false,
               "audit_recheck_status": "bounded_recent_snapshot",
               "note": "本轮仅更新10月8日起重叠窗口至10月10日采集时点；历史收录保留，不表示全年或整月完整覆盖。"
+            },
+            {
+              "month": "2026-10",
+              "total": 67,
+              "eligible": 67,
+              "status": "incomplete",
+              "partial_current_day": true,
+              "partial_calendar_month": true,
+              "checked_at": "2026-10-10T08:09:38.155833+00:00",
+              "latest_refresh_window": {
+                "start": "2026-10-08",
+                "end": "2026-10-10"
+              },
+              "audit_recheck_complete": false,
+              "audit_recheck_status": "bounded_recent_snapshot",
+              "note": "本轮核对2026-10-08至2026-10-10采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。"
             }
           ],
-          "total": 67,
-          "eligible": 67,
+          "total": 78,
+          "eligible": 78,
           "status": "incomplete",
           "partial_current_day": true,
           "partial_calendar_month": true,
-          "checked_at": "2026-10-10T08:09:38.155833+00:00",
+          "checked_at": "2026-10-11T06:18:08.770657+00:00",
           "latest_refresh_window": {
-            "start": "2026-10-08",
-            "end": "2026-10-10"
+            "start": "2026-10-10",
+            "end": "2026-10-11"
           },
           "audit_recheck_complete": false,
           "audit_recheck_status": "bounded_recent_snapshot",
-          "note": "本轮核对2026-10-08至2026-10-10采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。"
+          "note": "本轮核对2026-10-08至2026-10-10采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。 本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。",
+          "observed_count": 78,
+          "history_complete": false
         }
       ],
       "collected_at": "2026-09-21T07:28:04.600982+00:00",
       "date_checks": null,
-      "last_rechecked_at": "2026-10-10T08:09:38.155833+00:00",
+      "last_rechecked_at": "2026-10-11T06:18:08.770657+00:00",
       "recheck_window": {
         "start": "2026-09-07",
         "end": "2026-09-20"
       },
       "latest_collection_cutoff": "2026-10-07",
-      "latest_access_note": "已复查全新闻目录，新增0篇，新增原文发布日期均核对；既有记录保留。"
+      "latest_access_note": "官方12新闻栏目均通过站点公开只读POST cate_list接口读取首21条；每栏都越过10月10日起始边界，合并保留全部主题。早先GET返回405明确要求POST，已用发布者公开参数按正确方法读取；没有重试被拒绝的HTML栏目路径。"
     },
     {
       "id": "kunpeng_official",
@@ -1369,19 +1441,42 @@
         },
         {
           "month": "2026-10",
-          "status": "missing",
-          "observed_count": 0,
-          "total": null,
+          "status": "incomplete",
+          "observed_count": 1,
+          "total": 1,
           "covered_start": null,
           "covered_through": null,
           "partial_calendar_month": true,
           "partial_current_day": true,
-          "note": "缓存分页日期不一致；4月8日至6月3日和10月1日至10日存在明确未覆盖区间；无记录月份为缺失，不是零新闻。",
-          "eligible": null,
-          "checked_at": "2026-10-10T08:42:27.007Z",
-          "history_complete": false
+          "note": "缓存分页日期不一致；4月8日至6月3日和10月1日至10日存在明确未覆盖区间；无记录月份为缺失，不是零新闻。 本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。",
+          "eligible": 1,
+          "checked_at": "2026-10-11T05:57:49.531482+00:00",
+          "history_complete": false,
+          "previous_snapshots": [
+            {
+              "month": "2026-10",
+              "status": "missing",
+              "observed_count": 0,
+              "total": null,
+              "covered_start": null,
+              "covered_through": null,
+              "partial_calendar_month": true,
+              "partial_current_day": true,
+              "note": "缓存分页日期不一致；4月8日至6月3日和10月1日至10日存在明确未覆盖区间；无记录月份为缺失，不是零新闻。",
+              "eligible": null,
+              "checked_at": "2026-10-10T08:42:27.007Z",
+              "history_complete": false
+            }
+          ],
+          "latest_refresh_window": {
+            "start": "2026-10-10",
+            "end": "2026-10-11"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot"
         }
-      ]
+      ],
+      "last_rechecked_at": "2026-10-11T05:57:49.531482+00:00"
     },
     {
       "id": "trendforce",
@@ -1530,12 +1625,35 @@
           "covered_through": "2026-10-08",
           "partial_calendar_month": true,
           "partial_current_day": true,
-          "note": "已连续回溯公开栏目第1至27页并达到2025年边界；统计为公开产业洞察，不含付费研究报告。",
+          "note": "已连续回溯公开栏目第1至27页并达到2025年边界；统计为公开产业洞察，不含付费研究报告。 本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。",
           "eligible": 2,
-          "checked_at": "2026-10-10T08:42:27.007Z",
-          "history_complete": false
+          "checked_at": "2026-10-11T05:57:52.047782+00:00",
+          "history_complete": false,
+          "previous_snapshots": [
+            {
+              "month": "2026-10",
+              "status": "incomplete",
+              "observed_count": 2,
+              "total": 2,
+              "covered_start": "2026-10-08",
+              "covered_through": "2026-10-08",
+              "partial_calendar_month": true,
+              "partial_current_day": true,
+              "note": "已连续回溯公开栏目第1至27页并达到2025年边界；统计为公开产业洞察，不含付费研究报告。",
+              "eligible": 2,
+              "checked_at": "2026-10-10T08:42:27.007Z",
+              "history_complete": false
+            }
+          ],
+          "latest_refresh_window": {
+            "start": "2026-10-10",
+            "end": "2026-10-11"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot"
         }
-      ]
+      ],
+      "last_rechecked_at": "2026-10-11T05:57:52.047782+00:00"
     },
     {
       "id": "zhidx",
@@ -1678,18 +1796,41 @@
         {
           "month": "2026-10",
           "status": "incomplete",
-          "observed_count": 7,
-          "total": 7,
+          "observed_count": 10,
+          "total": 10,
           "covered_start": "2026-10-08",
           "covered_through": "2026-10-10",
           "partial_calendar_month": true,
           "partial_current_day": true,
-          "note": "公开页面category_list逐页回溯35个含2026条目的页（API页0—34），页35锚点2025-12-29跨过年界；MM-DD依同页首篇原文完整日期及严格时序确定年份，部分逐篇JSON-LD已复核并保留更高证据级；不代表全516篇原文日期逐篇核验，也不代表智东西全站。",
-          "eligible": 7,
-          "checked_at": "2026-10-10T08:42:27.007Z",
-          "history_complete": false
+          "note": "公开页面category_list逐页回溯35个含2026条目的页（API页0—34），页35锚点2025-12-29跨过年界；MM-DD依同页首篇原文完整日期及严格时序确定年份，部分逐篇JSON-LD已复核并保留更高证据级；不代表全516篇原文日期逐篇核验，也不代表智东西全站。 本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。",
+          "eligible": 10,
+          "checked_at": "2026-10-11T06:18:31.387141+00:00",
+          "history_complete": false,
+          "previous_snapshots": [
+            {
+              "month": "2026-10",
+              "status": "incomplete",
+              "observed_count": 7,
+              "total": 7,
+              "covered_start": "2026-10-08",
+              "covered_through": "2026-10-10",
+              "partial_calendar_month": true,
+              "partial_current_day": true,
+              "note": "公开页面category_list逐页回溯35个含2026条目的页（API页0—34），页35锚点2025-12-29跨过年界；MM-DD依同页首篇原文完整日期及严格时序确定年份，部分逐篇JSON-LD已复核并保留更高证据级；不代表全516篇原文日期逐篇核验，也不代表智东西全站。",
+              "eligible": 7,
+              "checked_at": "2026-10-10T08:42:27.007Z",
+              "history_complete": false
+            }
+          ],
+          "latest_refresh_window": {
+            "start": "2026-10-10",
+            "end": "2026-10-11"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot"
         }
-      ]
+      ],
+      "last_rechecked_at": "2026-10-11T06:18:31.387141+00:00"
     },
     {
       "id": "idcquan_expanded",
@@ -1876,15 +2017,38 @@
           "covered_through": "2026-10-09",
           "partial_calendar_month": true,
           "partial_current_day": true,
-          "note": "cloud目录第8页跨至2025，dc目录第1页跨至2025；cloud在8月到4月再到2025有显著间断，历史完整性未核实；无记录月份不作零新闻。",
+          "note": "cloud目录第8页跨至2025，dc目录第1页跨至2025；cloud在8月到4月再到2025有显著间断，历史完整性未核实；无记录月份不作零新闻。 本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。",
           "eligible": 8,
-          "checked_at": "2026-10-10T08:42:27.007Z",
-          "history_complete": false
+          "checked_at": "2026-10-11T06:17:53Z",
+          "history_complete": false,
+          "previous_snapshots": [
+            {
+              "month": "2026-10",
+              "status": "incomplete",
+              "observed_count": 8,
+              "total": 8,
+              "covered_start": "2026-10-02",
+              "covered_through": "2026-10-09",
+              "partial_calendar_month": true,
+              "partial_current_day": true,
+              "note": "cloud目录第8页跨至2025，dc目录第1页跨至2025；cloud在8月到4月再到2025有显著间断，历史完整性未核实；无记录月份不作零新闻。",
+              "eligible": 8,
+              "checked_at": "2026-10-10T08:42:27.007Z",
+              "history_complete": false
+            }
+          ],
+          "latest_refresh_window": {
+            "start": "2026-10-10",
+            "end": "2026-10-11"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot"
         }
       ],
       "archive_scope": "cloud.idcquan.com 云计算及 dc.idcquan.com 数据中心设施公开栏目（含子栏目），未按关键词预筛",
       "archive_selection_basis": "cloud.idcquan.com 云计算及 dc.idcquan.com 数据中心设施公开栏目（含子栏目），未按关键词预筛",
-      "keyword_prefiltered": false
+      "keyword_prefiltered": false,
+      "last_rechecked_at": "2026-10-11T06:17:53Z"
     },
     {
       "id": "chinabyte",
@@ -2139,17 +2303,56 @@
           "selection_basis": "企业计算频道“最新资讯”完整列表，含频道内跨子域推荐；不按本项目关键词筛选。",
           "notes": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here.",
           "status": "incomplete",
-          "note": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here.",
+          "note": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here. 本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。",
           "partial_calendar_month": true,
           "partial_current_day": true,
           "archive_total": null,
           "history_complete": false,
           "keyword_application_reviewed": true,
-          "checked_at": "2026-10-10T15:14:14Z"
+          "checked_at": "2026-10-11T05:57:57.016078+00:00",
+          "previous_snapshots": [
+            {
+              "source_id": "chinabyte",
+              "month": "2026-10",
+              "window_start": "2026-10-01",
+              "window_end": "2026-10-10",
+              "observed_count": 10,
+              "total": 10,
+              "eligible": 10,
+              "completeness": "partial_current_month",
+              "complete": false,
+              "full_calendar_month": false,
+              "missing_intervals": [
+                {
+                  "start": "2026-10-11",
+                  "end": "2026-10-31",
+                  "reason": "October remains an open calendar month; DCD current index also cached as noted in queries"
+                }
+              ],
+              "selection_basis": "企业计算频道“最新资讯”完整列表，含频道内跨子域推荐；不按本项目关键词筛选。",
+              "notes": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here.",
+              "status": "incomplete",
+              "note": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here.",
+              "partial_calendar_month": true,
+              "partial_current_day": true,
+              "archive_total": null,
+              "history_complete": false,
+              "keyword_application_reviewed": true,
+              "checked_at": "2026-10-10T15:14:14Z"
+            }
+          ],
+          "latest_refresh_window": {
+            "start": "2026-10-10",
+            "end": "2026-10-11"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot"
         }
       ],
       "application_reviewed": false,
-      "limitation": "仅覆盖声明的出版者栏目；未按关键词预筛。完整性以逐月回执为准，未知月份不当作零新闻。"
+      "limitation": "仅覆盖声明的出版者栏目；未按关键词预筛。完整性以逐月回执为准，未知月份不当作零新闻。",
+      "last_rechecked_at": "2026-10-11T05:57:57.016078+00:00",
+      "latest_access_note": "复用企业计算频道“最新资讯”第1页JSON/XML缓存，10条跨至10月1日；窗口内10月10日3篇全部保留，含频道内跨子域标题，均与现有扩展表重复；未見10月11日条目。"
     },
     {
       "id": "dcd",
@@ -2404,17 +2607,56 @@
           "selection_basis": "Publisher-defined News / China region archive, all titles without keyword filtering; includes related overseas and telecom stories assigned China by publisher.",
           "notes": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here.",
           "status": "incomplete",
-          "note": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here.",
+          "note": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here. 本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。",
           "partial_calendar_month": true,
           "partial_current_day": true,
           "archive_total": null,
           "history_complete": false,
           "keyword_application_reviewed": true,
-          "checked_at": "2026-10-10T15:14:14Z"
+          "checked_at": "2026-10-11T06:16:48Z",
+          "previous_snapshots": [
+            {
+              "source_id": "dcd",
+              "month": "2026-10",
+              "window_start": "2026-10-01",
+              "window_end": "2026-10-10",
+              "observed_count": 2,
+              "total": 2,
+              "eligible": 2,
+              "completeness": "partial_current_month",
+              "complete": false,
+              "full_calendar_month": false,
+              "missing_intervals": [
+                {
+                  "start": "2026-10-11",
+                  "end": "2026-10-31",
+                  "reason": "October remains an open calendar month; DCD current index also cached as noted in queries"
+                }
+              ],
+              "selection_basis": "Publisher-defined News / China region archive, all titles without keyword filtering; includes related overseas and telecom stories assigned China by publisher.",
+              "notes": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here.",
+              "status": "incomplete",
+              "note": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here.",
+              "partial_calendar_month": true,
+              "partial_current_day": true,
+              "archive_total": null,
+              "history_complete": false,
+              "keyword_application_reviewed": true,
+              "checked_at": "2026-10-10T15:14:14Z"
+            }
+          ],
+          "latest_refresh_window": {
+            "start": "2026-10-10",
+            "end": "2026-10-11"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot"
         }
       ],
       "application_reviewed": false,
-      "limitation": "仅覆盖声明的出版者栏目；未按关键词预筛。完整性以逐月回执为准，未知月份不当作零新闻。"
+      "limitation": "仅覆盖声明的出版者栏目；未按关键词预筛。完整性以逐月回执为准，未知月份不当作零新闻。",
+      "last_rechecked_at": "2026-10-11T06:16:48Z",
+      "latest_access_note": "读取出版者News / China地区归档当前第1页，新闻列表最新为06 Oct 2026（ByteDance takes up one-fifth of China's data center capacity），次篇05 Oct，后续已至9月及7月；未见10月10—11日条目。仅为当前可读归档快照，不证明全站或完整历史；导航推荐与杂志推广未纳入。"
     },
     {
       "id": "leiphone",
@@ -2672,17 +2914,56 @@
           "selection_basis": "芯片栏目全部带日期列表条目，含栏目内芯片设计及一条跨栏目置顶推荐，URL去重；不按关键词筛选。",
           "notes": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here.",
           "status": "incomplete",
-          "note": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here.",
+          "note": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here. 本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。",
           "partial_calendar_month": true,
           "partial_current_day": true,
           "archive_total": null,
           "history_complete": false,
           "keyword_application_reviewed": true,
-          "checked_at": "2026-10-10T15:14:14Z"
+          "checked_at": "2026-10-11T05:57:55.291524+00:00",
+          "previous_snapshots": [
+            {
+              "source_id": "leiphone",
+              "month": "2026-10",
+              "window_start": "2026-10-01",
+              "window_end": "2026-10-10",
+              "observed_count": 3,
+              "total": 3,
+              "eligible": 3,
+              "completeness": "partial_current_month",
+              "complete": false,
+              "full_calendar_month": false,
+              "missing_intervals": [
+                {
+                  "start": "2026-10-11",
+                  "end": "2026-10-31",
+                  "reason": "October remains an open calendar month; DCD current index also cached as noted in queries"
+                }
+              ],
+              "selection_basis": "芯片栏目全部带日期列表条目，含栏目内芯片设计及一条跨栏目置顶推荐，URL去重；不按关键词筛选。",
+              "notes": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here.",
+              "status": "incomplete",
+              "note": "All indexed titles retained. This count covers only the declared publisher column/region, not the entire publisher or Chinese market. Eligible classification not performed here.",
+              "partial_calendar_month": true,
+              "partial_current_day": true,
+              "archive_total": null,
+              "history_complete": false,
+              "keyword_application_reviewed": true,
+              "checked_at": "2026-10-10T15:14:14Z"
+            }
+          ],
+          "latest_refresh_window": {
+            "start": "2026-10-10",
+            "end": "2026-10-11"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot"
         }
       ],
       "application_reviewed": false,
-      "limitation": "仅覆盖声明的出版者栏目；未按关键词预筛。完整性以逐月回执为准，未知月份不当作零新闻。"
+      "limitation": "仅覆盖声明的出版者栏目；未按关键词预筛。完整性以逐月回执为准，未知月份不当作零新闻。",
+      "last_rechecked_at": "2026-10-11T05:57:55.291524+00:00",
+      "latest_access_note": "Reused current first-page archive snapshot: 16 dated entries, newest dated article 2026-10-10 09:38. The single Oct10–Oct11 candidate was corroborated on its article page and already exists in expansion-2. No Oct11 entry was observed. No historical or full-day completeness claim."
     },
     {
       "source_id": "ithome",
@@ -3429,18 +3710,94 @@
             "datacenter_empty_page_index": 7,
             "datacenter_earlier_tagged_article_verified": "https://www.ithome.com/0/948/975.htm"
           },
-          "note": "10 月尚未结束，观测分母不能当作全月总量。",
+          "note": "10 月尚未结束，观测分母不能当作全月总量。 本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。",
           "eligible": 16,
           "partial_calendar_month": true,
           "partial_current_day": true,
           "archive_total": null,
           "history_complete": false,
           "keyword_application_reviewed": true,
-          "checked_at": "2026-10-10T15:14:14Z"
+          "checked_at": "2026-10-11T05:57:56.795996+00:00",
+          "previous_snapshots": [
+            {
+              "source_id": "ithome",
+              "publisher_family": "软媒／IT之家",
+              "column": "服务器 + 数据中心",
+              "publisher_columns": [
+                "服务器",
+                "数据中心"
+              ],
+              "month": "2026-10",
+              "complete": false,
+              "total": 16,
+              "observed_count": 16,
+              "denominator_record": true,
+              "denominator_scope": "deduplicated_observed_publisher_tag_union",
+              "status": "incomplete",
+              "column_observed_counts": {
+                "服务器": 2,
+                "数据中心": 14
+              },
+              "cross_column_duplicate_count": 0,
+              "archive_urls": [
+                "https://www.ithome.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/",
+                "https://www.ithome.com/tags/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83/"
+              ],
+              "checked_archive_pages": [
+                "https://www.ithome.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/",
+                "https://www.ithome.com/category/tagpage?keyword=%E6%9C%8D%E5%8A%A1%E5%99%A8&page=1",
+                "https://www.ithome.com/category/tagpage?keyword=%E6%9C%8D%E5%8A%A1%E5%99%A8&page=2",
+                "https://www.ithome.com/tags/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83/",
+                "https://www.ithome.com/category/tagpage?keyword=%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83&page=1",
+                "https://www.ithome.com/category/tagpage?keyword=%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83&page=2",
+                "https://www.ithome.com/category/tagpage?keyword=%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83&page=3",
+                "https://www.ithome.com/category/tagpage?keyword=%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83&page=4",
+                "https://www.ithome.com/category/tagpage?keyword=%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83&page=5",
+                "https://www.ithome.com/category/tagpage?keyword=%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83&page=6",
+                "https://www.ithome.com/category/tagpage?keyword=%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83&page=7"
+              ],
+              "window_start": "2026-10-01",
+              "window_end": "2026-10-10",
+              "boundary_evidence": {
+                "server_requested_start_crossed": true,
+                "server_prior_year_date": "2025-12-26",
+                "datacenter_contiguous_pages": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "datacenter_newest_date": "2026-10-10",
+                "datacenter_oldest_date": "2026-06-10",
+                "datacenter_empty_page_index": 7,
+                "datacenter_earlier_tagged_article_verified": "https://www.ithome.com/0/948/975.htm"
+              },
+              "note": "10 月尚未结束，观测分母不能当作全月总量。",
+              "eligible": 16,
+              "partial_calendar_month": true,
+              "partial_current_day": true,
+              "archive_total": null,
+              "history_complete": false,
+              "keyword_application_reviewed": true,
+              "checked_at": "2026-10-10T15:14:14Z"
+            }
+          ],
+          "latest_refresh_window": {
+            "start": "2026-10-10",
+            "end": "2026-10-11"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot"
         }
       ],
       "application_reviewed": false,
-      "limitation": "仅覆盖声明的出版者栏目；未按关键词预筛。完整性以逐月回执为准，未知月份不当作零新闻。"
+      "limitation": "仅覆盖声明的出版者栏目；未按关键词预筛。完整性以逐月回执为准，未知月份不当作零新闻。",
+      "last_rechecked_at": "2026-10-11T05:57:56.795996+00:00",
+      "latest_access_note": "Reused both first-page tag snapshots: 20 server entries and 18 data-center entries. Newest server date is Oct8; newest data-center date is Oct10. One Oct10–Oct11 candidate, article-time corroborated, already in expansion-2; no Oct11 row observed. Historical 数据中心 archive gaps remain unknown."
     },
     {
       "source_id": "it168",
@@ -3681,11 +4038,48 @@
           "archive_total": null,
           "history_complete": false,
           "keyword_application_reviewed": true,
-          "checked_at": "2026-10-10T15:14:14Z"
+          "checked_at": "2026-10-11T05:57:01.943573+00:00",
+          "previous_snapshots": [
+            {
+              "source_id": "it168",
+              "month": "2026-10",
+              "complete": false,
+              "observed_count": 1,
+              "total": 1,
+              "eligible": 1,
+              "coverage_status": "month_in_progress",
+              "missing_intervals": [
+                {
+                  "start": "2026-10-11",
+                  "end": "2026-10-31",
+                  "reason": "future portion of open current month"
+                }
+              ],
+              "scope": "publisher-defined selected_columns only",
+              "window_start": "2026-10-01",
+              "window_end": "2026-10-10",
+              "status": "incomplete",
+              "partial_calendar_month": true,
+              "partial_current_day": true,
+              "archive_total": null,
+              "history_complete": false,
+              "keyword_application_reviewed": true,
+              "checked_at": "2026-10-10T15:14:14Z"
+            }
+          ],
+          "latest_refresh_window": {
+            "start": "2026-10-10",
+            "end": "2026-10-11"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot",
+          "note": "本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。"
         }
       ],
       "application_reviewed": false,
-      "limitation": "Complete only for declared latest-news channel, not whole IT168/ITPUB family. API date is preferred to URL path date; one March row has old URL path but updated displayed publication date."
+      "limitation": "Complete only for declared latest-news channel, not whole IT168/ITPUB family. API date is preferred to URL path date; one March row has old URL path but updated displayed publication date.",
+      "last_rechecked_at": "2026-10-11T05:57:01.943573+00:00",
+      "latest_access_note": "Reused current latest-column first page, 15 titles, all matched existing publisher-API-dated records. Newest matched publication is 2026-10-09 (UTC 2026-10-09T09:01:31Z; Beijing 17:01:31); no new URL and no verified Oct10–Oct11 candidate. Current HTML repeats the same data-time across all 15 rows, so it was not used as individual article-date evidence. No fresh API request was made; this is a bounded latest-list recheck, not proof of complete issue-day coverage."
     },
     {
       "source_id": "cena",
@@ -7463,11 +7857,52 @@
           "archive_total": null,
           "history_complete": false,
           "keyword_application_reviewed": true,
-          "checked_at": "2026-10-10T15:14:14Z"
+          "checked_at": "2026-10-11T05:57:01.944131+00:00",
+          "previous_snapshots": [
+            {
+              "source_id": "cena",
+              "month": "2026-10",
+              "complete": false,
+              "observed_count": 1,
+              "total": 1,
+              "eligible": 1,
+              "coverage_status": "month_in_progress",
+              "missing_intervals": [
+                {
+                  "start": "2026-10-11",
+                  "end": "2026-10-31",
+                  "reason": "future portion of open current month"
+                }
+              ],
+              "scope": "publisher-defined selected_columns only",
+              "window_start": "2026-10-01",
+              "window_end": "2026-10-10",
+              "observed_article_title_count": 1,
+              "raw_navigation_count": 3,
+              "non_report_navigation_count": 2,
+              "total_unit": "news stories from fixed publisher sections, excluding only non-news navigation furniture",
+              "status": "incomplete",
+              "partial_calendar_month": true,
+              "partial_current_day": true,
+              "archive_total": null,
+              "history_complete": false,
+              "keyword_application_reviewed": true,
+              "checked_at": "2026-10-10T15:14:14Z"
+            }
+          ],
+          "latest_refresh_window": {
+            "start": "2026-10-10",
+            "end": "2026-10-11"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot",
+          "note": "本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。"
         }
       ],
       "application_reviewed": false,
-      "limitation": "Scope is printed sections, not all newspaper pages, not full CENA web or CCIDNet. Editor-credit/public-interest advertisement navigation titles retained and labeled. CCIDNet 产品服务与技术 entry repeatedly502/blank, not counted as another source."
+      "limitation": "Scope is printed sections, not all newspaper pages, not full CENA web or CCIDNet. Editor-credit/public-interest advertisement navigation titles retained and labeled. CCIDNet 产品服务与技术 entry repeatedly502/blank, not counted as another source.",
+      "last_rechecked_at": "2026-10-11T05:57:01.944131+00:00",
+      "latest_access_note": "Official October period.xml snapshot declares one issue, dated 2026-10-09, front page node_01.html. No Oct10 or Oct11 issue is present in that inventory, so no in-window issue exists to enumerate for the fixed print sections at this snapshot. This is not a claim that the full CENA/CCID website published no articles."
     },
     {
       "source_id": "cctime",
@@ -7736,11 +8171,48 @@
           "archive_total": null,
           "history_complete": false,
           "keyword_application_reviewed": true,
-          "checked_at": "2026-10-10T15:14:14Z"
+          "checked_at": "2026-10-11T05:57:52.051492+00:00",
+          "previous_snapshots": [
+            {
+              "source_id": "cctime",
+              "month": "2026-10",
+              "complete": false,
+              "observed_count": 1,
+              "total": 1,
+              "eligible": 1,
+              "coverage_status": "month_in_progress",
+              "missing_intervals": [
+                {
+                  "start": "2026-10-11",
+                  "end": "2026-10-31",
+                  "reason": "future portion of open current month"
+                }
+              ],
+              "scope": "publisher-defined selected_columns only",
+              "window_start": "2026-10-01",
+              "window_end": "2026-10-10",
+              "status": "incomplete",
+              "partial_calendar_month": true,
+              "partial_current_day": true,
+              "archive_total": null,
+              "history_complete": false,
+              "keyword_application_reviewed": true,
+              "checked_at": "2026-10-10T15:14:14Z"
+            }
+          ],
+          "latest_refresh_window": {
+            "start": "2026-10-10",
+            "end": "2026-10-11"
+          },
+          "audit_recheck_complete": false,
+          "audit_recheck_status": "bounded_recent_snapshot",
+          "note": "本轮核对2026-10-10至2026-10-11采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。"
         }
       ],
       "application_reviewed": false,
-      "limitation": "Year component not directly printed in archive ntime; stated transparently. Chip entries before2026-04-20 17:38 Asia/Shanghai, including possible additional boundary-day rows, remain unknown, since API100-page2 fails500 and normal pages21+ repeat page20. Known partial metadata retained; raw malformed descriptions were not mirrored."
+      "limitation": "Year component not directly printed in archive ntime; stated transparently. Chip entries before2026-04-20 17:38 Asia/Shanghai, including possible additional boundary-day rows, remain unknown, since API100-page2 fails500 and normal pages21+ repeat page20. Known partial metadata retained; raw malformed descriptions were not mirrored.",
+      "last_rechecked_at": "2026-10-11T05:57:52.051492+00:00",
+      "latest_access_note": "Reused both official 100-item load-more snapshots. 算力 newest item is Sep29 and 芯片 newest item is Oct9; neither has Oct10–Oct11 candidates. Each of 200 title/URL/time triples was parsed despite malformed description JSON; archive MM/DD agrees with the article URL date. Year is supplied by canonical publisher URL, not crawl time. Historical chip-archive limitations remain unchanged."
     }
   ],
   "unavailable_sources": [
@@ -7755,7 +8227,7 @@
   ],
   "taxonomy": {
     "version": "three-boards-2026-10-08.v1",
-    "reclassified_at": "2026-10-08",
+    "reclassified_at": "2026-10-11",
     "boards": [
       {
         "id": "business",
@@ -8180,19 +8652,87 @@
     ]
   },
   "latest_refresh": {
-    "batch_id": "source-audit-20261011-0100",
-    "checked_at": "2026-10-10T17:13:24Z",
-    "requested_cutoff": "2026-10-10",
-    "added_rows": 4,
+    "batch_id": "source-audit-20261011-1423",
+    "checked_at": "2026-10-11T06:24:19.580Z",
+    "requested_cutoff": "2026-10-11",
+    "added_rows": 72,
     "added_ids": [
-      "idcquan-march-49d7e9a7b699309f",
-      "idcquan-march-1ae592fcbdfc6a21",
-      "idcquan-march-61eccaa56a5229ab",
-      "idcquan-march-47193ecf8df289b4"
+      "doit-858062044311621",
+      "doit-858061961945157",
+      "doit-858061835833413",
+      "doit-858055050166341",
+      "doit-858054470553669",
+      "zhiding-3201641",
+      "zhiding-3201640",
+      "zhiding-3201639",
+      "zhiding-3201638",
+      "zhiding-3201637",
+      "zhiding-3201636",
+      "zhiding-3201635",
+      "zhiding-3201634",
+      "zhiding-3201633",
+      "zhiding-3201632",
+      "zhiding-3201631",
+      "zhiding-3201624",
+      "zhiding-3201623",
+      "zhiding-3201622",
+      "zhiding-3201619",
+      "zhiding-3201618",
+      "zhiding-3201617",
+      "zhiding-3201616",
+      "zhiding-3201615",
+      "zhiding-3201614",
+      "zhiding-3201613",
+      "zhiding-3201612",
+      "zhiding-3201611",
+      "zhiding-3201610",
+      "zhiding-3201609",
+      "zhiding-3201608",
+      "zhiding-3201606",
+      "zhiding-3201605",
+      "zhiding-3201604",
+      "zhiding-3201603",
+      "zhiding-3201602",
+      "zhiding-3201601",
+      "zhiding-3201600",
+      "zhiding-3201599",
+      "zhiding-3201598",
+      "zhiding-3201597",
+      "zhiding-3201596",
+      "zhiding-3201595",
+      "zhiding-3201594",
+      "zhiding-3201593",
+      "zhiding-3201592",
+      "zhiding-3201591",
+      "zhiding-3201590",
+      "zhiding-3201589",
+      "zhiding-3201588",
+      "zhiding-3201587",
+      "zhiding-3201586",
+      "zhiding-3201585",
+      "zhiding-3201584",
+      "zhiding-3201583",
+      "zhiding-3201582",
+      "zhiding-3201581",
+      "cbinews-263269",
+      "cbinews-263268",
+      "cbinews-263267",
+      "cbinews-263266",
+      "cbinews-263265",
+      "cbinews-263264",
+      "cbinews-263263",
+      "cbinews-263262",
+      "cbinews-263261",
+      "cbinews-263260",
+      "cbinews-263259",
+      "refresh-7230d086ec905b32",
+      "refresh-2037d44600da0606",
+      "refresh-2c9b4c560b61b71d",
+      "refresh-d5d30c9b02891d33"
     ],
-    "status": "partial",
-    "scope": "2026年3月中国IDC圈既有cloud/dc栏目历史回补",
-    "reason": "三月补回4篇原文日期已核新闻；沿用cloud.idcquan.com与dc.idcquan.com栏目范围，不按技术关键词筛选。已核验4篇2026年3月原文，均位于dc.idcquan.com；尚未核验到cloud.idcquan.com三月原文。桌面分类归档漏列已证实存在的三月稿件，移动列表加载更多返回空，站内搜索以相关度排序且无日期筛选。已完成关键词2026的全部17页结果及8组广义搜索各前30页，共240页；这仍是有边界的发现与核验，不能宣称全月全量。 完整性未证实，仅为已采样本。"
+    "unique_media_news": 25344,
+    "active_added_rows": 72,
+    "skipped_existing": 70
   },
   "latest_classification_review": {
     "id": "aidc-label-recheck-20261008",
@@ -8241,7 +8781,7 @@
       "cena",
       "cctime"
     ],
-    "total_documents": 25272,
+    "total_documents": 25344,
     "monthly": [
       {
         "month": "2026-01",
@@ -8299,8 +8839,8 @@
       },
       {
         "month": "2026-10",
-        "active_documents": 709,
-        "total_documents": 711,
+        "active_documents": 781,
+        "total_documents": 783,
         "status": "incomplete"
       }
     ],

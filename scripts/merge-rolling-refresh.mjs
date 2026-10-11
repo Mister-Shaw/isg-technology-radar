@@ -14,9 +14,10 @@ assert(batch&&validDate(end)&&Number.isFinite(Date.parse(now)));
 const p=readSite('public/market-panel.json'),r=readSite('data/research-2026.json');
 assert(p.latest_refresh?.batch_id!==batch,'Already merged batch');
 assert(end>=p.window.end,'Cannot roll window backward');
-const ids=new Set(p.documents.map(x=>x.id)),urls=new Set(p.documents.map(x=>x.source_id+'|'+x.url));
+const allDocuments=[...p.documents,...(p.expansion_assets||[]).flatMap(path=>readSite('public'+path).documents)];
+const ids=new Set(allDocuments.map(x=>x.id)),urls=new Set(allDocuments.map(x=>x.source_id+'|'+x.url));
 const media=p.sources.find(s=>s.id==='media_all').document_source_ids;
-const titles=new Map(p.documents.filter(x=>!x.superseded).map(x=>[x.source_id+'|'+normalizedNewsTitle(x.title),x.id]));
+const titles=new Map(allDocuments.filter(x=>!x.superseded).map(x=>[x.source_id+'|'+normalizedNewsTitle(x.title),x.id]));
 const added=[],skipped=[];
 const action=/(?:中标|采购|招标|租用|租赁|投运|投产|上线|部署|扩容|验收|启用|交付)/i,prospective=/(?:计划|拟|将|预计|有望|如何|推动|助力|支持|方案|攻略|趋势|需求)/,real=/(?:已|正式|完成|成功|中标|招标公告|采购公告|结果公告|验收)/;
 for(const raw of bundle.media_candidates||[]){
@@ -28,34 +29,35 @@ for(const raw of bundle.media_candidates||[]){
  const row={...raw,id,...classifyNewsTitle(raw.title,p.news_classification_rules),month:raw.date.slice(0,7),is_article:true,superseded:!!duplicate,duplicate_of:duplicate,eligible_categories:[],required_categories:[],unknown_categories:[],context_class:'other',classification_basis:'title_only',collection_batch:batch,collected_at:now};
  row.observation_categories=observationCategories(row,'news');row.board_matches=compactBoardMatches(row,'news');row.keyword_rule_version=KEYWORD_RULE_VERSION;
  row.keyword_context_class=action.test(row.title)&&(!prospective.test(row.title)||real.test(row.title))?'application':'other';row.keyword_behavior_basis='统一标题行为词识别，不核定实际采用';
- p.documents.push(row);ids.add(id);urls.add(row.source_id+'|'+row.url);if(!duplicate)titles.set(key,id);added.push(id);
+ p.documents.push(row);allDocuments.push(row);ids.add(id);urls.add(row.source_id+'|'+row.url);if(!duplicate)titles.set(key,id);added.push(id);
 }
 const researchIds=new Set([...r.events,...r.leads].map(x=>x.id));
-const researchKeys=new Set([...r.events,...r.leads].filter(x=>x.event_key).map(x=>x.event_key+'|lot:'+(x.lot||'')));
+const researchKeys=new Set([...r.events,...r.leads].filter(x=>x.event_key).map(x=>x.event_key+'|lot:'+(x.lot||'')+'|stage:'+(x.stage||'')));
 const researchAdded=[],researchSkipped=[];
 for(const raw of bundle.research_candidates||[]){
  assert(raw.id&&raw.title&&/^https?:\/\//.test(raw.url));assert(validDate(raw.published_date)&&raw.published_date<=end);
- if(researchIds.has(raw.id)||(raw.event_key&&researchKeys.has(raw.event_key+'|lot:'+(raw.lot||'')))){researchSkipped.push(raw.id);continue;}
+ if(researchIds.has(raw.id)||(raw.event_key&&researchKeys.has(raw.event_key+'|lot:'+(raw.lot||'')+'|stage:'+(raw.stage||'')))){researchSkipped.push(raw.id);continue;}
  assert(raw.amount_cny===null||Number.isFinite(raw.amount_cny));assert(raw.amount_currency==='CNY'||raw.amount_cny===null||raw.amount_normalization?.fx_basis);
  const row={...raw,collection_batch:batch,retrieved_on:end,checked_at:now,keyword_rule_version:KEYWORD_RULE_VERSION};
  row.board_matches=compactBoardMatches(row,'research');
  const target=row.refresh_disposition==='event'?'events':'leads';delete row.refresh_disposition;
  if(target==='events')assert(row.verified_fulltext===true&&['primary','verified'].includes(row.evidence_status),'Events require verified primary evidence');
- r[target].push(row);researchAdded.push(row.id);researchIds.add(row.id);if(row.event_key)researchKeys.add(row.event_key+'|lot:'+(row.lot||''));
+ r[target].push(row);researchAdded.push(row.id);researchIds.add(row.id);if(row.event_key)researchKeys.add(row.event_key+'|lot:'+(row.lot||'')+'|stage:'+(row.stage||''));
 }
 p.refresh_history??=[];if(p.latest_refresh)p.refresh_history.push(p.latest_refresh);
 p.window.end=end;p.collected_at=now;
-const active=p.documents.filter(x=>media.includes(x.source_id)&&!x.superseded);
+const active=allDocuments.filter(x=>media.includes(x.source_id)&&!x.superseded);
 p.latest_refresh={batch_id:batch,checked_at:now,requested_cutoff:end,added_rows:added.length,added_ids:added,unique_media_news:active.length,active_added_rows:p.documents.filter(x=>added.includes(x.id)&&!x.superseded).length,skipped_existing:skipped.length};
 for(const s of p.sources){
  const sourceIds=s.document_source_ids||[s.document_source_id||s.id];if(!sourceIds.some(id=>media.includes(id)))continue;
- const month=end.slice(0,7),rows=p.documents.filter(x=>sourceIds.includes(x.source_id)&&x.month===month);
+ const month=end.slice(0,7),rows=allDocuments.filter(x=>sourceIds.includes(x.source_id)&&x.month===month);
+ const receipts=(bundle.media_receipts||[]).filter(x=>sourceIds.includes(x.archive_source_id||x.source_id));
+ if(!receipts.length&&!rows.some(x=>x.collection_batch===batch))continue;
  s.coverage??=[];let c=s.coverage.find(c=>c.month===month);if(!c){c={month};s.coverage.push(c);}
  const previous={...c};delete previous.previous_snapshots;c.previous_snapshots=[...(c.previous_snapshots||[]),previous];
- for(const key of Object.keys(c))if(!['month','previous_snapshots'].includes(key))delete c[key];
- Object.assign(c,{total:rows.length,eligible:rows.filter(x=>!x.superseded).length,status:'incomplete',partial_current_day:true,partial_calendar_month:true});
- const receipts=(bundle.media_receipts||[]).filter(x=>sourceIds.includes(x.archive_source_id||x.source_id));
- if(receipts.length){s.last_rechecked_at=now;s.latest_access_note=receipts.map(x=>x.detail||x.status).join('；');c.checked_at=now;c.latest_refresh_window=bundle.requested_window;c.audit_recheck_complete=false;c.audit_recheck_status='bounded_recent_snapshot';c.note=`本轮核对${bundle.requested_window?.start||end}至${end}采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。`;}
+ // Retain historical gap/verification metadata; fresh snapshots do not erase prior limits.
+ Object.assign(c,{observed_count:rows.length,total:rows.length?rows.length:null,eligible:rows.length?rows.filter(x=>!x.superseded).length:null,status:rows.length?'incomplete':'missing',history_complete:false,partial_current_day:true,partial_calendar_month:true});
+ if(receipts.length){const sourceCheckedAt=receipts.map(x=>x.checked_at).filter(Boolean).sort((a,b)=>Date.parse(a)-Date.parse(b)).at(-1);s.last_rechecked_at=sourceCheckedAt;s.latest_access_note=receipts.map(x=>x.detail||x.status).join('；');c.checked_at=sourceCheckedAt;c.latest_refresh_window=bundle.requested_window;c.audit_recheck_complete=false;c.audit_recheck_status='bounded_recent_snapshot';c.note=(previous.note?previous.note+' ':'')+`本轮核对${bundle.requested_window?.start||end}至${end}采集时点的重叠窗口；历史收录保留，不表示全年或整月完整覆盖。`;}
 }
 r.refresh_history??=[];if(r.latest_refresh)r.refresh_history.push(r.latest_refresh);
 r.period_end=end;r.as_of=end;r.latest_refresh={batch_id:batch,checked_at:now,added_records:researchAdded.length,added_ids:researchAdded,skipped_existing:researchSkipped.length,restored_milestones:0};
