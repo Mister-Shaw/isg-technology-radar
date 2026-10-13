@@ -137,5 +137,23 @@
       "url": "https://zhidx.com/p/598496.html",
       "relationship": "same_source_url"
     }
+  ],
+  "c114_roll_all-refresh-8313ff09f46de186": [
+    {
+      "id": "lead-mobile-400g-otn-20261013",
+      "title": "中国移动400G OTN预计2264端口集采（采购原件待核）",
+      "stage": "tender",
+      "url": "https://www.c114.com.cn/news/118/a1319000.html",
+      "relationship": "same_source_url"
+    }
+  ],
+  "c114_roll_all-refresh-a90742f93c389da2": [
+    {
+      "id": "lead-mobile-distributed-storage-20261013",
+      "title": "中国移动分布式存储641套集采（采购原件待核）",
+      "stage": "tender",
+      "url": "https://www.c114.com.cn/news/118/a1319002.html",
+      "relationship": "same_source_url"
+    }
   ]
 }

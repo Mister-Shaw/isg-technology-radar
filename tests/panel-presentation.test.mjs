@@ -6,7 +6,10 @@ import {panelMatrix,panelColors,panelCsv} from '../lib/panel.js';
 const data=readMarket(),source=data.sources.find(s=>s.id==='media_all');
 const raw=panelMatrix(data,source,'attention','month','all',{aidc:'AIDC'}),snapshot=JSON.stringify(raw),shown=presentPanelMatrix(raw,'news'),oct=shown[0].points.at(-1);
 assert.equal(oct.value,1000*oct.n/oct.N);assert.equal(oct.complete,false);assert.equal(oct.partial,true);assert.equal(oct.observedPresentation,true);assert.equal(oct.status,'已采样本');
-assert.notEqual(panelColors(shown).background(oct.value),'#f1f3f6');assert.equal(panelColors(shown).max,oct.value);
+assert.notEqual(panelColors(shown).background(oct.value),'#f1f3f6');
+// A rolling month's share can fall below another month; color scale uses all observed points.
+const expectedMax=Math.max(...shown.flatMap(row=>row.points).map(point=>point.value).filter(Number.isFinite));
+assert.equal(panelColors(shown).max,expectedMax);assert(panelColors(shown).max>=oct.value);
 assert.equal(JSON.stringify(raw),snapshot,'Raw quality/statistical state unchanged');assert.equal(raw[0].points.at(-1).value,null);
 assert(panelCsv(raw).includes('覆盖不完整'),'Export keeps the auditable coverage status');
 assert.strictEqual(presentPanelMatrix(raw,'procurement'),raw,'Do not promote unverified procurement demand to complete data');
