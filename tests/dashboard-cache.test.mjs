@@ -9,7 +9,7 @@ import * as keywords from '../lib/keyword-boards.js';
 const research=JSON.parse(fs.readFileSync(new URL('../data/research-2026.json',import.meta.url)));
 let source=fs.readFileSync(new URL('../app/monthly-research.jsx',import.meta.url),'utf8');
 source=source.slice(0,source.indexOf(' return <div className="monthly-research">'))+' return {allMatrix,matrix,rows,combined,eligible,series};\n}';
-source=source.replace(/^import .*;\n/gm,'').replace('export default function','function');
+source=source.replace(/^import .*;\r?\n/gm,'').replace('export default function','function');
 source=ts.transpileModule(source,{compilerOptions:{jsx:ts.JsxEmit.React,target:ts.ScriptTarget.ES2022}}).outputText;
 let cursor=0,slots=[],setters=[];
 const useState=initial=>{const i=cursor++;if(!(i in slots))slots[i]=initial;const set=value=>slots[i]=value;setters[i]=set;return [slots[i],set];};

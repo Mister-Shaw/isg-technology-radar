@@ -347,7 +347,9 @@ export const sourcePanel=[
       "www.trendforce.cn",
       "trendforce.cn",
       "www.trendforce.com.tw",
-      "trendforce.com.tw"
+      "trendforce.com.tw",
+      "www.trendforce.com",
+      "trendforce.com"
     ]
   },
   {

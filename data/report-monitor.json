@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "as_of": "2026-10-13",
+  "as_of": "2026-10-14",
   "title": "研报市场监测",
   "groups": [
     {
@@ -10763,14 +10763,14 @@
   ],
   "scope_notice": "选定公开机构报告与官方摘要的数据底表，不是全市场研报普查。定时更新计划仍暂停。",
   "latest_refresh": {
-    "batch_id": "source-audit-20261013",
-    "checked_at": "2026-10-13T02:29:20.469165+00:00",
+    "batch_id": "source-audit-20261014",
+    "checked_at": "2026-10-14T07:05:07.126729+00:00",
     "checked_at_basis": "review_synthesis_timestamp",
     "checked_at_note": "本轮研报复核汇总时间；具体原文读取时间按逐源回执，未重读来源保留原日期。",
     "added_series_ids": [],
     "added_observations": 0,
     "existing_values_changed": 0,
-    "scope_note": "本轮重读IDC服务器和企业存储页面，保持vendor revenue、Value及spending原始标签与可比性限制；无新增可核中国观察值。as_of是复核日，不改变既有publication_date、vintage和period。未重读的AI云及TrendForce回执保留原时间。",
+    "scope_note": "本轮重读IDC服务器、企业存储及TrendForce指定公开页/原图。vendor revenue、Value及spending保留原始标签和既有可比性限制，不推断Value为最终用户支出。TrendForce CPO新稿只作技术研究事件，无新增可核中国数值；会员日评全文未取得，不用目录摘要补价格。as_of为复核日，不改变既有publication_date、vintage或period；未重读的AI云回执保留原时间。",
     "source_checks": [
       {
         "source_id": "SRC-IDC-AICLOUD-20261008",
@@ -10786,39 +10786,176 @@
         "id": "IDC_SERVER_INSIGHTS_20261009",
         "source_id": "IDC_SERVER_INSIGHTS_20261009",
         "url": "https://www.idc.com/promo/servers/",
-        "checked_at": "2026-10-13T02:18:10.363725+00:00",
+        "checked": true,
+        "checked_at": "2026-10-14T06:52:49.585132+00:00",
+        "checked_at_precision": "timestamp",
+        "checked_at_basis": "actual_source_read_completed",
         "status": "distinct_measurement_fields",
-        "detail": "10月13日重新读取10月9日版正文与HTML表格：正文2026全球vendor revenue预测685.1十亿美元，表格Value (US$M)为701592。原字段不变，保留不同指标；不当作同口径冲突或新增中国季度数据。",
+        "detail": "10月14日重读，页面仍标10月9日版。2026全球vendor revenue预测685.1十亿美元，表格Value (US$M)为701592；分别保留不同指标，不计算同口径差额，也不解释Value为最终用户支出。不新增中国序列。",
         "evidence_urls": [
           "https://www.idc.com/promo/servers/"
         ],
-        "verified_window_limits": "仅10月9日当前公开页面的本次重读；无10月11—13日新版本或中国市场序列变更证据。",
+        "source_read_at_window_utc": {
+          "start": "2026-10-14T06:52:35.926294+00:00",
+          "end": "2026-10-14T06:52:49.585132+00:00"
+        },
+        "requested_window": {
+          "start": "2026-10-13",
+          "end": "2026-10-14"
+        },
+        "verified_window": null,
+        "verified_window_limits": "只覆盖所列原页、原图及读取时点；不代表窗口、全部子栏目或所有分页完整检索。",
         "publication_date": "2026-10-09",
-        "factual_change": false
+        "factual_change": false,
+        "history_complete": false,
+        "partial_current_day": true,
+        "partial_current_month": true
       },
       {
         "id": "IDC_ESS_INSIGHTS_20261009",
         "source_id": "IDC_ESS_INSIGHTS_20261009",
         "url": "https://www.idc.com/promo/enterprise-storage-systems/",
-        "checked_at": "2026-10-13T02:18:09.749183+00:00",
+        "checked": true,
+        "checked_at": "2026-10-14T06:52:49.875993+00:00",
+        "checked_at_precision": "timestamp",
+        "checked_at_basis": "actual_source_read_completed",
         "status": "measurement_comparability_unverified",
-        "detail": "10月13日重新读取10月9日版正文和HTML数据表：正文2025 spending增长3.9%，表列4.3%；未取得新增定义证明，维持可比基础未核清，不合并或改写中国存储序列。原图的Value轴口径沿用此前核验，本次没有重新OCR原图。",
+        "detail": "10月14日重读正文、HTML表格并目视原图。正文2025 spending增速3.9%；图表Value (US$M)的2025金额35313、增速4.3%。尚未核得可等同定义，维持可比基础未核清，不合并、不推断差异原因、不改中国存储序列。",
         "evidence_urls": [
-          "https://www.idc.com/promo/enterprise-storage-systems/"
+          "https://www.idc.com/promo/enterprise-storage-systems/",
+          "https://www.idc.com/wp-content/uploads/2025/01/IDC-Promo-Charts_ESS-1-1.png"
         ],
-        "verified_window_limits": "仅10月9日当前公开页面的本次重读；无10月11—13日新版本或中国市场序列变更证据。",
+        "source_read_at_window_utc": {
+          "start": "2026-10-14T06:52:35.927640+00:00",
+          "end": "2026-10-14T06:52:49.875993+00:00"
+        },
+        "requested_window": {
+          "start": "2026-10-13",
+          "end": "2026-10-14"
+        },
+        "verified_window": null,
+        "verified_window_limits": "只覆盖所列原页、原图及读取时点；不代表窗口、全部子栏目或所有分页完整检索。",
         "publication_date": "2026-10-09",
-        "factual_change": false
+        "factual_change": false,
+        "history_complete": false,
+        "partial_current_day": true,
+        "partial_current_month": true,
+        "additional_source_reads": [
+          {
+            "url": "https://www.idc.com/wp-content/uploads/2025/01/IDC-Promo-Charts_ESS-1-1.png",
+            "started_at": "2026-10-14T06:52:35.948270+00:00",
+            "checked_at": "2026-10-14T06:52:49.463421+00:00",
+            "status": 200,
+            "final_url": "https://www.idc.com/wp-content/uploads/2025/01/IDC-Promo-Charts_ESS-1-1.png"
+          }
+        ]
       },
       {
+        "id": "TREND_FORCE_PRESSCENTER",
         "source_id": "TREND_FORCE_PRESSCENTER",
-        "checked_at": "2026-10-11T06:23:07.484708+00:00",
-        "status": "readable_directory",
-        "detail": "首屏最新可见10月8日，未见10月10—11日发布；NPO数量/全球内存价格不是中国设备市场收入，不填充中国序列。",
+        "url": "https://www.trendforce.com/presscenter/news",
+        "checked": true,
+        "checked_at": "2026-10-14T06:55:22.818929+00:00",
+        "checked_at_precision": "timestamp",
+        "checked_at_basis": "actual_source_read_completed",
+        "status": "readable_directory_scoped",
+        "detail": "新闻列表首屏最新可见10月13日CPO测试平台公开稿；本次所读列表未见10月14日发布。仅首屏定向核查，不代表全站或全天没有更新。",
         "evidence_urls": [
+          "https://www.trendforce.com/presscenter/news",
           "https://www.trendforce.com/presscenter"
         ],
-        "checked_at_basis": "review_synthesis_timestamp"
+        "source_read_at_window_utc": {
+          "start": "2026-10-14T06:55:00.481468+00:00",
+          "end": "2026-10-14T06:55:22.818929+00:00"
+        },
+        "requested_window": {
+          "start": "2026-10-13",
+          "end": "2026-10-14"
+        },
+        "verified_window": null,
+        "verified_window_limits": "只覆盖所列原页、原图及读取时点；不代表窗口、全部子栏目或所有分页完整检索。",
+        "publication_date": null,
+        "factual_change": false,
+        "history_complete": false,
+        "partial_current_day": true,
+        "partial_current_month": true,
+        "additional_source_reads": [
+          {
+            "url": "https://www.trendforce.com/presscenter",
+            "started_at": "2026-10-14T06:52:35.941579+00:00",
+            "checked_at": "2026-10-14T06:52:51.421433+00:00",
+            "status": 200,
+            "final_url": "https://www.trendforce.com/presscenter"
+          }
+        ]
+      },
+      {
+        "id": "TREND_FORCE_CPO_TESTING_20261013",
+        "source_id": "TREND_FORCE_CPO_TESTING_20261013",
+        "url": "https://www.trendforce.com/presscenter/news/20261013-13267.html",
+        "checked": true,
+        "checked_at": "2026-10-14T06:52:51.598421+00:00",
+        "checked_at_precision": "timestamp",
+        "checked_at_basis": "actual_source_read_completed",
+        "status": "primary_fulltext_and_chart_checked",
+        "detail": "10月13日公开稿及七环节供应链原图已核。含2027/2028技术发展判断，没有可追加的市场规模、份额或渗透率时间序列；只新增技术研究事件，未读付费报告。",
+        "evidence_urls": [
+          "https://www.trendforce.com/presscenter/news/20261013-13267.html",
+          "https://img.trendforce.com/EDM/2026/10/20261013_154531_3.jpg"
+        ],
+        "source_read_at_window_utc": {
+          "start": "2026-10-14T06:52:35.943693+00:00",
+          "end": "2026-10-14T06:52:51.598421+00:00"
+        },
+        "requested_window": {
+          "start": "2026-10-13",
+          "end": "2026-10-14"
+        },
+        "verified_window": null,
+        "verified_window_limits": "只覆盖所列原页、原图及读取时点；不代表窗口、全部子栏目或所有分页完整检索。",
+        "publication_date": "2026-10-13",
+        "factual_change": true,
+        "history_complete": false,
+        "partial_current_day": true,
+        "partial_current_month": true,
+        "additional_source_reads": [
+          {
+            "url": "https://img.trendforce.com/EDM/2026/10/20261013_154531_3.jpg",
+            "started_at": "2026-10-14T06:52:35.947468+00:00",
+            "checked_at": "2026-10-14T06:52:49.638504+00:00",
+            "status": 200,
+            "final_url": "https://img.trendforce.com/EDM/2026/10/20261013_154531_3.jpg"
+          }
+        ]
+      },
+      {
+        "id": "TREND_FORCE_DAILY_EXPRESS_20261013",
+        "source_id": "TREND_FORCE_DAILY_EXPRESS_20261013",
+        "url": "https://www.dramexchange.com/market/daily.aspx",
+        "checked": true,
+        "checked_at": "2026-10-14T06:55:37.636801+00:00",
+        "checked_at_precision": "timestamp",
+        "checked_at_basis": "actual_source_read_completed",
+        "status": "login_required_fulltext_unread",
+        "detail": "新闻中心的10月13日Daily Express链接实际重定向会员登录页；日评全文和底层价格表未读取，不据目录摘要中的价格填充观察值。",
+        "evidence_urls": [
+          "https://www.dramexchange.com/market/daily.aspx"
+        ],
+        "source_read_at_window_utc": {
+          "start": "2026-10-14T06:55:00.482863+00:00",
+          "end": "2026-10-14T06:55:37.636801+00:00"
+        },
+        "requested_window": {
+          "start": "2026-10-13",
+          "end": "2026-10-14"
+        },
+        "verified_window": null,
+        "verified_window_limits": "只覆盖所列原页、原图及读取时点；不代表窗口、全部子栏目或所有分页完整检索。",
+        "publication_date": "2026-10-13",
+        "factual_change": false,
+        "history_complete": false,
+        "partial_current_day": true,
+        "partial_current_month": true
       }
     ]
   },
@@ -10889,6 +11026,66 @@
       "checked_at_basis": "review_synthesis_timestamp",
       "checked_at_note": "此时间为研究复核汇总完成时间，并非各原文请求的精确时间。",
       "measurement_reviewed_at": "2026-10-11T06:36:26.763Z"
+    },
+    {
+      "batch_id": "source-audit-20261013",
+      "checked_at": "2026-10-13T02:29:20.469165+00:00",
+      "checked_at_basis": "review_synthesis_timestamp",
+      "checked_at_note": "本轮研报复核汇总时间；具体原文读取时间按逐源回执，未重读来源保留原日期。",
+      "added_series_ids": [],
+      "added_observations": 0,
+      "existing_values_changed": 0,
+      "scope_note": "本轮重读IDC服务器和企业存储页面，保持vendor revenue、Value及spending原始标签与可比性限制；无新增可核中国观察值。as_of是复核日，不改变既有publication_date、vintage和period。未重读的AI云及TrendForce回执保留原时间。",
+      "source_checks": [
+        {
+          "source_id": "SRC-IDC-AICLOUD-20261008",
+          "checked_at": "2026-10-11T06:23:07.484708+00:00",
+          "status": "fulltext_rechecked_unchanged",
+          "detail": "10月8日中国AI云684亿元与企业级MaaS 1994万亿Token正文重读无变更；不覆盖旧口径，不增加重复观察。",
+          "evidence_urls": [
+            "https://www.idc.com/resource-center/blog/idc%E9%A6%96%E6%AC%A1%E5%AE%9A%E4%B9%89ai%E4%BA%91%E5%B8%82%E5%9C%BA%EF%BC%8C2025%E5%B9%B4%E4%B8%AD%E5%9B%BD%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1%E8%BE%BE684%E4%BA%BF%E5%85%83/"
+          ],
+          "checked_at_basis": "review_synthesis_timestamp"
+        },
+        {
+          "id": "IDC_SERVER_INSIGHTS_20261009",
+          "source_id": "IDC_SERVER_INSIGHTS_20261009",
+          "url": "https://www.idc.com/promo/servers/",
+          "checked_at": "2026-10-13T02:18:10.363725+00:00",
+          "status": "distinct_measurement_fields",
+          "detail": "10月13日重新读取10月9日版正文与HTML表格：正文2026全球vendor revenue预测685.1十亿美元，表格Value (US$M)为701592。原字段不变，保留不同指标；不当作同口径冲突或新增中国季度数据。",
+          "evidence_urls": [
+            "https://www.idc.com/promo/servers/"
+          ],
+          "verified_window_limits": "仅10月9日当前公开页面的本次重读；无10月11—13日新版本或中国市场序列变更证据。",
+          "publication_date": "2026-10-09",
+          "factual_change": false
+        },
+        {
+          "id": "IDC_ESS_INSIGHTS_20261009",
+          "source_id": "IDC_ESS_INSIGHTS_20261009",
+          "url": "https://www.idc.com/promo/enterprise-storage-systems/",
+          "checked_at": "2026-10-13T02:18:09.749183+00:00",
+          "status": "measurement_comparability_unverified",
+          "detail": "10月13日重新读取10月9日版正文和HTML数据表：正文2025 spending增长3.9%，表列4.3%；未取得新增定义证明，维持可比基础未核清，不合并或改写中国存储序列。原图的Value轴口径沿用此前核验，本次没有重新OCR原图。",
+          "evidence_urls": [
+            "https://www.idc.com/promo/enterprise-storage-systems/"
+          ],
+          "verified_window_limits": "仅10月9日当前公开页面的本次重读；无10月11—13日新版本或中国市场序列变更证据。",
+          "publication_date": "2026-10-09",
+          "factual_change": false
+        },
+        {
+          "source_id": "TREND_FORCE_PRESSCENTER",
+          "checked_at": "2026-10-11T06:23:07.484708+00:00",
+          "status": "readable_directory",
+          "detail": "首屏最新可见10月8日，未见10月10—11日发布；NPO数量/全球内存价格不是中国设备市场收入，不填充中国序列。",
+          "evidence_urls": [
+            "https://www.trendforce.com/presscenter"
+          ],
+          "checked_at_basis": "review_synthesis_timestamp"
+        }
+      ]
     }
   ],
   "source_measurement_notes": [

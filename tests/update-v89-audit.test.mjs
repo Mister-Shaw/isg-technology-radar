@@ -38,7 +38,8 @@ for(const row of historicalActive)assert(currentActiveById.has(row.id),`The curr
 const additions=currentActive.filter(row=>!historicalIds.has(row.id));
 assert.equal(currentActive.length,historicalActive.length+additions.length,'All current active additions reconcile independently against pinned v92 IDs');
 assert.equal(original.media_summary.total_documents,historical.media_summary.total_documents+additions.length,'The current denominator reconciles with every active addition since pinned v92');
-assert.equal(currentActive.filter(row=>row.collection_batch===latest.id).length,latest.media_added,'The latest receipt counts only its own active media additions');
+assert.equal(current.documents.filter(row=>row.collection_batch===latest.id).length,latest.media_added,'The latest receipt counts all appended archive records, including retained title duplicates');
+assert.equal(currentActive.filter(row=>row.collection_batch===latest.id).length,original.latest_refresh.active_added_rows,'The active additions exclude superseded title duplicates');
 assert.equal(original.media_summary.total_documents,latest.media_total,'The latest receipt matches the current snapshot');
 assert.deepEqual(original.expansion_assets.slice(0,baseline.expansion_assets.length),baseline.expansion_assets,'Both historical expansion assets remain available');
 const currentTotal=original.media_summary.total_documents;

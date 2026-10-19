@@ -155,5 +155,23 @@
       "url": "https://www.c114.com.cn/news/118/a1319002.html",
       "relationship": "same_source_url"
     }
+  ],
+  "c114_roll_all-refresh-1fc4bda7362f269b": [
+    {
+      "id": "lead-mobile-ai-storage-640-20261014",
+      "title": "中国移动640套智算存储招标报道（采购原件待核）",
+      "stage": "tender",
+      "url": "https://www.c114.com.cn/news/118/a1319125.html",
+      "relationship": "same_source_url"
+    }
+  ],
+  "trendforce-refresh-50d344184b7d42b1": [
+    {
+      "id": "refresh-trendforce-cpo-test-platforms-20261013",
+      "title": "TrendForce：CPO量产测试重心转向光电一体化平台",
+      "stage": "research",
+      "url": "https://www.trendforce.com/presscenter/news/20261013-13267.html",
+      "relationship": "same_publisher_language_version"
+    }
   ]
 }

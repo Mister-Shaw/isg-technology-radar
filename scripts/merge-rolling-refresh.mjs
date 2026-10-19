@@ -38,7 +38,7 @@ for(const raw of bundle.research_candidates||[]){
  assert(raw.id&&raw.title&&/^https?:\/\//.test(raw.url));assert(validDate(raw.published_date)&&raw.published_date<=end);
  if(researchIds.has(raw.id)||(raw.event_key&&researchKeys.has(raw.event_key+'|lot:'+(raw.lot||'')+'|stage:'+(raw.stage||'')))){researchSkipped.push(raw.id);continue;}
  assert(raw.amount_cny===null||Number.isFinite(raw.amount_cny));assert(raw.amount_currency==='CNY'||raw.amount_cny===null||raw.amount_normalization?.fx_basis);
- const row={...raw,collection_batch:batch,retrieved_on:end,checked_at:now,keyword_rule_version:KEYWORD_RULE_VERSION};
+ const row={...raw,collection_batch:batch,retrieved_on:end,checked_at:raw.checked_at||now,imported_at:now,keyword_rule_version:KEYWORD_RULE_VERSION};
  row.board_matches=compactBoardMatches(row,'research');
  const target=row.refresh_disposition==='event'?'events':'leads';delete row.refresh_disposition;
  if(target==='events')assert(row.verified_fulltext===true&&['primary','verified'].includes(row.evidence_status),'Events require verified primary evidence');

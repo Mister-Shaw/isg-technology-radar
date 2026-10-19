@@ -1,0 +1,95 @@
+{
+  "enabled": false,
+  "automation_id": "isg",
+  "schedule_label": "每周一 09:00（北京时间，已暂停）",
+  "timezone": "Asia/Shanghai",
+  "first_run": "2026-09-28T09:00:00+08:00",
+  "execution": "原定时计划已由用户暂停，本次为手动更新；未恢复或新建定时任务。",
+  "baseline_as_of": "2026-09-20",
+  "last_completed_at": "2026-09-23T04:01:11.865Z",
+  "last_completed_cutoff": "2026-09-20",
+  "rules": {
+    "media_ids": [
+      "doit_all",
+      "c114_roll_all",
+      "zhiding_latest",
+      "cbinews_all_news"
+    ],
+    "attention_absolute_per_mille": 5,
+    "attention_relative_change": 0.5,
+    "minimum_weekly_hits": 5,
+    "minimum_weekly_news": 200,
+    "minimum_confirming_sources": 2,
+    "award_contract_cny": 10000000,
+    "budget_cny": 50000000,
+    "investment_cny": 1000000000
+  },
+  "rule_summary": "完整周较前4周：热度变化≥5‰且≥50%，至少2家媒体同向；成交/合同≥1000万元；重点海光、鲲鹏及项目终止、冲突。阈值为初始监测规则，可调整。",
+  "latest_alerts": [
+    {
+      "id": "quality:october-20261007",
+      "type": "quality",
+      "title": "十月可用样本已补入，覆盖缺口保留",
+      "detail": "四媒体132篇可查询；†表示覆盖不足的已采样本比例，不进入完整期比较。至顶1条日期异常、华理仅限校内、鲲鹏目录最新6月10日均明确标注。",
+      "url": "https://www.zhiding.cn/gaofei/2026/1007/3201163.shtml"
+    }
+  ],
+  "latest_status": "10月14日手动审计：检查130个信源，新增330篇媒体新闻、21条研究记录；10月1355篇。部分历史归档仍未查全。定时计划保持暂停。",
+  "paused_by_user": true,
+  "pause_confirmed_at": "2026-10-07T10:08:55Z",
+  "latest_requested_cutoff": "2026-10-14",
+  "latest_update_status": "partial",
+  "last_attempt_at": "2026-10-14T07:05:07.126729+00:00",
+  "latest_window": {
+    "start": "2026-10-01",
+    "end": "2026-10-07",
+    "baseline_start": "2026-08-31",
+    "baseline_end": "2026-09-27"
+  },
+  "previous_alerts": [
+    {
+      "id": "attention:2026-09-20:xpu",
+      "type": "attention",
+      "category": "xpu",
+      "title": "xPU / 异构加速新闻关注度上升",
+      "detail": "7.6‰，前4周1.8‰；本周8/1053，基线6/3389；不等于采用率。 本周标题集中于昇腾超节点与机架级XPU发布，部分跨媒体来自同一厂商活动。属于关注信号；优先核实客户新采购、验收和复购，不能据此认定采用率上升。",
+      "urls": [
+        "https://www.doit.com.cn/itnews/850633020461125.html",
+        "https://www.doit.com.cn/itnews/850241881731141.html",
+        "https://www.doit.com.cn/computing/849841865846853.html",
+        "https://www.doit.com.cn/itnews/849915670528069.html",
+        "https://www.c114.com.cn/news/126/a1317791.html"
+      ],
+      "url": "https://www.doit.com.cn/itnews/850633020461125.html",
+      "interpretation": "本周标题集中于昇腾超节点与机架级XPU发布，部分跨媒体来自同一厂商活动。属于关注信号；优先核实客户新采购、验收和复购，不能据此认定采用率上升。"
+    },
+    {
+      "id": "attention:2026-09-20:supernode",
+      "type": "attention",
+      "category": "supernode",
+      "title": "超节点新闻关注度上升",
+      "detail": "15.2‰，前4周2.4‰；本周16/1053，基线8/3389；不等于采用率。 标题集中于华为全联接及液冷超节点方案发布，也包含累计部署自报。建议跟进整机/互连/冷却配套机会，以明确客户项目验证，不把累计部署等同本周新增。",
+      "urls": [
+        "https://www.doit.com.cn/itnews/850633020461125.html",
+        "https://www.doit.com.cn/itnews/850241881731141.html",
+        "https://www.doit.com.cn/computing/849841865846853.html",
+        "https://www.doit.com.cn/itnews/849915670528069.html",
+        "https://www.doit.com.cn/ai/849575773282373.html"
+      ],
+      "url": "https://www.doit.com.cn/itnews/850633020461125.html",
+      "interpretation": "标题集中于华为全联接及液冷超节点方案发布，也包含累计部署自报。建议跟进整机/互连/冷却配套机会，以明确客户项目验证，不把累计部署等同本周新增。"
+    },
+    {
+      "id": "attention:2026-09-20:ai_storage",
+      "type": "attention",
+      "category": "ai_storage",
+      "title": "AI 存储新闻关注度下降",
+      "detail": "0.9‰，前4周6.2‰；本周1/1053，基线21/3389；不等于采用率。 本周仅1篇命中，新闻主题分配与少量分子均会放大比例变化。先跟踪接下来两周及买方存储采购，当前不能判断需求下降。",
+      "urls": [
+        "https://www.doit.com.cn/storage/850264174981189.html"
+      ],
+      "url": "https://www.doit.com.cn/storage/850264174981189.html",
+      "interpretation": "本周仅1篇命中，新闻主题分配与少量分子均会放大比例变化。先跟踪接下来两周及买方存储采购，当前不能判断需求下降。"
+    }
+  ]
+}
