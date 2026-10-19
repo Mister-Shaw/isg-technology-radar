@@ -1,15 +1,15 @@
 {
   "schema_version": 2,
-  "id": "source-audit-20261019",
-  "checked_at": "2026-10-19T02:41:06.398Z",
-  "audit_checked_at": "2026-10-19T02:41:06.398Z",
+  "id": "source-audit-20261019-2",
+  "checked_at": "2026-10-19T03:19:29.082Z",
+  "audit_checked_at": "2026-10-19T03:19:29.082Z",
   "audit_checked_on": "2026-10-19",
   "window": {
     "start": "2026-01-01",
     "end": "2026-10-19"
   },
   "requested_window": {
-    "start": "2026-10-13",
+    "start": "2026-10-14",
     "end": "2026-10-19",
     "timezone": "Asia/Shanghai"
   },
@@ -17,23 +17,23 @@
     "start": "2026-01-01",
     "end": "2026-10-19"
   },
-  "media_added": 608,
+  "media_added": 0,
   "media_source_count": 15,
   "media_total": 26520,
   "latest_month": "2026-10",
   "latest_month_total": 1957,
-  "research_added": 18,
-  "research_total": 1200,
+  "research_added": 81,
+  "research_total": 1281,
   "restored_milestones": 0,
   "nonarticle_exclusions": 0,
   "date_corrections": 0,
   "title_corrections": 0,
   "registered_sources": 130,
-  "sources_rechecked_this_batch": 130,
+  "sources_rechecked_this_batch": 37,
   "sources_checked": 130,
   "full_coverage": false,
-  "coverage_statement": "本轮复查130个登记来源的当前入口，并定向核验近期媒体归档、新闻和项目原文。入口检查与逐篇核验分别记录；未完成动态查询、历史枚举或访问受限的来源保留旧样本和覆盖缺口。媒体全主题标题进入既有来源分母，按来源及文章身份去重。中国市场统计无充分一手新证据时保留旧核验日期；新增全球预测保留全球口径。10月19日及十月尚未结束，不宣称全日、全月或全市场完整覆盖。",
-  "audit_url": "/source-audit-20261019.json",
+  "coverage_statement": "针对上一轮月度事件偏少进行补漏：核对10月14日至19日公开采购公告、厂商原文与扩展媒体目录，按原文、项目、阶段及标包去重。已读一手正文与待核线索分别保留；只计实际核查的来源，入口访问不等于近期公告检索完成。尚未取得的动态内容、历史分页和当日剩余时段仍是缺口；不宣称完整市场覆盖，不将采集增量当作市场增长。",
+  "audit_url": "/source-audit-20261019-2.json",
   "source_checks": [
     {
       "source_id": "thinkforce",
@@ -82,27 +82,49 @@
       "name": "中国政府采购网",
       "url": "https://www.ccgp.gov.cn/",
       "checked": true,
-      "checked_at": "2026-10-19T02:21:28.084Z",
+      "checked_at": "2026-10-19T03:05:28.310Z",
       "checked_at_precision": "timestamp",
       "checked_at_basis": "web_tool_request_completed_at",
-      "checked_at_note": "实际核验工具请求完成时刻；仅对列出文章核验，不代表注册入口或历史全量访问。",
       "history_complete": false,
-      "status": "targeted_articles_access_blocked",
-      "detail": "四个中标原文访问均返回403；搜索索引发现的项目仅存待核线索，未计已核金额。",
+      "status": "bounded_search_and_targeted_articles",
+      "detail": "分日及服务器、算力、存储、超融合、液冷、网络关键词检索。发现29条去重采购记录；10条完整读官方正文，其余保留线索。403原文未冒称全文。",
       "requested_window": {
         "start": "2026-10-14",
         "end": "2026-10-19",
         "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "定向核查已发现原文；未枚举全站分页、历史目录、动态查询或目标期全部文档，10月19日尚未结束。",
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
       "partial_current_day": true,
       "evidence_urls": [
-        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202610/t20261014_27490969.htm",
-        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202610/t20261016_27504622.htm",
-        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202610/t20261015_27499984.htm",
-        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202610/t20261016_27508233.htm",
-        "https://www.ccgp.gov.cn/"
+        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202610/t20261014_27486546.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27486811.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27489563.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261015_27497916.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261015_27502278.htm",
+        "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202610/t20261015_27496360.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261016_27506411.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202610/t20261016_27508356.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202610/t20261016_27503308.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27489559.htm",
+        "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202610/t20261017_27513185.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27485496.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27491159.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27488307.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27486311.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261016_27505265.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261015_27497726.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261015_27502351.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261015_27498347.htm",
+        "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202610/t20261016_27511471.htm",
+        "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202610/t20261016_27508631.htm",
+        "https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202610/t20261016_27509281.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202610/t20261016_27505073.htm",
+        "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202610/t20261016_27505610.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27493231.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27490341.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261016_27511129.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261016_27507691.htm"
       ]
     },
     {
@@ -257,19 +279,23 @@
       "name": "中国人民银行集中采购中心",
       "url": "https://jzcg.pbc.gov.cn/",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:08.556649+00:00",
+      "checked_at": "2026-10-19T03:01:56.585Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
       "history_complete": false,
-      "status": "access_error",
-      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "status": "partial_catalog_and_blocked_article",
+      "detail": "官方目录与索引发现智算采购，原文两次打开失败/超时；仅留1条待核线索。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
       "partial_current_day": true,
       "evidence_urls": [
+        "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/a709d69df49b409da9be222f0ddbb2ff.html",
         "https://jzcg.pbc.gov.cn/"
       ]
     },
@@ -278,20 +304,22 @@
       "name": "南开大学招投标管理办公室",
       "url": "https://nkzbb.nankai.edu.cn/",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:08.797855+00:00",
+      "checked_at": "2026-10-19T03:01:13.905Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
       "history_complete": false,
-      "status": "entry_snapshot_checked",
-      "detail": "HTTP 200，读取登记入口静态响应；标题：南开大学招投标管理办公室 - 首页。本次仅为入口状态检查。",
+      "status": "bounded_search_partial",
+      "detail": "定向检索找到10月15日智慧安全实验室结果更正，正文访问失败；保留线索，不计更正金额。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
       "partial_current_day": true,
       "evidence_urls": [
-        "https://nkzbb.nankai.edu.cn/"
+        "https://nkzbb.nankai.edu.cn/jghw/4734.chtml"
       ]
     },
     {
@@ -756,44 +784,48 @@
     },
     {
       "source_id": "siat",
-      "name": "中科院深圳先进院 · 采购公示",
+      "name": "中国科学院深圳先进技术研究院",
       "url": "https://siat.cas.cn/jggl/tzgg/",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:16.704810+00:00",
+      "checked_at": "2026-10-19T03:04:35.431Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
       "history_complete": false,
-      "status": "entry_snapshot_checked",
-      "detail": "HTTP 200，读取登记入口静态响应；标题：通知公告--中国科学院深圳先进技术研究院。本次仅为入口状态检查。",
+      "status": "bounded_search_partial",
+      "detail": "登记入口及日期关键词检索；找到第三方10月16日计算存储服务器二次采购和招标代理目录，尚未获得本次官方全文。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
       "partial_current_day": true,
-      "evidence_urls": [
-        "https://siat.cas.cn/jggl/tzgg/"
-      ]
+      "evidence_urls": []
     },
     {
       "source_id": "ecust",
-      "name": "华东理工大学 · 采购信息",
-      "url": "https://czzx.ecust.edu.cn/ejdwcggg/index.chtml",
+      "name": "华东理工大学采购信息网",
+      "url": "https://czzx.ecust.edu.cn/",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:16.786859+00:00",
+      "checked_at": "2026-10-19T03:04:01.999Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
       "history_complete": false,
-      "status": "entry_snapshot_checked",
-      "detail": "HTTP 200，读取登记入口静态响应；标题：华东理工大学采购信息网-二级单位采购公告。本次仅为入口状态检查。",
+      "status": "bounded_search_partial",
+      "detail": "官方目录发现实时优化应用服务器、智能体推理训练用服务器结果和石化课题服务器比选，后者正文完整读取。目录在缓存中日期落后，不能宣称历史全覆盖。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
       "partial_current_day": true,
       "evidence_urls": [
-        "https://czzx.ecust.edu.cn/ejdwcggg/index.chtml"
+        "https://czzx.ecust.edu.cn/ejdwcggg/8489.chtml",
+        "https://czzx.ecust.edu.cn/",
+        "https://czzx.ecust.edu.cn/"
       ]
     },
     {
@@ -864,20 +896,23 @@
       "name": "千里马招标网",
       "url": "https://www.qianlima.com/",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:19.026143+00:00",
+      "checked_at": "2026-10-19T03:04:14.771Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "实际公开页读取时间，仅部分公开内容，不代表完整正文核验。",
       "history_complete": false,
-      "status": "entry_snapshot_checked",
-      "detail": "HTTP 200，读取登记入口静态响应；标题：千里马-千里马招标网|招投标|国内招标行业门户网站。本次仅为入口状态检查。",
+      "status": "partial_article_lead_only",
+      "detail": "东方证券超融合项目商业转载可读，但项目号和中标人受限；仅留待核线索。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "单篇公开片段；未访问会员内容、没有官方原文确认。",
       "partial_current_day": true,
       "evidence_urls": [
-        "https://www.qianlima.com/"
+        "https://www.qianlima.com/bid-638297720.html"
       ]
     },
     {
@@ -1225,63 +1260,63 @@
       "name": "江苏省公共资源交易平台",
       "url": "https://jsggzy.jszwfw.gov.cn/",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:27.552643+00:00",
+      "checked_at": "2026-10-19T03:01:28.500Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
       "history_complete": false,
-      "status": "access_error",
-      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "status": "bounded_search_partial",
+      "detail": "服务器/算力及本轮日期定向搜索；结果含窗口外条目，未将10月13日重复纳入本轮。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
       "partial_current_day": true,
-      "evidence_urls": [
-        "https://jsggzy.jszwfw.gov.cn/"
-      ]
+      "evidence_urls": []
     },
     {
       "source_id": "zycg",
       "name": "中央政府采购网",
       "url": "https://www.zycg.gov.cn/",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:27.748162+00:00",
+      "checked_at": "2026-10-19T03:01:13.905Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
       "history_complete": false,
-      "status": "access_error",
-      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "status": "bounded_search_partial",
+      "detail": "定向检索入口；本轮央采信息经ccgp发现，未将入口索引搜索当全文覆盖。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
       "partial_current_day": true,
-      "evidence_urls": [
-        "https://www.zycg.gov.cn/"
-      ]
+      "evidence_urls": []
     },
     {
       "source_id": "zzcg",
       "name": "中共中央直属机关采购中心",
       "url": "https://www.zzcg.gov.cn/",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:28.174838+00:00",
+      "checked_at": "2026-10-19T03:01:28.500Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
       "history_complete": false,
-      "status": "access_error",
-      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "status": "bounded_search_partial",
+      "detail": "服务器/算力及本轮日期定向搜索未定位可核新公告，不据此推断无新增。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
       "partial_current_day": true,
-      "evidence_urls": [
-        "https://www.zzcg.gov.cn/"
-      ]
+      "evidence_urls": []
     },
     {
       "source_id": "citc",
@@ -1582,19 +1617,23 @@
       "name": "国家开发银行采购网",
       "url": "https://cg.cdb.com.cn/cmscaigou/index.html",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:33.363914+00:00",
+      "checked_at": "2026-10-19T02:59:53.598Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
       "history_complete": false,
-      "status": "entry_snapshot_checked",
-      "detail": "HTTP 200，读取登记入口静态响应；标题：国家开发银行采购网。本次仅为入口状态检查。",
+      "status": "targeted_article_fulltext_checked",
+      "detail": "读取采购与结果目录及西安机房运维补充征集；新增1条服务采购阶段记录。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
       "partial_current_day": true,
       "evidence_urls": [
+        "https://cg.cdb.com.cn/cmscaigou/45ca53ff74e74e45a2ce953ff309ef04.html",
         "https://cg.cdb.com.cn/cmscaigou/index.html"
       ]
     },
@@ -1642,45 +1681,47 @@
     },
     {
       "source_id": "szse_procurement",
-      "name": "深圳证券交易所·电子招投标系统",
-      "url": "https://ebs.szse.cn",
+      "name": "深圳证券交易所电子招投标系统",
+      "url": "https://ebs.szse.cn/cmscaigougg/index.html",
       "checked": true,
-      "checked_at": "2026-10-19T02:20:35.934Z",
+      "checked_at": "2026-10-19T03:00:59.072Z",
       "checked_at_precision": "timestamp",
       "checked_at_basis": "web_tool_request_completed_at",
-      "checked_at_note": "实际核验工具请求完成时刻；仅对列出文章核验，不代表注册入口或历史全量访问。",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
       "history_complete": false,
-      "status": "targeted_article_fulltext_checked",
-      "detail": "已读取采购候选公告全文，核对两个标段及含税报价；尚在公示期。",
+      "status": "partial_catalog_checked",
+      "detail": "读取采购目录并检索最新服务器公告；10/16应用上云两标段候选已存在，未重复新增。",
       "requested_window": {
         "start": "2026-10-14",
         "end": "2026-10-19",
         "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "定向核查已发现原文；未枚举全站分页、历史目录、动态查询或目标期全部文档，10月19日尚未结束。",
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
       "partial_current_day": true,
       "evidence_urls": [
-        "https://ebs.szse.cn/cmschengjiaogg/05dcd5bacb474cafb70e666c578e1b51.html",
         "https://ebs.szse.cn/cmscaigougg/index.html"
       ]
     },
     {
       "source_id": "abc_procurement",
-      "name": "中国农业银行·公开采购公告",
+      "name": "中国农业银行公开采购公告",
       "url": "https://www.abchina.com/cn/branch/tj/CG/BM/",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:36.209643+00:00",
+      "checked_at": "2026-10-19T02:58:41.738Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
       "history_complete": false,
-      "status": "entry_snapshot_checked",
-      "detail": "HTTP 200，读取登记入口静态响应；标题：采购报名公告_天津分行。本次仅为入口状态检查。",
+      "status": "partial_catalog_checked",
+      "detail": "已定向检索abchina及jc.abchina并读取天津采购目录；未发现可核实目标期相关新增，不能推断全行无采购。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
       "partial_current_day": true,
       "evidence_urls": [
         "https://www.abchina.com/cn/branch/tj/CG/BM/"
@@ -1688,41 +1729,49 @@
     },
     {
       "source_id": "bocd_procurement",
-      "name": "成都银行·电子采购系统",
+      "name": "成都银行电子采购系统",
       "url": "https://pcms.bocd.com.cn/cms/cmszonghangcg/index.html",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:37.139538+00:00",
+      "checked_at": "2026-10-19T03:01:40.579Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
       "history_complete": false,
-      "status": "entry_snapshot_checked",
-      "detail": "HTTP 200，读取登记入口静态响应；标题：成都银行-电子采购系统-总行采购公告。本次仅为入口状态检查。",
+      "status": "targeted_article_fulltext_checked",
+      "detail": "目录不同缓存时间有差异；经官网重要信息发布页定位GPU及虚拟化两则候选原文并核实。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
       "partial_current_day": true,
       "evidence_urls": [
+        "https://pcms.bocd.com.cn/cms/cmszongjggg/69275ab90a2940019f8c41708803f9ee.html",
+        "https://pcms.bocd.com.cn/cms/cmszongjggg/4c6137d94f2346429b5f371a8038f27f.html",
         "https://pcms.bocd.com.cn/cms/cmszonghangcg/index.html"
       ]
     },
     {
       "source_id": "cib_procurement",
-      "name": "兴业银行·集中采购管理平台",
+      "name": "兴业银行集中采购管理平台",
       "url": "https://cg.cib.com.cn/cms/default/webfile/gyszj/index.html",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:37.178185+00:00",
+      "checked_at": "2026-10-19T02:59:23.744Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
       "history_complete": false,
-      "status": "entry_snapshot_checked",
-      "detail": "HTTP 200，读取登记入口静态响应；标题：兴业银行集中采购管理平台。本次仅为入口状态检查。",
+      "status": "dynamic_catalog_incomplete",
+      "detail": "入口仅返回动态筛选框架，定向公开搜索未发现可核原文；不等于没有新增。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
       "partial_current_day": true,
       "evidence_urls": [
         "https://cg.cib.com.cn/cms/default/webfile/gyszj/index.html"
@@ -1751,20 +1800,23 @@
     },
     {
       "source_id": "ccb_procurement",
-      "name": "中国建设银行·龙集采与公开征集",
+      "name": "建设银行龙集采",
       "url": "https://ibuy.ccb.com/",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:37.657092+00:00",
+      "checked_at": "2026-10-19T03:00:59.072Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
       "history_complete": false,
-      "status": "entry_snapshot_checked",
-      "detail": "HTTP 200，读取登记入口静态响应；标题：龙集采。本次仅为入口状态检查。",
+      "status": "dynamic_catalog_incomplete",
+      "detail": "龙集采返回JavaScript应用壳；检索结果旧服务年度样本已排除，无目标期可核新增。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
       "partial_current_day": true,
       "evidence_urls": [
         "https://ibuy.ccb.com/"
@@ -1772,20 +1824,23 @@
     },
     {
       "source_id": "boc_procurement",
-      "name": "中国银行·中银智采",
+      "name": "中国银行中银智采",
       "url": "https://ctpch.fmscop.bankofchina.com/pcm#/first-page",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:37.732278+00:00",
+      "checked_at": "2026-10-19T03:00:59.072Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
       "history_complete": false,
-      "status": "entry_snapshot_checked",
-      "detail": "HTTP 200，读取登记入口静态响应；标题：中银智采。本次仅为入口状态检查。",
+      "status": "dynamic_catalog_incomplete",
+      "detail": "中银智采返回JavaScript应用壳；已补boc官网定向检索，未获得目标期相关可核正文。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
       "partial_current_day": true,
       "evidence_urls": [
         "https://ctpch.fmscop.bankofchina.com/pcm#/first-page"
@@ -1982,22 +2037,41 @@
     },
     {
       "source_id": "picc_procurement",
-      "name": "中国人保·人保e采",
+      "name": "中国人保人保e采",
       "url": "https://ec.picc.com/cms/default/webfile/index.html",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:42.765467+00:00",
+      "checked_at": "2026-10-19T03:01:56.585Z",
       "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
       "history_complete": false,
-      "status": "entry_snapshot_checked",
-      "detail": "HTTP 200，读取登记入口静态响应；标题：\"人保e采\"外网门户。本次仅为入口状态检查。",
+      "status": "targeted_article_fulltext_checked",
+      "detail": "读取首页、公告和候选目录，并核16则原文：7个服务器标包中标、2个存储失败、2个网络招标、2个防火墙候选、3个数据中心安全设备招标。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19"
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
       "partial_current_day": true,
       "evidence_urls": [
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295431259299774464.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295432015314681856.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295432594782945280.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295433004398673920.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295433616985161728.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295433823835652096.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295434141013114880.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg3/20261015/1295419360164184064.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg3/20261015/1295421020924018688.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg1/20261014/1294979904126844928.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg1/20261015/1295455318058205184.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg4/20261016/1295780527780921344.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg4/20261016/1295757847363059712.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg1/20261015/1295415204837851136.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg1/20261015/1295415548422651904.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg1/20261015/1295415809379663872.html",
         "https://ec.picc.com/cms/default/webfile/index.html"
       ]
     },
@@ -2843,6 +2917,12 @@
     }
   ],
   "audit_history": [
+    {
+      "id": "source-audit-20261019",
+      "checked_on": "2026-10-19",
+      "checked_at": "2026-10-19T02:41:06.398Z",
+      "audit_url": "/source-audit-20261019.json"
+    },
     {
       "id": "source-audit-20261014",
       "checked_on": "2026-10-14",

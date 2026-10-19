@@ -1,0 +1,3046 @@
+{
+  "schema_version": 2,
+  "id": "source-audit-20261019-2",
+  "checked_on": "2026-10-19",
+  "checked_at": "2026-10-19T03:19:29.082Z",
+  "requested_window": {
+    "start": "2026-10-14",
+    "end": "2026-10-19",
+    "timezone": "Asia/Shanghai"
+  },
+  "full_coverage": false,
+  "coverage_statement": "针对上一轮月度事件偏少进行补漏：核对10月14日至19日公开采购公告、厂商原文与扩展媒体目录，按原文、项目、阶段及标包去重。已读一手正文与待核线索分别保留；只计实际核查的来源，入口访问不等于近期公告检索完成。尚未取得的动态内容、历史分页和当日剩余时段仍是缺口；不宣称完整市场覆盖，不将采集增量当作市场增长。",
+  "summary": {
+    "registered_sources": 130,
+    "source_receipts": 130,
+    "historically_complete_sources": 0,
+    "exclusion_candidates": 0,
+    "sources_checked": 130,
+    "sources_rechecked_this_batch": 37,
+    "new_media_records": 0,
+    "new_research_records": 81,
+    "new_verified_research_records": 37,
+    "new_pending_research_records": 44,
+    "before_research_records": 1200
+  },
+  "supporting_facts": [
+    "逐源回执保留各自实际核查时间；本轮未读来源沿用旧回执，不算新核查。",
+    "共享数据库已只读核对；未覆盖共享笔记、修订或操作历史。",
+    "定时计划保持暂停；历史完整覆盖水位不推进。",
+    "上一轮只定向补18条，采购公告与扩展媒体存在漏查；本轮为明确窗口补漏，未推进全历史完整覆盖水位。",
+    "逐日核对月度记录并保留待核等级；按阶段与标包识别，929台人保服务器分7标包记录，合计金额397462810元。"
+  ],
+  "monthly_source_coverage": [],
+  "source_checks": [
+    {
+      "source_id": "thinkforce",
+      "name": "熠知电子",
+      "url": "https://www.think-force.com/site/news",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:06.469714+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：ThinkForce | 熠知-新闻动态。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.think-force.com/site/news"
+      ]
+    },
+    {
+      "source_id": "jaguarmicro",
+      "name": "云豹智能",
+      "url": "https://www.jaguarmicro.com/news1-1.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:06.470609+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：公司新闻_云豹智能。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.jaguarmicro.com/news1-1.html"
+      ]
+    },
+    {
+      "source_id": "ccgp",
+      "name": "中国政府采购网",
+      "url": "https://www.ccgp.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T03:05:28.310Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "history_complete": false,
+      "status": "bounded_search_and_targeted_articles",
+      "detail": "分日及服务器、算力、存储、超融合、液冷、网络关键词检索。发现29条去重采购记录；10条完整读官方正文，其余保留线索。403原文未冒称全文。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202610/t20261014_27486546.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27486811.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27489563.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261015_27497916.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261015_27502278.htm",
+        "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202610/t20261015_27496360.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261016_27506411.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202610/t20261016_27508356.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202610/t20261016_27503308.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27489559.htm",
+        "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202610/t20261017_27513185.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27485496.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27491159.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27488307.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27486311.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261016_27505265.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261015_27497726.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261015_27502351.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261015_27498347.htm",
+        "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202610/t20261016_27511471.htm",
+        "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202610/t20261016_27508631.htm",
+        "https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202610/t20261016_27509281.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202610/t20261016_27505073.htm",
+        "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202610/t20261016_27505610.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27493231.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261014_27490341.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261016_27511129.htm",
+        "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202610/t20261016_27507691.htm"
+      ]
+    },
+    {
+      "source_id": "intent",
+      "name": "政府采购意向公开",
+      "url": "https://cgyx.ccgp.gov.cn/cgyx/pub/projSearch",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:06.471461+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://cgyx.ccgp.gov.cn/cgyx/pub/projSearch"
+      ]
+    },
+    {
+      "source_id": "ggzy",
+      "name": "全国公共资源交易平台",
+      "url": "https://www.ggzy.gov.cn/deal/dealList.html?HEADER_DEAL_TYPE=02",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:06.471931+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.ggzy.gov.cn/deal/dealList.html?HEADER_DEAL_TYPE=02"
+      ]
+    },
+    {
+      "source_id": "ceb",
+      "name": "中国招标投标公共服务平台",
+      "url": "https://bulletin.cebpubservice.com/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:06.472780+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：HTTPError: HTTP Error 405: Not Allowed。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://bulletin.cebpubservice.com/"
+      ]
+    },
+    {
+      "source_id": "mobile",
+      "name": "中国移动采购与招标网",
+      "url": "https://b2b.10086.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:06.473106+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://b2b.10086.cn/"
+      ]
+    },
+    {
+      "source_id": "telecom",
+      "name": "中国电信阳光采购网",
+      "url": "https://caigou.chinatelecom.com.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:06.530543+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：中国电信阳光采购网。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://caigou.chinatelecom.com.cn/"
+      ]
+    },
+    {
+      "source_id": "unicom",
+      "name": "中国联通采购平台",
+      "url": "https://unibapi.unicom.net.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:07.938498+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error _ssl.c:1064: The handshake operation timed out>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://unibapi.unicom.net.cn/"
+      ]
+    },
+    {
+      "source_id": "tower",
+      "name": "中国铁塔电子采购平台",
+      "url": "https://ebid.chinatowercom.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:08.379428+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：中国铁塔电子采购平台。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://ebid.chinatowercom.cn/"
+      ]
+    },
+    {
+      "source_id": "pbc",
+      "name": "中国人民银行集中采购中心",
+      "url": "https://jzcg.pbc.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T03:01:56.585Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
+      "history_complete": false,
+      "status": "partial_catalog_and_blocked_article",
+      "detail": "官方目录与索引发现智算采购，原文两次打开失败/超时；仅留1条待核线索。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/a709d69df49b409da9be222f0ddbb2ff.html",
+        "https://jzcg.pbc.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "nankai",
+      "name": "南开大学招投标管理办公室",
+      "url": "https://nkzbb.nankai.edu.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T03:01:13.905Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "history_complete": false,
+      "status": "bounded_search_partial",
+      "detail": "定向检索找到10月15日智慧安全实验室结果更正，正文访问失败；保留线索，不计更正金额。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://nkzbb.nankai.edu.cn/jghw/4734.chtml"
+      ]
+    },
+    {
+      "source_id": "huawei",
+      "name": "华为计算",
+      "url": "https://e.huawei.com/cn/news",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "dynamic_directory_incomplete",
+      "detail": "企业业务目录正文未返回新闻项；补充system1 recency检索取得欧洲大会两条线索，正文尚未核验；10/18鲲鹏HPC与10/16昇腾液冷超节点未完成官方确认。 主新闻目录最新可见9/19，窗口内未见新闻；伙伴今日要闻10/14–16存在汇编但原始来源未逐一核验，不当华为自有产品发布依据。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://e.huawei.com/cn/news",
+        "https://www.huaweicloud.com/news.html"
+      ]
+    },
+    {
+      "source_id": "h3c",
+      "name": "新华三",
+      "url": "https://www.h3c.com/cn/About_H3C/News_Media/Company_News/default.htm",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "directory_read_partial_articles",
+      "detail": "窗口内8篇目录：3篇已核新增、ICT智能体数据中心指南已存在（refresh-h3c-agent-dc-guide-20261014）、其余4篇待核；click均报invalid arguments。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.h3c.com/cn/About_H3C/News_Media/Company_News/default.htm"
+      ]
+    },
+    {
+      "source_id": "ieisystem",
+      "name": "浪潮信息",
+      "url": "https://www.ieisystem.com/about/news/",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "directory_read_no_window_items",
+      "detail": "新闻目录最新10/13 AIStation Jev模型支持，下一篇10/12存储排名；本窗口10/14–19未见新增，未把旧稿重复收录。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.ieisystem.com/about/news/"
+      ]
+    },
+    {
+      "source_id": "lenovo",
+      "name": "联想企业购 · ISG",
+      "url": "https://www.lenovo.com.cn/wiki/brand_news/",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "partial_search_directory",
+      "detail": "目录open超时。检索获取10/14雇主奖项、10/15双十一活动、10/16TCL合作、10/17周报；TCL列待核。另10/16 article-48543实际描述2024中国算力大会旧事，排除日期重挂稿。 已读取近期文档目录；10/16新发Sovereign AI inference with IBM/NVIDIA简报，其他多为10/14–18产品指南更新，未完成详情核验，不能将指南修改日期当产品首发日期。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.lenovo.com.cn/wiki/brand_news/",
+        "https://lenovopress.lenovo.com/"
+      ]
+    },
+    {
+      "source_id": "wechat",
+      "name": "微信公众号原文",
+      "url": "https://mp.weixin.qq.com/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:10.534804+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：微信公众平台。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://mp.weixin.qq.com/"
+      ]
+    },
+    {
+      "source_id": "caict-wechat",
+      "name": "中国信通院官方微信矩阵",
+      "url": "https://service.caict.ac.cn/wxq/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:11.130664+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：微信墙。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://service.caict.ac.cn/wxq/"
+      ]
+    },
+    {
+      "source_id": "c114",
+      "name": "C114通信网 · 滚动资讯",
+      "url": "https://www.c114.com.cn/news/roll.asp",
+      "checked": true,
+      "checked_at": "2026-10-19T02:21:40.550405+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "recent_archive_window_checked",
+      "detail": "本轮读取2026-10-13至2026-10-19采集时点公开归档，返回134条；遍历到本次窗口起点。全主题标题保留，不按技术关键词筛分母。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "只核对本轮近期归档标题、日期及网址；不等于全年完整、不代表逐篇全文核实；历史缺口保留，10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.c114.com.cn/robots.txt",
+        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=13",
+        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=14",
+        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=15",
+        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=16",
+        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=17",
+        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=18",
+        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=19",
+        "https://www.c114.com.cn/news/roll.asp"
+      ]
+    },
+    {
+      "source_id": "doit",
+      "name": "DOIT · 全站新闻",
+      "url": "https://www.doit.com.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:21:14.119448+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "recent_archive_window_checked",
+      "detail": "本轮读取2026-10-13至2026-10-19采集时点公开归档，返回98条；遍历到本次窗口起点。全主题标题保留，不按技术关键词筛分母。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "只核对本轮近期归档标题、日期及网址；不等于全年完整、不代表逐篇全文核实；历史缺口保留，10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.doit.com.cn/robots.txt",
+        "https://www.doit.com.cn/api/cms/content/list?sid=809835088719941&pp=pc&ps=100&pn=1",
+        "https://www.doit.com.cn/api/cms/content/list?sid=809835088719941&pp=pc&ps=100&pn=2",
+        "https://www.doit.com.cn/"
+      ]
+    },
+    {
+      "source_id": "zhiding",
+      "name": "至顶科技 · 最新文章",
+      "url": "https://www.zhiding.cn/list-35-1-1-0-0.htm",
+      "checked": true,
+      "checked_at": "2026-10-19T02:22:20.256291+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "recent_archive_window_checked",
+      "detail": "本轮读取2026-10-13至2026-10-19采集时点公开归档，返回639条；遍历到本次窗口起点。全主题标题保留，不按技术关键词筛分母。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "只核对本轮近期归档标题、日期及网址；不等于全年完整、不代表逐篇全文核实；历史缺口保留，10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.zhiding.cn/robots.txt",
+        "https://www.zhiding.cn/list-35-1-1-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-2-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-3-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-4-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-5-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-6-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-7-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-8-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-9-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-10-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-11-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-12-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-13-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-14-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-15-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-16-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-17-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-18-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-19-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-20-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-21-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-22-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-23-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-24-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-25-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-26-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-27-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-28-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-29-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-30-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-31-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-32-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-33-0-0.htm"
+      ]
+    },
+    {
+      "source_id": "cbinews",
+      "name": "电脑商情在线 · 全部新闻栏目",
+      "url": "https://www.cbinews.com/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:22:20.263479+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "recent_archive_window_checked",
+      "detail": "本轮读取2026-10-13至2026-10-19采集时点公开归档，返回64条；遍历到本次窗口起点。全主题标题保留，不按技术关键词筛分母。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "只核对本轮近期归档标题、日期及网址；不等于全年完整、不代表逐篇全文核实；历史缺口保留，10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://api.cbinews.com/robots.txt",
+        "https://www.cbinews.com/VAR",
+        "https://www.cbinews.com/storage",
+        "https://www.cbinews.com/AI",
+        "https://www.cbinews.com/IoT",
+        "https://www.cbinews.com/Onemachine",
+        "https://www.cbinews.com/IDC",
+        "https://www.cbinews.com/cloud",
+        "https://www.cbinews.com/net",
+        "https://www.cbinews.com/software",
+        "https://www.cbinews.com/desktop",
+        "https://www.cbinews.com/channel",
+        "https://www.cbinews.com/digital",
+        "https://www.cbinews.com/"
+      ]
+    },
+    {
+      "source_id": "kunpeng",
+      "name": "鲲鹏社区 · 官方新闻",
+      "url": "https://www.hikunpeng.com/zh/activities/news",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:12.153940+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：新闻资讯-鲲鹏社区。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.hikunpeng.com/zh/activities/news"
+      ]
+    },
+    {
+      "source_id": "hygon",
+      "name": "hygon",
+      "url": "https://www.hygon.cn/news",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "dynamic_content_unavailable",
+      "detail": "官方新闻页解析0行；10/17 AI4S/HPC媒体稿仍待官方原文。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮指定来源近期目录及命中文章核查；未声明全站所有分支历史完整。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.hygon.cn/news"
+      ]
+    },
+    {
+      "source_id": "metax",
+      "name": "metax",
+      "url": "https://www.metax-tech.com/news/ndetail/ndetail/12652.html",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "partial_directory_read",
+      "detail": "官方目录可读；10/14 SGLang已有台账；10/14 MiniCPM与10/15 Step5待全文。10/14 CNCC为活动邀约，不作为已举办事件。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮指定来源近期目录及命中文章核查；未声明全站所有分支历史完整。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.metax-tech.com/news/ndetail/ndetail/12652.html"
+      ]
+    },
+    {
+      "source_id": "mthreads",
+      "name": "mthreads",
+      "url": "https://www.mthreads.com/news/353",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "partial_directory_read",
+      "detail": "最新新闻块显示10/16、10/12、9/24；10/16文章正文未解析。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮指定来源近期目录及命中文章核查；未声明全站所有分支历史完整。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.mthreads.com/news/353"
+      ]
+    },
+    {
+      "source_id": "univista",
+      "name": "合见工软 · 官方新闻",
+      "url": "https://www.univista-isg.com/site/news",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:14.364101+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：国产EDA公司合见工软官网-新闻中心。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.univista-isg.com/site/news"
+      ]
+    },
+    {
+      "source_id": "idcquan",
+      "name": "中国IDC圈 · 建设月报与新闻",
+      "url": "https://cloud.idcquan.com/",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "status": "access_blocked",
+      "detail": "公开首页请求返回 HTTP 403，未取得本轮可核的新归档。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "未完成 2026-10-14 至 2026-10-19 归档",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.idcquan.com/"
+      ]
+    },
+    {
+      "source_id": "eet_china",
+      "name": "电子工程专辑 · 数据中心与服务器",
+      "url": "https://www.eet-china.com/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:14.718144+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：TimeoutError: The read operation timed out。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。 未核实 2026-10-13 至 2026-10-19 窗口；未新增候选，不推进来源水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.eet-china.com/"
+      ]
+    },
+    {
+      "source_id": "trendforce",
+      "name": "TrendForce集邦咨询 · 新闻中心",
+      "url": "https://www.trendforce.cn/presscenter/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:15.551585+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：产业洞察-集邦咨询。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。 未核实 2026-10-13 至 2026-10-19 窗口；未新增候选，不推进来源水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.trendforce.cn/presscenter/"
+      ]
+    },
+    {
+      "source_id": "zhidx",
+      "name": "智东西 · 芯东西",
+      "url": "https://zhidx.com/",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "status": "scope_unverified",
+      "detail": "既有媒体分母限定https://zhidx.com/aichip001芯东西固定栏目。主页2条AI新闻未证明属于该栏目，已隔离，不纳入分母；固定栏目本轮未完成采集。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "未完成2026-10-14至2026-10-19芯东西固定栏目归档，不推进覆盖水位",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://zhidx.com/"
+      ]
+    },
+    {
+      "source_id": "siat",
+      "name": "中国科学院深圳先进技术研究院",
+      "url": "https://siat.cas.cn/jggl/tzgg/",
+      "checked": true,
+      "checked_at": "2026-10-19T03:04:35.431Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "history_complete": false,
+      "status": "bounded_search_partial",
+      "detail": "登记入口及日期关键词检索；找到第三方10月16日计算存储服务器二次采购和招标代理目录，尚未获得本次官方全文。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
+      "partial_current_day": true,
+      "evidence_urls": []
+    },
+    {
+      "source_id": "ecust",
+      "name": "华东理工大学采购信息网",
+      "url": "https://czzx.ecust.edu.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T03:04:01.999Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "history_complete": false,
+      "status": "bounded_search_partial",
+      "detail": "官方目录发现实时优化应用服务器、智能体推理训练用服务器结果和石化课题服务器比选，后者正文完整读取。目录在缓存中日期落后，不能宣称历史全覆盖。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://czzx.ecust.edu.cn/ejdwcggg/8489.chtml",
+        "https://czzx.ecust.edu.cn/",
+        "https://czzx.ecust.edu.cn/"
+      ]
+    },
+    {
+      "source_id": "d1net",
+      "name": "企业网 D1Net",
+      "url": "https://www.d1net.com/datacenter/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:17.449793+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：数据中心 - 企业网D1Net - 企业IT 第1门户。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.d1net.com/datacenter/"
+      ]
+    },
+    {
+      "source_id": "newrank",
+      "name": "新榜",
+      "url": "https://www.newrank.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:18.699341+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：新榜——新媒体，找新榜。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.newrank.cn/"
+      ]
+    },
+    {
+      "source_id": "gsdata",
+      "name": "清博智能",
+      "url": "https://www.gsdata.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:18.860289+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：清博智能——用科技赋能传播。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.gsdata.cn/"
+      ]
+    },
+    {
+      "source_id": "qianlima",
+      "name": "千里马招标网",
+      "url": "https://www.qianlima.com/",
+      "checked": true,
+      "checked_at": "2026-10-19T03:04:14.771Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "实际公开页读取时间，仅部分公开内容，不代表完整正文核验。",
+      "history_complete": false,
+      "status": "partial_article_lead_only",
+      "detail": "东方证券超融合项目商业转载可读，但项目号和中标人受限；仅留待核线索。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "单篇公开片段；未访问会员内容、没有官方原文确认。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.qianlima.com/bid-638297720.html"
+      ]
+    },
+    {
+      "source_id": "bidcenter",
+      "name": "采招网数据服务",
+      "url": "https://shuju.bidcenter.com.cn/zhuanti/shuju/api.shtml",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:19.619876+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：未提取标题。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://shuju.bidcenter.com.cn/zhuanti/shuju/api.shtml"
+      ]
+    },
+    {
+      "source_id": "cninfo",
+      "name": "巨潮资讯·上市公司公告",
+      "url": "https://www.cninfo.com.cn/new/commonUrl/pageOfSearch?url=disclosure/list/search",
+      "checked": true,
+      "checked_at": "2026-10-19T02:20:48.754Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "实际核验工具请求完成时刻；仅对列出文章核验，不代表注册入口或历史全量访问。",
+      "history_complete": false,
+      "status": "targeted_article_fulltext_checked",
+      "detail": "已读取申昊科技2026-073官方PDF全部5页，核对采购方向、签约时间与金额。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "定向核查已发现原文；未枚举全站分页、历史目录、动态查询或目标期全部文档，10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://static.cninfo.com.cn/finalpage/2026-10-16/1225609515.PDF",
+        "https://www.cninfo.com.cn/new/commonUrl/pageOfSearch?url=disclosure/list/search"
+      ]
+    },
+    {
+      "source_id": "odcc",
+      "name": "odcc",
+      "url": "https://www.odcc.org.cn/news/15",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "directory_read",
+      "detail": "工作组新闻目录最新10/13活动报名，随后10/12 MCCM、10/10算力报告；已读栏目未见10/14至19新增。 行业动态目录最新9/24，随后6/22；所读目录无10/14至19新增。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮指定来源近期目录及命中文章核查；未声明全站所有分支历史完整。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.odcc.org.cn/news/15",
+        "https://www.odcc.org.cn/news/16"
+      ]
+    },
+    {
+      "source_id": "caict",
+      "name": "caict",
+      "url": "https://www.caict.ac.cn/xwdt/ynxw/",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "access_failed",
+      "detail": "新闻目录返回412；技术经济期刊报告目录检索最新10/12，未以片段计核验。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮指定来源近期目录及命中文章核查；未声明全站所有分支历史完整。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.caict.ac.cn/xwdt/ynxw/"
+      ]
+    },
+    {
+      "source_id": "guangzhou",
+      "name": "广州市发展和改革委员会",
+      "url": "https://fgw.gz.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:22.353120+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://fgw.gz.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "beijing-et",
+      "name": "北京经济技术开发区",
+      "url": "https://kfqgw.beijing.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:22.960288+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://kfqgw.beijing.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "beijing",
+      "name": "北京市人民政府",
+      "url": "https://www.beijing.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:23.285055+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.beijing.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "shanghai-fin",
+      "name": "上海市金融管理局",
+      "url": "https://jrj.sh.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:23.378170+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://jrj.sh.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "changzhou",
+      "name": "常州国家高新区",
+      "url": "https://www.cznd.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:24.088764+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.cznd.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "shaoguan",
+      "name": "韶关市人民政府",
+      "url": "https://www.sg.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:24.953467+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.sg.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "changning",
+      "name": "上海市长宁区",
+      "url": "https://www.shcn.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:25.576641+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.shcn.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "wuxi",
+      "name": "无锡市人民政府",
+      "url": "https://www.wuxi.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:25.919916+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.wuxi.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "shanghai_drc",
+      "name": "上海市发展和改革委员会 · 项目审批",
+      "url": "https://fgw.sh.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:25.989486+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://fgw.sh.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "gt_procurement",
+      "name": "通用技术集团 · 采购平台",
+      "url": "https://cg.gt.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:26.213541+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：通用技术集团中心采购平台。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://cg.gt.cn/"
+      ]
+    },
+    {
+      "source_id": "gds_ir",
+      "name": "万国数据 · 投资者关系",
+      "url": "https://investors.gds-services.com/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:26.697285+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：HTTPError: HTTP Error 403: Forbidden。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://investors.gds-services.com/"
+      ]
+    },
+    {
+      "source_id": "hkex",
+      "name": "港交所披露易 · 上市公司公告",
+      "url": "https://www.hkexnews.hk/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:26.761210+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：HKEXnews。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.hkexnews.hk/"
+      ]
+    },
+    {
+      "source_id": "jiangsu_ggzy",
+      "name": "江苏省公共资源交易平台",
+      "url": "https://jsggzy.jszwfw.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T03:01:28.500Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "history_complete": false,
+      "status": "bounded_search_partial",
+      "detail": "服务器/算力及本轮日期定向搜索；结果含窗口外条目，未将10月13日重复纳入本轮。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
+      "partial_current_day": true,
+      "evidence_urls": []
+    },
+    {
+      "source_id": "zycg",
+      "name": "中央政府采购网",
+      "url": "https://www.zycg.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T03:01:13.905Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "history_complete": false,
+      "status": "bounded_search_partial",
+      "detail": "定向检索入口；本轮央采信息经ccgp发现，未将入口索引搜索当全文覆盖。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
+      "partial_current_day": true,
+      "evidence_urls": []
+    },
+    {
+      "source_id": "zzcg",
+      "name": "中共中央直属机关采购中心",
+      "url": "https://www.zzcg.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T03:01:28.500Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "history_complete": false,
+      "status": "bounded_search_partial",
+      "detail": "服务器/算力及本轮日期定向搜索未定位可核新公告，不据此推断无新增。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
+      "partial_current_day": true,
+      "evidence_urls": []
+    },
+    {
+      "source_id": "citc",
+      "name": "中招国际招标",
+      "url": "https://www.cntcitc.com.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:28.683023+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：中招国际招标有限公司。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.cntcitc.com.cn/"
+      ]
+    },
+    {
+      "source_id": "gcc",
+      "name": "全球计算联盟 GCC",
+      "url": "https://www.gccorg.com/lists/18.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:28.719830+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：联盟动态。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.gccorg.com/lists/18.html"
+      ]
+    },
+    {
+      "source_id": "octc",
+      "name": "OCTC开放计算标准工作委员会 / CESA",
+      "url": "https://www.octc.net/index.php?a=lists&c=index&catid=144&m=content",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:28.795409+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：新闻动态 - OCTC-开放计算标准工作委员会。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.octc.net/index.php?a=lists&c=index&catid=144&m=content"
+      ]
+    },
+    {
+      "source_id": "ocp",
+      "name": "Open Compute Project / China Day",
+      "url": "https://www.opencompute.org/events/past-events/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:30.158921+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：Events Archive - Open Compute Project。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.opencompute.org/events/past-events/"
+      ]
+    },
+    {
+      "source_id": "nda",
+      "name": "nda",
+      "url": "https://www.nda.gov.cn/sjj/index_mobile.html",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "directory_read",
+      "detail": "已读移动端完整近期栏目目录；10/15标准需求通知及附件原文已读，10/17考察转载追溯10/16新华社原始稿；地方大赛属非算力技术主题，不计入。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮指定来源近期目录及命中文章核查；未声明全站所有分支历史完整。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.nda.gov.cn/sjj/index_mobile.html",
+        "https://www.nda.gov.cn/sjj/zwgk/tzgg/1015/20261015155821338735862_mobile.html"
+      ]
+    },
+    {
+      "source_id": "nea",
+      "name": "国家能源局及派出监管机构",
+      "url": "https://www.nea.gov.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:30.343105+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.nea.gov.cn/"
+      ]
+    },
+    {
+      "source_id": "ndrc",
+      "name": "国家发展改革委",
+      "url": "https://www.ndrc.gov.cn/fggz/hjyzy/jnhnx/wap_index.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:30.744357+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.ndrc.gov.cn/fggz/hjyzy/jnhnx/wap_index.html"
+      ]
+    },
+    {
+      "source_id": "miit",
+      "name": "工业和信息化部",
+      "url": "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:30.766664+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/"
+      ]
+    },
+    {
+      "source_id": "samr_standards",
+      "name": "国家标准全文公开 / 全国标准信息公共服务平台",
+      "url": "https://openstd.samr.gov.cn/bzgk/std/index",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:30.811282+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://openstd.samr.gov.cn/bzgk/std/index"
+      ]
+    },
+    {
+      "source_id": "cnis_group_standards",
+      "name": "全国团体标准信息平台 / 中国标准化研究院",
+      "url": "https://www.ttbz.org.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:31.869762+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：全国团体标准信息平台 - 首页。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.ttbz.org.cn/"
+      ]
+    },
+    {
+      "source_id": "cace",
+      "name": "中国通信企业协会",
+      "url": "https://www.cace.org.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:32.861364+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：中国通信企业协会。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.cace.org.cn/"
+      ]
+    },
+    {
+      "source_id": "ccsa",
+      "name": "中国通信标准化协会",
+      "url": "https://www.ccsa.org.cn/yjbg/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:32.929466+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：中国通信标准化协会。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.ccsa.org.cn/yjbg/"
+      ]
+    },
+    {
+      "source_id": "ceesta",
+      "name": "中国电子节能技术协会 / GDC",
+      "url": "https://www.ceesta.org.cn/tzgg/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:32.942410+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：通知公告-中国电子节能技术协会。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.ceesta.org.cn/tzgg/"
+      ]
+    },
+    {
+      "source_id": "ccua",
+      "name": "中国计算机用户协会数据中心分会",
+      "url": "https://m.cra-ccua.org.cn/site/term/18.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:33.358648+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：首页_中国计算机用户协会数据中心分会。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://m.cra-ccua.org.cn/site/term/18.html"
+      ]
+    },
+    {
+      "source_id": "cdb_procurement",
+      "name": "国家开发银行采购网",
+      "url": "https://cg.cdb.com.cn/cmscaigou/index.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:59:53.598Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
+      "history_complete": false,
+      "status": "targeted_article_fulltext_checked",
+      "detail": "读取采购与结果目录及西安机房运维补充征集；新增1条服务采购阶段记录。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://cg.cdb.com.cn/cmscaigou/45ca53ff74e74e45a2ce953ff309ef04.html",
+        "https://cg.cdb.com.cn/cmscaigou/index.html"
+      ]
+    },
+    {
+      "source_id": "csair_procurement",
+      "name": "中国南方航空采购招标网",
+      "url": "https://csbidding.csair.cn/cms/nfhk/webfile/zbcg/zbgg/index.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:33.398880+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：中国南方航空采购招标网。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://csbidding.csair.cn/cms/nfhk/webfile/zbcg/zbgg/index.html"
+      ]
+    },
+    {
+      "source_id": "chinapost_procurement",
+      "name": "中国邮政集团·采购公告",
+      "url": "https://www.chinapost.com.cn/cn/category/1813/137331-1.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:34.759107+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：未提取标题。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.chinapost.com.cn/cn/category/1813/137331-1.html"
+      ]
+    },
+    {
+      "source_id": "szse_procurement",
+      "name": "深圳证券交易所电子招投标系统",
+      "url": "https://ebs.szse.cn/cmscaigougg/index.html",
+      "checked": true,
+      "checked_at": "2026-10-19T03:00:59.072Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
+      "history_complete": false,
+      "status": "partial_catalog_checked",
+      "detail": "读取采购目录并检索最新服务器公告；10/16应用上云两标段候选已存在，未重复新增。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://ebs.szse.cn/cmscaigougg/index.html"
+      ]
+    },
+    {
+      "source_id": "abc_procurement",
+      "name": "中国农业银行公开采购公告",
+      "url": "https://www.abchina.com/cn/branch/tj/CG/BM/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:58:41.738Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
+      "history_complete": false,
+      "status": "partial_catalog_checked",
+      "detail": "已定向检索abchina及jc.abchina并读取天津采购目录；未发现可核实目标期相关新增，不能推断全行无采购。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.abchina.com/cn/branch/tj/CG/BM/"
+      ]
+    },
+    {
+      "source_id": "bocd_procurement",
+      "name": "成都银行电子采购系统",
+      "url": "https://pcms.bocd.com.cn/cms/cmszonghangcg/index.html",
+      "checked": true,
+      "checked_at": "2026-10-19T03:01:40.579Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
+      "history_complete": false,
+      "status": "targeted_article_fulltext_checked",
+      "detail": "目录不同缓存时间有差异；经官网重要信息发布页定位GPU及虚拟化两则候选原文并核实。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://pcms.bocd.com.cn/cms/cmszongjggg/69275ab90a2940019f8c41708803f9ee.html",
+        "https://pcms.bocd.com.cn/cms/cmszongjggg/4c6137d94f2346429b5f371a8038f27f.html",
+        "https://pcms.bocd.com.cn/cms/cmszonghangcg/index.html"
+      ]
+    },
+    {
+      "source_id": "cib_procurement",
+      "name": "兴业银行集中采购管理平台",
+      "url": "https://cg.cib.com.cn/cms/default/webfile/gyszj/index.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:59:23.744Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
+      "history_complete": false,
+      "status": "dynamic_catalog_incomplete",
+      "detail": "入口仅返回动态筛选框架，定向公开搜索未发现可核原文；不等于没有新增。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://cg.cib.com.cn/cms/default/webfile/gyszj/index.html"
+      ]
+    },
+    {
+      "source_id": "crc_procurement",
+      "name": "华润守正采购交易平台",
+      "url": "https://szecp.com.cn/index.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:37.474178+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：华润守正采购交易平台。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://szecp.com.cn/index.html"
+      ]
+    },
+    {
+      "source_id": "ccb_procurement",
+      "name": "建设银行龙集采",
+      "url": "https://ibuy.ccb.com/",
+      "checked": true,
+      "checked_at": "2026-10-19T03:00:59.072Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
+      "history_complete": false,
+      "status": "dynamic_catalog_incomplete",
+      "detail": "龙集采返回JavaScript应用壳；检索结果旧服务年度样本已排除，无目标期可核新增。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://ibuy.ccb.com/"
+      ]
+    },
+    {
+      "source_id": "boc_procurement",
+      "name": "中国银行中银智采",
+      "url": "https://ctpch.fmscop.bankofchina.com/pcm#/first-page",
+      "checked": true,
+      "checked_at": "2026-10-19T03:00:59.072Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
+      "history_complete": false,
+      "status": "dynamic_catalog_incomplete",
+      "detail": "中银智采返回JavaScript应用壳；已补boc官网定向检索，未获得目标期相关可核正文。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://ctpch.fmscop.bankofchina.com/pcm#/first-page"
+      ]
+    },
+    {
+      "source_id": "guangdong_energy",
+      "name": "广东省能源局·通知公告/节能审查",
+      "url": "https://drc.gd.gov.cn/snyj/tzgg/index.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:37.822348+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://drc.gd.gov.cn/snyj/tzgg/index.html"
+      ]
+    },
+    {
+      "source_id": "inner_mongolia_energy",
+      "name": "内蒙古自治区能源局·通知公告",
+      "url": "https://nyj.nmg.gov.cn/tzgg/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:38.802412+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://nyj.nmg.gov.cn/tzgg/"
+      ]
+    },
+    {
+      "source_id": "wuhu_data",
+      "name": "芜湖市数据资源管理局·部门文件",
+      "url": "https://sjzyj.wuhu.gov.cn/public/column/6596821?catIds=6732121,6732131&type=6",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:39.666187+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://sjzyj.wuhu.gov.cn/public/column/6596821?catIds=6732121,6732131&type=6"
+      ]
+    },
+    {
+      "source_id": "chongqing_drc",
+      "name": "重庆市发展改革委·审批核准备案信息",
+      "url": "https://fzggw.cq.gov.cn/zwgk/zfxxgkml/sphzbaxx/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:40.415547+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://fzggw.cq.gov.cn/zwgk/zfxxgkml/sphzbaxx/"
+      ]
+    },
+    {
+      "source_id": "qingyang_natural_resources",
+      "name": "庆阳市自然资源局·公告公示",
+      "url": "https://zrzy.zgqingyang.gov.cn/xwzx/gggs/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:40.976834+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://zrzy.zgqingyang.gov.cn/xwzx/gggs/"
+      ]
+    },
+    {
+      "source_id": "ningxia_miit_energy",
+      "name": "宁夏工信厅·工业节能",
+      "url": "https://gxt.nx.gov.cn/zwgk/fdzdgknr/zdlygk/gyjn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:40.977980+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://gxt.nx.gov.cn/zwgk/fdzdgknr/zdlygk/gyjn/"
+      ]
+    },
+    {
+      "source_id": "zhongwei_planning",
+      "name": "中卫市自然资源局·规划许可",
+      "url": "https://www.nxzw.gov.cn/zwgk/bmxxgkml/szrzyj/fdzdgknr_49539/zsydys_zrzyj/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:40.978269+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.nxzw.gov.cn/zwgk/bmxxgkml/szrzyj/fdzdgknr_49539/zsydys_zrzyj/"
+      ]
+    },
+    {
+      "source_id": "guian_environment",
+      "name": "贵安新区生态环境局·项目环评",
+      "url": "https://www.gaxq.gov.cn/zfbm/gaxqsthjj_5790529/zfxxgk_5790514/fdzdgknr_5790517/xmhp_5791889/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:41.623925+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.gaxq.gov.cn/zfbm/gaxqsthjj_5790529/zfxxgk_5790514/fdzdgknr_5790517/xmhp_5791889/"
+      ]
+    },
+    {
+      "source_id": "sinopec_procurement",
+      "name": "中国石化物资采购电子商务平台",
+      "url": "https://ec.sinopec.com/supp/index.shtml",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:42.347925+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：HTTPError: HTTP Error 403: Forbidden。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://ec.sinopec.com/supp/index.shtml"
+      ]
+    },
+    {
+      "source_id": "picc_procurement",
+      "name": "中国人保人保e采",
+      "url": "https://ec.picc.com/cms/default/webfile/index.html",
+      "checked": true,
+      "checked_at": "2026-10-19T03:01:56.585Z",
+      "checked_at_precision": "timestamp",
+      "checked_at_basis": "web_tool_request_completed_at",
+      "checked_at_note": "工具请求实际完成时刻，表示本次定向核查，不代表全站或全期完整访问。",
+      "history_complete": false,
+      "status": "targeted_article_fulltext_checked",
+      "detail": "读取首页、公告和候选目录，并核16则原文：7个服务器标包中标、2个存储失败、2个网络招标、2个防火墙候选、3个数据中心安全设备招标。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "定向域名检索、公开目录与发现文章核验；未遍历全部分支和历史分页，部分动态站点不可解析。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295431259299774464.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295432015314681856.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295432594782945280.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295433004398673920.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295433616985161728.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295433823835652096.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg5/20261015/1295434141013114880.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg3/20261015/1295419360164184064.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg3/20261015/1295421020924018688.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg1/20261014/1294979904126844928.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg1/20261015/1295455318058205184.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg4/20261016/1295780527780921344.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg4/20261016/1295757847363059712.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg1/20261015/1295415204837851136.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg1/20261015/1295415548422651904.html",
+        "https://ec.picc.com/cms/default/webfile/ywgg1/20261015/1295415809379663872.html",
+        "https://ec.picc.com/cms/default/webfile/index.html"
+      ]
+    },
+    {
+      "source_id": "sugon",
+      "name": "sugon",
+      "url": "https://www.sugon.com/about/news?category_id=1&time=0",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "directory_read",
+      "detail": "近期目录最新10/18，随后10/13、10/12；10/18十大应用已读正文。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮指定来源近期目录及命中文章核查；未声明全站所有分支历史完整。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.sugon.com/about/news?category_id=1&time=0",
+        "https://www.sugon.com/cut?id=3029&nav_id=48"
+      ]
+    },
+    {
+      "source_id": "xfusion",
+      "name": "超聚变",
+      "url": "https://www.xfusion.com/cn/news",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:43.010171+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：新闻中心 Archive - 超聚变。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.xfusion.com/cn/news"
+      ]
+    },
+    {
+      "source_id": "zte",
+      "name": "中兴通讯",
+      "url": "https://www.zte.com.cn/china/about/news.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:43.603780+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：新闻动态-中兴新闻资讯-中兴通讯官网。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.zte.com.cn/china/about/news.html"
+      ]
+    },
+    {
+      "source_id": "phytium",
+      "name": "飞腾",
+      "url": "https://www.phytium.com.cn/homepage/news/list",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:43.605703+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：数字飞腾门户。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.phytium.com.cn/homepage/news/list"
+      ]
+    },
+    {
+      "source_id": "biren",
+      "name": "birentech",
+      "url": "https://sgc-prod.birentech.com/news/",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "directory_read",
+      "detail": "已实际读取备用官方企业新闻目录，最新3篇均为10/10，随后9/10；所读目录无10/14至19新增，10/10三项已在台账。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮指定来源近期目录及命中文章核查；未声明全站所有分支历史完整。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://sgc-prod.birentech.com/news/"
+      ]
+    },
+    {
+      "source_id": "huaqin",
+      "name": "华勤技术",
+      "url": "https://www.huaqin.com/about/news",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:44.141636+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：新闻资讯 - 华勤技术-智能产品_ODM_消费电子。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.huaqin.com/about/news"
+      ]
+    },
+    {
+      "source_id": "digitalchina",
+      "name": "神州数码／神州鲲泰",
+      "url": "https://shenzhoukuntai.com/news.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:44.396927+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：新闻中心。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://shenzhoukuntai.com/news.html"
+      ]
+    },
+    {
+      "source_id": "baidu_cloud",
+      "name": "百度智能云",
+      "url": "https://cloud.baidu.com/news/news",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:45.280931+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：新闻资讯-百度智能云。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://cloud.baidu.com/news/news"
+      ]
+    },
+    {
+      "source_id": "athub",
+      "name": "数据港",
+      "url": "https://www.athub.com/index/Lists/index/catid/22.html?page=1",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:45.371589+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：数据港-最新动态-上海数据港股份有限公司。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.athub.com/index/Lists/index/catid/22.html?page=1"
+      ]
+    },
+    {
+      "source_id": "chindata",
+      "name": "秦淮数据",
+      "url": "https://www.chindatagroup.com/media/news.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:45.417263+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：新闻 |秦淮数据集团最新动态-秦淮数据集团。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.chindatagroup.com/media/news.html"
+      ]
+    },
+    {
+      "source_id": "vnet",
+      "name": "世纪互联",
+      "url": "https://ir.21vianet.com/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:45.661944+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：HTTPError: HTTP Error 403: Forbidden。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://ir.21vianet.com/"
+      ]
+    },
+    {
+      "source_id": "chinabyte",
+      "name": "比特网／天极传媒",
+      "url": "https://server.chinabyte.com/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:46.110099+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：企业计算_比特网。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。 未核实 2026-10-13 至 2026-10-19 窗口；未新增候选，不推进来源水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://server.chinabyte.com/"
+      ]
+    },
+    {
+      "source_id": "it168",
+      "name": "IT168／ITPUB",
+      "url": "https://server.it168.com/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:46.648127+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：服务器·存储_IT168。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。 未核实 2026-10-13 至 2026-10-19 窗口；未新增候选，不推进来源水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://server.it168.com/"
+      ]
+    },
+    {
+      "source_id": "leiphone",
+      "name": "雷峰网",
+      "url": "https://m.leiphone.com/category/chips",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "status": "fetch_timeout",
+      "detail": "公开首页抓取超时，未取得本轮可核的新归档。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "未完成 2026-10-14 至 2026-10-19 归档",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.leiphone.com/"
+      ]
+    },
+    {
+      "source_id": "cena",
+      "name": "中国电子报",
+      "url": "https://epaper.cena.com.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:47.149403+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error _ssl.c:1064: The handshake operation timed out>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。 未核实 2026-10-13 至 2026-10-19 窗口；未新增候选，不推进来源水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://epaper.cena.com.cn/"
+      ]
+    },
+    {
+      "source_id": "cww",
+      "name": "通信世界",
+      "url": "https://www.cww.com.cn/index.jsp",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:47.356553+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.cww.com.cn'. (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.cww.com.cn/index.jsp"
+      ]
+    },
+    {
+      "source_id": "dcd",
+      "name": "DataCenterDynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:47.543077+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：News - DCD。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。 未核实 2026-10-13 至 2026-10-19 窗口；未新增候选，不推进来源水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.datacenterdynamics.com/en/news/"
+      ]
+    },
+    {
+      "source_id": "intel",
+      "name": "英特尔",
+      "url": "https://www.intel.cn/content/www/cn/zh/newsroom/home.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:47.708594+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.intel.cn/content/www/cn/zh/newsroom/home.html"
+      ]
+    },
+    {
+      "source_id": "nvidia",
+      "name": "英伟达",
+      "url": "https://blogs.nvidia.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:48.353113+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：NVIDIA 英伟达博客。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://blogs.nvidia.cn/"
+      ]
+    },
+    {
+      "source_id": "amd",
+      "name": "AMD",
+      "url": "https://www.amd.com/zh-cn/newsroom/press-releases.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:48.476398+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：Press Releases。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.amd.com/zh-cn/newsroom/press-releases.html"
+      ]
+    },
+    {
+      "source_id": "arm",
+      "name": "Arm",
+      "url": "https://newsroom.arm.com/news",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:48.830548+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)>。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://newsroom.arm.com/news"
+      ]
+    },
+    {
+      "source_id": "kunlunxin",
+      "name": "kunlunxin",
+      "url": "https://www.kunlunxin.com/news",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "directory_read",
+      "detail": "近期目录最新10/15，随后10/10；10/15新技术适配已读正文。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮指定来源近期目录及命中文章核查；未声明全站所有分支历史完整。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.kunlunxin.com/news",
+        "https://www.kunlunxin.com/news/5193.html"
+      ]
+    },
+    {
+      "source_id": "iluvatar",
+      "name": "iluvatar",
+      "url": "https://www.iluvatar.com/news",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "dynamic_content_unavailable",
+      "detail": "页面可读导航但新闻列表动态内容未解析；10/14招聘反诈声明与本题技术范围无关。开发者目录https://developer.iluvatar.com/解析0行，仍保留动态读取缺口。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮指定来源近期目录及命中文章核查；未声明全站所有分支历史完整。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.iluvatar.com/news"
+      ]
+    },
+    {
+      "source_id": "loongson",
+      "name": "loongson",
+      "url": "https://www.loongson.cn/news/list",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "directory_read",
+      "detail": "已读近期目录，最新9/29，随后9/24、9/21；所读目录无10/14至19条目。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮指定来源近期目录及命中文章核查；未声明全站所有分支历史完整。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.loongson.cn/news/list"
+      ]
+    },
+    {
+      "source_id": "kunlunit",
+      "name": "河南昆仑技术",
+      "url": "https://www.kunlunit.com/news",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:49.842920+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：新闻公告- 河南昆仑技术有限公司。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.kunlunit.com/news"
+      ]
+    },
+    {
+      "source_id": "inspurcloud",
+      "name": "inspurcloud",
+      "url": "https://cloud.inspur.com/about-inspurcloud/about-us/news/index.html",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "checked_at_basis": "actual_source_request_day",
+      "history_complete": false,
+      "status": "directory_read",
+      "detail": "已读浪潮云新闻资讯最新9条（不含置顶），日期9/28至8/29；所读目录无10/14至19新增。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "本轮指定来源近期目录及命中文章核查；未声明全站所有分支历史完整。10月19日尚未结束。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://cloud.inspur.com/about-inspurcloud/about-us/news/index.html"
+      ]
+    },
+    {
+      "source_id": "aliyun",
+      "name": "阿里云／平头哥",
+      "url": "https://ue.aliyun.com/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:51.522596+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：阿里云政企业务-阿里云。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://ue.aliyun.com/"
+      ]
+    },
+    {
+      "source_id": "sinnet",
+      "name": "光环新网／光环云",
+      "url": "https://www.sinnet.com.cn/news.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:52.001464+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：北京光环新网科技股份有限公司 Beijing Sinnet Technology Co., Ltd.。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.sinnet.com.cn/news.html"
+      ]
+    },
+    {
+      "source_id": "supermicro",
+      "name": "Supermicro",
+      "url": "https://www.supermicro.com/en/newsroom/pressreleases",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:52.034115+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：HTTPError: HTTP Error 403: Forbidden。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.supermicro.com/en/newsroom/pressreleases"
+      ]
+    },
+    {
+      "source_id": "hpe",
+      "name": "HPE",
+      "url": "https://www.hpe.com/us/en/newsroom.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:52.424294+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "access_error",
+      "detail": "登记入口请求未完成：TimeoutError: The read operation timed out。旧采集记录和历史覆盖状态保留。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.hpe.com/us/en/newsroom.html"
+      ]
+    },
+    {
+      "source_id": "dell",
+      "name": "Dell Technologies",
+      "url": "https://www.dell.com/en-us/dt/corporate/newsroom.htm",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:53.009739+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：Newsroom | Dell USA。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.dell.com/en-us/dt/corporate/newsroom.htm"
+      ]
+    },
+    {
+      "source_id": "ithome",
+      "name": "IT之家／软媒",
+      "url": "https://www.ithome.com/list/",
+      "checked": true,
+      "checked_at": "2026-10-19",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "status": "stale_archive_response",
+      "detail": "复核既有服务器+数据中心标签口径。服务器标签返回标注3个月前的缓存，首条日期06月16日；数据中心标签返回标注上月的缓存，主体08月17—29日，首条相对日期今日19:26无法判定真实发布日。未获得2026-10-14至19可用栏目样本；首页75条隔离，不纳入同源分母。",
+      "requested_window": {
+        "start": "2026-10-14",
+        "end": "2026-10-19",
+        "timezone": "Asia/Shanghai"
+      },
+      "verified_window": null,
+      "verified_window_limits": "未完成2026-10-14至2026-10-19标签归档，不推进覆盖水位",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.ithome.com/tags/服务器/",
+        "https://www.ithome.com/tags/数据中心/"
+      ]
+    },
+    {
+      "source_id": "glp",
+      "name": "普洛斯GLP",
+      "url": "https://www.glp.com.cn/business/data_center.html",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:54.172949+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：大数据基础设施服务商|数据中心运营商|第三方数据中心服务商|数据中心解决方案。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.glp.com.cn/business/data_center.html"
+      ]
+    },
+    {
+      "source_id": "aofei",
+      "name": "奥飞数据",
+      "url": "https://www.ofidc.com/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:54.432815+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：广东奥飞数据科技股份有限公司——云计算与大数据应用基础服务提供商。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.ofidc.com/"
+      ]
+    },
+    {
+      "source_id": "eworks",
+      "name": "e-works",
+      "url": "https://news.e-works.net.cn/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:54.705207+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：记者观察_智能制造新闻。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://news.e-works.net.cn/"
+      ]
+    },
+    {
+      "source_id": "dfsx",
+      "name": "东方算芯",
+      "url": "https://www.dfsx.com/news",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:55.202022+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：新闻-东方算芯 - 算连世界 芯耀东方。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.dfsx.com/news"
+      ]
+    },
+    {
+      "source_id": "evas",
+      "name": "奕行智能 EVAS",
+      "url": "https://www.evas.ai/newsroom",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:55.282116+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：新闻中心 | 奕行智能科技 EVAS Intelligence。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.evas.ai/newsroom"
+      ]
+    },
+    {
+      "source_id": "ksyun",
+      "name": "金山云",
+      "url": "https://www.ksyun.com/cms/noticelist_p1_t1",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:56.908978+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：官网公告-金山云。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.ksyun.com/cms/noticelist_p1_t1"
+      ]
+    },
+    {
+      "source_id": "tencent",
+      "name": "腾讯／腾讯云",
+      "url": "https://www.tencent.com/newsroom/all-news/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:57.158932+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：All news - Tencent。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.tencent.com/newsroom/all-news/"
+      ]
+    },
+    {
+      "source_id": "cctime",
+      "name": "飞象网",
+      "url": "https://www.cctime.com/",
+      "checked": true,
+      "checked_at": "2026-10-19T02:24:58.189846+00:00",
+      "checked_at_precision": "timestamp",
+      "history_complete": false,
+      "status": "entry_snapshot_checked",
+      "detail": "HTTP 200，读取登记入口静态响应；标题：������ - ͨ����ÿ����ϵ���վ。本次仅为入口状态检查。",
+      "requested_window": {
+        "start": "2026-10-13",
+        "end": "2026-10-19"
+      },
+      "verified_window": null,
+      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。 未核实 2026-10-13 至 2026-10-19 窗口；未新增候选，不推进来源水位。",
+      "partial_current_day": true,
+      "evidence_urls": [
+        "https://www.cctime.com/"
+      ]
+    }
+  ],
+  "query_receipts": [
+    {
+      "kind": "daily_record_reconciliation",
+      "basis": "event_date_or_published_date; records not independent events",
+      "rows": [
+        {
+          "date": "2026-10-14",
+          "before_records": 9,
+          "after_records": 24,
+          "new_verified_records": 7,
+          "new_pending_records": 8
+        },
+        {
+          "date": "2026-10-15",
+          "before_records": 3,
+          "after_records": 37,
+          "new_verified_records": 20,
+          "new_pending_records": 14
+        },
+        {
+          "date": "2026-10-16",
+          "before_records": 8,
+          "after_records": 30,
+          "new_verified_records": 8,
+          "new_pending_records": 14
+        },
+        {
+          "date": "2026-10-17",
+          "before_records": 0,
+          "after_records": 4,
+          "new_verified_records": 0,
+          "new_pending_records": 4
+        },
+        {
+          "date": "2026-10-18",
+          "before_records": 0,
+          "after_records": 1,
+          "new_verified_records": 1,
+          "new_pending_records": 0
+        },
+        {
+          "date": "2026-10-19",
+          "before_records": 0,
+          "after_records": 3,
+          "new_verified_records": 0,
+          "new_pending_records": 3
+        }
+      ]
+    },
+    {
+      "scope": "中国移动、中国电信、中国联通、中国铁塔以及电力能源央企服务器、存储、算力租赁、网络设备采购事件",
+      "status": "search_tool_interrupted_no_results",
+      "queries": [
+        "\"2026-10-16\" \"服务器\" \"移动\"",
+        "\"2026-10-15\" \"服务器\" \"电信\"",
+        "\"2026-10-14\" \"服务器\" \"联通\"",
+        "\"2026年10月\" \"服务器\" \"中标\" \"华能\""
+      ],
+      "recency_days": 7,
+      "detail": "首轮批量检索调用挂起约913.9秒后中止，没有收到检索结果。没有完成平台逐日查询与查重，新增0条不能解释为该范围无事件，覆盖状态为未完成。"
+    }
+  ],
+  "pending_candidates": [
+    {
+      "source_id": "nda",
+      "title": "2026第二批数据标准需求",
+      "reason": "通知10/15发布、落款10/11，保留日期差异；不作为已正式发布标准。"
+    },
+    {
+      "source_id": "flagos",
+      "title": "FlagOS 2.2发布日期需回溯",
+      "url": "https://flagos.io/resourcedownload?lang=en",
+      "reason": "官方搜索索引标2.2.0 Released Sep 30, 2026；10/18媒体稿不宜直接当10月新版本发布。官方动态页实际打开0行，尚未完成原文核验，不作为verified新增。"
+    },
+    {
+      "id": "lead-h3c-hikrobot-amr-20261014",
+      "title": "新华三携手海康机器人：打造AMR无线网络方案，漫游时延低至60ms",
+      "url": "https://www.h3c.com/cn/About_H3C/News_Media/Company_News/default.htm",
+      "reason": "AMR无线接入或泛合作大会标题，无足够服务器/数据中心具体技术事实；不为增量计数。"
+    },
+    {
+      "id": "lead-huawei-europe-conference-20261015",
+      "title": "华为携手客户与伙伴，共建更智能、绿色的欧洲",
+      "url": "https://e.huawei.com/cn/news/2026/branding/customers-partners-europe-huaweiconnect-florence",
+      "reason": "AMR无线接入或泛合作大会标题，无足够服务器/数据中心具体技术事实；不为增量计数。"
+    }
+  ]
+}
