@@ -1,15 +1,15 @@
 {
   "schema_version": 2,
-  "id": "source-audit-20261019-2",
-  "checked_at": "2026-10-19T03:19:29.082Z",
-  "audit_checked_at": "2026-10-19T03:19:29.082Z",
+  "id": "source-audit-20261019-3",
+  "checked_at": "2026-10-19T06:17:28.369Z",
+  "audit_checked_at": "2026-10-19T06:17:28.369Z",
   "audit_checked_on": "2026-10-19",
   "window": {
     "start": "2026-01-01",
     "end": "2026-10-19"
   },
   "requested_window": {
-    "start": "2026-10-14",
+    "start": "2026-01-01",
     "end": "2026-10-19",
     "timezone": "Asia/Shanghai"
   },
@@ -22,18 +22,18 @@
   "media_total": 26520,
   "latest_month": "2026-10",
   "latest_month_total": 1957,
-  "research_added": 81,
-  "research_total": 1281,
+  "research_added": 12,
+  "research_total": 1293,
   "restored_milestones": 0,
   "nonarticle_exclusions": 0,
   "date_corrections": 0,
   "title_corrections": 0,
   "registered_sources": 130,
-  "sources_rechecked_this_batch": 37,
+  "sources_rechecked_this_batch": 6,
   "sources_checked": 130,
   "full_coverage": false,
-  "coverage_statement": "针对上一轮月度事件偏少进行补漏：核对10月14日至19日公开采购公告、厂商原文与扩展媒体目录，按原文、项目、阶段及标包去重。已读一手正文与待核线索分别保留；只计实际核查的来源，入口访问不等于近期公告检索完成。尚未取得的动态内容、历史分页和当日剩余时段仍是缺口；不宣称完整市场覆盖，不将采集增量当作市场增长。",
-  "audit_url": "/source-audit-20261019-2.json",
+  "coverage_statement": "本轮核对市场风向、月度事件、研报分析、来源与采集及日志的数据链路与历史样本。补入已采新闻漏转的12条项目记录，保留原始公告与媒体待核的证据区别；修复已确认的展示和信息同步问题。核查范围为站内全量数据对账及定向原文复核，不代表外部来源全年公告已穷尽。",
+  "audit_url": "/source-audit-20261019-3.json",
   "source_checks": [
     {
       "source_id": "thinkforce",
@@ -453,29 +453,24 @@
       "name": "C114通信网 · 滚动资讯",
       "url": "https://www.c114.com.cn/news/roll.asp",
       "checked": true,
-      "checked_at": "2026-10-19T02:21:40.550405+00:00",
+      "checked_at": "2026-10-19T06:10:54.550Z",
       "checked_at_precision": "timestamp",
       "history_complete": false,
-      "status": "recent_archive_window_checked",
-      "detail": "本轮读取2026-10-13至2026-10-19采集时点公开归档，返回134条；遍历到本次窗口起点。全主题标题保留，不按技术关键词筛分母。",
+      "status": "selected_historical_articles_verified",
+      "detail": "本次逐栏对账回查5条历史项目记录所列原文。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19",
-        "timezone": "Asia/Shanghai"
+        "start": "2026-01-01",
+        "end": "2026-10-19"
       },
       "verified_window": null,
-      "verified_window_limits": "只核对本轮近期归档标题、日期及网址；不等于全年完整、不代表逐篇全文核实；历史缺口保留，10月19日尚未结束。",
+      "verified_window_limits": "仅核对所列历史项目正文和已有台账去重；没有完成该来源全年归档枚举。",
       "partial_current_day": true,
       "evidence_urls": [
-        "https://www.c114.com.cn/robots.txt",
-        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=13",
-        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=14",
-        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=15",
-        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=16",
-        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=17",
-        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=18",
-        "https://www.c114.com.cn/news/roll.asp?y=2026&m=10&d=19",
-        "https://www.c114.com.cn/news/roll.asp"
+        "https://www.c114.com.cn/news/16/a1305251.html",
+        "https://www.c114.com.cn/news/118/a1307284.html",
+        "https://finance.sina.com.cn/tech/roll/2026-04-07/doc-inhtsezh2259143.shtml",
+        "https://www.c114.com.cn/news/119/a1310262.html",
+        "https://www.c114.com.cn/news/16/a1311862.html"
       ]
     },
     {
@@ -508,54 +503,20 @@
       "name": "至顶科技 · 最新文章",
       "url": "https://www.zhiding.cn/list-35-1-1-0-0.htm",
       "checked": true,
-      "checked_at": "2026-10-19T02:22:20.256291+00:00",
+      "checked_at": "2026-10-19T06:10:54.550Z",
       "checked_at_precision": "timestamp",
       "history_complete": false,
-      "status": "recent_archive_window_checked",
-      "detail": "本轮读取2026-10-13至2026-10-19采集时点公开归档，返回639条；遍历到本次窗口起点。全主题标题保留，不按技术关键词筛分母。",
+      "status": "selected_historical_articles_verified",
+      "detail": "本次逐栏对账回查2条历史项目记录所列原文。",
       "requested_window": {
-        "start": "2026-10-13",
-        "end": "2026-10-19",
-        "timezone": "Asia/Shanghai"
+        "start": "2026-01-01",
+        "end": "2026-10-19"
       },
       "verified_window": null,
-      "verified_window_limits": "只核对本轮近期归档标题、日期及网址；不等于全年完整、不代表逐篇全文核实；历史缺口保留，10月19日尚未结束。",
+      "verified_window_limits": "仅核对所列历史项目正文和已有台账去重；没有完成该来源全年归档枚举。",
       "partial_current_day": true,
       "evidence_urls": [
-        "https://www.zhiding.cn/robots.txt",
-        "https://www.zhiding.cn/list-35-1-1-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-2-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-3-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-4-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-5-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-6-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-7-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-8-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-9-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-10-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-11-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-12-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-13-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-14-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-15-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-16-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-17-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-18-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-19-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-20-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-21-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-22-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-23-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-24-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-25-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-26-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-27-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-28-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-29-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-30-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-31-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-32-0-0.htm",
-        "https://www.zhiding.cn/list-35-1-33-0-0.htm"
+        "https://www.zhiding.cn/ai-inspired/2026/0805/3195448.shtml"
       ]
     },
     {
@@ -724,20 +685,20 @@
       "name": "电子工程专辑 · 数据中心与服务器",
       "url": "https://www.eet-china.com/",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:14.718144+00:00",
+      "checked_at": "2026-10-19T06:10:54.550Z",
       "checked_at_precision": "timestamp",
       "history_complete": false,
-      "status": "access_error",
-      "detail": "登记入口请求未完成：TimeoutError: The read operation timed out。旧采集记录和历史覆盖状态保留。",
+      "status": "selected_historical_articles_verified",
+      "detail": "本次逐栏对账回查1条历史项目记录所列原文。",
       "requested_window": {
-        "start": "2026-10-13",
+        "start": "2026-01-01",
         "end": "2026-10-19"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。 未核实 2026-10-13 至 2026-10-19 窗口；未新增候选，不推进来源水位。",
+      "verified_window_limits": "仅核对所列历史项目正文和已有台账去重；没有完成该来源全年归档枚举。",
       "partial_current_day": true,
       "evidence_urls": [
-        "https://www.eet-china.com/"
+        "https://www.eet-china.com/news/202609022800.html"
       ]
     },
     {
@@ -745,20 +706,19 @@
       "name": "TrendForce集邦咨询 · 新闻中心",
       "url": "https://www.trendforce.cn/presscenter/",
       "checked": true,
-      "checked_at": "2026-10-19T02:24:15.551585+00:00",
-      "checked_at_precision": "timestamp",
+      "checked_at": "2026-10-19T06:17:28.369Z",
+      "checked_at_basis": "audit_synthesis_after_official_fulltext_read",
       "history_complete": false,
-      "status": "entry_snapshot_checked",
-      "detail": "HTTP 200，读取登记入口静态响应；标题：产业洞察-集邦咨询。本次仅为入口状态检查。",
+      "status": "primary_public_fulltext_checked",
+      "detail": "公开正文的全球预测新增为辅助对照；保留所有近似值/下限，不增加中国主线或历史实绩。",
       "requested_window": {
-        "start": "2026-10-13",
+        "start": "2026-01-01",
         "end": "2026-10-19"
       },
       "verified_window": null,
-      "verified_window_limits": "仅检查登记入口当前响应和静态正文；未完成历史枚举、动态检索或逐篇核实，不推进历史覆盖水位。 未核实 2026-10-13 至 2026-10-19 窗口；未新增候选，不推进来源水位。",
-      "partial_current_day": true,
+      "verified_window_limits": "仅复核所列10月14日官方公开稿，未遍历全年报告和付费数据库。",
       "evidence_urls": [
-        "https://www.trendforce.cn/presscenter/"
+        "https://www.trendforce.com/presscenter/news/20261014-13269.html"
       ]
     },
     {
@@ -805,27 +765,25 @@
     },
     {
       "source_id": "ecust",
-      "name": "华东理工大学采购信息网",
-      "url": "https://czzx.ecust.edu.cn/",
+      "name": "华东理工大学 · 采购信息",
+      "url": "https://czzx.ecust.edu.cn/ejdwcggg/index.chtml",
       "checked": true,
-      "checked_at": "2026-10-19T03:04:01.999Z",
+      "checked_at": "2026-10-19T06:10:54.550Z",
       "checked_at_precision": "timestamp",
-      "checked_at_basis": "web_tool_request_completed_at",
       "history_complete": false,
-      "status": "bounded_search_partial",
-      "detail": "官方目录发现实时优化应用服务器、智能体推理训练用服务器结果和石化课题服务器比选，后者正文完整读取。目录在缓存中日期落后，不能宣称历史全覆盖。",
+      "status": "partial_historical_articles_verified",
+      "detail": "本次逐栏对账回查3条历史项目记录所列原文。其中8349首次检索缓存正文可读，复查原站404；其余所列公告可读。",
       "requested_window": {
-        "start": "2026-10-14",
-        "end": "2026-10-19",
-        "timezone": "Asia/Shanghai"
+        "start": "2026-01-01",
+        "end": "2026-10-19"
       },
       "verified_window": null,
-      "verified_window_limits": "本轮仅核对所列公开目录、检索命中和指定正文，未证明历史分页闭合或当前整日完整；访问受限资料保留待核。",
+      "verified_window_limits": "仅核对所列历史项目正文和已有台账去重；没有完成该来源全年归档枚举。",
       "partial_current_day": true,
       "evidence_urls": [
-        "https://czzx.ecust.edu.cn/ejdwcggg/8489.chtml",
-        "https://czzx.ecust.edu.cn/",
-        "https://czzx.ecust.edu.cn/"
+        "https://czzx.ecust.edu.cn/ejdwcggg/7343.chtml",
+        "https://czzx.ecust.edu.cn/ejdwcggg/8026.chtml",
+        "https://czzx.ecust.edu.cn/ejdwcggg/8349.chtml"
       ]
     },
     {
@@ -938,27 +896,23 @@
     },
     {
       "source_id": "cninfo",
-      "name": "巨潮资讯·上市公司公告",
+      "name": "巨潮资讯 · 上市公司公告",
       "url": "https://www.cninfo.com.cn/new/commonUrl/pageOfSearch?url=disclosure/list/search",
       "checked": true,
-      "checked_at": "2026-10-19T02:20:48.754Z",
+      "checked_at": "2026-10-19T06:10:54.550Z",
       "checked_at_precision": "timestamp",
-      "checked_at_basis": "web_tool_request_completed_at",
-      "checked_at_note": "实际核验工具请求完成时刻；仅对列出文章核验，不代表注册入口或历史全量访问。",
       "history_complete": false,
-      "status": "targeted_article_fulltext_checked",
-      "detail": "已读取申昊科技2026-073官方PDF全部5页，核对采购方向、签约时间与金额。",
+      "status": "selected_historical_articles_verified",
+      "detail": "本次逐栏对账回查1条历史项目记录所列原文。",
       "requested_window": {
-        "start": "2026-10-14",
-        "end": "2026-10-19",
-        "timezone": "Asia/Shanghai"
+        "start": "2026-01-01",
+        "end": "2026-10-19"
       },
       "verified_window": null,
-      "verified_window_limits": "定向核查已发现原文；未枚举全站分页、历史目录、动态查询或目标期全部文档，10月19日尚未结束。",
+      "verified_window_limits": "仅核对所列历史项目正文和已有台账去重；没有完成该来源全年归档枚举。",
       "partial_current_day": true,
       "evidence_urls": [
-        "https://static.cninfo.com.cn/finalpage/2026-10-16/1225609515.PDF",
-        "https://www.cninfo.com.cn/new/commonUrl/pageOfSearch?url=disclosure/list/search"
+        "https://paper.cnstock.com/html/2026-07/03/content_2239167.htm"
       ]
     },
     {
@@ -2917,6 +2871,12 @@
     }
   ],
   "audit_history": [
+    {
+      "id": "source-audit-20261019-2",
+      "checked_on": "2026-10-19",
+      "checked_at": "2026-10-19T03:19:29.082Z",
+      "audit_url": "/source-audit-20261019-2.json"
+    },
     {
       "id": "source-audit-20261019",
       "checked_on": "2026-10-19",

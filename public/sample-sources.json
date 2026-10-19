@@ -1,6 +1,6 @@
 {
   "version": "market-refresh-20261008-v1",
-  "collected_at": "2026-10-19T03:19:29.082Z",
+  "collected_at": "2026-10-19T06:10:54.550Z",
   "window": {
     "start": "2026-01-01",
     "end": "2026-10-19"
@@ -9773,8 +9773,8 @@
     ]
   },
   "latest_refresh": {
-    "batch_id": "source-audit-20261019-2",
-    "checked_at": "2026-10-19T03:19:29.082Z",
+    "batch_id": "source-audit-20261019-3",
+    "checked_at": "2026-10-19T06:10:54.550Z",
     "requested_cutoff": "2026-10-19",
     "added_rows": 0,
     "added_ids": [],

@@ -15,6 +15,7 @@ write('data/latest-update.json',result.latest);
 write('public/latest-update.json',result.latest);
 write('public/'+result.publicAudit.id+'.json',result.publicAudit);
 write('data/weekly-monitor.json',result.monitor);
+write('public/weekly-monitor.json',result.monitor);
 write('public/report-monitor.json',read('data/report-monitor.json'));
 // Historical audit files, refresh manifests, alerts and complete-week cutoffs are
 // never rewritten by this synchronization step.

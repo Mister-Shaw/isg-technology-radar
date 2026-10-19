@@ -173,5 +173,111 @@
       "url": "https://www.trendforce.com/presscenter/news/20261013-13267.html",
       "relationship": "same_publisher_language_version"
     }
+  ],
+  "c114-1305251": [
+    {
+      "id": "audit-all-guangming-platform-award-20260209",
+      "title": "光明大装置算力支撑平台中标报道（金额单位待核）",
+      "stage": "award",
+      "url": "https://www.c114.com.cn/news/16/a1305251.html",
+      "relationship": "same_source_url"
+    }
+  ],
+  "c114-1307284": [
+    {
+      "id": "audit-all-hhht-b11-b16-epc-20260323",
+      "title": "中国移动呼和浩特B11—B16机房机电EPC招标报道",
+      "stage": "tender",
+      "url": "https://www.c114.com.cn/news/118/a1307284.html",
+      "relationship": "same_source_url"
+    }
+  ],
+  "c114-1308116": [
+    {
+      "id": "audit-all-cm-suzhou-671-tender-20260407",
+      "title": "中移苏州671台国产服务器框架招标报道",
+      "stage": "tender",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-04-07/doc-inhtsezh2259143.shtml",
+      "relationship": "same_source_url"
+    }
+  ],
+  "c114-1310262": [
+    {
+      "id": "audit-all-unicom-changji-tender-20260514",
+      "title": "联通辽宁新疆昌吉算力服务项目询比采购报道",
+      "stage": "tender",
+      "url": "https://www.c114.com.cn/news/119/a1310262.html",
+      "relationship": "same_source_url"
+    }
+  ],
+  "c114-1311862": [
+    {
+      "id": "audit-all-qiming-768-candidate-20260608",
+      "title": "启明星辰768台ARM服务器集采候选公示报道",
+      "stage": "candidate",
+      "url": "https://www.c114.com.cn/news/16/a1311862.html",
+      "relationship": "same_source_url"
+    }
+  ],
+  "zhiding-3195448": [
+    {
+      "id": "audit-all-fengzhushou-equipment-20260805",
+      "title": "蜂助手雅安云算服务器及组网设备采购协议报道",
+      "stage": "intent",
+      "url": "https://www.zhiding.cn/ai-inspired/2026/0805/3195448.shtml",
+      "relationship": "same_source_url"
+    },
+    {
+      "id": "audit-all-fengzhushou-service-20260805",
+      "title": "蜂助手雅安云算五年算力服务合同报道",
+      "stage": "contract",
+      "url": "https://www.zhiding.cn/ai-inspired/2026/0805/3195448.shtml",
+      "relationship": "same_source_url"
+    }
+  ],
+  "ecust-8349": [
+    {
+      "id": "audit-all-ecust-8349-20260918",
+      "title": "华东理工高性能科学计算服务器比选采购",
+      "stage": "tender",
+      "url": "https://czzx.ecust.edu.cn/ejdwcggg/8349.chtml",
+      "relationship": "same_source_url"
+    }
+  ],
+  "ecust-8026": [
+    {
+      "id": "audit-all-ecust-8026-20260716",
+      "title": "华东理工科研设备混合包采购含双路AMD服务器1台",
+      "stage": "tender",
+      "url": "https://czzx.ecust.edu.cn/ejdwcggg/8026.chtml",
+      "relationship": "same_source_url"
+    }
+  ],
+  "ecust-7343": [
+    {
+      "id": "audit-all-ecust-7343-20260323",
+      "title": "华东理工计算模拟服务器1套比选采购",
+      "stage": "tender",
+      "url": "https://czzx.ecust.edu.cn/ejdwcggg/7343.chtml",
+      "relationship": "same_source_url"
+    }
+  ],
+  "expanded-eet_china-89da922175ab43e9": [
+    {
+      "id": "audit-all-paradigm-ascend-plan-20260902",
+      "title": "范式智能采购昇腾950芯片计划报道（原始披露待核）",
+      "stage": "intent",
+      "url": "https://www.eet-china.com/news/202609022800.html",
+      "relationship": "same_source_url"
+    }
+  ],
+  "c114-1313390": [
+    {
+      "id": "audit-all-kuntai-mobile-framework-20260703",
+      "title": "神州鲲泰签订中国移动PC服务器四标包框架协议",
+      "stage": "framework",
+      "url": "https://paper.cnstock.com/html/2026-07/03/content_2239167.htm",
+      "relationship": "audited_same_project"
+    }
   ]
 }
