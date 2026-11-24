@@ -7094,7 +7094,7 @@
     "market": {
       "fixed_media": 1167,
       "topic_supplement": 55,
-      "active_media": 27686,
+      "active_media": 27728,
       "media_sources": 15,
       "latest_month_sample": 837,
       "fixed_media_active_added": 1166,
@@ -7109,6 +7109,17 @@
           "raw_added": 837,
           "active_added": 837
         }
+      },
+      "prior_backfill": {
+        "id": "source-audit-20261020",
+        "added": 42,
+        "by_source": {
+          "eet_china": 18,
+          "idcquan_expanded": 6,
+          "ithome": 14,
+          "cctime": 4
+        },
+        "audit_url": "/source-audit-20261020.json"
       }
     },
     "reports": {

@@ -19,7 +19,7 @@
   },
   "media_added": 1166,
   "media_source_count": 15,
-  "media_total": 27686,
+  "media_total": 27728,
   "latest_month": "2026-11",
   "latest_month_total": 837,
   "research_added": 82,
@@ -5381,6 +5381,11 @@
     }
   ],
   "audit_history": [
+    {
+      "id": "source-audit-20261020",
+      "checked_on": "2026-10-20",
+      "audit_url": "/source-audit-20261020.json"
+    },
     {
       "id": "source-audit-20261019-3",
       "checked_on": "2026-10-19",

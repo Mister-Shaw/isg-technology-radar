@@ -40,7 +40,8 @@ assert.equal(currentActive.length,historicalActive.length+additions.length,'All 
 assert.equal(current.media_summary.total_documents,historical.media_summary.total_documents+additions.length,'The current denominator reconciles with every active addition since pinned v92');
 const latestRows=current.documents.filter(row=>row.collection_batch===latest.id);
 const latestArchive=latestRows.filter(row=>current.media_summary.source_ids.includes(row.source_id));
-assert.equal(latestArchive.length,latest.media_added,'The fixed archive receipt includes retained title duplicates');
+assert.equal(latestArchive.length,latest.media_archive_added,'The fixed archive receipt includes retained title duplicates');
+assert.equal(latestArchive.filter(r=>!r.superseded).length,latest.media_added,'Unique fixed news additions match the active receipt');
 assert.equal(latestRows.length,current.latest_refresh.added_rows,'Every appended article is represented in the current receipt');
 assert.equal(latestRows.filter(row=>!row.superseded).length,current.latest_refresh.active_added_rows,'Active additions exclude superseded title duplicates in all sources');
 assert.equal(currentActive.filter(row=>row.collection_batch===latest.id).length,latestArchive.filter(row=>!row.superseded).length,'The fixed denominator counts only active archive additions');

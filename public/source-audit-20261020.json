@@ -1,0 +1,663 @@
+{
+  "schema_version": 2,
+  "id": "source-audit-20261020",
+  "checked_on": "2026-10-20",
+  "requested_window": {
+    "start": "2026-01-01",
+    "end": "2026-10-19",
+    "timezone": "Asia/Shanghai"
+  },
+  "full_coverage": false,
+  "coverage_statement": "10月20日定向复核历史缺口，四个固定来源补采42篇，按原刊发月归入样本。",
+  "summary": {
+    "new_media_records": 42,
+    "new_research_records": 0,
+    "sources_checked": 4,
+    "sources_rechecked_this_batch": 4,
+    "history_complete": false
+  },
+  "media_record_ids": [
+    "refresh-7701900c2914a0b6",
+    "refresh-6cdbd8007f9555a4",
+    "refresh-5ae929f1f5df176c",
+    "refresh-b328eecd5fa1c52a",
+    "refresh-8c20331e20bc7f33",
+    "refresh-4b556a02f9ddb640",
+    "refresh-91da5a62425a1e06",
+    "refresh-6bd3a95aa2947cc0",
+    "refresh-ad32fb00b5b54210",
+    "refresh-eef816ce79d8034b",
+    "refresh-c705850b8de00aed",
+    "refresh-ab3a0c0af1add238",
+    "refresh-52e5151a5a7c0999",
+    "refresh-b967a4455574cdbd",
+    "refresh-4f5ec5a3987ae03f",
+    "refresh-a10d00462edddd8c",
+    "refresh-25fcfb4d4a2dea8d",
+    "refresh-a9e17297a867bb2f",
+    "refresh-a617208779608655",
+    "refresh-22fbb65bba15c9a6",
+    "refresh-891c350318ffaf1c",
+    "refresh-df3dd84b57bf3af7",
+    "refresh-f13e5d0dd8a5f878",
+    "refresh-9ba9ffcea9aa5907",
+    "refresh-4bdb4901b5ae305b",
+    "refresh-335ad4ceda580247",
+    "refresh-2d29e6504d006c90",
+    "refresh-ffd7cc2d065b4227",
+    "refresh-86f6897d6e125984",
+    "refresh-bb0b352df2c8999e",
+    "refresh-5004e93cc8840a08",
+    "refresh-75ba393139c7e134",
+    "refresh-5b3b43195c2cc71f",
+    "refresh-cf6f15586870b2cf",
+    "refresh-9f18a4d6a0175c73",
+    "refresh-483e030ce90b8086",
+    "refresh-fbdc6f05b95d616b",
+    "refresh-465b22b42dd345af",
+    "refresh-90c909dd3db38d3f",
+    "refresh-7ebf4159a25ea83b",
+    "refresh-10ed66fe2edf43fd",
+    "refresh-2d3f9c546f6c6e28"
+  ],
+  "source_checks": [
+    {
+      "source_id": "eet_china",
+      "name": "电子工程专辑 · 数据中心与服务器",
+      "url": "https://www.eet-china.com/",
+      "checked": true,
+      "checked_on": "2026-10-20",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "status": "partial_archive_backfill",
+      "detail": "已收录18篇历史新闻。登记栏目跨月分页快照存在差异。",
+      "verified_window_limits": "登记栏目跨月分页快照存在差异。",
+      "evidence_urls": [
+        "https://www.eet-china.com/info/74923.html",
+        "https://www.eet-china.com/news/202605073376.html",
+        "https://www.eet-china.com/news/202605082585.html",
+        "https://www.eet-china.com/news/202605159263.html",
+        "https://www.eet-china.com/news/202605187305.html",
+        "https://www.eet-china.com/info/75053.html",
+        "https://www.eet-china.com/news/202606023887.html",
+        "https://www.eet-china.com/info/75027.html",
+        "https://www.eet-china.com/news/202606018983.html",
+        "https://www.eet-china.com/info/75023.html",
+        "https://www.eet-china.com/news/202606018658.html",
+        "https://www.eet-china.com/news/202606019656.html",
+        "https://www.eet-china.com/news/202604273324.html",
+        "https://www.eet-china.com/news/202604275224.html",
+        "https://www.eet-china.com/news/202604245302.html",
+        "https://www.eet-china.com/news/202604217568.html",
+        "https://www.eet-china.com/news/202604101851.html",
+        "https://www.eet-china.com/news/202604093584.html"
+      ]
+    },
+    {
+      "source_id": "idcquan",
+      "name": "中国IDC圈 · 建设月报与新闻",
+      "url": "https://cloud.idcquan.com/",
+      "checked": true,
+      "checked_on": "2026-10-20",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "status": "partial_archive_backfill",
+      "detail": "已收录6篇历史新闻。cloud/dc 目录曾跳月；三条日期来自原站搜索索引，其中一条仅有摘要。",
+      "verified_window_limits": "cloud/dc 目录曾跳月；三条日期来自原站搜索索引，其中一条仅有摘要。",
+      "evidence_urls": [
+        "https://cloud.idcquan.com/yzx/206201.shtml",
+        "https://cloud.idcquan.com/yzx/206407.shtml",
+        "https://dc.idcquan.com/liquid/206728.shtml",
+        "https://dc.idcquan.com/ups/207310.shtml",
+        "https://dc.idcquan.com/ups/207311.shtml",
+        "https://dc.idcquan.com/ups/207371.shtml"
+      ]
+    },
+    {
+      "source_id": "ithome",
+      "name": "IT之家／软媒",
+      "url": "https://www.ithome.com/list/",
+      "checked": true,
+      "checked_on": "2026-10-20",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "status": "partial_archive_backfill",
+      "detail": "已收录14篇历史新闻。数据中心标签1—6月历史分页仍有缺口，逐篇核对标签归属。",
+      "verified_window_limits": "数据中心标签1—6月历史分页仍有缺口，逐篇核对标签归属。",
+      "evidence_urls": [
+        "https://www.ithome.com/0/925/340.htm",
+        "https://www.ithome.com/0/920/165.htm",
+        "https://www.ithome.com/0/939/884.htm",
+        "https://www.ithome.com/0/922/802.htm",
+        "https://www.ithome.com/0/939/201.htm",
+        "https://www.ithome.com/0/916/292.htm",
+        "https://www.ithome.com/0/923/694.htm",
+        "https://www.ithome.com/0/943/790.htm",
+        "https://www.ithome.com/0/956/210.htm",
+        "https://www.ithome.com/0/957/698.htm",
+        "https://www.ithome.com/0/947/150.htm",
+        "https://www.ithome.com/0/948/975.htm",
+        "https://www.ithome.com/1/014/574.htm",
+        "https://www.ithome.com/1/013/199.htm"
+      ]
+    },
+    {
+      "source_id": "cctime",
+      "name": "飞象网",
+      "url": "https://www.cctime.com/",
+      "checked": true,
+      "checked_on": "2026-10-20",
+      "checked_at_precision": "day",
+      "history_complete": false,
+      "status": "partial_archive_backfill",
+      "detail": "已收录4篇历史新闻。芯片栏目1月1日至4月20日17:38前的历史分页仍有缺口。",
+      "verified_window_limits": "芯片栏目1月1日至4月20日17:38前的历史分页仍有缺口。",
+      "evidence_urls": [
+        "https://www.cctime.com/html/2026-10-14/1744589.htm",
+        "https://www.cctime.com/html/2026-10-15/1744671.htm",
+        "https://www.cctime.com/html/2026-10-16/1744740.htm",
+        "https://www.cctime.com/html/2026-10-19/1744805.htm"
+      ]
+    }
+  ],
+  "monthly_source_coverage": [
+    {
+      "source_id": "eet_china",
+      "month": "2026-04",
+      "before": 4,
+      "added": 6,
+      "after": 10,
+      "status": "incomplete"
+    },
+    {
+      "source_id": "eet_china",
+      "month": "2026-05",
+      "before": 0,
+      "added": 5,
+      "after": 5,
+      "status": "incomplete"
+    },
+    {
+      "source_id": "eet_china",
+      "month": "2026-06",
+      "before": 13,
+      "added": 7,
+      "after": 20,
+      "status": "incomplete"
+    },
+    {
+      "source_id": "idcquan_expanded",
+      "month": "2026-01",
+      "before": 1,
+      "added": 1,
+      "after": 2,
+      "status": "incomplete"
+    },
+    {
+      "source_id": "idcquan_expanded",
+      "month": "2026-02",
+      "before": 1,
+      "added": 1,
+      "after": 2,
+      "status": "incomplete"
+    },
+    {
+      "source_id": "idcquan_expanded",
+      "month": "2026-04",
+      "before": 1,
+      "added": 1,
+      "after": 2,
+      "status": "incomplete"
+    },
+    {
+      "source_id": "idcquan_expanded",
+      "month": "2026-06",
+      "before": 1,
+      "added": 3,
+      "after": 4,
+      "status": "incomplete"
+    },
+    {
+      "source_id": "ithome",
+      "month": "2026-01",
+      "before": 2,
+      "added": 1,
+      "after": 3,
+      "status": "incomplete"
+    },
+    {
+      "source_id": "ithome",
+      "month": "2026-02",
+      "before": 1,
+      "added": 3,
+      "after": 4,
+      "status": "incomplete"
+    },
+    {
+      "source_id": "ithome",
+      "month": "2026-03",
+      "before": 9,
+      "added": 1,
+      "after": 10,
+      "status": "incomplete"
+    },
+    {
+      "source_id": "ithome",
+      "month": "2026-04",
+      "before": 1,
+      "added": 3,
+      "after": 4,
+      "status": "incomplete"
+    },
+    {
+      "source_id": "ithome",
+      "month": "2026-05",
+      "before": 7,
+      "added": 4,
+      "after": 11,
+      "status": "incomplete"
+    },
+    {
+      "source_id": "ithome",
+      "month": "2026-10",
+      "before": 19,
+      "added": 2,
+      "after": 21,
+      "status": "incomplete"
+    },
+    {
+      "source_id": "cctime",
+      "month": "2026-10",
+      "before": 6,
+      "added": 4,
+      "after": 10,
+      "status": "incomplete"
+    }
+  ],
+  "evidence_links": [
+    {
+      "id": "refresh-7701900c2914a0b6",
+      "source_id": "eet_china",
+      "title": "Diodes公司的PCIe® 7.0时钟发生器为下一代AI基础设施实现低于30fs的抖动",
+      "date": "2026-05-07",
+      "url": "https://www.eet-china.com/info/74923.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-05-07"
+    },
+    {
+      "id": "refresh-6cdbd8007f9555a4",
+      "source_id": "eet_china",
+      "title": "马斯克宣布解散xAI更名为SpaceXAI，并入SpaceX推进太空算力战略",
+      "date": "2026-05-07",
+      "url": "https://www.eet-china.com/news/202605073376.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-05-07"
+    },
+    {
+      "id": "refresh-5ae929f1f5df176c",
+      "source_id": "eet_china",
+      "title": "昆仑芯启动科创板上市辅导，百度控股57.67%推进A+H两地上市",
+      "date": "2026-05-08",
+      "url": "https://www.eet-china.com/news/202605082585.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-05-08"
+    },
+    {
+      "id": "refresh-b328eecd5fa1c52a",
+      "source_id": "eet_china",
+      "title": "Cerebras纳斯达克IPO募资55.5亿美元创AI芯片纪录：首日涨68%市值近700亿美元，OpenAI为最大客户",
+      "date": "2026-05-15",
+      "url": "https://www.eet-china.com/news/202605159263.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-05-15"
+    },
+    {
+      "id": "refresh-8c20331e20bc7f33",
+      "source_id": "eet_china",
+      "title": "全国一体化算力网纳入国家“六张网”重点基建，将如何影响中国AI产业",
+      "date": "2026-05-18",
+      "url": "https://www.eet-china.com/news/202605187305.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-05-18"
+    },
+    {
+      "id": "refresh-4b556a02f9ddb640",
+      "source_id": "eet_china",
+      "title": "ABB电机与发电机亮相2026上海国际数据中心展——赋能算力基础设施的稳定运行",
+      "date": "2026-06-03",
+      "url": "https://www.eet-china.com/info/75053.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-06-03"
+    },
+    {
+      "id": "refresh-91da5a62425a1e06",
+      "source_id": "eet_china",
+      "title": "Alphabet豪掷800亿美元加码AI基建，CEO皮查伊：“算力瓶颈是当下最大挑战”",
+      "date": "2026-06-02",
+      "url": "https://www.eet-china.com/news/202606023887.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-06-02"
+    },
+    {
+      "id": "refresh-6bd3a95aa2947cc0",
+      "source_id": "eet_china",
+      "title": "Power Integrations推出节省空间的超薄型辅助电源参考设计，适用于NVIDIA的Kyber 800VDC AI数据中心应用",
+      "date": "2026-06-01",
+      "url": "https://www.eet-china.com/info/75027.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-06-01"
+    },
+    {
+      "id": "refresh-ad32fb00b5b54210",
+      "source_id": "eet_china",
+      "title": "软银豪掷750亿欧元押注法国，打造欧洲最大AI算力枢纽",
+      "date": "2026-06-01",
+      "url": "https://www.eet-china.com/news/202606018983.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-06-01"
+    },
+    {
+      "id": "refresh-eef816ce79d8034b",
+      "source_id": "eet_china",
+      "title": "智能体AI时代已来，英特尔如何用至强6+、网络与AI系统打通最后一公里？",
+      "date": "2026-06-01",
+      "url": "https://www.eet-china.com/info/75023.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-06-01"
+    },
+    {
+      "id": "refresh-c705850b8de00aed",
+      "source_id": "eet_china",
+      "title": "数据中心CPU今年为何如此紧俏？从至强6+谈起...",
+      "date": "2026-06-01",
+      "url": "https://www.eet-china.com/news/202606018658.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-06-01"
+    },
+    {
+      "id": "refresh-ab3a0c0af1add238",
+      "source_id": "eet_china",
+      "title": "戴尔Q1营收同比增长88%，AI服务器积压订单513亿美元",
+      "date": "2026-06-01",
+      "url": "https://www.eet-china.com/news/202606019656.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-06-01"
+    },
+    {
+      "id": "refresh-52e5151a5a7c0999",
+      "source_id": "eet_china",
+      "title": "摩尔线程2026年一季度扭亏为盈，国产GPU四巨头集体交卷：增收减亏成主旋律",
+      "date": "2026-04-27",
+      "url": "https://www.eet-china.com/news/202604273324.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-04-27"
+    },
+    {
+      "id": "refresh-b967a4455574cdbd",
+      "source_id": "eet_china",
+      "title": "CPU突发涨价潮：Intel、AMD连续提价最高20%，AI Agent驱动需求爆发",
+      "date": "2026-04-27",
+      "url": "https://www.eet-china.com/news/202604275224.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-04-27"
+    },
+    {
+      "id": "refresh-4f5ec5a3987ae03f",
+      "source_id": "eet_china",
+      "title": "德州仪器2026年Q1营收48.3亿美元同比增长19%：数据中心业务飙涨90%，半导体行业复苏信号明确",
+      "date": "2026-04-24",
+      "url": "https://www.eet-china.com/news/202604245302.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-04-24"
+    },
+    {
+      "id": "refresh-a10d00462edddd8c",
+      "source_id": "eet_china",
+      "title": "亚马逊250亿美元追加投资Anthropic，锁定千亿美元算力大单",
+      "date": "2026-04-21",
+      "url": "https://www.eet-china.com/news/202604217568.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-04-21"
+    },
+    {
+      "id": "refresh-25fcfb4d4a2dea8d",
+      "source_id": "eet_china",
+      "title": "受限监管和高电价，OpenAI暂停英国“星际之门”项目",
+      "date": "2026-04-10",
+      "url": "https://www.eet-china.com/news/202604101851.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-04-10"
+    },
+    {
+      "id": "refresh-a9e17297a867bb2f",
+      "source_id": "eet_china",
+      "title": "DeepSeek V4将原生运行于华为昇腾950PR芯片，阿里字节腾讯提前下单数十万颗",
+      "date": "2026-04-09",
+      "url": "https://www.eet-china.com/news/202604093584.html",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-04-09"
+    },
+    {
+      "id": "refresh-a617208779608655",
+      "source_id": "idcquan_expanded",
+      "title": "天翼云助推首部大模型国标落地，引领AI产业规范化发展",
+      "date": "2026-01-13",
+      "url": "https://cloud.idcquan.com/yzx/206201.shtml",
+      "verification_level": "original_article_web_open",
+      "date_evidence": "2026-01-13 11:13"
+    },
+    {
+      "id": "refresh-22fbb65bba15c9a6",
+      "source_id": "idcquan_expanded",
+      "title": "天翼云送你开工礼，两周内畅享2500万Tokens！",
+      "date": "2026-02-28",
+      "url": "https://cloud.idcquan.com/yzx/206407.shtml",
+      "verification_level": "original_article_web_open",
+      "date_evidence": "2026-02-28 13:39"
+    },
+    {
+      "id": "refresh-891c350318ffaf1c",
+      "source_id": "idcquan_expanded",
+      "title": "破解AI算力散热瓶颈 津企单相浸没液冷技术获评国际先进",
+      "date": "2026-04-07",
+      "url": "https://dc.idcquan.com/liquid/206728.shtml",
+      "verification_level": "original_article_web_open",
+      "date_evidence": "2026-04-07 10:37"
+    },
+    {
+      "id": "refresh-df3dd84b57bf3af7",
+      "source_id": "idcquan_expanded",
+      "title": "GPU集群一遇负载跃迁就宕机？UPS\"参数合格\"可能是假象",
+      "date": "2026-06-16",
+      "url": "https://dc.idcquan.com/ups/207310.shtml",
+      "verification_level": "original_article_search_index_content",
+      "date_evidence": "2026-06-16 19:51"
+    },
+    {
+      "id": "refresh-f13e5d0dd8a5f878",
+      "source_id": "idcquan_expanded",
+      "title": "西门子携手楚睿智能共筑半导体与 AIDC 高端供配电新生态",
+      "date": "2026-06-16",
+      "url": "https://dc.idcquan.com/ups/207311.shtml",
+      "verification_level": "original_article_search_index_content",
+      "date_evidence": "2026-06-16 20:26"
+    },
+    {
+      "id": "refresh-9ba9ffcea9aa5907",
+      "source_id": "idcquan_expanded",
+      "title": "直面智算挑战 施耐德电气以全栈解决方案助力AIDC规模化落地",
+      "date": "2026-06-19",
+      "url": "https://dc.idcquan.com/ups/207371.shtml",
+      "verification_level": "original_article_search_index_excerpt",
+      "date_evidence": "2026-06-19 14:47"
+    },
+    {
+      "id": "refresh-4bdb4901b5ae305b",
+      "source_id": "ithome",
+      "title": "亚马逊向西班牙追加 180 亿欧元数据中心基础设施投资",
+      "date": "2026-03-03",
+      "url": "https://www.ithome.com/0/925/340.htm",
+      "verification_level": "publisher_article_header_and_tag_membership",
+      "date_evidence": "2026-03-03"
+    },
+    {
+      "id": "refresh-335ad4ceda580247",
+      "source_id": "ithome",
+      "title": "美国多州提议暂停新建数据中心，环保组织呼吁全国层面叫停",
+      "date": "2026-02-08",
+      "url": "https://www.ithome.com/0/920/165.htm",
+      "verification_level": "publisher_article_header_and_tag_membership",
+      "date_evidence": "2026-02-08"
+    },
+    {
+      "id": "refresh-2d29e6504d006c90",
+      "source_id": "ithome",
+      "title": "美国拟强制要求数据中心披露能源使用详情",
+      "date": "2026-04-16",
+      "url": "https://www.ithome.com/0/939/884.htm",
+      "verification_level": "publisher_article_header_and_tag_membership",
+      "date_evidence": "2026-04-16"
+    },
+    {
+      "id": "refresh-ffd7cc2d065b4227",
+      "source_id": "ithome",
+      "title": "AI 不能等，美国数据中心掀起“影子电网”建设潮",
+      "date": "2026-02-22",
+      "url": "https://www.ithome.com/0/922/802.htm",
+      "verification_level": "publisher_article_header_and_tag_membership",
+      "date_evidence": "2026-02-22"
+    },
+    {
+      "id": "refresh-86f6897d6e125984",
+      "source_id": "ithome",
+      "title": "耗电太猛引众怒，美国一州拟叫停大型数据中心建设",
+      "date": "2026-04-15",
+      "url": "https://www.ithome.com/0/939/201.htm",
+      "verification_level": "publisher_article_header_and_tag_membership",
+      "date_evidence": "2026-04-15"
+    },
+    {
+      "id": "refresh-bb0b352df2c8999e",
+      "source_id": "ithome",
+      "title": "美国宣布得克萨斯州进入电力紧急状态，数据中心发电救场",
+      "date": "2026-01-25",
+      "url": "https://www.ithome.com/0/916/292.htm",
+      "verification_level": "publisher_article_header_and_tag_membership",
+      "date_evidence": "2026-01-25"
+    },
+    {
+      "id": "refresh-5004e93cc8840a08",
+      "source_id": "ithome",
+      "title": "特朗普将召集微软谷歌等科技巨头签署承诺：自行承担数据中心电费",
+      "date": "2026-02-26",
+      "url": "https://www.ithome.com/0/923/694.htm",
+      "verification_level": "publisher_article_header_and_tag_membership",
+      "date_evidence": "2026-02-26"
+    },
+    {
+      "id": "refresh-75ba393139c7e134",
+      "source_id": "ithome",
+      "title": "Gartner 预测：全球数据中心系统支出将连续 2 年增长 50+%",
+      "date": "2026-04-27",
+      "url": "https://www.ithome.com/0/943/790.htm",
+      "verification_level": "publisher_article_header_and_tag_membership",
+      "date_evidence": "2026-04-27"
+    },
+    {
+      "id": "refresh-5b3b43195c2cc71f",
+      "source_id": "ithome",
+      "title": "数据中心“吸干”智利，加剧当地史上最严重旱情",
+      "date": "2026-05-27",
+      "url": "https://www.ithome.com/0/956/210.htm",
+      "verification_level": "publisher_article_header_and_tag_membership",
+      "date_evidence": "2026-05-27"
+    },
+    {
+      "id": "refresh-cf6f15586870b2cf",
+      "source_id": "ithome",
+      "title": "软银豪掷 750 亿欧元，在法国建设 5 吉瓦 AI 数据中心",
+      "date": "2026-05-31",
+      "url": "https://www.ithome.com/0/957/698.htm",
+      "verification_level": "publisher_article_header_and_tag_membership",
+      "date_evidence": "2026-05-31"
+    },
+    {
+      "id": "refresh-9f18a4d6a0175c73",
+      "source_id": "ithome",
+      "title": "联发科苗栗铜锣研发数据中心一期启用，基于英伟达 DGX B200",
+      "date": "2026-05-07",
+      "url": "https://www.ithome.com/0/947/150.htm",
+      "verification_level": "publisher_article_header_and_tag_membership",
+      "date_evidence": "2026-05-07"
+    },
+    {
+      "id": "refresh-483e030ce90b8086",
+      "source_id": "ithome",
+      "title": "美国数据中心纷纷“下乡”，以规避审批阻力",
+      "date": "2026-05-11",
+      "url": "https://www.ithome.com/0/948/975.htm",
+      "verification_level": "publisher_article_header_and_tag_membership",
+      "date_evidence": "2026-05-11"
+    },
+    {
+      "id": "refresh-fbdc6f05b95d616b",
+      "source_id": "ithome",
+      "title": "微软取消 AI 相关合作，英国本土数据中心企业 Nscale 遭遇重大挫折",
+      "date": "2026-10-18",
+      "url": "https://www.ithome.com/1/014/574.htm",
+      "verification_level": "original_publisher_archive_and_fulltext",
+      "date_evidence": "2026-10-18"
+    },
+    {
+      "id": "refresh-465b22b42dd345af",
+      "source_id": "ithome",
+      "title": "TrendForce 预测：九大云服务供应商 2027 年资本支出总额有望突破 1.5 万亿美元",
+      "date": "2026-10-15",
+      "url": "https://www.ithome.com/1/013/199.htm",
+      "verification_level": "original_publisher_archive_and_fulltext",
+      "date_evidence": "2026-10-15"
+    },
+    {
+      "id": "refresh-90c909dd3db38d3f",
+      "source_id": "cctime",
+      "title": "后摩尔时代话芯途，量超智融合成果闪耀2026湾芯展",
+      "date": "2026-10-14",
+      "url": "https://www.cctime.com/html/2026-10-14/1744589.htm",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-10-14"
+    },
+    {
+      "id": "refresh-7ebf4159a25ea83b",
+      "source_id": "cctime",
+      "title": "英飞凌推出27 kW三相PSU解决方案，面向新一代AI服务器电源架构",
+      "date": "2026-10-15",
+      "url": "https://www.cctime.com/html/2026-10-15/1744671.htm",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-10-15"
+    },
+    {
+      "id": "refresh-10ed66fe2edf43fd",
+      "source_id": "cctime",
+      "title": "台积电确认讨论与马斯克的Terafab计划进行合作 但必须控制芯片工厂",
+      "date": "2026-10-16",
+      "url": "https://www.cctime.com/html/2026-10-16/1744740.htm",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-10-16"
+    },
+    {
+      "id": "refresh-2d3f9c546f6c6e28",
+      "source_id": "cctime",
+      "title": "韩国和日本股市下挫 AI融资担忧令芯片股承压",
+      "date": "2026-10-19",
+      "url": "https://www.cctime.com/html/2026-10-19/1744805.htm",
+      "verification_level": "original_publisher_archive_and_article",
+      "date_evidence": "2026-10-19"
+    }
+  ],
+  "dedup": {
+    "basis": "same publisher URL, normalized title (including thematic aliases)",
+    "checked": 42,
+    "added": 42,
+    "matched": 0
+  }
+}

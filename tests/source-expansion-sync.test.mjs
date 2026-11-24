@@ -32,7 +32,8 @@ assert.equal(fixed.filter(r=>r.month===latest.latest_month).length,latest.latest
 const additions=panel.documents.filter(r=>r.collection_batch===latest.id&&!r.superseded);
 const archive=additions.filter(r=>r.collection_method==='publisher_archive');
 const topic=additions.filter(r=>r.collection_method==='topic_search');
-assert.equal(archive.length,latest.media_archive_added);
+assert.equal(archive.length,latest.media_archive_active_added);
+assert.equal(panel.documents.filter(r=>r.collection_batch===latest.id&&r.collection_method==='publisher_archive').length,latest.media_archive_added);
 assert.equal(topic.length,latest.media_topic_added);
 assert.equal(archive.length+topic.length,additions.length);
 assert(archive.every(r=>fixedIds.has(r.source_id)));
