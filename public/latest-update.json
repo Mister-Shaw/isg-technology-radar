@@ -17,9 +17,9 @@
     "start": "2026-01-01",
     "end": "2026-11-24"
   },
-  "media_added": 1167,
+  "media_added": 1166,
   "media_source_count": 15,
-  "media_total": 27687,
+  "media_total": 27686,
   "latest_month": "2026-11",
   "latest_month_total": 837,
   "research_added": 82,
@@ -5455,5 +5455,15 @@
   ],
   "media_archive_added": 1167,
   "media_topic_added": 55,
-  "media_added_all_sources": 1222
+  "media_added_all_sources": 1222,
+  "media_archive_active_added": 1166,
+  "media_active_added_all_sources": 1221,
+  "republication_count": 1,
+  "cross_day_followup": {
+    "checked_at": "2026-11-25T00:36:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "new_records": 0,
+    "collection_cutoff": "2026-11-24",
+    "detail": "北京时间11月25日00:36跨日检索，新增入库0条。固定媒体栏目统计截至11月24日。"
+  }
 }

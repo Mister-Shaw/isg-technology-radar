@@ -3,8 +3,9 @@ import {reportInsightRows,reportAnalysisSnapshot} from '../lib/report-analysis.j
 import {researchWithEdits,validateResearchEdit} from '../lib/research-editing.js';
 import {combinedAmountRows} from '../lib/monthly.js';
 import {panelCell} from '../lib/panel.js';
+import {readMarket} from './market-fixture.mjs';
 const read=f=>JSON.parse(fs.readFileSync(new URL('../'+f,import.meta.url),'utf8'));
-const report=read('data/report-analysis.json'),study=read('data/research-2026.json'),panel=read('public/market-panel.json'),monitor=read('data/weekly-monitor.json'),run=read('public/manual-refresh-20261007.json');
+const report=read('data/report-analysis.json'),study=read('data/research-2026.json'),panel=readMarket(),monitor=read('data/weekly-monitor.json'),run=read('public/manual-refresh-20261007.json');
 assert.equal(report.title,'研报分析');assert.equal(report.default_view,'charts');
 for(const g of report.metric_groups){assert(g.rows.length>0);assert.equal(new Set(g.rows.map(r=>r.unit)).size,1);for(const r of g.rows){assert(Number.isFinite(r.value));assert(r.period&&r.value_type&&r.source_refs.length);}}
 assert.equal(report.insights.filter(i=>i.last_reviewed==='2026-10-07').length,8);assert.equal(report.as_of,'2026-11-24');assert(report.insights.some(i=>i.id==='RA10'));

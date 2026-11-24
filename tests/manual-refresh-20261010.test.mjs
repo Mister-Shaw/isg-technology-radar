@@ -12,7 +12,8 @@ assert.equal(p.latest_refresh.batch_id,latest.id);assert.equal(r.latest_refresh.
 assert.equal(new Set(p.documents.map(x=>x.id)).size,p.documents.length);
 assert.equal(new Set([...r.events,...r.leads].map(x=>x.id)).size,r.events.length+r.leads.length);
 const fresh=p.documents.filter(x=>x.collection_batch===p.latest_refresh.batch_id);
-for(const x of fresh){assert(media.includes(x.source_id));assert(x.date<=p.window.end);assert.equal(x.month,x.date.slice(0,7));assert.equal(x.classification_basis,'title_only');assert.deepEqual(x.board_matches,compactBoardMatches(x,'news'));}
+const topicSources=new Set(p.sources.filter(s=>s.group==='supplement').map(s=>s.id));
+for(const x of fresh){assert(x.collection_method==='topic_search'?topicSources.has(x.source_id):media.includes(x.source_id));assert(x.date<=p.window.end);assert.equal(x.month,x.date.slice(0,7));assert.equal(x.classification_basis,'title_only');assert.deepEqual(x.board_matches,compactBoardMatches(x,'news'));}
 assert.equal(fresh.length,p.latest_refresh.added_rows+(p.latest_refresh.expanded_added_rows||0));
 assert.equal(latest.media_total,p.documents.filter(x=>media.includes(x.source_id)&&!x.superseded).length);
 assert.deepEqual(new Set(a.source_checks.map(s=>s.source_id)),new Set(sourcePanel.map(s=>s.id)));

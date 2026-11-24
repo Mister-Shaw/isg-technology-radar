@@ -11,7 +11,13 @@ const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
 const latest=read('data/latest-update.json'),panel=readMarket(),study=read('data/research-2026.json'),audit=read('public'+latest.audit_url),monitor=read('data/weekly-monitor.json');
 assert.deepEqual(latest,read('public/latest-update.json'));
 assert.deepEqual(monitor,read('public/weekly-monitor.json'),'Public monitoring download must match the current in-app monitor');
-assert.equal(latest.media_added,panel.latest_refresh.added_rows+(panel.latest_refresh.expanded_added_rows||0));
+assert.equal(latest.media_added,panel.latest_refresh.archive_active_added??panel.latest_refresh.archive_added??(panel.latest_refresh.added_rows+(panel.latest_refresh.expanded_added_rows||0)));
+if(Number.isInteger(panel.latest_refresh.archive_added)){
+ assert.equal(latest.media_topic_added,panel.latest_refresh.topic_search_added);
+ assert.equal(latest.media_added_all_sources,latest.media_archive_added+latest.media_topic_added);
+ assert.equal(latest.media_added_all_sources,panel.latest_refresh.added_rows);
+ assert.equal(latest.media_active_added_all_sources,panel.latest_refresh.active_added_rows);
+}
 const studyBatch=[study.latest_refresh,study.source_audit_backfill].find(row=>(row?.audit_id||row?.batch_id||row?.id)===latest.id);
 assert(studyBatch);assert.equal(latest.research_added,studyBatch.added_records);
 assert.equal(latest.research_total,study.events.length+study.leads.length);

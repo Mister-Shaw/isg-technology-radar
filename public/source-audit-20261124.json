@@ -26,7 +26,10 @@
     "empty_entrances": 4,
     "failed_entrances": 29,
     "sources_with_dated_samples": 61,
-    "dated_samples": 89
+    "dated_samples": 89,
+    "new_active_media_records": 1221,
+    "new_active_fixed_media_records": 1166,
+    "fixed_media_republications": 1
   },
   "source_checks": [
     {
@@ -6899,6 +6902,9 @@
         "https://www.zhiding.cn/list-35-1-10-0-0.htm",
         "https://www.zhiding.cn/list-35-1-7-0-0.htm",
         "https://www.zhiding.cn/list-35-1-1-0-0.htm"
+      ],
+      "republications": [
+        "media-20261124-c3f61599f4f73b8b"
       ]
     },
     {
@@ -7088,9 +7094,22 @@
     "market": {
       "fixed_media": 1167,
       "topic_supplement": 55,
-      "active_media": 27687,
+      "active_media": 27686,
       "media_sources": 15,
-      "latest_month_sample": 837
+      "latest_month_sample": 837,
+      "fixed_media_active_added": 1166,
+      "total_added": 1222,
+      "active_added": 1221,
+      "archive_by_month": {
+        "2026-10": {
+          "raw_added": 330,
+          "active_added": 329
+        },
+        "2026-11": {
+          "raw_added": 837,
+          "active_added": 837
+        }
+      }
     },
     "reports": {
       "added_observations": 83,
@@ -7098,5 +7117,24 @@
       "added_forecasts": 19,
       "source_documents": 19
     }
+  },
+  "media_republications": [
+    {
+      "source_id": "zhiding_latest",
+      "title": "记录科技工人运动的兴衰历程",
+      "archived_record_id": "media-20261124-c3f61599f4f73b8b",
+      "archive_date": "2026-10-20",
+      "url": "https://www.zhiding.cn/ai-economy/2026/1020/3202825.shtml",
+      "active_record_id": "zhiding-3201428",
+      "active_record_date": "2026-10-09",
+      "classification": "same_source_republication"
+    }
+  ],
+  "cross_day_followup": {
+    "checked_at": "2026-11-25T00:36:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "new_records": 0,
+    "collection_cutoff": "2026-11-24",
+    "detail": "北京时间11月25日00:36跨日检索，新增入库0条。固定媒体栏目统计截至11月24日。"
   }
 }
