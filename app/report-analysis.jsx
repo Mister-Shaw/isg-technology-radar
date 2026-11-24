@@ -29,7 +29,10 @@ function Chart({series,mode}){
 }
 export default function ReportAnalysis({research,onEdit}){
  const [family,setFamily]=useState('all'),[query,setQuery]=useState(''),[mode,setMode]=useState('history'),[frequency,setFrequency]=useState('all'),[selected,setSelected]=useState('CN_SERVER_REVENUE_Q'),[tab,setTab]=useState('monitor');
- const categorySeries=data.series.filter(s=>visibleObservations(s,mode).length);
+ const [scope,setScope]=useState('domestic');
+ const scopedSeries=scope==='domestic'?data.series:data.auxiliary.filter(s=>s.monitor_scope===scope);
+ const categorySeries=scopedSeries.filter(s=>visibleObservations(s,mode).length);
+ const supplementary=data.auxiliary.map(s=>({...s,observations:visibleObservations(s,mode)})).filter(s=>s.observations.length);
  const frequencies=[...new Set(categorySeries.map(s=>s.frequency))];
  const rows=categorySeries.filter(s=>(family==='all'||s.family===family)&&(frequency==='all'||s.frequency===frequency)&&(!query.trim()||`${s.title} ${s.subtopic} ${s.provider} ${s.scope}`.toLowerCase().includes(query.trim().toLowerCase()))&&visibleObservations(s,mode).length);
  const focus=rows.find(s=>s.id===selected)||rows[0];
@@ -38,6 +41,7 @@ export default function ReportAnalysis({research,onEdit}){
  return <div className="report-monitor">
   <SegmentedControl className="keyword-board-tabs report-nature-tabs" label="研报数据分类" options={[{id:'history',label:'历史统计'},{id:'forecast',label:'预测'}]} value={mode} onChange={v=>{setMode(v);setFamily('all');setFrequency('all');setSelected('');}}/>
   <div className="report-monitor-toolbar"><div className="pills" role="group" aria-label="监测内容">{[['monitor','指标监测'],['dictionary','数据底表与口径']].map(([id,label])=><button key={id} aria-pressed={tab===id} className={tab===id?'active':''} onClick={()=>setTab(id)}>{label}</button>)}</div><span>资料核查至 {data.as_of}</span></div>
+  <SegmentedControl className="keyword-board-tabs" label="统计范围" options={[{id:'domestic',label:'中国市场'},{id:'company',label:'厂商经营'},{id:'world',label:'海外与全球对照'}]} value={scope} onChange={v=>{setScope(v);setFamily('all');setFrequency('all');setSelected('');}}/>
   {tab==='monitor'&&<>
    <section className="card panel-controls"><div className="source-filters">
     <label>搜索指标<input type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="指标、方向或机构"/></label>
@@ -58,10 +62,10 @@ export default function ReportAnalysis({research,onEdit}){
   </>}
   {tab==='dictionary'&&<section className="card"><div className="section-heading"><div><h2>研报指标底表</h2></div><button className="button secondary" onClick={()=>save(`${mode==='history'?'历史统计':'预测'}_研报观测底表.csv`,monitorCsv(categorySeries,mode))}><Download size={15}/>导出本类底表</button></div><div className="table-scroll"><table><thead><tr><th>细分方向</th><th>指标</th><th>统计范围 / 单位</th><th>原始机构</th><th>数据频率</th><th>已取得期间 / 版本</th><th>比较限制</th></tr></thead><tbody>{categorySeries.map(s=><tr key={s.id}><td>{s.subtopic}</td><td><button className="text-button" onClick={()=>{setTab('monitor');setFamily('all');setQuery('');setFrequency('all');setSelected(s.id);}}>{s.title}</button><small>{FAMILY[s.family]}</small></td><td>{s.scope}<small>{s.unit}</small></td><td>{s.provider}</td><td>{FREQUENCIES[s.frequency]||s.frequency}</td><td>{[...new Set(visibleObservations(s,mode).map(o=>s.family==='revision'?o.vintage:o.period))].join('、')}</td><td>{s.comparability_note}</td></tr>)}</tbody></table></div></section>}
   {tab==='dictionary'&&<>
-   <details className="card report-method"><summary>补充资料 · {data.auxiliary.length} 项</summary>
+   <details className="card report-method"><summary>补充资料 · {supplementary.length} 项</summary>
     <p className="panel-note">含历史版本、全球对照及口径待核资料，保留各自限制，未并入上方主线指标。</p>
     <button className="text-button" onClick={()=>save('研报补充资料与口径.json',JSON.stringify({as_of:data.as_of,auxiliary:data.auxiliary,source_conflicts:data.source_conflicts,source_measurement_notes:data.source_measurement_notes,source_catalog:data.source_catalog},null,2),'application/json')}><Download size={14}/>下载补充资料与口径</button>
-    {data.auxiliary.map(s=><details className="report-chart-note" key={s.id}><summary>{s.title} · {AUDIT_STATUS[s.audit_status]||s.audit_status} · {s.observations.length} 条</summary>
+    {supplementary.map(s=><details className="report-chart-note" key={s.id}><summary>{s.title} · {AUDIT_STATUS[s.audit_status]||s.audit_status} · {s.observations.length} 条</summary>
      <p>{s.geography} · {s.scope}</p><p>{s.comparability_note}</p>{s.exclusion_reason&&<p>限制：{s.exclusion_reason}</p>}{s.render_constraint&&<p>{s.render_constraint}</p>}
      <div className="table-scroll"><table><thead><tr><th>数据期间 / 目标期</th><th>数值</th><th>性质</th><th>发布日期 / 版本</th><th>来源与限制</th></tr></thead><tbody>{s.observations.map((o,i)=><tr key={o.id||`${s.id}-${i}`}><td>{o.period}</td><td>{numberText(o,s.unit)}</td><td>{NATURES[o.nature]||o.nature}</td><td>{o.publication_date||'发布日期待确认'}{o.vintage&&o.vintage!==o.publication_date&&<small>{o.vintage}</small>}</td><td><SourceLink url={o.source_url}>{o.report_title||s.provider}</SourceLink><small>{o.page}</small>{(o.definition_note||o.evidence_note||o.evidence||o.validation)&&<p>{o.definition_note||o.evidence_note||o.evidence||o.validation}</p>}</td></tr>)}</tbody></table></div>
     </details>)}

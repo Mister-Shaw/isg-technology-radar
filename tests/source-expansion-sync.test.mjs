@@ -1,19 +1,19 @@
-import {readHistoricalMarket} from './historical-fixture.mjs';
+import {readHistorical, readHistoricalMarket} from './historical-fixture.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {BOARDS, KEYWORD_BOARD_ROWS, definitionsForRows, classifyBoards} from '../lib/keyword-boards.js';
 import {panelMatrix, panelCell, periods} from '../lib/panel.js';
+import {loadMarketData, publicNewsUrl} from '../lib/market-data.js';
 import {categoryMonthRows, amountRows, reportedAmountRows, combinedAmountRows, eventKey, monthOf, inObservationPeriod} from '../lib/monthly.js';
 import {researchReview, dateWindow} from '../lib/model.js';
 import {visibleObservations, axisPeriods} from '../lib/report-monitor.js';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
-const base=read('public/market-panel.json');
-const assets=(base.expansion_assets||[]).map(path=>{
-  assert.match(path,/^\/[\w.-]+\.json$/,'Expansion asset must be a local public JSON filename');
-  return read('public'+path);
+const panel=await loadMarketData(async path=>{
+  assert.match(path,/^\/[\w.-]+\.json$/,'Market assets must be local public JSON files');
+  return {ok:true,json:async()=>read('public'+path)};
 });
-const panel={...base,documents:[...base.documents,...assets.flatMap(a=>a.documents||[])]};
 const research=read('data/research-2026.json'), reports=read('data/report-monitor.json');
+const latest=read('data/latest-update.json');
 const originalIds=['doit_all','c114_roll_all','zhiding_latest','cbinews_all_news'];
 const priorExpandedIds=['eet_china','trendforce','zhidx','idcquan_expanded'];const expandedIds=panel.sources.filter(s=>s.kind==='news'&&s.group==='media'&&!s.document_source_id&&!originalIds.includes(s.id)).map(s=>s.id);
 const original=panel.sources.find(s=>s.id==='media_all');
@@ -21,9 +21,30 @@ assert.equal(original.name,'全部媒体来源');
 assert(!panel.sources.some(s=>s.id==='media_expanded'),'Separate expansion aggregate is removed');
 assert.deepEqual(original.document_source_ids,[...originalIds,...expandedIds]);
 for(const id of expandedIds)assert(panel.sources.some(s=>s.id===id));
-const priorMedia=readHistoricalMarket().documents.filter(r=>[...originalIds,...priorExpandedIds].includes(r.source_id)&&!r.superseded);assert.equal(priorMedia.filter(r=>r.collection_batch!=='source-audit-20261011-0100').length,24014);assert.equal(priorMedia.filter(r=>r.month==='2026-10').length,675);assert.equal(panel.media_summary.total_documents,panel.documents.filter(r=>original.document_source_ids.includes(r.source_id)&&!r.superseded).length);
+const historicalPanel=readHistoricalMarket();
+const priorMedia=historicalPanel.documents.filter(r=>[...originalIds,...priorExpandedIds].includes(r.source_id)&&!r.superseded);assert.equal(priorMedia.filter(r=>r.collection_batch!=='source-audit-20261011-0100').length,24014);assert.equal(priorMedia.filter(r=>r.month==='2026-10').length,675);
+const fixedIds=new Set(original.document_source_ids);
+const fixed=panel.documents.filter(r=>fixedIds.has(r.source_id)&&!r.superseded);
+assert.deepEqual(panel.window,latest.window);
+assert.equal(panel.media_summary.total_documents,fixed.length);
+assert.equal(fixed.length,latest.media_total);
+assert.equal(fixed.filter(r=>r.month===latest.latest_month).length,latest.latest_month_total);
+const additions=panel.documents.filter(r=>r.collection_batch===latest.id&&!r.superseded);
+const archive=additions.filter(r=>r.collection_method==='publisher_archive');
+const topic=additions.filter(r=>r.collection_method==='topic_search');
+assert.equal(archive.length,latest.media_archive_added);
+assert.equal(topic.length,latest.media_topic_added);
+assert.equal(archive.length+topic.length,additions.length);
+assert(archive.every(r=>fixedIds.has(r.source_id)));
+assert(topic.every(r=>!fixedIds.has(r.source_id)));
+const supplement=panel.sources.find(s=>s.id==='topic_supplement');
+assert(topic.every(r=>supplement?.document_source_ids.includes(r.source_id)));
+assert(additions.every(r=>publicNewsUrl(r.url)));
 const months=periods('month',panel.window).map(p=>p.id);
-assert.deepEqual(months,Array.from({length:10},(_,i)=>`2026-${String(i+1).padStart(2,'0')}`));
+const expectedMonths=[];
+for(let cursor=new Date(latest.window.start.slice(0,7)+'-01T00:00:00Z');cursor.toISOString().slice(0,7)<=latest.window.end.slice(0,7);cursor.setUTCMonth(cursor.getUTCMonth()+1))expectedMonths.push(cursor.toISOString().slice(0,7));
+assert.deepEqual(months,expectedMonths);
+assert.deepEqual(dateWindow(research),panel.window);
 assert.equal(BOARDS.length,3);assert.equal(KEYWORD_BOARD_ROWS.length,73);
 const classifications=new WeakMap();
 const classify=(r,mode)=>{let value=classifications.get(r);if(!value){value=classifyBoards(r,mode);classifications.set(r,value);}return value;};
@@ -36,13 +57,14 @@ for(const [rows,mode] of [[panel.documents,'news'],[[...research.events,...resea
 let newsCells=0;
 for(const source of panel.sources.filter(s=>s.kind==='news'&&(s.document_source_ids||expandedIds.includes(s.id)))){
  const ids=new Set(source.document_source_ids||[source.document_source_id||source.id]);
+ const byMonth=Map.groupBy(panel.documents.filter(r=>ids.has(r.source_id)&&!r.superseded&&r.date>=panel.window.start&&r.date<=panel.window.end),r=>r.month);
  for(const board of BOARDS)for(const metric of ['attention','application']){
   const matrix=panelMatrix(panel,source,metric,'month','all',definitionsForRows(board.id));
   for(const row of matrix){
    const definition=KEYWORD_BOARD_ROWS.find(r=>r.id===row.id);
    assert.deepEqual(row.points.map(p=>p.id),months);
    for(const point of row.points){
-    const denominator=panel.documents.filter(r=>ids.has(r.source_id)&&!r.superseded&&r.month===point.id&&r.date>=panel.window.start&&r.date<=panel.window.end);
+    const denominator=byMonth.get(point.id)||[];
     const numerator=denominator.filter(r=>belongs(r,definition,'news')&&(!source.numerator_scope_filter||r.market_scope===source.numerator_scope_filter)&&(metric!=='application'||r.keyword_context_class==='application'));
     assert.equal(point.N,denominator.length,`${source.id}/${row.id}/${point.id} denominator`);
     assert.deepEqual(point.denominator_ids,denominator.map(r=>r.id));
@@ -55,8 +77,9 @@ for(const source of panel.sources.filter(s=>s.kind==='news'&&(s.document_source_
   }
  }
 }
-// Removing an asset must change the aggregate; individual original sources are unchanged.
-for(const board of BOARDS)for(const metric of ['attention','application'])for(const id of originalIds){const source=panel.sources.find(s=>s.id===id);assert.deepEqual(panelMatrix(panel,source,metric,'month','all',definitionsForRows(board.id)),panelMatrix(base,source,metric,'month','all',definitionsForRows(board.id)));}
+// The initial expansion preserved the original publishers. Later archive batches can extend them.
+const historicalBase=readHistorical('public/market-panel.json');
+for(const board of BOARDS)for(const metric of ['attention','application'])for(const id of originalIds){const source=historicalPanel.sources.find(s=>s.id===id);assert.deepEqual(panelMatrix(historicalPanel,source,metric,'month','all',definitionsForRows(board.id)),panelMatrix(historicalBase,source,metric,'month','all',definitionsForRows(board.id)));}
 for(const c of original.coverage)assert.equal(c.eligible,panel.documents.filter(r=>original.document_source_ids.includes(r.source_id)&&!r.superseded&&r.month===c.month).length);
 // Explicit incomplete-sample and missing-month guards, including a real zero-hit sample.
 const sampled={id:'sampled',kind:'news',coverage:[{month:'2026-01',status:'incomplete',keyword_application_reviewed:true}]};
@@ -84,9 +107,9 @@ for(const board of BOARDS){
  }
 }
 // Reports keep observation periods and publication/vintage provenance; refresh months do not invent observations.
-assert.equal(reports.series.length,78);
+assert.equal(reports.series.filter(s=>!s.collection_batch).length,78);
 assert.deepEqual(read('public/report-monitor.json'),reports,'Published report data must match source data');
-const patterns={annual:/^\d{4}$/,quarterly:/^\d{4}Q[1-4]$/,half_year:/^\d{4}H[12]$/,half_year_H1_only:/^\d{4}H1$/,forecast_vintage:/^\d{4}$/};
+const patterns={annual:/^\d{4}$/,quarterly:/^\d{4}Q[1-4]$/,quarter_end:/^\d{4}Q[1-4]末$/,multi_year:/^(\d{4}—\d{4}|未来五年（\d{4}年\d{1,2}月预测）)$/,half_year:/^\d{4}H[12]$/,half_year_H1_only:/^\d{4}H1$/,forecast_vintage:/^\d{4}$/};
 const catalog=new Map(reports.source_catalog.map(s=>[s.id,s]));
 let observations=0,unknownPublicationDates=0;
 for(const series of reports.series){

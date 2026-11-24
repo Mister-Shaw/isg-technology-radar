@@ -11,7 +11,7 @@ assert(p.refresh_history.some(x=>x.batch_id==='source-audit-20261010'&&x.added_r
 assert(r.refresh_history.some(x=>x.batch_id==='source-audit-20261010'&&x.added_records===18));
 assert.equal(read('data/source-audit-20261010.json').summary.new_media_records,101);
 const baselineSources=new Set(['doit_all','c114_roll_all','zhiding_latest','cbinews_all_news','eet_china','trendforce','zhidx','idcquan_expanded']);const full=[...p.documents,...p.expansion_assets.flatMap(f=>read('public'+f).documents)].filter(x=>baselineSources.has(x.source_id)&&!x.superseded);assert.equal(full.filter(r=>r.collection_batch!=='source-audit-20261011-0100').length,24014);assert.equal(full.filter(x=>x.month==='2026-10').length,675);if(latest.id===batch)assert.equal(latest.research_total,1005);else assert.equal(latest.research_total,r.events.length+r.leads.length);
-assert.equal(read('data/report-monitor.json').series.length,78);
+assert.equal(read('data/report-monitor.json').series.filter(s=>!s.collection_batch).length,78);
 assert(latest.audit_history.some(x=>x.id==='source-audit-20261010'));
 assert(!JSON.stringify(read(`public/${batch}.json`)).includes('/workspace/'));
 console.log('PASS: afternoon batch 29 news,2 verified non-financial research,3 pending; morning provenance preserved');

@@ -2,9 +2,9 @@
   "schema_version": "1.0.0",
   "title": "研报分析",
   "subtitle": "研报数据的趋势、对比与结构变化",
-  "as_of": "2026-10-07",
+  "as_of": "2026-11-24",
   "scope": "中国大陆服务器与算力基础设施；全球材料仅作明确标注的技术或市场对照",
-  "snapshot_notice": "截至2026-10-07已审阅资料的分析快照；并非全市场普查或实时自动更新。",
+  "snapshot_notice": "截至2026年11月24日已复核的公开研究；统计期与预测版本见各指标来源。",
   "default_view": "charts",
   "secondary_views": [
     {
@@ -48,6 +48,14 @@
         "insight_ids": [
           "RA01",
           "RA08"
+        ]
+      },
+      {
+        "label": "11月市场跟踪",
+        "text": "中国x86收入与出货量分化，IDC首次单列中国AI云存储服务。",
+        "insight_ids": [
+          "RA09",
+          "RA10"
         ]
       }
     ]
@@ -1186,6 +1194,124 @@
       ],
       "content_revision": 1,
       "last_reviewed": "2026-10-07"
+    },
+    {
+      "id": "RA09",
+      "topic": "服务器需求",
+      "tags": [
+        "服务器需求"
+      ],
+      "headline": "上半年中国x86收入增长26%，整机出货下降14.3%",
+      "what_changed": "收入与台数增速已出现分化，液冷需求集中在互联网客户。",
+      "facts": [
+        {
+          "text": "2026年上半年中国x86服务器厂商收入同比增长26.0%，整机出货台数同比下降14.3%。",
+          "source_refs": [
+            {
+              "source_id": "SRC-BF7A33E7",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "IDC中国服务器市场跟踪报告摘录",
+              "url": "https://www.h3c.com/cn/d_202610/2963889_30008_0.htm"
+            }
+          ],
+          "maturity": "机构统计实绩",
+          "geography": "中国",
+          "period": "2026H1"
+        },
+        {
+          "text": "同期中国液冷服务器厂商收入同比增长153.1%，互联网企业采购占65.6%。",
+          "source_refs": [
+            {
+              "source_id": "SRC-A6F7270E",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "IDC液冷服务器及全球服务器跟踪",
+              "url": "https://www.idc.com/resource-center/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BC%80%E5%A7%8B%E6%8C%89%E6%9F%9C%E4%BA%A4%E4%BB%98%EF%BC%9A%E6%8E%A5%E5%BE%97%E4%BD%8F%EF%BC%8C%E6%89%8D%E6%98%AF%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%9A%84/"
+            }
+          ],
+          "maturity": "机构统计实绩",
+          "geography": "中国",
+          "period": "2026H1"
+        }
+      ],
+      "inference": "收入与台数增速已出现分化，液冷需求集中在互联网客户。",
+      "business_implication": "评估服务器需求时，分别跟踪出货台数、金额和液冷配置。",
+      "evidence_maturity": {
+        "label": "已披露市场统计",
+        "confidence": "来源和产品口径已核"
+      },
+      "limitations": [],
+      "action": [],
+      "metric_group_ids": [],
+      "conflict_ids": [],
+      "source_ids": [
+        "SRC-BF7A33E7",
+        "SRC-A6F7270E"
+      ],
+      "content_revision": 1,
+      "last_reviewed": "2026-11-24"
+    },
+    {
+      "id": "RA10",
+      "topic": "AI基础设施与云服务",
+      "tags": [
+        "AI基础设施与云服务"
+      ],
+      "headline": "中国AI硬件支出和云服务分别有了可跟踪的市场数据",
+      "what_changed": "硬件支出记录采购端投入，云服务收入记录服务提供商的客户账单及业务规模；地域、币种和期间需分别读取。",
+      "facts": [
+        {
+          "text": "2026Q2中国大陆AI基础设施硬件支出130亿美元，同比增长27.9%。",
+          "source_refs": [
+            {
+              "source_id": "SRC-F4A0D11F",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "IDC Worldwide Quarterly AI Infrastructure Tracker",
+              "url": "https://www.idc.com/resource-center/blog/ai-infrastructure-spending-jumps-to-121-billion-in-q2-2026/"
+            }
+          ],
+          "maturity": "机构统计实绩",
+          "geography": "中国大陆",
+          "period": "2026Q2"
+        },
+        {
+          "text": "2026H1中国AI IaaS收入430.3亿元，其中AI云存储49.4亿元，占11.5%。",
+          "source_refs": [
+            {
+              "source_id": "SRC-24DF355E",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "IDC中国智算云服务市场（2026上半年）跟踪",
+              "url": "https://www.idc.com/resource-center/blog/%E5%A2%9E%E9%95%BF%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9Aai%E4%BA%91%E5%AD%98%E5%82%A8%E5%B4%9B%E8%B5%B7%E4%B8%8E%E6%8E%A8%E7%90%86%E7%94%9F%E6%80%81%E5%88%86%E5%8C%96%E9%87%8D%E5%A1%91%E6%99%BA%E7%AE%97/"
+            }
+          ],
+          "maturity": "机构统计实绩",
+          "geography": "中国大陆",
+          "period": "2026H1"
+        }
+      ],
+      "inference": "硬件支出记录采购端投入，云服务收入记录服务提供商的客户账单及业务规模；地域、币种和期间需分别读取。",
+      "business_implication": "跟踪存储机会时，将云存储服务需求与服务器及存储系统采购分别建模。",
+      "evidence_maturity": {
+        "label": "已披露市场统计",
+        "confidence": "来源和产品口径已核"
+      },
+      "limitations": [],
+      "action": [],
+      "metric_group_ids": [
+        "MG09",
+        "MG10",
+        "MG11"
+      ],
+      "conflict_ids": [],
+      "source_ids": [
+        "SRC-F4A0D11F",
+        "SRC-24DF355E"
+      ],
+      "content_revision": 1,
+      "last_reviewed": "2026-11-24"
     }
   ],
   "metric_groups": [
@@ -1384,7 +1510,7 @@
         {
           "id": "TM28",
           "label": "初始投资成本过高",
-          "value": 55.0,
+          "value": 55,
           "unit": "%",
           "period": "2026调研",
           "value_type": "survey",
@@ -1484,7 +1610,7 @@
         {
           "id": "SURVEY26-P15-06",
           "label": "投资回报周期不清晰",
-          "value": 26.0,
+          "value": 26,
           "unit": "%",
           "period": "2026调研",
           "value_type": "survey",
@@ -1524,7 +1650,7 @@
         {
           "id": "SURVEY26-P15-08",
           "label": "电力供应容量不满足",
-          "value": 18.0,
+          "value": 18,
           "unit": "%",
           "period": "2026调研",
           "value_type": "survey",
@@ -1821,6 +1947,175 @@
       "insight_ids": [
         "RA08"
       ]
+    },
+    {
+      "id": "MG09",
+      "title": "中国AI基础设施硬件支出",
+      "display": "separate_series",
+      "geography": "中国大陆",
+      "population": "AI服务器与存储系统支出",
+      "comparison_rule": "采用IDC全球AI基础设施季度跟踪的PRC区域口径。",
+      "rows": [
+        {
+          "id": "M26NOV35",
+          "label": "中国大陆AI基础设施支出，2026Q2",
+          "value": 130,
+          "unit": "亿美元",
+          "period": "2026Q2",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "SRC-F4A0D11F",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "IDC Worldwide Quarterly AI Infrastructure Tracker",
+              "url": "https://www.idc.com/resource-center/blog/ai-infrastructure-spending-jumps-to-121-billion-in-q2-2026/"
+            }
+          ]
+        }
+      ],
+      "takeaway": "中国大陆AI基础设施支出，2026Q2"
+    },
+    {
+      "id": "MG10",
+      "title": "中国智算云服务收入",
+      "display": "separate_series",
+      "geography": "中国",
+      "population": "本期IDC独立追踪AI云计算与AI云存储",
+      "comparison_rule": "AI IaaS为总量，云计算和云存储为其子市场；AI原生与AI优化为云存储的细分项。",
+      "rows": [
+        {
+          "id": "M26NOV62",
+          "label": "AI IaaS服务",
+          "value": 430.3,
+          "unit": "亿元人民币",
+          "period": "2026H1",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "SRC-24DF355E",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "IDC中国智算云服务市场（2026上半年）跟踪",
+              "url": "https://www.idc.com/resource-center/blog/%E5%A2%9E%E9%95%BF%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9Aai%E4%BA%91%E5%AD%98%E5%82%A8%E5%B4%9B%E8%B5%B7%E4%B8%8E%E6%8E%A8%E7%90%86%E7%94%9F%E6%80%81%E5%88%86%E5%8C%96%E9%87%8D%E5%A1%91%E6%99%BA%E7%AE%97/"
+            }
+          ]
+        },
+        {
+          "id": "M26NOV64",
+          "label": "AI云计算服务",
+          "value": 380.8,
+          "unit": "亿元人民币",
+          "period": "2026H1",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "SRC-24DF355E",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "IDC中国智算云服务市场（2026上半年）跟踪",
+              "url": "https://www.idc.com/resource-center/blog/%E5%A2%9E%E9%95%BF%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9Aai%E4%BA%91%E5%AD%98%E5%82%A8%E5%B4%9B%E8%B5%B7%E4%B8%8E%E6%8E%A8%E7%90%86%E7%94%9F%E6%80%81%E5%88%86%E5%8C%96%E9%87%8D%E5%A1%91%E6%99%BA%E7%AE%97/"
+            }
+          ]
+        },
+        {
+          "id": "M26NOV66",
+          "label": "AI云存储服务",
+          "value": 49.4,
+          "unit": "亿元人民币",
+          "period": "2026H1",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "SRC-24DF355E",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "IDC中国智算云服务市场（2026上半年）跟踪",
+              "url": "https://www.idc.com/resource-center/blog/%E5%A2%9E%E9%95%BF%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9Aai%E4%BA%91%E5%AD%98%E5%82%A8%E5%B4%9B%E8%B5%B7%E4%B8%8E%E6%8E%A8%E7%90%86%E7%94%9F%E6%80%81%E5%88%86%E5%8C%96%E9%87%8D%E5%A1%91%E6%99%BA%E7%AE%97/"
+            }
+          ]
+        },
+        {
+          "id": "M26NOV68",
+          "label": "AI原生云存储服务",
+          "value": 26.9,
+          "unit": "亿元人民币",
+          "period": "2026H1",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "SRC-24DF355E",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "IDC中国智算云服务市场（2026上半年）跟踪",
+              "url": "https://www.idc.com/resource-center/blog/%E5%A2%9E%E9%95%BF%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9Aai%E4%BA%91%E5%AD%98%E5%82%A8%E5%B4%9B%E8%B5%B7%E4%B8%8E%E6%8E%A8%E7%90%86%E7%94%9F%E6%80%81%E5%88%86%E5%8C%96%E9%87%8D%E5%A1%91%E6%99%BA%E7%AE%97/"
+            }
+          ]
+        },
+        {
+          "id": "M26NOV69",
+          "label": "AI优化云存储服务",
+          "value": 22.5,
+          "unit": "亿元人民币",
+          "period": "2026H1",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "SRC-24DF355E",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "IDC中国智算云服务市场（2026上半年）跟踪",
+              "url": "https://www.idc.com/resource-center/blog/%E5%A2%9E%E9%95%BF%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9Aai%E4%BA%91%E5%AD%98%E5%82%A8%E5%B4%9B%E8%B5%B7%E4%B8%8E%E6%8E%A8%E7%90%86%E7%94%9F%E6%80%81%E5%88%86%E5%8C%96%E9%87%8D%E5%A1%91%E6%99%BA%E7%AE%97/"
+            }
+          ]
+        }
+      ],
+      "takeaway": "AI IaaS服务"
+    },
+    {
+      "id": "MG11",
+      "title": "中国AI云存储年度收入预测",
+      "display": "separate_series",
+      "geography": "中国",
+      "population": "AI云存储服务",
+      "comparison_rule": "采用2026年11月23日发布版本。",
+      "rows": [
+        {
+          "id": "M26NOV71",
+          "label": "2026年预测",
+          "value": 128.3,
+          "unit": "亿元人民币",
+          "period": "2026",
+          "value_type": "forecast",
+          "source_refs": [
+            {
+              "source_id": "SRC-24DF355E",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "IDC中国智算云服务市场（2026上半年）跟踪",
+              "url": "https://www.idc.com/resource-center/blog/%E5%A2%9E%E9%95%BF%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9Aai%E4%BA%91%E5%AD%98%E5%82%A8%E5%B4%9B%E8%B5%B7%E4%B8%8E%E6%8E%A8%E7%90%86%E7%94%9F%E6%80%81%E5%88%86%E5%8C%96%E9%87%8D%E5%A1%91%E6%99%BA%E7%AE%97/"
+            }
+          ]
+        },
+        {
+          "id": "M26NOV72",
+          "label": "2030年预测",
+          "value": 624.3,
+          "unit": "亿元人民币",
+          "period": "2030",
+          "value_type": "forecast",
+          "source_refs": [
+            {
+              "source_id": "SRC-24DF355E",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "IDC中国智算云服务市场（2026上半年）跟踪",
+              "url": "https://www.idc.com/resource-center/blog/%E5%A2%9E%E9%95%BF%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9Aai%E4%BA%91%E5%AD%98%E5%82%A8%E5%B4%9B%E8%B5%B7%E4%B8%8E%E6%8E%A8%E7%90%86%E7%94%9F%E6%80%81%E5%88%86%E5%8C%96%E9%87%8D%E5%A1%91%E6%99%BA%E7%AE%97/"
+            }
+          ]
+        }
+      ],
+      "takeaway": "2026年预测"
     }
   ],
   "conflicts": [
@@ -2356,13 +2651,53 @@
       "url": "https://www.idc.com/resource-center/blog/%e4%bb%8e2026-gtc%e7%9c%8b%e7%ae%97%e5%8a%9b%e6%bc%94%e8%bf%9b5%e5%a4%a7%e8%b6%8b%e5%8a%bf%ef%bc%9a%e6%99%ba%e8%83%bd%e7%ae%97%e5%8a%9b%e6%9e%b6%e6%9e%84%e6%9b%b4%e5%8a%a0%e4%b8%93%e4%b8%9a%e5%8c%96/",
       "type": "机构官方评论",
       "caveat": "IDC官方评论，非完整Tracker底表；页面后于2026-08-24更新，无法确认该数字是否从初发即存在。"
+    },
+    {
+      "id": "SRC-F4A0D11F",
+      "report_id": "SRC-F4A0D11F",
+      "title": "AI Infrastructure Spending Jumps to $121 Billion in Q2 2026",
+      "publisher": "IDC",
+      "published_at": "2026-11-06",
+      "url": "https://www.idc.com/resource-center/blog/ai-infrastructure-spending-jumps-to-121-billion-in-q2-2026/",
+      "type": "市场统计与研究",
+      "caveat": "IDC Worldwide Quarterly AI Infrastructure Tracker"
+    },
+    {
+      "id": "SRC-24DF355E",
+      "report_id": "SRC-24DF355E",
+      "title": "增长新阶段：AI云存储崛起与推理生态分化重塑智算云市场",
+      "publisher": "IDC",
+      "published_at": "2026-11-23",
+      "url": "https://www.idc.com/resource-center/blog/%E5%A2%9E%E9%95%BF%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%9Aai%E4%BA%91%E5%AD%98%E5%82%A8%E5%B4%9B%E8%B5%B7%E4%B8%8E%E6%8E%A8%E7%90%86%E7%94%9F%E6%80%81%E5%88%86%E5%8C%96%E9%87%8D%E5%A1%91%E6%99%BA%E7%AE%97/",
+      "type": "市场统计与研究",
+      "caveat": "IDC中国智算云服务市场（2026上半年）跟踪"
+    },
+    {
+      "id": "SRC-BF7A33E7",
+      "report_id": "SRC-BF7A33E7",
+      "title": "逆势上扬，新华三稳居2026上半年中国服务器市场第二",
+      "publisher": "新华三（引IDC）",
+      "published_at": "2026-10-19",
+      "url": "https://www.h3c.com/cn/d_202610/2963889_30008_0.htm",
+      "type": "市场统计与研究",
+      "caveat": "IDC中国服务器市场跟踪报告摘录"
+    },
+    {
+      "id": "SRC-A6F7270E",
+      "report_id": "SRC-A6F7270E",
+      "title": "服务器开始按“柜”交付：接得住，才是数据中心的竞争力",
+      "publisher": "IDC",
+      "published_at": "2026-10-26",
+      "url": "https://www.idc.com/resource-center/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BC%80%E5%A7%8B%E6%8C%89%E6%9F%9C%E4%BA%A4%E4%BB%98%EF%BC%9A%E6%8E%A5%E5%BE%97%E4%BD%8F%EF%BC%8C%E6%89%8D%E6%98%AF%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%9A%84/",
+      "type": "市场统计与研究",
+      "caveat": "IDC液冷服务器及全球服务器跟踪"
     }
   ],
   "counts": {
-    "insights": 8,
-    "metric_groups": 7,
-    "metric_rows": 26,
+    "insights": 10,
+    "metric_groups": 10,
+    "metric_rows": 34,
     "conflicts": 8,
-    "sources": 28
+    "sources": 32
   }
 }

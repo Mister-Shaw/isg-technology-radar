@@ -7,6 +7,7 @@ import {pendingRecord,canonicalUrl} from '@/lib/imports';
 import {readResearch,saveResearchEdit} from '@/lib/research-store';
 import {readRadar,recordHistory,saveWorkspaceResearch,SHARED_WORKSPACE} from '@/lib/radar-store';
 import {LEGACY_ALIASES} from '@/lib/unified-records';
+import {publishedResearchRow} from '@/lib/published-research.js';
 import monitoring from '@/data/weekly-monitor.json';
 export const dynamic='force-dynamic';
 const json=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
@@ -32,7 +33,8 @@ export async function POST(request){try{
  if(!payload||typeof payload!=='object')throw Error('400:请求格式无效。');
  if(payload.op==='save_research'){
   if(['events','leads'].includes(payload.section)){
-   const existing=(await readRadar()).records.find(e=>e.id===payload.key);
+   const existingKey=publishedResearchRow(payload.key)?.snapshotKey||payload.key;
+   const existing=(await readRadar()).records.find(e=>e.id===existingKey);
    if(LEGACY_ALIASES[payload.key]||existing&&(existing._ref.source!=='research'||existing._ref.section!==payload.section))throw Error('409:此记录已存在，请刷新后从原记录编辑。');
   }
   return json({record:await saveResearchEdit(payload)});
@@ -40,7 +42,7 @@ export async function POST(request){try{
  if(payload.op==='save_workspace_research')return json({record:await saveWorkspaceResearch(payload)});
  if(payload.op==='save'){
   const id=payload.record?.id,research=await readResearch();
-  if(LEGACY_ALIASES[id]||[...research.events,...research.leads].some(e=>e.id===id))throw Error('409:此记录已归入月度研究，请刷新后编辑统一记录。');
+  if(LEGACY_ALIASES[id]||publishedResearchRow(id)||[...research.events,...research.leads].some(e=>e.id===id))throw Error('409:此记录已归入月度研究，请刷新后编辑统一记录。');
   const record=validateRecord(payload.record);return json({record:await saveRecord(owner,record)});
  }
  if(payload.op==='import'){

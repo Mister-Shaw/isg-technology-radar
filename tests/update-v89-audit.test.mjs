@@ -37,12 +37,16 @@ assert.equal(historicalActive.length+v93Ids.size,25344,'The v93/v94 denominator 
 for(const row of historicalActive)assert(currentActiveById.has(row.id),`The current snapshot retains the active v92 article: ${row.id}`);
 const additions=currentActive.filter(row=>!historicalIds.has(row.id));
 assert.equal(currentActive.length,historicalActive.length+additions.length,'All current active additions reconcile independently against pinned v92 IDs');
-assert.equal(original.media_summary.total_documents,historical.media_summary.total_documents+additions.length,'The current denominator reconciles with every active addition since pinned v92');
-assert.equal(current.documents.filter(row=>row.collection_batch===latest.id).length,latest.media_added,'The latest receipt counts all appended archive records, including retained title duplicates');
-assert.equal(currentActive.filter(row=>row.collection_batch===latest.id).length,original.latest_refresh.active_added_rows,'The active additions exclude superseded title duplicates');
-assert.equal(original.media_summary.total_documents,latest.media_total,'The latest receipt matches the current snapshot');
+assert.equal(current.media_summary.total_documents,historical.media_summary.total_documents+additions.length,'The current denominator reconciles with every active addition since pinned v92');
+const latestRows=current.documents.filter(row=>row.collection_batch===latest.id);
+const latestArchive=latestRows.filter(row=>current.media_summary.source_ids.includes(row.source_id));
+assert.equal(latestArchive.length,latest.media_added,'The fixed archive receipt includes retained title duplicates');
+assert.equal(latestRows.length,current.latest_refresh.added_rows,'Every appended article is represented in the current receipt');
+assert.equal(latestRows.filter(row=>!row.superseded).length,current.latest_refresh.active_added_rows,'Active additions exclude superseded title duplicates in all sources');
+assert.equal(currentActive.filter(row=>row.collection_batch===latest.id).length,latestArchive.filter(row=>!row.superseded).length,'The fixed denominator counts only active archive additions');
+assert.equal(current.media_summary.total_documents,latest.media_total,'The latest receipt matches the merged snapshot');
 assert.deepEqual(original.expansion_assets.slice(0,baseline.expansion_assets.length),baseline.expansion_assets,'Both historical expansion assets remain available');
-const currentTotal=original.media_summary.total_documents;
+const replayTotal=original.media_summary.total_documents;
 // Replaying known public articles is an offline compatibility check, not a claim of a new scan.
 const documents=original.documents.filter(row=>MEDIA.includes(row.source_id)&&row.url&&row.title&&Array.isArray(row.categories)&&Array.isArray(row.tags));
 const fresh={cutoff:original.window.end,scanned_through:original.window.end,reread_start:original.window.start,checked_at:original.collected_at,documents,sources:MEDIA.map(source_id=>({source_id,rows:documents.filter(row=>row.source_id===source_id).length,complete:true}))};
@@ -50,7 +54,7 @@ const updated=mergeMedia(original,fresh).panel;
 assert.deepEqual(original,before,'The real snapshot remains untouched');
 assert.deepEqual(updated.expansion_assets,original.expansion_assets);
 assert.deepEqual(updated.media_summary.source_ids,original.media_summary.source_ids);
-assert.equal(updated.media_summary.total_documents,currentTotal,'A no-new-news replay cannot resurrect audited non-news entries');
+assert.equal(updated.media_summary.total_documents,replayTotal,'A no-new-news replay cannot resurrect audited non-news entries');
 assert.deepEqual(updated.media_summary.monthly.map(c=>[c.month,c.total_documents,c.active_documents]),original.media_summary.monthly.map(c=>[c.month,c.total_documents,c.active_documents]));
 const excluded=original.documents.filter(row=>MEDIA.includes(row.source_id)&&(row.is_article===false||row.exclusion_reason==='publisher_non_news_entry'));
 assert.equal(excluded.length,31,'The current snapshot retains 31 explicitly excluded publisher entries');
@@ -66,11 +70,12 @@ for(const row of excluded){
  assert.deepEqual(retained.source_audit,row.source_audit,row.id);
 }
 for(const id of original.media_summary.source_ids.filter(id=>!MEDIA.includes(id)))assert.deepEqual(updated.sources.find(source=>source.id===id),original.sources.find(source=>source.id===id),'Retained source audit metadata is unchanged');
-const combined=[...updated.documents,...parts.flatMap(part=>part.documents)];
-assert.equal(combined.filter(row=>updated.media_summary.source_ids.includes(row.source_id)&&!row.superseded).length,currentTotal,'Every declared expansion asset contributes to the fifteen-source denominator');
+const combined=mergeMarketAssets(updated,parts);
+assert.equal(activeMedia(combined).length,current.media_summary.total_documents,'Every declared expansion asset contributes to the fifteen-source denominator');
+assert.equal(combined.media_summary.total_documents,current.media_summary.total_documents,'Replaying the base preserves the current merged denominator');
 const repeated=mergeMedia(updated,fresh).panel;
 assert.deepEqual(repeated.documents,updated.documents,'A second replay is idempotent');
-assert.equal(repeated.media_summary.total_documents,currentTotal);
+assert.equal(repeated.media_summary.total_documents,replayTotal);
 
 // The collector must not override a previously audited exclusion when metadata changes.
 const auditOnly={window:{start:'2026-10-01',end:'2026-10-10'},documents:[{id:'excluded',source_id:MEDIA[0],title:'Publisher event',date:'2026-10-02',month:'2026-10',categories:[],tags:[],is_article:false,exclusion_reason:'publisher_non_news_entry',superseded:true,source_audit:{batch:'verified-publisher-audit',reason:'Non-news event'},original_url:'https://example.org/original-event'}],sources:MEDIA.map(id=>({id,coverage:[{month:'2026-10',status:'complete',covered_through:'2026-10-10'}]}))};
@@ -82,4 +87,4 @@ const conflicted={...returned,is_article:true,exclusion_reason:null,source_audit
 const guarded=mergeMedia(auditOnly,{...auditFresh,documents:[conflicted]}).panel.documents[0];
 assert.equal(guarded.superseded,true,'Conflicting incoming flags cannot reactivate an audited exclusion');
 for(const field of ['is_article','exclusion_reason','source_audit','original_url'])assert.deepEqual(guarded[field],auditOnly.documents[0][field],`Preserve prior audit ${field}`);
-console.log(`PASS: v89 audit baseline retained; no-new-news replay preserves ${currentTotal} active stories, 15 sources, ${parts.length} expansion assets and all 31 audited exclusions`);
+console.log(`PASS: v89 audit baseline retained; no-new-news replay preserves ${replayTotal} active stories, 15 sources, ${parts.length} expansion assets and all 31 audited exclusions`);
