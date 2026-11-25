@@ -1,4 +1,47 @@
 {
-  "sha256": "69ea1972b9fd55c989ff7f972573d665e7bd186bfd469c9a99020910be9ea1e2",
-  "previous_git_blob": "3f29eb8402302ca591d6bf10e08a6210a5a0650a"
+  "sha256": "24888cde5e773d80cb9520291588f16899750c8e34af0337c9fac9e716c4b78b",
+  "previous_git_blob": "c522069f76d3985c30d1290acaef79c66f2db22d",
+  "base_sha256": "69ea1972b9fd55c989ff7f972573d665e7bd186bfd469c9a99020910be9ea1e2",
+  "field_overrides": {
+    "expansion_assets": [
+      "/market-expansion.json",
+      "/market-expansion-2.json",
+      "/market-expansion-3.json",
+      "/market-expansion-4.json",
+      "/market-expansion-5.json"
+    ],
+    "expansion_manifest": {
+      "batch_id": "source-audit-20261125",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "total_documents": 3491,
+      "active_documents": 3488,
+      "source_ids": [
+        "eet_china",
+        "idcquan_expanded",
+        "trendforce",
+        "zhidx",
+        "cctime",
+        "cena",
+        "chinabyte",
+        "dcd",
+        "it168",
+        "ithome",
+        "leiphone",
+        "doit_all",
+        "zhiding_latest",
+        "cbinews_all_news",
+        "c114_roll_all",
+        "topic_ithome",
+        "topic_c114_roll_all",
+        "topic_cctime",
+        "topic_zhiding_latest",
+        "topic_cww",
+        "topic_doit_all",
+        "topic_d1net",
+        "topic_eet_china",
+        "topic_it168",
+        "topic_leiphone"
+      ]
+    }
+  }
 }

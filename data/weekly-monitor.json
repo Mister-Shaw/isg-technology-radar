@@ -34,12 +34,12 @@
       "url": "https://www.zhiding.cn/gaofei/2026/1007/3201163.shtml"
     }
   ],
-  "latest_status": "11月24日手动核查130个登记信源，研究台账新增82条。固定媒体归档1,167篇，含1篇同源复刊，新增有效样本1,166篇；专题补采55篇。11月固定样本837篇，其中至顶科技占85.8%。 定时计划保持暂停。",
+  "latest_status": "11月25日手动审计：检查130个信源，新增75篇媒体新闻、41条研究记录；11月912篇。部分历史归档仍未查全。定时计划保持暂停。",
   "paused_by_user": true,
   "pause_confirmed_at": "2026-10-07T10:08:55Z",
-  "latest_requested_cutoff": "2026-11-24",
+  "latest_requested_cutoff": "2026-11-25",
   "latest_update_status": "partial",
-  "last_attempt_at": "2026-11-24T15:50:44.595Z",
+  "last_attempt_at": "2026-11-25T03:08:39.085Z",
   "latest_window": {
     "start": "2026-10-01",
     "end": "2026-10-07",
@@ -91,12 +91,5 @@
       "url": "https://www.doit.com.cn/storage/850264174981189.html",
       "interpretation": "本周仅1篇命中，新闻主题分配与少量分子均会放大比例变化。先跟踪接下来两周及买方存储采购，当前不能判断需求下降。"
     }
-  ],
-  "cross_day_followup": {
-    "checked_at": "2026-11-25T00:36:00+08:00",
-    "timezone": "Asia/Shanghai",
-    "new_records": 0,
-    "collection_cutoff": "2026-11-24",
-    "detail": "北京时间11月25日00:36跨日检索，新增入库0条。固定媒体栏目统计截至11月24日。"
-  }
+  ]
 }

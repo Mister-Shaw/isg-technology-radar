@@ -2,9 +2,9 @@
   "schema_version": "1.0.0",
   "title": "研报分析",
   "subtitle": "研报数据的趋势、对比与结构变化",
-  "as_of": "2026-11-24",
+  "as_of": "2026-11-25",
   "scope": "中国大陆服务器与算力基础设施；全球材料仅作明确标注的技术或市场对照",
-  "snapshot_notice": "截至2026年11月24日已复核的公开研究；统计期与预测版本见各指标来源。",
+  "snapshot_notice": "截至2026年11月25日已复核的公开研究；统计期、财报原发日与预测版本见各项来源。",
   "default_view": "charts",
   "secondary_views": [
     {
@@ -1312,6 +1312,154 @@
       ],
       "content_revision": 1,
       "last_reviewed": "2026-11-24"
+    },
+    {
+      "id": "RA11",
+      "topic": "厂商经营",
+      "tags": [
+        "厂商经营"
+      ],
+      "headline": "戴尔披露AI服务器季度营收220.31亿美元，Nutanix ARR同比增15%",
+      "what_changed": "戴尔上调AI优化服务器全年营收指引；Nutanix本季度营收与期末年度经常性收入均同比增长15%。",
+      "facts": [
+        {
+          "text": "截至10月30日的财季，戴尔AI优化服务器营收220.31亿美元，传统服务器及网络150.13亿美元，存储49.30亿美元。",
+          "source_refs": [
+            {
+              "source_id": "SRC-DELL-Q3FY27",
+              "url": "https://investors.delltechnologies.com/news-events/press-releases/detail/1665/dell-technologies-delivers-third-quarter-fiscal-2027-financial-results",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "ISG分部财务表、首席运营官经营说明及全年指引"
+            }
+          ],
+          "maturity": "公司实际披露",
+          "geography": "全球",
+          "period": "FY2027 Q3"
+        },
+        {
+          "text": "戴尔将全年AI优化服务器营收指引从740亿美元上调至780亿美元。",
+          "source_refs": [
+            {
+              "source_id": "SRC-DELL-Q3FY27",
+              "url": "https://investors.delltechnologies.com/news-events/press-releases/detail/1665/dell-technologies-delivers-third-quarter-fiscal-2027-financial-results",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "ISG分部财务表、首席运营官经营说明及全年指引"
+            }
+          ],
+          "maturity": "公司业绩指引",
+          "geography": "全球",
+          "period": "FY2027"
+        },
+        {
+          "text": "Nutanix截至10月31日的财季营收7.724亿美元，期末ARR约26.33亿美元，两项指标均同比增长15%。",
+          "source_refs": [
+            {
+              "source_id": "SRC-NTNX-Q1FY27",
+              "url": "https://www.globenewswire.com/news-release/2026/11/24/3409862/0/en/nutanix-reports-first-quarter-fiscal-2027-financial-results.html",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "First Quarter Fiscal 2027 Financial Highlights；ARR定义注1及附表"
+            }
+          ],
+          "maturity": "公司实际披露",
+          "geography": "全球",
+          "period": "FY2027 Q1"
+        }
+      ],
+      "inference": "两家美国公司的原发日期均为11月24日，Nutanix和戴尔的发布时间分别对应北京时间11月25日05:01、05:05。",
+      "business_implication": "分别跟踪硬件销售收入、未交付订单及软件订阅合同的年化价值。",
+      "evidence_maturity": {
+        "label": "公开研究及财务披露",
+        "confidence": "原文已复核"
+      },
+      "limitations": [],
+      "action": [],
+      "metric_group_ids": [
+        "MG12",
+        "MG13"
+      ],
+      "conflict_ids": [],
+      "source_ids": [
+        "SRC-DELL-Q3FY27",
+        "SRC-NTNX-Q1FY27"
+      ],
+      "content_revision": 1,
+      "last_reviewed": "2026-11-25"
+    },
+    {
+      "id": "RA12",
+      "topic": "企业级SSD",
+      "tags": [
+        "企业级SSD"
+      ],
+      "headline": "中国云厂商缩减企业级SSD采购，北美AI客户仍在加单",
+      "what_changed": "11月的企业级SSD订单走向出现分化，TrendForce同步提前了对NAND合约价下行时点的预测。",
+      "facts": [
+        {
+          "text": "TrendForce统计显示，2026Q3全球NAND Flash行业营收首次超过1000亿美元。",
+          "source_refs": [
+            {
+              "source_id": "SRC-TF-NAND-Q326",
+              "url": "https://www.trendforce.com/research/download/RP261118ID",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "公开目录第1节及研究摘要"
+            }
+          ],
+          "maturity": "机构统计实绩",
+          "geography": "中国及全球对照",
+          "period": "2026Q3"
+        },
+        {
+          "text": "11月25日市场快报记录了中国云厂商削减企业级SSD采购、北美AI客户继续追加合约订单的分化。",
+          "source_refs": [
+            {
+              "source_id": "SRC-TF-NAND-1125",
+              "url": "https://www.trendforce.com/research/download/RP261125QD",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "公开摘要：合约与现货市场"
+            }
+          ],
+          "maturity": "机构调研观察",
+          "geography": "中国及全球对照",
+          "period": "2026年11月"
+        },
+        {
+          "text": "TrendForce在11月17日预计全球NAND合约价格自2027Q2起下行，比前一轮预期早一个季度。",
+          "source_refs": [
+            {
+              "source_id": "SRC-TF-NAND-1117",
+              "url": "https://www.trendforce.com/research/download/RP261116WI",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "公开摘要：2027年合约价转折预测"
+            }
+          ],
+          "maturity": "机构预测",
+          "geography": "中国及全球对照",
+          "period": "2027Q2"
+        }
+      ],
+      "inference": "中国云厂商GPU供应和库存影响SSD采购节奏，全球Q3销售额同时受其他地区和消费产品需求影响。",
+      "business_implication": "评价国内企业级SSD需求时，应单列国内云厂商订单、到货节奏与库存。",
+      "evidence_maturity": {
+        "label": "公开研究及财务披露",
+        "confidence": "原文已复核"
+      },
+      "limitations": [],
+      "action": [],
+      "metric_group_ids": [],
+      "conflict_ids": [],
+      "source_ids": [
+        "SRC-TF-NAND-Q326",
+        "SRC-TF-NAND-1125",
+        "SRC-TF-NAND-1117"
+      ],
+      "content_revision": 1,
+      "last_reviewed": "2026-11-25"
     }
   ],
   "metric_groups": [
@@ -2116,6 +2264,130 @@
         }
       ],
       "takeaway": "2026年预测"
+    },
+    {
+      "id": "MG12",
+      "title": "戴尔全球ISG季度业务构成",
+      "display": "separate_series",
+      "geography": "全球",
+      "population": "戴尔ISG分部",
+      "comparison_rule": "ISG总营收包含AI优化服务器、传统服务器及网络、存储。",
+      "rows": [
+        {
+          "id": "M_DELL_ISG_REV",
+          "label": "戴尔ISG营收",
+          "value": 419.74,
+          "unit": "亿美元",
+          "period": "FY2027 Q3",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "SRC-DELL-Q3FY27",
+              "url": "https://investors.delltechnologies.com/news-events/press-releases/detail/1665/dell-technologies-delivers-third-quarter-fiscal-2027-financial-results",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "ISG分部财务表、首席运营官经营说明及全年指引"
+            }
+          ]
+        },
+        {
+          "id": "M_DELL_AI_REV",
+          "label": "戴尔AI优化服务器营收",
+          "value": 220.31,
+          "unit": "亿美元",
+          "period": "FY2027 Q3",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "SRC-DELL-Q3FY27",
+              "url": "https://investors.delltechnologies.com/news-events/press-releases/detail/1665/dell-technologies-delivers-third-quarter-fiscal-2027-financial-results",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "ISG分部财务表、首席运营官经营说明及全年指引"
+            }
+          ]
+        },
+        {
+          "id": "M_DELL_TRAD_NET",
+          "label": "戴尔传统服务器与网络营收",
+          "value": 150.13,
+          "unit": "亿美元",
+          "period": "FY2027 Q3",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "SRC-DELL-Q3FY27",
+              "url": "https://investors.delltechnologies.com/news-events/press-releases/detail/1665/dell-technologies-delivers-third-quarter-fiscal-2027-financial-results",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "ISG分部财务表、首席运营官经营说明及全年指引"
+            }
+          ]
+        },
+        {
+          "id": "M_DELL_STOR_REV",
+          "label": "戴尔存储营收",
+          "value": 49.3,
+          "unit": "亿美元",
+          "period": "FY2027 Q3",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "SRC-DELL-Q3FY27",
+              "url": "https://investors.delltechnologies.com/news-events/press-releases/detail/1665/dell-technologies-delivers-third-quarter-fiscal-2027-financial-results",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "ISG分部财务表、首席运营官经营说明及全年指引"
+            }
+          ]
+        }
+      ],
+      "takeaway": "ISG总营收包含AI优化服务器、传统服务器及网络、存储。"
+    },
+    {
+      "id": "MG13",
+      "title": "Nutanix全球季度收入与期末ARR",
+      "display": "separate_series",
+      "geography": "全球",
+      "population": "Nutanix合并口径",
+      "comparison_rule": "营收按财季确认，ARR是期末有效订阅合同的年化价值。",
+      "rows": [
+        {
+          "id": "M_NTNX_REVENUE",
+          "label": "Nutanix 全球营收",
+          "value": 7.724,
+          "unit": "亿美元",
+          "period": "FY2027 Q1",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "SRC-NTNX-Q1FY27",
+              "url": "https://www.globenewswire.com/news-release/2026/11/24/3409862/0/en/nutanix-reports-first-quarter-fiscal-2027-financial-results.html",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "First Quarter Fiscal 2027 Financial Highlights；ARR定义注1及附表"
+            }
+          ]
+        },
+        {
+          "id": "M_NTNX_ARR",
+          "label": "Nutanix 期末年度经常性收入（ARR）",
+          "value": 26.32988,
+          "unit": "亿美元",
+          "period": "FY2027 Q1",
+          "value_type": "actual",
+          "source_refs": [
+            {
+              "source_id": "SRC-NTNX-Q1FY27",
+              "url": "https://www.globenewswire.com/news-release/2026/11/24/3409862/0/en/nutanix-reports-first-quarter-fiscal-2027-financial-results.html",
+              "pdf_pages": [],
+              "printed_pages": null,
+              "section": "First Quarter Fiscal 2027 Financial Highlights；ARR定义注1及附表"
+            }
+          ]
+        }
+      ],
+      "takeaway": "营收按财季确认，ARR是期末有效订阅合同的年化价值。"
     }
   ],
   "conflicts": [
@@ -2691,13 +2963,105 @@
       "url": "https://www.idc.com/resource-center/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BC%80%E5%A7%8B%E6%8C%89%E6%9F%9C%E4%BA%A4%E4%BB%98%EF%BC%9A%E6%8E%A5%E5%BE%97%E4%BD%8F%EF%BC%8C%E6%89%8D%E6%98%AF%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%9A%84/",
       "type": "市场统计与研究",
       "caveat": "IDC液冷服务器及全球服务器跟踪"
+    },
+    {
+      "id": "SRC-DELL-Q3FY27",
+      "report_id": "SRC-DELL-Q3FY27",
+      "title": "Dell Technologies Delivers Third Quarter Fiscal 2027 Financial Results",
+      "publisher": "戴尔科技",
+      "published_at": "2026-11-24T16:05:00-05:00",
+      "published_at_beijing": "2026-11-25T05:05:00+08:00",
+      "url": "https://investors.delltechnologies.com/news-events/press-releases/detail/1665/dell-technologies-delivers-third-quarter-fiscal-2027-financial-results",
+      "type": "公司或机构公开披露",
+      "caveat": "原发美国东部标准时间11月24日16:05，北京时间11月25日05:05。"
+    },
+    {
+      "id": "SRC-NTNX-Q1FY27",
+      "report_id": "SRC-NTNX-Q1FY27",
+      "title": "Nutanix Reports First Quarter Fiscal 2027 Financial Results",
+      "publisher": "Nutanix",
+      "published_at": "2026-11-24T16:01:00-05:00",
+      "published_at_beijing": "2026-11-25T05:01:00+08:00",
+      "url": "https://www.globenewswire.com/news-release/2026/11/24/3409862/0/en/nutanix-reports-first-quarter-fiscal-2027-financial-results.html",
+      "type": "公司或机构公开披露",
+      "caveat": "原发美国东部标准时间11月24日16:01，北京时间11月25日05:01。"
+    },
+    {
+      "id": "SRC-TF-NAND-Q326",
+      "report_id": "SRC-TF-NAND-Q326",
+      "title": "3Q26 Revenue Ranking among NAND Flash Suppliers",
+      "publisher": "TrendForce",
+      "published_at": "2026-11-20",
+      "url": "https://www.trendforce.com/research/download/RP261118ID",
+      "type": "公司或机构公开披露",
+      "caveat": "公开目录第1节及研究摘要"
+    },
+    {
+      "id": "SRC-TF-NAND-1125",
+      "report_id": "SRC-TF-NAND-1125",
+      "title": "NAND Flash Market Bulletin — Nov. 25, 2026",
+      "publisher": "TrendForce",
+      "published_at": "2026-11-25",
+      "url": "https://www.trendforce.com/research/download/RP261125QD",
+      "type": "公司或机构公开披露",
+      "caveat": "公开摘要：合约与现货市场"
+    },
+    {
+      "id": "SRC-TF-NAND-1117",
+      "report_id": "SRC-TF-NAND-1117",
+      "title": "Enterprise SSD Cuts Pull NAND Price Drop to 2Q27",
+      "publisher": "TrendForce",
+      "published_at": "2026-11-17",
+      "url": "https://www.trendforce.com/research/download/RP261116WI",
+      "type": "公司或机构公开披露",
+      "caveat": "公开摘要：2027年合约价转折预测"
+    },
+    {
+      "id": "SRC-DOR-POWER-1117",
+      "report_id": "SRC-DOR-POWER-1117",
+      "title": "Data Center High-density Power Market to Top $42 Billion by 2030",
+      "publisher": "Dell’Oro Group",
+      "published_at": "2026-11-17",
+      "url": "https://www.delloro.com/newsroom/data-center-high-density-power-market-42-billion-2030/",
+      "type": "公司或机构公开披露",
+      "caveat": "新闻稿正文、2030年市场展望"
+    },
+    {
+      "id": "SRC-DOR-OPTICAL-Q326",
+      "report_id": "SRC-DOR-OPTICAL-Q326",
+      "title": "75 Percent Increase in Cloud Provider Spending on Optical Transport Equipment in 3Q 2026",
+      "publisher": "Dell’Oro Group",
+      "published_at": "2026-11-20",
+      "url": "https://www.delloro.com/newsroom/optical-transport-market-growth-3q26/",
+      "type": "公司或机构公开披露",
+      "caveat": "3Q 2026 Optical Transport Quarterly Report公开摘要"
+    },
+    {
+      "id": "SRC-C0CA5BF3",
+      "report_id": "SRC-C0CA5BF3",
+      "title": "锐捷网络投资者关系活动记录表",
+      "publisher": "锐捷网络（投资者关系活动记录，引IDC）",
+      "published_at": "2026-10-21",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-10-21/1225614287.PDF",
+      "type": "公司或机构公开披露",
+      "caveat": "按发布页或定期报告披露日期记录。"
+    },
+    {
+      "id": "SRC-CN-FILE-Q226",
+      "report_id": "SRC-CN-FILE-Q226",
+      "title": "IDC：2026年Q2中国文件存储市场规模33.25亿元，深信服跻身前三",
+      "publisher": "IDC（深信服引述，界面新闻转载）",
+      "published_at": "2026-10-16",
+      "url": "https://www.jiemian.com/article/15200700.html",
+      "type": "同期研究报道",
+      "caveat": "按同期公开报道日期记录，界面新闻转载深信服材料。"
     }
   ],
   "counts": {
-    "insights": 10,
-    "metric_groups": 10,
-    "metric_rows": 34,
+    "insights": 12,
+    "metric_groups": 12,
+    "metric_rows": 40,
     "conflicts": 8,
-    "sources": 32
+    "sources": 41
   }
 }

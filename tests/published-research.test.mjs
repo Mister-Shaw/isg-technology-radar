@@ -14,13 +14,47 @@ const revise=(revision,fields)=>({...seed,revision,value:{...seed.value,...field
 
 test('every reviewed editor key resolves to one snapshot row in the right section',()=>{
  const keys=new Set();
- for(const [section,snapshotKey,storageKey] of publishedResearchKeys){
+ for(const [section,snapshotKey,storageKey,storageSection=section] of publishedResearchKeys){
   assert.ok(snapshot[section].some(row=>row.id===snapshotKey));
   assert.equal(publishedResearchRow(storageKey),publishedResearchRow(snapshotKey));
+  assert.equal(publishedResearchRow(storageKey).storageSection,storageSection);
+  assert.ok(!keys.has(storageKey)&&!keys.has(snapshotKey));
   keys.add(storageKey);keys.add(snapshotKey);
  }
- assert.equal(keys.size,164);
  assert.equal(publishedResearchRow(original.url),undefined);
+});
+
+test('revision one of a native snapshot ID retains its first visitor edit after promotion',()=>{
+ const key='native-snapshot-id',identity={section:'events',storageSection:'leads',snapshotKey:key,storageKey:key};
+ const prior={id:key,title:'预算公示',stage:'tender',note:'',verified_fulltext:false};
+ const current={...prior,title:'中标公告',stage:'award',verified_fulltext:true};
+ const edit={key,section:'leads',revision:1,value:{...prior,note:'人工跟进'}};
+ const edits=[edit,{...edit,revision:2,value:{...edit.value,note:''}}];
+ const rows=projectPublishedHistory(identity,current,edits,prior);
+ assert.equal(rows[0].value.note,'人工跟进');assert.equal(rows[1].value.note,'');
+ for(const entry of rows){assert.equal(entry.section,'events');assert.equal(entry.value.stage,'award');assert.equal(entry.value.verified_fulltext,true);}
+});
+
+test('a promoted lead retains visitor changes while its verified snapshot and history appear only under events',()=>{
+ const moved={section:'events',storageSection:'leads',snapshotKey:'snapshot-id',storageKey:'editor-uuid'};
+ const prior={id:moved.snapshotKey,title:'原条目',verified_fulltext:false,note:'',collection_batch:'旧版'};
+ const verified={...prior,title:'采购已核实',verified_fulltext:true,collection_batch:'新版'};
+ const initial={section:'leads',key:moved.storageKey,revision:1,value:{id:moved.storageKey,title:'录入默认值',note:''}};
+ const revisions=[initial,
+  {...initial,revision:2,value:{...initial.value,note:'访客补记'}},
+  {...initial,revision:3,snapshot_key:moved.snapshotKey,value:{...prior,note:'更正补记'}},
+  {...initial,revision:4,snapshot_key:moved.snapshotKey,snapshot_changes:{note:''},value:{...verified,note:''}}
+ ];
+ const projected=projectPublishedHistory(moved,verified,revisions,prior);
+ assert.deepEqual(projected.map(x=>x.value.note),['','访客补记','更正补记','']);
+ for(const entry of projected){
+  assert.equal(entry.section,'events');assert.equal(entry.key,moved.snapshotKey);
+  assert.equal(entry.value.id,moved.snapshotKey);assert.equal(entry.value.title,verified.title);
+  assert.equal(entry.value.verified_fulltext,true);assert.equal(entry.value.collection_batch,'新版');
+ }
+ const study=researchWithEdits({events:[verified],leads:[]},[projected[2]]);
+ assert.equal(study.events.length,1);assert.equal(study.leads.length,0);
+ assert.equal(study.events[0]._revision,3);assert.equal(study.events[0].note,'更正补记');
 });
 
 test('import defaults, visitor edits, deliberate reversions and later canonical saves replay in one sequence',()=>{

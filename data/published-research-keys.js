@@ -68,7 +68,7 @@ export const publishedResearchKeys = [
   ["leads","roll-20261124-3d1745a0254a96","145ae5a8-2f29-41ad-8b21-39c2a7cef94a"],
   ["leads","roll-20261124-fd93ff46524d7e","2b529bc5-f981-46ad-a1a6-bfe8e766974e"],
   ["leads","roll-20261124-fd386a16513b43","2fd4eadd-e5cb-40c3-8e47-949b9308b0fd"],
-  ["leads","roll-20261124-411603b16bcc78","373cb3ad-c825-44c6-83f3-3efde872ed1c"],
+  ["events","roll-20261124-411603b16bcc78","373cb3ad-c825-44c6-83f3-3efde872ed1c","leads"],
   ["leads","roll-20261124-003c07fd5471d1","3dd786d8-d5b5-4975-9012-be44fa71b47c"],
   ["leads","roll-20261124-db36e99bb27317","56436183-a82f-4819-8d3b-ced26b4391e8"],
   ["leads","roll-20261124-4b8078c11308d1","72aacbff-f174-44d4-9662-2f77c35758ce"],
@@ -82,4 +82,5 @@ export const publishedResearchKeys = [
   ["leads","roll-20261124-0981650d579b35","cdde6434-c8f8-42f1-a3ec-5ddbdf72e1d3"],
   ["leads","roll-20261124-a37ed7d083e606","d783810c-6b19-45e5-b01b-fe27b681ce25"],
   ["leads","roll-20261124-57d6817c83207d","f39ec9c7-f7e3-4e4d-b008-e39541565ec0"],
+  ["events","recovery-ccgp-27497916","recovery-ccgp-27497916","leads"]
 ];

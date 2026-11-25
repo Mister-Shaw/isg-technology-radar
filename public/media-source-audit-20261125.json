@@ -1,0 +1,598 @@
+{
+  "schema_version": 1,
+  "id": "media-source-audit-20261125",
+  "batch_id": "source-audit-20261125",
+  "checked_at": "2026-11-25T03:06:17.575Z",
+  "timezone": "Asia/Shanghai",
+  "window": {
+    "start": "2026-11-12",
+    "end": "2026-11-25"
+  },
+  "full_coverage": false,
+  "scope": "11月1日至25日，共归档913条固定栏目题录，去重后912篇，其中至顶科技755篇（82.8%）。25日上午核对15家媒体，当日归档49条、有效48篇；另补入12日至24日的27篇。25日数据截至北京时间11:06。",
+  "summary": {
+    "sources_checked": 15,
+    "sources_with_additions": 7,
+    "candidate_occurrences": 88,
+    "new_fixed_records": 76,
+    "new_today": 49,
+    "new_historical": 27,
+    "existing_fixed_skips": 11,
+    "same_batch_skips": 1,
+    "prior_topic_overlaps": 1,
+    "corrected_historical_urls": 8,
+    "november_fixed_active": 912,
+    "cumulative_fixed_active": 27803,
+    "zhiding_november": 755,
+    "zhiding_november_pct": 82.8,
+    "new_fixed_active": 75,
+    "new_today_active": 48,
+    "new_historical_active": 27,
+    "confirmed_republications": 1,
+    "november_fixed_raw": 913,
+    "zhiding_november_raw": 756
+  },
+  "source_checks": [
+    {
+      "source_id": "doit_all",
+      "start": "2026-11-25",
+      "observed_latest": "2026-11-25",
+      "note": "已读资讯目录第1至3页。首个列表页含2篇25日稿，新闻目录穿插此前日期，按逐条显示的日期及原文核对。",
+      "archive_urls": [
+        "https://www.doit.com.cn/news/index.html",
+        "https://www.doit.com.cn/news/index_2.html",
+        "https://www.doit.com.cn/news/index_3.html"
+      ],
+      "name": "DOIT · 全站全部新闻",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 2,
+      "new_fixed_records": 2,
+      "new_today": 2,
+      "record_ids": [
+        "media-20261125-47c539832f13f145",
+        "media-20261125-c448debfdab228e1"
+      ],
+      "new_fixed_active": 2,
+      "new_today_active": 2
+    },
+    {
+      "source_id": "c114_roll_all",
+      "start": "2026-11-25",
+      "observed_latest": "2026-11-25",
+      "note": "查看全部滚动资讯首屏，读取全部可见标题。最前5篇正文发布时间为08:23至10:35，下一篇正文是24日20:35。",
+      "archive_urls": [
+        "https://www.c114.com.cn/news/roll.asp"
+      ],
+      "name": "C114通信网·滚动资讯全部内容",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 5,
+      "new_fixed_records": 5,
+      "new_today": 5,
+      "record_ids": [
+        "media-20261125-92b71d4168ac4136",
+        "media-20261125-aa53379879491a8d",
+        "media-20261125-821591b4408e5f46",
+        "media-20261125-6fb0904ca7f1fdd0",
+        "media-20261125-92c7a02c9def7718"
+      ],
+      "new_fixed_active": 5,
+      "new_today_active": 5
+    },
+    {
+      "source_id": "zhiding_latest",
+      "start": "2026-11-25",
+      "observed_latest": "2026-11-25",
+      "note": "统一最新文章页1至3。第1页20篇、第2页18篇发表于25日，第2页末及第3页已进入24日。逐条核对原文日期和标题，同一集团的科技行者与至顶网合并。",
+      "archive_urls": [
+        "https://www.zhiding.cn/list-35-1-1-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-2-0-0.htm",
+        "https://www.zhiding.cn/list-35-1-3-0-0.htm"
+      ],
+      "name": "至顶科技 · 全部最新文章",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 38,
+      "new_fixed_records": 38,
+      "new_today": 38,
+      "record_ids": [
+        "media-20261125-0bf9af88049d9aac",
+        "media-20261125-b5f63f12ad0931a2",
+        "media-20261125-a1a7ae74a3fbffd8",
+        "media-20261125-2fb3bcd807caf84b",
+        "media-20261125-64f4aab8d8bb3939",
+        "media-20261125-72926cd0105d7543",
+        "media-20261125-b954d60139464b81",
+        "media-20261125-3ca6cdf77bab3a7f",
+        "media-20261125-6b49b93c897d172e",
+        "media-20261125-dfeea1a22eb4ffaf",
+        "media-20261125-a05944a54fc72a3a",
+        "media-20261125-d96bd53e86c96cbf",
+        "media-20261125-ba2dab2a9f05f238",
+        "media-20261125-9639f162994d1254",
+        "media-20261125-f49b0a1f1f13c675",
+        "media-20261125-08c55a7914a4b215",
+        "media-20261125-d2dbcfc7dd64e898",
+        "media-20261125-6c8e6c661db91ec8",
+        "media-20261125-e8515a616cd0324c",
+        "media-20261125-eea7f0e61c8d426e",
+        "media-20261125-ed4bab84e1eede1c",
+        "media-20261125-6d79de222dd7c469",
+        "media-20261125-74925b8e7fe8f63d",
+        "media-20261125-27a0a7846bac3015",
+        "media-20261125-8f8145b3f02e7479",
+        "media-20261125-7484da88b2f03715",
+        "media-20261125-aa32afb49c555aa2",
+        "media-20261125-feda934cba4cf1cb",
+        "media-20261125-87ec3dc1df46a580",
+        "media-20261125-a2f7242baae6a8f4",
+        "media-20261125-8e18306d7dda7c2e",
+        "media-20261125-49ccd4cdf8b03102",
+        "media-20261125-88c1a4165edfee5a",
+        "media-20261125-a7317ac30d3c5ca0",
+        "media-20261125-780797569ef6bd8a",
+        "media-20261125-46cf7ef3f2e26f86",
+        "media-20261125-928cc94b809b9fad",
+        "media-20261125-45dec96466e9f3c8"
+      ],
+      "new_fixed_active": 37,
+      "new_today_active": 37
+    },
+    {
+      "source_id": "cbinews_all_news",
+      "start": "2026-11-25",
+      "observed_latest": "2026-11-24",
+      "note": "12个固定新闻栏目查到11个可读“最新发布”列表，云计算、数字化转型最新为24日；人工智能栏目未取得本次可读页面。",
+      "archive_urls": [
+        "https://www.cbinews.com/VAR",
+        "https://www.cbinews.com/IDC",
+        "https://www.cbinews.com/Onemachine",
+        "https://www.cbinews.com/AI",
+        "https://www.cbinews.com/cloud",
+        "https://www.cbinews.com/IoT",
+        "https://www.cbinews.com/storage",
+        "https://www.cbinews.com/net",
+        "https://www.cbinews.com/software",
+        "https://www.cbinews.com/desktop",
+        "https://www.cbinews.com/channel",
+        "https://www.cbinews.com/digital"
+      ],
+      "name": "电脑商情在线（全部12新闻栏目）",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 0,
+      "new_fixed_records": 0,
+      "new_today": 0,
+      "record_ids": [],
+      "new_fixed_active": 0,
+      "new_today_active": 0
+    },
+    {
+      "source_id": "eet_china",
+      "start": "2026-11-25",
+      "observed_latest": "2026-11-25",
+      "note": "数据中心/服务器标签首页逐条读取发布日期，首条为25日，其后已进入24日。",
+      "archive_urls": [
+        "https://www.eet-china.com/tag/datacenter-server-processor/index.html"
+      ],
+      "name": "电子工程专辑 · 服务器与数据中心",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 1,
+      "new_fixed_records": 1,
+      "new_today": 1,
+      "record_ids": [
+        "media-20261125-9f6efa827e54b469"
+      ],
+      "new_fixed_active": 1,
+      "new_today_active": 1
+    },
+    {
+      "source_id": "trendforce",
+      "start": "2026-11-25",
+      "observed_latest": "2026-11-24",
+      "note": "中文产业洞察入口当前首条为24日的LED显示屏报告。英文行业新闻是另一栏目。",
+      "archive_urls": [
+        "https://www.trendforce.cn/presscenter/news"
+      ],
+      "name": "集邦咨询 · 产业洞察",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 0,
+      "new_fixed_records": 0,
+      "new_today": 0,
+      "record_ids": [],
+      "new_fixed_active": 0,
+      "new_today_active": 0
+    },
+    {
+      "source_id": "zhidx",
+      "start": "2026-11-25",
+      "observed_latest": null,
+      "note": "固定栏目可读导航；“最新资讯”部分仅显示加载更多，未返回可核日期的正文列表。",
+      "archive_urls": [
+        "https://zhidx.com/aichip001"
+      ],
+      "name": "芯东西 · 固定栏目",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 0,
+      "new_fixed_records": 0,
+      "new_today": 0,
+      "record_ids": [],
+      "new_fixed_active": 0,
+      "new_today_active": 0
+    },
+    {
+      "source_id": "idcquan_expanded",
+      "start": "2026-11-25",
+      "observed_latest": null,
+      "note": "云计算、云资讯和主站入口未成功读取固定新闻目录，主站返回403。",
+      "archive_urls": [
+        "https://cloud.idcquan.com/",
+        "https://cloud.idcquan.com/yzx/",
+        "https://www.idcquan.com/"
+      ],
+      "name": "中国IDC圈 · 云计算与设施",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 0,
+      "new_fixed_records": 0,
+      "new_today": 0,
+      "record_ids": [],
+      "new_fixed_active": 0,
+      "new_today_active": 0
+    },
+    {
+      "source_id": "chinabyte",
+      "start": "2026-11-25",
+      "observed_latest": "2026-11-23",
+      "note": "企业计算频道固定“最新资讯”列表，所见首条日期为23日。",
+      "archive_urls": [
+        "https://server.chinabyte.com/"
+      ],
+      "name": "比特网／天极传媒",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 0,
+      "new_fixed_records": 0,
+      "new_today": 0,
+      "record_ids": [],
+      "new_fixed_active": 0,
+      "new_today_active": 0
+    },
+    {
+      "source_id": "dcd",
+      "start": "2026-11-25",
+      "observed_latest": "2026-11-20",
+      "note": "News – China栏目第一篇新闻为20日。剔除栏目上方独立的增刊推荐。",
+      "archive_urls": [
+        "https://www.datacenterdynamics.com/en/news/?term=china"
+      ],
+      "name": "DataCenterDynamics",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 0,
+      "new_fixed_records": 0,
+      "new_today": 0,
+      "record_ids": [],
+      "new_fixed_active": 0,
+      "new_today_active": 0
+    },
+    {
+      "source_id": "leiphone",
+      "start": "2026-11-25",
+      "observed_latest": null,
+      "note": "芯片栏目移动、桌面和移动分页入口未返回当期可读的完整列表。",
+      "archive_urls": [
+        "https://m.leiphone.com/category/chips",
+        "https://m.leiphone.com/category/chips/page/2",
+        "https://www.leiphone.com/category/chips"
+      ],
+      "name": "雷峰网",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 0,
+      "new_fixed_records": 0,
+      "new_today": 0,
+      "record_ids": [],
+      "new_fixed_active": 0,
+      "new_today_active": 0
+    },
+    {
+      "source_id": "ithome",
+      "start": "2026-11-12",
+      "observed_latest": "2026-11-25",
+      "note": "固定标签“数据中心”（15篇）和“服务器”（3篇）分别反向读至11日；含25日08:50:31发布的Fluidstack报道。两周内栏目所有可见类型均保留。",
+      "archive_urls": [
+        "https://www.ithome.com/tags/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83/",
+        "https://www.ithome.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"
+      ],
+      "name": "IT之家",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 18,
+      "new_fixed_records": 18,
+      "new_today": 1,
+      "record_ids": [
+        "media-20261125-787e912cc690b74e",
+        "media-20261125-426a8741d36de051",
+        "media-20261125-df93e33a5e029958",
+        "media-20261125-6ff9f481cc85938d",
+        "media-20261125-ef91d0b1a957020b",
+        "media-20261125-24e7f9c50cf9ad19",
+        "media-20261125-68955f8f260d1563",
+        "media-20261125-ef3171cdc6cf7de6",
+        "media-20261125-0ac6dcedf93c2461",
+        "media-20261125-531455533bd2086f",
+        "media-20261125-022b531a946e5e90",
+        "media-20261125-e67d843487a66672",
+        "media-20261125-7fcbeb3387770e51",
+        "media-20261125-493b000ffcc2f825",
+        "media-20261125-40c609617b9d81f7",
+        "media-20261125-9954a0ceb44823cb",
+        "media-20261125-717067ef216e133e",
+        "media-20261125-60797f431a75407b"
+      ],
+      "new_fixed_active": 18,
+      "new_today_active": 1
+    },
+    {
+      "source_id": "it168",
+      "start": "2026-11-12",
+      "observed_latest": "2026-11-25",
+      "note": "服务器·存储频道固定“最新文章”区域逐条读取，11篇落在12日至25日，后续稿件已跨过窗口起点。宝德稿按IT168出版时间入样。",
+      "archive_urls": [
+        "https://server.it168.com/"
+      ],
+      "name": "IT168／ITPUB",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 11,
+      "new_fixed_records": 1,
+      "new_today": 1,
+      "record_ids": [
+        "media-20261125-69f11abe15ca440f"
+      ],
+      "new_fixed_active": 1,
+      "new_today_active": 1
+    },
+    {
+      "source_id": "cena",
+      "start": "2026-11-25",
+      "observed_latest": null,
+      "note": "电子报PC版面总目录与24日、25日期号目录均未返回可枚举的版次标题。",
+      "archive_urls": [
+        "https://epaper.cena.com.cn/pc/layout/index.html",
+        "https://epaper.cena.com.cn/pc/layout/202611/25/node_01.html",
+        "https://epaper.cena.com.cn/pc/layout/202611/24/node_01.html"
+      ],
+      "name": "中国电子报／赛迪网",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 0,
+      "new_fixed_records": 0,
+      "new_today": 0,
+      "record_ids": [],
+      "new_fixed_active": 0,
+      "new_today_active": 0
+    },
+    {
+      "source_id": "cctime",
+      "start": "2026-11-12",
+      "observed_latest": "2026-11-25",
+      "note": "算力和芯片两个固定栏目反向读至11日；算力共5条、芯片共8条，含1条跨栏重复。25日稿正文时间08:28。",
+      "archive_urls": [
+        "https://www.cctime.com/mlist/12785.htm",
+        "https://www.cctime.com/mlist/11114.htm"
+      ],
+      "name": "飞象网",
+      "checked_at": "2026-11-25T03:06:17.575Z",
+      "requested_end": "2026-11-25",
+      "complete": false,
+      "partial_current_day": true,
+      "candidates": 13,
+      "new_fixed_records": 11,
+      "new_today": 1,
+      "record_ids": [
+        "media-20261125-1dbaeff5ae3efa99",
+        "media-20261125-1b5cc7ed0168d8cf",
+        "media-20261125-5275e875e9e02752",
+        "media-20261125-eed06fe41aab4fd7",
+        "media-20261125-0b98907bcdebbd00",
+        "media-20261125-47f7ba92c00d956c",
+        "media-20261125-2d4ab5dd7c19c3de",
+        "media-20261125-dc573152cf5230e6",
+        "media-20261125-2f79ed0d7a7cd252",
+        "media-20261125-2882f27b07420bfa",
+        "media-20261125-b3be41b11543c0ce"
+      ],
+      "new_fixed_active": 11,
+      "new_today_active": 1
+    }
+  ],
+  "skipped_records": [
+    {
+      "source_id": "cctime",
+      "title": "打通算力应用“最后一公里”",
+      "url": "https://www.cctime.com/html/2026-11-16/1746658.htm",
+      "existing_id": "media-20261124-f160a59201bf8224",
+      "kind": "existing_fixed"
+    },
+    {
+      "source_id": "cctime",
+      "title": "AI算力竞赛时代的PCIe：Gen 6只是Gen 5的“平滑升级”？",
+      "url": "https://www.cctime.com/html/2026-11-19/1746880.htm",
+      "existing_id": "media-20261125-2f79ed0d7a7cd252",
+      "kind": "same_batch"
+    },
+    {
+      "source_id": "it168",
+      "title": "数智共昇 鸿湘有为｜华为智启未来主题论坛亮相2026世界计算大会",
+      "url": "https://server.it168.com/a2026/1120/6958/000006958652.shtml",
+      "existing_id": "media-20261124-625862e462d4f314",
+      "kind": "existing_fixed"
+    },
+    {
+      "source_id": "it168",
+      "title": "液冷重构AI基础设施：丹佛斯携从冷源到芯片侧解决方案亮相2026中国数据中心标准大会",
+      "url": "https://server.it168.com/a2026/1120/6958/000006958594.shtml",
+      "existing_id": "media-20261124-0e674301bba82663",
+      "kind": "existing_fixed"
+    },
+    {
+      "source_id": "it168",
+      "title": "Agentic Infra时代，操作系统正在重塑自己的边界",
+      "url": "https://server.it168.com/a2026/1120/6958/000006958503.shtml",
+      "existing_id": "media-20261124-6e901d1f4a98ada7",
+      "kind": "existing_fixed"
+    },
+    {
+      "source_id": "it168",
+      "title": "HPE推出ProLiant Gen13服务器，以AI就绪性能、自动化安全和可靠性赋能企业智算升级",
+      "url": "https://server.it168.com/a2026/1120/6958/000006958473.shtml",
+      "existing_id": "media-20261124-2e9adaff0b6d8ea6",
+      "kind": "existing_fixed"
+    },
+    {
+      "source_id": "it168",
+      "title": "华为坤灵中国行2026智能办公全场景样板点现场会成功举办",
+      "url": "https://server.it168.com/a2026/1120/6958/000006958458.shtml",
+      "existing_id": "media-20261124-19c8077c7cbbe9da",
+      "kind": "existing_fixed"
+    },
+    {
+      "source_id": "it168",
+      "title": "华为云“行业AI梦工厂”发布并开源昇腾原生具身世界模型CloudRobo-WM1.2",
+      "url": "https://server.it168.com/a2026/1116/6957/000006957896.shtml",
+      "existing_id": "media-20261124-68c22f429aacc0ee",
+      "kind": "existing_fixed"
+    },
+    {
+      "source_id": "it168",
+      "title": "“三道菜”看懂2027：Gartner发布十大战略技术趋势",
+      "url": "https://server.it168.com/a2026/1116/6957/000006957857.shtml",
+      "existing_id": "media-20261124-0273b320a434cc10",
+      "kind": "existing_fixed"
+    },
+    {
+      "source_id": "it168",
+      "title": "openEuler汇聚开源力量，深化系统级创新，构筑Agentic Infra坚实底座",
+      "url": "https://server.it168.com/a2026/1116/6957/000006957804.shtml",
+      "existing_id": "media-20261124-ca67803a5bc657fa",
+      "kind": "existing_fixed"
+    },
+    {
+      "source_id": "it168",
+      "title": "openEuler发布面向Agentic Infra的操作系统，全球协同共建AI生态",
+      "url": "https://server.it168.com/a2026/1113/6957/000006957746.shtml",
+      "existing_id": "media-20261124-69dbc49d9b1ebfea",
+      "kind": "existing_fixed"
+    },
+    {
+      "source_id": "it168",
+      "title": "华为坤灵中国行2026·浙江站暨义乌蔚印象设计师酒店智能商业样板点现场会成功举办",
+      "url": "https://server.it168.com/a2026/1112/6957/000006957435.shtml",
+      "existing_id": "media-20261124-08250619e5235560",
+      "kind": "existing_fixed"
+    }
+  ],
+  "prior_topic_overlaps": [
+    {
+      "source_id": "ithome",
+      "old_topic_id": "media-20261124-264551ef5fac5d0c",
+      "new_fixed_id": "media-20261125-426a8741d36de051",
+      "url": "https://www.ithome.com/1/026/391.htm"
+    }
+  ],
+  "corrected_historical_urls": [
+    {
+      "id": "media-20261124-7db0cc9d832925a9",
+      "source_id": "cctime",
+      "old_url": "https://www.cctime.com/m/1745232.htm ; rewritten summary of https://www.cctime.com/html/2026-10-26/1745232.htm",
+      "corrected_url": "https://www.cctime.com/html/2026-10-26/1745232.htm"
+    },
+    {
+      "id": "media-20261124-93852c1fda08540f",
+      "source_id": "cctime",
+      "old_url": "https://www.cctime.com/m/1745462.htm ; rewritten summary of https://www.cctime.com/html/2026-10-28/1745462.htm",
+      "corrected_url": "https://www.cctime.com/html/2026-10-28/1745462.htm"
+    },
+    {
+      "id": "media-20261124-2a172c5154f0cfdb",
+      "source_id": "cctime",
+      "old_url": "https://www.cctime.com/m/1745685.htm ; rewritten summary of https://www.cctime.com/html/2026-10-30/1745685.htm",
+      "corrected_url": "https://www.cctime.com/html/2026-10-30/1745685.htm"
+    },
+    {
+      "id": "media-20261124-42e36942b0f65b32",
+      "source_id": "cctime",
+      "old_url": "https://www.cctime.com/m/1745723.htm ; rewritten summary of https://www.cctime.com/html/2026-11-2/1745723.htm",
+      "corrected_url": "https://www.cctime.com/html/2026-11-2/1745723.htm"
+    },
+    {
+      "id": "media-20261124-0a4e0ffdee48677b",
+      "source_id": "cctime",
+      "old_url": "https://www.cctime.com/m/1746143.htm ; rewritten summary of https://www.cctime.com/html/2026-11-6/1746143.htm",
+      "corrected_url": "https://www.cctime.com/html/2026-11-6/1746143.htm"
+    },
+    {
+      "id": "media-20261124-733667041142579e",
+      "source_id": "cctime",
+      "old_url": "https://www.cctime.com/m/1746242.htm ; rewritten summary of https://www.cctime.com/html/2026-11-9/1746242.htm",
+      "corrected_url": "https://www.cctime.com/html/2026-11-9/1746242.htm"
+    },
+    {
+      "id": "media-20261124-9c0dc549de0cf37e",
+      "source_id": "cctime",
+      "old_url": "https://www.cctime.com/m/1746402.htm ; rewritten summary of https://www.cctime.com/html/2026-11-11/1746402.htm",
+      "corrected_url": "https://www.cctime.com/html/2026-11-11/1746402.htm"
+    },
+    {
+      "id": "media-20261124-f160a59201bf8224",
+      "source_id": "cctime",
+      "old_url": "https://www.cctime.com/m/1746658.htm ; rewritten summary of https://www.cctime.com/html/2026-11-16/1746658.htm",
+      "corrected_url": "https://www.cctime.com/html/2026-11-16/1746658.htm"
+    }
+  ],
+  "confirmed_republications": [
+    {
+      "source_id": "zhiding_latest",
+      "date": "2026-11-25",
+      "id": "media-20261125-eea7f0e61c8d426e",
+      "duplicate_of": "media-20261124-f83660bc90357456",
+      "original_url": "https://www.zhiding.cn/models/2026/1124/3207020.shtml",
+      "reprint_url": "https://www.zhiding.cn/ai/2026/1125/3207183.shtml",
+      "reason": "两篇均翻译同一场MIT座谈报道。开头、段落展开、四名与谈人、主持人与逐段引语顺序相同。"
+    }
+  ]
+}

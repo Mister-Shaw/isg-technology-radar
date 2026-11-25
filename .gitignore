@@ -61,6 +61,8 @@ __pycache__/
 
 # Losslessly materialized from compressed repository snapshot
 /public/market-panel.json
+/public/market-expansion-3.json
+/data/research-2026.json
 
 # Generated TypeScript incremental cache
 *.tsbuildinfo

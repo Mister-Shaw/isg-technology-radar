@@ -8,7 +8,12 @@ const read=f=>JSON.parse(fs.readFileSync(new URL('../'+f,import.meta.url),'utf8'
 const report=read('data/report-analysis.json'),study=read('data/research-2026.json'),panel=readMarket(),monitor=read('data/weekly-monitor.json'),run=read('public/manual-refresh-20261007.json');
 assert.equal(report.title,'研报分析');assert.equal(report.default_view,'charts');
 for(const g of report.metric_groups){assert(g.rows.length>0);assert.equal(new Set(g.rows.map(r=>r.unit)).size,1);for(const r of g.rows){assert(Number.isFinite(r.value));assert(r.period&&r.value_type&&r.source_refs.length);}}
-assert.equal(report.insights.filter(i=>i.last_reviewed==='2026-10-07').length,8);assert.equal(report.as_of,'2026-11-24');assert(report.insights.some(i=>i.id==='RA10'));
+assert.equal(report.insights.filter(i=>i.last_reviewed==='2026-10-07').length,8);
+const metrics = read('data/report-monitor.json');
+assert.equal(report.as_of, metrics.as_of, 'Analysis and metric views must share a cutoff');
+assert.equal(metrics.as_of, new Intl.DateTimeFormat('en-CA', {timeZone: 'Asia/Shanghai'}).format(new Date(metrics.latest_refresh.checked_at)));
+assert(report.insights.every(insight => /^\d{4}-\d{2}-\d{2}$/.test(insight.last_reviewed) && insight.last_reviewed <= report.as_of));
+for (const id of ['RA09', 'RA10', 'RA11', 'RA12']) assert(report.insights.some(insight => insight.id === id));
 const sourceIds=new Set(report.sources.map(s=>s.id));for(const i of report.insights){assert(i.inference&&i.business_implication&&i.facts.length);for(const f of i.facts)for(const s of f.source_refs){assert(sourceIds.has(s.source_id));assert(s.url.startsWith('https://'));}}
 assert(!JSON.stringify(report).includes('/workspace/'));assert(!JSON.stringify(report).includes('libfile_'));
 const rows=reportInsightRows(report),snapshot=reportAnalysisSnapshot(study,report),base=rows[0];

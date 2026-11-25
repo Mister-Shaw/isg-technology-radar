@@ -1,0 +1,12 @@
+{
+  "sha256": "a40ed222c847195f6db790e43244b3977d0f5aa09d7571dc7433223026f61cae",
+  "previous_git_blob": "be853f1703f50fb24144bc0343fa2ce67ef5b4bb",
+  "parts": [
+    "data/research-snapshot/part-01.gzpart",
+    "data/research-snapshot/part-02.gzpart",
+    "data/research-snapshot/part-03.gzpart"
+  ],
+  "bytes": 4483725,
+  "records": 1416,
+  "as_of": "2026-11-25"
+}
